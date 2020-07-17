@@ -30,16 +30,20 @@ type MenuComponents = {
   Menu: ComponentType<any>,
 };
 
+export type Props = {
+  siteLogo: string,
+} & DesignableComponentsProps<MenuComponents> & HTMLProps<HTMLElement>;
+
 type MenuType = (Menu: ComponentType<any>) => ComponentType<any>;
 
 const menuComponentsStart:MenuComponents = {
   Menu: Div,
 };
 
-const MenuClean: FC<DesignableComponentsProps<MenuComponents>> = ({ components, ...rest }) => {
+const MenuClean: FC<Props> = ({ siteLogo, components, ...rest }) => {
   const { Menu } = components;
 
-  return <Menu {...rest} />;
+  return <Menu siteLogo={siteLogo} {...rest} />;
 };
 
 const ResponsiveMenuClean = designable(menuComponentsStart)(MenuClean);

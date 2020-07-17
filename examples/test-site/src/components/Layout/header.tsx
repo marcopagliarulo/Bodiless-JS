@@ -13,7 +13,6 @@
  */
 
 import React, { FC, ComponentType, HTMLProps } from 'react';
-import { Link } from 'gatsby';
 import { flow } from 'lodash';
 import {
   addClasses,
@@ -23,6 +22,7 @@ import {
   Div,
 } from '@bodiless/fclasses';
 import ResponsiveMenu from '../Menus';
+import Logo from './logo';
 import {
   asPageContainer,
   asHeader1,
@@ -34,6 +34,7 @@ type HeaderComponents = {
   Container: ComponentType<any>,
   SiteReturn: ComponentType<any>,
   Menu: ComponentType<any>,
+  Logo: ComponentType<any>,
 };
 export type Props = {
   siteLogo: string,
@@ -42,28 +43,24 @@ export type Props = {
 const headerComponents:HeaderComponents = {
   Wrapper: Div,
   Container: Div,
-  SiteReturn: Div,
   Menu: ResponsiveMenu,
+  SiteLogoReturn: Logo,
 };
 const Header: FC<Props> = ({ siteLogo, components }) => {
   const {
     Wrapper,
     Container,
-    SiteReturn,
+    SiteLogoReturn,
     Menu,
   } = components;
 
   return (
     <Wrapper>
       <Container>
-        <SiteReturn>
-          <Link to="/">
-            <img src={siteLogo} className="h-16" alt="Return To Home" />
-          </Link>
-        </SiteReturn>
+        <SiteLogoReturn siteLogo={siteLogo} />
       </Container>
       <div className="container mx-auto">
-        <Menu nodeKey="MainMenu" nodeCollection="site" />
+        <Menu nodeKey="MainMenu" nodeCollection="site" siteLogo={siteLogo} />
       </div>
     </Wrapper>
   );
@@ -73,7 +70,8 @@ const asSiteHeader = flow(
   withDesign({
     Wrapper: flow(asPrimaryColorBackground, addClasses('')),
     Container: flow(asPageContainer, addClasses('flex min-h-16 items-end')),
-    SiteReturn: flow(asHeader1, addClasses('flex-shrink')),
+    SiteLogoReturn: flow(asHeader1, addClasses('flex-shrink')),
   }),
 );
+
 export default asSiteHeader(Header);

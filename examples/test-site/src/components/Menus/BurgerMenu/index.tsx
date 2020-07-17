@@ -24,7 +24,9 @@ import {
 } from '@bodiless/organisms';
 import { List } from '@bodiless/components';
 import { withEditorSimple } from '../../Editors';
-import { withBurgerMenuStyles, withBurgerSubMenuStyles } from '../token';
+import { withBurgerMenuStyles, withBurgerSubMenuStyles, withBurgerLogoBg } from '../token';
+import Logo from '../../Layout/logo';
+
 import './burger-menu.css';
 
 const BurgerMenuList = asEditableMenu(withEditorSimple)(List);
@@ -38,7 +40,13 @@ const BurgerMenuBody = withBurgerSubmenu(BurgerMenuSubList)(BurgerMenuList);
 
 const BurgerMenu = flow(
   asStatic,
-  withDesign({ Body: replaceWith(BurgerMenuBody) }),
+  withDesign({
+    Header: flow(
+      replaceWith(Logo),
+      withDesign({ SiteReturn: withBurgerLogoBg }),
+    ),
+    Body: replaceWith(BurgerMenuBody),
+  }),
   withBurgerMenuStyles,
 )(BurgerMenuClean);
 

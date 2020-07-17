@@ -28,7 +28,7 @@ import Header from './header';
 import Footer from './footer';
 import { asPageContainer } from '../Elements.token';
 
-const ExampleHelmet = flowRight(
+const SiteHelmet = flowRight(
   asBodilessHelmet('meta'),
   withMeta('pagetype', 'page-type'),
   withMeta('description', 'description'),
@@ -38,7 +38,7 @@ const ExampleHelmet = flowRight(
   withMetaHtml('en'),
 )(Helmet);
 
-const ExampleGTMHelmetEvent = flowRight(
+const SiteGTMHelmetEvent = flowRight(
   asBodilessHelmet('datalayer'),
   withEvent(
     'digitalData',
@@ -69,10 +69,9 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <ExampleHelmet />
-        <ExampleGTMHelmetEvent />
+        <SiteHelmet />
+        <SiteGTMHelmetEvent />
         <Header siteLogo={data.site.siteMetadata.logo} />
-
         <Container>{children}</Container>
         <Footer siteTitle={data.site.siteMetadata.title} />
       </>
