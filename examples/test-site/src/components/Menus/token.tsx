@@ -65,6 +65,7 @@ const withBurgerMenuStyles = withDesign({
   Wrapper: flow(
     asMobileOnly,
     withTealBackground,
+    addClasses('py-1'),
   ),
   Slide: flow(
     addClasses('bg-burger-menu'),

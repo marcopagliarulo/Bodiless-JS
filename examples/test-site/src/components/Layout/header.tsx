@@ -32,9 +32,8 @@ import {
 type HeaderComponents = {
   Wrapper: ComponentType<any>,
   Container: ComponentType<any>,
-  SiteReturn: ComponentType<any>,
   Menu: ComponentType<any>,
-  Logo: ComponentType<any>,
+  SiteLogoReturn: ComponentType<any>,
 };
 export type Props = {
   siteLogo: string,
@@ -50,8 +49,8 @@ const Header: FC<Props> = ({ siteLogo, components }) => {
   const {
     Wrapper,
     Container,
-    SiteLogoReturn,
     Menu,
+    SiteLogoReturn,
   } = components;
 
   return (

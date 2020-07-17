@@ -15,10 +15,10 @@
 import React, { FC, ComponentType } from 'react';
 import { flow } from 'lodash';
 import { withPageDimensionsContext, ifViewportIs, ifViewportIsNot } from '@bodiless/components';
+import { MenuProps } from '@bodiless/organisms';
 import {
   withDesign,
   designable,
-  DesignableComponentsProps,
   Div,
 } from '@bodiless/fclasses';
 
@@ -30,17 +30,13 @@ type MenuComponents = {
   Menu: ComponentType<any>,
 };
 
-export type Props = {
-  siteLogo: string,
-} & DesignableComponentsProps<MenuComponents> & HTMLProps<HTMLElement>;
-
 type MenuType = (Menu: ComponentType<any>) => ComponentType<any>;
 
 const menuComponentsStart:MenuComponents = {
   Menu: Div,
 };
 
-const MenuClean: FC<Props> = ({ siteLogo, components, ...rest }) => {
+const MenuClean: FC<MenuProps> = ({ siteLogo, components, ...rest }) => {
   const { Menu } = components;
 
   return <Menu siteLogo={siteLogo} {...rest} />;

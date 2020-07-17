@@ -39,11 +39,11 @@ const burgerMenuComponents: BurgerMenuComponents = {
   Header: Div,
 };
 
-export type Props = {
+export type MenuProps = {
   siteLogo: string,
 } & DesignableComponentsProps<BurgerMenuComponents> & HTMLProps<HTMLElement>;
 
-const BurgerMenuBase: FC<Props> = ({ siteLogo, components, ...rest }) => {
+const BurgerMenuBase: FC<MenuProps> = ({ siteLogo, components, ...rest }) => {
   const {
     Wrapper,
     Slide,
@@ -60,6 +60,7 @@ const BurgerMenuBase: FC<Props> = ({ siteLogo, components, ...rest }) => {
   );
 };
 
-const BurgerMenuClean = designable(burgerMenuComponents)(BurgerMenuBase) as ComponentType<Props>;
+const
+  BurgerMenuClean = designable(burgerMenuComponents)(BurgerMenuBase) as ComponentType<MenuProps>;
 
 export default BurgerMenuClean;
