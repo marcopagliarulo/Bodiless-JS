@@ -1,5 +1,5 @@
 /**
- * Copyright © 2019 Johnson & Johnson
+ * Copyright © 2020 Johnson & Johnson
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,6 +27,10 @@ import { flowRight } from 'lodash';
 import Header from './header';
 import Footer from './footer';
 import { asPageContainer } from '../Elements.token';
+import { asSiteHeader, asSiteFooter } from './token';
+
+const SiteHeader = asSiteHeader(Header);
+const SiteFooter = asSiteFooter(Footer);
 
 const SiteHelmet = flowRight(
   asBodilessHelmet('meta'),
@@ -62,7 +66,6 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
-            logo
           }
         }
       }
@@ -71,9 +74,9 @@ const Layout = ({ children }) => (
       <>
         <SiteHelmet />
         <SiteGTMHelmetEvent />
-        <Header siteLogo={data.site.siteMetadata.logo} />
+        <SiteHeader />
         <Container>{children}</Container>
-        <Footer siteTitle={data.site.siteMetadata.title} />
+        <SiteFooter siteTitle={data.site.siteMetadata.title} />
       </>
     )}
   />

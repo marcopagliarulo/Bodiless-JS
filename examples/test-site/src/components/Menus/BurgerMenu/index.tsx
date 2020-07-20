@@ -26,6 +26,7 @@ import { List } from '@bodiless/components';
 import { withEditorSimple } from '../../Editors';
 import { withBurgerMenuStyles, withBurgerSubMenuStyles, withBurgerLogoBg } from '../token';
 import Logo from '../../Layout/logo';
+import { asDefaultLogoStyle } from '../../Layout/token';
 
 import './burger-menu.css';
 
@@ -43,6 +44,7 @@ const BurgerMenu = flow(
   withDesign({
     Header: flow(
       replaceWith(Logo),
+      asDefaultLogoStyle,
       withDesign({ SiteReturn: withBurgerLogoBg }),
     ),
     Body: replaceWith(BurgerMenuBody),

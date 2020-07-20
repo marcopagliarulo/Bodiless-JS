@@ -13,11 +13,8 @@
  */
 
 import React, { FC, ComponentType, HTMLProps } from 'react';
-import { Link } from 'gatsby';
-import { flow } from 'lodash';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import {
-  addClasses,
-  withDesign,
   designable,
   DesignableComponentsProps,
   Div,
@@ -28,34 +25,38 @@ type LogoComponents = {
   SiteReturn: ComponentType<any>,
   SiteLogo: ComponentType<any>,
 };
-export type Props = {
-  siteLogo: string,
-} & DesignableComponentsProps<HeaderComponents> & HTMLProps<HTMLElement>;
+export type Props = DesignableComponentsProps<LogoComponents> & HTMLProps<HTMLElement>;
 
 const logoComponents:LogoComponents = {
   SiteReturn: Div,
   SiteLogo: Img,
+  SiteLink: Link,
 };
-const Logo: FC<Props> = ({ siteLogo, components }) => {
+const LogoClean: FC<Props> = ({ components }) => {
   const {
     SiteReturn,
     SiteLogo,
+    SiteLink,
   } = components;
+
+  const data = useStaticQuery(graphql`
+  query HeaderQuery {
+    site {
+      siteMetadata {
+        logo
+      }
+    }
+  }
+  `);
 
   return (
     <SiteReturn>
-      <Link to="/">
-        <SiteLogo src={siteLogo} alt="Return To Home" />
-      </Link>
+      <SiteLink to="/">
+        <SiteLogo src={data.site.siteMetadata.logo} alt="Return To Home" />
+      </SiteLink>
     </SiteReturn>
   );
 };
-const asLogo = flow(
-  designable(logoComponents),
-  withDesign({
-    SiteReturn: addClasses('py-4 px-2'),
-    SiteLogo: addClasses('h-16'),
-  }),
-);
 
-export default asLogo(Logo);
+const Logo = designable(logoComponents)(LogoClean);
+export default Logo;

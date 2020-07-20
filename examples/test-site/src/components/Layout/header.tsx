@@ -1,5 +1,5 @@
 /**
- * Copyright © 2019 Johnson & Johnson
+ * Copyright © 2020 Johnson & Johnson
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,42 +13,35 @@
  */
 
 import React, { FC, ComponentType, HTMLProps } from 'react';
-import { flow } from 'lodash';
 import {
-  addClasses,
-  withDesign,
   designable,
   DesignableComponentsProps,
   Div,
 } from '@bodiless/fclasses';
 import ResponsiveMenu from '../Menus';
 import Logo from './logo';
-import {
-  asPageContainer,
-  asHeader1,
-  asPrimaryColorBackground,
-} from '../Elements.token';
 
 type HeaderComponents = {
   Wrapper: ComponentType<any>,
   Container: ComponentType<any>,
+  MenuContainer: ComponentType<any>,
   Menu: ComponentType<any>,
   SiteLogoReturn: ComponentType<any>,
 };
-export type Props = {
-  siteLogo: string,
-} & DesignableComponentsProps<HeaderComponents> & HTMLProps<HTMLElement>;
+export type Props = DesignableComponentsProps<HeaderComponents> & HTMLProps<HTMLElement>;
 
 const headerComponents:HeaderComponents = {
   Wrapper: Div,
   Container: Div,
+  MenuContainer: Div,
   Menu: ResponsiveMenu,
   SiteLogoReturn: Logo,
 };
-const Header: FC<Props> = ({ siteLogo, components }) => {
+const HeaderClean: FC<Props> = ({ components }) => {
   const {
     Wrapper,
     Container,
+    MenuContainer,
     Menu,
     SiteLogoReturn,
   } = components;
@@ -56,21 +49,14 @@ const Header: FC<Props> = ({ siteLogo, components }) => {
   return (
     <Wrapper>
       <Container>
-        <SiteLogoReturn siteLogo={siteLogo} />
+        <SiteLogoReturn />
       </Container>
-      <div className="container mx-auto">
-        <Menu nodeKey="MainMenu" nodeCollection="site" siteLogo={siteLogo} />
-      </div>
+      <MenuContainer>
+        <Menu nodeKey="MainMenu" nodeCollection="site" />
+      </MenuContainer>
     </Wrapper>
   );
 };
-const asSiteHeader = flow(
-  designable(headerComponents),
-  withDesign({
-    Wrapper: flow(asPrimaryColorBackground, addClasses('')),
-    Container: flow(asPageContainer, addClasses('flex min-h-16 items-end')),
-    SiteLogoReturn: flow(asHeader1, addClasses('flex-shrink')),
-  }),
-);
 
-export default asSiteHeader(Header);
+const Header = designable(headerComponents)(HeaderClean);
+export default Header;

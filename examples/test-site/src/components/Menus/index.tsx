@@ -15,10 +15,10 @@
 import React, { FC, ComponentType } from 'react';
 import { flow } from 'lodash';
 import { withPageDimensionsContext, ifViewportIs, ifViewportIsNot } from '@bodiless/components';
-import { MenuProps } from '@bodiless/organisms';
 import {
   withDesign,
   designable,
+  DesignableComponentsProps,
   Div,
 } from '@bodiless/fclasses';
 
@@ -36,10 +36,10 @@ const menuComponentsStart:MenuComponents = {
   Menu: Div,
 };
 
-const MenuClean: FC<MenuProps> = ({ siteLogo, components, ...rest }) => {
+const MenuClean: FC<DesignableComponentsProps<MenuComponents>> = ({ components, ...rest }) => {
   const { Menu } = components;
 
-  return <Menu siteLogo={siteLogo} {...rest} />;
+  return <Menu {...rest} />;
 };
 
 const ResponsiveMenuClean = designable(menuComponentsStart)(MenuClean);
