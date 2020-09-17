@@ -270,20 +270,15 @@ listed below (i.e. you can add text to a page on your site via the editor or you
 can add a component or components that contain text, which make use of the
 editor).
 
-| Simple | Basic | Full | | -------|-------|------| |
-![](./assets/SimpleRichText.jpg) | ![](./assets/BasicRichText.jpg) |
-![](./assets/FullRichText.jpg) | The Simple Rich Text Editor offers the
-following formatting options: Superscript | Basic Rich Text Editor offers the
-following formatting options: bold, italic, underline, link, left alignment,
-right alignment, center alignment, justification alignment, superscript | The
-Full Rich Text Editor offers the following formatting options: bold, italic,
-underline, link, left alignment, right alignment, center alignment,
-justification alignment, superscript, header |
+| Simple | Basic | Full | 
+| -------|-------|------| 
+|![](./assets/SimpleRichText.jpg) | ![](./assets/BasicRichText.jpg) | ![](./assets/FullRichText.jpg) | 
+|The Simple Rich Text Editor offers the following formatting options: Superscript | Basic Rich Text Editor offers the following formatting options: bold, italic, underline, link, left alignment, right alignment, center alignment, justification alignment, superscript | The Full Rich Text Editor offers the following formatting options: bold, italic, underline, link, left alignment, right alignment, center alignment, justification alignment, superscript, header |
 
-_Please note that the above configurations are examples of the default options.
+?> Please note that the above configurations are examples of the default options.
 The site requirements and site builder will determine which rich text editor
 options are available, where they are available to the editor, and which options
-are available for each variation._
+are available for each variation.
 
 To read more about the Rich Text Editor see the [Rich Text Editor component
 documentation](../../../Components/RichText).
@@ -297,7 +292,7 @@ the links below to read more about working with the individual components.
 #### Layout
 
 * [Flow Container](../../../Components/FlowContainer) 
-* [Rich Media Text Editor](../../../Components/)
+* [Rich Media Text Editor](../../../Components/RichText)
 * [Tout](../../../Components/Tout)
 
 #### Media
@@ -311,17 +306,16 @@ the links below to read more about working with the individual components.
 * [Link](../../../Components/Link) 
 * [Single Accordion](../../../Components/SingleAccordion) 
 * [Menu](../../../Components/Menu)
-* [List Filter](../../../Components/ListFilter)
+* [List Filter](../../../Components/FilterByGroup)
 
 #### Integrations
 
-* [Bazaarvoice](../../../Components/Bazaarvoice)
+* [Bazaarvoice](../../../Components/Bv)
 
 
 #### SEO
-
-* Google Tag Manager 
-* Sitemap.xml 
+ 
+* [Sitemap.xml](../../../Development/Guides/BuildingSites/ComponentsStarterKit?id=sitemapxml-amp-robotstxt-file) 
 * Robots.txt 
-* Metatags
+* [Metatags](../../../Development/Guides/BuildingSites/ComponentsStarterKit?id=metadata-component) 
 
