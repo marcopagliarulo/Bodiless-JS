@@ -43,21 +43,25 @@ menu.  ![](./assets/LinkButtonBefore.jpg)
 One can use this to place a link (usually an `a` tag) on the page, that uses the
 bodiless edit system and allow the href to be editable.
 
-  ``` js import Link from '@bodiless/components';
+  ``` 
+  js import Link from '@bodiless/components';
 
-  <Link nodeKey="linkit">This is an editable Nodelink.</Link> ```
+  <Link nodeKey="linkit">This is an editable Nodelink.</Link> 
+  ```
 
 One can also use the HOC version of this which can then be apply to other
-components.  But the underlining component must accept the same props as an `a`
+components. But the underlining component must accept the same props as an `a`
 tag. Simply pass the node key to the asBodilessLink function and then use the
 returned HOC
 
-  ``` js import { CustomLink } from 'my-library'; import { asBodilessLink } from
+  ```
+  js import { CustomLink } from 'my-library'; import { asBodilessLink } from
   '@bodiless/components';
 
   const Link = asBodilessLink('linkit')(CustomLink)
 
-  <Link>This is an editable Nodelink.</Link> ```
+  <Link>This is an editable Nodelink.</Link>
+  ```
 
 ### withLinkToggle
 
@@ -72,10 +76,12 @@ menu.
 
 **Usage:**
 
-``` import { withLinkToggle, Editable, Link } from '@bodiless/components';
+```
+import { withLinkToggle, Editable, Link } from '@bodiless/components';
 
 const LinkToggle = withLinkToggle(Link);
 
 <LinkToggle nodeKey="linktoggle1"><Editable nodeKey="text" placeholder="Link
-Toggle" /></LinkToggle> ```
+Toggle" /></LinkToggle>
+```
 
