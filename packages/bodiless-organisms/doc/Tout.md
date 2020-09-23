@@ -22,7 +22,7 @@ To place a tout on your website click on the +Add button on the toolbar.
 
 1. Select the type of tout you'd like to use. You can use the filters in the
 component window to narrow your selection.  
-![](./assets/SelectTout.jpg)
+![](./assets/ToutFilter.jpg)
 
 2. Once you have selected the appropriate tout you can edit the various
 components via the context menu.
