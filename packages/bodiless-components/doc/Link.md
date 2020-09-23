@@ -32,7 +32,8 @@ To add a link to text in the rich text editor (e.g. in the body copy of a Tout):
 ![](./assets/ClickLinkButton.jpg)
 
 3. Click on the highlighted text. The Link Component will appear in the context
-menu.  ![](./assets/LinkButtonBefore.jpg)
+menu.
+![](./assets/LinkButtonBefore.jpg)
 
 4. In the link form, enter the link URL and click the checkmark.
 ![](./assets/LinkButtonAfter.jpg)
