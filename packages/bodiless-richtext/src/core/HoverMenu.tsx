@@ -70,6 +70,22 @@ export type HoverMenuProps = {
 };
 
 const HoverMenu = (props: HoverMenuProps) => {
+  const isEditMode = useEditContext().isEdit || null;
+  const editorContext: EditorContext = useSlateContext();
+
+  const { ui } = props;
+  const { Menu } = getUI(ui);
+
+  const { children, className, ...rest } = props;
+  const root = typeof window !== 'undefined' ? window.document.body : null;
+  const elementID = `hover-menu-${Math.random().toString(16).slice(2)}`;
+
+  useEffect(() => {
+    const element = document.getElementById(elementID);
+    updateMenu(element, editorContext);
+    return () => {};
+  });
+
   const onBlur = useCallback((ev: FocusEvent<HTMLDivElement>) => {
     const { activeElement } = document;
     const { currentTarget } = ev;
@@ -86,25 +102,14 @@ const HoverMenu = (props: HoverMenuProps) => {
     }
 
     if (!activeElement || activeElement.id !== currentTarget.id) {
+      if (editorContext && editorContext.editor) {
+        editorContext.editor.moveTo(0);
+        editorContext.editor.blur();
+      }
       currentTarget.removeAttribute('style');
     }
   }, []);
 
-  const isEditMode = useEditContext().isEdit || null;
-  const editorContext: EditorContext = useSlateContext();
-
-  const { ui } = props;
-  const { Menu } = getUI(ui);
-
-  const { children, className, ...rest } = props;
-  const root = typeof window !== 'undefined' ? window.document.body : null;
-  const elementID = `hover-menu-${Math.random().toString(16).slice(2)}`;
-
-  useEffect(() => {
-    const element = document.getElementById(elementID);
-    updateMenu(element, editorContext);
-    return () => {};
-  });
   return (
     root
     && isEditMode
