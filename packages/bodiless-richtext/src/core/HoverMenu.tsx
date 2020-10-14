@@ -14,7 +14,7 @@
 
 import React,
 {
-  useEffect, ComponentType, HTMLProps,
+  useEffect, ComponentType, HTMLProps, useCallback, FocusEvent,
 } from 'react';
 import ReactDOM from 'react-dom';
 import { useEditContext } from '@bodiless/core';
@@ -70,6 +70,26 @@ export type HoverMenuProps = {
 };
 
 const HoverMenu = (props: HoverMenuProps) => {
+  const onBlur = useCallback((ev: FocusEvent<HTMLDivElement>) => {
+    const { activeElement } = document;
+    const { currentTarget } = ev;
+    const relatedTarget = ev.relatedTarget as HTMLElement;
+
+    if (!currentTarget) return;
+
+    // Prevent hiding menu when focus is moved to a button within menu.
+    if (relatedTarget && relatedTarget.nodeName === 'BUTTON') {
+      const parentNode = relatedTarget.parentNode as HTMLElement;
+      if (parentNode && parentNode.id === currentTarget.id) {
+        return;
+      }
+    }
+
+    if (!activeElement || activeElement.id !== currentTarget.id) {
+      currentTarget.removeAttribute('style');
+    }
+  }, []);
+
   const isEditMode = useEditContext().isEdit || null;
   const editorContext: EditorContext = useSlateContext();
 
@@ -89,7 +109,7 @@ const HoverMenu = (props: HoverMenuProps) => {
     root
     && isEditMode
     && ReactDOM.createPortal(
-      <Menu {...rest} id={elementID} className={className}>
+      <Menu {...rest} id={elementID} onBlur={onBlur} className={className}>
         {children}
       </Menu>,
       root,
