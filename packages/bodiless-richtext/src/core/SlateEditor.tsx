@@ -15,11 +15,13 @@
 import React, {
   useRef,
   useState,
+  useMemo,
   Fragment,
   ComponentType,
 } from 'react';
 import { Editor, Value } from 'slate';
 import { Editor as ReactEditor, EditorProps } from 'slate-react';
+import PlaceholderPlugin from 'slate-react-placeholder';
 import SlateEditorContext from './SlateEditorContext';
 import '@material/react-material-icon/dist/material-icon.css';
 import { EditorOnChange } from '../Type';
@@ -52,6 +54,21 @@ const withSlateEditor = <P extends object> (Component:ComponentType<P>) => (prop
 
     return change;
   };
+  const plugins = useMemo(() => (
+    [
+      {
+        queries: {
+          // @ts-ignore
+          isEmpty: (editor) => editor.value.document.text === '',
+        },
+      },
+      PlaceholderPlugin({
+        placeholder,
+        when: 'isEmpty',
+        style: { width: '100%' },
+      }),
+    ]
+  ), []);
 
   const editorContextValue = {
     editorRef,
@@ -64,7 +81,7 @@ const withSlateEditor = <P extends object> (Component:ComponentType<P>) => (prop
     value: value || localValueState,
     editorProps: {
       ...rest,
-      placeholder,
+      plugins,
       onChange: internalOnChange,
       value: value || localValueState,
     },
