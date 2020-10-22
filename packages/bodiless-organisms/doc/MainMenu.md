@@ -62,7 +62,7 @@ const withLinkStyles = withDesign({
   ActiveLink: asWhiteColoredLink,
   Link: asWhiteColoredLink,
 });
-const withMenuStyles = addClasses('hover:bg-teal-500 text-white text-left min-w-100 leading-loose text-sm px-2');
+const withMenuStyles = addClasses('hover:bg-teal-500 text-white text-left leading-loose text-sm px-2');
 const withTealBackground = addClasses('bg-teal-600');
 const withLimitedHeightStyles = addClasses('overflow-y-hidden max-h-menu-row')
 const withSubmenuStyles = addClasses('-ml-2');
@@ -157,7 +157,7 @@ const withLinkStyles = withDesign({
   ActiveLink: flow(asWhiteColoredLink, withActivePageStyles),
   Link: asWhiteColoredLink,
 });
-const withMenuStyles = addClasses('hover:bg-teal-500 text-white text-left min-w-100 leading-loose text-sm px-2');
+const withMenuStyles = addClasses('hover:bg-teal-500 text-white text-left leading-loose text-sm px-2');
 const withTealBackground = addClasses('bg-teal-600');
 const withLimitedHeightStyles = addClasses('overflow-y-hidden max-h-menu-row')
 const withSubmenuStyles = addClasses('-ml-2');
