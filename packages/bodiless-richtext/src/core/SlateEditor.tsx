@@ -56,8 +56,8 @@ const withSlateEditor = <P extends object> (Component:ComponentType<P>) => (prop
     return change;
   };
 
-  const PlaceholderMemo = (placeholder) ?
-    (useMemo(() => (
+  const PlaceholderMemo = (placeholder) ? (
+    useMemo(() => (
       [
         {
           queries: {
@@ -68,7 +68,10 @@ const withSlateEditor = <P extends object> (Component:ComponentType<P>) => (prop
         PlaceholderPlugin({
           placeholder,
           when: 'isEmpty',
-          style: { width: '100%' },
+          style: {
+            width: '100%',
+            float: 'right',
+          },
         }),
       ]
     ), [])) : [];
