@@ -69,7 +69,6 @@ const withSlateEditor = <P extends object> (Component:ComponentType<P>) => (prop
         when: 'isEmpty',
         style: {
           width: '100%',
-          float: 'right',
         },
       }),
     ],
