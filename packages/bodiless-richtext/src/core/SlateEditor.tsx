@@ -20,7 +20,7 @@ import React, {
   ComponentType,
 } from 'react';
 import { Editor, Value } from 'slate';
-import { Editor as ReactEditor, EditorProps } from 'slate-react';
+import { Editor as ReactEditor, EditorProps, Plugin } from 'slate-react';
 // @ts-ignore
 import PlaceholderPlugin from 'slate-react-placeholder';
 import SlateEditorContext from './SlateEditorContext';
@@ -56,25 +56,24 @@ const withSlateEditor = <P extends object> (Component:ComponentType<P>) => (prop
     return change;
   };
 
-  const PlaceholderMemo = (placeholder) ? (
-    useMemo(() => (
-      [
-        {
-          queries: {
-            // @ts-ignore
-            isEmpty: (editor) => editor.value.document.text === '',
-          },
+  const pluginWithPlaceholder = (placeholder) ? useMemo(() => [...plugins,
+    [
+      {
+        queries: {
+          // @ts-ignore
+          isEmpty: (editor) => editor.value.document.text === '',
         },
-        PlaceholderPlugin({
-          placeholder,
-          when: 'isEmpty',
-          style: {
-            width: '100%',
-            float: 'right',
-          },
-        }),
-      ]
-    ), [])) : [];
+      },
+      PlaceholderPlugin({
+        placeholder,
+        when: 'isEmpty',
+        style: {
+          width: '100%',
+          float: 'right',
+        },
+      }),
+    ],
+  ], [plugins]) as Plugin[] : plugins;
 
   const editorContextValue = {
     editorRef,
@@ -87,8 +86,7 @@ const withSlateEditor = <P extends object> (Component:ComponentType<P>) => (prop
     value: value || localValueState,
     editorProps: {
       ...rest,
-      // @ts-ignore
-      plugins: [...plugins, ...PlaceholderMemo],
+      plugins: pluginWithPlaceholder,
       onChange: internalOnChange,
       value: value || localValueState,
     },
