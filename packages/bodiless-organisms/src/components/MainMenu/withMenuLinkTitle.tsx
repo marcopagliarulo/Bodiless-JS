@@ -1,5 +1,5 @@
 /**
- * Copyright © 2020 Johnson & Johnson
+ * Copyright © 2019 Johnson & Johnson
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -11,28 +11,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import { withDesign } from '@bodiless/fclasses';
+import AsEditable from './types/AsEditable';
+import asMenuLink from './asMenuLink';
 
-import { flowRight } from 'lodash';
-import Helmet from 'react-helmet';
-import {
-  asBodilessHelmet,
-  withEvent,
-} from '@bodiless/components';
+/**
+ * HOC, that injects editable link toggle component into component design (usually Menu or Submenu)
+ */
+const withMenuLinkTitle = (editable: AsEditable) => withDesign({
+  Title: asMenuLink(editable),
+});
 
-const SiteGTMHelmetEvent = flowRight(
-  asBodilessHelmet('datalayer'),
-  withEvent(
-    'digitalData',
-    {
-      event: 'Page Loaded',
-      page: {
-        country: 'US',
-        language: 'EN',
-        hostname: 'bodilessjs.com',
-      },
-    },
-    'page-loaded',
-  ),
-)(Helmet);
-
-export default SiteGTMHelmetEvent;
+export default withMenuLinkTitle;

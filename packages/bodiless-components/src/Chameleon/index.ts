@@ -12,27 +12,18 @@
  * limitations under the License.
  */
 
-import { flowRight } from 'lodash';
-import Helmet from 'react-helmet';
-import {
-  asBodilessHelmet,
-  withEvent,
-} from '@bodiless/components';
+import asBodilessChameleon, { withDeleteNodeOnUnwrap } from './asBodilessChameleon';
+import applyChameleon from './applyChameleon';
+import withChameleonComponentFormControls from './withChameleonComponentFormControls';
+import withChameleonButton from './withChameleonButton';
+import withChameleonContext, { useChameleonContext } from './withChameleonContext';
 
-const SiteGTMHelmetEvent = flowRight(
-  asBodilessHelmet('datalayer'),
-  withEvent(
-    'digitalData',
-    {
-      event: 'Page Loaded',
-      page: {
-        country: 'US',
-        language: 'EN',
-        hostname: 'bodilessjs.com',
-      },
-    },
-    'page-loaded',
-  ),
-)(Helmet);
-
-export default SiteGTMHelmetEvent;
+export {
+  asBodilessChameleon,
+  withDeleteNodeOnUnwrap,
+  applyChameleon,
+  withChameleonButton,
+  withChameleonComponentFormControls,
+  withChameleonContext,
+  useChameleonContext,
+};

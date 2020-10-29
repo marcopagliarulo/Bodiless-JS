@@ -21,20 +21,20 @@ import Image, {
 } from './Image';
 import NodeViewer from './NodeViewer';
 import withLinkToggle from './LinkToggle';
-import List, { asTestableList } from './List';
+import List from './List_DEPRECATED';
 import asTaggableItem from './Taggable/asTaggableItem';
-import withListTitle from './List/withListTitle';
-import asEditableList from './List/asEditableList';
-import asBasicSublist from './List/asBasicSublist';
-import withSublist, { withBasicSublist } from './List/withSublist';
-import withDeleteSublistOnUnwrap from './List/withDeleteSublistOnUnwrap';
+import withListTitle from './List_DEPRECATED/withListTitle';
+import asEditableList from './List_DEPRECATED/asEditableList';
+import asBasicSublist from './List_DEPRECATED/asBasicSublist';
+import withSublist, { withBasicSublist } from './List_DEPRECATED/withSublist';
+import withDeleteSublistOnUnwrap from './List_DEPRECATED/withDeleteSublistOnUnwrap';
 import {
   withMeta, withMetaStatic, withMetaHtml, withTitle,
 } from './Meta/Meta';
 import withMetaForm, { withMetaSnippet } from './Meta/withMetaForm';
 import type { FieldType as MetaFormFieldType } from './Meta/withMetaForm';
 import asBodilessHelmet from './Helmet/Helmet';
-import withEvent from './GTM/gtm';
+import withDataLayerItem, { withDefaultDataLayer, withDataLayerScript } from './GTM/gtm';
 import { withToggle, withToggleTo, withToggleButton } from './Toggle';
 import withEditPlaceholder from './Placeholder';
 import { TagButtonProps, withTagButton, useTagsAccessors } from './TagButton';
@@ -70,8 +70,11 @@ import {
   ifViewportIs,
   ifViewportIsNot,
 } from './withResponsiveToggle';
+import asBreadcrumb, { useBreadcrumbContext } from './asBreadcrumb';
+import withBodilessLinkToggle from './withBodilessLinkToggle';
 
 export {
+  withBodilessLinkToggle,
   asBodilessLink,
   Image,
   asBodilessImage,
@@ -83,7 +86,6 @@ export {
   List,
   asEditableList,
   asBasicSublist,
-  asTestableList,
   withBasicSublist,
   withSublist,
   withDeleteSublistOnUnwrap,
@@ -99,7 +101,6 @@ export {
   withMetaHtml,
   asBodilessHelmet,
   withEditPlaceholder,
-  withEvent,
   withTagButton,
   TagButtonProps,
   asTaggableItem,
@@ -132,11 +133,14 @@ export {
   ifViewportIsNot,
   withMetaForm,
   withMetaSnippet,
+  asBreadcrumb,
+  useBreadcrumbContext,
+  withDataLayerItem,
+  withDefaultDataLayer,
+  withDataLayerScript,
 };
 
-export type {
-  FinalProps as ListProps,
-  TitleProps as ListTitleProps,
-  ListDesignableComponents,
-} from './List/types';
+export * from './Chameleon/index';
+export * from './List';
+
 export type { MetaFormFieldType, YouTubePlayerSettings };
