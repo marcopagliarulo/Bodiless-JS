@@ -17,6 +17,12 @@ module.exports = {
 
   theme: {
 
+    extend: {
+      width: {
+        content: 'max-content',
+      },
+    },
+
     // tailwindcss-aspect-ratio configs
     aspectRatio: { // defaults to {}
       none: 0,
@@ -306,7 +312,15 @@ module.exports = {
     | Class name: .min-w-{size}
     |
     */
-    // minWidth: {},
+    // Min-width is set for https://github.com/johnsonandjohnson/Bodiless-JS/issues/481
+    // We need a min width here for the asToutOverlayTitle and asToutOverlayCta
+    minWidth: {
+      1: '1rem',
+      5: '5rem',
+      // Used by main menu items to match the UI wireframes
+      100: '100px',
+      full: '100%',
+    },
 
     /*
     |---------------------------------------------------------------------------
@@ -502,7 +516,10 @@ module.exports = {
   |
   */
 
-  variants: {},
+  variants: {
+    overflow: ['responsive', 'hover', 'focus'],
+    position: ['responsive', 'hover', 'focus'],
+  },
 
   corePlugins: {},
 
