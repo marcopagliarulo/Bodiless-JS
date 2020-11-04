@@ -69,7 +69,7 @@ const withSlateEditor = <P extends object> (Component:ComponentType<P>) => (prop
         when: 'isEmpty',
         style: {
           width: '100%',
-          display: 'block',
+          display: 'inline',
           height: '0',
           overflow: 'visible',
         },
