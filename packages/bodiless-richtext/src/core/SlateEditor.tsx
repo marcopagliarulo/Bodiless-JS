@@ -60,8 +60,7 @@ const withSlateEditor = <P extends object> (Component:ComponentType<P>) => (prop
     [
       {
         queries: {
-          // @ts-ignore
-          isEmpty: (editor) => editor.value.document.text === '',
+          isEmpty: (editor:Editor) => editor.value.document.text === '',
         },
       },
       PlaceholderPlugin({
