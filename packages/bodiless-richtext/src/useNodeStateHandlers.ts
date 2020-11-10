@@ -77,17 +77,20 @@ const useOnChange: TUseOnChange = ({ onChange, key, initialValue }) => {
     const newState = {
       [key]: value,
     };
-    // The new value is identical to the initialValue.
-    const newValueNotInitial = !isEqual(initialValue.document, jsonValue.document);
-    // The new value is identical to the initialValue.
-    // But the document and new Value are different.
-    // So the new value is anyway a change from a previous state.
-    const newValueEmpty = !newValueNotInitial && document && !isEqual(document, jsonValue.document);
 
-    if (newValueEmpty
-      || (newValueNotInitial && (!document
-      || !isEqual(document, jsonValue.document)))
-    ) {
+    // If Document has changed
+    const isDocumentChanged = !isEqual(document, jsonValue.document);
+
+    // If the value is initial value
+    const isNewValueInitial = isEqual(initialValue.document, jsonValue.document);
+
+    // If New Value is Empty
+    const isNewValueEmpty = isNewValueInitial && document && isDocumentChanged;
+
+    // If New Value Has Changes
+    const isNewValueChanged = !isNewValueInitial && (!document || isDocumentChanged);
+
+    if (isNewValueEmpty || isNewValueChanged) {
       node.setData({ document: jsonValue.document! });
     }
     if (onChange) {
