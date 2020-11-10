@@ -13,6 +13,7 @@
  */
 
 import React from 'react';
+import { isObservable, toJS } from 'mobx';
 import { Value, ValueJSON } from 'slate';
 import isEqual from 'react-fast-compare';
 import { useNode, useUUID } from '@bodiless/core';
@@ -28,6 +29,7 @@ type TOnChange = Function; // (change: Change) => void;
 type TUseOnChangeParams = {
   onChange?: TOnChange;
   key: string;
+  initialValue: InitialValue;
 };
 type TUseOnChange = (params: TUseOnChangeParams) => (change: Change) => void;
 type TUseValueParam = {
@@ -59,20 +61,32 @@ const preserveAll = {
 
 // Create the onChange prop.
 // @TODO Should be memoized with useCallback.
-const useOnChange: TUseOnChange = ({ onChange, key }) => {
+const useOnChange: TUseOnChange = ({ onChange, key, initialValue }) => {
   const { setState } = useStateContainer();
   const { node } = useNode<Data>();
 
   return change => {
     const { value } = change;
     const jsonValue = value.toJSON();
+    let { document } = node.data;
+
+    if (isObservable(document)) {
+      document = toJS(document);
+    }
     // Set the editor state.  We use the node path as a key.
     const newState = {
       [key]: value,
     };
-    if (
-      !node.data.document
-      || !isEqual(node.data.document, jsonValue.document)
+    // The new variable is identical to the initialValue.
+    const newValueNotInitial = !isEqual(initialValue.document, jsonValue.document);
+    // The new value is identical to the initialValue.
+    // But the document and new Value are different.
+    // So the new value is anyway a change from a previous state.
+    const newValueEmpty = !newValueNotInitial && document && !isEqual(document, jsonValue.document);
+
+    if (newValueEmpty
+      || (newValueNotInitial && (!document
+      || !isEqual(document, jsonValue.document)))
     ) {
       node.setData({ document: jsonValue.document! });
     }
@@ -118,6 +132,7 @@ const useNodeStateHandlers: TUseNodeStateHandlers = ({
     onChange: useOnChange({
       onChange,
       key,
+      initialValue,
     }),
   });
 };
