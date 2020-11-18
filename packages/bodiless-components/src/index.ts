@@ -13,12 +13,14 @@
  */
 
 import Editable, { withPlaceholder, asEditable } from './Editable';
-import { asBodilessLink } from './Link';
+import { asBodilessLink, withoutLinkWhenLinkDataEmpty } from './Link';
+import type { AsBodilessLink } from './Link';
 import Image, {
   asBodilessImage,
   TImagePickerUI,
   withImagePlaceholder,
 } from './Image';
+import type { AsBodilessImage } from './Image';
 import NodeViewer from './NodeViewer';
 import withLinkToggle from './LinkToggle';
 import List from './List_DEPRECATED';
@@ -70,12 +72,12 @@ import {
   ifViewportIs,
   ifViewportIsNot,
 } from './withResponsiveToggle';
-import asBreadcrumb, { useBreadcrumbContext } from './asBreadcrumb';
 import withBodilessLinkToggle from './withBodilessLinkToggle';
 
 export {
   withBodilessLinkToggle,
   asBodilessLink,
+  withoutLinkWhenLinkDataEmpty,
   Image,
   asBodilessImage,
   withImagePlaceholder,
@@ -133,8 +135,6 @@ export {
   ifViewportIsNot,
   withMetaForm,
   withMetaSnippet,
-  asBreadcrumb,
-  useBreadcrumbContext,
   withDataLayerItem,
   withDefaultDataLayer,
   withDataLayerScript,
@@ -143,4 +143,11 @@ export {
 export * from './Chameleon/index';
 export * from './List';
 
+export * from './Breadcrumbs';
+
 export type { MetaFormFieldType, YouTubePlayerSettings };
+
+export type {
+  AsBodilessImage,
+  AsBodilessLink,
+};
