@@ -36,11 +36,17 @@ type Opts = {
   toggle(options: ToggleProps): void;
   isActive(value: Value): boolean;
   icon: string;
+  onMouseUp?(event: React.MouseEvent): void;
 };
 
 const withToggle = <P extends requiredProps> (opts:Opts) => (
   (Component:any) => (props:P) => {
-    const { toggle, isActive, icon } = opts;
+    const {
+      toggle,
+      isActive,
+      icon,
+      onMouseUp,
+    } = opts;
     const { children, className = '' } = props;
     const editorContext: EditorContext = useSlateContext();
     const componentName = Component.defaultProps ? Component.defaultProps.name : undefined;
@@ -52,6 +58,9 @@ const withToggle = <P extends requiredProps> (opts:Opts) => (
             editor: editorContext!.editor,
             value: editorContext!.value,
           })
+        }
+        onMouseUp={
+          (event) => onMouseUp?.(event)
         }
         className={`${
           isActive(editorContext!.value) ? 'active bl-active' : ''

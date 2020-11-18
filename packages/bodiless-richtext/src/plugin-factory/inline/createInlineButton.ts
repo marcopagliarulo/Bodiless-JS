@@ -32,6 +32,11 @@ const createInlineButton: CreateInlineButton = (inlineType, icon) => createPlugi
     }
   },
   isActive: value => hasInline(value, inlineType),
+  // Workaround to handle losing focus on click #603.
+  onMouseUp: (event: React.MouseEvent) => {
+    const currentTarget = event.currentTarget as HTMLElement;
+    currentTarget.focus();
+  },
 });
 
 export default createInlineButton;
