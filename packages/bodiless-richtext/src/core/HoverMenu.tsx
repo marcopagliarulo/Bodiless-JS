@@ -102,9 +102,8 @@ const HoverMenu = (props: HoverMenuProps) => {
     }
 
     if (!activeElement || activeElement.id !== currentTarget.id) {
-      if (editorContext && editorContext.editor) {
-        editorContext.editor.moveTo(0);
-        editorContext.editor.deselect();
+      if (editorContext && editorContext.editorRef && editorContext.editorRef.current) {
+        editorContext.editorRef.current.deselect();
       }
       currentTarget.removeAttribute('style');
     }
