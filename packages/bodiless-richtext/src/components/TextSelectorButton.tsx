@@ -51,13 +51,22 @@ const TextSelectorButton = ({
       trigger={['hover']}
       placement="topLeft"
       overlayStyle={{ opacity: 1 }}
+      visible={visible}
       align={{
         offset: [-40, -10],
       }}
       onVisibleChange={() => { setVisible(!visible); }}
       overlay={() => (
         <Overlay>
-          <TextSelectorWrapper>
+          <TextSelectorWrapper
+            onClick={(ev) => {
+              const target = ev.target as HTMLElement;
+              const currentTarget = ev.currentTarget as HTMLElement;
+              if (currentTarget !== target && currentTarget.contains(target)) {
+                setVisible(!visible);
+              }
+            }}
+          >
             { children }
           </TextSelectorWrapper>
         </Overlay>
