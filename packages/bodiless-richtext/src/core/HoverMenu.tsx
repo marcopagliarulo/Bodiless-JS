@@ -61,7 +61,6 @@ function updateMenu(menu: HTMLElement | null, editorContext: EditorContext) {
   style.visibility = 'visible';
   style.top = `${rect.top + window.pageYOffset - menu.offsetHeight}px`;
   style.left = `${offsetLeft < 0 ? 15 : offsetLeft}px`;
-
 }
 
 export type HoverMenuProps = {
