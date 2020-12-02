@@ -42,8 +42,9 @@ const TextSelectorButton = ({
 }:props) => {
   const [visible, setVisible] = useState(false);
   const { Overlay, TextSelectorWrapper } = getUI(useUI());
+  console.log(children);
   const nodeSelectorProps = {
-    className: visible ? 'active bl-active' : '',
+    className: visible ? 'active bl-active node-selector-button' : '',
   };
 
   return (
@@ -63,6 +64,11 @@ const TextSelectorButton = ({
               const target = ev.target as HTMLElement;
               const currentTarget = ev.currentTarget as HTMLElement;
               if (currentTarget !== target && currentTarget.contains(target)) {
+                const buttons = document.getElementsByClassName('node-selector-button');
+                if (buttons.length) {
+                  const button = buttons[0] as HTMLElement;
+                  button.focus();
+                }
                 setVisible(!visible);
               }
             }}

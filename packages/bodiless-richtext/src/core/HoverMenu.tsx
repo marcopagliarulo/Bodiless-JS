@@ -61,9 +61,7 @@ function updateMenu(menu: HTMLElement | null, editorContext: EditorContext) {
   style.visibility = 'visible';
   style.top = `${rect.top + window.pageYOffset - menu.offsetHeight}px`;
   style.left = `${offsetLeft < 0 ? 15 : offsetLeft}px`;
-  // Reset the Editor selection to force the focus within the Editor;
-  editorContext.editorRef.current?.deselect();
-  editorContext.editorRef.current?.select(selection);
+
 }
 
 export type HoverMenuProps = {
