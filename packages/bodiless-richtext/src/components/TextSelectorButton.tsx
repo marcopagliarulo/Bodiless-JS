@@ -42,9 +42,8 @@ const TextSelectorButton = ({
 }:props) => {
   const [visible, setVisible] = useState(false);
   const { Overlay, TextSelectorWrapper } = getUI(useUI());
-  console.log(children);
   const nodeSelectorProps = {
-    className: visible ? 'active bl-active node-selector-button' : '',
+    className: visible ? 'bl-active node-selector-button' : '',
   };
 
   return (
