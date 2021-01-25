@@ -73,7 +73,7 @@ const defaultImagePickerUI = {
 };
 
 // DropZonePlugin control the upload of file and only saves jpg/png files.
-function DropZonePlugin({ formApi, targetFieldName, ui }: {
+export function DropZonePlugin({ formApi, targetFieldName, ui }: {
   formApi: FormApi<Data>;
   targetFieldName:string;
   ui?: Partial<TImagePickerUI>;
@@ -104,6 +104,13 @@ function DropZonePlugin({ formApi, targetFieldName, ui }: {
   });
 
   const onDrop = useCallback(acceptedFiles => {
+    // When files are rejected by the react-dropzone,
+    // acceptedFiles is an empty array.
+    if (acceptedFiles.length < 1) {
+      setStatusText('File type not accepted or too many, try again!');
+      console.error('Unable to upload selected files.', acceptedFiles);
+      return;
+    }
     setIsUploading(true);
     setIsUploadFinished(false);
     setIsUploadingTimeout(false);
@@ -128,7 +135,7 @@ function DropZonePlugin({ formApi, targetFieldName, ui }: {
 
   const { getRootProps, getInputProps, isDragReject } = useDropzone({
     onDrop,
-    accept: 'image/jpeg, image/png, image/svg+xml, image/gif, image/webp, image/apng',
+    accept: 'image/jpeg, image/png, image/svg+xml, image/gif, image/apng',
     multiple: false,
   });
 
@@ -175,13 +182,13 @@ const options: BodilessOptions<Props, Data> = {
   icon: 'image',
   label: 'Select',
   groupLabel: 'Image',
+  formTitle: 'Image',
   name: 'Image',
   renderForm: ({ ui: formUi, formApi, componentProps }) => {
     const { ui: imagePickerUI } = componentProps;
-    const { ComponentFormTitle, ComponentFormLabel, ComponentFormText } = getUI(formUi);
+    const { ComponentFormLabel, ComponentFormText } = getUI(formUi);
     return (
       <>
-        <ComponentFormTitle>Image</ComponentFormTitle>
         <ComponentFormLabel htmlFor="image-src">Src</ComponentFormLabel>
         <ComponentFormText field="src" id="image-src" />
         <ComponentFormLabel htmlFor="image-alt">Alt</ComponentFormLabel>

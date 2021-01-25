@@ -37,7 +37,7 @@ import {
 import { useSearchResultContext } from './SearchContextProvider';
 import { TSearchResult } from '../types';
 
-type SearchComponents = {
+export type SearchComponents = {
   SearchWrapper: ComponentType<StylableProps>;
   SearchInput: ComponentType<any>;
   SearchButton: ComponentType<any>;
@@ -47,14 +47,14 @@ type SearchResultComponents = {
   SearchResultWrapper: ComponentType<StylableProps>;
   SearchResultList: ComponentType<any>;
   SearchResultListItem: ComponentType<any>;
-  SearchResultSummary: ComponentType<StylableProps>,
+  SearchResultSummary: ComponentType<StylableProps>;
 };
 
 type SearchResultItemComponents = {
-  ItemList: ComponentType<StylableProps>,
-  ItemH3: ComponentType<StylableProps>,
-  ItemAnchor: ComponentType<HTMLProps<HTMLAnchorElement> & StylableProps>,
-  ItemParagraph: ComponentType<StylableProps>,
+  ItemList: ComponentType<StylableProps>;
+  ItemH3: ComponentType<StylableProps>;
+  ItemAnchor: ComponentType<HTMLProps<HTMLAnchorElement> & StylableProps>;
+  ItemParagraph: ComponentType<StylableProps>;
 };
 
 type SearchResultItemProps = DesignableComponentsProps<SearchResultItemComponents> &
@@ -67,14 +67,10 @@ const SearchInputBase: FC<HTMLProps<HTMLInputElement>> = props => {
   );
 };
 
-const SearchButtonBase: FC<HTMLProps<HTMLButtonElement>> = (
-  { onClick, ...rest },
-) => <Button onClick={onClick} {...rest} />;
-
-const searchComponents: SearchComponents = {
+export const searchComponents: SearchComponents = {
   SearchWrapper: Div,
   SearchInput: SearchInputBase,
-  SearchButton: SearchButtonBase,
+  SearchButton: Button,
 };
 
 const searchResultItemComponents: SearchResultItemComponents = {
@@ -105,7 +101,7 @@ const SearchResultItemBase: FC<SearchResultItemProps> = ({ components, ...props 
 };
 
 const SearchResultItemClean = flow(
-  designable(searchResultItemComponents),
+  designable(searchResultItemComponents, 'SearchResultItem'),
 )(SearchResultItemBase);
 
 const searchResultComponents: SearchResultComponents = {
@@ -115,8 +111,10 @@ const searchResultComponents: SearchResultComponents = {
   SearchResultSummary: P,
 };
 
-type SearchProps = DesignableComponentsProps<SearchComponents> &
-HTMLProps<HTMLElement>;
+export type SearchProps = DesignableComponentsProps<SearchComponents> &
+HTMLProps<HTMLElement> & {
+  onSubmit?: (query: string) => void,
+};
 type SearchResultProps = DesignableComponentsProps<SearchResultComponents> &
 HTMLProps<HTMLElement> & { resultCountMessage?: string, resultEmptyMessage?: string };
 
@@ -194,16 +192,21 @@ const SearchBoxBase: FC<SearchProps> = ({ components, ...props }) => {
     }
   }, [queryString]);
 
+  const {
+    placeholder = 'Search',
+    onSubmit,
+    ...rest
+  } = props;
+
   const onClickHandler = useCallback((event: React.MouseEvent) => {
+    if (onSubmit) onSubmit(queryString);
     event.preventDefault();
     searchHandler();
-  }, [queryString]);
-
-  const { placeholder = 'Search' } = props;
+  }, [queryString, onSubmit]);
 
   const { SearchWrapper, SearchInput, SearchButton } = components;
   return (
-    <SearchWrapper>
+    <SearchWrapper {...rest}>
       <SearchInput
         value={queryString}
         onChange={onChangeHandler}
@@ -215,7 +218,9 @@ const SearchBoxBase: FC<SearchProps> = ({ components, ...props }) => {
   );
 };
 
-export const SearchBox = designable(searchComponents)(SearchBoxBase) as ComponentType<SearchProps>;
+export const SearchBox = designable(
+  searchComponents, 'SearchBox',
+)(SearchBoxBase) as ComponentType<SearchProps>;
 export const SearchResult = designable(
-  searchResultComponents,
+  searchResultComponents, 'SearchResult',
 )(SearchResultBase) as ComponentType<SearchResultProps>;

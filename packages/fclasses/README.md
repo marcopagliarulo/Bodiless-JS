@@ -5,7 +5,7 @@
 The Bodiless FClasses Design API is designed to facilitate the implementation of
 a *Design System* in a React application. Before diving into the technical
 details below, it might make sense to read our
-[high level overview of Design Systems in Bodiless](../Design/DesignSystems) to
+[high level overview of Design Systems in Bodiless](../../Design/DesignSystem) to
 better understand the general patterns at work.
 
 At a high level, this API expresses *Design Tokens* as React higher-order
@@ -237,7 +237,35 @@ const ToutBase: FC<Props> = ({ components }) => {
 Here we have defined a type of the components that we need, a starting point for those components and then we have create a componant that accepts those compoents.  Next we will combine the Start point as well as the ToutBase to make a designable tout that can take a Design prop.
 
 ``` js
-const ToutDesignable = designable(toutComponentStart)(ToutBase);
+const ToutDesignable = designable(toutComponentStart, 'Tout')(ToutBase);
+```
+### Design Key Annotations
+
+Note the second parameter to `designable` above; it is a label which will be used
+to identify the component and its design keys is in the markup.  This can make
+it easier to locate the specific design element to which styles should be
+applied, for example:
+
+```
+<div bl-design-key="Tout:Wrapper">
+  <div bl-design-key="Tout:ImageWrapper">
+  ...
+```
+
+Generation of these attributes is disabled by default.  To enable it, wrap the section
+of code for which you want the attributes generated in the `withShowDesignKeys` HOC:
+
+```js
+const ToutWithDesignKeys = withShowDesignKeys()(ToutDesignable);
+```
+
+or, to turn it on for a whole page, but only when not in production mode,
+
+```js
+const PageWithDesignKeys = withDesignKeys(process.env.NODE_ENV !== 'production')(Fragment);
+<PageWithDesignKeys>
+  ...
+</PageWithDesignKeys>
 ```
 
 ## Consuming the Design API
