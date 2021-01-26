@@ -23,7 +23,7 @@ import type {
   StylableProps,
 } from './FClasses';
 
-import addProps from './addProps';
+import addProps, { addPropsIf } from './addProps';
 import {
   asComponent,
   applyDesign,
@@ -44,12 +44,19 @@ import type {
   DesignableComponentsProps,
   DesignableComponents,
 } from './Design';
-import { flowIf, hasProp, withoutProps } from './hoc-util';
+import {
+  flowIf, hasProp, withoutProps, withOnlyProps, replaceOnEffect,
+  withDisplayName,
+} from './hoc-util';
+import Fragment from './Fragment';
 
 export * from './StyledHTML';
 
+export { withShowDesignKeys } from './Context';
+
 export {
   addProps,
+  addPropsIf,
   stylable,
   addClasses,
   removeClasses,
@@ -57,11 +64,13 @@ export {
   withFinalDesign,
   applyDesign,
   replaceWith,
+  replaceOnEffect,
   startWith,
   remove,
   flowIf,
   hasProp,
   withoutProps,
+  withOnlyProps,
   designable,
   extendDesignable,
   varyDesign,
@@ -69,6 +78,8 @@ export {
   asComponent,
   addClassesIf,
   removeClassesIf,
+  Fragment,
+  withDisplayName,
 };
 
 export type {

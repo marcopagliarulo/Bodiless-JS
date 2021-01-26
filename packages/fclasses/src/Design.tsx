@@ -14,10 +14,13 @@
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import {
-  intersection, flowRight, flow, mergeWith, identity,
+  intersection, flowRight, flow, identity,
 } from 'lodash';
 import React, { ComponentType, Fragment, useContext } from 'react';
 import { HOC } from './FClasses';
+import { addPropsIf } from './addProps';
+import { useShowDesignKeys } from './Context';
+import { withDisplayName } from './hoc-util';
 
 export type DesignElement<P> = (c: ComponentType<P> | string) => ComponentType<P>;
 
@@ -34,7 +37,7 @@ export type DesignableComponents = {
  */
 export type Design<C extends DesignableComponents> = {
   [Key in keyof C]?: (component: C[Key]) => C[Key]
-} & { _final?: Design<C> };
+} & { _final?: Design<Omit<C, '_final'>> };
 
 /**
  * This is the type of the props for a designable whose underlying component
@@ -76,15 +79,6 @@ export const asComponent = <P extends object>(
   return AsComponent;
 };
 
-/**
- * is an HOC that will attach a displayName to an object
- * @param name the name of the displayName.
- */
-const withDisplayName = <P extends Object> (name: string) => (Component: ComponentType<P>) => {
-  const WithDisplayName = (props: P) => <Component {...props} />;
-  const newMeta = mergeWith({}, Component, { displayName: name });
-  return Object.assign(WithDisplayName, newMeta);
-};
 const designContextDefault = undefined as undefined | ComponentType<any>;
 const DesignContext = React.createContext(designContextDefault);
 export const replaceable = <P extends object> (Component:ComponentType<P>) => {
@@ -297,8 +291,14 @@ type TransformDesign = (design?: Design<any>) => Design<any>|undefined;
  * @return A function with the same signature as `designable`.
  */
 export const extendDesignable = (transformDesign: TransformDesign = identity) => (
-  <C extends DesignableComponents> (start: C | Function) => (
+  <C extends DesignableComponents> (start: C | Function, namespace: string = '?') => (
     <P extends object>(Component: ComponentType<P & DesignableComponentsProps<C>>) => {
+      const designKeys = typeof start !== 'function'
+        ? Object.keys(start).reduce((keys, key) => ({
+          ...keys,
+          [key]: addPropsIf(useShowDesignKeys)({ 'data-bl-design-key': `${namespace}:${key}` }),
+        }), {})
+        : undefined;
       const transformFixed = (props:DesignableProps<C> & P) => {
         const { design } = props;
         const { _final, ...restDesign } = design || {};
@@ -315,7 +315,10 @@ export const extendDesignable = (transformDesign: TransformDesign = identity) =>
         return (newDesign ? { ...rest, design: newDesign } : rest) as P;
       };
       // const transformPassthrough = (props:DesignableProps<C>&P) => omit(props, ['design']) as P;
-      const Designable = withTransformer({ transformFixed, transformPassthrough })(Component);
+      const Designable = flow(
+        withTransformer({ transformFixed, transformPassthrough }),
+        designKeys ? withDesign(designKeys) : identity,
+      )(Component);
       return Designable as ComponentType<DesignableProps<C> & P>;
     }
   )
