@@ -7,6 +7,7 @@
 ### Enumerations
 
 * [ComponentDisplayMode](enums/componentdisplaymode.md)
+* [LanguageDirection](enums/languagedirection.md)
 * [Scale](enums/scale.md)
 
 ### Classes
@@ -22,14 +23,16 @@
 
 ### Type aliases
 
-* [AllowedComponent](globals.md#allowedcomponent)
 * [CTWM](globals.md#ctwm)
 * [Categories](globals.md#categories)
 * [ComponentSelectorProps](globals.md#componentselectorprops)
 * [ComponentSelectorUI](globals.md#componentselectorui)
 * [ComponentWithMeta](globals.md#componentwithmeta)
+* [ComponentWithPartialMeta](globals.md#componentwithpartialmeta)
 * [Config](globals.md#config)
+* [ContentLibraryOptions](globals.md#contentlibraryoptions)
 * [DeleteFlowContainerItem](globals.md#deleteflowcontaineritem)
+* [Direction](globals.md#direction)
 * [EditFlowContainerProps](globals.md#editflowcontainerprops)
 * [FinalUI](globals.md#finalui)
 * [FlowContainerComponentProps](globals.md#flowcontainercomponentprops)
@@ -42,10 +45,10 @@
 * [Handlers](globals.md#handlers)
 * [InsertContentNode](globals.md#insertcontentnode)
 * [ItemListProps](globals.md#itemlistprops)
+* [Meta](globals.md#meta)
 * [MetaCategory](globals.md#metacategory)
 * [OnFlowContainerItemResize](globals.md#onflowcontaineritemresize)
 * [Props](globals.md#props)
-* [RenderList](globals.md#renderlist)
 * [SetFlowContainerItems](globals.md#setflowcontaineritems)
 * [SnapData](globals.md#snapdata)
 * [SnapDataProps](globals.md#snapdataprops)
@@ -60,7 +63,6 @@
 * [WidthClassTuple](globals.md#widthclasstuple)
 * [WithMeta](globals.md#withmeta)
 * [WithTuples](globals.md#withtuples)
-* [onSelectType](globals.md#onselecttype)
 
 ### Variables
 
@@ -71,9 +73,11 @@
 * [FALLBACK_SNAP_CLASSNAME](globals.md#const-fallback_snap_classname)
 * [FlowContainer](globals.md#const-flowcontainer)
 * [FlowContainerDesignable](globals.md#const-flowcontainerdesignable)
+* [FlowContainerEmpty](globals.md#const-flowcontainerempty)
 * [Handle](globals.md#const-handle)
 * [NodeProvider](globals.md#const-nodeprovider)
 * [RESIZE_THROTTLE_INTERVAL](globals.md#const-resize_throttle_interval)
+* [SortableChild](globals.md#const-sortablechild)
 * [SortableListWrapper](globals.md#const-sortablelistwrapper)
 * [SortableResizable](globals.md#const-sortableresizable)
 * [SortableResizableWrapper](globals.md#const-sortableresizablewrapper)
@@ -85,11 +89,12 @@
 * [defaultSnapData](globals.md#const-defaultsnapdata)
 * [html2canvas](globals.md#const-html2canvas)
 * [ifComponentSelector](globals.md#const-ifcomponentselector)
+* [ifNotComponentSelector](globals.md#const-ifnotcomponentselector)
+* [isNotComponentSelector](globals.md#const-isnotcomponentselector)
 * [uiContext](globals.md#const-uicontext)
 
 ### Functions
 
-* [AllCheckbox](globals.md#allcheckbox)
 * [Capitalize](globals.md#capitalize)
 * [Checkbox](globals.md#checkbox)
 * [ComponentDisplayModeProvider](globals.md#const-componentdisplaymodeprovider)
@@ -99,21 +104,21 @@
 * [EditListView](globals.md#const-editlistview)
 * [FilterWrapper](globals.md#const-filterwrapper)
 * [FlowContainerBasic](globals.md#const-flowcontainerbasic)
-* [FlowContainerEmpty](globals.md#const-flowcontainerempty)
+* [FlowContainerEmpty$](globals.md#const-flowcontainerempty)
 * [GetComponentThumbnail](globals.md#getcomponentthumbnail)
 * [ItemList](globals.md#const-itemlist)
 * [RenderCanvas](globals.md#rendercanvas)
 * [SearchWrapper](globals.md#const-searchwrapper)
 * [SlateSortableResizable](globals.md#const-slatesortableresizable)
-* [SortableChild](globals.md#const-sortablechild)
+* [SortableResizable$](globals.md#const-sortableresizable)
 * [StaticFlowContainer](globals.md#const-staticflowcontainer)
 * [TextFormatList](globals.md#const-textformatlist)
-* [TextFormatSelector](globals.md#const-textformatselector)
 * [addtoArray](globals.md#addtoarray)
 * [applyMandatoryCategories](globals.md#const-applymandatorycategories)
 * [asPassThough](globals.md#const-aspassthough)
+* [childKeys](globals.md#const-childkeys)
 * [componentSelectorForm](globals.md#const-componentselectorform)
-* [createThrottledOnResizeStop](globals.md#const-createthrottledonresizestop)
+* [copyNode](globals.md#const-copynode)
 * [customizer](globals.md#customizer)
 * [dataURItoBlob](globals.md#datauritoblob)
 * [filterByMedia](globals.md#const-filterbymedia)
@@ -126,25 +131,29 @@
 * [getSnapFrom](globals.md#const-getsnapfrom)
 * [getUI](globals.md#const-getui)
 * [getWidths](globals.md#const-getwidths)
+* [hash](globals.md#const-hash)
 * [isComponentSelector](globals.md#const-iscomponentselector)
 * [perserveMeta](globals.md#const-perservemeta)
 * [reduceFilters](globals.md#const-reducefilters)
 * [removefromArray](globals.md#removefromarray)
-* [textFormatSelectorOption](globals.md#const-textformatselectoroption)
 * [titleToImageName](globals.md#titletoimagename)
 * [useAddButton](globals.md#const-useaddbutton)
+* [useCloneButton](globals.md#const-useclonebutton)
 * [useComponentDisplayModeContext](globals.md#const-usecomponentdisplaymodecontext)
 * [useComponentSelectorActions](globals.md#private-const-usecomponentselectoractions)
 * [useDeleteButton](globals.md#const-usedeletebutton)
 * [useFlowContainerDataHandlers](globals.md#const-useflowcontainerdatahandlers)
 * [useGetItemUseGetMenuOptions](globals.md#private-const-usegetitemusegetmenuoptions)
+* [useIsNested](globals.md#const-useisnested)
 * [useItemHandlers](globals.md#const-useitemhandlers)
 * [useMenuOptions](globals.md#private-usemenuoptions)
 * [useSwapButton](globals.md#const-useswapbutton)
 * [withAppendDesc](globals.md#const-withappenddesc)
 * [withAppendDisplayName](globals.md#const-withappenddisplayname)
 * [withAppendTitle](globals.md#const-withappendtitle)
+* [withContentLibrary](globals.md#const-withcontentlibrary)
 * [withDesc](globals.md#const-withdesc)
+* [withDirection](globals.md#const-withdirection)
 * [withDisplayName](globals.md#const-withdisplayname)
 * [withFacet](globals.md#const-withfacet)
 * [withMandatoryCategories](globals.md#const-withmandatorycategories)
@@ -158,7 +167,7 @@
 
 ### Object literals
 
-* [ENABLED_DRAG_SIDES](globals.md#const-enabled_drag_sides)
+* [DIRECTIONS](globals.md#const-directions)
 * [EditFlowContainerComponents](globals.md#const-editflowcontainercomponents)
 * [defaultUI](globals.md#const-defaultui)
 * [flowContainerComponentStart](globals.md#const-flowcontainercomponentstart)
@@ -167,19 +176,11 @@
 
 ## Type aliases
 
-###  AllowedComponent
-
-Ƭ **AllowedComponent**: *[ComponentWithMeta](globals.md#componentwithmeta)‹any›*
-
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:20](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L20)*
-
-___
-
 ###  CTWM
 
 Ƭ **CTWM**: *CT & [WithMeta](globals.md#withmeta)*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:31](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L31)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:31](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L31)*
 
 ___
 
@@ -187,7 +188,7 @@ ___
 
 Ƭ **Categories**: *object*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:39](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L39)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:32](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L32)*
 
 #### Type declaration:
 
@@ -197,23 +198,9 @@ ___
 
 ###  ComponentSelectorProps
 
-Ƭ **ComponentSelectorProps**: *object*
+Ƭ **ComponentSelectorProps**: *[ItemListProps](globals.md#itemlistprops) & object*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:27](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L27)*
-
-#### Type declaration:
-
-* **components**: *(string | FunctionComponent‹any› | ComponentClass‹any, any›)[]*
-
-* **mandatoryCategories**? : *string[]*
-
-* **renderList**? : *[RenderList](globals.md#renderlist)*
-
-* **ui**? : *[ComponentSelectorUI](globals.md#componentselectorui)*
-
-* **closeForm**(): *void*
-
-* **onSelect**(`event`: MouseEvent, `componentName`: string): *void*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:17](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L17)*
 
 ___
 
@@ -221,15 +208,23 @@ ___
 
 Ƭ **ComponentSelectorUI**: *Partial‹[FinalUI](globals.md#finalui)›*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:138](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L138)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:151](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L151)*
 
 ___
 
 ###  ComponentWithMeta
 
-Ƭ **ComponentWithMeta**: *ComponentType‹P› & object*
+Ƭ **ComponentWithMeta**: *ComponentType‹P› & [Meta](globals.md#meta)*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:42](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L42)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:59](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L59)*
+
+___
+
+###  ComponentWithPartialMeta
+
+Ƭ **ComponentWithPartialMeta**: *ComponentType‹P› & Partial‹[Meta](globals.md#meta)›*
+
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:60](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L60)*
 
 ___
 
@@ -237,7 +232,7 @@ ___
 
 Ƭ **Config**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:48](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L48)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:49](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L49)*
 
 #### Type declaration:
 
@@ -249,11 +244,35 @@ ___
 
 ___
 
+###  ContentLibraryOptions
+
+Ƭ **ContentLibraryOptions**: *object*
+
+*Defined in [packages/bodiless-layouts/src/ContentLibrary/withContentLibrary.tsx:13](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ContentLibrary/withContentLibrary.tsx#L13)*
+
+#### Type declaration:
+
+* **DisplayComponent**? : *ComponentType‹any›*
+
+* **Selector**? : *ComponentType‹[ComponentSelectorProps](globals.md#componentselectorprops)›*
+
+* **useLibraryNode**(): *function*
+
+  * (`props`: any): *object*
+
+    * **node**: *ContentNode‹any›*
+
+* **useMeta**? : *undefined | function*
+
+* **useOverrides**? : *undefined | function*
+
+___
+
 ###  DeleteFlowContainerItem
 
 Ƭ **DeleteFlowContainerItem**: *function*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:27](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/model.ts#L27)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:33](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/model.ts#L33)*
 
 #### Type declaration:
 
@@ -267,11 +286,19 @@ Name | Type |
 
 ___
 
+###  Direction
+
+Ƭ **Direction**: *[RTL](enums/languagedirection.md#rtl) | [LTR](enums/languagedirection.md#ltr)*
+
+*Defined in [packages/bodiless-layouts/src/withDirection/withDirection.tsx:26](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/withDirection/withDirection.tsx#L26)*
+
+___
+
 ###  EditFlowContainerProps
 
 Ƭ **EditFlowContainerProps**: *[StaticFlowContainerProps](globals.md#staticflowcontainerprops) & object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:31](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/types.ts#L31)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:31](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/types.ts#L31)*
 
 ___
 
@@ -279,13 +306,13 @@ ___
 
 Ƭ **FinalUI**: *object*
 
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:31](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L31)*
+*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:21](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L21)*
 
-*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:28](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L28)*
+*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:31](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L31)*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:64](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L64)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:76](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L76)*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:20](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L20)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:23](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L23)*
 
 #### Type declaration:
 
@@ -297,7 +324,7 @@ ___
 
 Ƭ **FlowContainerComponentProps**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:44](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/types.ts#L44)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:45](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/types.ts#L45)*
 
 #### Type declaration:
 
@@ -311,7 +338,7 @@ ___
 
 Ƭ **FlowContainerComponents**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:73](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/types.ts#L73)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:74](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/types.ts#L74)*
 
 #### Type declaration:
 
@@ -325,7 +352,7 @@ ___
 
 Ƭ **FlowContainerData**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:25](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/types.ts#L25)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:25](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/types.ts#L25)*
 
 #### Type declaration:
 
@@ -337,7 +364,7 @@ ___
 
 Ƭ **FlowContainerDataHandlers**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:28](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/model.ts#L28)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:34](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/model.ts#L34)*
 
 #### Type declaration:
 
@@ -357,7 +384,7 @@ ___
 
 Ƭ **FlowContainerItemHandlers**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:35](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/model.ts#L35)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:41](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/model.ts#L41)*
 
 #### Type declaration:
 
@@ -379,7 +406,7 @@ ___
 
 Ƭ **FlowContainerProps**: *[EditFlowContainerProps](globals.md#editflowcontainerprops) & WithNodeProps*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:43](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/types.ts#L43)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:44](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/types.ts#L44)*
 
 ___
 
@@ -387,17 +414,17 @@ ___
 
 Ƭ **HOC**: *function*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:32](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L32)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:32](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L32)*
 
 #### Type declaration:
 
-▸ (`Component`: [CTWM](globals.md#ctwm)): *[CTWM](globals.md#ctwm)*
+▸ (`Component?`: [CTWM](globals.md#ctwm)): *[CTWM](globals.md#ctwm)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`Component` | [CTWM](globals.md#ctwm) |
+`Component?` | [CTWM](globals.md#ctwm) |
 
 ___
 
@@ -405,7 +432,7 @@ ___
 
 Ƭ **Handlers**: *[FlowContainerDataHandlers](globals.md#flowcontainerdatahandlers) & [FlowContainerItemHandlers](globals.md#flowcontaineritemhandlers)*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:26](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L26)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:28](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L28)*
 
 ___
 
@@ -413,11 +440,11 @@ ___
 
 Ƭ **InsertContentNode**: *function*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:20](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/model.ts#L20)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:22](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/model.ts#L22)*
 
 #### Type declaration:
 
-▸ (`componentName`: string, `afterItem?`: [FlowContainerItem](interfaces/flowcontaineritem.md)): *[FlowContainerItem](interfaces/flowcontaineritem.md)*
+▸ (`componentName`: string, `afterItem?`: [FlowContainerItem](interfaces/flowcontaineritem.md), `wrapperProps?`: [FlowContainerItemProps](interfaces/flowcontaineritemprops.md)): *[FlowContainerItem](interfaces/flowcontaineritem.md)*
 
 **Parameters:**
 
@@ -425,6 +452,7 @@ Name | Type |
 ------ | ------ |
 `componentName` | string |
 `afterItem?` | [FlowContainerItem](interfaces/flowcontaineritem.md) |
+`wrapperProps?` | [FlowContainerItemProps](interfaces/flowcontaineritemprops.md) |
 
 ___
 
@@ -432,13 +460,38 @@ ___
 
 Ƭ **ItemListProps**: *object*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:60](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L60)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:65](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L65)*
+
+Props passed to the list of items within the component selector.
 
 #### Type declaration:
 
-* **components**: *[ComponentWithMeta](globals.md#componentwithmeta)‹any›[]*
+* **components**: *[ComponentWithMeta](globals.md#componentwithmeta)[]*
 
-* **onSelect**: *[onSelectType](globals.md#onselecttype)*
+* **onSelect**(): *function*
+
+  * (`names`: string[]): *void*
+
+___
+
+###  Meta
+
+Ƭ **Meta**: *object*
+
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:40](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L40)*
+
+Component metadata used to search, filter and display
+information about a component,
+
+#### Type declaration:
+
+* **categories**? : *[Categories](globals.md#categories)*
+
+* **description**: *string*
+
+* **displayName**: *string*
+
+* **title**: *string*
 
 ___
 
@@ -446,7 +499,7 @@ ___
 
 Ƭ **MetaCategory**: *object*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:22](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L22)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:22](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L22)*
 
 #### Type declaration:
 
@@ -458,7 +511,7 @@ ___
 
 Ƭ **OnFlowContainerItemResize**: *function*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:23](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/model.ts#L23)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:29](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/model.ts#L29)*
 
 #### Type declaration:
 
@@ -477,11 +530,11 @@ ___
 
 Ƭ **Props**: *object*
 
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:47](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L47)*
+*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:39](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L39)*
 
-*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:37](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L37)*
+*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:42](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L42)*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx:32](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx#L32)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx:33](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx#L33)*
 
 #### Type declaration:
 
@@ -489,34 +542,11 @@ ___
 
 ___
 
-###  RenderList
-
-Ƭ **RenderList**: *function*
-
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:21](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L21)*
-
-#### Type declaration:
-
-▸ (`options`: object): *ReactNode*
-
-**Parameters:**
-
-▪ **options**: *object*
-
-Name | Type |
------- | ------ |
-`components` | [AllowedComponent](globals.md#allowedcomponent)[] |
-`formApi` | FormApi‹any› |
-`formState` | FormState‹any› |
-`onSelect` | [onSelectType](globals.md#onselecttype) |
-
-___
-
 ###  SetFlowContainerItems
 
 Ƭ **SetFlowContainerItems**: *function*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:21](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/model.ts#L21)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/model.ts#L27)*
 
 #### Type declaration:
 
@@ -534,7 +564,7 @@ ___
 
 Ƭ **SnapData**: *function*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:32](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L32)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:33](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L33)*
 
 #### Type declaration:
 
@@ -552,7 +582,7 @@ ___
 
 Ƭ **SnapDataProps**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:22](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L22)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:22](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L22)*
 
 #### Type declaration:
 
@@ -568,11 +598,13 @@ ___
 
 Ƭ **SnapDataReturn**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:27](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L27)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L27)*
 
 #### Type declaration:
 
 * **className**: *string*
+
+* **currentMediaTuples**: *[Tuple](globals.md#tuple)[]*
 
 * **width**: *number*
 
@@ -582,7 +614,7 @@ ___
 
 Ƭ **SortableChildProps**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:61](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/types.ts#L61)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:62](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/types.ts#L62)*
 
 #### Type declaration:
 
@@ -590,9 +622,9 @@ ___
 
 * **className**? : *undefined | string*
 
-* **defaultWidth**? : *string | number*
-
 * **flowContainerItem**: *[FlowContainerItem](interfaces/flowcontaineritem.md)*
+
+* **getDefaultWidth**? : *undefined | function*
 
 * **index**: *number*
 
@@ -612,7 +644,7 @@ ___
 
 Ƭ **SortableListProps**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:26](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L26)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:29](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L29)*
 
 #### Type declaration:
 
@@ -630,7 +662,7 @@ ___
 
 Ƭ **SortableResizableProps**: *Omit‹[Props](globals.md#props), "useGetMenuOptions"›*
 
-*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:57](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L57)*
+*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:63](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L63)*
 
 ___
 
@@ -638,7 +670,7 @@ ___
 
 Ƭ **StaticFlowContainerProps**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:28](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/types.ts#L28)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:28](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/types.ts#L28)*
 
 #### Type declaration:
 
@@ -650,7 +682,7 @@ ___
 
 Ƭ **Tuple**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:17](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L17)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:17](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L17)*
 
 #### Type declaration:
 
@@ -666,13 +698,13 @@ ___
 
 Ƭ **UI**: *[ComponentSelectorUI](globals.md#componentselectorui) & SortableResizableUI*
 
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:37](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L37)*
+*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:28](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L28)*
 
-*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:31](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L31)*
+*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:35](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L35)*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:24](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L24)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L27)*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:23](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/types.ts#L23)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:23](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/types.ts#L23)*
 
 ___
 
@@ -680,7 +712,7 @@ ___
 
 Ƭ **UpdateFlowContainerItem**: *function*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:22](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/model.ts#L22)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:28](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/model.ts#L28)*
 
 #### Type declaration:
 
@@ -698,7 +730,7 @@ ___
 
 Ƭ **WidthClassTuple**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:38](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/types.ts#L38)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/types.ts:39](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/types.ts#L39)*
 
 #### Type declaration:
 
@@ -714,7 +746,7 @@ ___
 
 Ƭ **WithMeta**: *object*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:25](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L25)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:25](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L25)*
 
 #### Type declaration:
 
@@ -732,7 +764,7 @@ ___
 
 Ƭ **WithTuples**: *function*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:31](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L31)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:32](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L32)*
 
 #### Type declaration:
 
@@ -744,32 +776,13 @@ Name | Type |
 ------ | ------ |
 `tuples` | [Tuple](globals.md#tuple)[] |
 
-___
-
-###  onSelectType
-
-Ƭ **onSelectType**: *function*
-
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/types.tsx:35](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/types.tsx#L35)*
-
-#### Type declaration:
-
-▸ (`event`: MouseEvent, `componentName`: string): *void | boolean*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`event` | MouseEvent |
-`componentName` | string |
-
 ## Variables
 
 ### `Const` BASE_URL_NO_PREFIX_SLASH
 
 • **BASE_URL_NO_PREFIX_SLASH**: *string* = COMPONENTS_PREVIEW_BASE_URL.split('/').filter(Boolean).join('/')
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx:21](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx#L21)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx:21](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx#L21)*
 
 ___
 
@@ -777,7 +790,7 @@ ___
 
 • **COMPONENTS_PREVIEW_BASE_URL**: *string* = "/images/component-previews/"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/config.ts:16](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/config.ts#L16)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/config.ts:16](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/config.ts#L16)*
 
 Copyright © 2019 Johnson & Johnson
 
@@ -797,7 +810,7 @@ ___
 
 • **ChildNodeProvider**: *function* = withNode<PropsWithChildren<{}>, any>(React.Fragment)
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx:36](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx#L36)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx:36](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx#L36)*
 
 #### Type declaration:
 
@@ -821,7 +834,7 @@ ___
   mode: defaultMode,
 })
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx:26](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx#L26)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx#L27)*
 
 ___
 
@@ -829,7 +842,7 @@ ___
 
 • **FALLBACK_SNAP_CLASSNAME**: *"w-full"* = "w-full"
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableChild.tsx:26](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/SortableChild.tsx#L26)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableChild.tsx:24](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/SortableChild.tsx#L24)*
 
 ___
 
@@ -837,7 +850,7 @@ ___
 
 • **FlowContainer**: *function* = withNode(FlowContainerDesignable)
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/index.tsx:49](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/index.tsx#L49)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/index.tsx:49](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/index.tsx#L49)*
 
 #### Type declaration:
 
@@ -864,7 +877,30 @@ ___
   }),
 )(FlowContainerBasic)
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/index.tsx:38](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/index.tsx#L38)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/index.tsx:38](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/index.tsx#L38)*
+
+___
+
+### `Const` FlowContainerEmpty
+
+• **FlowContainerEmpty**: *object* = flow(
+  withContextActivator('onClick'),
+  withLocalContextMenu,
+)(FlowContainerEmpty$)
+
+*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:57](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L57)*
+
+#### Type declaration:
+
+▸ (`props`: any): *Element*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`props` | any |
+
+* **displayName**: *string*
 
 ___
 
@@ -874,7 +910,7 @@ ___
   <Component {...rest} />
 ))
 
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:62](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L62)*
+*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:55](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L55)*
 
 ___
 
@@ -882,7 +918,7 @@ ___
 
 • **NodeProvider**: *function* = withNode<PropsWithChildren<{}>, any>(React.Fragment)
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx:30](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx#L30)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx:31](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx#L31)*
 
 #### Type declaration:
 
@@ -904,7 +940,103 @@ ___
 
 • **RESIZE_THROTTLE_INTERVAL**: *number* = 100
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableChild.tsx:22](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/SortableChild.tsx#L22)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableChild.tsx:23](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/SortableChild.tsx#L23)*
+
+___
+
+### `Const` SortableChild
+
+• **SortableChild**: *FunctionComponent‹object›* = observer((props: SortableChildProps) => {
+  const {
+    flowContainerItem,
+    onResizeStop: onResizeStopProp = () => undefined,
+    snapData = defaultSnapData,
+    getDefaultWidth = () => FALLBACK_SNAP_CLASSNAME,
+    className: classNameProp = '',
+    ui,
+    children,
+    ...restProps
+  } = props;
+
+  // These are the classes which control width when not resizing. The come from
+  // the flow container item, or from the default width callback.
+  const widthClasses = flowContainerItem.wrapperProps?.className || getDefaultWidth(snapData);
+
+  // We need the starting width so we can set defaultSize on the re-resizeable.
+  // This ensures that we get back % during resize (otherwise we get pixels).
+  const { width: startingWidth } = snapData({ className: widthClasses });
+
+  // Track the snap width during resize so we can display it.
+  const [snapWidth, setSnapWidth] = useState<number|undefined>(undefined);
+  const onResize: ResizeCallback = useCallback((e, dir, ref) => {
+    const { width } = snapData({
+      className: widthClasses,
+      width: ref.style.width ? parseInt(ref.style.width, 10) : startingWidth,
+    });
+    setSnapWidth(width);
+  }, [widthClasses, startingWidth]);
+
+  // When resizing is complete, clear the snap width and notify the flow container
+  // of the selected classes.
+  const onResizeStop: ResizeCallback = useCallback((e, dir, ref) => {
+    setSnapWidth(undefined);
+    const { className } = snapData({
+      className: widthClasses,
+      width: ref.style.width ? parseInt(ref.style.width, 10) : startingWidth,
+    });
+    if (onResizeStopProp) onResizeStopProp({ className });
+  }, [widthClasses, startingWidth, onResizeStopProp]);
+
+  // we have to remove the width style when we are done resizing so that our responsive
+  // classes will control width. Otherwise the width will be fixed at all breakpoints.
+  // We need to do this onEffect bc we have to find the actual dom element.
+  const resizing = snapWidth !== undefined;
+  useEffect(() => {
+    if (resizing) return;
+    const elm: HTMLElement | null = document.querySelector(`[uuid='${flowContainerItem.uuid}']`);
+    if (elm) {
+      elm.style.height = '';
+      elm.style.width = '';
+    }
+  }, [resizing]);
+
+  const { width: minWidth, currentMediaTuples } = snapData({ width: 0, className: '' });
+  const is1WidthContainer = currentMediaTuples.length === 1;
+  const isResizeEnabled = !is1WidthContainer;
+  const className = [...widthClasses.split(' '), ...(classNameProp).split(' ')].join(' ');
+  const { SnapIndicator } = getUI(ui);
+  return (
+    <SlateSortableResizable
+      uuid={flowContainerItem.uuid}
+      isResizeEnabled={isResizeEnabled}
+      onResize={onResize}
+      onResizeStop={throttle(onResizeStop, RESIZE_THROTTLE_INTERVAL)}
+      // Set min width a bit smaller to ensure user can drag there, and provide snap back effect.
+      minWidth={`${minWidth * 0.9}%`}
+      // Set default size to starting width so we get sizes in %.
+      defaultSize={{
+        width: `${startingWidth}%`,
+        height: 'auto',
+      }}
+      className={className}
+      ui={ui}
+      {...restProps}
+    >
+      {resizing && (
+        // Show a label indicating where we'll snap to.
+        <SnapIndicator>
+          {`${Math.round(snapWidth!)}%`}
+        </SnapIndicator>
+      )}
+      {children}
+    </SlateSortableResizable>
+  );
+})
+
+*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableChild.tsx:30](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/SortableChild.tsx#L30)*
+
+This is the component which wraps all items in the flow container. You probably
+only need to use it directly if you are customizing the Admin UI.
 
 ___
 
@@ -925,30 +1057,19 @@ ___
   ),
 )
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:54](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L54)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:62](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L62)*
 
 ___
 
 ### `Const` SortableResizable
 
-• **SortableResizable**: *FunctionComponent‹object›* = observer(({ children, ui, ...props }: SortableResizableProps) => {
-  // We wabt to activate if nessesary
-  useActivateOnEffectActivator(props.uuid);
-  const context = useEditContext();
-  const { Wrapper } = getUI(ui);
-  // @ts-ignore
-  return (
-    <Wrapper
-      isEnabled={context.isActive && !context.areLocalTooltipsDisabled}
-      {...useContextActivator()}
-      {...props}
-    >
-      {children}
-    </Wrapper>
-  );
-})
+• **SortableResizable**: *any* = flow(
+  observer,
+  withContextActivator('onClick'),
+  withLocalContextMenu,
+)(SortableResizable$)
 
-*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:59](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L59)*
+*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:89](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L89)*
 
 ___
 
@@ -956,11 +1077,16 @@ ___
 
 • **SortableResizableWrapper**: *ComponentClass‹object & SortableElementProps, any›* = SortableElement((props: Props) => {
   const {
-    isEnabled, children, className, ui, ...resizableProps
+    isEnabled,
+    children,
+    className,
+    ui,
+    direction,
+    ...resizableProps
   } = props;
-
-  const { DragHandle, ResizeHandle, Reresizable } = getUI(ui);
-
+  const {
+    DragHandle, ResizeHandle, ResizeHandleRTL, Reresizable,
+  } = getUI(ui);
   const childrenWithDragHandle = (
     <>
       <Handle
@@ -972,16 +1098,27 @@ ___
       {children}
     </>
   );
+  const ENABLED_DRAG_SIDES = {
+    top: false,
+    right: isEnabled && direction !== DIRECTIONS.RTL,
+    bottom: false,
+    left: isEnabled && direction === DIRECTIONS.RTL,
+    topRight: false,
+    bottomRight: false,
+    bottomLeft: false,
+    topLeft: false,
+  };
 
   return (
     <Reresizable
       enable={ENABLED_DRAG_SIDES}
-      isEnabled={isEnabled}
       scale={1}
       className={className}
-      handleComponent={{
-        right: ResizeHandle,
-      }}
+      handleComponent={
+        direction === DIRECTIONS.RTL
+          ? { left: ResizeHandleRTL }
+          : { right: ResizeHandle }
+      }
       {...resizableProps}
     >
       {childrenWithDragHandle}
@@ -989,7 +1126,7 @@ ___
   );
 })
 
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:66](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L66)*
+*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:59](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L59)*
 
 ___
 
@@ -997,7 +1134,7 @@ ___
 
 • **UIConsumer**: *ExoticComponent‹ConsumerProps‹object››* = uiContext.Consumer
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/index.tsx:205](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/index.tsx#L205)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/index.tsx:171](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/index.tsx#L171)*
 
 ___
 
@@ -1006,15 +1143,15 @@ ___
 • **asEditFlowContainer**: *function* = flowRight(
   withActivateOnEffect,
   observer,
-  designable(EditFlowContainerComponents),
+  designable(EditFlowContainerComponents, 'FlowContainer'),
   withMenuOptions({
     useMenuOptions,
-    name: 'FlowContainer',
+    name: 'Flow Container',
   }),
   observer,
 )
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx:102](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx#L102)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx:102](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx#L102)*
 
 #### Type declaration:
 
@@ -1031,10 +1168,11 @@ ___
 ### `Const` asStaticFlowContainer
 
 • **asStaticFlowContainer**: *function* = flow(
-  designable(flowContainerComponentStart),
+  observer,
+  designable(flowContainerComponentStart, 'FlowContainer'),
 )
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx:66](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx#L66)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx:67](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx#L67)*
 
 #### Type declaration:
 
@@ -1052,9 +1190,9 @@ ___
 
 • **backendPort**: *string | 8001* = process.env.GATSBY_BACKEND_PORT || 8001
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/BackendClient.ts:17](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/BackendClient.ts#L17)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/BackendClient.ts:17](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/BackendClient.ts#L17)*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/config.ts:18](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/config.ts#L18)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/config.ts:18](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/config.ts#L18)*
 
 ___
 
@@ -1062,7 +1200,7 @@ ___
 
 • **defaultMode**: *[StaticFlowContainer](enums/componentdisplaymode.md#staticflowcontainer)* = ComponentDisplayMode.StaticFlowContainer
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx:24](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx#L24)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx:25](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx#L25)*
 
 ___
 
@@ -1070,7 +1208,11 @@ ___
 
 • **defaultSnapData**: *function* = getSnapFrom(
   withTuple('(min-width: 0px)')(100)('w-full'),
+  withTuple('(min-width: 576px)')(25)('sm:w-1/4'),
+  withTuple('(min-width: 576px)')(33.33)('sm:w-1/3'),
   withTuple('(min-width: 576px)')(50)('sm:w-1/2'),
+  withTuple('(min-width: 576px)')(66.66)('sm:w-2/3'),
+  withTuple('(min-width: 576px)')(75)('sm:w-3/4'),
   withTuple('(min-width: 576px)')(100)('sm:w-full'),
   withTuple('(min-width: 992px)')(25)('lg:w-1/4'),
   withTuple('(min-width: 992px)')(33.33)('lg:w-1/3'),
@@ -1080,7 +1222,7 @@ ___
   withTuple('(min-width: 992px)')(100)('lg:w-full'),
 )
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:167](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L167)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:168](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L168)*
 
 #### Type declaration:
 
@@ -1098,7 +1240,7 @@ ___
 
 • **html2canvas**: *any* = typeof window !== 'undefined' ? require('html2canvas') : undefined
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx:19](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx#L19)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx:19](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx#L19)*
 
 ___
 
@@ -1106,7 +1248,7 @@ ___
 
 • **ifComponentSelector**: *function* = flowIf(isComponentSelector)
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx:48](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx#L48)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx:50](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx#L50)*
 
 #### Type declaration:
 
@@ -1144,35 +1286,79 @@ Name | Type |
 
 ___
 
-### `Const` uiContext
+### `Const` ifNotComponentSelector
 
-• **uiContext**: *Context‹object›* = React.createContext(defaultUI)
+• **ifNotComponentSelector**: *function* = flowIf(isNotComponentSelector)
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:56](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L56)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx:51](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx#L51)*
 
-## Functions
+#### Type declaration:
 
-###  AllCheckbox
+▸ ‹**H**›(...`hocs`: Function[]): *function*
 
-▸ **AllCheckbox**(`props`: any): *Element‹›*
+**Type parameters:**
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx:142](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx#L142)*
+▪ **H**: *Function*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`props` | any |
+`...hocs` | Function[] |
 
-**Returns:** *Element‹›*
+▸ ‹**P**›(`Component`: string | ComponentClass‹P, any› | FunctionComponent‹P›): *function*
+
+**Type parameters:**
+
+▪ **P**: *object*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`Component` | string &#124; ComponentClass‹P, any› &#124; FunctionComponent‹P› |
+
+▸ (`props`: P): *Element*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`props` | P |
 
 ___
+
+### `Const` isNotComponentSelector
+
+• **isNotComponentSelector**: *function* = negate(isComponentSelector)
+
+*Defined in [packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx:48](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx#L48)*
+
+#### Type declaration:
+
+▸ (...`args`: T): *boolean*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`...args` | T |
+
+___
+
+### `Const` uiContext
+
+• **uiContext**: *Context‹object›* = React.createContext(defaultUI)
+
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:56](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L56)*
+
+## Functions
 
 ###  Capitalize
 
 ▸ **Capitalize**(`str`: String): *string*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx:34](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx#L34)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx:34](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx#L34)*
 
 **Parameters:**
 
@@ -1188,7 +1374,7 @@ ___
 
 ▸ **Checkbox**(`__namedParameters`: object): *Element‹›*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx:40](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx#L40)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx:40](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx#L40)*
 
 **Parameters:**
 
@@ -1209,7 +1395,7 @@ ___
 
 ▸ **ComponentDisplayModeProvider**(`__namedParameters`: object): *Element‹›*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx:36](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx#L36)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx:37](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx#L37)*
 
 **Parameters:**
 
@@ -1226,15 +1412,15 @@ ___
 
 ### `Const` ComponentSelector
 
-▸ **ComponentSelector**(`props`: object & object): *Element‹›*
+▸ **ComponentSelector**(`props`: object & object & object): *Element‹›*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/index.tsx:62](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/index.tsx#L62)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/index.tsx:81](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/index.tsx#L81)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`props` | object & object |
+`props` | object & object & object |
 
 **Returns:** *Element‹›*
 
@@ -1244,7 +1430,7 @@ ___
 
 ▸ **Dropdown**(`__namedParameters`: object): *Element‹›*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx:71](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx#L71)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx:70](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx#L70)*
 
 **Parameters:**
 
@@ -1263,7 +1449,7 @@ ___
 
 ▸ **EditFlowContainer**(`props`: [EditFlowContainerProps](globals.md#editflowcontainerprops)): *Element‹›*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx:46](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx#L46)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx:46](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx#L46)*
 
 An editable version of the FlowContainer container.
 
@@ -1281,7 +1467,7 @@ ___
 
 ▸ **EditListView**(`__namedParameters`: object): *Element‹›*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:70](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L70)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:78](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L78)*
 
 **Parameters:**
 
@@ -1302,7 +1488,7 @@ ___
 
 ▸ **FilterWrapper**(`props`: any): *Element‹›*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx:93](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx#L93)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx:92](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx#L92)*
 
 **Parameters:**
 
@@ -1318,7 +1504,7 @@ ___
 
 ▸ **FlowContainerBasic**(`props`: object & object & object): *Element‹›*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/index.tsx:31](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/index.tsx#L31)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/index.tsx:31](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/index.tsx#L31)*
 
 **Parameters:**
 
@@ -1330,11 +1516,11 @@ Name | Type |
 
 ___
 
-### `Const` FlowContainerEmpty
+### `Const` FlowContainerEmpty$
 
-▸ **FlowContainerEmpty**(`ui`: [UI](globals.md#ui)): *Element‹›*
+▸ **FlowContainerEmpty$**(`ui`: [UI](globals.md#ui)): *Element‹›*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:39](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L39)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:42](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L42)*
 
 **Parameters:**
 
@@ -1350,7 +1536,7 @@ ___
 
 ▸ **GetComponentThumbnail**(`callbackFxn`: Function, `myId`: string): *void*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx:68](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx#L68)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx:68](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx#L68)*
 
 **Parameters:**
 
@@ -1367,19 +1553,7 @@ ___
 
 ▸ **ItemList**(`props`: object & object): *Element‹›*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/ItemListScale.tsx:32](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/ItemListScale.tsx#L32)*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`props` | object & object |
-
-**Returns:** *Element‹›*
-
-▸ **ItemList**(`props`: object & object): *Element‹›*
-
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/ItemList.tsx:24](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/ItemList.tsx#L24)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/ItemList.tsx:32](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/ItemList.tsx#L32)*
 
 **Parameters:**
 
@@ -1395,7 +1569,7 @@ ___
 
 ▸ **RenderCanvas**(`props`: any): *Element‹›*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx:30](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx#L30)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx:30](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx#L30)*
 
 **Parameters:**
 
@@ -1411,7 +1585,7 @@ ___
 
 ▸ **SearchWrapper**(`props`: any): *Element‹›*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/SearchWrapper.tsx:20](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/SearchWrapper.tsx#L20)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/SearchWrapper.tsx:20](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/SearchWrapper.tsx#L20)*
 
 **Parameters:**
 
@@ -1427,7 +1601,7 @@ ___
 
 ▸ **SlateSortableResizable**(`props`: [Props](globals.md#props)): *Element‹›*
 
-*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:76](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L76)*
+*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:103](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L103)*
 
 **Parameters:**
 
@@ -1439,17 +1613,22 @@ Name | Type |
 
 ___
 
-### `Const` SortableChild
+### `Const` SortableResizable$
 
-▸ **SortableChild**(`props`: [SortableChildProps](globals.md#sortablechildprops)): *Element‹›*
+▸ **SortableResizable$**(`__namedParameters`: object): *Element‹›*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableChild.tsx:28](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/SortableChild.tsx#L28)*
+*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:65](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L65)*
 
 **Parameters:**
 
+▪ **__namedParameters**: *object*
+
 Name | Type |
 ------ | ------ |
-`props` | [SortableChildProps](globals.md#sortablechildprops) |
+`children` | undefined &#124; null &#124; string &#124; number &#124; false &#124; true &#124; object &#124; ReactElement‹any, string &#124; function &#124; object› &#124; ReactNodeArray‹› &#124; ReactPortal‹› |
+`isResizeEnabled` | undefined &#124; false &#124; true |
+`props` | props |
+`ui` | undefined &#124; object |
 
 **Returns:** *Element‹›*
 
@@ -1459,7 +1638,7 @@ ___
 
 ▸ **StaticFlowContainer**(`__namedParameters`: object): *Element‹›*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx:32](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx#L32)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx:33](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx#L33)*
 
 **Parameters:**
 
@@ -1477,23 +1656,7 @@ ___
 
 ▸ **TextFormatList**(`props`: object & object): *Element‹›*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/index.tsx:131](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/index.tsx#L131)*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`props` | object & object |
-
-**Returns:** *Element‹›*
-
-___
-
-### `Const` TextFormatSelector
-
-▸ **TextFormatSelector**(`props`: object & object): *Element‹›*
-
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/index.tsx:149](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/index.tsx#L149)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/index.tsx:152](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/index.tsx#L152)*
 
 **Parameters:**
 
@@ -1509,7 +1672,7 @@ ___
 
 ▸ **addtoArray**(`myArr`: Array‹any›, `myVal`: any): *any[]*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx:20](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx#L20)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx:20](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx#L20)*
 
 **Parameters:**
 
@@ -1526,7 +1689,7 @@ ___
 
 ▸ **applyMandatoryCategories**(`components`: any, `mandatoryCategories`: string[]): *void*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/index.tsx:39](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/index.tsx#L39)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/index.tsx:39](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/index.tsx#L39)*
 
 **Parameters:**
 
@@ -1543,7 +1706,7 @@ ___
 
 ▸ **asPassThough**(`Component`: [CTWM](globals.md#ctwm)): *ComponentClass‹object, any› & object | FunctionComponent‹object› & object*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:40](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L40)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:40](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L40)*
 
 **Parameters:**
 
@@ -1555,11 +1718,27 @@ Name | Type |
 
 ___
 
+### `Const` childKeys
+
+▸ **childKeys**(`node`: ContentNode‹any›): *string[]*
+
+*Defined in [packages/bodiless-layouts/src/ContentLibrary/withContentLibrary.tsx:21](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ContentLibrary/withContentLibrary.tsx#L21)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`node` | ContentNode‹any› |
+
+**Returns:** *string[]*
+
+___
+
 ### `Const` componentSelectorForm
 
 ▸ **componentSelectorForm**(`props`: [EditFlowContainerProps](globals.md#editflowcontainerprops), `onSelect`: ComponentSelectorProps["onSelect"]): *function*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/componentSelectorForm.tsx:26](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/componentSelectorForm.tsx#L26)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/componentSelectorForm.tsx:26](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/componentSelectorForm.tsx#L26)*
 
 Returns a component selector wrapped in a context menu form.
 
@@ -1582,19 +1761,21 @@ Name | Type |
 
 ___
 
-### `Const` createThrottledOnResizeStop
+### `Const` copyNode
 
-▸ **createThrottledOnResizeStop**(`onResizeStop`: ResizeCallback): *DebouncedFunc‹function›*
+▸ **copyNode**(`source`: ContentNode‹any›, `dest`: ContentNode‹any›, `copyChildren`: boolean): *void*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableChild.tsx:23](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/SortableChild.tsx#L23)*
+*Defined in [packages/bodiless-layouts/src/ContentLibrary/withContentLibrary.tsx:36](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ContentLibrary/withContentLibrary.tsx#L36)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`onResizeStop` | ResizeCallback |
+`source` | ContentNode‹any› |
+`dest` | ContentNode‹any› |
+`copyChildren` | boolean |
 
-**Returns:** *DebouncedFunc‹function›*
+**Returns:** *void*
 
 ___
 
@@ -1602,7 +1783,7 @@ ___
 
 ▸ **customizer**(`objValue`: any, `srcValue`: any): *undefined | any[]*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:34](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L34)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:34](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L34)*
 
 **Parameters:**
 
@@ -1619,7 +1800,7 @@ ___
 
 ▸ **dataURItoBlob**(`dataURI`: any): *Blob*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx:42](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx#L42)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx:42](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx#L42)*
 
 **Parameters:**
 
@@ -1635,7 +1816,7 @@ ___
 
 ▸ **filterByMedia**(`media`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:131](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L131)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:132](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L132)*
 
 **Parameters:**
 
@@ -1651,7 +1832,7 @@ ___
 
 ▸ **filterByWidth**(`width`: number): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:134](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L134)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:135](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L135)*
 
 **Parameters:**
 
@@ -1667,7 +1848,7 @@ ___
 
 ▸ **getClassNames**(`options`: [Tuple](globals.md#tuple)[]): *string[]*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:97](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L97)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:98](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L98)*
 
 getClassNames extracts all of the unquie classNames from an array of withTuples
 
@@ -1685,7 +1866,7 @@ ___
 
 ▸ **getFilteredComponents**(`components`: any[], `filters`: Array‹any›, `searchString`: string): *any[]*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/getFilteredComponents.tsx:24](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/getFilteredComponents.tsx#L24)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/getFilteredComponents.tsx:24](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/getFilteredComponents.tsx#L24)*
 
 This generates a new list of components: newComponentArr
 
@@ -1708,7 +1889,7 @@ ___
 
 ▸ **getFiltersByComponentList**(`components`: any): *[LooseObject](interfaces/looseobject.md)*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/getFiltersByComponentList.tsx:28](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/getFiltersByComponentList.tsx#L28)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/getFiltersByComponentList.tsx:28](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/getFiltersByComponentList.tsx#L28)*
 
 This function takes array of components and extracts their values into pairs such that
 {key:[value1,value2,...] , key2:[value1,value2,..]}.
@@ -1730,7 +1911,7 @@ ___
 
 ▸ **getMediaMatch**(`matchMedia`: Function): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:122](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L122)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:123](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L123)*
 
 **Parameters:**
 
@@ -1746,7 +1927,7 @@ ___
 
 ▸ **getMedias**(`options`: [Tuple](globals.md#tuple)[]): *string[]*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:111](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L111)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:112](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L112)*
 
 getMedias extracts all of the unquie widths from an array of withTuples
 
@@ -1764,7 +1945,7 @@ ___
 
 ▸ **getSnapFrom**(...`withTuples`: [WithTuples](globals.md#withtuples)[]): *[SnapData](globals.md#snapdata)*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:138](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L138)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:139](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L139)*
 
 **Parameters:**
 
@@ -1780,7 +1961,7 @@ ___
 
 ▸ **getUI**(`ui`: [UI](globals.md#ui)): *object*
 
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:45](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L45)*
+*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:37](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L37)*
 
 **Parameters:**
 
@@ -1792,7 +1973,7 @@ Name | Type | Default |
 
 ▸ **getUI**(`ui`: [UI](globals.md#ui)): *object*
 
-*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:35](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L35)*
+*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:40](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L40)*
 
 **Parameters:**
 
@@ -1804,7 +1985,7 @@ Name | Type | Default |
 
 ▸ **getUI**(`ui`: [UI](globals.md#ui)): *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:37](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L37)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:40](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L40)*
 
 **Parameters:**
 
@@ -1820,7 +2001,7 @@ ___
 
 ▸ **getWidths**(`options`: [Tuple](globals.md#tuple)[]): *number[]*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:83](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L83)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:84](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L84)*
 
 getWidths extracts all of the unquie widths from an array of withTuples
 
@@ -1834,11 +2015,27 @@ Name | Type | Description |
 
 ___
 
+### `Const` hash
+
+▸ **hash**(`str`: string): *number*
+
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/index.tsx:71](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/index.tsx#L71)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`str` | string |
+
+**Returns:** *number*
+
+___
+
 ### `Const` isComponentSelector
 
 ▸ **isComponentSelector**(): *boolean*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx:46](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx#L46)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx:47](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx#L47)*
 
 **Returns:** *boolean*
 
@@ -1848,7 +2045,7 @@ ___
 
 ▸ **perserveMeta**(`hoc`: [HOC](globals.md#hoc)): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:122](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L122)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:122](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L122)*
 
 preserveMeta returns takes an hoc and returns another one that will apply the hoc but preserve
 theMeta data from the component.
@@ -1867,7 +2064,7 @@ ___
 
 ▸ **reduceFilters**(`filters`: any, `components`: any): *object*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/index.tsx:56](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/index.tsx#L56)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/index.tsx:59](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/index.tsx#L59)*
 
 reduce filters so that filter is picked
 when at least one of it's terms applies or associated with ALL of the components
@@ -1887,7 +2084,7 @@ ___
 
 ▸ **removefromArray**(`myArr`: Array‹any›, `myVal`: any): *any[]*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx:25](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx#L25)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx:25](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/FilterWrapper.tsx#L25)*
 
 **Parameters:**
 
@@ -1900,41 +2097,11 @@ Name | Type |
 
 ___
 
-### `Const` textFormatSelectorOption
-
-▸ **textFormatSelectorOption**(`components`: [ComponentWithMeta](globals.md#componentwithmeta)‹any›[], `ui`: [ComponentSelectorUI](globals.md#componentselectorui), `getEditor`: function): *object*
-
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/index.tsx:165](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/index.tsx#L165)*
-
-**Parameters:**
-
-▪ **components**: *[ComponentWithMeta](globals.md#componentwithmeta)‹any›[]*
-
-▪ **ui**: *[ComponentSelectorUI](globals.md#componentselectorui)*
-
-▪ **getEditor**: *function*
-
-▸ (): *object*
-
-* **toggleMark**(`selection`: any): *void*
-
-**Returns:** *object*
-
-* **icon**: *string* = "more"
-
-* **name**: *string* = "more"
-
-* **handler**(`event`: MouseEvent): *(Anonymous function)*
-
-* **isActive**(): *boolean*
-
-___
-
 ###  titleToImageName
 
 ▸ **titleToImageName**(`componentTitle`: string): *string*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx:24](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx#L24)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx:24](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/ScreenShot.tsx#L24)*
 
 **Parameters:**
 
@@ -1950,7 +2117,7 @@ ___
 
 ▸ **useAddButton**(`handlers`: [Handlers](globals.md#handlers), `props`: [EditFlowContainerProps](globals.md#editflowcontainerprops), `item?`: [FlowContainerItem](interfaces/flowcontaineritem.md)): *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:100](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L100)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:143](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L143)*
 
 **Parameters:**
 
@@ -1962,11 +2129,19 @@ Name | Type |
 
 **Returns:** *object*
 
+* **activateContext**: *boolean* = false
+
+* **formTitle**: *string* = "Insert Component"
+
+* **global**: *boolean* = false
+
 * **icon**: *string* = "add"
 
 * **isHidden**: *(Anonymous function)*
 
 * **label**: *string* = "Add"
+
+* **local**: *boolean* = true
 
 * **name**: *string*
 
@@ -1976,11 +2151,43 @@ Name | Type |
 
 ___
 
+### `Const` useCloneButton
+
+▸ **useCloneButton**(`handlers`: [Handlers](globals.md#handlers), `props`: [EditFlowContainerProps](globals.md#editflowcontainerprops), `item`: [FlowContainerItem](interfaces/flowcontaineritem.md)): *object*
+
+*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:86](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L86)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`handlers` | [Handlers](globals.md#handlers) |
+`props` | [EditFlowContainerProps](globals.md#editflowcontainerprops) |
+`item` | [FlowContainerItem](interfaces/flowcontaineritem.md) |
+
+**Returns:** *object*
+
+* **global**: *boolean* = false
+
+* **handler**: *handler*
+
+* **icon**: *string* = "content_copy"
+
+* **isHidden**: *(Anonymous function)*
+
+* **label**: *string* = "Copy"
+
+* **local**: *boolean* = true
+
+* **name**: *string* = `copy-item-${item.uuid}`
+
+___
+
 ### `Const` useComponentDisplayModeContext
 
 ▸ **useComponentDisplayModeContext**(): *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx:30](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx#L30)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx:31](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/ComponentDisplayMode.tsx#L31)*
 
 **Returns:** *object*
 
@@ -1990,22 +2197,27 @@ ___
 
 ### `Private` `Const` useComponentSelectorActions
 
-▸ **useComponentSelectorActions**(`handlers`: [Handlers](globals.md#handlers), `currentItem?`: [FlowContainerItem](interfaces/flowcontaineritem.md)): *object*
+▸ **useComponentSelectorActions**(`handlers`: [Handlers](globals.md#handlers), `props`: [EditFlowContainerProps](globals.md#editflowcontainerprops), `currentItem?`: [FlowContainerItem](interfaces/flowcontaineritem.md)): *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:52](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L52)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:54](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L54)*
 
 **Parameters:**
 
 Name | Type | Description |
 ------ | ------ | ------ |
 `handlers` | [Handlers](globals.md#handlers) | - |
+`props` | [EditFlowContainerProps](globals.md#editflowcontainerprops) | The props provided to the FlowContainer |
 `currentItem?` | [FlowContainerItem](interfaces/flowcontaineritem.md) | The currently selected item in the grid (optional);  |
 
 **Returns:** *object*
 
-* **insertItem**: *onSelect*
+* **insertItem**(): *function*
 
-* **replaceItem**: *onSelect*
+  * (`names`: string[]): *void*
+
+* **replaceItem**(): *function*
+
+  * (`names`: string[]): *void*
 
 ___
 
@@ -2013,7 +2225,7 @@ ___
 
 ▸ **useDeleteButton**(`handlers`: [Handlers](globals.md#handlers), `item`: [FlowContainerItem](interfaces/flowcontaineritem.md)): *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:75](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L75)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:116](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L116)*
 
 **Parameters:**
 
@@ -2024,6 +2236,8 @@ Name | Type |
 
 **Returns:** *object*
 
+* **global**: *boolean* = false
+
 * **handler**: *handler*
 
 * **icon**: *string* = "delete"
@@ -2032,7 +2246,9 @@ Name | Type |
 
 * **label**: *string* = "Delete"
 
-* **name**: *string* = "delete"
+* **local**: *boolean* = true
+
+* **name**: *string* = `delete-${item.uuid}`
 
 ___
 
@@ -2040,13 +2256,13 @@ ___
 
 ▸ **useFlowContainerDataHandlers**(): *[FlowContainerDataHandlers](globals.md#flowcontainerdatahandlers)*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:57](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/model.ts#L57)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:63](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/model.ts#L63)*
 
 **Returns:** *[FlowContainerDataHandlers](globals.md#flowcontainerdatahandlers)*
 
 ▸ **useFlowContainerDataHandlers**(): *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:27](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L27)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L27)*
 
 **Returns:** *object*
 
@@ -2062,7 +2278,7 @@ ___
 
 ▸ **useGetItemUseGetMenuOptions**(`props`: [EditFlowContainerProps](globals.md#editflowcontainerprops)): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:172](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L172)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:223](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L223)*
 
 **Parameters:**
 
@@ -2076,17 +2292,33 @@ A function which generates a 'useGetMenuOptions' prop for an item.
 
 ___
 
+### `Const` useIsNested
+
+▸ **useIsNested**(`prefix`: string): *boolean*
+
+*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:95](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L95)*
+
+**Parameters:**
+
+Name | Type | Default |
+------ | ------ | ------ |
+`prefix` | string | "flexItem" |
+
+**Returns:** *boolean*
+
+___
+
 ### `Const` useItemHandlers
 
 ▸ **useItemHandlers**(): *[FlowContainerItemHandlers](globals.md#flowcontaineritemhandlers)*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:41](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/model.ts#L41)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/model.ts:47](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/model.ts#L47)*
 
 **Returns:** *[FlowContainerItemHandlers](globals.md#flowcontaineritemhandlers)*
 
 ▸ **useItemHandlers**(): *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:26](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L26)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:26](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L26)*
 
 **Returns:** *object*
 
@@ -2100,7 +2332,7 @@ ___
 
 ▸ **useMenuOptions**(`props`: [EditFlowContainerProps](globals.md#editflowcontainerprops)): *object[]*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:145](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L145)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:196](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L196)*
 
 **Parameters:**
 
@@ -2116,7 +2348,7 @@ ___
 
 ▸ **useSwapButton**(`handlers`: [Handlers](globals.md#handlers), `props`: [EditFlowContainerProps](globals.md#editflowcontainerprops), `item`: [FlowContainerItem](interfaces/flowcontaineritem.md)): *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:122](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L122)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:169](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L169)*
 
 **Parameters:**
 
@@ -2128,13 +2360,21 @@ Name | Type |
 
 **Returns:** *object*
 
+* **activateContext**: *boolean* = false
+
+* **formTitle**: *string* = "Replace Component"
+
+* **global**: *boolean* = false
+
 * **icon**: *string* = "repeat"
 
 * **isHidden**: *(Anonymous function)* = useCallback(() => !context.isEdit, [])
 
 * **label**: *string* = "Swap"
 
-* **name**: *string* = "swap"
+* **local**: *boolean* = true
+
+* **name**: *string* = `swap-${item.uuid}`
 
 * **handler**(): *function*
 
@@ -2146,7 +2386,7 @@ ___
 
 ▸ **withAppendDesc**(`newDescription`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:102](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L102)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:102](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L102)*
 
 withAppendDesc returns an HOC that appends a description to the component sideload description.
 
@@ -2164,7 +2404,7 @@ ___
 
 ▸ **withAppendDisplayName**(`newDisplayName`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:84](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L84)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:84](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L84)*
 
 withAppendDisplayName returns a HOC that appends a name to the sideloaded DisplayName
 
@@ -2182,7 +2422,7 @@ ___
 
 ▸ **withAppendTitle**(`newTitle`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:66](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L66)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:66](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L66)*
 
 withAppendTitle returns an HOC that appends to the sideload title of the component
 Note it appends to the title with a space.
@@ -2197,11 +2437,27 @@ Name | Type |
 
 ___
 
+### `Const` withContentLibrary
+
+▸ **withContentLibrary**(`options`: [ContentLibraryOptions](globals.md#contentlibraryoptions)): *(Anonymous function)*
+
+*Defined in [packages/bodiless-layouts/src/ContentLibrary/withContentLibrary.tsx:43](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ContentLibrary/withContentLibrary.tsx#L43)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`options` | [ContentLibraryOptions](globals.md#contentlibraryoptions) |
+
+**Returns:** *(Anonymous function)*
+
+___
+
 ### `Const` withDesc
 
 ▸ **withDesc**(`description`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:95](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L95)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:95](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L95)*
 
 withDesc returns an HOC that sideloads the provided discription to the component.
 
@@ -2215,11 +2471,35 @@ Name | Type | Description |
 
 ___
 
+### `Const` withDirection
+
+▸ **withDirection**(`langDirection`: [Direction](globals.md#direction)): *function*
+
+*Defined in [packages/bodiless-layouts/src/withDirection/withDirection.tsx:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/withDirection/withDirection.tsx#L27)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`langDirection` | [Direction](globals.md#direction) |
+
+**Returns:** *function*
+
+▸ (`Component`: ComponentType‹any›): *ComponentType‹any›*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`Component` | ComponentType‹any› |
+
+___
+
 ### `Const` withDisplayName
 
 ▸ **withDisplayName**(`displayName`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:77](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L77)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:77](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L77)*
 
 withDisplayName returns an HOC that sideloads a displayName to a component
 
@@ -2237,7 +2517,7 @@ ___
 
 ▸ **withFacet**(`cat`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:133](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L133)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:133](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L133)*
 
 withFacet is expect to be passed to an on function and takes a term and and hoc (using curring)
  and returns a Varient that can be used in the on function
@@ -2256,7 +2536,7 @@ ___
 
 ▸ **withMandatoryCategories**(`categories`: string[]): *function*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/index.tsx:45](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/index.tsx#L45)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/index.tsx:45](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/index.tsx#L45)*
 
 **Parameters:**
 
@@ -2266,21 +2546,13 @@ Name | Type |
 
 **Returns:** *function*
 
-▸ (`Component`: React.ComponentType‹P›): *function*
+▸ (`Component`: ComponentType‹any›): *ComponentType‹any›*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`Component` | React.ComponentType‹P› |
-
-▸ (`props`: P): *Element*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`props` | P |
+`Component` | ComponentType‹any› |
 
 ___
 
@@ -2288,7 +2560,7 @@ ___
 
 ▸ **withMeta**(`meta`: Object): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:50](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L50)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:50](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L50)*
 
 withMeta creates an HOC that will add meta data to a React Component
 
@@ -2306,7 +2578,7 @@ ___
 
 ▸ **withNoDesign**(`props`: [EditFlowContainerProps](globals.md#editflowcontainerprops)): *[EditFlowContainerProps](globals.md#editflowcontainerprops)*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:38](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L38)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx:40](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/useGetMenuOptions.tsx#L40)*
 
 **Parameters:**
 
@@ -2324,7 +2596,7 @@ ___
 
 ▸ **withOutMeta**‹**P**›(`Component`: [CTWM](globals.md#ctwm)): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:45](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L45)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:45](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L45)*
 
 Creates an HOC use it to attach meta data in an hoc.
 
@@ -2346,7 +2618,7 @@ ___
 
 ▸ **withTailwindClasses**(`tailwindConfig`: [Config](globals.md#config)): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:60](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L60)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:61](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L61)*
 
 withTailwindClasses returns a withTuple function that take the tailwind class and creates
 tuples for each one of them.
@@ -2365,7 +2637,7 @@ ___
 
 ▸ **withTerm**(`cat`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:114](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L114)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:114](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L114)*
 
 withTerm returns a function that then takes a term and that returns an HOC that side loads
 the category and term on to the component.
@@ -2384,7 +2656,7 @@ ___
 
 ▸ **withTitle**(`title`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/meta/index.tsx:58](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/meta/index.tsx#L58)*
+*Defined in [packages/bodiless-layouts/src/meta/index.tsx:58](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/meta/index.tsx#L58)*
 
 with Title returns an HOC that sideloads a title to a component
 
@@ -2402,7 +2674,7 @@ ___
 
 ▸ **withTuple**(`media`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:42](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L42)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts:43](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/utils/appendTailwindWidthClass.ts#L43)*
 
 Curry function that returns a withTuple to be used a snapOptions function.
 
@@ -2420,59 +2692,23 @@ Name | Type |
 
 ## Object literals
 
-### `Const` ENABLED_DRAG_SIDES
+### `Const` DIRECTIONS
 
-### ▪ **ENABLED_DRAG_SIDES**: *object*
+### ▪ **DIRECTIONS**: *object*
 
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:20](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L20)*
+*Defined in [packages/bodiless-layouts/src/withDirection/withDirection.tsx:22](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/withDirection/withDirection.tsx#L22)*
 
-###  bottom
+###  LTR
 
-• **bottom**: *boolean* = false
+• **LTR**: *[LanguageDirection](enums/languagedirection.md)* = LanguageDirection.LTR
 
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:23](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L23)*
+*Defined in [packages/bodiless-layouts/src/withDirection/withDirection.tsx:23](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/withDirection/withDirection.tsx#L23)*
 
-###  bottomLeft
+###  RTL
 
-• **bottomLeft**: *boolean* = false
+• **RTL**: *[LanguageDirection](enums/languagedirection.md)* = LanguageDirection.RTL
 
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:27](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L27)*
-
-###  bottomRight
-
-• **bottomRight**: *boolean* = false
-
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:26](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L26)*
-
-###  left
-
-• **left**: *boolean* = false
-
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:24](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L24)*
-
-###  right
-
-• **right**: *boolean* = true
-
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:22](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L22)*
-
-###  top
-
-• **top**: *boolean* = false
-
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:21](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L21)*
-
-###  topLeft
-
-• **topLeft**: *boolean* = false
-
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:28](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L28)*
-
-###  topRight
-
-• **topRight**: *boolean* = false
-
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:25](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L25)*
+*Defined in [packages/bodiless-layouts/src/withDirection/withDirection.tsx:24](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/withDirection/withDirection.tsx#L24)*
 
 ___
 
@@ -2480,23 +2716,23 @@ ___
 
 ### ▪ **EditFlowContainerComponents**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx:38](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx#L38)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx:38](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx#L38)*
 
 ###  ComponentWrapper
 
 • **ComponentWrapper**: *object* = stylable<SortableChildProps>(SortableChild)
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx:40](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx#L40)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx:40](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx#L40)*
 
 #### Type declaration:
 
-▸ (`props`: P & StylableProps): *Element*
+▸ (`props`: P & StylableProps & ForwardRefProps): *Element*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`props` | P & StylableProps |
+`props` | P & StylableProps & ForwardRefProps |
 
 * **displayName**: *string*
 
@@ -2504,17 +2740,17 @@ Name | Type |
 
 • **Wrapper**: *object* = stylable<SortableListProps>(SortableContainer)
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx:39](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx#L39)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx:39](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/EditFlowContainer.tsx#L39)*
 
 #### Type declaration:
 
-▸ (`props`: P & StylableProps): *Element*
+▸ (`props`: P & StylableProps & ForwardRefProps): *Element*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`props` | P & StylableProps |
+`props` | P & StylableProps & ForwardRefProps |
 
 * **displayName**: *string*
 
@@ -2524,253 +2760,265 @@ ___
 
 ### ▪ **defaultUI**: *object*
 
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:39](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L39)*
+*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:30](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L30)*
 
-*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:32](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L32)*
+*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:36](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L36)*
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:18](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L18)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:18](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L18)*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:33](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L33)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:36](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L36)*
 
 ###  AccordionCheckBox
 
 • **AccordionCheckBox**: *string* = "input"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:30](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L30)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:29](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L29)*
 
 ###  AccordionCheckboxLabel
 
 • **AccordionCheckboxLabel**: *string* = "label"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:29](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L29)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:28](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L28)*
 
 ###  AccordionCheckboxWrapper
 
 • **AccordionCheckboxWrapper**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:27](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L27)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:26](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L26)*
 
 ###  AccordionIconContract
 
 • **AccordionIconContract**: *string* = "span"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:34](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L34)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:33](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L33)*
 
 ###  AccordionIconExpand
 
 • **AccordionIconExpand**: *string* = "span"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:35](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L35)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:34](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L34)*
 
 ###  AccordionItemWrapper
 
 • **AccordionItemWrapper**: *string* = "a"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:28](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L28)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L27)*
 
 ###  AccordionLabel
 
 • **AccordionLabel**: *string* = "label"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:33](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L33)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:32](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L32)*
 
 ###  AccordionWrapper
 
 • **AccordionWrapper**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:26](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L26)*
-
-###  AllCheckboxWrapper
-
-• **AllCheckboxWrapper**: *string* = "div"
-
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:25](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L25)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:25](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L25)*
 
 ###  CloseMenuIcon
 
 • **CloseMenuIcon**: *string* = "span"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:36](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L36)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:35](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L35)*
 
 ###  ComponentDescriptionIcon
 
 • **ComponentDescriptionIcon**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:49](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L49)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:49](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L49)*
 
 ###  ComponentDescriptionStyle
 
 • **ComponentDescriptionStyle**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:46](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L46)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:46](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L46)*
 
 ###  ComponentDescriptionWrapper
 
 • **ComponentDescriptionWrapper**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:45](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L45)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:45](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L45)*
+
+###  ComponentLinkWrapper
+
+• **ComponentLinkWrapper**: *string* = "a"
+
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:43](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L43)*
 
 ###  ComponentPreviewStyle
 
 • **ComponentPreviewStyle**: *string* = "img"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:47](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L47)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:47](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L47)*
 
 ###  ComponentSelectButton
 
 • **ComponentSelectButton**: *string* = "button"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:48](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L48)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:48](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L48)*
 
 ###  ComponentSelectorWrapper
 
 • **ComponentSelectorWrapper**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:23](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L23)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:23](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L23)*
 
 ###  ComponentTitleWrapper
 
 • **ComponentTitleWrapper**: *string* = "h3"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:43](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L43)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:42](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L42)*
 
 ###  DragHandle
 
 • **DragHandle**: *string* = "span"
 
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:40](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L40)*
+*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:31](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L31)*
 
 ###  FlexSection
 
 • **FlexSection**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:20](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L20)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:20](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L20)*
 
 ###  FlexSectionFull
 
 • **FlexSectionFull**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:21](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L21)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:21](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L21)*
 
 ###  FlowContainerEmpty
 
 • **FlowContainerEmpty**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:22](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L22)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:22](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L22)*
 
 ###  FlowContainerEmptyWrapper
 
 • **FlowContainerEmptyWrapper**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:34](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L34)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx:37](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/SortableContainer.tsx#L37)*
 
 ###  GridListBox
 
 • **GridListBox**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:39](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L39)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:38](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L38)*
 
 ###  GridListBoxInner
 
 • **GridListBoxInner**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:41](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L41)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:40](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L40)*
 
 ###  GridListBoxWrapper
 
 • **GridListBoxWrapper**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:40](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L40)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:39](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L39)*
 
 ###  IconWrapper
 
 • **IconWrapper**: *string* = "span"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:44](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L44)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:44](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L44)*
 
 ###  ItemBox
 
 • **ItemBox**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:38](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L38)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:37](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L37)*
 
 ###  ItemBoxWrapper
 
 • **ItemBoxWrapper**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:37](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L37)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:36](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L36)*
 
 ###  MasterWrapper
 
 • **MasterWrapper**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:19](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L19)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:19](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L19)*
 
 ###  Reresizable
 
 • **Reresizable**: *Resizable* = CleanReresizable
 
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:42](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L42)*
+*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:34](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L34)*
 
 ###  ResizeHandle
 
 • **ResizeHandle**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:41](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L41)*
+*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:32](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L32)*
+
+###  ResizeHandleRTL
+
+• **ResizeHandleRTL**: *string* = "div"
+
+*Defined in [packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx:33](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SortableResizableWrapper/index.tsx#L33)*
 
 ###  ScalingButtonFull
 
 • **ScalingButtonFull**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:51](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L51)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:51](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L51)*
 
 ###  ScalingButtonHalf
 
 • **ScalingButtonHalf**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:52](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L52)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:52](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L52)*
 
 ###  ScalingButtonQuarter
 
 • **ScalingButtonQuarter**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:53](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L53)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:53](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L53)*
 
 ###  ScalingHeader
 
 • **ScalingHeader**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:50](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L50)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:50](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L50)*
 
 ###  SearchBar
 
 • **SearchBar**: *string* = "input"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:32](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L32)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:31](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L31)*
 
 ###  SearchBarWrapper
 
 • **SearchBarWrapper**: *string* = "div"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:31](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L31)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:30](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L30)*
+
+###  SnapIndicator
+
+• **SnapIndicator**: *string* = "div"
+
+*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:38](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L38)*
 
 ###  SubmitButton
 
 • **SubmitButton**: *string* = "button"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:24](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L24)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:24](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L24)*
 
 ###  TitleWrapper
 
 • **TitleWrapper**: *string* = "span"
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:42](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L42)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx:41](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/uiContext.tsx#L41)*
 
 ###  Wrapper
 
 • **Wrapper**: *ComponentClass‹object & SortableElementProps, any›* = CleanWrapper
 
-*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:33](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L33)*
+*Defined in [packages/bodiless-layouts/src/SlateSortableResizable.tsx:37](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/SlateSortableResizable.tsx#L37)*
 
 ___
 
@@ -2778,23 +3026,23 @@ ___
 
 ### ▪ **flowContainerComponentStart**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx:25](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx#L25)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx:26](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx#L26)*
 
 ###  ComponentWrapper
 
 • **ComponentWrapper**: *object* = Div
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx:27](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx#L27)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx:28](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx#L28)*
 
 #### Type declaration:
 
-▸ (`props`: HTMLProps‹HTMLDivElement› & object): *Element*
+▸ (`props`: HTMLProps‹HTMLDivElement› & object & object): *Element*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`props` | HTMLProps‹HTMLDivElement› & object |
+`props` | HTMLProps‹HTMLDivElement› & object & object |
 
 * **displayName**: *string*
 
@@ -2802,17 +3050,17 @@ Name | Type |
 
 • **Wrapper**: *object* = Div
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx:26](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx#L26)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/StaticFlowContainer.tsx#L27)*
 
 #### Type declaration:
 
-▸ (`props`: HTMLProps‹HTMLDivElement› & object): *Element*
+▸ (`props`: HTMLProps‹HTMLDivElement› & object & object): *Element*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`props` | HTMLProps‹HTMLDivElement› & object |
+`props` | HTMLProps‹HTMLDivElement› & object & object |
 
 * **displayName**: *string*
 
@@ -2822,25 +3070,25 @@ ___
 
 ### ▪ **flowContainerDataHandlers**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:21](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L21)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:21](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L21)*
 
 ###  deleteFlowContainerItem
 
 • **deleteFlowContainerItem**: *Mock‹any, any›* = jest.fn()
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:23](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L23)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:23](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L23)*
 
 ###  insertFlowContainerItem
 
 • **insertFlowContainerItem**: *Mock‹object, []›* = jest.fn(() => ({ uuid: v1() }))
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:22](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L22)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:22](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L22)*
 
 ###  updateFlowContainerItem
 
 • **updateFlowContainerItem**: *Mock‹any, any›* = jest.fn()
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:24](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L24)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:24](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L24)*
 
 ___
 
@@ -2848,16 +3096,16 @@ ___
 
 ### ▪ **itemHandlers**: *object*
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:17](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L17)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:17](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L17)*
 
 ###  getItems
 
 • **getItems**: *Mock‹any, any›* = jest.fn()
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:18](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L18)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:18](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L18)*
 
 ###  setItems
 
 • **setItems**: *Mock‹any, any›* = jest.fn()
 
-*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:19](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L19)*
+*Defined in [packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts:19](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/FlowContainer/__mocks__/model.ts#L19)*

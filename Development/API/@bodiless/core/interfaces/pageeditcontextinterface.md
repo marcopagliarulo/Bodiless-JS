@@ -31,6 +31,8 @@
 ### Properties
 
 * [activate](pageeditcontextinterface.md#activate)
+* [activeContext](pageeditcontextinterface.md#optional-activecontext)
+* [activeDescendants](pageeditcontextinterface.md#optional-activedescendants)
 * [areLocalTooltipsDisabled](pageeditcontextinterface.md#arelocaltooltipsdisabled)
 * [contextMenuOptions](pageeditcontextinterface.md#contextmenuoptions)
 * [getMenuOptions](pageeditcontextinterface.md#readonly-getmenuoptions)
@@ -53,6 +55,7 @@
 * [toggleEdit](pageeditcontextinterface.md#toggleedit)
 * [toggleLocalTooltipsDisabled](pageeditcontextinterface.md#togglelocaltooltipsdisabled)
 * [togglePosition](pageeditcontextinterface.md#toggleposition)
+* [type](pageeditcontextinterface.md#optional-type)
 * [unregisterPeer](pageeditcontextinterface.md#unregisterpeer)
 * [updateMenuOptions](pageeditcontextinterface.md#updatemenuoptions)
 
@@ -64,11 +67,36 @@
 
 *Inherited from [CanBeActivated](canbeactivated.md).[activate](canbeactivated.md#activate)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:59](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L59)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:60](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L60)*
 
 #### Type declaration:
 
 ▸ (): *void*
+
+___
+
+### `Optional` activeContext
+
+• **activeContext**? : *[PageEditContextInterface](pageeditcontextinterface.md)*
+
+*Inherited from [CanBeActivated](canbeactivated.md).[activeContext](canbeactivated.md#optional-activecontext)*
+
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:64](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L64)*
+
+The currently active context, or undefined if no context is active.
+
+___
+
+### `Optional` activeDescendants
+
+• **activeDescendants**? : *[PageEditContextInterface](pageeditcontextinterface.md)[]*
+
+*Inherited from [CanBeActivated](canbeactivated.md).[activeDescendants](canbeactivated.md#optional-activedescendants)*
+
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:69](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L69)*
+
+If the context is active, an array of its descendants, starting with its first child
+and ending with the innermost active context.  If the context is not active, undefined.
 
 ___
 
@@ -78,7 +106,7 @@ ___
 
 *Inherited from [CanControlLocalTooltipsVisibility](cancontrollocaltooltipsvisibility.md).[areLocalTooltipsDisabled](cancontrollocaltooltipsvisibility.md#arelocaltooltipsdisabled)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:31](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L31)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:31](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L31)*
 
 ___
 
@@ -88,7 +116,7 @@ ___
 
 *Inherited from [CanGetContextMenuOptions](cangetcontextmenuoptions.md).[contextMenuOptions](cangetcontextmenuoptions.md#contextmenuoptions)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:46](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L46)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:46](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L46)*
 
 ___
 
@@ -98,7 +126,7 @@ ___
 
 *Overrides [DefinesLocalEditContext](defineslocaleditcontext.md).[getMenuOptions](defineslocaleditcontext.md#optional-getmenuoptions)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:97](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L97)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:108](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L108)*
 
 Function property which gets the menu options associated with this context.
 
@@ -110,7 +138,7 @@ ___
 
 *Inherited from [CanBeActivated](canbeactivated.md).[hasLocalMenu](canbeactivated.md#haslocalmenu)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:57](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L57)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:58](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L58)*
 
 ___
 
@@ -120,7 +148,7 @@ ___
 
 *Inherited from [CanControlPageOverlay](cancontrolpageoverlay.md).[hidePageOverlay](cancontrolpageoverlay.md#hidepageoverlay)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:42](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L42)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:42](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L42)*
 
 #### Type declaration:
 
@@ -140,7 +168,7 @@ ___
 
 *Overrides [DefinesLocalEditContext](defineslocaleditcontext.md).[id](defineslocaleditcontext.md#id)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:85](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L85)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:96](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L96)*
 
 ___
 
@@ -150,7 +178,7 @@ ___
 
 *Inherited from [CanBeActivated](canbeactivated.md).[isActive](canbeactivated.md#isactive)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:55](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L55)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:56](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L56)*
 
 ___
 
@@ -160,7 +188,7 @@ ___
 
 *Inherited from [CanControlEditMode](cancontroleditmode.md).[isEdit](cancontroleditmode.md#isedit)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:27](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L27)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L27)*
 
 ___
 
@@ -170,7 +198,7 @@ ___
 
 *Inherited from [CanBeActivated](canbeactivated.md).[isInnermost](canbeactivated.md#isinnermost)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:56](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L56)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:57](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L57)*
 
 ___
 
@@ -180,7 +208,7 @@ ___
 
 *Inherited from [CanBeActivated](canbeactivated.md).[isInnermostLocalMenu](canbeactivated.md#isinnermostlocalmenu)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:58](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L58)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:59](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L59)*
 
 ___
 
@@ -190,7 +218,7 @@ ___
 
 *Inherited from [CanControlMenuPosition](cancontrolmenuposition.md).[isPositionToggled](cancontrolmenuposition.md#ispositiontoggled)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:36](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L36)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:36](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L36)*
 
 ___
 
@@ -200,7 +228,7 @@ ___
 
 *Overrides [DefinesLocalEditContext](defineslocaleditcontext.md).[name](defineslocaleditcontext.md#optional-name)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:86](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L86)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:97](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L97)*
 
 ___
 
@@ -210,7 +238,7 @@ ___
 
 *Inherited from [CanControlPageOverlay](cancontrolpageoverlay.md).[pageOverlay](cancontrolpageoverlay.md#pageoverlay)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:40](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L40)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:40](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L40)*
 
 ___
 
@@ -218,7 +246,7 @@ ___
 
 • **parent**? : *[PageEditContextInterface](pageeditcontextinterface.md)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:87](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L87)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:98](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L98)*
 
 ___
 
@@ -226,7 +254,7 @@ ___
 
 • **peerContexts**: *[PageEditContextInterface](pageeditcontextinterface.md)[]*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:92](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L92)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:103](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L103)*
 
 The "peer" contexts registered with this context.  Peer contexts contribute their menu
 options when the context wo which they are registered becomes active.
@@ -237,7 +265,7 @@ ___
 
 • **registerPeer**: *function*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:106](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L106)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:117](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L117)*
 
 Register a peer of this context (another context which will be activagted along with this one)
 
@@ -259,7 +287,7 @@ ___
 
 *Inherited from [CanControlPageOverlay](cancontrolpageoverlay.md).[showError](cancontrolpageoverlay.md#showerror)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:43](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L43)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:43](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L43)*
 
 #### Type declaration:
 
@@ -279,7 +307,7 @@ ___
 
 *Inherited from [CanControlPageOverlay](cancontrolpageoverlay.md).[showPageOverlay](cancontrolpageoverlay.md#showpageoverlay)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:41](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L41)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:41](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L41)*
 
 #### Type declaration:
 
@@ -297,7 +325,7 @@ ___
 
 • **spawn**: *function*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:102](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L102)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:113](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L113)*
 
 Spawn a child of this context (another context which, when activaged, will also activate
 this one and all of its ancestors).
@@ -320,7 +348,7 @@ ___
 
 *Inherited from [CanControlEditMode](cancontroleditmode.md).[toggleEdit](cancontroleditmode.md#toggleedit)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:28](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L28)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:28](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L28)*
 
 #### Type declaration:
 
@@ -340,7 +368,7 @@ ___
 
 *Inherited from [CanControlLocalTooltipsVisibility](cancontrollocaltooltipsvisibility.md).[toggleLocalTooltipsDisabled](cancontrollocaltooltipsvisibility.md#togglelocaltooltipsdisabled)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:32](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L32)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:32](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L32)*
 
 #### Type declaration:
 
@@ -360,7 +388,7 @@ ___
 
 *Inherited from [CanControlMenuPosition](cancontrolmenuposition.md).[togglePosition](cancontrolmenuposition.md#toggleposition)*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:37](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L37)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:37](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L37)*
 
 #### Type declaration:
 
@@ -374,11 +402,21 @@ Name | Type |
 
 ___
 
+### `Optional` type
+
+• **type**? : *undefined | string*
+
+*Inherited from [DefinesLocalEditContext](defineslocaleditcontext.md).[type](defineslocaleditcontext.md#optional-type)*
+
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:51](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L51)*
+
+___
+
 ###  unregisterPeer
 
 • **unregisterPeer**: *function*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:110](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L110)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:121](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L121)*
 
 Unregister all peers.
 
@@ -398,7 +436,7 @@ ___
 
 • **updateMenuOptions**: *function*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:93](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L93)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:104](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L104)*
 
 #### Type declaration:
 

@@ -43,6 +43,7 @@
 * [getActions](defaultcontentnode.md#getactions)
 * [getGetters](defaultcontentnode.md#getgetters)
 * [peer](defaultcontentnode.md#peer)
+* [proxy](defaultcontentnode.md#proxy)
 * [setData](defaultcontentnode.md#setdata)
 * [dummy](defaultcontentnode.md#static-dummy)
 
@@ -52,7 +53,7 @@
 
 \+ **new DefaultContentNode**(`actions`: [Actions](../globals.md#actions), `getters`: [Getters](../globals.md#getters), `path`: [Path](../globals.md#path)): *[DefaultContentNode](defaultcontentnode.md)*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:63](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L63)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:103](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L103)*
 
 **Parameters:**
 
@@ -70,7 +71,7 @@ Name | Type |
 
 • **actions**: *[Actions](../globals.md#actions)*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:59](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L59)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:99](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L99)*
 
 ___
 
@@ -78,7 +79,7 @@ ___
 
 • **getters**: *[Getters](../globals.md#getters)*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:61](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L61)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:101](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L101)*
 
 ___
 
@@ -86,7 +87,7 @@ ___
 
 • **path**: *string[]*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:63](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L63)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:103](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L103)*
 
 ## Accessors
 
@@ -94,7 +95,7 @@ ___
 
 • **get baseResourcePath**(): *string*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:91](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L91)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:131](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L131)*
 
 **Returns:** *string*
 
@@ -104,7 +105,7 @@ ___
 
 • **get data**(): *D*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:81](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L81)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:121](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L121)*
 
 **Returns:** *D*
 
@@ -114,7 +115,7 @@ ___
 
 • **get hasError**(): *hasError*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:113](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L113)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:153](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L153)*
 
 **Returns:** *hasError*
 
@@ -124,7 +125,7 @@ ___
 
 • **get keys**(): *string[]*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:108](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L108)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:148](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L148)*
 
 **Returns:** *string[]*
 
@@ -134,7 +135,7 @@ ___
 
 • **get pagePath**(): *string*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:86](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L86)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:126](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L126)*
 
 **Returns:** *string*
 
@@ -144,7 +145,7 @@ ___
 
 ▸ **child**‹**E**›(`path`: [Path](../globals.md#path)): *[DefaultContentNode](defaultcontentnode.md)‹E›*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:76](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L76)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:116](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L116)*
 
 **Type parameters:**
 
@@ -164,7 +165,7 @@ ___
 
 ▸ **delete**(`path?`: [Path](../globals.md#path)): *void*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:101](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L101)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:141](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L141)*
 
 **Parameters:**
 
@@ -180,7 +181,7 @@ ___
 
 ▸ **getActions**(): *object*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:122](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L122)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:167](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L167)*
 
 **Returns:** *object*
 
@@ -194,7 +195,7 @@ ___
 
 ▸ **getGetters**(): *object*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:118](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L118)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:163](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L163)*
 
 **Returns:** *object*
 
@@ -214,7 +215,7 @@ ___
 
 ▸ **peer**‹**E**›(`path`: [Path](../globals.md#path)): *[DefaultContentNode](defaultcontentnode.md)‹E›*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:72](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L72)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:112](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L112)*
 
 **Type parameters:**
 
@@ -230,11 +231,27 @@ Name | Type |
 
 ___
 
+###  proxy
+
+▸ **proxy**(`processors`: [Processors](../globals.md#processors)‹D›): *[ContentNode](../globals.md#contentnode)‹D›*
+
+*Defined in [packages/bodiless-core/src/ContentNode.ts:158](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L158)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`processors` | [Processors](../globals.md#processors)‹D› |
+
+**Returns:** *[ContentNode](../globals.md#contentnode)‹D›*
+
+___
+
 ###  setData
 
 ▸ **setData**(`dataObj`: D): *void*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:96](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L96)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:136](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L136)*
 
 **Parameters:**
 
@@ -250,7 +267,7 @@ ___
 
 ▸ **dummy**(`path`: string, `initialData`: object): *[DefaultContentNode](defaultcontentnode.md)‹object›*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:126](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L126)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:171](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L171)*
 
 **Parameters:**
 

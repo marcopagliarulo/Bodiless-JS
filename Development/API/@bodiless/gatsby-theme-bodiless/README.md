@@ -13,6 +13,117 @@ const gatsbyThemeBodiless = require('@bodiless/gatsby-theme-bodiless');
 
 // TODO: DEMONSTRATE API
 ```
+
+## Configuration
+
+### Gatsby image
+
+#### Image processing arguments
+
+To override default image processing arguments, use `gatsbyImage.sharpArgs` option. For example, to override default quality
+
+```js
+  {
+    resolve: '@bodiless/gatsby-theme-bodiless',
+    options: {
+      gatsbyImage: {
+        sharpArgs: {
+          quality: 70,
+        },
+      },
+    },
+  },
+```
+
+See [gatsby-plugin-sharp](https://www.gatsbyjs.com/plugins/gatsby-plugin-sharp/) doc to get a list of options you can override.
+
+#### Configure Gatsby Image for default content
+
+1. Prepare default content data
+
+    Install npm packages containing default content and/or create .json files on site level.
+
+    Example of .json file containing default image data
+
+    ```json
+    {
+      "src": "./defaultImage.jpg",
+      "alt": "My Test Alt",
+      "title": "My Test Title",
+      "preset": "fluid_withWebp"
+    }
+    ```
+
+    `src` - contains path to image. The path can be relative or absolute. When relative path is specified, then the image will be resolved relative to the json. When absolute path is specified, then the image will be resolved relative to site's `static` directory.
+
+    `alt`, `title` - image data provided by Bodiless.
+
+    `preset` - image preset for which generate image variations.
+
+1. Configure default content sources
+
+   Option A. (Recommended). Use default content auto-discovery mechanism.
+    Add `bodiless.content.json` file on site level. Example of file
+
+    ```json
+      [
+        "./path/to/default/content/directory1",
+        "./path/to/default/content/directory2"
+      ]
+    ```
+
+    Option B. Use site's gatsby-config.js
+
+    ```js
+    // site gatsby-config.js
+
+    const {
+      createDefaultContentPlugins,
+    } = require('@bodiless/gatsby-theme-bodiless/dist/DefaultContent');
+
+    module.exports = {
+      plugins: {
+        // your other plugins
+        ...createDefaultContentPlugins(
+          './path/to/default/content/directory1',
+          './path/to/default/content/directory2'
+        )
+      }
+    }
+    ```
+
+1. Add `DefaultContentQuery` to each page that uses default content
+
+    Open your page index file and extend a list of exported queries with `DefaultContentQuery`.
+
+    ```js
+      export const query = graphql`
+        query($slug: String!) {
+          ...YourOtherQuery
+          ...DefaultContentQuery
+        }
+      `;
+    ```
+
+1. Use helpers to compose Gatsby Image components
+
+```js
+import { useContentFrom } from '@bodiless/core';
+import { asBodilessImage } from '@bodiless/components-ui';
+import { withDefaultImageContent } from '@bodiless/components';
+import {
+  GatsbyImagePresets,
+  withGatsbyImagePreset,
+} from '@bodiless/gatsby-theme-bodiless';
+
+const asEditableImage = withGatsbyImagePreset(GatsbyImagePresets.FluidWithWebp)(asBodilessImage);
+const useDefaultImageNode = useContentFrom(['DefaultContent', 'contentful1']);
+const Image = withDefaultImageContent(asEditableImage)(useDefaultImageNode)('image')('img');
+
+// jsx
+<Image />
+```
+
 ### Plugins
 
 #### Robots.txt
@@ -56,12 +167,6 @@ process.env.ROBOTSTXT_POLICY = JSON.stringify(policies);
 Tailwind CSS compilation is configured and enabled by default. One can disable css compilation by setting BODILESS_TAILWIND_THEME_ENABLED env variable to '0'.
 
 Tailwind CSS compilation is configured using PostCSS approach. gatsby-plugin-postcss is leveraged for this purpose.
-
-#### CSS purging
-
-Tailwind CSS purging is configured and enabled by default. One can disable css purging by setting BODILESS_PURGE_CSS_ENABLED env variable to '0'.
-
-CSS purging is enabled for @bodiless/ui tailwind css and for site level tailwind css. Assumption is made that site level tailwind styles are in `src/css/style.css`. One can override path to site level styles by configuring BODILESS_TAILWIND_SITE_CSS env variable.
 
 #### Exclude imported CSS from static builds
 

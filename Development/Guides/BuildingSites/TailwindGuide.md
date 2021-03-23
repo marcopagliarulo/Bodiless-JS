@@ -43,7 +43,7 @@ instead of replace.
 This will add additional brand colors to all the default tailwind colors. 
 
 When the static site builds it utilizes
-[gatsby purge css feature](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss)
+[tailwind purge css feature](https://tailwindcss.com/docs/controlling-file-size#removing-unused-css)
 to remove unused css classes and this will keep the css file small for best
 performance.
 
@@ -103,7 +103,7 @@ For example:
 
 By doing the above, this custom css will only be loaded for pages that
 use the component and help with performance. While BodilessJS runs with
-[gatsby purge css feature](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss)
+[tailwind purge css feature](https://tailwindcss.com/docs/controlling-file-size#removing-unused-css)
 tool this is only processing on tailwind css and not on any custom css included.
 
 ?> **Tip** As a site developer it is always good practice to remove css that isn't
@@ -117,3 +117,53 @@ Common usages for using custom css:
 * Gradients
   * or alternative use https://github.com/benface/tailwindcss-gradients to extend
     tailwind.
+
+## Tailwind configuration for a package
+
+1. Create tailwind configuration file.
+
+    ```sh
+    npx tailwindcss init
+    ```
+
+1. Configure [CSS Purging](#configure-css-puring).
+
+    Set purging paths to the compiled templates containing tailwind classes. Assuming your package compilation output directory is `lib`, your purge configuration will be
+
+    ```js
+    purge: [
+      './lib/**/!(*.d).{ts,js,jsx,tsx}',
+    ],
+    ```
+
+1. Export a function to merge your package tailwind configs with site configs.
+
+    * for @bodiless packages
+
+       Whitelist the bodiless package in `packages/gatsby-theme-bodiless/src/dist/tailwindcss/getBodilessConfigs.ts`
+
+    * for non-@bodiless packages
+
+      Export a function that merges your package tailwind configuration with site configuration. You may leverage `mergeConfigs` and `getTailwindConfigs` from `@bodiless/gatsby-theme-bodiless`.
+
+      ```js
+      import {
+        mergeConfigs,
+        getTailwindConfigs,
+      } from '@bodiless/gatsby-theme-bodiless/dist/tailwindcss';
+
+      const packageMergeConfigs = siteConfig => mergeConfigs(siteConfig, getTailwindConfigs(['yourpackagename']));
+
+      export default packageMergeConfigs;
+      ```
+
+## Configure CSS Purging
+
+1. Provide an array of paths to all of your template files using the purge option of `tailwind.config.js`:
+
+    ```js
+    purge: [
+      './src/**/!(*.d).{ts,js,jsx,tsx}',
+    ],
+    ```
+> :warning: **If you are configuring purgin for a package**: Paths should point to the compiled templates.

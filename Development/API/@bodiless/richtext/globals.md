@@ -7,52 +7,58 @@
 ### Enumerations
 
 * [RichTextItemType](enums/richtextitemtype.md)
+* [TagName](enums/tagname.md)
 
 ### Classes
 
 * [MobxStateContainer](classes/mobxstatecontainer.md)
 
-### Interfaces
-
-* [SlateEditorProps](interfaces/slateeditorprops.md)
-
 ### Type aliases
 
 * [ButtonProps](globals.md#buttonprops)
 * [CTWM](globals.md#ctwm)
-* [Change](globals.md#change)
 * [CreateBlockButton](globals.md#createblockbutton)
+* [CreateDeserializerSettings](globals.md#createdeserializersettings)
 * [CreateInlineButton](globals.md#createinlinebutton)
 * [CreateMarkButton](globals.md#createmarkbutton)
-* [CreateMarkPlugin](globals.md#createmarkplugin)
 * [CreateToggleMark](globals.md#createtogglemark)
 * [CustomComponentProps](globals.md#customcomponentprops)
 * [Data](globals.md#data)
 * [DataJSON](globals.md#datajson)
+* [DeserializeElement](globals.md#deserializeelement)
+* [DeserializeElementParams](globals.md#deserializeelementparams)
+* [Deserializer](globals.md#deserializer)
+* [Deserializers](globals.md#deserializers)
 * [EditorButtonProps](globals.md#editorbuttonprops)
 * [EditorContext](globals.md#editorcontext)
 * [EditorOnChange](globals.md#editoronchange)
+* [Element](globals.md#element)
 * [FormProps](globals.md#formprops)
+* [HTMLElementMap](globals.md#htmlelementmap)
+* [HTMLElementMatch](globals.md#htmlelementmatch)
 * [HoverButton](globals.md#hoverbutton)
 * [HoverMenuProps](globals.md#hovermenuprops)
 * [InitialValue](globals.md#initialvalue)
 * [InsertInlineOptions](globals.md#insertinlineoptions)
-* [MarkKeyboardShortcut](globals.md#markkeyboardshortcut)
-* [MarkOptions](globals.md#markoptions)
 * [NewState](globals.md#newstate)
+* [Node](globals.md#node)
 * [NodeEditForm](globals.md#nodeeditform)
-* [NodeStateHandlers](globals.md#nodestatehandlers)
+* [NodeMapper](globals.md#nodemapper)
+* [NodeReducer](globals.md#nodereducer)
 * [Opts](globals.md#opts)
+* [Plugin](globals.md#plugin)
 * [PreviewUI](globals.md#previewui)
 * [Props](globals.md#props)
+* [RenderElementComponentType](globals.md#renderelementcomponenttype)
+* [RenderLeafComponentType](globals.md#renderleafcomponenttype)
 * [RenderPluginComponent](globals.md#renderplugincomponent)
+* [ReturnFocusItem](globals.md#returnfocusitem)
 * [RichTextComponent](globals.md#richtextcomponent)
 * [RichTextComponentWithGlobalButton](globals.md#richtextcomponentwithglobalbutton)
 * [RichTextComponents](globals.md#richtextcomponents)
 * [RichTextProps](globals.md#richtextprops)
 * [RichTextProviderProps](globals.md#richtextproviderprops)
 * [RichTextProviderType](globals.md#richtextprovidertype)
-* [TOnChange](globals.md#tonchange)
 * [TUseNodeStateHandlers](globals.md#tusenodestatehandlers)
 * [TUseNodeStateHandlersParams](globals.md#tusenodestatehandlersparams)
 * [TUseOnChange](globals.md#tuseonchange)
@@ -63,9 +69,10 @@
 * [ToggleMarkOptions](globals.md#togglemarkoptions)
 * [ToggleProps](globals.md#toggleprops)
 * [UI](globals.md#ui)
-* [UpdateBlockOptions](globals.md#updateblockoptions)
 * [UpdateInlineOptions](globals.md#updateinlineoptions)
+* [UseKeyBoardShortcuts](globals.md#usekeyboardshortcuts)
 * [UseMenuOptionsProps](globals.md#usemenuoptionsprops)
+* [Value](globals.md#value)
 * [WithMeta](globals.md#withmeta)
 * [WithSlateSchemaTypeProps](globals.md#withslateschematypeprops)
 * [createToggleBlockOptions](globals.md#createtoggleblockoptions)
@@ -78,14 +85,21 @@
 
 ### Variables
 
+* [BasicRichText](globals.md#const-basicrichtext)
+* [Content](globals.md#const-content)
+* [DEFAULT_DELIMITER](globals.md#const-default_delimiter)
+* [DEFAULT_ELEMENTS](globals.md#const-default_elements)
 * [DEFAULT_NODE](globals.md#const-default_node)
 * [DefaultPluginButton](globals.md#const-defaultpluginbutton)
 * [EditOnlyHoverMenu](globals.md#const-editonlyhovermenu)
+* [NODE_ELEMENT_NODE](globals.md#const-node_element_node)
+* [NODE_TEXT_NODE](globals.md#const-node_text_node)
+* [NodeSelectorButton](globals.md#const-nodeselectorbutton)
+* [RETURN_FOCUS_ITEM](globals.md#let-return_focus_item)
 * [RichText](globals.md#const-richtext)
 * [RichTextProvider](globals.md#const-richtextprovider)
 * [SlateEditor](globals.md#const-slateeditor)
 * [SlateEditorContext](globals.md#const-slateeditorcontext)
-* [TextSelectorContext](globals.md#const-textselectorcontext)
 * [asAtomicBlock](globals.md#const-asatomicblock)
 * [asBlock](globals.md#const-asblock)
 * [asFloat](globals.md#const-asfloat)
@@ -95,20 +109,27 @@
 * [asVoid](globals.md#const-asvoid)
 * [defaults](globals.md#const-defaults)
 * [ifMenuOptions](globals.md#const-ifmenuoptions)
-* [stateContainer](globals.md#const-statecontainer)
 * [uiContext](globals.md#const-uicontext)
 * [withAlignCenterMeta](globals.md#const-withaligncentermeta)
 * [withAlignJustifyMeta](globals.md#const-withalignjustifymeta)
 * [withAlignLeftMeta](globals.md#const-withalignleftmeta)
 * [withAlignRightMeta](globals.md#const-withalignrightmeta)
+* [withBoldDeserializer](globals.md#const-withbolddeserializer)
 * [withBoldMeta](globals.md#const-withboldmeta)
+* [withEditableDefaultStyles](globals.md#const-witheditabledefaultstyles)
+* [withHeader1Deserializer](globals.md#const-withheader1deserializer)
 * [withHeader1Meta](globals.md#const-withheader1meta)
+* [withHeader2Deserializer](globals.md#const-withheader2deserializer)
 * [withHeader2Meta](globals.md#const-withheader2meta)
+* [withHeader3Deserializer](globals.md#const-withheader3deserializer)
 * [withHeader3Meta](globals.md#const-withheader3meta)
 * [withImageMeta](globals.md#const-withimagemeta)
+* [withItalicDeserializer](globals.md#const-withitalicdeserializer)
 * [withItalicMeta](globals.md#const-withitalicmeta)
 * [withLinkMeta](globals.md#const-withlinkmeta)
 * [withPreview](globals.md#const-withpreview)
+* [withRichtextPlainSerializer](globals.md#const-withrichtextplainserializer)
+* [withStrikeDeserializer](globals.md#const-withstrikedeserializer)
 * [withStrikeThroughMeta](globals.md#const-withstrikethroughmeta)
 * [withSuperScriptMeta](globals.md#const-withsuperscriptmeta)
 * [withUnderlineMeta](globals.md#const-withunderlinemeta)
@@ -116,95 +137,115 @@
 ### Functions
 
 * [BaseRichTextPreview](globals.md#const-baserichtextpreview)
-* [BasicRichText](globals.md#const-basicrichtext)
-* [CloseBtn](globals.md#const-closebtn)
-* [Content](globals.md#const-content)
 * [EditOnlyHoverMenu$](globals.md#private-const-editonlyhovermenu)
 * [HoverMenu](globals.md#const-hovermenu)
-* [NodeSelectorButton](globals.md#const-nodeselectorbutton)
+* [NodeSelectorButton$](globals.md#const-nodeselectorbutton)
 * [PluginButton](globals.md#const-pluginbutton)
 * [SlateComponentProvider](globals.md#const-slatecomponentprovider)
 * [TextSelectorButton](globals.md#const-textselectorbutton)
-* [addAttributes](globals.md#const-addattributes)
 * [apply](globals.md#const-apply)
 * [asSlateCustomComponent](globals.md#const-asslatecustomcomponent)
 * [createBlock](globals.md#const-createblock)
 * [createBlockButton](globals.md#const-createblockbutton)
+* [createBoldDeserializer](globals.md#const-createbolddeserializer)
+* [createDefaultDeserializers](globals.md#const-createdefaultdeserializers)
+* [createDeserializer](globals.md#const-createdeserializer)
+* [createElementRenderPlugin](globals.md#const-createelementrenderplugin)
+* [createHeader1Deserializer](globals.md#const-createheader1deserializer)
+* [createHeader2Deserializer](globals.md#const-createheader2deserializer)
+* [createHeader3Deserializer](globals.md#const-createheader3deserializer)
 * [createInline](globals.md#const-createinline)
 * [createInlineButton](globals.md#const-createinlinebutton)
 * [createIsActive](globals.md#const-createisactive)
-* [createKeyboardPlugin](globals.md#const-createkeyboardplugin)
+* [createItalicDeserializer](globals.md#const-createitalicdeserializer)
+* [createLeafRenderPlugin](globals.md#const-createleafrenderplugin)
+* [createLinkDeserializer](globals.md#const-createlinkdeserializer)
 * [createMarkButton](globals.md#const-createmarkbutton)
-* [createMarkPlugin](globals.md#const-createmarkplugin)
-* [createMarkRenderPlugin](globals.md#const-createmarkrenderplugin)
-* [createNodeRenderPlugin](globals.md#const-createnoderenderplugin)
 * [createPluginButton](globals.md#const-createpluginbutton)
+* [createStrikeDeserializer](globals.md#const-createstrikedeserializer)
 * [createToggleBlock](globals.md#const-createtoggleblock)
 * [createToggleInline](globals.md#const-createtoggleinline)
 * [createToggleMark](globals.md#const-createtogglemark)
 * [customizer](globals.md#customizer)
-* [getBlock](globals.md#const-getblock)
+* [deserializeElement](globals.md#const-deserializeelement)
+* [deserializeHtml](globals.md#const-deserializehtml)
+* [getDeserializers](globals.md#const-getdeserializers)
 * [getGlobalButton](globals.md#const-getglobalbutton)
 * [getGlobalButtons](globals.md#const-getglobalbuttons)
 * [getHoverButton](globals.md#const-gethoverbutton)
 * [getHoverButtons](globals.md#const-gethoverbuttons)
-* [getInline](globals.md#const-getinline)
+* [getInlineButtons](globals.md#const-getinlinebuttons)
 * [getPlugins](globals.md#const-getplugins)
 * [getRenderPlugin](globals.md#const-getrenderplugin)
-* [getSchema](globals.md#const-getschema)
+* [getReturnFocusItem](globals.md#const-getreturnfocusitem)
 * [getSelectorButton](globals.md#const-getselectorbutton)
 * [getSelectorButtons](globals.md#const-getselectorbuttons)
-* [getShortcutPlugin](globals.md#const-getshortcutplugin)
 * [getUI](globals.md#const-getui)
 * [hasBlock](globals.md#const-hasblock)
 * [hasInline](globals.md#const-hasinline)
 * [hasMark](globals.md#const-hasmark)
-* [hasMultiBlocks](globals.md#const-hasmultiblocks)
 * [insertBlock](globals.md#const-insertblock)
 * [insertInline](globals.md#const-insertinline)
-* [isMod](globals.md#const-ismod)
-* [markKeyboardShortcut](globals.md#const-markkeyboardshortcut)
-* [removeBlock](globals.md#const-removeblock)
-* [removeBlockByNode](globals.md#const-removeblockbynode)
+* [isBlockActive](globals.md#const-isblockactive)
+* [isInlineActive](globals.md#const-isinlineactive)
+* [isMarkActive](globals.md#const-ismarkactive)
+* [migrateElementNode](globals.md#const-migrateelementnode)
+* [migrateNode](globals.md#const-migratenode)
+* [migrateTextNode](globals.md#const-migratetextnode)
 * [removeInline](globals.md#const-removeinline)
-* [removeInlineByNode](globals.md#const-removeinlinebynode)
+* [removeLeaves](globals.md#const-removeleaves)
+* [renderElement](globals.md#const-renderelement)
+* [renderLeaf](globals.md#const-renderleaf)
+* [serialize](globals.md#const-serialize)
+* [setReturnFocusItem](globals.md#const-setreturnfocusitem)
 * [toggleBlock](globals.md#const-toggleblock)
 * [toggleInline](globals.md#const-toggleinline)
 * [toggleMark](globals.md#const-togglemark)
-* [updateBlock](globals.md#const-updateblock)
 * [updateInline](globals.md#const-updateinline)
 * [updateMenu](globals.md#updatemenu)
+* [useInitialValue](globals.md#const-useinitialvalue)
+* [useIsEditableAndEmpty](globals.md#const-useiseditableandempty)
+* [useIsEmptyEditor](globals.md#const-useisemptyeditor)
+* [useKeyBoardShortcut](globals.md#const-usekeyboardshortcut)
+* [useKeyBoardShortcuts](globals.md#const-usekeyboardshortcuts)
 * [useMenuOptions](globals.md#const-usemenuoptions)
 * [useNodeStateHandlers](globals.md#const-usenodestatehandlers)
 * [useOnChange](globals.md#const-useonchange)
+* [useReturnFocusBackOnEffect](globals.md#const-usereturnfocusbackoneffect)
+* [useRichtextPlainSerializer](globals.md#const-userichtextplainserializer)
 * [useSlateContext](globals.md#const-useslatecontext)
-* [useStateContainer](globals.md#usestatecontainer)
 * [useUI](globals.md#const-useui)
 * [useValue](globals.md#const-usevalue)
 * [withButton](globals.md#const-withbutton)
 * [withComponent](globals.md#const-withcomponent)
+* [withDataMigrator](globals.md#const-withdatamigrator)
 * [withDefaults](globals.md#const-withdefaults)
+* [withEditorSettings](globals.md#const-witheditorsettings)
 * [withFloatWrapper](globals.md#const-withfloatwrapper)
 * [withGlobalButton](globals.md#const-withglobalbutton)
 * [withHoverButton](globals.md#const-withhoverbutton)
+* [withHtmlDeserializer](globals.md#const-withhtmldeserializer)
+* [withHtmlPaste](globals.md#const-withhtmlpaste)
 * [withId](globals.md#const-withid)
 * [withKey](globals.md#const-withkey)
 * [withMeta](globals.md#const-withmeta)
 * [withNodeStateHandlers](globals.md#const-withnodestatehandlers)
 * [withOutMeta](globals.md#const-withoutmeta)
+* [withReturnFocusBackOnClick](globals.md#const-withreturnfocusbackonclick)
+* [withReturnFocusBackOnEffect](globals.md#const-withreturnfocusbackoneffect)
+* [withRichtextPlainSerializer$](globals.md#const-withrichtextplainserializer)
 * [withSlateActivator](globals.md#const-withslateactivator)
 * [withSlateEditor](globals.md#const-withslateeditor)
 * [withSlateSchema](globals.md#const-withslateschema)
 * [withToggle](globals.md#const-withtoggle)
-* [wrapBlock](globals.md#const-wrapblock)
+* [withWrapper](globals.md#const-withwrapper)
 * [wrapInline](globals.md#const-wrapinline)
+* [wrapTopLevelInlineNodesInParagraphs](globals.md#const-wraptoplevelinlinenodesinparagraphs)
 
 ### Object literals
 
-* [defaultButton](globals.md#const-defaultbutton)
 * [defaultUI](globals.md#const-defaultui)
 * [lastDesign](globals.md#const-lastdesign)
-* [preserveAll](globals.md#const-preserveall)
 
 ## Type aliases
 
@@ -212,11 +253,11 @@
 
 Ƭ **ButtonProps**: *object*
 
-*Defined in [packages/bodiless-richtext/src/components/TextSelectorButton.tsx:20](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/components/TextSelectorButton.tsx#L20)*
+*Defined in [packages/bodiless-richtext/src/components/TextSelectorButton.tsx:25](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/components/TextSelectorButton.tsx#L25)*
 
 #### Type declaration:
 
-* **onMouseDown**(`e`: MouseEvent): *void*
+* **className**: *string*
 
 ___
 
@@ -224,21 +265,7 @@ ___
 
 Ƭ **CTWM**: *ComponentType & [WithMeta](globals.md#withmeta)*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:28](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L28)*
-
-___
-
-###  Change
-
-Ƭ **Change**: *object*
-
-*Defined in [packages/bodiless-richtext/src/Type.ts:69](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/Type.ts#L69)*
-
-#### Type declaration:
-
-* **operations**: *List‹Operation›*
-
-* **value**: *Value*
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:29](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L29)*
 
 ___
 
@@ -246,7 +273,7 @@ ___
 
 Ƭ **CreateBlockButton**: *function*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/createBlockButton.ts:20](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/createBlockButton.ts#L20)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/block/createBlockButton.ts:20](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/block/createBlockButton.ts#L20)*
 
 #### Type declaration:
 
@@ -261,11 +288,25 @@ Name | Type |
 
 ___
 
+###  CreateDeserializerSettings
+
+Ƭ **CreateDeserializerSettings**: *object*
+
+*Defined in [packages/bodiless-richtext/src/serializers/htmlSerializer.ts:112](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/htmlSerializer.ts#L112)*
+
+#### Type declaration:
+
+* **nodeName**: *string*
+
+* **tagName**: *[TagName](enums/tagname.md)*
+
+___
+
 ###  CreateInlineButton
 
 Ƭ **CreateInlineButton**: *function*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/createInlineButton.ts:20](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/inline/createInlineButton.ts#L20)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/createInlineButton.ts:20](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/inline/createInlineButton.ts#L20)*
 
 #### Type declaration:
 
@@ -284,7 +325,7 @@ ___
 
 Ƭ **CreateMarkButton**: *function*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/createMarkButton.ts:20](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/mark/createMarkButton.ts#L20)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/createMarkButton.ts:20](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/mark/createMarkButton.ts#L20)*
 
 #### Type declaration:
 
@@ -299,31 +340,11 @@ Name | Type |
 
 ___
 
-###  CreateMarkPlugin
-
-Ƭ **CreateMarkPlugin**: *function*
-
-*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/index.tsx:33](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/mark/index.tsx#L33)*
-
-#### Type declaration:
-
-▸ (`Mark`: React.ComponentType‹RenderMarkProps›, `markType`: string, `options`: [MarkOptions](globals.md#markoptions)): *Plugin*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`Mark` | React.ComponentType‹RenderMarkProps› |
-`markType` | string |
-`options` | [MarkOptions](globals.md#markoptions) |
-
-___
-
 ###  CreateToggleMark
 
 Ƭ **CreateToggleMark**: *object*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts:21](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts#L21)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts:24](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts#L24)*
 
 #### Type declaration:
 
@@ -335,7 +356,7 @@ ___
 
 Ƭ **CustomComponentProps**: *object*
 
-*Defined in [packages/bodiless-richtext/src/Type.ts:62](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/Type.ts#L62)*
+*Defined in [packages/bodiless-richtext/src/Type.ts:63](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Type.ts#L63)*
 
 #### Type declaration:
 
@@ -351,15 +372,11 @@ ___
 
 ###  Data
 
-Ƭ **Data**: *object*
+Ƭ **Data**: *[Value](globals.md#value)*
 
-*Defined in [packages/bodiless-richtext/src/Float.tsx:26](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/Float.tsx#L26)*
+*Defined in [packages/bodiless-richtext/src/Float.tsx:26](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Float.tsx#L26)*
 
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:22](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L22)*
-
-#### Type declaration:
-
-* **document**: *object*
+*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:24](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L24)*
 
 ___
 
@@ -367,7 +384,67 @@ ___
 
 Ƭ **DataJSON**: *object*
 
-*Defined in [packages/bodiless-richtext/src/Type.ts:32](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/Type.ts#L32)*
+*Defined in [packages/bodiless-richtext/src/Type.ts:32](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Type.ts#L32)*
+
+___
+
+###  DeserializeElement
+
+Ƭ **DeserializeElement**: *function*
+
+*Defined in [packages/bodiless-richtext/src/serializers/htmlSerializer.ts:39](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/htmlSerializer.ts#L39)*
+
+#### Type declaration:
+
+▸ (`params`: [DeserializeElementParams](globals.md#deserializeelementparams)): *SlateNode[]*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`params` | [DeserializeElementParams](globals.md#deserializeelementparams) |
+
+___
+
+###  DeserializeElementParams
+
+Ƭ **DeserializeElementParams**: *object*
+
+*Defined in [packages/bodiless-richtext/src/serializers/htmlSerializer.ts:35](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/htmlSerializer.ts#L35)*
+
+#### Type declaration:
+
+* **deserializers**: *[Deserializer](globals.md#deserializer)[]*
+
+* **element**: *[Element](enums/tagname.md#element)*
+
+___
+
+###  Deserializer
+
+Ƭ **Deserializer**: *object*
+
+*Defined in [packages/bodiless-richtext/src/serializers/htmlSerializer.ts:29](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/htmlSerializer.ts#L29)*
+
+#### Type declaration:
+
+* **map**: *[HTMLElementMap](globals.md#htmlelementmap)*
+
+* **match**: *[HTMLElementMatch](globals.md#htmlelementmatch)*
+
+* **tagName**: *[TagName](enums/tagname.md)*
+
+___
+
+###  Deserializers
+
+Ƭ **Deserializers**: *object*
+
+*Defined in [packages/bodiless-richtext/src/serializers/htmlSerializer.ts:40](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/htmlSerializer.ts#L40)*
+
+#### Type declaration:
+
+* \[ **key**: *string*\]: [Deserializer](globals.md#deserializer)
 
 ___
 
@@ -375,7 +452,7 @@ ___
 
 Ƭ **EditorButtonProps**: *object*
 
-*Defined in [packages/bodiless-richtext/src/Type.ts:57](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/Type.ts#L57)*
+*Defined in [packages/bodiless-richtext/src/Type.ts:58](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Type.ts#L58)*
 
 #### Type declaration:
 
@@ -389,15 +466,33 @@ ___
 
 Ƭ **EditorContext**: *object | null*
 
-*Defined in [packages/bodiless-richtext/src/Type.ts:45](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/Type.ts#L45)*
+*Defined in [packages/bodiless-richtext/src/Type.ts:47](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Type.ts#L47)*
 
 ___
 
 ###  EditorOnChange
 
-Ƭ **EditorOnChange**: *BasicEditorProps["onChange"]*
+Ƭ **EditorOnChange**: *function*
 
-*Defined in [packages/bodiless-richtext/src/Type.ts:43](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/Type.ts#L43)*
+*Defined in [packages/bodiless-richtext/src/Type.ts:45](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Type.ts#L45)*
+
+#### Type declaration:
+
+▸ (`value`: [Value](globals.md#value)): *void*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`value` | [Value](globals.md#value) |
+
+___
+
+###  Element
+
+Ƭ **Element**: *HTMLElement*
+
+*Defined in [packages/bodiless-richtext/src/serializers/htmlSerializer.ts:19](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/htmlSerializer.ts#L19)*
 
 ___
 
@@ -405,7 +500,7 @@ ___
 
 Ƭ **FormProps**: *object*
 
-*Defined in [packages/bodiless-richtext/src/Type.ts:34](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/Type.ts#L34)*
+*Defined in [packages/bodiless-richtext/src/Type.ts:34](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Type.ts#L34)*
 
 #### Type declaration:
 
@@ -419,11 +514,47 @@ ___
 
 ___
 
+###  HTMLElementMap
+
+Ƭ **HTMLElementMap**: *function*
+
+*Defined in [packages/bodiless-richtext/src/serializers/htmlSerializer.ts:22](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/htmlSerializer.ts#L22)*
+
+#### Type declaration:
+
+▸ (`element`: [Element](enums/tagname.md#element)): *object*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`element` | [Element](enums/tagname.md#element) |
+
+___
+
+###  HTMLElementMatch
+
+Ƭ **HTMLElementMatch**: *function*
+
+*Defined in [packages/bodiless-richtext/src/serializers/htmlSerializer.ts:21](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/htmlSerializer.ts#L21)*
+
+#### Type declaration:
+
+▸ (`element`: [Element](enums/tagname.md#element)): *boolean*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`element` | [Element](enums/tagname.md#element) |
+
+___
+
 ###  HoverButton
 
 Ƭ **HoverButton**: *[RichTextComponent](globals.md#richtextcomponent) & object*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:166](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L166)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:141](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L141)*
 
 ___
 
@@ -431,7 +562,7 @@ ___
 
 Ƭ **HoverMenuProps**: *object*
 
-*Defined in [packages/bodiless-richtext/src/core/HoverMenu.tsx:66](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/core/HoverMenu.tsx#L66)*
+*Defined in [packages/bodiless-richtext/src/core/HoverMenu.tsx:72](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/HoverMenu.tsx#L72)*
 
 #### Type declaration:
 
@@ -445,9 +576,9 @@ ___
 
 ###  InitialValue
 
-Ƭ **InitialValue**: *ValueJSON*
+Ƭ **InitialValue**: *[Value](globals.md#value)*
 
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:26](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L26)*
+*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:26](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L26)*
 
 ___
 
@@ -455,7 +586,7 @@ ___
 
 Ƭ **InsertInlineOptions**: *object*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:51](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L51)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:80](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L80)*
 
 #### Type declaration:
 
@@ -463,61 +594,13 @@ ___
 
 * **inlineType**: *string*
 
-* **value**: *Value*
-
-___
-
-###  MarkKeyboardShortcut
-
-Ƭ **MarkKeyboardShortcut**: *function*
-
-*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/markKeyboardShortcut.ts:19](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/mark/markKeyboardShortcut.ts#L19)*
-
-#### Type declaration:
-
-▸ (`key`: string, `toggleMark`: function, `event`: KeyboardEvent, `editor`: CoreEditor, `next`: function): *any*
-
-**Parameters:**
-
-▪ **key**: *string*
-
-▪ **toggleMark**: *function*
-
-▸ (`options`: [ToggleProps](globals.md#toggleprops)): *Editor*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`options` | [ToggleProps](globals.md#toggleprops) |
-
-▪ **event**: *KeyboardEvent*
-
-▪ **editor**: *CoreEditor*
-
-▪ **next**: *function*
-
-▸ (): *any*
-
-___
-
-###  MarkOptions
-
-Ƭ **MarkOptions**: *object*
-
-*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/index.tsx:29](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/mark/index.tsx#L29)*
-
-#### Type declaration:
-
-* **keyboardKey**? : *undefined | string*
-
 ___
 
 ###  NewState
 
 Ƭ **NewState**: *object*
 
-*Defined in [packages/bodiless-richtext/src/MobxStateContainer.ts:17](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/MobxStateContainer.ts#L17)*
+*Defined in [packages/bodiless-richtext/src/MobxStateContainer.ts:17](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/MobxStateContainer.ts#L17)*
 
 #### Type declaration:
 
@@ -525,25 +608,73 @@ ___
 
 ___
 
+###  Node
+
+Ƭ **Node**: *object*
+
+*Defined in [packages/bodiless-richtext/src/withDataMigrator.tsx:18](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withDataMigrator.tsx#L18)*
+
+#### Type declaration:
+
+* **children**? : *any*
+
+* **data**? : *undefined | object*
+
+* **leaves**? : *[Node](globals.md#node)[]*
+
+* **marks**? : *[Node](globals.md#node)[]*
+
+* **nodes**? : *[Node](globals.md#node)[]*
+
+* **object**? : *undefined | string*
+
+* **text**? : *undefined | string*
+
+* **type**: *string*
+
+___
+
 ###  NodeEditForm
 
 Ƭ **NodeEditForm**: *ComponentType‹[FormProps](globals.md#formprops)›*
 
-*Defined in [packages/bodiless-richtext/src/Type.ts:41](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/Type.ts#L41)*
+*Defined in [packages/bodiless-richtext/src/Type.ts:43](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Type.ts#L43)*
 
 ___
 
-###  NodeStateHandlers
+###  NodeMapper
 
-Ƭ **NodeStateHandlers**: *object*
+Ƭ **NodeMapper**: *function*
 
-*Defined in [packages/bodiless-richtext/src/withNodeStateHandlers.tsx:27](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/withNodeStateHandlers.tsx#L27)*
+*Defined in [packages/bodiless-richtext/src/withDataMigrator.tsx:29](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withDataMigrator.tsx#L29)*
 
 #### Type declaration:
 
-* **onChange**: *Function*
+▸ (`node`: [Node](globals.md#node)): *[Node](globals.md#node)*
 
-* **value**: *Value*
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`node` | [Node](globals.md#node) |
+
+___
+
+###  NodeReducer
+
+Ƭ **NodeReducer**: *function*
+
+*Defined in [packages/bodiless-richtext/src/withDataMigrator.tsx:30](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withDataMigrator.tsx#L30)*
+
+#### Type declaration:
+
+▸ (`nodes`: [Node](globals.md#node)[]): *[Node](globals.md#node)[]*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`nodes` | [Node](globals.md#node)[] |
 
 ___
 
@@ -551,15 +682,31 @@ ___
 
 Ƭ **Opts**: *object*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx:35](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx#L35)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx:28](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx#L28)*
 
 #### Type declaration:
 
 * **icon**: *string*
 
-* **isActive**(`value`: Value): *boolean*
+* **isActive**(`editor`: Editor): *boolean*
 
 * **toggle**(`options`: [ToggleProps](globals.md#toggleprops)): *void*
+
+___
+
+###  Plugin
+
+Ƭ **Plugin**: *object*
+
+*Defined in [packages/bodiless-richtext/src/Type.ts:98](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Type.ts#L98)*
+
+#### Type declaration:
+
+* **renderElement**? : *EditableProps["renderElement"]*
+
+* **renderLeaf**? : *EditableProps["renderLeaf"]*
+
+* **type**: *string*
 
 ___
 
@@ -567,7 +714,7 @@ ___
 
 Ƭ **PreviewUI**: *object*
 
-*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:38](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextContext.tsx#L38)*
+*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:40](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextContext.tsx#L40)*
 
 #### Type declaration:
 
@@ -579,23 +726,35 @@ ___
 
 Ƭ **Props**: *object*
 
-*Defined in [packages/bodiless-richtext/src/core/Content.tsx:20](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/core/Content.tsx#L20)*
+*Defined in [packages/bodiless-richtext/src/core/SlateEditor.tsx:28](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/SlateEditor.tsx#L28)*
 
-*Defined in [packages/bodiless-richtext/src/core/SlateEditor.tsx:27](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/core/SlateEditor.tsx#L27)*
+*Defined in [packages/bodiless-richtext/src/withReturnFocusBack.tsx:29](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withReturnFocusBack.tsx#L29)*
 
-*Defined in [packages/bodiless-richtext/src/withNodeStateHandlers.tsx:32](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/withNodeStateHandlers.tsx#L32)*
+*Defined in [packages/bodiless-richtext/src/components/PluginButton.tsx:26](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/components/PluginButton.tsx#L26)*
 
-*Defined in [packages/bodiless-richtext/src/components/PluginButton.tsx:26](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/components/PluginButton.tsx#L26)*
-
-*Defined in [packages/bodiless-richtext/src/plugin-factory/render/index.tsx:18](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/render/index.tsx#L18)*
-
-*Defined in [packages/bodiless-richtext/src/plugin-factory/keyBoardShortcut/index.tsx:18](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/keyBoardShortcut/index.tsx#L18)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/render/index.tsx:21](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/render/index.tsx#L21)*
 
 #### Type declaration:
 
-* **key**: *string*
+* **Component**: *React.ComponentType‹any›*
 
-* **toggle**: *Function*
+* **type**: *string*
+
+___
+
+###  RenderElementComponentType
+
+Ƭ **RenderElementComponentType**: *ComponentType‹RenderElementProps›*
+
+*Defined in [packages/bodiless-richtext/src/Type.ts:104](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Type.ts#L104)*
+
+___
+
+###  RenderLeafComponentType
+
+Ƭ **RenderLeafComponentType**: *ComponentType‹RenderLeafProps›*
+
+*Defined in [packages/bodiless-richtext/src/Type.ts:105](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Type.ts#L105)*
 
 ___
 
@@ -603,7 +762,15 @@ ___
 
 Ƭ **RenderPluginComponent**: *ComponentType‹any› & object*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:94](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L94)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:93](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L93)*
+
+___
+
+###  ReturnFocusItem
+
+Ƭ **ReturnFocusItem**: *string | null*
+
+*Defined in [packages/bodiless-richtext/src/withReturnFocusBack.tsx:23](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withReturnFocusBack.tsx#L23)*
 
 ___
 
@@ -611,7 +778,7 @@ ___
 
 Ƭ **RichTextComponent**: *ComponentType‹any› & object*
 
-*Defined in [packages/bodiless-richtext/src/Type.ts:74](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/Type.ts#L74)*
+*Defined in [packages/bodiless-richtext/src/Type.ts:70](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Type.ts#L70)*
 
 ___
 
@@ -619,7 +786,7 @@ ___
 
 Ƭ **RichTextComponentWithGlobalButton**: *[RichTextComponent](globals.md#richtextcomponent) & object*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:188](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L188)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:163](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L163)*
 
 ___
 
@@ -627,7 +794,7 @@ ___
 
 Ƭ **RichTextComponents**: *object*
 
-*Defined in [packages/bodiless-richtext/src/Type.ts:88](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/Type.ts#L88)*
+*Defined in [packages/bodiless-richtext/src/Type.ts:85](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Type.ts#L85)*
 
 #### Type declaration:
 
@@ -637,19 +804,9 @@ ___
 
 ###  RichTextProps
 
-Ƭ **RichTextProps**: *object*
+Ƭ **RichTextProps**: *object & Omit‹EditableProps, "value" | "onChange"›*
 
-*Defined in [packages/bodiless-richtext/src/Type.ts:92](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/Type.ts#L92)*
-
-#### Type declaration:
-
-* **components**: *DesignableComponents*
-
-* **initialValue**? : *undefined | object*
-
-* **nodeKey**? : *undefined | string*
-
-* **ui**? : *[UI](globals.md#ui)*
+*Defined in [packages/bodiless-richtext/src/Type.ts:89](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Type.ts#L89)*
 
 ___
 
@@ -657,7 +814,7 @@ ___
 
 Ƭ **RichTextProviderProps**: *object & [UseMenuOptionsProps](globals.md#usemenuoptionsprops)*
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:159](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L159)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:180](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L180)*
 
 ___
 
@@ -665,15 +822,7 @@ ___
 
 Ƭ **RichTextProviderType**: *ComponentType‹[RichTextProviderProps](globals.md#richtextproviderprops)›*
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:163](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L163)*
-
-___
-
-###  TOnChange
-
-Ƭ **TOnChange**: *Function*
-
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:27](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L27)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:183](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L183)*
 
 ___
 
@@ -681,7 +830,7 @@ ___
 
 Ƭ **TUseNodeStateHandlers**: *function*
 
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:39](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L39)*
+*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:39](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L39)*
 
 #### Type declaration:
 
@@ -693,9 +842,9 @@ Name | Type |
 ------ | ------ |
 `params` | [TUseNodeStateHandlersParams](globals.md#tusenodestatehandlersparams) |
 
-* **onChange**: *[TOnChange](globals.md#tonchange)*
+* **onChange**: *[EditorOnChange](globals.md#editoronchange)*
 
-* **value**: *Value*
+* **value**: *[Value](globals.md#value)*
 
 ___
 
@@ -703,7 +852,7 @@ ___
 
 Ƭ **TUseNodeStateHandlersParams**: *Omit‹[TUseOnChangeParams](globals.md#tuseonchangeparams) & [TUseValueParam](globals.md#tusevalueparam), "key"›*
 
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:38](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L38)*
+*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:38](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L38)*
 
 ___
 
@@ -711,11 +860,11 @@ ___
 
 Ƭ **TUseOnChange**: *function*
 
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:32](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L32)*
+*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:32](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L32)*
 
 #### Type declaration:
 
-▸ (`params`: [TUseOnChangeParams](globals.md#tuseonchangeparams)): *function*
+▸ (`params`: [TUseOnChangeParams](globals.md#tuseonchangeparams)): *[EditorOnChange](globals.md#editoronchange)*
 
 **Parameters:**
 
@@ -723,27 +872,21 @@ Name | Type |
 ------ | ------ |
 `params` | [TUseOnChangeParams](globals.md#tuseonchangeparams) |
 
-▸ (`change`: [Change](globals.md#change)): *void*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`change` | [Change](globals.md#change) |
-
 ___
 
 ###  TUseOnChangeParams
 
 Ƭ **TUseOnChangeParams**: *object*
 
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:28](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L28)*
+*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L27)*
 
 #### Type declaration:
 
+* **initialValue**: *[InitialValue](globals.md#initialvalue)*
+
 * **key**: *string*
 
-* **onChange**? : *[TOnChange](globals.md#tonchange)*
+* **onChange**? : *[EditorOnChange](globals.md#editoronchange)*
 
 ___
 
@@ -751,11 +894,11 @@ ___
 
 Ƭ **TUseValue**: *function*
 
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:37](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L37)*
+*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:37](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L37)*
 
 #### Type declaration:
 
-▸ (`params`: [TUseValueParam](globals.md#tusevalueparam)): *Value*
+▸ (`params`: [TUseValueParam](globals.md#tusevalueparam)): *[Value](globals.md#value)*
 
 **Parameters:**
 
@@ -769,7 +912,7 @@ ___
 
 Ƭ **TUseValueParam**: *object*
 
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:33](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L33)*
+*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:33](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L33)*
 
 #### Type declaration:
 
@@ -783,7 +926,7 @@ ___
 
 Ƭ **ToggleBlockOptions**: *object*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:53](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L53)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:45](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L45)*
 
 #### Type declaration:
 
@@ -791,15 +934,13 @@ ___
 
 * **editor**: *Editor*
 
-* **value**: *Value*
-
 ___
 
 ###  ToggleMarkOptions
 
 Ƭ **ToggleMarkOptions**: *object*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts:28](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts#L28)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts:37](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts#L37)*
 
 #### Type declaration:
 
@@ -813,13 +954,11 @@ ___
 
 Ƭ **ToggleProps**: *object*
 
-*Defined in [packages/bodiless-richtext/src/Type.ts:52](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/Type.ts#L52)*
+*Defined in [packages/bodiless-richtext/src/Type.ts:54](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Type.ts#L54)*
 
 #### Type declaration:
 
 * **editor**: *Editor*
-
-* **value**: *Value*
 
 ___
 
@@ -827,9 +966,9 @@ ___
 
 Ƭ **UI**: *object*
 
-*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:30](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextContext.tsx#L30)*
+*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:31](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextContext.tsx#L31)*
 
-*Defined in [packages/bodiless-richtext/src/core/HoverMenu.tsx:28](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/core/HoverMenu.tsx#L28)*
+*Defined in [packages/bodiless-richtext/src/core/HoverMenu.tsx:30](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/HoverMenu.tsx#L30)*
 
 #### Type declaration:
 
@@ -837,35 +976,35 @@ ___
 
 ___
 
-###  UpdateBlockOptions
-
-Ƭ **UpdateBlockOptions**: *object*
-
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:47](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L47)*
-
-#### Type declaration:
-
-* **componentData**: *[DataJSON](globals.md#datajson)*
-
-* **editor**: *Editor*
-
-* **node**: *Block*
-
-___
-
 ###  UpdateInlineOptions
 
 Ƭ **UpdateInlineOptions**: *object*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:45](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L45)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:73](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L73)*
 
 #### Type declaration:
 
-* **componentData**: *[DataJSON](globals.md#datajson)*
+* **at**: *Range*
+
+* **data**: *[DataJSON](globals.md#datajson)*
 
 * **editor**: *Editor*
 
-* **node**: *Inline*
+* **type**: *string*
+
+___
+
+###  UseKeyBoardShortcuts
+
+Ƭ **UseKeyBoardShortcuts**: *object*
+
+*Defined in [packages/bodiless-richtext/src/useKeyBoardShortcuts.ts:45](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/useKeyBoardShortcuts.ts#L45)*
+
+#### Type declaration:
+
+* **components**: *RichTextProps["components"]*
+
+* **editor**: *ReactEditor*
 
 ___
 
@@ -873,7 +1012,7 @@ ___
 
 Ƭ **UseMenuOptionsProps**: *object*
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:141](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L141)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:163](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L163)*
 
 #### Type declaration:
 
@@ -881,11 +1020,19 @@ ___
 
 ___
 
+###  Value
+
+Ƭ **Value**: *[Node](globals.md#node)[]*
+
+*Defined in [packages/bodiless-richtext/src/Type.ts:41](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Type.ts#L41)*
+
+___
+
 ###  WithMeta
 
 Ƭ **WithMeta**: *Object*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:27](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L27)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:28](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L28)*
 
 ___
 
@@ -893,7 +1040,7 @@ ___
 
 Ƭ **WithSlateSchemaTypeProps**: *object*
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:80](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L80)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:101](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L101)*
 
 #### Type declaration:
 
@@ -905,13 +1052,11 @@ ___
 
 Ƭ **createToggleBlockOptions**: *object*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:59](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L59)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:50](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L50)*
 
 #### Type declaration:
 
 * **editor**: *Editor*
-
-* **value**: *Value*
 
 ___
 
@@ -919,13 +1064,11 @@ ___
 
 Ƭ **createToggleInlineOptions**: *object*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:56](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L56)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:84](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L84)*
 
 #### Type declaration:
 
 * **editor**: *Editor*
-
-* **value**: *Value*
 
 ___
 
@@ -933,7 +1076,7 @@ ___
 
 Ƭ **getSelectorButtonToggleMarkType**: *object*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:233](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L233)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:189](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L189)*
 
 #### Type declaration:
 
@@ -947,7 +1090,7 @@ ___
 
 Ƭ **getSelectorButtonToggleType**: *object*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:228](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L228)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:185](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L185)*
 
 #### Type declaration:
 
@@ -955,15 +1098,13 @@ ___
 
 * **name**: *string*
 
-* **value**: *Value*
-
 ___
 
 ###  props
 
 Ƭ **props**: *object*
 
-*Defined in [packages/bodiless-richtext/src/components/TextSelectorButton.tsx:50](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/components/TextSelectorButton.tsx#L50)*
+*Defined in [packages/bodiless-richtext/src/components/TextSelectorButton.tsx:44](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/components/TextSelectorButton.tsx#L44)*
 
 #### Type declaration:
 
@@ -975,7 +1116,7 @@ ___
 
 Ƭ **requiredProps**: *object*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx:31](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx#L31)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx:24](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx#L24)*
 
 #### Type declaration:
 
@@ -989,7 +1130,7 @@ ___
 
 Ƭ **uiIndexType**: *object*
 
-*Defined in [packages/bodiless-richtext/src/components/PluginButton.tsx:22](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/components/PluginButton.tsx#L22)*
+*Defined in [packages/bodiless-richtext/src/components/PluginButton.tsx:22](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/components/PluginButton.tsx#L22)*
 
 #### Type declaration:
 
@@ -997,19 +1138,153 @@ ___
 
 ## Variables
 
+### `Const` BasicRichText
+
+• **BasicRichText**: *NamedExoticComponent‹object & object & object› & object* = React.memo(<P extends object>(props: P & RichTextProps) => {
+  const {
+    initialValue,
+    components,
+    ui,
+    onChange,
+    value,
+    ...rest
+  } = props;
+
+  const {
+    finalComponents, plugins, globalButtons,
+  } = useMemo(() => {
+    const finalComponents$ = withDefaults(components);
+    return {
+      finalComponents: finalComponents$,
+      plugins: getPlugins(finalComponents$),
+      globalButtons: getGlobalButtons(finalComponents$),
+    };
+  }, [components]);
+  const { HoverMenu } = getUI(ui);
+  const finalUI = getUI(ui);
+  const selectorButtons = getSelectorButtons(finalComponents).map(C => <C key={useUUID()} />);
+
+  const editor = useRef<ReactEditor>(
+    flow(
+      withReact,
+      withHistory,
+      withEditorSettings(finalComponents),
+      withHtmlPaste(finalComponents),
+    )(createEditor()) as ReactEditor,
+  );
+
+  const initialValue$ = useInitialValue(initialValue);
+  const value$ = value !== undefined && !isEmpty(value) ? value : initialValue$;
+
+  return (
+    <Slate editor={editor.current} value={value$} onChange={onChange}>
+      <uiContext.Provider value={finalUI}>
+        <RichTextProvider
+          {...rest}
+          initialValue={initialValue$}
+          plugins={plugins}
+          globalButtons={globalButtons}
+        >
+          <EditOnlyHoverMenu HoverMenu={HoverMenu}>
+            {
+              getHoverButtons(finalComponents).map(C => <C key={useUUID()} />)
+            }
+            {
+              selectorButtons.length > 0
+              && (
+                <TextSelectorButton>{selectorButtons}</TextSelectorButton>
+              )
+            }
+          </EditOnlyHoverMenu>
+          <Content
+            {...useKeyBoardShortcuts({
+              editor: editor.current,
+              components: finalComponents,
+            })}
+            onBlur={() => editor.current.onChange()}
+            {...rest}
+          />
+        </RichTextProvider>
+      </uiContext.Provider>
+    </Slate>
+  );
+}, (prevProps, nextProps) => isEqual(prevProps.value, nextProps.value))
+
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:217](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L217)*
+
+___
+
+### `Const` Content
+
+• **Content**: *any* = flow(
+  withEditableDefaultStyles,
+  ifEditable(
+    addProps({
+      readOnly: false,
+    }),
+  ),
+  ifReadOnly(
+    addProps({
+      readOnly: true,
+    }),
+  ),
+  addProps({
+    renderLeaf,
+    renderElement,
+  }),
+  observer,
+)(Editable)
+
+*Defined in [packages/bodiless-richtext/src/core/Content.tsx:97](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/Content.tsx#L97)*
+
+___
+
+### `Const` DEFAULT_DELIMITER
+
+• **DEFAULT_DELIMITER**: *"
+"* = "
+"
+
+*Defined in [packages/bodiless-richtext/src/RichTextPlain.tsx:21](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextPlain.tsx#L21)*
+
+___
+
+### `Const` DEFAULT_ELEMENTS
+
+• **DEFAULT_ELEMENTS**: *string[]* = [
+  'P',
+  'BR',
+]
+
+*Defined in [packages/bodiless-richtext/src/serializers/htmlSerializer.ts:46](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/htmlSerializer.ts#L46)*
+
+___
+
 ### `Const` DEFAULT_NODE
 
 • **DEFAULT_NODE**: *"paragraph"* = "paragraph"
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:18](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L18)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:38](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L38)*
 
 ___
 
 ### `Const` DefaultPluginButton
 
-• **DefaultPluginButton**: *"/home/travis/build/johnsonandjohnson/Bodiless-JS/packages/fclasses/lib/index"* = Button
+• **DefaultPluginButton**: *object* = Button
 
-*Defined in [packages/bodiless-richtext/src/components/PluginButton.tsx:20](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/components/PluginButton.tsx#L20)*
+*Defined in [packages/bodiless-richtext/src/components/PluginButton.tsx:20](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/components/PluginButton.tsx#L20)*
+
+#### Type declaration:
+
+▸ (`props`: HTMLProps‹HTMLButtonElement› & object & object): *Element*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`props` | HTMLProps‹HTMLButtonElement› & object & object |
+
+* **displayName**: *string*
 
 ___
 
@@ -1017,36 +1292,71 @@ ___
 
 • **EditOnlyHoverMenu**: *FunctionComponent‹object›* = observer(EditOnlyHoverMenu$)
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:186](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L186)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:204](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L204)*
+
+___
+
+### `Const` NODE_ELEMENT_NODE
+
+• **NODE_ELEMENT_NODE**: *1* = 1
+
+*Defined in [packages/bodiless-richtext/src/serializers/htmlSerializer.ts:45](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/htmlSerializer.ts#L45)*
+
+___
+
+### `Const` NODE_TEXT_NODE
+
+• **NODE_TEXT_NODE**: *3* = 3
+
+*Defined in [packages/bodiless-richtext/src/serializers/htmlSerializer.ts:44](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/htmlSerializer.ts#L44)*
+
+___
+
+### `Const` NodeSelectorButton
+
+• **NodeSelectorButton**: *any* = flow(
+  withReturnFocusBackOnEffect('more_horiz'),
+)(NodeSelectorButton$)
+
+*Defined in [packages/bodiless-richtext/src/components/TextSelectorButton.tsx:38](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/components/TextSelectorButton.tsx#L38)*
+
+___
+
+### `Let` RETURN_FOCUS_ITEM
+
+• **RETURN_FOCUS_ITEM**: *[ReturnFocusItem](globals.md#returnfocusitem)* = null
+
+*Defined in [packages/bodiless-richtext/src/withReturnFocusBack.tsx:24](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withReturnFocusBack.tsx#L24)*
 
 ___
 
 ### `Const` RichText
 
 • **RichText**: *any* = flow(
+  withDataMigrator,
+  withNodeStateHandlers,
+  withNode,
   withPreview,
-  designable(apply),
+  designable(apply, 'RichText'),
 )(BasicRichText)
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:282](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L282)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:335](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L335)*
 
 ___
 
 ### `Const` RichTextProvider
 
 • **RichTextProvider**: *ComponentClass‹object & object, any› | FunctionComponent‹object & object›* = flowRight(
-  withNode,
-  withNodeStateHandlers,
+  withDisplayName('RichTextProvider'),
   withSlateEditor,
   ifMenuOptions(
     withMenuOptions({ useMenuOptions, name: 'editor' }),
     withSlateActivator,
   ),
-  withoutProps(['className', 'plugins', 'globalButtons', 'readOnly']),
   withSlateSchema,
-)(React.Fragment) as RichTextProviderType
+)(Fragment) as RichTextProviderType
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:164](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L164)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:184](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L184)*
 
 ___
 
@@ -1054,7 +1364,7 @@ ___
 
 • **SlateEditor**: *(Anonymous function)* = withSlateEditor(Fragment)
 
-*Defined in [packages/bodiless-richtext/src/core/SlateEditor.tsx:79](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/core/SlateEditor.tsx#L79)*
+*Defined in [packages/bodiless-richtext/src/core/SlateEditor.tsx:56](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/SlateEditor.tsx#L56)*
 
 ___
 
@@ -1062,15 +1372,7 @@ ___
 
 • **SlateEditorContext**: *Context‹null | object›* = React.createContext<EditorContext>(null)
 
-*Defined in [packages/bodiless-richtext/src/core/SlateEditorContext.ts:18](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/core/SlateEditorContext.ts#L18)*
-
-___
-
-### `Const` TextSelectorContext
-
-• **TextSelectorContext**: *Context‹object›* = React.createContext({ onClose: () => {} })
-
-*Defined in [packages/bodiless-richtext/src/components/TextSelectorButton.tsx:54](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/components/TextSelectorButton.tsx#L54)*
+*Defined in [packages/bodiless-richtext/src/core/SlateEditorContext.ts:18](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/SlateEditorContext.ts#L18)*
 
 ___
 
@@ -1078,7 +1380,7 @@ ___
 
 • **asAtomicBlock**: *(Anonymous function)* = withMeta({ isAtomicBlock: true })
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:72](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L72)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:73](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L73)*
 
 asAtomicBlock marks the item to be inserted as block
 
@@ -1088,7 +1390,7 @@ ___
 
 • **asBlock**: *(Anonymous function)* = withMeta({ type: RichTextItemType.block })
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:51](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L51)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:52](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L52)*
 
 asBlock returns a function that will add the fact that an item is a block to a RichTextItem.
 
@@ -1105,7 +1407,7 @@ ___
   ),
 )
 
-*Defined in [packages/bodiless-richtext/src/Float.tsx:68](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/Float.tsx#L68)*
+*Defined in [packages/bodiless-richtext/src/Float.tsx:68](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Float.tsx#L68)*
 
 #### Type declaration:
 
@@ -1123,7 +1425,7 @@ ___
 
 • **asInline**: *(Anonymous function)* = withMeta({ type: RichTextItemType.inline })
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:57](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L57)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:58](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L58)*
 
 asInline returns a function that will add the fact that
 an item is an inline to a RichTextItem.
@@ -1134,7 +1436,7 @@ ___
 
 • **asMark**: *(Anonymous function)* = withMeta({ type: RichTextItemType.mark })
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:62](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L62)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:63](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L63)*
 
 asMark returns a function that will add the fact that an item is a mark to a RichTextItem.
 
@@ -1146,25 +1448,17 @@ ___
   preview: 1,
 })
 
-*Defined in [packages/bodiless-richtext/src/RichTextPreview.tsx:43](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextPreview.tsx#L43)*
+*Defined in [packages/bodiless-richtext/src/RichTextPreview.tsx:43](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextPreview.tsx#L43)*
 
 #### Type declaration:
 
-▸ (`Component`: React.ComponentType‹P›): *function*
+▸ (`Component`: ComponentType‹any›): *ComponentType‹any›*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`Component` | React.ComponentType‹P› |
-
-▸ (`props`: P): *Element*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`props` | P |
+`Component` | ComponentType‹any› |
 
 ___
 
@@ -1172,7 +1466,7 @@ ___
 
 • **asVoid**: *(Anonymous function)* = withMeta({ isVoid: true })
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:67](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L67)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:68](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L68)*
 
 asVoid marks the item to be inserted as a void item
 
@@ -1195,7 +1489,7 @@ ___
   H3,
 } as DesignableComponents
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:234](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L234)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:287](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L287)*
 
 #### Type declaration:
 
@@ -1210,7 +1504,7 @@ ___
   return context.isEdit && Boolean(props.globalButtons);
 })
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:154](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L154)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:175](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L175)*
 
 #### Type declaration:
 
@@ -1226,23 +1520,13 @@ Name | Type |
 ------ | ------ |
 `...hocs` | Function[] |
 
-▸ (`Component`: CT‹any›): *FunctionComponent‹any›*
+▸ (`Component`: CT‹any› | string): *FunctionComponent‹any›*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`Component` | CT‹any› |
-
-___
-
-### `Const` stateContainer
-
-• **stateContainer**: *Context‹[MobxStateContainer](classes/mobxstatecontainer.md)‹››* = React.createContext<MobxStateContainer>(
-  new MobxStateContainer(),
-)
-
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:46](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L46)*
+`Component` | CT‹any› &#124; string |
 
 ___
 
@@ -1250,7 +1534,7 @@ ___
 
 • **uiContext**: *Context‹object›* = createContext<UI>(defaultUI)
 
-*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:47](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextContext.tsx#L47)*
+*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:49](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextContext.tsx#L49)*
 
 ___
 
@@ -1258,7 +1542,7 @@ ___
 
 • **withAlignCenterMeta**: *function* = flow(asBlock, withButton('format_align_center'))
 
-*Defined in [packages/bodiless-richtext/src/meta/index.tsx:35](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/meta/index.tsx#L35)*
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:51](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L51)*
 
 #### Type declaration:
 
@@ -1276,7 +1560,7 @@ ___
 
 • **withAlignJustifyMeta**: *function* = flow(asBlock, withButton('format_align_justify'))
 
-*Defined in [packages/bodiless-richtext/src/meta/index.tsx:36](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/meta/index.tsx#L36)*
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:52](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L52)*
 
 #### Type declaration:
 
@@ -1294,7 +1578,7 @@ ___
 
 • **withAlignLeftMeta**: *function* = flow(asBlock, withButton('format_align_left'))
 
-*Defined in [packages/bodiless-richtext/src/meta/index.tsx:33](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/meta/index.tsx#L33)*
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:49](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L49)*
 
 #### Type declaration:
 
@@ -1312,7 +1596,7 @@ ___
 
 • **withAlignRightMeta**: *function* = flow(asBlock, withButton('format_align_right'))
 
-*Defined in [packages/bodiless-richtext/src/meta/index.tsx:34](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/meta/index.tsx#L34)*
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:50](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L50)*
 
 #### Type declaration:
 
@@ -1326,83 +1610,19 @@ Name | Type |
 
 ___
 
+### `Const` withBoldDeserializer
+
+• **withBoldDeserializer**: *(Anonymous function)* = withHtmlDeserializer(createBoldDeserializer())
+
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:36](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L36)*
+
+___
+
 ### `Const` withBoldMeta
 
-• **withBoldMeta**: *function* = flow(asMark, withKey('b'), withButton('format_bold'))
+• **withBoldMeta**: *function* = flow(withBoldDeserializer, asMark, withKey('mod+b'), withButton('format_bold'))
 
-*Defined in [packages/bodiless-richtext/src/meta/index.tsx:27](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/meta/index.tsx#L27)*
-
-#### Type declaration:
-
-▸ (...`args`: A): *R3*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`...args` | A |
-
-___
-
-### `Const` withHeader1Meta
-
-• **withHeader1Meta**: *function* = flow(asBlock, withKey('1'), withButton('looks_one'))
-
-*Defined in [packages/bodiless-richtext/src/meta/index.tsx:37](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/meta/index.tsx#L37)*
-
-#### Type declaration:
-
-▸ (...`args`: A): *R3*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`...args` | A |
-
-___
-
-### `Const` withHeader2Meta
-
-• **withHeader2Meta**: *function* = flow(asBlock, withKey('2'), withButton('looks_two'))
-
-*Defined in [packages/bodiless-richtext/src/meta/index.tsx:38](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/meta/index.tsx#L38)*
-
-#### Type declaration:
-
-▸ (...`args`: A): *R3*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`...args` | A |
-
-___
-
-### `Const` withHeader3Meta
-
-• **withHeader3Meta**: *function* = flow(asBlock, withKey('3'), withButton('looks_3'))
-
-*Defined in [packages/bodiless-richtext/src/meta/index.tsx:39](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/meta/index.tsx#L39)*
-
-#### Type declaration:
-
-▸ (...`args`: A): *R3*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`...args` | A |
-
-___
-
-### `Const` withImageMeta
-
-• **withImageMeta**: *function* = flow(asVoid, asMark, withId('image'), withButton('image'))
-
-*Defined in [packages/bodiless-richtext/src/meta/index.tsx:40](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/meta/index.tsx#L40)*
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:43](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L43)*
 
 #### Type declaration:
 
@@ -1416,15 +1636,147 @@ Name | Type |
 
 ___
 
-### `Const` withItalicMeta
+### `Const` withEditableDefaultStyles
 
-• **withItalicMeta**: *function* = flow(asMark, withKey('i'), withButton('format_italic'))
+• **withEditableDefaultStyles**: *function* = ifToggledOn(useIsEditableAndEmpty)(
+  addProps({
+    style: {
+      minWidth: '100px',
+    },
+  }),
+)
 
-*Defined in [packages/bodiless-richtext/src/meta/index.tsx:29](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/meta/index.tsx#L29)*
+*Defined in [packages/bodiless-richtext/src/core/Content.tsx:89](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/Content.tsx#L89)*
+
+hoc that can be applied to Editable based component
+adds styles to slate wrapper in order to solve a placeholder problem
+described in https://github.com/johnsonandjohnson/Bodiless-JS/issues/481
 
 #### Type declaration:
 
-▸ (...`args`: A): *R3*
+▸ (`Component`: CT‹any› | string): *FunctionComponent‹any›*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`Component` | CT‹any› &#124; string |
+
+___
+
+### `Const` withHeader1Deserializer
+
+• **withHeader1Deserializer**: *(Anonymous function)* = withHtmlDeserializer(createHeader1Deserializer())
+
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:39](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L39)*
+
+___
+
+### `Const` withHeader1Meta
+
+• **withHeader1Meta**: *function* = flow(withHeader1Deserializer, asBlock, withKey('mod+1'), withButton('looks_one'))
+
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:53](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L53)*
+
+#### Type declaration:
+
+▸ (...`args`: A): *R4*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`...args` | A |
+
+___
+
+### `Const` withHeader2Deserializer
+
+• **withHeader2Deserializer**: *(Anonymous function)* = withHtmlDeserializer(createHeader2Deserializer())
+
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:40](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L40)*
+
+___
+
+### `Const` withHeader2Meta
+
+• **withHeader2Meta**: *function* = flow(withHeader2Deserializer, asBlock, withKey('mod+2'), withButton('looks_two'))
+
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:54](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L54)*
+
+#### Type declaration:
+
+▸ (...`args`: A): *R4*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`...args` | A |
+
+___
+
+### `Const` withHeader3Deserializer
+
+• **withHeader3Deserializer**: *(Anonymous function)* = withHtmlDeserializer(createHeader3Deserializer())
+
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:41](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L41)*
+
+___
+
+### `Const` withHeader3Meta
+
+• **withHeader3Meta**: *function* = flow(withHeader3Deserializer, asBlock, withKey('mod+3'), withButton('looks_3'))
+
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:55](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L55)*
+
+#### Type declaration:
+
+▸ (...`args`: A): *R4*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`...args` | A |
+
+___
+
+### `Const` withImageMeta
+
+• **withImageMeta**: *function* = flow(asVoid, asMark, withId('image'), withButton('image'))
+
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:56](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L56)*
+
+#### Type declaration:
+
+▸ (...`args`: A): *R4*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`...args` | A |
+
+___
+
+### `Const` withItalicDeserializer
+
+• **withItalicDeserializer**: *(Anonymous function)* = withHtmlDeserializer(createItalicDeserializer())
+
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:37](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L37)*
+
+___
+
+### `Const` withItalicMeta
+
+• **withItalicMeta**: *function* = flow(withItalicDeserializer, asMark, withKey('mod+i'), withButton('format_italic'))
+
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:45](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L45)*
+
+#### Type declaration:
+
+▸ (...`args`: A): *R4*
 
 **Parameters:**
 
@@ -1436,9 +1788,9 @@ ___
 
 ### `Const` withLinkMeta
 
-• **withLinkMeta**: *function* = flow(asInline, withKey('k'), withButton('link'))
+• **withLinkMeta**: *function* = flow(asInline, withKey('mod+k'), withButton('link'))
 
-*Defined in [packages/bodiless-richtext/src/meta/index.tsx:30](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/meta/index.tsx#L30)*
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:46](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L46)*
 
 #### Type declaration:
 
@@ -1459,7 +1811,7 @@ ___
   replaceWith(BaseRichTextPreview),
 )
 
-*Defined in [packages/bodiless-richtext/src/RichTextPreview.tsx:47](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextPreview.tsx#L47)*
+*Defined in [packages/bodiless-richtext/src/RichTextPreview.tsx:47](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextPreview.tsx#L47)*
 
 #### Type declaration:
 
@@ -1485,15 +1837,44 @@ Name | Type |
 
 ___
 
-### `Const` withStrikeThroughMeta
+### `Const` withRichtextPlainSerializer
 
-• **withStrikeThroughMeta**: *function* = flow(asMark, withKey('s'), withButton('format_strikethrough'))
+• **withRichtextPlainSerializer**: *function* = flowRight(
+  withNode,
+  withRichtextPlainSerializer$,
+)
 
-*Defined in [packages/bodiless-richtext/src/meta/index.tsx:31](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/meta/index.tsx#L31)*
+*Defined in [packages/bodiless-richtext/src/RichTextPlain.tsx:43](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextPlain.tsx#L43)*
 
 #### Type declaration:
 
-▸ (...`args`: A): *R3*
+▸ (...`args`: any[]): *any*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`...args` | any[] |
+
+___
+
+### `Const` withStrikeDeserializer
+
+• **withStrikeDeserializer**: *(Anonymous function)* = withHtmlDeserializer(createStrikeDeserializer())
+
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:38](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L38)*
+
+___
+
+### `Const` withStrikeThroughMeta
+
+• **withStrikeThroughMeta**: *function* = flow(withStrikeDeserializer, asMark, withKey('mod+s'), withButton('format_strikethrough'))
+
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:47](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L47)*
+
+#### Type declaration:
+
+▸ (...`args`: A): *R4*
 
 **Parameters:**
 
@@ -1505,9 +1886,9 @@ ___
 
 ### `Const` withSuperScriptMeta
 
-• **withSuperScriptMeta**: *function* = flow(asMark, withKey('s'), withButton('format_size'))
+• **withSuperScriptMeta**: *function* = flow(asMark, withKey('mod+s'), withButton('format_size'))
 
-*Defined in [packages/bodiless-richtext/src/meta/index.tsx:28](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/meta/index.tsx#L28)*
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:44](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L44)*
 
 #### Type declaration:
 
@@ -1523,9 +1904,9 @@ ___
 
 ### `Const` withUnderlineMeta
 
-• **withUnderlineMeta**: *function* = flow(asMark, withKey('u'), withButton('format_underlined'))
+• **withUnderlineMeta**: *function* = flow(asMark, withKey('mod+u'), withButton('format_underlined'))
 
-*Defined in [packages/bodiless-richtext/src/meta/index.tsx:32](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/meta/index.tsx#L32)*
+*Defined in [packages/bodiless-richtext/src/meta/index.tsx:48](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/meta/index.tsx#L48)*
 
 #### Type declaration:
 
@@ -1541,69 +1922,19 @@ Name | Type |
 
 ### `Const` BaseRichTextPreview
 
-▸ **BaseRichTextPreview**‹**P**, **D**›(`props`: P & [RichTextProps](globals.md#richtextprops)‹D›): *Element‹›*
+▸ **BaseRichTextPreview**‹**P**›(`props`: P & [RichTextProps](globals.md#richtextprops)): *Element‹›*
 
-*Defined in [packages/bodiless-richtext/src/RichTextPreview.tsx:28](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextPreview.tsx#L28)*
-
-**Type parameters:**
-
-▪ **P**: *object*
-
-▪ **D**: *object*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`props` | P & [RichTextProps](globals.md#richtextprops)‹D› |
-
-**Returns:** *Element‹›*
-
-___
-
-### `Const` BasicRichText
-
-▸ **BasicRichText**‹**P**, **D**›(`props`: P & [RichTextProps](globals.md#richtextprops)‹D›): *Element‹›*
-
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:188](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L188)*
+*Defined in [packages/bodiless-richtext/src/RichTextPreview.tsx:28](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextPreview.tsx#L28)*
 
 **Type parameters:**
 
 ▪ **P**: *object*
 
-▪ **D**: *object*
-
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`props` | P & [RichTextProps](globals.md#richtextprops)‹D› |
-
-**Returns:** *Element‹›*
-
-___
-
-### `Const` CloseBtn
-
-▸ **CloseBtn**(`props`: IntrinsicElements["span"]): *Element‹›*
-
-*Defined in [packages/bodiless-richtext/src/components/TextSelectorButton.tsx:38](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/components/TextSelectorButton.tsx#L38)*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`props` | IntrinsicElements["span"] |
-
-**Returns:** *Element‹›*
-
-___
-
-### `Const` Content
-
-▸ **Content**(): *Element‹›*
-
-*Defined in [packages/bodiless-richtext/src/core/Content.tsx:25](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/core/Content.tsx#L25)*
+`props` | P & [RichTextProps](globals.md#richtextprops) |
 
 **Returns:** *Element‹›*
 
@@ -1613,7 +1944,7 @@ ___
 
 ▸ **EditOnlyHoverMenu$**(`__namedParameters`: object): *Element‹›*
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:180](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L180)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:198](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L198)*
 
 **Parameters:**
 
@@ -1632,7 +1963,7 @@ ___
 
 ▸ **HoverMenu**(`props`: [HoverMenuProps](globals.md#hovermenuprops)): *null | ReactPortal‹›*
 
-*Defined in [packages/bodiless-richtext/src/core/HoverMenu.tsx:72](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/core/HoverMenu.tsx#L72)*
+*Defined in [packages/bodiless-richtext/src/core/HoverMenu.tsx:78](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/HoverMenu.tsx#L78)*
 
 **Parameters:**
 
@@ -1644,11 +1975,11 @@ Name | Type |
 
 ___
 
-### `Const` NodeSelectorButton
+### `Const` NodeSelectorButton$
 
-▸ **NodeSelectorButton**(`props`: [ButtonProps](globals.md#buttonprops)): *Element‹›*
+▸ **NodeSelectorButton$**(`props`: [ButtonProps](globals.md#buttonprops)): *Element‹›*
 
-*Defined in [packages/bodiless-richtext/src/components/TextSelectorButton.tsx:24](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/components/TextSelectorButton.tsx#L24)*
+*Defined in [packages/bodiless-richtext/src/components/TextSelectorButton.tsx:29](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/components/TextSelectorButton.tsx#L29)*
 
 **Parameters:**
 
@@ -1664,7 +1995,7 @@ ___
 
 ▸ **PluginButton**(`props`: object & HTMLProps‹HTMLButtonElement› & object): *Element‹›*
 
-*Defined in [packages/bodiless-richtext/src/components/PluginButton.tsx:31](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/components/PluginButton.tsx#L31)*
+*Defined in [packages/bodiless-richtext/src/components/PluginButton.tsx:31](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/components/PluginButton.tsx#L31)*
 
 **Parameters:**
 
@@ -1678,15 +2009,16 @@ ___
 
 ### `Const` SlateComponentProvider
 
-▸ **SlateComponentProvider**(`update`: Function): *(Anonymous function)*
+▸ **SlateComponentProvider**(`update`: Function, `type`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:57](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L57)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:47](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L47)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `update` | Function |
+`type` | string |
 
 **Returns:** *(Anonymous function)*
 
@@ -1696,7 +2028,7 @@ ___
 
 ▸ **TextSelectorButton**(`__namedParameters`: object): *Element‹›*
 
-*Defined in [packages/bodiless-richtext/src/components/TextSelectorButton.tsx:56](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/components/TextSelectorButton.tsx#L56)*
+*Defined in [packages/bodiless-richtext/src/components/TextSelectorButton.tsx:48](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/components/TextSelectorButton.tsx#L48)*
 
 **Parameters:**
 
@@ -1710,31 +2042,11 @@ Name | Type |
 
 ___
 
-### `Const` addAttributes
-
-▸ **addAttributes**‹**P**›(`Component`: ComponentType‹P›): *(Anonymous function)*
-
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:51](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L51)*
-
-**Type parameters:**
-
-▪ **P**: *object*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`Component` | ComponentType‹P› |
-
-**Returns:** *(Anonymous function)*
-
-___
-
 ### `Const` apply
 
 ▸ **apply**(`design`: Design‹DesignableComponents›): *object*
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:264](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L264)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:317](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L317)*
 
 **Parameters:**
 
@@ -1750,7 +2062,7 @@ ___
 
 ▸ **asSlateCustomComponent**‹**P**›(`Component`: CT‹P›): *SlateCustomComponent*
 
-*Defined in [packages/bodiless-richtext/src/asSlateCustomComponent.tsx:21](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/asSlateCustomComponent.tsx#L21)*
+*Defined in [packages/bodiless-richtext/src/asSlateCustomComponent.tsx:21](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/asSlateCustomComponent.tsx#L21)*
 
 **Type parameters:**
 
@@ -1770,7 +2082,7 @@ ___
 
 ▸ **createBlock**(`blockType`: string, `data`: [DataJSON](globals.md#datajson)): *object*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:25](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L25)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:40](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L40)*
 
 **Parameters:**
 
@@ -1791,7 +2103,7 @@ ___
 
 ▸ **createBlockButton**(`blockType`: string, `icon`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/createBlockButton.ts:25](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/createBlockButton.ts#L25)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/block/createBlockButton.ts:25](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/block/createBlockButton.ts#L25)*
 
 **Parameters:**
 
@@ -1804,11 +2116,151 @@ Name | Type |
 
 ___
 
+### `Const` createBoldDeserializer
+
+▸ **createBoldDeserializer**(): *object*
+
+*Defined in [packages/bodiless-richtext/src/serializers/defaultDeserializers.ts:18](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/defaultDeserializers.ts#L18)*
+
+**Returns:** *object*
+
+* **map**(): *object*
+
+  * **Bold**: *boolean* = true
+
+___
+
+### `Const` createDefaultDeserializers
+
+▸ **createDefaultDeserializers**(): *object*
+
+*Defined in [packages/bodiless-richtext/src/serializers/defaultDeserializers.ts:78](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/defaultDeserializers.ts#L78)*
+
+**Returns:** *object*
+
+* **Bold**(): *object*
+
+  * **map**(): *object*
+
+    * **Bold**: *boolean* = true
+
+* **Header1**(): *object*
+
+* **Header2**(): *object*
+
+* **Header3**(): *object*
+
+* **Italic**(): *object*
+
+  * **map**(): *object*
+
+    * **Italic**: *boolean* = true
+
+* **Link**(): *object*
+
+  * **map**(`element`: [Element](globals.md#element)): *object*
+
+    * **type**: *string* = "Link"
+
+    * ### **data**: *object*
+
+      * **slatenode**: *object*
+
+        * **href**: *null | string* = normalizeHref(element.getAttribute('href'))
+
+* **StrikeThrough**(): *object*
+
+  * **map**(): *object*
+
+    * **StrikeThrough**: *boolean* = true
+
+___
+
+### `Const` createDeserializer
+
+▸ **createDeserializer**(`__namedParameters`: object): *object*
+
+*Defined in [packages/bodiless-richtext/src/serializers/htmlSerializer.ts:117](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/htmlSerializer.ts#L117)*
+
+**Parameters:**
+
+▪ **__namedParameters**: *object*
+
+Name | Type |
+------ | ------ |
+`nodeName` | string |
+`tagName` | [TagName](enums/tagname.md) |
+
+**Returns:** *object*
+
+* **tagName**: *[TagName](enums/tagname.md)*
+
+* **map**(): *object*
+
+  * **type**: *string* = nodeName
+
+* **match**(`element`: [Element](enums/tagname.md#element)): *boolean*
+
+___
+
+### `Const` createElementRenderPlugin
+
+▸ **createElementRenderPlugin**(`__namedParameters`: object): *object*
+
+*Defined in [packages/bodiless-richtext/src/plugin-factory/render/index.tsx:26](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/render/index.tsx#L26)*
+
+**Parameters:**
+
+▪ **__namedParameters**: *object*
+
+Name | Type |
+------ | ------ |
+`Component` | FunctionComponent‹any› &#124; ComponentClass‹any, any› |
+`type` | string |
+
+**Returns:** *object*
+
+* **type**: *string*
+
+* **renderElement**(`__namedParameters`: object): *Element‹›*
+
+___
+
+### `Const` createHeader1Deserializer
+
+▸ **createHeader1Deserializer**(): *object*
+
+*Defined in [packages/bodiless-richtext/src/serializers/defaultDeserializers.ts:57](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/defaultDeserializers.ts#L57)*
+
+**Returns:** *object*
+
+___
+
+### `Const` createHeader2Deserializer
+
+▸ **createHeader2Deserializer**(): *object*
+
+*Defined in [packages/bodiless-richtext/src/serializers/defaultDeserializers.ts:64](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/defaultDeserializers.ts#L64)*
+
+**Returns:** *object*
+
+___
+
+### `Const` createHeader3Deserializer
+
+▸ **createHeader3Deserializer**(): *object*
+
+*Defined in [packages/bodiless-richtext/src/serializers/defaultDeserializers.ts:71](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/defaultDeserializers.ts#L71)*
+
+**Returns:** *object*
+
+___
+
 ### `Const` createInline
 
 ▸ **createInline**(`inlineType`: string, `data`: [DataJSON](globals.md#datajson)): *object*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:24](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L24)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:38](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L38)*
 
 **Parameters:**
 
@@ -1829,7 +2281,7 @@ ___
 
 ▸ **createInlineButton**(`inlineType`: string, `icon`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/createInlineButton.ts:25](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/inline/createInlineButton.ts#L25)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/createInlineButton.ts:25](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/inline/createInlineButton.ts#L25)*
 
 **Parameters:**
 
@@ -1844,29 +2296,63 @@ ___
 
 ### `Const` createIsActive
 
-▸ **createIsActive**(`markType`: string): *(Anonymous function)*
+▸ **createIsActive**(`format`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts:17](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts#L17)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:32](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L32)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`markType` | string |
+`format` | string |
+
+**Returns:** *(Anonymous function)*
+
+▸ **createIsActive**(`format`: string): *(Anonymous function)*
+
+*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts:22](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts#L22)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`format` | string |
+
+**Returns:** *(Anonymous function)*
+
+▸ **createIsActive**(`format`: string): *(Anonymous function)*
+
+*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:34](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L34)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`format` | string |
 
 **Returns:** *(Anonymous function)*
 
 ___
 
-### `Const` createKeyboardPlugin
+### `Const` createItalicDeserializer
 
-▸ **createKeyboardPlugin**‹**P**›(`__namedParameters`: object): *Plugin*
+▸ **createItalicDeserializer**(): *object*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/keyBoardShortcut/index.tsx:23](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/keyBoardShortcut/index.tsx#L23)*
+*Defined in [packages/bodiless-richtext/src/serializers/defaultDeserializers.ts:26](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/defaultDeserializers.ts#L26)*
 
-**Type parameters:**
+**Returns:** *object*
 
-▪ **P**: *object*
+* **map**(): *object*
+
+  * **Italic**: *boolean* = true
+
+___
+
+### `Const` createLeafRenderPlugin
+
+▸ **createLeafRenderPlugin**(`__namedParameters`: object): *object*
+
+*Defined in [packages/bodiless-richtext/src/plugin-factory/render/index.tsx:40](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/render/index.tsx#L40)*
 
 **Parameters:**
 
@@ -1874,10 +2360,42 @@ ___
 
 Name | Type |
 ------ | ------ |
-`key` | string |
-`toggle` | Function |
+`Component` | FunctionComponent‹any› &#124; ComponentClass‹any, any› |
+`type` | string |
 
-**Returns:** *Plugin*
+**Returns:** *object*
+
+* **type**: *string*
+
+* **renderLeaf**(`__namedParameters`: object): *Element‹›*
+
+___
+
+### `Const` createLinkDeserializer
+
+▸ **createLinkDeserializer**(`__namedParameters`: object): *object*
+
+*Defined in [packages/bodiless-richtext/src/serializers/defaultDeserializers.ts:34](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/defaultDeserializers.ts#L34)*
+
+**Parameters:**
+
+▪`Default value`  **__namedParameters**: *object*= { normalizeHref: identity }
+
+Name | Type |
+------ | ------ |
+`normalizeHref` | identity |
+
+**Returns:** *object*
+
+* **map**(`element`: [Element](globals.md#element)): *object*
+
+  * **type**: *string* = "Link"
+
+  * ### **data**: *object*
+
+    * **slatenode**: *object*
+
+      * **href**: *null | string* = normalizeHref(element.getAttribute('href'))
 
 ___
 
@@ -1885,7 +2403,7 @@ ___
 
 ▸ **createMarkButton**(`markType`: string, `icon`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/createMarkButton.ts:25](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/mark/createMarkButton.ts#L25)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/createMarkButton.ts:25](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/mark/createMarkButton.ts#L25)*
 
 **Parameters:**
 
@@ -1898,79 +2416,11 @@ Name | Type |
 
 ___
 
-### `Const` createMarkPlugin
-
-▸ **createMarkPlugin**(`Mark`: ComponentClass‹RenderMarkProps, any› | FunctionComponent‹RenderMarkProps›, `markType`: string, `options`: object): *Plugin*
-
-*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/index.tsx:39](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/mark/index.tsx#L39)*
-
-**Parameters:**
-
-▪ **Mark**: *ComponentClass‹RenderMarkProps, any› | FunctionComponent‹RenderMarkProps›*
-
-▪ **markType**: *string*
-
-▪`Default value`  **options**: *object*= {}
-
-Name | Type |
------- | ------ |
-`keyboardKey?` | undefined &#124; string |
-
-**Returns:** *Plugin*
-
-___
-
-### `Const` createMarkRenderPlugin
-
-▸ **createMarkRenderPlugin**‹**P**›(`__namedParameters`: object): *Plugin*
-
-*Defined in [packages/bodiless-richtext/src/plugin-factory/render/index.tsx:38](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/render/index.tsx#L38)*
-
-**Type parameters:**
-
-▪ **P**: *object*
-
-**Parameters:**
-
-▪ **__namedParameters**: *object*
-
-Name | Type |
------- | ------ |
-`Component` | ComponentClass‹P, any› &#124; FunctionComponent‹P› |
-`type` | string |
-
-**Returns:** *Plugin*
-
-___
-
-### `Const` createNodeRenderPlugin
-
-▸ **createNodeRenderPlugin**‹**P**›(`__namedParameters`: object): *Plugin*
-
-*Defined in [packages/bodiless-richtext/src/plugin-factory/render/index.tsx:22](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/render/index.tsx#L22)*
-
-**Type parameters:**
-
-▪ **P**: *object*
-
-**Parameters:**
-
-▪ **__namedParameters**: *object*
-
-Name | Type |
------- | ------ |
-`Component` | ComponentClass‹P, any› &#124; FunctionComponent‹P› |
-`type` | string |
-
-**Returns:** *Plugin*
-
-___
-
 ### `Const` createPluginButton
 
 ▸ **createPluginButton**(`props`: [Opts](globals.md#opts)): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx:67](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx#L67)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx:59](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx#L59)*
 
 **Parameters:**
 
@@ -1982,11 +2432,25 @@ Name | Type |
 
 ___
 
+### `Const` createStrikeDeserializer
+
+▸ **createStrikeDeserializer**(): *object*
+
+*Defined in [packages/bodiless-richtext/src/serializers/defaultDeserializers.ts:49](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/defaultDeserializers.ts#L49)*
+
+**Returns:** *object*
+
+* **map**(): *object*
+
+  * **StrikeThrough**: *boolean* = true
+
+___
+
 ### `Const` createToggleBlock
 
 ▸ **createToggleBlock**(`blockType`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:96](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L96)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:77](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L77)*
 
 **Parameters:**
 
@@ -2002,7 +2466,7 @@ ___
 
 ▸ **createToggleInline**(`inlineType`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:114](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L114)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:137](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L137)*
 
 **Parameters:**
 
@@ -2016,15 +2480,15 @@ ___
 
 ### `Const` createToggleMark
 
-▸ **createToggleMark**(`markType`: string): *(Anonymous function)*
+▸ **createToggleMark**(`format`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts:24](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts#L24)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts#L27)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`markType` | string |
+`format` | string |
 
 **Returns:** *(Anonymous function)*
 
@@ -2034,7 +2498,7 @@ ___
 
 ▸ **customizer**(`objValue`: any, `srcValue`: any): *undefined | any[]*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:21](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L21)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:22](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L22)*
 
 **Parameters:**
 
@@ -2047,20 +2511,56 @@ Name | Type |
 
 ___
 
-### `Const` getBlock
+### `Const` deserializeElement
 
-▸ **getBlock**(`value`: Value, `blockType`: string): *Block‹›*
+▸ **deserializeElement**(`__namedParameters`: object): *null | string | Element | (Editor | Element | Text)[]*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:22](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L22)*
+*Defined in [packages/bodiless-richtext/src/serializers/htmlSerializer.ts:52](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/htmlSerializer.ts#L52)*
+
+**Parameters:**
+
+▪ **__namedParameters**: *object*
+
+Name | Type |
+------ | ------ |
+`deserializers` | object[] |
+`element` | HTMLElement |
+
+**Returns:** *null | string | Element | (Editor | Element | Text)[]*
+
+___
+
+### `Const` deserializeHtml
+
+▸ **deserializeHtml**(`html`: string, `deserializers`: [Deserializers](globals.md#deserializers), `domParser?`: DOMParser): *(Editor | Element | Text)[]*
+
+*Defined in [packages/bodiless-richtext/src/serializers/htmlSerializer.ts:97](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/htmlSerializer.ts#L97)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`value` | Value |
-`blockType` | string |
+`html` | string |
+`deserializers` | [Deserializers](globals.md#deserializers) |
+`domParser?` | DOMParser |
 
-**Returns:** *Block‹›*
+**Returns:** *(Editor | Element | Text)[]*
+
+___
+
+### `Const` getDeserializers
+
+▸ **getDeserializers**(`components`: [RichTextComponents](globals.md#richtextcomponents)): *object*
+
+*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:259](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L259)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`components` | [RichTextComponents](globals.md#richtextcomponents) |
+
+**Returns:** *object*
 
 ___
 
@@ -2068,7 +2568,7 @@ ___
 
 ▸ **getGlobalButton**(`Component`: [RichTextComponentWithGlobalButton](globals.md#richtextcomponentwithglobalbutton)): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:191](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L191)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:166](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L166)*
 
 **Parameters:**
 
@@ -2084,7 +2584,7 @@ ___
 
 ▸ **getGlobalButtons**(`components`: [RichTextComponents](globals.md#richtextcomponents)): *undefined | (Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:285](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L285)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:247](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L247)*
 
 **Parameters:**
 
@@ -2100,7 +2600,7 @@ ___
 
 ▸ **getHoverButton**‹**P**›(`Component`: [HoverButton](globals.md#hoverbutton)): *ComponentClass‹object, any› | FunctionComponent‹object›*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:171](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L171)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:146](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L146)*
 
 **Type parameters:**
 
@@ -2120,7 +2620,7 @@ ___
 
 ▸ **getHoverButtons**(`Components`: [RichTextComponents](globals.md#richtextcomponents)): *(ComponentClass‹object, any› | FunctionComponent‹object›)[]*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:183](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L183)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:158](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L158)*
 
 **Parameters:**
 
@@ -2132,28 +2632,11 @@ Name | Type |
 
 ___
 
-### `Const` getInline
+### `Const` getInlineButtons
 
-▸ **getInline**(`value`: Value, `inlineType`: string): *Inline‹›*
+▸ **getInlineButtons**(`components`: [RichTextComponents](globals.md#richtextcomponents)): *(FunctionComponent‹any› & object | ComponentClass‹any, any› & object)[]*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:21](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L21)*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`value` | Value |
-`inlineType` | string |
-
-**Returns:** *Inline‹›*
-
-___
-
-### `Const` getPlugins
-
-▸ **getPlugins**(`components`: [RichTextComponents](globals.md#richtextcomponents)): *Plugin[]*
-
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:154](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L154)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:231](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L231)*
 
 **Parameters:**
 
@@ -2161,15 +2644,31 @@ Name | Type |
 ------ | ------ |
 `components` | [RichTextComponents](globals.md#richtextcomponents) |
 
-**Returns:** *Plugin[]*
+**Returns:** *(FunctionComponent‹any› & object | ComponentClass‹any, any› & object)[]*
+
+___
+
+### `Const` getPlugins
+
+▸ **getPlugins**(`components`: [RichTextComponents](globals.md#richtextcomponents)): *(object | object)[]*
+
+*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:133](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L133)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`components` | [RichTextComponents](globals.md#richtextcomponents) |
+
+**Returns:** *(object | object)[]*
 
 ___
 
 ### `Const` getRenderPlugin
 
-▸ **getRenderPlugin**‹**P**›(`Component`: [RenderPluginComponent](globals.md#renderplugincomponent)): *Plugin*
+▸ **getRenderPlugin**‹**P**›(`Component`: [RenderPluginComponent](globals.md#renderplugincomponent)): *object | object*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:99](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L99)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:98](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L98)*
 
 **Type parameters:**
 
@@ -2181,27 +2680,17 @@ Name | Type |
 ------ | ------ |
 `Component` | [RenderPluginComponent](globals.md#renderplugincomponent) |
 
-**Returns:** *Plugin*
+**Returns:** *object | object*
 
 ___
 
-### `Const` getSchema
+### `Const` getReturnFocusItem
 
-▸ **getSchema**‹**D**›(`components`: [RichTextComponents](globals.md#richtextcomponents)): *object*
+▸ **getReturnFocusItem**(): *null | string*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:210](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L210)*
+*Defined in [packages/bodiless-richtext/src/withReturnFocusBack.tsx:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withReturnFocusBack.tsx#L27)*
 
-**Type parameters:**
-
-▪ **D**: *object*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`components` | [RichTextComponents](globals.md#richtextcomponents) |
-
-**Returns:** *object*
+**Returns:** *null | string*
 
 ___
 
@@ -2209,7 +2698,7 @@ ___
 
 ▸ **getSelectorButton**‹**P**›(`Component`: [RichTextComponent](globals.md#richtextcomponent)): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:240](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L240)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:196](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L196)*
 
 **Type parameters:**
 
@@ -2229,7 +2718,7 @@ ___
 
 ▸ **getSelectorButtons**(`components`: [RichTextComponents](globals.md#richtextcomponents)): *(Anonymous function)[]*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:276](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L276)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:238](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L238)*
 
 **Parameters:**
 
@@ -2241,31 +2730,11 @@ Name | Type |
 
 ___
 
-### `Const` getShortcutPlugin
-
-▸ **getShortcutPlugin**‹**P**›(`Component`: [RichTextComponent](globals.md#richtextcomponent)): *Plugin*
-
-*Defined in [packages/bodiless-richtext/src/RichTextItemGetters.tsx:131](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemGetters.tsx#L131)*
-
-**Type parameters:**
-
-▪ **P**: *object*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`Component` | [RichTextComponent](globals.md#richtextcomponent) |
-
-**Returns:** *Plugin*
-
-___
-
 ### `Const` getUI
 
 ▸ **getUI**(`ui`: [UI](globals.md#ui) & [PreviewUI](globals.md#previewui)): *object*
 
-*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:42](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextContext.tsx#L42)*
+*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:44](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextContext.tsx#L44)*
 
 **Parameters:**
 
@@ -2277,7 +2746,7 @@ Name | Type | Default |
 
 ▸ **getUI**(`ui`: [UI](globals.md#ui)): *object*
 
-*Defined in [packages/bodiless-richtext/src/core/HoverMenu.tsx:32](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/core/HoverMenu.tsx#L32)*
+*Defined in [packages/bodiless-richtext/src/core/HoverMenu.tsx:34](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/HoverMenu.tsx#L34)*
 
 **Parameters:**
 
@@ -2291,16 +2760,16 @@ ___
 
 ### `Const` hasBlock
 
-▸ **hasBlock**(`value`: Value, `blockType`: string): *boolean*
+▸ **hasBlock**(`format`: string, `editor`: Editor): *boolean*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:19](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L19)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:32](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L32)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`value` | Value |
-`blockType` | string |
+`format` | string |
+`editor` | Editor |
 
 **Returns:** *boolean*
 
@@ -2308,16 +2777,16 @@ ___
 
 ### `Const` hasInline
 
-▸ **hasInline**(`value`: Value, `inlineType`: string): *boolean*
+▸ **hasInline**(`format`: string, `editor`: Editor): *boolean*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:18](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L18)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:36](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L36)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`value` | Value |
-`inlineType` | string |
+`format` | string |
+`editor` | Editor |
 
 **Returns:** *boolean*
 
@@ -2325,44 +2794,16 @@ ___
 
 ### `Const` hasMark
 
-▸ **hasMark**(`value`: Value, `markType`: string): *boolean*
+▸ **hasMark**(`format`: string, `editor`: Editor): *boolean*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts:36](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts#L36)*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`value` | Value |
-`markType` | string |
-
-**Returns:** *boolean*
-
-___
-
-### `Const` hasMultiBlocks
-
-▸ **hasMultiBlocks**(`value`: Value): *boolean*
-
-*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:28](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L28)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts:45](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts#L45)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`value` | Value |
-
-**Returns:** *boolean*
-
-▸ **hasMultiBlocks**(`value`: Value): *boolean*
-
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:29](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L29)*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`value` | Value |
+`format` | string |
+`editor` | Editor |
 
 **Returns:** *boolean*
 
@@ -2370,9 +2811,9 @@ ___
 
 ### `Const` insertBlock
 
-▸ **insertBlock**(`__namedParameters`: object): *Editor‹›*
+▸ **insertBlock**(`__namedParameters`: object): *void*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:106](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L106)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:54](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L54)*
 
 **Parameters:**
 
@@ -2381,18 +2822,17 @@ ___
 Name | Type |
 ------ | ------ |
 `blockType` | string |
-`editor` | Editor‹› |
-`value` | Value‹› |
+`editor` | Editor |
 
-**Returns:** *Editor‹›*
+**Returns:** *void*
 
 ___
 
 ### `Const` insertInline
 
-▸ **insertInline**(`__namedParameters`: object): *Editor‹›*
+▸ **insertInline**(`__namedParameters`: object): *void*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:81](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L81)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:107](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L107)*
 
 **Parameters:**
 
@@ -2400,113 +2840,165 @@ ___
 
 Name | Type |
 ------ | ------ |
-`editor` | Editor‹› |
+`editor` | Editor |
 `inlineType` | string |
-`value` | Value‹› |
 
-**Returns:** *Editor‹›*
+**Returns:** *void*
 
 ___
 
-### `Const` isMod
+### `Const` isBlockActive
 
-▸ **isMod**(`event`: KeyboardEvent): *boolean*
+▸ **isBlockActive**(`editor`: Editor, `format`: string): *boolean*
 
-*Defined in [packages/bodiless-richtext/src/utils/keyboardEvent.ts:15](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/utils/keyboardEvent.ts#L15)*
-
-Copyright © 2019 Johnson & Johnson
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:18](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L18)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`event` | KeyboardEvent |
+`editor` | Editor |
+`format` | string |
 
 **Returns:** *boolean*
 
 ___
 
-### `Const` markKeyboardShortcut
+### `Const` isInlineActive
 
-▸ **markKeyboardShortcut**(`key`: string, `toggleMark`: function, `event`: KeyboardEvent, `editor`: Editor‹›, `next`: function): *any*
+▸ **isInlineActive**(`editor`: Editor, `format`: string): *boolean*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/markKeyboardShortcut.ts:27](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/mark/markKeyboardShortcut.ts#L27)*
-
-**Parameters:**
-
-▪ **key**: *string*
-
-▪ **toggleMark**: *function*
-
-▸ (`options`: [ToggleProps](globals.md#toggleprops)): *Editor*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`options` | [ToggleProps](globals.md#toggleprops) |
-
-▪ **event**: *KeyboardEvent*
-
-▪ **editor**: *Editor‹›*
-
-▪ **next**: *function*
-
-▸ (): *any*
-
-**Returns:** *any*
-
-___
-
-### `Const` removeBlock
-
-▸ **removeBlock**(`editor`: Editor, `blockType`: string): *Editor‹›*
-
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:30](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L30)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:18](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L18)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `editor` | Editor |
-`blockType` | string |
+`format` | string |
 
-**Returns:** *Editor‹›*
+**Returns:** *boolean*
 
 ___
 
-### `Const` removeBlockByNode
+### `Const` isMarkActive
 
-▸ **removeBlockByNode**(`editor`: Editor, `node`: Block): *Editor‹›*
+▸ **isMarkActive**(`editor`: Editor, `format`: string): *boolean*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:34](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L34)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts:17](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts#L17)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `editor` | Editor |
-`node` | Block |
+`format` | string |
 
-**Returns:** *Editor‹›*
+**Returns:** *boolean*
+
+___
+
+### `Const` migrateElementNode
+
+▸ **migrateElementNode**(`node`: [Node](globals.md#node)): *object*
+
+*Defined in [packages/bodiless-richtext/src/withDataMigrator.tsx:73](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withDataMigrator.tsx#L73)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`node` | [Node](globals.md#node) |
+
+**Returns:** *object*
+
+* **children**? : *any*
+
+* **data**? : *undefined | object*
+
+* **leaves**? : *[Node](globals.md#node)[]*
+
+* **marks**? : *[Node](globals.md#node)[]*
+
+* **nodes**? : *[Node](globals.md#node)[]*
+
+* **object**? : *undefined | string*
+
+* **text**? : *undefined | string*
+
+* **type**: *string*
+
+___
+
+### `Const` migrateNode
+
+▸ **migrateNode**(`oldNode`: [Node](globals.md#node)): *object*
+
+*Defined in [packages/bodiless-richtext/src/withDataMigrator.tsx:84](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withDataMigrator.tsx#L84)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`oldNode` | [Node](globals.md#node) |
+
+**Returns:** *object*
+
+* **children**? : *any*
+
+* **data**? : *undefined | object*
+
+* **leaves**? : *[Node](globals.md#node)[]*
+
+* **marks**? : *[Node](globals.md#node)[]*
+
+* **nodes**? : *[Node](globals.md#node)[]*
+
+* **object**? : *undefined | string*
+
+* **text**? : *undefined | string*
+
+* **type**: *string*
+
+___
+
+### `Const` migrateTextNode
+
+▸ **migrateTextNode**(`oldNode`: [Node](globals.md#node)): *object*
+
+*Defined in [packages/bodiless-richtext/src/withDataMigrator.tsx:59](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withDataMigrator.tsx#L59)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`oldNode` | [Node](globals.md#node) |
+
+**Returns:** *object*
+
+* **children**? : *any*
+
+* **data**? : *undefined | object*
+
+* **leaves**? : *[Node](globals.md#node)[]*
+
+* **marks**? : *[Node](globals.md#node)[]*
+
+* **nodes**? : *[Node](globals.md#node)[]*
+
+* **object**? : *undefined | string*
+
+* **text**? : *undefined | string*
+
+* **type**: *string*
 
 ___
 
 ### `Const` removeInline
 
-▸ **removeInline**(`editor`: Editor, `inlineType`: string): *Editor‹›*
+▸ **removeInline**(`editor`: Editor, `inlineType`: string): *void*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:29](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L29)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:43](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L43)*
 
 **Parameters:**
 
@@ -2515,22 +3007,89 @@ Name | Type |
 `editor` | Editor |
 `inlineType` | string |
 
-**Returns:** *Editor‹›*
+**Returns:** *void*
 
 ___
 
-### `Const` removeInlineByNode
+### `Const` removeLeaves
 
-▸ **removeInlineByNode**(`editor`: Editor, `node`: Inline): *void*
+▸ **removeLeaves**(`nodes`: [Node](globals.md#node)[]): *object[]*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:32](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L32)*
+*Defined in [packages/bodiless-richtext/src/withDataMigrator.tsx:32](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withDataMigrator.tsx#L32)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`editor` | Editor |
-`node` | Inline |
+`nodes` | [Node](globals.md#node)[] |
+
+**Returns:** *object[]*
+
+___
+
+### `Const` renderElement
+
+▸ **renderElement**(`props`: RenderElementProps): *Element‹›*
+
+*Defined in [packages/bodiless-richtext/src/core/Content.tsx:62](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/Content.tsx#L62)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`props` | RenderElementProps |
+
+**Returns:** *Element‹›*
+
+___
+
+### `Const` renderLeaf
+
+▸ **renderLeaf**(`props`: RenderLeafProps): *Element‹›*
+
+*Defined in [packages/bodiless-richtext/src/core/Content.tsx:47](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/Content.tsx#L47)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`props` | RenderLeafProps |
+
+**Returns:** *Element‹›*
+
+___
+
+### `Const` serialize
+
+▸ **serialize**(`nodes`: [Node](globals.md#node)[]): *string*
+
+*Defined in [packages/bodiless-richtext/src/RichTextPlain.tsx:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextPlain.tsx#L27)*
+
+**`todo`** make delimiter configurable similar to how it was done in slate-plain-serializer
+
+**`see`** https://github.com/ianstormtaylor/slate/blob/slate%400.44.13/packages/slate-plain-serializer/src/index.js#L19
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`nodes` | [Node](globals.md#node)[] |
+
+**Returns:** *string*
+
+___
+
+### `Const` setReturnFocusItem
+
+▸ **setReturnFocusItem**(`item`: [ReturnFocusItem](globals.md#returnfocusitem)): *void*
+
+*Defined in [packages/bodiless-richtext/src/withReturnFocusBack.tsx:26](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withReturnFocusBack.tsx#L26)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`item` | [ReturnFocusItem](globals.md#returnfocusitem) |
 
 **Returns:** *void*
 
@@ -2538,9 +3097,9 @@ ___
 
 ### `Const` toggleBlock
 
-▸ **toggleBlock**(`__namedParameters`: object): *Editor‹›*
+▸ **toggleBlock**(`__namedParameters`: object): *void*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:83](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L83)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:66](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L66)*
 
 **Parameters:**
 
@@ -2549,10 +3108,9 @@ ___
 Name | Type |
 ------ | ------ |
 `blockType` | string |
-`editor` | Editor‹› |
-`value` | Value‹› |
+`editor` | Editor |
 
-**Returns:** *Editor‹›*
+**Returns:** *void*
 
 ___
 
@@ -2560,7 +3118,7 @@ ___
 
 ▸ **toggleInline**(`__namedParameters`: object): *void*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:103](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L103)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:121](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L121)*
 
 **Parameters:**
 
@@ -2568,9 +3126,8 @@ ___
 
 Name | Type |
 ------ | ------ |
-`editor` | Editor‹› |
+`editor` | Editor |
 `inlineType` | string |
-`value` | Value‹› |
 
 **Returns:** *void*
 
@@ -2578,9 +3135,9 @@ ___
 
 ### `Const` toggleMark
 
-▸ **toggleMark**(`__namedParameters`: object): *Editor‹›*
+▸ **toggleMark**(`__namedParameters`: object): *void*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts:32](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts#L32)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts:41](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/mark/markUtils.ts#L41)*
 
 **Parameters:**
 
@@ -2588,38 +3145,18 @@ ___
 
 Name | Type |
 ------ | ------ |
-`editor` | Editor‹› |
+`editor` | Editor |
 `markType` | string |
 
-**Returns:** *Editor‹›*
-
-___
-
-### `Const` updateBlock
-
-▸ **updateBlock**(`__namedParameters`: object): *Editor‹›*
-
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:64](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L64)*
-
-**Parameters:**
-
-▪ **__namedParameters**: *object*
-
-Name | Type |
------- | ------ |
-`componentData` | object |
-`editor` | Editor‹› |
-`node` | Block‹› |
-
-**Returns:** *Editor‹›*
+**Returns:** *void*
 
 ___
 
 ### `Const` updateInline
 
-▸ **updateInline**(`__namedParameters`: object): *Editor‹›*
+▸ **updateInline**(`__namedParameters`: object): *void*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:61](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L61)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:88](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L88)*
 
 **Parameters:**
 
@@ -2627,19 +3164,20 @@ ___
 
 Name | Type |
 ------ | ------ |
-`componentData` | object |
-`editor` | Editor‹› |
-`node` | Inline‹› |
+`at` | Range |
+`data` | object |
+`editor` | Editor |
+`type` | string |
 
-**Returns:** *Editor‹›*
+**Returns:** *void*
 
 ___
 
 ###  updateMenu
 
-▸ **updateMenu**(`menu`: HTMLElement | null, `editorContext`: [EditorContext](globals.md#editorcontext)): *void*
+▸ **updateMenu**(`menu`: HTMLElement | null, `editor`: ReactEditor): *void*
 
-*Defined in [packages/bodiless-richtext/src/core/HoverMenu.tsx:40](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/core/HoverMenu.tsx#L40)*
+*Defined in [packages/bodiless-richtext/src/core/HoverMenu.tsx:42](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/HoverMenu.tsx#L42)*
 
 Update the menu's absolute position.
 
@@ -2648,9 +3186,85 @@ Update the menu's absolute position.
 Name | Type |
 ------ | ------ |
 `menu` | HTMLElement &#124; null |
-`editorContext` | [EditorContext](globals.md#editorcontext) |
+`editor` | ReactEditor |
 
 **Returns:** *void*
+
+___
+
+### `Const` useInitialValue
+
+▸ **useInitialValue**(`initialValue?`: [Value](globals.md#value)): *(Editor | Element | Text)[]*
+
+*Defined in [packages/bodiless-richtext/src/useInitialValue.ts:22](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/useInitialValue.ts#L22)*
+
+hooks that can be used to get initialValue for the editor
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`initialValue?` | [Value](globals.md#value) |
+
+**Returns:** *(Editor | Element | Text)[]*
+
+___
+
+### `Const` useIsEditableAndEmpty
+
+▸ **useIsEditableAndEmpty**(): *boolean*
+
+*Defined in [packages/bodiless-richtext/src/core/Content.tsx:82](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/Content.tsx#L82)*
+
+**Returns:** *boolean*
+
+___
+
+### `Const` useIsEmptyEditor
+
+▸ **useIsEmptyEditor**(): *boolean*
+
+*Defined in [packages/bodiless-richtext/src/core/Content.tsx:77](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/Content.tsx#L77)*
+
+**Returns:** *boolean*
+
+___
+
+### `Const` useKeyBoardShortcut
+
+▸ **useKeyBoardShortcut**(`Component`: [RichTextComponent](globals.md#richtextcomponent)): *object*
+
+*Defined in [packages/bodiless-richtext/src/useKeyBoardShortcuts.ts:25](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/useKeyBoardShortcuts.ts#L25)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`Component` | [RichTextComponent](globals.md#richtextcomponent) |
+
+**Returns:** *object*
+
+* **key**: *string* = keyboardKey
+
+* **toggle**: *(Anonymous function) | (Anonymous function) | (Anonymous function)*
+
+___
+
+### `Const` useKeyBoardShortcuts
+
+▸ **useKeyBoardShortcuts**(`props`: [UseKeyBoardShortcuts](globals.md#usekeyboardshortcuts)): *object*
+
+*Defined in [packages/bodiless-richtext/src/useKeyBoardShortcuts.ts:50](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/useKeyBoardShortcuts.ts#L50)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`props` | [UseKeyBoardShortcuts](globals.md#usekeyboardshortcuts) |
+
+**Returns:** *object*
+
+* **onKeyDown**(`event`: KeyboardEvent): *void*
 
 ___
 
@@ -2658,13 +3272,13 @@ ___
 
 ▸ **useMenuOptions**(): *object[]*
 
-*Defined in [packages/bodiless-richtext/src/Float.tsx:41](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/Float.tsx#L41)*
+*Defined in [packages/bodiless-richtext/src/Float.tsx:41](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Float.tsx#L41)*
 
 **Returns:** *object[]*
 
 ▸ **useMenuOptions**(`props`: [UseMenuOptionsProps](globals.md#usemenuoptionsprops)): *any*
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:145](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L145)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:167](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L167)*
 
 **Parameters:**
 
@@ -2680,7 +3294,7 @@ ___
 
 ▸ **useNodeStateHandlers**(`__namedParameters`: object): *object*
 
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:108](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L108)*
+*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:83](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L83)*
 
 **Parameters:**
 
@@ -2688,16 +3302,16 @@ ___
 
 Name | Type |
 ------ | ------ |
-`initialValue` | ValueJSON |
-`onChange` | undefined &#124; Function |
+`initialValue` | (Editor &#124; Element &#124; Text)[] |
+`onChange` | undefined &#124; function |
 
 **Returns:** *object*
 
 * **onChange**(): *function*
 
-  * (`change`: [Change](globals.md#change)): *void*
+  * (`value`: [Value](globals.md#value)): *void*
 
-* **value**: *Value‹›* = useValue({
+* **value**: *(Editor | Element | Text)[]* = useValue({
       initialValue,
       key,
     })
@@ -2708,7 +3322,7 @@ ___
 
 ▸ **useOnChange**(`__namedParameters`: object): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:62](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L62)*
+*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:48](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L48)*
 
 **Parameters:**
 
@@ -2716,10 +3330,38 @@ ___
 
 Name | Type |
 ------ | ------ |
-`key` | string |
-`onChange` | undefined &#124; Function |
+`initialValue` | (Editor &#124; Element &#124; Text)[] |
+`onChange` | undefined &#124; function |
 
 **Returns:** *(Anonymous function)*
+
+___
+
+### `Const` useReturnFocusBackOnEffect
+
+▸ **useReturnFocusBackOnEffect**(`itemId`: string): *object*
+
+*Defined in [packages/bodiless-richtext/src/withReturnFocusBack.tsx:81](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withReturnFocusBack.tsx#L81)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`itemId` | string |
+
+**Returns:** *object*
+
+* **returnFocusBack**(): *void*
+
+___
+
+### `Const` useRichtextPlainSerializer
+
+▸ **useRichtextPlainSerializer**(): *string*
+
+*Defined in [packages/bodiless-richtext/src/RichTextPlain.tsx:29](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextPlain.tsx#L29)*
+
+**Returns:** *string*
 
 ___
 
@@ -2727,19 +3369,9 @@ ___
 
 ▸ **useSlateContext**(): *null | object*
 
-*Defined in [packages/bodiless-richtext/src/core/SlateEditorContext.ts:20](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/core/SlateEditorContext.ts#L20)*
+*Defined in [packages/bodiless-richtext/src/core/SlateEditorContext.ts:20](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/SlateEditorContext.ts#L20)*
 
 **Returns:** *null | object*
-
-___
-
-###  useStateContainer
-
-▸ **useStateContainer**(): *[MobxStateContainer](classes/mobxstatecontainer.md)‹›*
-
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:50](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L50)*
-
-**Returns:** *[MobxStateContainer](classes/mobxstatecontainer.md)‹›*
 
 ___
 
@@ -2747,7 +3379,7 @@ ___
 
 ▸ **useUI**(): *object*
 
-*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:48](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextContext.tsx#L48)*
+*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:50](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextContext.tsx#L50)*
 
 **Returns:** *object*
 
@@ -2761,24 +3393,17 @@ ___
 
 * **Overlay**? : *ComponentType‹HTMLProps‹HTMLDivElement›› | string*
 
+* **TextSelectorWrapper**? : *ComponentType‹HTMLProps‹HTMLDivElement›› | string*
+
 ___
 
 ### `Const` useValue
 
-▸ **useValue**(`__namedParameters`: object): *any*
+▸ **useValue**(): *(Editor | Element | Text)[]*
 
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:87](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L87)*
+*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:78](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L78)*
 
-**Parameters:**
-
-▪ **__namedParameters**: *object*
-
-Name | Type |
------- | ------ |
-`initialValue` | ValueJSON |
-`key` | string |
-
-**Returns:** *any*
+**Returns:** *(Editor | Element | Text)[]*
 
 ___
 
@@ -2786,7 +3411,7 @@ ___
 
 ▸ **withButton**(`icon`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:103](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L103)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:104](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L104)*
 
 withButton will return a function that will add a hover or global button depending on the type.
 
@@ -2804,7 +3429,7 @@ ___
 
 ▸ **withComponent**‹**P**, **Q**›(`Component`: ComponentType‹P›): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:41](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L41)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:42](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L42)*
 
 With Component returns a function that will add the provided Componet to a RichTextItem.
 
@@ -2824,11 +3449,27 @@ Name | Type |
 
 ___
 
+### `Const` withDataMigrator
+
+▸ **withDataMigrator**(`Component`: any): *(Anonymous function)*
+
+*Defined in [packages/bodiless-richtext/src/withDataMigrator.tsx:91](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withDataMigrator.tsx#L91)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`Component` | any |
+
+**Returns:** *(Anonymous function)*
+
+___
+
 ### `Const` withDefaults
 
 ▸ **withDefaults**(`components`: DesignableComponents): *object*
 
-*Defined in [packages/bodiless-richtext/src/withDefaults.ts:27](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/withDefaults.ts#L27)*
+*Defined in [packages/bodiless-richtext/src/withDefaults.ts:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withDefaults.ts#L27)*
 
 ensure the componets have a type (we default to mark) as well as ensuring there is an id
 
@@ -2844,11 +3485,27 @@ Name | Type | Description |
 
 ___
 
+### `Const` withEditorSettings
+
+▸ **withEditorSettings**(`components`: [RichTextComponents](globals.md#richtextcomponents)): *(Anonymous function)*
+
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:206](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L206)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`components` | [RichTextComponents](globals.md#richtextcomponents) |
+
+**Returns:** *(Anonymous function)*
+
+___
+
 ### `Const` withFloatWrapper
 
 ▸ **withFloatWrapper**‹**P**›(`Component`: ComponentType‹P›): *FunctionComponent‹P›*
 
-*Defined in [packages/bodiless-richtext/src/Float.tsx:30](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/Float.tsx#L30)*
+*Defined in [packages/bodiless-richtext/src/Float.tsx:30](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/Float.tsx#L30)*
 
 **Type parameters:**
 
@@ -2868,7 +3525,7 @@ ___
 
 ▸ **withGlobalButton**(`icon`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:91](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L91)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:92](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L92)*
 
 withGlobalButton will return a function that will add a GlobalButton to a RichTextItem.
 
@@ -2886,7 +3543,7 @@ ___
 
 ▸ **withHoverButton**(`icon`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:96](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L96)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:97](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L97)*
 
 withHoverButton will return a function that will add a HoverButton to a RichTextItem.
 
@@ -2900,11 +3557,45 @@ Name | Type |
 
 ___
 
+### `Const` withHtmlDeserializer
+
+▸ **withHtmlDeserializer**(`deserializer`: [Deserializer](globals.md#deserializer)): *(Anonymous function)*
+
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:109](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L109)*
+
+adds html deserializer to a given RichTextItem based component
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`deserializer` | [Deserializer](globals.md#deserializer) |
+
+**Returns:** *(Anonymous function)*
+
+___
+
+### `Const` withHtmlPaste
+
+▸ **withHtmlPaste**(`components`: [RichTextComponents](globals.md#richtextcomponents)): *(Anonymous function)*
+
+*Defined in [packages/bodiless-richtext/src/withHtmlPaste.tsx:21](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withHtmlPaste.tsx#L21)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`components` | [RichTextComponents](globals.md#richtextcomponents) |
+
+**Returns:** *(Anonymous function)*
+
+___
+
 ### `Const` withId
 
 ▸ **withId**(`id`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:84](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L84)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:85](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L85)*
 
 withId will return a function that will add a Id to a RichTextItem.
 
@@ -2922,7 +3613,7 @@ ___
 
 ▸ **withKey**(`key`: string): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:77](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L77)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:78](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L78)*
 
 withKey will return a function that will add a keyboardKey to a RichTextItem.
 
@@ -2940,7 +3631,7 @@ ___
 
 ▸ **withMeta**(`meta`: Object): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:34](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L34)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:35](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L35)*
 
 withMeta creates an HOC that will add meta data to a React Component
 
@@ -2956,17 +3647,17 @@ ___
 
 ### `Const` withNodeStateHandlers
 
-▸ **withNodeStateHandlers**(`Editor`: React.FC‹[SlateEditorProps](interfaces/slateeditorprops.md)›): *FunctionComponent‹object›*
+▸ **withNodeStateHandlers**(`Component`: ComponentType‹[RichTextProps](globals.md#richtextprops)›): *FunctionComponent‹object & object›*
 
-*Defined in [packages/bodiless-richtext/src/withNodeStateHandlers.tsx:37](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/withNodeStateHandlers.tsx#L37)*
+*Defined in [packages/bodiless-richtext/src/withNodeStateHandlers.tsx:21](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withNodeStateHandlers.tsx#L21)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`Editor` | React.FC‹[SlateEditorProps](interfaces/slateeditorprops.md)› |
+`Component` | ComponentType‹[RichTextProps](globals.md#richtextprops)› |
 
-**Returns:** *FunctionComponent‹object›*
+**Returns:** *FunctionComponent‹object & object›*
 
 ___
 
@@ -2974,7 +3665,7 @@ ___
 
 ▸ **withOutMeta**‹**P**›(`Component`: [CTWM](globals.md#ctwm)): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:29](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L29)*
+*Defined in [packages/bodiless-richtext/src/RichTextItemSetters.tsx:30](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextItemSetters.tsx#L30)*
 
 **Type parameters:**
 
@@ -2990,11 +3681,59 @@ Name | Type |
 
 ___
 
+### `Const` withReturnFocusBackOnClick
+
+▸ **withReturnFocusBackOnClick**(`itemId`: string): *(Anonymous function)*
+
+*Defined in [packages/bodiless-richtext/src/withReturnFocusBack.tsx:53](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withReturnFocusBack.tsx#L53)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`itemId` | string |
+
+**Returns:** *(Anonymous function)*
+
+___
+
+### `Const` withReturnFocusBackOnEffect
+
+▸ **withReturnFocusBackOnEffect**(`itemId`: string): *(Anonymous function)*
+
+*Defined in [packages/bodiless-richtext/src/withReturnFocusBack.tsx:33](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/withReturnFocusBack.tsx#L33)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`itemId` | string |
+
+**Returns:** *(Anonymous function)*
+
+___
+
+### `Const` withRichtextPlainSerializer$
+
+▸ **withRichtextPlainSerializer$**(`Component`: ComponentType): *WithRichtextPlainSerializer*
+
+*Defined in [packages/bodiless-richtext/src/RichTextPlain.tsx:35](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextPlain.tsx#L35)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`Component` | ComponentType |
+
+**Returns:** *WithRichtextPlainSerializer*
+
+___
+
 ### `Const` withSlateActivator
 
 ▸ **withSlateActivator**‹**P**›(`Component`: ComponentType‹P›): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:104](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L104)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:125](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L125)*
 
 **Type parameters:**
 
@@ -3014,7 +3753,7 @@ ___
 
 ▸ **withSlateEditor**‹**P**›(`Component`: ComponentType‹P›): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/core/SlateEditor.tsx:31](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/core/SlateEditor.tsx#L31)*
+*Defined in [packages/bodiless-richtext/src/core/SlateEditor.tsx:36](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/SlateEditor.tsx#L36)*
 
 **Type parameters:**
 
@@ -3034,7 +3773,7 @@ ___
 
 ▸ **withSlateSchema**‹**P**›(`Component`: ComponentType‹P›): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:84](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L84)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:105](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L105)*
 
 **Type parameters:**
 
@@ -3054,7 +3793,7 @@ ___
 
 ▸ **withToggle**‹**P**›(`opts`: [Opts](globals.md#opts)): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx:41](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx#L41)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx:34](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx#L34)*
 
 **Type parameters:**
 
@@ -3070,21 +3809,19 @@ Name | Type |
 
 ___
 
-### `Const` wrapBlock
+### `Const` withWrapper
 
-▸ **wrapBlock**(`editor`: Editor, `blockType`: string, `data`: [DataJSON](globals.md#datajson)): *void*
+▸ **withWrapper**(`WrapperComponent`: ComponentType‹any›): *(Anonymous function)*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts:39](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/block/blockUtils.ts#L39)*
+*Defined in [packages/bodiless-richtext/src/core/Content.tsx:39](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/Content.tsx#L39)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`editor` | Editor |
-`blockType` | string |
-`data` | [DataJSON](globals.md#datajson) |
+`WrapperComponent` | ComponentType‹any› |
 
-**Returns:** *void*
+**Returns:** *(Anonymous function)*
 
 ___
 
@@ -3092,7 +3829,7 @@ ___
 
 ▸ **wrapInline**(`editor`: Editor, `inlineType`: string, `data`: [DataJSON](globals.md#datajson)): *void*
 
-*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:37](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L37)*
+*Defined in [packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts:48](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/plugin-factory/inline/inlineUtils.ts#L48)*
 
 **Parameters:**
 
@@ -3104,73 +3841,81 @@ Name | Type |
 
 **Returns:** *void*
 
-## Object literals
-
-### `Const` defaultButton
-
-### ▪ **defaultButton**: *object*
-
-*Defined in [packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx:24](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx#L24)*
-
-▪ **defaultProps**: *object*
-
-*Defined in [packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx:25](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/plugin-factory/createPluginButton.tsx#L25)*
-
-* **name**: *string* = "Button"
-
-* **type**: *string* = "button"
-
 ___
+
+### `Const` wrapTopLevelInlineNodesInParagraphs
+
+▸ **wrapTopLevelInlineNodesInParagraphs**(`fragment`: SlateNode[]): *(Editor | Element | Text)[]*
+
+*Defined in [packages/bodiless-richtext/src/serializers/wrapTopLevelInlineNodesInParagraphs.ts:22](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/serializers/wrapTopLevelInlineNodesInParagraphs.ts#L22)*
+
+leveraging https://github.com/ianstormtaylor/slate/issues/3457#issuecomment-577395255
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`fragment` | SlateNode[] |
+
+**Returns:** *(Editor | Element | Text)[]*
+
+## Object literals
 
 ### `Const` defaultUI
 
 ### ▪ **defaultUI**: *object*
 
-*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:20](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextContext.tsx#L20)*
+*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:20](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextContext.tsx#L20)*
 
-*Defined in [packages/bodiless-richtext/src/core/HoverMenu.tsx:24](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/core/HoverMenu.tsx#L24)*
+*Defined in [packages/bodiless-richtext/src/core/HoverMenu.tsx:26](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/HoverMenu.tsx#L26)*
 
 ###  Button
 
 • **Button**: *string* = "button"
 
-*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:23](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextContext.tsx#L23)*
+*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:23](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextContext.tsx#L23)*
 
 ###  ClickableWrapper
 
 • **ClickableWrapper**: *string* = "button"
 
-*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:26](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextContext.tsx#L26)*
+*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:26](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextContext.tsx#L26)*
 
 ###  CloseButton
 
 • **CloseButton**: *string* = "span"
 
-*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:25](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextContext.tsx#L25)*
+*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:25](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextContext.tsx#L25)*
 
 ###  Menu
 
 • **Menu**: *string* = "div"
 
-*Defined in [packages/bodiless-richtext/src/core/HoverMenu.tsx:25](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/core/HoverMenu.tsx#L25)*
+*Defined in [packages/bodiless-richtext/src/core/HoverMenu.tsx:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/core/HoverMenu.tsx#L27)*
 
 ###  Overlay
 
 • **Overlay**: *string* = "div"
 
-*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:24](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextContext.tsx#L24)*
+*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:24](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextContext.tsx#L24)*
 
 ###  PreviewWrapper
 
 • **PreviewWrapper**: *string* = "div"
 
-*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:27](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextContext.tsx#L27)*
+*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextContext.tsx#L27)*
+
+###  TextSelectorWrapper
+
+• **TextSelectorWrapper**: *string* = "div"
+
+*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:28](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextContext.tsx#L28)*
 
 ###  HoverMenu
 
 ▸ **HoverMenu**(): *Element‹›*
 
-*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:22](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichTextContext.tsx#L22)*
+*Defined in [packages/bodiless-richtext/src/RichTextContext.tsx:22](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichTextContext.tsx#L22)*
 
 **Returns:** *Element‹›*
 
@@ -3180,13 +3925,13 @@ ___
 
 ### ▪ **lastDesign**: *object*
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:248](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L248)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:301](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L301)*
 
 ###  AlignCenter
 
 • **AlignCenter**: *function* = withAlignCenterMeta
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:256](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L256)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:309](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L309)*
 
 #### Type declaration:
 
@@ -3202,7 +3947,7 @@ Name | Type |
 
 • **AlignJustify**: *function* = withAlignJustifyMeta
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:257](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L257)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:310](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L310)*
 
 #### Type declaration:
 
@@ -3218,7 +3963,7 @@ Name | Type |
 
 • **AlignLeft**: *function* = withAlignLeftMeta
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:254](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L254)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:307](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L307)*
 
 #### Type declaration:
 
@@ -3234,7 +3979,7 @@ Name | Type |
 
 • **AlignRight**: *function* = withAlignRightMeta
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:255](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L255)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:308](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L308)*
 
 #### Type declaration:
 
@@ -3250,11 +3995,11 @@ Name | Type |
 
 • **Bold**: *function* = withBoldMeta
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:250](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L250)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:303](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L303)*
 
 #### Type declaration:
 
-▸ (...`args`: A): *R3*
+▸ (...`args`: A): *R4*
 
 **Parameters:**
 
@@ -3266,11 +4011,11 @@ Name | Type |
 
 • **H1**: *function* = withHeader1Meta
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:258](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L258)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:311](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L311)*
 
 #### Type declaration:
 
-▸ (...`args`: A): *R3*
+▸ (...`args`: A): *R4*
 
 **Parameters:**
 
@@ -3282,11 +4027,11 @@ Name | Type |
 
 • **H2**: *function* = withHeader2Meta
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:259](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L259)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:312](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L312)*
 
 #### Type declaration:
 
-▸ (...`args`: A): *R3*
+▸ (...`args`: A): *R4*
 
 **Parameters:**
 
@@ -3298,11 +4043,11 @@ Name | Type |
 
 • **H3**: *function* = withHeader3Meta
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:260](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L260)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:313](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L313)*
 
 #### Type declaration:
 
-▸ (...`args`: A): *R3*
+▸ (...`args`: A): *R4*
 
 **Parameters:**
 
@@ -3314,11 +4059,11 @@ Name | Type |
 
 • **Italic**: *function* = withItalicMeta
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:251](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L251)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:304](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L304)*
 
 #### Type declaration:
 
-▸ (...`args`: A): *R3*
+▸ (...`args`: A): *R4*
 
 **Parameters:**
 
@@ -3330,7 +4075,7 @@ Name | Type |
 
 • **Link**: *function* = withLinkMeta
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:253](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L253)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:306](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L306)*
 
 #### Type declaration:
 
@@ -3346,7 +4091,7 @@ Name | Type |
 
 • **SuperScript**: *function* = withSuperScriptMeta
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:249](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L249)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:302](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L302)*
 
 #### Type declaration:
 
@@ -3362,7 +4107,7 @@ Name | Type |
 
 • **Underline**: *function* = withUnderlineMeta
 
-*Defined in [packages/bodiless-richtext/src/RichText.tsx:252](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/RichText.tsx#L252)*
+*Defined in [packages/bodiless-richtext/src/RichText.tsx:305](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-richtext/src/RichText.tsx#L305)*
 
 #### Type declaration:
 
@@ -3373,29 +4118,3 @@ Name | Type |
 Name | Type |
 ------ | ------ |
 `...args` | A |
-
-___
-
-### `Const` preserveAll
-
-### ▪ **preserveAll**: *object*
-
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:54](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L54)*
-
-###  preserveData
-
-• **preserveData**: *boolean* = true
-
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:56](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L56)*
-
-###  preserveDecorations
-
-• **preserveDecorations**: *boolean* = true
-
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:57](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L57)*
-
-###  preserveSelection
-
-• **preserveSelection**: *boolean* = true
-
-*Defined in [packages/bodiless-richtext/src/useNodeStateHandlers.ts:55](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-richtext/src/useNodeStateHandlers.ts#L55)*

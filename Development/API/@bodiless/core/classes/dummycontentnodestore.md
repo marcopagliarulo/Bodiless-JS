@@ -26,7 +26,7 @@
 
 \+ **new DummyContentNodeStore**(`initialData`: any): *[DummyContentNodeStore](dummycontentnodestore.md)*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:23](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L23)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:24](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L24)*
 
 **Parameters:**
 
@@ -42,7 +42,7 @@ Name | Type |
 
 • **data**: *object*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:19](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L19)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:20](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L20)*
 
 #### Type declaration:
 
@@ -52,7 +52,7 @@ Name | Type |
 
 ▸ **setData**(`newData`: any): *void*
 
-*Defined in [packages/bodiless-core/src/ContentNode.ts:21](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/ContentNode.ts#L21)*
+*Defined in [packages/bodiless-core/src/ContentNode.ts:22](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/ContentNode.ts#L22)*
 
 **Parameters:**
 

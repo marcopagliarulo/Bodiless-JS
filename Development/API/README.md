@@ -8,4 +8,5 @@
 * [@bodiless/layouts](/Development/API/@bodiless/layouts/globals)
 * [@bodiless/organisms](/Development/API/@bodiless/organisms/globals)
 * [@bodiless/richtext](/Development/API/@bodiless/richtext/globals)
+* [@bodiless/search](/Development/API/@bodiless/search/globals)
 * [@bodiless/ui](/Development/API/@bodiless/ui/globals)

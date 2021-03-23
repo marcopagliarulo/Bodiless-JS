@@ -15,6 +15,7 @@
 * [getMenuOptions](defineslocaleditcontext.md#optional-getmenuoptions)
 * [id](defineslocaleditcontext.md#id)
 * [name](defineslocaleditcontext.md#optional-name)
+* [type](defineslocaleditcontext.md#optional-type)
 
 ## Properties
 
@@ -22,7 +23,7 @@
 
 • **getMenuOptions**? : *undefined | function*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:51](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L51)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:52](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L52)*
 
 ___
 
@@ -30,7 +31,7 @@ ___
 
 • **id**: *string*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:49](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L49)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:49](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L49)*
 
 ___
 
@@ -38,4 +39,12 @@ ___
 
 • **name**? : *undefined | string*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:50](https://github.com/johnsonandjohnson/Bodiless-JS/blob/cd1458f/packages/bodiless-core/src/PageEditContext/types.ts#L50)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:50](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L50)*
+
+___
+
+### `Optional` type
+
+• **type**? : *undefined | string*
+
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:51](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L51)*
