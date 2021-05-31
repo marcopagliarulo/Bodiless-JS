@@ -18,8 +18,9 @@ const defaultSSIConfPath = 'ssi/ssi_conf.json';
 
 const getSSIEntities = ssiConfPath => {
   const confPath = ssiConfPath || defaultSSIConfPath;
+  return {};
   try {
-    return JSON.parse(fs.readFileSync(confPath));
+    // return JSON.parse(fs.readFileSync(confPath));
   } catch (error) {
     // we need to log the error
     return {};

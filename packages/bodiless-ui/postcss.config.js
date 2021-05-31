@@ -15,6 +15,6 @@
 module.exports = {
   plugins: [
     // eslint-disable-next-line
-    require('tailwindcss')('bodiless.tailwind.config.js'),
+    require('tailwindcss')(require('path').resolve(__dirname, 'bodiless.tailwind.config.js')),
   ],
 };
