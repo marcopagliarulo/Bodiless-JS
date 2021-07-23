@@ -16,7 +16,7 @@
 
 • **Full**: = 1
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/ItemList.tsx:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/ItemList.tsx#L27)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/ItemList.tsx:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-layouts/src/ComponentSelector/ItemList.tsx#L27)*
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 • **Half**: = 2
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/ItemList.tsx:28](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/ItemList.tsx#L28)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/ItemList.tsx:28](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-layouts/src/ComponentSelector/ItemList.tsx#L28)*
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 • **Quarter**: = 4
 
-*Defined in [packages/bodiless-layouts/src/ComponentSelector/ItemList.tsx:29](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-layouts/src/ComponentSelector/ItemList.tsx#L29)*
+*Defined in [packages/bodiless-layouts/src/ComponentSelector/ItemList.tsx:29](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-layouts/src/ComponentSelector/ItemList.tsx#L29)*

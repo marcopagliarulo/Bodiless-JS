@@ -21,7 +21,7 @@
 
 • **isPositionToggled**: *boolean*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:36](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L36)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:36](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-core/src/PageEditContext/types.ts#L36)*
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **togglePosition**: *function*
 
-*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:37](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-core/src/PageEditContext/types.ts#L37)*
+*Defined in [packages/bodiless-core/src/PageEditContext/types.ts:37](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-core/src/PageEditContext/types.ts#L37)*
 
 #### Type declaration:
 

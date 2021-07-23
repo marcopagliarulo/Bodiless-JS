@@ -6,13 +6,14 @@
 
 ### Type aliases
 
-* [HOC](globals.md#hoc)
+* [UI](globals.md#ui)
 
 ### Variables
 
 * [Image](globals.md#const-image)
 * [Input](globals.md#const-input)
 * [MasterWrapper](globals.md#const-masterwrapper)
+* [UPLOAD_STATUS_MAX_FILENAME_LENGTH](globals.md#const-upload_status_max_filename_length)
 * [Wrapper](globals.md#const-wrapper)
 
 ### Functions
@@ -24,6 +25,8 @@
 * [UploadTimeout](globals.md#const-uploadtimeout)
 * [Uploading](globals.md#const-uploading)
 * [asBodilessImage](globals.md#const-asbodilessimage)
+* [asBodilessLink](globals.md#const-asbodilesslink)
+* [truncateFileName](globals.md#const-truncatefilename)
 * [withForwardedRef](globals.md#const-withforwardedref)
 * [withForwardedRefEnd](globals.md#const-withforwardedrefend)
 * [withForwardedRefStart](globals.md#const-withforwardedrefstart)
@@ -31,33 +34,27 @@
 
 ### Object literals
 
-* [imagePickerUI](globals.md#const-imagepickerui)
+* [fileUploadUI](globals.md#const-fileuploadui)
 
 ## Type aliases
 
-###  HOC
+###  UI
 
-Ƭ **HOC**: *function*
+Ƭ **UI**: *object*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:46](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L46)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:128](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L128)*
 
 #### Type declaration:
 
-▸ (`Component`: ComponentType‹any›): *ComponentType‹any›*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`Component` | ComponentType‹any› |
+* \[ **key**: *string*\]: object
 
 ## Variables
 
 ### `Const` Image
 
-• **Image**: *ComponentClass‹HTMLProps‹HTMLImageElement› & object & object, any› & object | FunctionComponent‹HTMLProps‹HTMLImageElement› & object & object› & object* = asBodilessImage()(Img)
+• **Image**: *ComponentClass‹object & object, any› & object | FunctionComponent‹object & object› & object* = asBodilessImage()(Img)
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:105](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L105)*
+*Defined in [packages/bodiless-components-ui/src/Image.tsx:30](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/Image.tsx#L30)*
 
 ___
 
@@ -65,15 +62,23 @@ ___
 
 • **Input**: *any* = withForwardedRef()('input')
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:67](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L67)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:64](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L64)*
 
 ___
 
 ### `Const` MasterWrapper
 
-• **MasterWrapper**: *FunctionComponent‹HTMLProps‹HTMLElement› & object & object›* = addClasses('bl-container')(Section)
+• **MasterWrapper**: *ComponentClass‹object & object, any› & object | FunctionComponent‹object & object› & object* = addClasses('bl-container')(Section)
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:56](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L56)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:53](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L53)*
+
+___
+
+### `Const` UPLOAD_STATUS_MAX_FILENAME_LENGTH
+
+• **UPLOAD_STATUS_MAX_FILENAME_LENGTH**: *30* = 30
+
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:96](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L96)*
 
 ___
 
@@ -88,7 +93,7 @@ ___
   ),
 )('div')
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:58](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L58)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:55](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L55)*
 
 ## Functions
 
@@ -96,7 +101,7 @@ ___
 
 ▸ **DragRejected**(): *Element‹›*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:75](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L75)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:72](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L72)*
 
 **Returns:** *Element‹›*
 
@@ -106,7 +111,7 @@ ___
 
 ▸ **UploadArea**(): *Element‹›*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:69](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L69)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:66](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L66)*
 
 **Returns:** *Element‹›*
 
@@ -116,7 +121,7 @@ ___
 
 ▸ **UploadFinished**(): *Element‹›*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:82](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L82)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:79](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L79)*
 
 **Returns:** *Element‹›*
 
@@ -126,7 +131,7 @@ ___
 
 ▸ **UploadStatus**(`__namedParameters`: object): *Element‹›*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:83](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L83)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:98](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L98)*
 
 **Parameters:**
 
@@ -134,7 +139,8 @@ ___
 
 Name | Type |
 ------ | ------ |
-`statusText` | string |
+`selectedFile` | undefined &#124; string |
+`status` | FileUploadStatus |
 
 **Returns:** *Element‹›*
 
@@ -144,7 +150,7 @@ ___
 
 ▸ **UploadTimeout**(): *Element‹›*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:78](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L78)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:75](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L75)*
 
 **Returns:** *Element‹›*
 
@@ -154,7 +160,7 @@ ___
 
 ▸ **Uploading**(): *Element‹›*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:81](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L81)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:78](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L78)*
 
 **Returns:** *Element‹›*
 
@@ -164,7 +170,7 @@ ___
 
 ▸ **asBodilessImage**(`nodeKey`: undefined | string | object, `defaultData`: undefined | object, `useOverrides`: undefined | function): *function*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:99](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L99)*
+*Defined in [packages/bodiless-components-ui/src/Image.tsx:24](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/Image.tsx#L24)*
 
 **Parameters:**
 
@@ -186,17 +192,60 @@ Name | Type |
 
 ___
 
-### `Const` withForwardedRef
+### `Const` asBodilessLink
 
-▸ **withForwardedRef**(...`hocs`: [HOC](globals.md#hoc)[]): *function*
+▸ **asBodilessLink**(`nodeKey`: undefined | string | object, `defaultData`: undefined | object, `useOverrides`: undefined | function): *function*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:50](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L50)*
+*Defined in [packages/bodiless-components-ui/src/Link.tsx:28](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/Link.tsx#L28)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`...hocs` | [HOC](globals.md#hoc)[] |
+`nodeKey` | undefined &#124; string &#124; object |
+`defaultData` | undefined &#124; object |
+`useOverrides` | undefined &#124; function |
+
+**Returns:** *function*
+
+▸ (...`args`: any[]): *any*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`...args` | any[] |
+
+___
+
+### `Const` truncateFileName
+
+▸ **truncateFileName**(`file`: string, `length`: number): *string*
+
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:83](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L83)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`file` | string |
+`length` | number |
+
+**Returns:** *string*
+
+___
+
+### `Const` withForwardedRef
+
+▸ **withForwardedRef**(...`hocs`: HOC[]): *function*
+
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:47](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L47)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`...hocs` | HOC[] |
 
 **Returns:** *function*
 
@@ -214,7 +263,7 @@ ___
 
 ▸ **withForwardedRefEnd**(`Component`: ComponentType‹any›): *WithForwardedRefEnd*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:38](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L38)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:37](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L37)*
 
 **Parameters:**
 
@@ -230,7 +279,7 @@ ___
 
 ▸ **withForwardedRefStart**(`Component`: ComponentType‹any›): *ForwardRefExoticComponent‹RefAttributes‹unknown››*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:30](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L30)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:29](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L29)*
 
 **Parameters:**
 
@@ -244,84 +293,84 @@ ___
 
 ### `Const` withUI
 
-▸ **withUI**(`ui`: TImagePickerUI): *function*
+▸ **withUI**‹**P**›(`ui`: [UI](globals.md#ui)): *(Anonymous function)*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:97](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L97)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:129](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L129)*
 
-**Parameters:**
+**Type parameters:**
 
-Name | Type |
------- | ------ |
-`ui` | TImagePickerUI |
-
-**Returns:** *function*
-
-▸ (`Component`: ComponentType‹any›): *ComponentType‹any›*
+▪ **P**: *[UI](globals.md#ui)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`Component` | ComponentType‹any› |
+`ui` | [UI](globals.md#ui) |
+
+**Returns:** *(Anonymous function)*
 
 ## Object literals
 
-### `Const` imagePickerUI
+### `Const` fileUploadUI
 
-### ▪ **imagePickerUI**: *object*
+### ▪ **fileUploadUI**: *object*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:85](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L85)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:116](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L116)*
+
+*Defined in [packages/bodiless-components-ui/src/Link.tsx:23](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/Link.tsx#L23)*
 
 ###  DragRejected
 
 • **DragRejected**: *[DragRejected](globals.md#const-dragrejected)*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:91](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L91)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:122](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L122)*
 
 ###  Input
 
 • **Input**: *any*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:88](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L88)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:119](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L119)*
 
 ###  MasterWrapper
 
-• **MasterWrapper**: *FunctionComponent‹HTMLProps‹HTMLElement› & object & object›*
+• **MasterWrapper**: *ComponentClass‹object & object, any› & object | FunctionComponent‹object & object› & object* = addClasses('bl-max-w-xl-grid-1')(baseFileUploadUi.MasterWrapper)
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:86](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L86)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:117](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L117)*
+
+*Defined in [packages/bodiless-components-ui/src/Link.tsx:25](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/Link.tsx#L25)*
 
 ###  UploadArea
 
 • **UploadArea**: *[UploadArea](globals.md#const-uploadarea)*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:89](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L89)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:120](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L120)*
 
 ###  UploadFinished
 
 • **UploadFinished**: *[UploadFinished](globals.md#const-uploadfinished)*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:93](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L93)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:124](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L124)*
 
 ###  UploadStatus
 
 • **UploadStatus**: *[UploadStatus](globals.md#const-uploadstatus)*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:94](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L94)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:125](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L125)*
 
 ###  UploadTimeout
 
 • **UploadTimeout**: *[UploadTimeout](globals.md#const-uploadtimeout)*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:92](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L92)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:123](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L123)*
 
 ###  Uploading
 
 • **Uploading**: *[Uploading](globals.md#const-uploading)*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:90](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L90)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:121](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L121)*
 
 ###  Wrapper
 
 • **Wrapper**: *any*
 
-*Defined in [packages/bodiless-components-ui/src/Image.tsx:87](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/bodiless-components-ui/src/Image.tsx#L87)*
+*Defined in [packages/bodiless-components-ui/src/FileUpload.tsx:118](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/bodiless-components-ui/src/FileUpload.tsx#L118)*

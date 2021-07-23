@@ -17,7 +17,7 @@
 
 • **Clean**:
 
-*Defined in [packages/gatsby-theme-bodiless/src/dist/GatsbyMobxStoreItem.ts:24](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/gatsby-theme-bodiless/src/dist/GatsbyMobxStoreItem.ts#L24)*
+*Defined in [packages/gatsby-theme-bodiless/src/dist/GatsbyMobxStoreItem.ts:24](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/gatsby-theme-bodiless/src/dist/GatsbyMobxStoreItem.ts#L24)*
 
 ___
 
@@ -25,7 +25,7 @@ ___
 
 • **Flushing**:
 
-*Defined in [packages/gatsby-theme-bodiless/src/dist/GatsbyMobxStoreItem.ts:25](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/gatsby-theme-bodiless/src/dist/GatsbyMobxStoreItem.ts#L25)*
+*Defined in [packages/gatsby-theme-bodiless/src/dist/GatsbyMobxStoreItem.ts:25](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/gatsby-theme-bodiless/src/dist/GatsbyMobxStoreItem.ts#L25)*
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **Locked**:
 
-*Defined in [packages/gatsby-theme-bodiless/src/dist/GatsbyMobxStoreItem.ts:26](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/gatsby-theme-bodiless/src/dist/GatsbyMobxStoreItem.ts#L26)*
+*Defined in [packages/gatsby-theme-bodiless/src/dist/GatsbyMobxStoreItem.ts:26](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/gatsby-theme-bodiless/src/dist/GatsbyMobxStoreItem.ts#L26)*
 
 ___
 
@@ -41,4 +41,4 @@ ___
 
 • **Queued**:
 
-*Defined in [packages/gatsby-theme-bodiless/src/dist/GatsbyMobxStoreItem.ts:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/284d8de7/packages/gatsby-theme-bodiless/src/dist/GatsbyMobxStoreItem.ts#L27)*
+*Defined in [packages/gatsby-theme-bodiless/src/dist/GatsbyMobxStoreItem.ts:27](https://github.com/marcopagliarulo/Bodiless-JS/blob/5073a9f1/packages/gatsby-theme-bodiless/src/dist/GatsbyMobxStoreItem.ts#L27)*
