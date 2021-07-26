@@ -1,5 +1,5 @@
 {
   "src": "/content-library/balcony.png",
   "alt": "A balcony with arches",
-  "preset": "fluid_withWebp"
+  "preset": "fluid_withWebp_tracedSVG"
 }

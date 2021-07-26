@@ -1,0 +1,6 @@
+1. gatsby core upgrade
+2. gatsby plugins upgrade
+3. webpack 5 breaking change  - BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+3.1. require('crypto').createHash changed to md5-hex. Todo: revisit this fix.
+4. ESLint is not a constructor. ToDo: Upgrade to eslint 7.
+5. runtime error process undefined. Did polyfill per https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#process-is-not-defined

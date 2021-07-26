@@ -1,6 +1,6 @@
 {
   "src": "./jandjwebsite.jpg",
   "alt": "Johnson & Johnson's website",
-  "preset": "fluid_withWebp",
+  "preset": "fluid_withWebp_tracedSVG",
   "_nodeKey": "jandjwebsite"
 }

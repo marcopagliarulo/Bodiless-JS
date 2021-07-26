@@ -1,5 +1,5 @@
 {
   "src": "/images/bodiless_logo.png",
   "alt": "Return to Home",
-  "preset": "fluid_withWebp"
+  "preset": "fluid_withWebp_tracedSVG"
 }

@@ -65,7 +65,7 @@ export const asEditableImagePlain: AsBodilessImage = (
 /**
  * util function to build a hoc for rendering a responsive image.
  */
-const asEditableImage = withGatsbyImagePreset(GatsbyImagePresets.FluidWithWebp)(asBaseEditableImagePlain);
+const asEditableImage = withGatsbyImagePreset(GatsbyImagePresets.FluidWithWebpTracedSVG)(asBaseEditableImagePlain);
 
 // Allows to set default content for image based component.
 const asContentfulImage = withDefaultImageContent(asEditableImage);

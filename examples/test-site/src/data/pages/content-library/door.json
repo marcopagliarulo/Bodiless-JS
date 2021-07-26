@@ -1,4 +1,4 @@
 {
   "src": "/content-library/door.png",
-  "preset": "fluid_withWebp"
+  "preset": "fluid_withWebp_tracedSVG"
 }

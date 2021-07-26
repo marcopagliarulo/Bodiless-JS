@@ -1,6 +1,6 @@
 {
   "src": "./contentful2.png",
   "alt": "contentful 2",
-  "preset": "fluid_withWebp",
+  "preset": "fluid_withWebp_tracedSVG",
   "_nodeKey": "contentful2"
 }
