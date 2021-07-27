@@ -61,11 +61,11 @@ const asDesignableGatsbyImage = (Component: CT<any>) => {
     if (gatsbyImg !== undefined) {
       // @todo: convert bodiless GatsbyImageData into ImageDataLike
       // so getImage could use to return a IGatsbyImageData
-      let failback;
+      let fallback;
       if (gatsbyImg.fluid) {
-        failback = gatsbyImg.fluid.tracedSVG || gatsbyImg.fluid.base64 || '';
+        fallback = gatsbyImg.fluid.tracedSVG || gatsbyImg.fluid.base64 || '';
       } else {
-        failback = '';
+        fallback = '';
       }
       const imageData: any = {
         layout: 'fullWidth',
@@ -84,8 +84,8 @@ const asDesignableGatsbyImage = (Component: CT<any>) => {
         },
         placeholder: {
           // @todo: using placeholder to render the blurup and SVG preview effect.
-          // failback: gatsbyImg.fluid.base64,
-          failback,
+          // fallback: gatsbyImg.fluid.base64,
+          fallback,
         },
       };
 
