@@ -32,6 +32,7 @@ import {
   SortableChildProps,
 } from './types';
 import { ComponentDisplayModeProvider, ComponentDisplayMode } from './ComponentDisplayMode';
+import { withFlowContainerScope } from './Scope';
 
 const ChildNodeProvider = withNode<PropsWithChildren<{}>, any>(React.Fragment);
 
@@ -114,6 +115,7 @@ const asEditFlowContainer = flowRight(
     }),
   ),
   observer,
+  withFlowContainerScope,
 );
 
 // Wrap the EditFlowContainer in a wthActivateContext so we can activate new items

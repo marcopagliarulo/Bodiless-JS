@@ -56,6 +56,7 @@
   "devDependencies": {
     "@types/common-tags": "^1.8.0",
     "@types/rc-tooltip": "^3.7.1",
-    "@types/uuid": "^3.4.4"
+    "@types/uuid": "^3.4.4",
+    "@types/debug": "^4.1.7"
   }
 }

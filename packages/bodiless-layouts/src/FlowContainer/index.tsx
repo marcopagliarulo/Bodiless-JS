@@ -40,7 +40,9 @@ const FlowContainerDesignable = flow(
   withDesign({
     Wrapper: addClasses('flex flex-wrap'),
   }),
-)(FlowContainerBasic);
+)(
+  FlowContainerBasic
+);
 
 const withMandatoryCategories = (categories: string[]) => addProps({
   mandatoryCategories: categories,
