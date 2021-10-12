@@ -1,5 +1,6 @@
 {
   "name": "@bodiless/carousel",
+  "sideEffects": false,
   "version": "0.2.10",
   "description": "Provides responsive and aria compliant carousel.",
   "author": "Andrei Beliayeu <abeliaye@its.jnj.com>",

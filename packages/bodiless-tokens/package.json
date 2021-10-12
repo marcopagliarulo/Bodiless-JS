@@ -1,5 +1,6 @@
 {
   "name": "@bodiless/tokens",
+  "sideEffects": false,
   "version": "0.2.10",
   "description": "Utilities for browsing and organizing tokens.",
   "author": "Chris Oden <coden@its.jnj.com>",

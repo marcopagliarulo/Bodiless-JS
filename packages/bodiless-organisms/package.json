@@ -1,5 +1,6 @@
 {
   "name": "@bodiless/organisms",
+  "sideEffects": false,
   "version": "0.2.10",
   "description": "Basic components to build out sites.",
   "author": "Ivan Rudiuk <IRudiuk@its.jnj.com>",

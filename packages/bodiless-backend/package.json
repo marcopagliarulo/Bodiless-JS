@@ -1,5 +1,6 @@
 {
   "name": "@bodiless/backend",
+  "sideEffects": false,
   "version": "0.2.10",
   "description": "",
   "main": "",

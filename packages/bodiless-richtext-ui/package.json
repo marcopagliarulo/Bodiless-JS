@@ -1,5 +1,6 @@
 {
   "name": "@bodiless/richtext-ui",
+  "sideEffects": false,
   "version": "0.2.10",
   "description": "Default UI for Bodiless richtext components",
   "author": "Ivan Rudiuk <IRudiuk@its.jnj.com>",

@@ -1,5 +1,6 @@
 {
   "name": "@bodiless/bv",
+  "sideEffects": false,
   "version": "0.2.10",
   "description": "Provides bazaarvoice components.",
   "author": "Andrei Beliayeu <abeliaye@its.jnj.com>",

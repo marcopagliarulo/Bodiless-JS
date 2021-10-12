@@ -1,5 +1,6 @@
 {
   "name": "@bodiless/layouts",
+  "sideEffects": false,
   "version": "0.2.10",
   "description": "Layout managers for BodilessJS.",
   "author": "Erik Summerfield <esummer3@its.jnj.com>",

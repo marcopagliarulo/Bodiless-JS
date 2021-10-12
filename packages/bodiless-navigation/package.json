@@ -1,5 +1,6 @@
 {
   "name": "@bodiless/navigation",
+  "sideEffects": false,
   "version": "0.2.10",
   "description": "BodilessJs Navigation Components",
   "author": "Ivan Rudiuk <IRudiuk@its.jnj.com>",

@@ -1,5 +1,6 @@
 {
   "name": "@bodiless/components",
+  "sideEffects": false,
   "version": "0.2.10",
   "description": "Reusable compoments",
   "author": "Heidi Vanyo <hvanyo@its.jnj.com>",

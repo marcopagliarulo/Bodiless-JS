@@ -1,5 +1,6 @@
 {
   "name": "@bodiless/ui",
+  "sideEffects": false,
   "version": "0.2.10",
   "description": "Common default UI elements for BodilessJS",
   "author": "Ivan Rudiuk <IRudiuk@its.jnj.com>",

@@ -1,5 +1,6 @@
 {
   "name": "@bodiless/search",
+  "sideEffects": false,
   "version": "0.2.10",
   "description": "Provide static site search option for Bodiless project.",
   "author": "Dewen Li <dli94@its.jnj.com>",

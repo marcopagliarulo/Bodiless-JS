@@ -1,5 +1,6 @@
 {
   "name": "@bodiless/card",
+  "sideEffects": false,
   "version": "0.2.10",
   "description": "Basic components to build out sites.",
   "author": "Guilherme Zeni <gzeni@its.jnj.com>",

@@ -1,5 +1,6 @@
 {
   "name": "@bodiless/core",
+  "sideEffects": false,
   "version": "0.2.10",
   "description": "Edit context for BodilessJS site editor",
   "author": "Chris Oden <coden@its.jnj.com>",

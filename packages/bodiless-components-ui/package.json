@@ -1,5 +1,6 @@
 {
   "name": "@bodiless/components-ui",
+  "sideEffects": false,
   "version": "0.2.10",
   "description": "Default UI for Bodiless components",
   "author": "Andrei Beliayeu <abeliaye@its.jnj.com>",

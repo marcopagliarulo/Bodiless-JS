@@ -102,7 +102,7 @@
     "walkdir": "^0.4.1"
   },
   "peerDependencies": {
-    "gatsby": "^3.0.0",
+    "gatsby": "3.13.1",
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   }

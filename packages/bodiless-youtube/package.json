@@ -1,5 +1,6 @@
 {
   "name": "@bodiless/youtube",
+  "sideEffects": false,
   "version": "0.2.10",
   "description": "Bodiless YouTube component.",
   "author": "Ivan Rudiuk <IRudiuk@its.jnj.com>",
