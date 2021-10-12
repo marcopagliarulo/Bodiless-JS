@@ -19,7 +19,8 @@ import { mount, ReactWrapper } from 'enzyme';
 import cheerio from 'cheerio';
 import { withDefaultContent, ifToggledOn, asReadOnly } from '@bodiless/core';
 import { replaceWith, withDesign, addProps } from '@bodiless/fclasses';
-import { flow, flowRight } from 'lodash';
+import flow from 'lodash/flow';
+import flowRight from 'lodash/flowRight';
 
 import {
   asBodilessMenu, withListSubMenu, withBreadcrumbStartingTrail,

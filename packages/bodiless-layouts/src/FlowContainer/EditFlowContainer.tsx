@@ -15,7 +15,7 @@
 import React, { FC, PropsWithChildren } from 'react';
 import { arrayMove, SortEnd } from 'react-sortable-hoc';
 import { observer } from 'mobx-react-lite';
-import { flowRight } from 'lodash';
+import flowRight from 'lodash/flowRight';
 import {
   withActivateOnEffect, withNode, withMenuOptions, withResizeDetector,
 } from '@bodiless/core';

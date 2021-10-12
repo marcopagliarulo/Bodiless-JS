@@ -20,7 +20,8 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { flowRight, pick } from 'lodash';
+import pick from 'lodash/pick';
+import flowRight from 'lodash/flowRight';
 import { HOC, Injector, Token } from '@bodiless/fclasses';
 import { useContextActivator, useExtendHandler, useClickOutside } from './hooks';
 import { useNodeDataHandlers, NodeDataHandlers } from './NodeProvider';

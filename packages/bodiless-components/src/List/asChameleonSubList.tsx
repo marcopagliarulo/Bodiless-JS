@@ -13,7 +13,8 @@
  */
 
 import { v1 } from 'uuid';
-import { identity, flow } from 'lodash';
+import flow from 'lodash/flow';
+import identity from 'lodash/identity';
 import type { EditButtonOptions, UseBodilessOverrides } from '@bodiless/core';
 import {
   withDesign, HOC, Design, withoutProps, asToken,
