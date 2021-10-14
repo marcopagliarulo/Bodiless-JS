@@ -13,6 +13,7 @@
  */
 
 import { jsx } from 'slate-hyperscript';
+import escapeHtml from 'escape-html';
 import type { Node as SlateNode } from 'slate';
 import wrapTopLevelInlineNodesInParagraphs from './wrapTopLevelInlineNodesInParagraphs';
 
@@ -109,6 +110,28 @@ const deserializeHtml = (
   return result$;
 };
 
+const serializeHtml = (node: any): string => {
+  if (Array.isArray(node)) {
+    return node.map((n: any) => serializeHtml(n)).join('')
+  }
+  else {
+    if (node.text) {
+      let string = escapeHtml(node.text)
+      if (node.bold) {
+        string = `<strong>${string}</strong>`
+      }
+      return string
+    }
+    const children = node.children ? 
+      node.children.map((n: any) => serializeHtml(n)).join('')
+      : '';
+    switch (node.type) {
+      default:
+        return children
+    }
+  }
+}
+
 type CreateDeserializerSettings = {
   nodeName: string,
   tagName: TagName,
@@ -126,6 +149,7 @@ const createDeserializer = ({
 export {
   deserializeElement,
   deserializeHtml,
+  serializeHtml,
   createDeserializer,
   TagName,
 };

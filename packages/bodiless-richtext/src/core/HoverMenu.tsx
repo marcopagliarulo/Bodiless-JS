@@ -76,7 +76,7 @@ export type HoverMenuProps = {
 };
 
 const HoverMenu = (props: HoverMenuProps) => {
-  const isEditMode = useEditContext().isEdit || null;
+  const isEditMode = process.env.NODE_ENV !== 'production' && useEditContext().isEdit || null;
 
   const { ui } = props;
   const { Menu } = getUI(ui);

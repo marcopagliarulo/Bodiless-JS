@@ -30,7 +30,7 @@ import { EditFlowContainerProps, FlowContainerProps } from './types';
 
 const FlowContainerBasic: FC<EditFlowContainerProps> = props => {
   const { isEdit } = useEditContext();
-  return isEdit
+  return process.env.NODE_ENV !== 'production' && isEdit
     ? <EditFlowContainer {...props} />
     : <StaticFlowContainer {...props} />;
 };

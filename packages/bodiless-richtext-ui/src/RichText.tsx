@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import React from 'react';
+import React, { FC } from 'react';
 import {
   RichText as PlainRichText,
   RichTextProps,
@@ -27,8 +27,12 @@ import {
   TextSelectorWrapper,
 } from './components';
 
+const EmptyHoverMenu: FC<any> = (props: any) => (
+  <></>
+);
+
 const ui = {
-  HoverMenu: StyledHoverMenu,
+  HoverMenu: process.env.NODE_ENV === 'production' ? EmptyHoverMenu : StyledHoverMenu,
   Button,
   Overlay,
   CloseButton,

@@ -94,7 +94,7 @@ const EditableText = observer((props: EditableProps) => {
 const Editable = withNode(
   observer((props: EditableProps) => {
     const { isEdit } = useEditContext();
-    return isEdit ? (
+    return process.env.NODE_ENV !== 'production' && isEdit ? (
       <EditableText {...props} />
     ) : (
       <Text {...props} />
