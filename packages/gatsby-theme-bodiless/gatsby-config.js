@@ -16,7 +16,7 @@ const path = require('path');
 const fg = require('fast-glob');
 const fs = require('fs');
 const { getDisabledPages } = require('@bodiless/components/node-api');
-const { createDefaultContentPlugins } = require('./dist/DefaultContent');
+const { createDefaultContentPlugins } = require('./cjs/dist/DefaultContent');
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,

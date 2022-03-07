@@ -30,7 +30,7 @@ const templateWrap = `/* eslint-disable */
 const {
   mergeConfigs,
   getPackageRoot,
-} = require('@bodiless/gatsby-theme-bodiless/dist/tailwindcss');
+} = require('@bodiless/gatsby-theme-bodiless/cjs/dist/tailwindcss');
 const siteConfig = ${siteConfig};
 
 const bodilessCanvasxConfigs = [#pkgs];

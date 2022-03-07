@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-const { hasLogs, flush } = require('./dist/fsLogHandler');
+const { hasLogs, flush } = require('./cjs/dist/fsLogHandler');
 
 exports.onRenderBody = ({
   pathname,

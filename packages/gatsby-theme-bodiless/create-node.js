@@ -21,7 +21,9 @@ const crypto = require('crypto');
 const fs = require('fs-extra');
 const md5File = require('md5-file');
 const { fluid: sharpFluid, fixed: sharpFixed } = require('gatsby-plugin-sharp');
-const GatsbyImagePresets = require('./dist/GatsbyImage/GatsbyImagePresets').default;
+const git = require('isomorphic-git');
+const findUp = require('find-up');
+const GatsbyImagePresets = require('./cjs/dist/GatsbyImage/GatsbyImagePresets').default;
 
 const Logger = require('./Logger');
 

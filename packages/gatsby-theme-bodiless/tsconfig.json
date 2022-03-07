@@ -3,17 +3,17 @@
   "compilerOptions": {
     "module": "commonjs",
     "rootDir": "src",
-    "outDir": ".",
+    "outDir": "./cjs",
     "baseUrl": ".",
     "allowJs": false
   },
   "include": [
-    "src"
+    "src",
   ],
   "exclude": [
     "lib",
     "node_modules",
     "__tests__/**/*.*",
-    "src/**/__tests__/**/*.*"
+    "src/**/__tests__/**/*.*",
    ]
 }
