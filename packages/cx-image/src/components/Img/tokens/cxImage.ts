@@ -14,6 +14,7 @@
 
 import {
   withNode,
+  withNodeKey,
   withParent,
 } from '@bodiless/core';
 import {
@@ -64,6 +65,9 @@ const Base = asElementToken({
       withGatsbyImageLogger(),
       withoutHydration(),
     ),
+  },
+  Schema: {
+    _: withNodeKey('image'),
   },
   Meta: flowHoc.meta.term('Type')('Image'),
 });
