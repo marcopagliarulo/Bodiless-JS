@@ -1,10 +1,11 @@
-# Bodiless Navigation Upgrade
+# Bodiless Navigation Upgrade Guide
 
-This documentation is applicable only if you have used older versions of Menu/BurgerMenu from @bodiless/organisms & Breadcrumbs from @bodiless-components. The examples provided for the **new** state are applicable.
-
-# Bodiless Navigation Upgrade Guide 
+This documentation is applicable only if you have used older versions of `Menu`/`BurgerMenu` from
+`@bodiless/organisms` and Breadcrumbs from `@bodiless/components`. The examples provided for the
+**new** state are applicable.
 
 ## Updating Menu
+
 There is no need to separate between a `SimpleMenu` and a `MegaMenu`. We can import `asBodilessMenu()` from `@bodiless/navigation`. It may be extended with any type of submenus and comes with no submenus configured by default.
 
 Here is an **old** example of the menu:
@@ -25,7 +26,7 @@ const MegaMenuBase = flow(
 When using a **new** Menu API the code above would look like this:
 ```js
 // First we define a menu schema:
-const $asMenuBase = asToken(
+const $asMenuBase = flowHoc(
   asBodilessMenu(), // Replacement for `asSimpleMenuBase` and `asMegaMenuBase`
   withListSubMenu(), // Adds a List submenu
   withColumnSubMenu(), // Adds a Columns submenu
@@ -35,7 +36,7 @@ const $asMenuBase = asToken(
 // Then we provide menu Title Editors and menu styles:
 const $withTitleEditors = withMenuTitleEditors(); // Use default Title editors from `@bodiless/navigation`
 
-const $withMenuStyles = asToken(
+const $withMenuStyles = flowHoc(
   // Replacement for `asSimpleMenuTopNav` and `asMegaMenuTopNav`
   asTopNav('Main', 'List', 'Columns', 'Cards'),
   // Replacement for `withMegaMenuDesign` and `withSimpleMenuDesign`
@@ -43,18 +44,19 @@ const $withMenuStyles = asToken(
 );
 
 // Lastly we compose two pieces together:
-const Menu = asToken(
+const Menu = flowHoc(
   $asMenuBase,
   $withMenuStyles,
 )('ul') as ComponentType<any>;
 ```
 
-#### Menu Styling Changes:
+### Menu Styling Changes
+
 The top menu design keys remaines unchanged, but the structure of the Design Keys for the **SubMenu** has slightly changed. Let's take a look on how the old SubMenu styling changes in the new API.
 
 Here is an example of **old SubMenu** styling:
 ```js
-const $withOldSubMenuStyles = asToken(
+const $withOldSubMenuStyles = flowHoc(
   withDesigh({
     Wrapper: withDesigh({
       List: addClasses(...), // Submenu <ul> element.
@@ -68,7 +70,7 @@ const $withOldSubMenuStyles = asToken(
 
 Which looks like this with the **new menu API**:
 ```js
-const $withNewSubMenuStyles = asToken(
+const $withNewSubMenuStyles = flowHoc(
   addClasses(...), // Top menu Item (<li>) for the particular submenu.
   withDesign({
     OuterWrapper: addClasses(...), // Top menu Item (<li>) for the particular submenu. Same as addClasses() above. 
@@ -80,6 +82,7 @@ const $withNewSubMenuStyles = asToken(
 ```
 
 ## Updating Burger Menu
+
 There is also no need to separate between the `SimpleBurgerMenu` and the `MegaBurgerMenu`. We can reuse `$asMenuBase` schema from the example above to create our burger menu. 
 
 Here is an **old** example of the Burger menu:
@@ -119,7 +122,8 @@ const BurgerMenu = flow(
 )('ul') as ComponentType<any>;
 ```
 
-#### Burger Menu Context:
+### Burger Menu Context
+
 The new Burger menu API does not rely on 3rd party library to toggle burger menu visibility. Instead there is a `BurgerMenuContext` that handles toggle. It is **important to note** that for the burger menu to behave correct it has to be inside a `BurgerMenuContext`. There is a `withBurgerMenuProvider` HOC exported from the `@bodiless/navigation` package that can be use to wrap element in `BurgerMenuContext`. Usually it is applied to the top-level container ( `layout` ).
 
 Here is an example:
@@ -143,13 +147,14 @@ const BaseLayout = ({ children, components }) => {
 };
 ```
 
-#### Burger Menu Toggler
+### Burger Menu Toggler
+
 The button that toggles burger menu visibility is now a standalone element and can be placed anywhere on the page within the `BurgerMenuContext`. There is a `BurgerMenuDefaultToggler` component exported by the `@bodiless/navigation`. It is a stylable component that toggles the burger menu visibility and its icon from `menu` when the burger menu is hidden to `close` when burger menu is visible.
 ```js
-import { asToken, withDesign, addClasses } from '@bodiless/fclasses';
+import { flowHoc, withDesign, addClasses } from '@bodiless/fclasses';
 import { BurgerMenuDefaultToggler } from '@bodiless/navigation';
 
-export const BurgerMenuToggler = asToken(
+export const BurgerMenuToggler = flowHoc(
   withDesign({
     Wrapper: addClasses(...), // `Fragment` by default.
     Button: addClasses(...), // `Button` by default
@@ -157,7 +162,8 @@ export const BurgerMenuToggler = asToken(
 )(BurgerMenuDefaultToggler);
 ```
 
-#### Overview Link Changes:
+### Overview Link Changes
+
 There is a `withOverviewLink` helper exported from `@bodiless/navigation` that makes it easier to work with overview links. 
 
 Let's take a look at the **old overview link** example:
@@ -182,7 +188,7 @@ In the **new API** it would look like this:
 const $withOverviewLink = withOverviewLink('Demo Overview Link');
 
 // Create a Token that adds a custom overview link to all submenus.
-const $withBurgerMenuStyles = asToken(
+const $withBurgerMenuStyles = flowHoc(
   asBurgerMenu('List', 'Columns', 'Cards'),
   withMenuDesign(['List', 'Columns', 'Cards'])($withOverviewLink),
 );
