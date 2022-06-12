@@ -1,9 +1,30 @@
 # Vital Image Component
 
-The Vital Image Component is based on the [BodilessJS Image Component](../../Components/Image/).
-While Bodiless Image is a generic image component with tokens that can be combined however you
-choose, Vital Image builds upon it, providing a sensible default combination of its generic tokens
-(i.e., features and styles), to help meet typical site-use expectations.
+The Vital Image Component is based on the [BodilessJS Image Component](/Components/Image/). While
+Bodiless Image is a generic image component with tokens that can be combined however you choose,
+Vital Image builds upon it, providing a sensible default combination of its generic tokens (i.e.,
+features and styles), to help meet typical site-use expectations.
+
+## Content Editor Details
+
+Other than potentially seeing different style variations available, there is no change to the
+general Image component experience by the Vital Image package, and, thus, you can refer to the
+[Bodiless Image : Content Editor Details](/Components/Image/#content-editor-details).
+
+### Hero Image
+
+The [Vital Generic Page Template](../VitalTemplates/Generic) uses a Hero Card in the _Top_ slot (or
+Hero). Using the Edit Interface, you will have the option to swap between a Hero
+[Card](../VitalCard/#hero-card), Image, or [Video](../VitalYouTube/#hero-video). Note: Your site may
+be configured with additional Hero variants.
+
+01. While in [Edit Mode](/ContenteditorUserGuide/#edit-mode), select the desired Hero Component,
+    and, within its context menu, under "Hero," click **Swap**.  
+    ![Hero Swap Image](./assets/HeroSwapImage.jpg ':size=292')
+01. In the _Choose a component_ form, select "Image."
+01. Click the checkmark in the bottom-right of the form to confirm.
+01. You can [select and configure](/Components/Image/#select-and-configure-an-image) the Image as
+    you would a typical Image component.
 
 ## Site Builder Details
 
@@ -22,6 +43,36 @@ The Vital Image Component provides a set of tokens to compose an Image Component
 | `EditableNoEffect`         | A token which recomposes the base image as a NoEffect Image. |
 | `WithLandscapePlaceholder` | A token which applies a Landscape Placeholder.               |
 | `WithLink`                 | A token which wraps the image in a link.                     |
+| `WithFullWidthImage`       | A token which makes the image full-width.                    |
+
+### Static Images
+
+To improve performance, Vital Images are static, and, therefore, rendered without unnecessary
+JavaScript. The Vital Image tokens (and all dependencies) are excluded from the static bundle.
+
+The `gatsby-plugin-image` code is excluded from the final bundle via the
+`BODILESS_GATSBY_PLUGIN_IMAGE_OMIT` environment variable. See [Omit Gatsby Plugin Image for Static
+Image](/Design/GatsbyTheme#omit-gatsby-plugin-image-for-static-image) for details.
+
+### Hero Image
+
+The `vitalImage` token collection includes a `Hero` token, which renders a full-width Bodiless Image
+with a BlurUp. Its functionality is essentially the same as combining the `Default` and
+`WithLandscapePlaceholder` tokens. Example usage:
+
+```js
+import { vitalImage } from '@bodiless/vital-image';
+import { as, Img } from '@bodiless/fclasses';
+
+const ImageHero = as(vitalImage.Hero)(Img);
+
+const ExamplePage = () => (
+  <ExampleWrapper>
+    <ImageHero />
+    ...
+  </ExampleWrapper>
+);
+```
 
 ### Usage
 
