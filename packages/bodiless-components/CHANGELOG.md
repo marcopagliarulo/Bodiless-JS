@@ -3,6 +3,102 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.4](https://github.com/johnsonandjohnson/bodiless-js/compare/v0.0.56...v1.0.0-rc.4) (2022-06-12)
+
+
+### Bug Fixes
+
+* **adminui:** Fix admin ui issue ([#1307](https://github.com/johnsonandjohnson/bodiless-js/issues/1307)) ([df9df32](https://github.com/johnsonandjohnson/bodiless-js/commit/df9df323b7561c255db4899828a9173e8ca5b35a))
+* **bodiless-components:** Allow digits in anchor id ([#1291](https://github.com/johnsonandjohnson/bodiless-js/issues/1291)) ([12d7a67](https://github.com/johnsonandjohnson/bodiless-js/commit/12d7a674898f07a5c3fa0f673d07b7b7af7001da))
+* **bodiless-core:** Unhandled Runtime Error when node data is not available ([#1776](https://github.com/johnsonandjohnson/bodiless-js/issues/1776)) ([7519417](https://github.com/johnsonandjohnson/bodiless-js/commit/7519417eb3cb99d03bf7efac8013b1d3f7740f5e))
+* **bodiless-gtm:** Add bodiless/gtm and make withDataLayerScript more flexible ([#1340](https://github.com/johnsonandjohnson/bodiless-js/issues/1340)) ([77abac2](https://github.com/johnsonandjohnson/bodiless-js/commit/77abac25cd2cf6054bdcd59645665fc65ce92903))
+* **bodiless-ui:** try find all missing bl- prefixes in editor  ([#1589](https://github.com/johnsonandjohnson/bodiless-js/issues/1589)) ([942cfd6](https://github.com/johnsonandjohnson/bodiless-js/commit/942cfd6dc522341a757f70b84cf6879f5690332b))
+* **components:** Allow link target to be passed as prop. ([#1007](https://github.com/johnsonandjohnson/bodiless-js/issues/1007)) ([7bed795](https://github.com/johnsonandjohnson/bodiless-js/commit/7bed795ad1b7b52444472354c253d743ff11d77d))
+* **components:** Breadcrumbs lost when a component context is activated in edit mode ([#808](https://github.com/johnsonandjohnson/bodiless-js/issues/808)) ([f64143d](https://github.com/johnsonandjohnson/bodiless-js/commit/f64143d38be6583b6ffcd0491cb9e1b0d88a0756))
+* **components:** Ensure chameleon base component is replaceable. ([#1363](https://github.com/johnsonandjohnson/bodiless-js/issues/1363)) ([c6aad8d](https://github.com/johnsonandjohnson/bodiless-js/commit/c6aad8d9343fe3e383ff4781ec1fe2b50aaff15c)), closes [#1362](https://github.com/johnsonandjohnson/bodiless-js/issues/1362)
+* **components:** Image component - Fix Unhandled Rejection ([#776](https://github.com/johnsonandjohnson/bodiless-js/issues/776)) ([2ca8653](https://github.com/johnsonandjohnson/bodiless-js/commit/2ca86534434122eea44f85f258abeabd0525a868))
+* **components:** prevent set state for unmounted component ([#854](https://github.com/johnsonandjohnson/bodiless-js/issues/854)) ([7132142](https://github.com/johnsonandjohnson/bodiless-js/commit/71321425b827779ffc107ba4be0fadebe5979670))
+* **components:** Properly report size when smaller than sm breakpoint. ([#1020](https://github.com/johnsonandjohnson/bodiless-js/issues/1020)) ([1d771eb](https://github.com/johnsonandjohnson/bodiless-js/commit/1d771ebf57099c4f77253fa2939852c78eba15f6))
+* Correct exports of package tailwind configs and starter activation. ([#1538](https://github.com/johnsonandjohnson/bodiless-js/issues/1538)) ([51f5a54](https://github.com/johnsonandjohnson/bodiless-js/commit/51f5a547517880cce55622f81c1aef906ca661f7))
+* **docs:** missing images in docs ([#786](https://github.com/johnsonandjohnson/bodiless-js/issues/786)) ([224b66e](https://github.com/johnsonandjohnson/bodiless-js/commit/224b66e868a5f799dd3797691cc75812d562b2bb))
+* **GTM:** nested GTM DataLayer ([#1288](https://github.com/johnsonandjohnson/bodiless-js/issues/1288)) ([683e5a8](https://github.com/johnsonandjohnson/bodiless-js/commit/683e5a8ec130ee63abe6b4c5af7df6fe0be10b31))
+* **informed:** Unlock "informed" package version, fix related issues ([#1212](https://github.com/johnsonandjohnson/bodiless-js/issues/1212)) ([7742a3f](https://github.com/johnsonandjohnson/bodiless-js/commit/7742a3ff614b0c58a35b5c028852e74645266591))
+* **lint:** fixing ESlint detecting common syntax issue ([#1343](https://github.com/johnsonandjohnson/bodiless-js/issues/1343)) ([92f0099](https://github.com/johnsonandjohnson/bodiless-js/commit/92f00996f35dcd4e6b58d2d6344d596b02307237))
+* **lists:** Fix list context menu not opening on tab ([#1771](https://github.com/johnsonandjohnson/bodiless-js/issues/1771)) ([57878a1](https://github.com/johnsonandjohnson/bodiless-js/commit/57878a19966f0fdb4b2a4a00330536b6f0747299))
+* **starter:** Highlighting Link in Tout replaced it with actual href link ([#844](https://github.com/johnsonandjohnson/bodiless-js/issues/844)) ([4f70f1e](https://github.com/johnsonandjohnson/bodiless-js/commit/4f70f1e20f2d7787f1c6340d6704dd59f8eaa22f)), closes [#616](https://github.com/johnsonandjohnson/bodiless-js/issues/616)
+
+
+### Features
+
+* Add tree shaking support to all browser packages ([#1251](https://github.com/johnsonandjohnson/bodiless-js/issues/1251)) ([0c73113](https://github.com/johnsonandjohnson/bodiless-js/commit/0c73113c7c2d0c9dcc2dd8be922048173b1e9138)), closes [#1254](https://github.com/johnsonandjohnson/bodiless-js/issues/1254) [#1244](https://github.com/johnsonandjohnson/bodiless-js/issues/1244) [#1245](https://github.com/johnsonandjohnson/bodiless-js/issues/1245) [#1261](https://github.com/johnsonandjohnson/bodiless-js/issues/1261) [#1283](https://github.com/johnsonandjohnson/bodiless-js/issues/1283)
+* **aria-label:** Add Aria Label Type ([f9309ef](https://github.com/johnsonandjohnson/bodiless-js/commit/f9309ef1d682d8f22cbb94e6f3dd363b84e577ad))
+* **aria-label:** Add Skelenton Helpers To Convert Id Into Props ([3d31de1](https://github.com/johnsonandjohnson/bodiless-js/commit/3d31de1e0d0f4109cc4fc6855c1c15dd459d8a24))
+* **aria-label:** Adjust Aria Label Id ([4169f57](https://github.com/johnsonandjohnson/bodiless-js/commit/4169f57b4cbfbe5a05dcba1a29a978105deefc73))
+* **aria-label:** Edit Aria Label Field And Add It To Submit Handler ([a4c0e2e](https://github.com/johnsonandjohnson/bodiless-js/commit/a4c0e2ebf43bd49ea6d8b44d4165a4e39df7960b))
+* **aria-label:** Fixing aria-label field logic ([171af80](https://github.com/johnsonandjohnson/bodiless-js/commit/171af805fea685f85e72ee1cf77e6a4825424bf2))
+* **aria-label:** Implement hook to add aria-label props ([da7a154](https://github.com/johnsonandjohnson/bodiless-js/commit/da7a154884ddbd1abe545583deb52e11957ba94b))
+* **aria-label:** Implementing aria-label overwrite ([82f9e8f](https://github.com/johnsonandjohnson/bodiless-js/commit/82f9e8f97ef7e176febb7fa8a0e04cc004ef8221))
+* **bodiless-components,bodiless-migration-tool,gatsby-theme-bodiless:** Bodiless Image supports Img Title ([#755](https://github.com/johnsonandjohnson/bodiless-js/issues/755)) ([45ed2aa](https://github.com/johnsonandjohnson/bodiless-js/commit/45ed2aab856af2d12fb251bb795372e42ba864e5))
+* **component:** Redirect via clientside ([#1272](https://github.com/johnsonandjohnson/bodiless-js/issues/1272)) ([0aa63e4](https://github.com/johnsonandjohnson/bodiless-js/commit/0aa63e4c292dda4ec60252c36885b237feb13cf5))
+* **components, core, organisms:** Burger Menu with Breadcrumbs ([#637](https://github.com/johnsonandjohnson/bodiless-js/issues/637)) ([23af96d](https://github.com/johnsonandjohnson/bodiless-js/commit/23af96d68bc49a64ea71131071cd4392311a3593))
+* **components, layouts:** Enable use of component selector in chameleons. ([#1187](https://github.com/johnsonandjohnson/bodiless-js/issues/1187)) ([770a187](https://github.com/johnsonandjohnson/bodiless-js/commit/770a187498d8376225e20a9edd87d29c331045f7))
+* **components, organisms:** Menu Trails ([#697](https://github.com/johnsonandjohnson/bodiless-js/issues/697)) ([b0b16b4](https://github.com/johnsonandjohnson/bodiless-js/commit/b0b16b445bdb6c38ab06c622313cb694e2d2e0bd))
+* **components, ui:** Updates to the Main Menu Links ([#672](https://github.com/johnsonandjohnson/bodiless-js/issues/672)) ([ca0e823](https://github.com/johnsonandjohnson/bodiless-js/commit/ca0e8234089dacccc7ea38fa3a8e953e38e78045))
+* **components, youtube:** Youtube allow full screen ([#939](https://github.com/johnsonandjohnson/bodiless-js/issues/939)) ([bea046a](https://github.com/johnsonandjohnson/bodiless-js/commit/bea046a16daafdaed5f72086738ec39ea751589c))
+* **components,organisms:** Mega-menu support ([#572](https://github.com/johnsonandjohnson/bodiless-js/issues/572)) ([9f43d0e](https://github.com/johnsonandjohnson/bodiless-js/commit/9f43d0e38abd7b7ac48d8ea1c3c06a97cf48fdef)), closes [#546](https://github.com/johnsonandjohnson/bodiless-js/issues/546)
+* **components:** ability to create anchor links ([#943](https://github.com/johnsonandjohnson/bodiless-js/issues/943)) ([18e3728](https://github.com/johnsonandjohnson/bodiless-js/commit/18e3728d31f9bb86fde205373c1374c34c32ec71)), closes [#904](https://github.com/johnsonandjohnson/bodiless-js/issues/904)
+* **components:** add a go to link for bodiless links in edit mode. ([#823](https://github.com/johnsonandjohnson/bodiless-js/issues/823)) ([dd85931](https://github.com/johnsonandjohnson/bodiless-js/commit/dd85931f7d118cc9849b58bdcb80a27c612ea64e)), closes [#585](https://github.com/johnsonandjohnson/bodiless-js/issues/585)
+* **components:** Add page disable button ([cfbfc20](https://github.com/johnsonandjohnson/bodiless-js/commit/cfbfc20592d7cd7ad630deb0fabbf6432d002d70))
+* **components:** Allow sanitizers for editable text. ([#784](https://github.com/johnsonandjohnson/bodiless-js/issues/784)) ([b9fd92a](https://github.com/johnsonandjohnson/bodiless-js/commit/b9fd92a1fac440165622cf9d0fefe43c6c4d32ec)), closes [#796](https://github.com/johnsonandjohnson/bodiless-js/issues/796)
+* **components:** Allow users disabling pages, content links and menu items ([#1143](https://github.com/johnsonandjohnson/bodiless-js/issues/1143)) ([367e888](https://github.com/johnsonandjohnson/bodiless-js/commit/367e88821188b23ada367e59f43bdb12b5c280d7))
+* **components:** Content Library ([#696](https://github.com/johnsonandjohnson/bodiless-js/issues/696)) ([ee66fb8](https://github.com/johnsonandjohnson/bodiless-js/commit/ee66fb876754e17ef551bc2a87e257957b9bd2aa)), closes [#1](https://github.com/johnsonandjohnson/bodiless-js/issues/1) [#4](https://github.com/johnsonandjohnson/bodiless-js/issues/4) [#2](https://github.com/johnsonandjohnson/bodiless-js/issues/2) [#5](https://github.com/johnsonandjohnson/bodiless-js/issues/5) [#3](https://github.com/johnsonandjohnson/bodiless-js/issues/3)
+* **components:** Link to Downloadable Files ([#985](https://github.com/johnsonandjohnson/bodiless-js/issues/985)) ([f8782b4](https://github.com/johnsonandjohnson/bodiless-js/commit/f8782b4b77964ce93b733052c9e3c31f88cac901))
+* **components:** Normalize link Href ([#659](https://github.com/johnsonandjohnson/bodiless-js/issues/659)) ([5d99541](https://github.com/johnsonandjohnson/bodiless-js/commit/5d99541919a3f17be22a9fde522dbd9b137b03c3)), closes [#633](https://github.com/johnsonandjohnson/bodiless-js/issues/633)
+* **components:** youtube and iframe ([#569](https://github.com/johnsonandjohnson/bodiless-js/issues/569)) ([388166c](https://github.com/johnsonandjohnson/bodiless-js/commit/388166cdbeebedc71bd287c2794867c76f09b794))
+* **core, layouts:** Closing Main Menu Panel Windows ([#571](https://github.com/johnsonandjohnson/bodiless-js/issues/571)) ([3e0b9f0](https://github.com/johnsonandjohnson/bodiless-js/commit/3e0b9f0df681c146e61d1905c312706dd11d5f1d))
+* **core,components:** Edit button improvements ([#878](https://github.com/johnsonandjohnson/bodiless-js/issues/878)) ([4d762b9](https://github.com/johnsonandjohnson/bodiless-js/commit/4d762b91f10c714dab1ad827002f4026b0beffbb)), closes [#624](https://github.com/johnsonandjohnson/bodiless-js/issues/624) [#794](https://github.com/johnsonandjohnson/bodiless-js/issues/794) [#624](https://github.com/johnsonandjohnson/bodiless-js/issues/624) [#794](https://github.com/johnsonandjohnson/bodiless-js/issues/794)
+* **fclasses:** Design Keys ([#685](https://github.com/johnsonandjohnson/bodiless-js/issues/685)) ([0db060a](https://github.com/johnsonandjohnson/bodiless-js/commit/0db060ad1e7496553cd8eae3654770530d543010)), closes [#660](https://github.com/johnsonandjohnson/bodiless-js/issues/660)
+* **filtering:** Enhancing the Filter ([#1002](https://github.com/johnsonandjohnson/bodiless-js/issues/1002)) ([6c1425c](https://github.com/johnsonandjohnson/bodiless-js/commit/6c1425ce57136641605ed410cca12201547b1b25))
+* **filtering:** Register filterable items ([#1107](https://github.com/johnsonandjohnson/bodiless-js/issues/1107)) ([97b50bc](https://github.com/johnsonandjohnson/bodiless-js/commit/97b50bc2971e8a18a0cf31b7c37cf161d0a50576))
+* Fully disable save by env var. ([#1600](https://github.com/johnsonandjohnson/bodiless-js/issues/1600)) ([b19cd73](https://github.com/johnsonandjohnson/bodiless-js/commit/b19cd73422bcbb5e82125c4936b7aeb0c7c9cc7e)), closes [#1479](https://github.com/johnsonandjohnson/bodiless-js/issues/1479) [#1522](https://github.com/johnsonandjohnson/bodiless-js/issues/1522) [#1479](https://github.com/johnsonandjohnson/bodiless-js/issues/1479)
+* **gatsby-theme-bodiless:** Bodiless Image Refresh ([#860](https://github.com/johnsonandjohnson/bodiless-js/issues/860)) ([c696757](https://github.com/johnsonandjohnson/bodiless-js/commit/c69675757a448800e85fc300d5b5ceaa8ec66efe))
+* **gatsby-theme-bodiless:** gatsby link ([#928](https://github.com/johnsonandjohnson/bodiless-js/issues/928)) ([f40d23d](https://github.com/johnsonandjohnson/bodiless-js/commit/f40d23dd6b3a8d4c9018863e7c5c8a6430bf735d))
+* **gatsby-theme-bodiless:** webp image presets fallback and ability to override default sharp image processing arguments ([#613](https://github.com/johnsonandjohnson/bodiless-js/issues/613)) ([898237b](https://github.com/johnsonandjohnson/bodiless-js/commit/898237bc141b7501b595efdf2e21b49cfff083af))
+* **Layout, Content library:** content Library item created on a deleted page uses src of this … ([#1358](https://github.com/johnsonandjohnson/bodiless-js/issues/1358)) ([86d132d](https://github.com/johnsonandjohnson/bodiless-js/commit/86d132dc3a322dc3dd07036192a5a27a503ef61a))
+* **navigation, organisms, components:** Better DX for Menu, Breadcrumbs, BurgerMenu ([#841](https://github.com/johnsonandjohnson/bodiless-js/issues/841)) ([ad1d8dd](https://github.com/johnsonandjohnson/bodiless-js/commit/ad1d8ddb4308ab2883ba15fb918f4393f09e53c2))
+* **navigation:** Menu Accessibility ([#1015](https://github.com/johnsonandjohnson/bodiless-js/issues/1015)) ([12bddcc](https://github.com/johnsonandjohnson/bodiless-js/commit/12bddcc9f13cdc3eb49abe006d3b43edfbb9b202))
+* **redirect:** Ability edit redirects ([#1330](https://github.com/johnsonandjohnson/bodiless-js/issues/1330)) ([aad069b](https://github.com/johnsonandjohnson/bodiless-js/commit/aad069bcc82f065c681d78cde59249d56350d938))
+* **unpublish:** User can see a link is disabled in edit mode ([#1207](https://github.com/johnsonandjohnson/bodiless-js/issues/1207)) ([dd002f3](https://github.com/johnsonandjohnson/bodiless-js/commit/dd002f39522b445619b3a318b0417e1ba620bdb7))
+* **vital-navigation:** Add Breadcrumbs ([#1778](https://github.com/johnsonandjohnson/bodiless-js/issues/1778)) ([756284e](https://github.com/johnsonandjohnson/bodiless-js/commit/756284e2955c22fa398af293dec61b04021f0834))
+
+
+### Performance Improvements
+
+* **components,layouts:** Improve performance of heavy component selectors ([#1308](https://github.com/johnsonandjohnson/bodiless-js/issues/1308)) ([050fa7b](https://github.com/johnsonandjohnson/bodiless-js/commit/050fa7b641ded750abb284bbb329da0ebed71ee5)), closes [#1236](https://github.com/johnsonandjohnson/bodiless-js/issues/1236)
+
+
+### BREAKING CHANGES
+
+* **navigation, organisms, components:**  - There is now a new `@bodiless/navigation` package for the new menu API.
+ - All menu-related code is removed from `@bodiless/organisms`.
+ - `withSimpleMenuDesign` and `withMegaMenuDesign` were deprecated. Use `withMenuDesign` from `@bodiless/organisms`  instead.
+ - `asSimpleMenuTopNav` and `asMegaMenuTopNav` were depricated. Use `asTopNav()` from `@bodiless/organisms` instead.
+ - Breadcrumbs are now configured by default for each menu item. No need for `asBreadcrumbSource`.
+ - List and Menu design keys have changed. Removed extra `Wrapper` component from submenus.
+ - Breadcrumb design keys have changed. Breadcrumb `Title` is now the same component as `MenuTitle` by default. The `BreadcrumbLink` design key has been deprecated. `Link` is available in `MenuTitle`. Renamed `BreadcrumbWrapper` and `BreadcrumbItem` to `Wrapper` and `Item` respectively.
+- Please refer to the Upgrade Guide in `@bodiless/organisms` readme file.
+* **components, youtube:** YouTube and ResponsiveYouTube components were moved to the `@bodiless/YouTube`
+* **core,components:** Structure of compound form data has changed.
+
+Fields in compound forms are now namespaced by the snippet id.
+
+Since edit forms (those created by withEditButton or asBodilessComponent) are now
+compound forms, this change affects them as well.
+
+
+
+
+
 # [1.0.0-rc.3](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.2...v1.0.0-rc.3) (2022-06-10)
 
 **Note:** Version bump only for package @bodiless/components

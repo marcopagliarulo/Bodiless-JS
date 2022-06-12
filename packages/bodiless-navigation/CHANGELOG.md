@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.4](https://github.com/johnsonandjohnson/bodiless-js/compare/v0.0.56...v1.0.0-rc.4) (2022-06-12)
+
+
+### Bug Fixes
+
+* **core:** Update withAppendChild and withPrependChild ([#1074](https://github.com/johnsonandjohnson/bodiless-js/issues/1074)) ([0623663](https://github.com/johnsonandjohnson/bodiless-js/commit/06236633d61de4dba09d005eb9b87e8fab4e8d1c))
+* Correct exports of package tailwind configs and starter activation. ([#1538](https://github.com/johnsonandjohnson/bodiless-js/issues/1538)) ([51f5a54](https://github.com/johnsonandjohnson/bodiless-js/commit/51f5a547517880cce55622f81c1aef906ca661f7))
+* **lint:** fixing ESlint detecting common syntax issue ([#1343](https://github.com/johnsonandjohnson/bodiless-js/issues/1343)) ([92f0099](https://github.com/johnsonandjohnson/bodiless-js/commit/92f00996f35dcd4e6b58d2d6344d596b02307237))
+* **material-icons:** remove dependency on google fonts material fonts css & clean up of components. ([#1580](https://github.com/johnsonandjohnson/bodiless-js/issues/1580)) ([013d547](https://github.com/johnsonandjohnson/bodiless-js/commit/013d547316b122904a3561406fa5c88fd2385679))
+* **navigation, organisms, test-site:** Fix asTopNav and rename Touts to Cards ([#991](https://github.com/johnsonandjohnson/bodiless-js/issues/991)) ([3c89c62](https://github.com/johnsonandjohnson/bodiless-js/commit/3c89c625e7530b87c321c427dda3a2e26853e387))
+* **navigation:** breadcrumb current-page attribute ([#997](https://github.com/johnsonandjohnson/bodiless-js/issues/997)) ([c92773f](https://github.com/johnsonandjohnson/bodiless-js/commit/c92773f2159b02e53716d81ab154e07f331d3688))
+* **Navigation:** Fix asTopNav adding every submenu option to Chameleon ([#1013](https://github.com/johnsonandjohnson/bodiless-js/issues/1013)) ([e8581c8](https://github.com/johnsonandjohnson/bodiless-js/commit/e8581c8a10ed3ace7d418503af10c0750ff56be0))
+* **navigation:** Menu Accessibility Remediation ([#1029](https://github.com/johnsonandjohnson/bodiless-js/issues/1029)) ([2f13256](https://github.com/johnsonandjohnson/bodiless-js/commit/2f13256d6aa75df6355cdfb2b79e7ba5fa995811))
+
+
+### Features
+
+* Add tree shaking support to all browser packages ([#1251](https://github.com/johnsonandjohnson/bodiless-js/issues/1251)) ([0c73113](https://github.com/johnsonandjohnson/bodiless-js/commit/0c73113c7c2d0c9dcc2dd8be922048173b1e9138)), closes [#1254](https://github.com/johnsonandjohnson/bodiless-js/issues/1254) [#1244](https://github.com/johnsonandjohnson/bodiless-js/issues/1244) [#1245](https://github.com/johnsonandjohnson/bodiless-js/issues/1245) [#1261](https://github.com/johnsonandjohnson/bodiless-js/issues/1261) [#1283](https://github.com/johnsonandjohnson/bodiless-js/issues/1283)
+* **bc-footer:** Add Brand.com Footer ([#1450](https://github.com/johnsonandjohnson/bodiless-js/issues/1450)) ([9025ae5](https://github.com/johnsonandjohnson/bodiless-js/commit/9025ae5351253b71b2193ccb95bcb43919583220)), closes [#7](https://github.com/johnsonandjohnson/bodiless-js/issues/7) [#8](https://github.com/johnsonandjohnson/bodiless-js/issues/8) [#10](https://github.com/johnsonandjohnson/bodiless-js/issues/10) [#13](https://github.com/johnsonandjohnson/bodiless-js/issues/13) [#16](https://github.com/johnsonandjohnson/bodiless-js/issues/16) [#17](https://github.com/johnsonandjohnson/bodiless-js/issues/17)
+* **components:** Allow users disabling pages, content links and menu items ([#1143](https://github.com/johnsonandjohnson/bodiless-js/issues/1143)) ([367e888](https://github.com/johnsonandjohnson/bodiless-js/commit/367e88821188b23ada367e59f43bdb12b5c280d7))
+* **components:** Link to Downloadable Files ([#985](https://github.com/johnsonandjohnson/bodiless-js/issues/985)) ([f8782b4](https://github.com/johnsonandjohnson/bodiless-js/commit/f8782b4b77964ce93b733052c9e3c31f88cac901))
+* **cx-navigation:** Add Cx Navigation [#12](https://github.com/johnsonandjohnson/bodiless-js/issues/12) ([#1495](https://github.com/johnsonandjohnson/bodiless-js/issues/1495)) ([c191dac](https://github.com/johnsonandjohnson/bodiless-js/commit/c191dacfcd161d188dac65db7e18a753b9de24b5)), closes [#7](https://github.com/johnsonandjohnson/bodiless-js/issues/7) [#8](https://github.com/johnsonandjohnson/bodiless-js/issues/8) [#10](https://github.com/johnsonandjohnson/bodiless-js/issues/10) [#13](https://github.com/johnsonandjohnson/bodiless-js/issues/13) [#16](https://github.com/johnsonandjohnson/bodiless-js/issues/16) [#19](https://github.com/johnsonandjohnson/bodiless-js/issues/19) [#20](https://github.com/johnsonandjohnson/bodiless-js/issues/20) [#21](https://github.com/johnsonandjohnson/bodiless-js/issues/21) [#22](https://github.com/johnsonandjohnson/bodiless-js/issues/22) [#24](https://github.com/johnsonandjohnson/bodiless-js/issues/24)
+* **navigation, organisms, components:** Better DX for Menu, Breadcrumbs, BurgerMenu ([#841](https://github.com/johnsonandjohnson/bodiless-js/issues/841)) ([ad1d8dd](https://github.com/johnsonandjohnson/bodiless-js/commit/ad1d8ddb4308ab2883ba15fb918f4393f09e53c2))
+* **navigation:** Breadcrumbs Accessibility ([#974](https://github.com/johnsonandjohnson/bodiless-js/issues/974)) ([2b70053](https://github.com/johnsonandjohnson/bodiless-js/commit/2b7005360ce5b2bcc707afe69f1e08e842645cdf))
+* **navigation:** Menu Accessibility ([#1015](https://github.com/johnsonandjohnson/bodiless-js/issues/1015)) ([12bddcc](https://github.com/johnsonandjohnson/bodiless-js/commit/12bddcc9f13cdc3eb49abe006d3b43edfbb9b202))
+* **vital-navigation:** Add Breadcrumbs ([#1778](https://github.com/johnsonandjohnson/bodiless-js/issues/1778)) ([756284e](https://github.com/johnsonandjohnson/bodiless-js/commit/756284e2955c22fa398af293dec61b04021f0834))
+
+
+### BREAKING CHANGES
+
+* **navigation, organisms, test-site:** - Renamed `withToutsSubMenu` to `withCardsSubMenu`.
+- `asTopNav()` now accepts `Main` key to apply default navigation styles to the Main Menu.
+- `asTopNav('List' | 'Columns' | 'Cards')` is no longer applies `asTopNav('Main')` by default.
+* **navigation, organisms, components:**  - There is now a new `@bodiless/navigation` package for the new menu API.
+ - All menu-related code is removed from `@bodiless/organisms`.
+ - `withSimpleMenuDesign` and `withMegaMenuDesign` were deprecated. Use `withMenuDesign` from `@bodiless/organisms`  instead.
+ - `asSimpleMenuTopNav` and `asMegaMenuTopNav` were depricated. Use `asTopNav()` from `@bodiless/organisms` instead.
+ - Breadcrumbs are now configured by default for each menu item. No need for `asBreadcrumbSource`.
+ - List and Menu design keys have changed. Removed extra `Wrapper` component from submenus.
+ - Breadcrumb design keys have changed. Breadcrumb `Title` is now the same component as `MenuTitle` by default. The `BreadcrumbLink` design key has been deprecated. `Link` is available in `MenuTitle`. Renamed `BreadcrumbWrapper` and `BreadcrumbItem` to `Wrapper` and `Item` respectively.
+- Please refer to the Upgrade Guide in `@bodiless/organisms` readme file.
+
+
+
+
+
 # [1.0.0-rc.3](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.2...v1.0.0-rc.3) (2022-06-10)
 
 **Note:** Version bump only for package @bodiless/navigation

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.4](https://github.com/johnsonandjohnson/bodiless-js/compare/v0.0.56...v1.0.0-rc.4) (2022-06-12)
+
+
+### Bug Fixes
+
+* **gatsby-plugin-ssi:** Each child in a list should have a unique key prop ([#517](https://github.com/johnsonandjohnson/bodiless-js/issues/517)) ([78035b5](https://github.com/johnsonandjohnson/bodiless-js/commit/78035b5a0efa440abad549fe79c26de71e99a4c0))
+* **gatsby-plugin-ssi:** Fixing Unsafe builtin usage fs.readFileSyn error in Gatsby v3 ([#1342](https://github.com/johnsonandjohnson/bodiless-js/issues/1342)) ([6a058b1](https://github.com/johnsonandjohnson/bodiless-js/commit/6a058b1ef2d45a2bb222bac6973d03440b3d589b))
+
+
+
+
+
 # [1.0.0-rc.3](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.2...v1.0.0-rc.3) (2022-06-10)
 
 **Note:** Version bump only for package @bodiless/gatsby-plugin-ssi

@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.4](https://github.com/johnsonandjohnson/bodiless-js/compare/v0.0.56...v1.0.0-rc.4) (2022-06-12)
+
+
+### Bug Fixes
+
+* Add missing docs to packages. ([#1556](https://github.com/johnsonandjohnson/bodiless-js/issues/1556)) ([2a4bc3d](https://github.com/johnsonandjohnson/bodiless-js/commit/2a4bc3db9a597eb4b811044b3acde4a44f4c98e8))
+* **bodiless-richtext:** Restore to 30px(default) ([#1611](https://github.com/johnsonandjohnson/bodiless-js/issues/1611)) ([9c0f355](https://github.com/johnsonandjohnson/bodiless-js/commit/9c0f3552ec11995f42e2876ba0a2902123d9a08e))
+* **bodiless-ui:** fix close/submit icon, Warning, RTE icons ([#1604](https://github.com/johnsonandjohnson/bodiless-js/issues/1604)) ([5f4ca2c](https://github.com/johnsonandjohnson/bodiless-js/commit/5f4ca2c8a112a08a9ec441bf4ae151af32c50569))
+* **docs:** Images still missing from docs ([fc16bdc](https://github.com/johnsonandjohnson/bodiless-js/commit/fc16bdc8372d4380c9df245adb915a755831f5c9))
+* **docs:** missing images in docs ([#786](https://github.com/johnsonandjohnson/bodiless-js/issues/786)) ([224b66e](https://github.com/johnsonandjohnson/bodiless-js/commit/224b66e868a5f799dd3797691cc75812d562b2bb))
+* **editors:** Fix hover menu closing on click ([#1799](https://github.com/johnsonandjohnson/bodiless-js/issues/1799)) ([441a81d](https://github.com/johnsonandjohnson/bodiless-js/commit/441a81da04967d72a47376685f35a4c97c06eb2a))
+* **lint:** fixing ESlint detecting common syntax issue ([#1343](https://github.com/johnsonandjohnson/bodiless-js/issues/1343)) ([92f0099](https://github.com/johnsonandjohnson/bodiless-js/commit/92f00996f35dcd4e6b58d2d6344d596b02307237))
+* **material-icons:** remove dependency on google fonts material fonts css & clean up of components. ([#1580](https://github.com/johnsonandjohnson/bodiless-js/issues/1580)) ([013d547](https://github.com/johnsonandjohnson/bodiless-js/commit/013d547316b122904a3561406fa5c88fd2385679))
+* **richtext, richtext-ui:** Additional ... in RTE throws type is invalid error and serves WSOD ([#536](https://github.com/johnsonandjohnson/bodiless-js/issues/536)) ([d35ddd4](https://github.com/johnsonandjohnson/bodiless-js/commit/d35ddd43b9a26f43d0adcf8adbc91cde3f2d6463))
+* **richtext:** [#791](https://github.com/johnsonandjohnson/bodiless-js/issues/791) - Fix crash when pasting empty last element. ([#792](https://github.com/johnsonandjohnson/bodiless-js/issues/792)) ([8d5caa3](https://github.com/johnsonandjohnson/bodiless-js/commit/8d5caa3f5e84c9bc11961ebe61aa715109dc0e42))
+* **richtext:** [GAP] 2 clicks are needed on a newly created menu item to open Local context menu [#671](https://github.com/johnsonandjohnson/bodiless-js/issues/671) ([2710ef9](https://github.com/johnsonandjohnson/bodiless-js/commit/2710ef9910c9d0435ab88386f0788105bdf68f79))
+* **richtext:** [GAPS] RTE editor doesn't allow for inline files/components (aka inline CTA styled buttons) ([#481](https://github.com/johnsonandjohnson/bodiless-js/issues/481)) ([3647e41](https://github.com/johnsonandjohnson/bodiless-js/commit/3647e41b9e8ac23e0a24ac065a5d0229dc04223c))
+* **richtext:** Ensure slate editor has valid data. ([#1197](https://github.com/johnsonandjohnson/bodiless-js/issues/1197)) ([c486ee2](https://github.com/johnsonandjohnson/bodiless-js/commit/c486ee25679c926436cd5a5fe4aace60c466a606)), closes [#1196](https://github.com/johnsonandjohnson/bodiless-js/issues/1196)
+* **richtext:** Local Context Menu with a selected style option stays visible after opening an Admin Menu form ([#795](https://github.com/johnsonandjohnson/bodiless-js/issues/795)) ([9b6858e](https://github.com/johnsonandjohnson/bodiless-js/commit/9b6858ed81d75da2049bc708efe45ffe0c1c38e6))
+
+
+### Features
+
+* Add static replacement mechanism ([#1440](https://github.com/johnsonandjohnson/bodiless-js/issues/1440)) ([22384f1](https://github.com/johnsonandjohnson/bodiless-js/commit/22384f184e73366bc00ec619e7b08fa3e5dfc29d))
+* Add tree shaking support to all browser packages ([#1251](https://github.com/johnsonandjohnson/bodiless-js/issues/1251)) ([0c73113](https://github.com/johnsonandjohnson/bodiless-js/commit/0c73113c7c2d0c9dcc2dd8be922048173b1e9138)), closes [#1254](https://github.com/johnsonandjohnson/bodiless-js/issues/1254) [#1244](https://github.com/johnsonandjohnson/bodiless-js/issues/1244) [#1245](https://github.com/johnsonandjohnson/bodiless-js/issues/1245) [#1261](https://github.com/johnsonandjohnson/bodiless-js/issues/1261) [#1283](https://github.com/johnsonandjohnson/bodiless-js/issues/1283)
+* **bodiless-core:** BodilessJS Remove AsBodilessComponent Edit code from Static bundle [#1542](https://github.com/johnsonandjohnson/bodiless-js/issues/1542) ([#1785](https://github.com/johnsonandjohnson/bodiless-js/issues/1785)) ([3ab1ba8](https://github.com/johnsonandjohnson/bodiless-js/commit/3ab1ba88b03811a4a9100125d4a649db5667e89c))
+* **components, core, organisms:** Burger Menu with Breadcrumbs ([#637](https://github.com/johnsonandjohnson/bodiless-js/issues/637)) ([23af96d](https://github.com/johnsonandjohnson/bodiless-js/commit/23af96d68bc49a64ea71131071cd4392311a3593))
+* **components:** Allow users disabling pages, content links and menu items ([#1143](https://github.com/johnsonandjohnson/bodiless-js/issues/1143)) ([367e888](https://github.com/johnsonandjohnson/bodiless-js/commit/367e88821188b23ada367e59f43bdb12b5c280d7))
+* **fclasses:** Design Keys ([#685](https://github.com/johnsonandjohnson/bodiless-js/issues/685)) ([0db060a](https://github.com/johnsonandjohnson/bodiless-js/commit/0db060ad1e7496553cd8eae3654770530d543010)), closes [#660](https://github.com/johnsonandjohnson/bodiless-js/issues/660)
+* **richtext:** paste links into richtext ([#769](https://github.com/johnsonandjohnson/bodiless-js/issues/769)) ([db78b74](https://github.com/johnsonandjohnson/bodiless-js/commit/db78b74426b1185788dc23b867664180bb388f24))
+
+
+
+
+
 # [1.0.0-rc.3](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.2...v1.0.0-rc.3) (2022-06-10)
 
 **Note:** Version bump only for package @bodiless/richtext

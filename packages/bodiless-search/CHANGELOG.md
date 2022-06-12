@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.4](https://github.com/johnsonandjohnson/bodiless-js/compare/v0.0.56...v1.0.0-rc.4) (2022-06-12)
+
+
+### Bug Fixes
+
+* close mobile search box on enter ([#821](https://github.com/johnsonandjohnson/bodiless-js/issues/821)) ([51ca2a8](https://github.com/johnsonandjohnson/bodiless-js/commit/51ca2a817d88d0232bb3b53d3621debf90814ce7))
+* Correct exports of package tailwind configs and starter activation. ([#1538](https://github.com/johnsonandjohnson/bodiless-js/issues/1538)) ([51f5a54](https://github.com/johnsonandjohnson/bodiless-js/commit/51f5a547517880cce55622f81c1aef906ca661f7))
+* **docs:** fixing failed gh-page publishing ([c61e13d](https://github.com/johnsonandjohnson/bodiless-js/commit/c61e13d333de8217bcaf2bc46eb661356f8c41bb))
+* **docs:** missing images in docs ([#786](https://github.com/johnsonandjohnson/bodiless-js/issues/786)) ([224b66e](https://github.com/johnsonandjohnson/bodiless-js/commit/224b66e868a5f799dd3797691cc75812d562b2bb))
+* **lint:** fixing ESlint detecting common syntax issue ([#1343](https://github.com/johnsonandjohnson/bodiless-js/issues/1343)) ([92f0099](https://github.com/johnsonandjohnson/bodiless-js/commit/92f00996f35dcd4e6b58d2d6344d596b02307237))
+* **material-icons:** remove dependency on google fonts material fonts css & clean up of components. ([#1580](https://github.com/johnsonandjohnson/bodiless-js/issues/1580)) ([013d547](https://github.com/johnsonandjohnson/bodiless-js/commit/013d547316b122904a3561406fa5c88fd2385679))
+* **search:** close mobile searchbox on submit ([#805](https://github.com/johnsonandjohnson/bodiless-js/issues/805)) ([cac4d78](https://github.com/johnsonandjohnson/bodiless-js/commit/cac4d783d408d9b956307b06b218e5a667d4b1b8))
+* **search:** Typeahead/suggestion item click does not trigger the search ([#1024](https://github.com/johnsonandjohnson/bodiless-js/issues/1024)) ([47aa0c4](https://github.com/johnsonandjohnson/bodiless-js/commit/47aa0c4add0ff3e6c22af369b0c250df174aa94c))
+
+
+### Features
+
+* Add tree shaking support to all browser packages ([#1251](https://github.com/johnsonandjohnson/bodiless-js/issues/1251)) ([0c73113](https://github.com/johnsonandjohnson/bodiless-js/commit/0c73113c7c2d0c9dcc2dd8be922048173b1e9138)), closes [#1254](https://github.com/johnsonandjohnson/bodiless-js/issues/1254) [#1244](https://github.com/johnsonandjohnson/bodiless-js/issues/1244) [#1245](https://github.com/johnsonandjohnson/bodiless-js/issues/1245) [#1261](https://github.com/johnsonandjohnson/bodiless-js/issues/1261) [#1283](https://github.com/johnsonandjohnson/bodiless-js/issues/1283)
+* **components:** ability to create anchor links ([#943](https://github.com/johnsonandjohnson/bodiless-js/issues/943)) ([18e3728](https://github.com/johnsonandjohnson/bodiless-js/commit/18e3728d31f9bb86fde205373c1374c34c32ec71)), closes [#904](https://github.com/johnsonandjohnson/bodiless-js/issues/904)
+* **components:** Implement responsive search box ([#766](https://github.com/johnsonandjohnson/bodiless-js/issues/766)) ([e1bac0b](https://github.com/johnsonandjohnson/bodiless-js/commit/e1bac0ba40b57d4c209a68bdf113d23e53742350))
+* **fclasses:** Design Keys ([#685](https://github.com/johnsonandjohnson/bodiless-js/issues/685)) ([0db060a](https://github.com/johnsonandjohnson/bodiless-js/commit/0db060ad1e7496553cd8eae3654770530d543010)), closes [#660](https://github.com/johnsonandjohnson/bodiless-js/issues/660)
+* **icon:** Remove material icons font from production build ([#1322](https://github.com/johnsonandjohnson/bodiless-js/issues/1322)) ([d980889](https://github.com/johnsonandjohnson/bodiless-js/commit/d9808898b5ae3d95746816ada62daa91963cbeab))
+* **search:** Add @bodiless/vital-search ([#1628](https://github.com/johnsonandjohnson/bodiless-js/issues/1628)) ([7ce3fb8](https://github.com/johnsonandjohnson/bodiless-js/commit/7ce3fb8e943d50be19e59758a8bc4452a06e61f9))
+* **search:** component library search component ([#592](https://github.com/johnsonandjohnson/bodiless-js/issues/592)) ([faa2219](https://github.com/johnsonandjohnson/bodiless-js/commit/faa2219a5dc5b66cbb3fd2a8eba6d24a04d3d38f))
+* **search:** Search Component - Type Ahead ([#832](https://github.com/johnsonandjohnson/bodiless-js/issues/832)) ([b2d3373](https://github.com/johnsonandjohnson/bodiless-js/commit/b2d3373bee45df7227bcbb08a930edcd23d46322))
+* **search:** Search enhancements ([#1319](https://github.com/johnsonandjohnson/bodiless-js/issues/1319)) ([97b0744](https://github.com/johnsonandjohnson/bodiless-js/commit/97b0744cdd936b20d5c75b2e8285777874697c83))
+
+
+
+
+
 # [1.0.0-rc.3](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.2...v1.0.0-rc.3) (2022-06-10)
 
 **Note:** Version bump only for package @bodiless/search

@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.4](https://github.com/johnsonandjohnson/bodiless-js/compare/v0.0.56...v1.0.0-rc.4) (2022-06-12)
+
+
+### Bug Fixes
+
+* Add missing docs to packages. ([#1556](https://github.com/johnsonandjohnson/bodiless-js/issues/1556)) ([2a4bc3d](https://github.com/johnsonandjohnson/bodiless-js/commit/2a4bc3db9a597eb4b811044b3acde4a44f4c98e8))
+* **filtering:** Fix missing export ([#1135](https://github.com/johnsonandjohnson/bodiless-js/issues/1135)) ([8b0698d](https://github.com/johnsonandjohnson/bodiless-js/commit/8b0698d0dace5dd2b8292d82484f0d56db9b7660))
+* **filtering:** Update selected filters properly from query string. ([#1026](https://github.com/johnsonandjohnson/bodiless-js/issues/1026)) ([9f88309](https://github.com/johnsonandjohnson/bodiless-js/commit/9f88309f199533f23a131e5931f10dfd90faf5b8))
+
+
+### Features
+
+* Add tree shaking support to all browser packages ([#1251](https://github.com/johnsonandjohnson/bodiless-js/issues/1251)) ([0c73113](https://github.com/johnsonandjohnson/bodiless-js/commit/0c73113c7c2d0c9dcc2dd8be922048173b1e9138)), closes [#1254](https://github.com/johnsonandjohnson/bodiless-js/issues/1254) [#1244](https://github.com/johnsonandjohnson/bodiless-js/issues/1244) [#1245](https://github.com/johnsonandjohnson/bodiless-js/issues/1245) [#1261](https://github.com/johnsonandjohnson/bodiless-js/issues/1261) [#1283](https://github.com/johnsonandjohnson/bodiless-js/issues/1283)
+* **bodiless-filtering, listing:** Listing Page - Flow Container - Default Filter ([#1273](https://github.com/johnsonandjohnson/bodiless-js/issues/1273)) ([4e27dc2](https://github.com/johnsonandjohnson/bodiless-js/commit/4e27dc220571168b0acc83a6d0c5dd0a86650b56))
+* **filtering:** Enable optional hiding of filterable item when no ta… ([#1231](https://github.com/johnsonandjohnson/bodiless-js/issues/1231)) ([c037111](https://github.com/johnsonandjohnson/bodiless-js/commit/c037111800eddf96565494a0abb2adfa3e0c0952))
+* **filtering:** Enhancing the Filter ([#1002](https://github.com/johnsonandjohnson/bodiless-js/issues/1002)) ([6c1425c](https://github.com/johnsonandjohnson/bodiless-js/commit/6c1425ce57136641605ed410cca12201547b1b25))
+* **filtering:** Filter Enhancements ([#1021](https://github.com/johnsonandjohnson/bodiless-js/issues/1021)) ([20bd3e1](https://github.com/johnsonandjohnson/bodiless-js/commit/20bd3e1afe534629be1deedf69bdf8e27c71f151))
+* **filtering:** Register filterable items ([#1107](https://github.com/johnsonandjohnson/bodiless-js/issues/1107)) ([97b50bc](https://github.com/johnsonandjohnson/bodiless-js/commit/97b50bc2971e8a18a0cf31b7c37cf161d0a50576))
+* Vital Content Listing ([#1801](https://github.com/johnsonandjohnson/bodiless-js/issues/1801)) ([b71fbad](https://github.com/johnsonandjohnson/bodiless-js/commit/b71fbad220d4141c318a66f33819d41122ab0ee4))
+
+
+
+
+
 # [1.0.0-rc.3](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.2...v1.0.0-rc.3) (2022-06-10)
 
 **Note:** Version bump only for package @bodiless/filtering

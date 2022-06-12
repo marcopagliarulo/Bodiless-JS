@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.4](https://github.com/johnsonandjohnson/bodiless-js/compare/v0.0.56...v1.0.0-rc.4) (2022-06-12)
+
+
+### Bug Fixes
+
+* **adminui:** Fix admin ui issue ([#1307](https://github.com/johnsonandjohnson/bodiless-js/issues/1307)) ([df9df32](https://github.com/johnsonandjohnson/bodiless-js/commit/df9df323b7561c255db4899828a9173e8ca5b35a))
+* **backend:** clone page breaking with certain pages ([#1183](https://github.com/johnsonandjohnson/bodiless-js/issues/1183)) ([96754f7](https://github.com/johnsonandjohnson/bodiless-js/commit/96754f7765eecc984e0e06ac10af3b6797820096))
+* **bodiless-ui:** fix close/submit icon, Warning, RTE icons ([#1604](https://github.com/johnsonandjohnson/bodiless-js/issues/1604)) ([5f4ca2c](https://github.com/johnsonandjohnson/bodiless-js/commit/5f4ca2c8a112a08a9ec441bf4ae151af32c50569))
+* **bodiless-ui:** fix icon size & color ([#1596](https://github.com/johnsonandjohnson/bodiless-js/issues/1596)) ([e60b434](https://github.com/johnsonandjohnson/bodiless-js/commit/e60b43429511fa6c10774c01b12d1959841594de))
+* **bodiless-ui:** try find all missing bl- prefixes in editor  ([#1589](https://github.com/johnsonandjohnson/bodiless-js/issues/1589)) ([942cfd6](https://github.com/johnsonandjohnson/bodiless-js/commit/942cfd6dc522341a757f70b84cf6879f5690332b))
+* Correct exports of package tailwind configs and starter activation. ([#1538](https://github.com/johnsonandjohnson/bodiless-js/issues/1538)) ([51f5a54](https://github.com/johnsonandjohnson/bodiless-js/commit/51f5a547517880cce55622f81c1aef906ca661f7))
+* **informed:** Unlock "informed" package version, fix related issues ([#1212](https://github.com/johnsonandjohnson/bodiless-js/issues/1212)) ([7742a3f](https://github.com/johnsonandjohnson/bodiless-js/commit/7742a3ff614b0c58a35b5c028852e74645266591))
+* **lint:** fixing ESlint detecting common syntax issue ([#1343](https://github.com/johnsonandjohnson/bodiless-js/issues/1343)) ([92f0099](https://github.com/johnsonandjohnson/bodiless-js/commit/92f00996f35dcd4e6b58d2d6344d596b02307237))
+* **material-icons:** remove dependency on google fonts material fonts css & clean up of components. ([#1580](https://github.com/johnsonandjohnson/bodiless-js/issues/1580)) ([013d547](https://github.com/johnsonandjohnson/bodiless-js/commit/013d547316b122904a3561406fa5c88fd2385679))
+
+
+### Features
+
+* Add tree shaking support to all browser packages ([#1251](https://github.com/johnsonandjohnson/bodiless-js/issues/1251)) ([0c73113](https://github.com/johnsonandjohnson/bodiless-js/commit/0c73113c7c2d0c9dcc2dd8be922048173b1e9138)), closes [#1254](https://github.com/johnsonandjohnson/bodiless-js/issues/1254) [#1244](https://github.com/johnsonandjohnson/bodiless-js/issues/1244) [#1245](https://github.com/johnsonandjohnson/bodiless-js/issues/1245) [#1261](https://github.com/johnsonandjohnson/bodiless-js/issues/1261) [#1283](https://github.com/johnsonandjohnson/bodiless-js/issues/1283)
+* **bodiless-ui,bodiless-core-ui,bodiless-layouts:** Context Menu Enhancements : RTL divider & Component Label ([#816](https://github.com/johnsonandjohnson/bodiless-js/issues/816)) ([f74bc0d](https://github.com/johnsonandjohnson/bodiless-js/commit/f74bc0d0fa63f828ecd4d7b9459c21b2d19c159b))
+* **components,organisms:** Mega-menu support ([#572](https://github.com/johnsonandjohnson/bodiless-js/issues/572)) ([9f43d0e](https://github.com/johnsonandjohnson/bodiless-js/commit/9f43d0e38abd7b7ac48d8ea1c3c06a97cf48fdef)), closes [#546](https://github.com/johnsonandjohnson/bodiless-js/issues/546)
+* **components:** Content Library ([#696](https://github.com/johnsonandjohnson/bodiless-js/issues/696)) ([ee66fb8](https://github.com/johnsonandjohnson/bodiless-js/commit/ee66fb876754e17ef551bc2a87e257957b9bd2aa)), closes [#1](https://github.com/johnsonandjohnson/bodiless-js/issues/1) [#4](https://github.com/johnsonandjohnson/bodiless-js/issues/4) [#2](https://github.com/johnsonandjohnson/bodiless-js/issues/2) [#5](https://github.com/johnsonandjohnson/bodiless-js/issues/5) [#3](https://github.com/johnsonandjohnson/bodiless-js/issues/3)
+* **core, layouts, layouts-ui:**  Add "Clear" Functionality for Component Library Filters ([#669](https://github.com/johnsonandjohnson/bodiless-js/issues/669)) ([df03dbf](https://github.com/johnsonandjohnson/bodiless-js/commit/df03dbf85368ee6c9b9223a5dc356b7880d09b71)), closes [#668](https://github.com/johnsonandjohnson/bodiless-js/issues/668)
+* **filtering:** Filter Enhancements ([#1021](https://github.com/johnsonandjohnson/bodiless-js/issues/1021)) ([20bd3e1](https://github.com/johnsonandjohnson/bodiless-js/commit/20bd3e1afe534629be1deedf69bdf8e27c71f151))
+* **layout:** fix rtl flow container.  ([#775](https://github.com/johnsonandjohnson/bodiless-js/issues/775)) ([4be9cec](https://github.com/johnsonandjohnson/bodiless-js/commit/4be9ceca7a9d0986cd231d43f5eeabe28b9eea1a))
+* Modify new page creation ([#673](https://github.com/johnsonandjohnson/bodiless-js/issues/673)) ([7af4642](https://github.com/johnsonandjohnson/bodiless-js/commit/7af46424eee422b4c4d6b3a55f25d0c80eac4d61))
+* **redirect:** Ability edit redirects ([#1330](https://github.com/johnsonandjohnson/bodiless-js/issues/1330)) ([aad069b](https://github.com/johnsonandjohnson/bodiless-js/commit/aad069bcc82f065c681d78cde59249d56350d938))
+* **search:** Add @bodiless/vital-search ([#1628](https://github.com/johnsonandjohnson/bodiless-js/issues/1628)) ([7ce3fb8](https://github.com/johnsonandjohnson/bodiless-js/commit/7ce3fb8e943d50be19e59758a8bc4452a06e61f9))
+* **unpublish:** User can see a link is disabled in edit mode ([#1207](https://github.com/johnsonandjohnson/bodiless-js/issues/1207)) ([dd002f3](https://github.com/johnsonandjohnson/bodiless-js/commit/dd002f39522b445619b3a318b0417e1ba620bdb7))
+
+
+
+
+
 # [1.0.0-rc.3](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.2...v1.0.0-rc.3) (2022-06-10)
 
 **Note:** Version bump only for package @bodiless/ui
