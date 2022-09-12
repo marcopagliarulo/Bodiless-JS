@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.16](https://github.com/johnsonandjohnson/Bodiless-JS/compare/v0.0.56...v1.0.0-rc.16) (2022-09-12)
+
+
+### Features
+
+* **bodiless-ga4 & akamai-auth:** Update the Bodiless GA4 plugin and add Akamai Auth Plugin [canary] ([#1647](https://github.com/johnsonandjohnson/Bodiless-JS/issues/1647)) ([200d935](https://github.com/johnsonandjohnson/Bodiless-JS/commit/200d93523da2d68e8740a98bf18a496d3c077060))
+
+
+
+
+
 # [1.0.0-rc.15](https://github.com/johnsonandjohnson/Bodiless-JS/compare/v1.0.0-rc.14...v1.0.0-rc.15) (2022-08-24)
 
 **Note:** Version bump only for package @bodiless/gatsby-plugin-akamai-auth

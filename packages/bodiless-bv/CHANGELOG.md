@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.16](https://github.com/johnsonandjohnson/bodiless-js/compare/v0.0.56...v1.0.0-rc.16) (2022-09-12)
+
+
+### Bug Fixes
+
+* Correct exports of package tailwind configs and starter activation. ([#1538](https://github.com/johnsonandjohnson/bodiless-js/issues/1538)) ([51f5a54](https://github.com/johnsonandjohnson/bodiless-js/commit/51f5a547517880cce55622f81c1aef906ca661f7))
+
+
+### Features
+
+* Add tree shaking support to all browser packages ([#1251](https://github.com/johnsonandjohnson/bodiless-js/issues/1251)) ([0c73113](https://github.com/johnsonandjohnson/bodiless-js/commit/0c73113c7c2d0c9dcc2dd8be922048173b1e9138)), closes [#1254](https://github.com/johnsonandjohnson/bodiless-js/issues/1254) [#1244](https://github.com/johnsonandjohnson/bodiless-js/issues/1244) [#1245](https://github.com/johnsonandjohnson/bodiless-js/issues/1245) [#1261](https://github.com/johnsonandjohnson/bodiless-js/issues/1261) [#1283](https://github.com/johnsonandjohnson/bodiless-js/issues/1283)
+* **bv:** Enable sites to configure BV per page. ([#1033](https://github.com/johnsonandjohnson/bodiless-js/issues/1033)) ([88feba7](https://github.com/johnsonandjohnson/bodiless-js/commit/88feba73564dbf50d90a42293041b04e122b3e6a))
+* **fclasses:** Design Keys ([#685](https://github.com/johnsonandjohnson/bodiless-js/issues/685)) ([0db060a](https://github.com/johnsonandjohnson/bodiless-js/commit/0db060ad1e7496553cd8eae3654770530d543010)), closes [#660](https://github.com/johnsonandjohnson/bodiless-js/issues/660)
+
+
+
+
+
 # [1.0.0-rc.15](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.14...v1.0.0-rc.15) (2022-08-24)
 
 **Note:** Version bump only for package @bodiless/bv

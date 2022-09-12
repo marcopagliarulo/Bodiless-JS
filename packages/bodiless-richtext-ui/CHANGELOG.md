@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.16](https://github.com/johnsonandjohnson/bodiless-js/compare/v0.0.56...v1.0.0-rc.16) (2022-09-12)
+
+
+### Bug Fixes
+
+* **bodiless-ui:** fix icon size & color ([#1596](https://github.com/johnsonandjohnson/bodiless-js/issues/1596)) ([e60b434](https://github.com/johnsonandjohnson/bodiless-js/commit/e60b43429511fa6c10774c01b12d1959841594de))
+* **bodiless-ui:** try find all missing bl- prefixes in editor  ([#1589](https://github.com/johnsonandjohnson/bodiless-js/issues/1589)) ([942cfd6](https://github.com/johnsonandjohnson/bodiless-js/commit/942cfd6dc522341a757f70b84cf6879f5690332b))
+* **richtext, richtext-ui:** Additional ... in RTE throws type is invalid error and serves WSOD ([#536](https://github.com/johnsonandjohnson/bodiless-js/issues/536)) ([d35ddd4](https://github.com/johnsonandjohnson/bodiless-js/commit/d35ddd43b9a26f43d0adcf8adbc91cde3f2d6463))
+* **richtext:** Local Context Menu with a selected style option stays visible after opening an Admin Menu form ([#795](https://github.com/johnsonandjohnson/bodiless-js/issues/795)) ([9b6858e](https://github.com/johnsonandjohnson/bodiless-js/commit/9b6858ed81d75da2049bc708efe45ffe0c1c38e6))
+
+
+### Features
+
+* Add tree shaking support to all browser packages ([#1251](https://github.com/johnsonandjohnson/bodiless-js/issues/1251)) ([0c73113](https://github.com/johnsonandjohnson/bodiless-js/commit/0c73113c7c2d0c9dcc2dd8be922048173b1e9138)), closes [#1254](https://github.com/johnsonandjohnson/bodiless-js/issues/1254) [#1244](https://github.com/johnsonandjohnson/bodiless-js/issues/1244) [#1245](https://github.com/johnsonandjohnson/bodiless-js/issues/1245) [#1261](https://github.com/johnsonandjohnson/bodiless-js/issues/1261) [#1283](https://github.com/johnsonandjohnson/bodiless-js/issues/1283)
+
+
+
+
+
 # [1.0.0-rc.15](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.14...v1.0.0-rc.15) (2022-08-24)
 
 **Note:** Version bump only for package @bodiless/richtext-ui

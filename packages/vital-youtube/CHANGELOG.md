@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.16](https://github.com/johnsonandjohnson/bodiless-js/compare/v0.0.56...v1.0.0-rc.16) (2022-09-12)
+
+
+### Bug Fixes
+
+* **release:** Make schema-org and vital-youtube packages public ([#1795](https://github.com/johnsonandjohnson/bodiless-js/issues/1795)) ([209e84c](https://github.com/johnsonandjohnson/bodiless-js/commit/209e84c36556237cde51075650e797c131fb5561))
+* **vital-test, __vital__:** fix Shadowing and move to vital-test ([#1787](https://github.com/johnsonandjohnson/bodiless-js/issues/1787)) ([33be350](https://github.com/johnsonandjohnson/bodiless-js/commit/33be350c21971f0a083efba94e360fbe928a071e))
+
+
+### Features
+
+* **vital-hero, vital-image, vital-card:** Add Hero & Card component and update Image  ([#1500](https://github.com/johnsonandjohnson/bodiless-js/issues/1500)) ([95f2c3d](https://github.com/johnsonandjohnson/bodiless-js/commit/95f2c3dcf06c6f51bb6b3d252ca6f4f576899dd4)), closes [pr#1498](https://github.com/pr/issues/1498)
+
+
+
+
+
 # [1.0.0-rc.15](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.14...v1.0.0-rc.15) (2022-08-24)
 
 **Note:** Version bump only for package @bodiless/vital-youtube

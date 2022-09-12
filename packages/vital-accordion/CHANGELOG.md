@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.16](https://github.com/johnsonandjohnson/bodiless-js/compare/v0.0.56...v1.0.0-rc.16) (2022-09-12)
+
+
+### Features
+
+* **vital-accordion:** Add vital-accordion package ([#1899](https://github.com/johnsonandjohnson/bodiless-js/issues/1899)) ([d5e75a6](https://github.com/johnsonandjohnson/bodiless-js/commit/d5e75a60d33938d09c6b727506991d871e4b7975))
+
+
+
+
+
 # [1.0.0-rc.15](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.14...v1.0.0-rc.15) (2022-08-24)
 
 **Note:** Version bump only for package @bodiless/vital-accordion

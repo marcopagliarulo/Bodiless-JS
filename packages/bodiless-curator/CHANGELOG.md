@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.16](https://github.com/johnsonandjohnson/bodiless-js/compare/v0.0.56...v1.0.0-rc.16) (2022-09-12)
+
+
+### Bug Fixes
+
+* Add missing docs to packages. ([#1556](https://github.com/johnsonandjohnson/bodiless-js/issues/1556)) ([2a4bc3d](https://github.com/johnsonandjohnson/bodiless-js/commit/2a4bc3db9a597eb4b811044b3acde4a44f4c98e8))
+* Correct exports of package tailwind configs and starter activation. ([#1538](https://github.com/johnsonandjohnson/bodiless-js/issues/1538)) ([51f5a54](https://github.com/johnsonandjohnson/bodiless-js/commit/51f5a547517880cce55622f81c1aef906ca661f7))
+* **lint:** fixing ESlint detecting common syntax issue ([#1343](https://github.com/johnsonandjohnson/bodiless-js/issues/1343)) ([92f0099](https://github.com/johnsonandjohnson/bodiless-js/commit/92f00996f35dcd4e6b58d2d6344d596b02307237))
+
+
+
+
+
 # [1.0.0-rc.15](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.14...v1.0.0-rc.15) (2022-08-24)
 
 **Note:** Version bump only for package @bodiless/curator

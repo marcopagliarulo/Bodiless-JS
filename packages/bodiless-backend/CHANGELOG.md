@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.16](https://github.com/marcopagliarulo/Bodiless-JS/compare/v0.0.56...v1.0.0-rc.16) (2022-09-12)
+
+
+### Bug Fixes
+
+* **backend:** backend failed due to incomplete git operation ([#983](https://github.com/marcopagliarulo/Bodiless-JS/issues/983)) ([d75ac97](https://github.com/marcopagliarulo/Bodiless-JS/commit/d75ac97d0a1db845669d0618da0f928788b1a3db)), closes [#982](https://github.com/marcopagliarulo/Bodiless-JS/issues/982)
+* **backend:** clone page breaking with certain pages ([#1183](https://github.com/marcopagliarulo/Bodiless-JS/issues/1183)) ([96754f7](https://github.com/marcopagliarulo/Bodiless-JS/commit/96754f7765eecc984e0e06ac10af3b6797820096))
+* **bodiless-backend:** copy root repo credential helper to tmp clone ([#1674](https://github.com/marcopagliarulo/Bodiless-JS/issues/1674)) ([2caa210](https://github.com/marcopagliarulo/Bodiless-JS/commit/2caa2103147424bcb7906d08ab7a59e6e6822a3b))
+* **bodiless-backend:** Fix image assets paths to be replaced on clone operation ([#1652](https://github.com/marcopagliarulo/Bodiless-JS/issues/1652)) ([925cc59](https://github.com/marcopagliarulo/Bodiless-JS/commit/925cc593f212df42b6979e4e3aebb8a5796b080c))
+* **bodiless-page:** 500 error message update ([#1665](https://github.com/marcopagliarulo/Bodiless-JS/issues/1665)) ([9ab9161](https://github.com/marcopagliarulo/Bodiless-JS/commit/9ab91615be2e81c9b4b3989c4f63a128d4076608))
+* Correct exports of package tailwind configs and starter activation. ([#1538](https://github.com/marcopagliarulo/Bodiless-JS/issues/1538)) ([51f5a54](https://github.com/marcopagliarulo/Bodiless-JS/commit/51f5a547517880cce55622f81c1aef906ca661f7))
+* **lint:** fixing ESlint detecting common syntax issue ([#1343](https://github.com/marcopagliarulo/Bodiless-JS/issues/1343)) ([92f0099](https://github.com/marcopagliarulo/Bodiless-JS/commit/92f00996f35dcd4e6b58d2d6344d596b02307237))
+* **page move:** Move assets on moved pages. ([#1326](https://github.com/marcopagliarulo/Bodiless-JS/issues/1326)) ([51ca192](https://github.com/marcopagliarulo/Bodiless-JS/commit/51ca192f35b369f4664667ea356759e5d7752690))
+
+
+### Features
+
+* **bodiless-backend,gatsby-theme-bodiless:** Add page clone button  ([#1144](https://github.com/marcopagliarulo/Bodiless-JS/issues/1144)) ([6aa65c1](https://github.com/marcopagliarulo/Bodiless-JS/commit/6aa65c146e7c30b23b467fa22cd9bc5f7cb80f35))
+* **components:** Link to Downloadable Files ([#985](https://github.com/marcopagliarulo/Bodiless-JS/issues/985)) ([f8782b4](https://github.com/marcopagliarulo/Bodiless-JS/commit/f8782b4b77964ce93b733052c9e3c31f88cac901))
+* Fully disable save by env var. ([#1600](https://github.com/marcopagliarulo/Bodiless-JS/issues/1600)) ([b19cd73](https://github.com/marcopagliarulo/Bodiless-JS/commit/b19cd73422bcbb5e82125c4936b7aeb0c7c9cc7e)), closes [#1479](https://github.com/marcopagliarulo/Bodiless-JS/issues/1479) [#1522](https://github.com/marcopagliarulo/Bodiless-JS/issues/1522) [#1479](https://github.com/marcopagliarulo/Bodiless-JS/issues/1479)
+* **gatsby-theme-bodiless:** Implements delete page functionality ([#392](https://github.com/marcopagliarulo/Bodiless-JS/issues/392)) ([#1125](https://github.com/marcopagliarulo/Bodiless-JS/issues/1125)) ([8f52447](https://github.com/marcopagliarulo/Bodiless-JS/commit/8f52447c5a03222c068d8cfb1a973e34d944f21c))
+* **gatsby-theme-bodiless:** Implements move page functionality ([#1054](https://github.com/marcopagliarulo/Bodiless-JS/issues/1054)) ([#1252](https://github.com/marcopagliarulo/Bodiless-JS/issues/1252)) ([1d2b9a0](https://github.com/marcopagliarulo/Bodiless-JS/commit/1d2b9a092751f5de01153a7fb398cffbe9f8a63f))
+* **Layout, Content library:** content Library item created on a deleted page uses src of this … ([#1358](https://github.com/marcopagliarulo/Bodiless-JS/issues/1358)) ([86d132d](https://github.com/marcopagliarulo/Bodiless-JS/commit/86d132dc3a322dc3dd07036192a5a27a503ef61a))
+* Modify new page creation ([#673](https://github.com/marcopagliarulo/Bodiless-JS/issues/673)) ([7af4642](https://github.com/marcopagliarulo/Bodiless-JS/commit/7af46424eee422b4c4d6b3a55f25d0c80eac4d61))
+
+
+
+
+
 # [1.0.0-rc.15](https://github.com/johnsonandjohnson/Bodiless-JS/compare/v1.0.0-rc.14...v1.0.0-rc.15) (2022-08-24)
 
 **Note:** Version bump only for package @bodiless/backend

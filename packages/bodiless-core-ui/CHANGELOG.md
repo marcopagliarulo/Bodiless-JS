@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.16](https://github.com/johnsonandjohnson/bodiless-js/compare/v0.0.56...v1.0.0-rc.16) (2022-09-12)
+
+
+### Bug Fixes
+
+* **bodiless-ui:** try find all missing bl- prefixes in editor  ([#1589](https://github.com/johnsonandjohnson/bodiless-js/issues/1589)) ([942cfd6](https://github.com/johnsonandjohnson/bodiless-js/commit/942cfd6dc522341a757f70b84cf6879f5690332b))
+* **core:** The forms overlay the bottom part of Local Menus ([#562](https://github.com/johnsonandjohnson/bodiless-js/issues/562)) ([cd1458f](https://github.com/johnsonandjohnson/bodiless-js/commit/cd1458f52658d372fa83921c9a331d4060f45f9e))
+* **informed:** Unlock "informed" package version, fix related issues ([#1212](https://github.com/johnsonandjohnson/bodiless-js/issues/1212)) ([7742a3f](https://github.com/johnsonandjohnson/bodiless-js/commit/7742a3ff614b0c58a35b5c028852e74645266591))
+
+
+### Features
+
+* Add tree shaking support to all browser packages ([#1251](https://github.com/johnsonandjohnson/bodiless-js/issues/1251)) ([0c73113](https://github.com/johnsonandjohnson/bodiless-js/commit/0c73113c7c2d0c9dcc2dd8be922048173b1e9138)), closes [#1254](https://github.com/johnsonandjohnson/bodiless-js/issues/1254) [#1244](https://github.com/johnsonandjohnson/bodiless-js/issues/1244) [#1245](https://github.com/johnsonandjohnson/bodiless-js/issues/1245) [#1261](https://github.com/johnsonandjohnson/bodiless-js/issues/1261) [#1283](https://github.com/johnsonandjohnson/bodiless-js/issues/1283)
+* **bodiless-core-ui:** activate context for group in Local context menu ([#861](https://github.com/johnsonandjohnson/bodiless-js/issues/861)) ([2581ada](https://github.com/johnsonandjohnson/bodiless-js/commit/2581adae82a986670a56e83178f93f5cfd3fe2a2))
+* **bodiless-ui,bodiless-core-ui,bodiless-layouts:** Context Menu Enhancements : RTL divider & Component Label ([#816](https://github.com/johnsonandjohnson/bodiless-js/issues/816)) ([f74bc0d](https://github.com/johnsonandjohnson/bodiless-js/commit/f74bc0d0fa63f828ecd4d7b9459c21b2d19c159b))
+* **components,organisms:** Mega-menu support ([#572](https://github.com/johnsonandjohnson/bodiless-js/issues/572)) ([9f43d0e](https://github.com/johnsonandjohnson/bodiless-js/commit/9f43d0e38abd7b7ac48d8ea1c3c06a97cf48fdef)), closes [#546](https://github.com/johnsonandjohnson/bodiless-js/issues/546)
+* **components:** youtube and iframe ([#569](https://github.com/johnsonandjohnson/bodiless-js/issues/569)) ([388166c](https://github.com/johnsonandjohnson/bodiless-js/commit/388166cdbeebedc71bd287c2794867c76f09b794))
+* **core,components:** Edit button improvements ([#878](https://github.com/johnsonandjohnson/bodiless-js/issues/878)) ([4d762b9](https://github.com/johnsonandjohnson/bodiless-js/commit/4d762b91f10c714dab1ad827002f4026b0beffbb)), closes [#624](https://github.com/johnsonandjohnson/bodiless-js/issues/624) [#794](https://github.com/johnsonandjohnson/bodiless-js/issues/794) [#624](https://github.com/johnsonandjohnson/bodiless-js/issues/624) [#794](https://github.com/johnsonandjohnson/bodiless-js/issues/794)
+
+
+### BREAKING CHANGES
+
+* **core,components:** Structure of compound form data has changed.
+
+Fields in compound forms are now namespaced by the snippet id.
+
+Since edit forms (those created by withEditButton or asBodilessComponent) are now
+compound forms, this change affects them as well.
+
+
+
+
+
 # [1.0.0-rc.15](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.14...v1.0.0-rc.15) (2022-08-24)
 
 **Note:** Version bump only for package @bodiless/core-ui

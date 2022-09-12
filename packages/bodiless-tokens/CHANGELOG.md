@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-rc.16](https://github.com/johnsonandjohnson/bodiless-js/compare/v0.0.56...v1.0.0-rc.16) (2022-09-12)
+
+
+### Bug Fixes
+
+* Add missing docs to packages. ([#1556](https://github.com/johnsonandjohnson/bodiless-js/issues/1556)) ([2a4bc3d](https://github.com/johnsonandjohnson/bodiless-js/commit/2a4bc3db9a597eb4b811044b3acde4a44f4c98e8))
+* **bodiless-ui:** fix close/submit icon, Warning, RTE icons ([#1604](https://github.com/johnsonandjohnson/bodiless-js/issues/1604)) ([5f4ca2c](https://github.com/johnsonandjohnson/bodiless-js/commit/5f4ca2c8a112a08a9ec441bf4ae151af32c50569))
+* **bodiless-ui:** try find all missing bl- prefixes in editor  ([#1589](https://github.com/johnsonandjohnson/bodiless-js/issues/1589)) ([942cfd6](https://github.com/johnsonandjohnson/bodiless-js/commit/942cfd6dc522341a757f70b84cf6879f5690332b))
+* **gatsby-theme-bodiless:** Revert crypto-js ([4cb1c8a](https://github.com/johnsonandjohnson/bodiless-js/commit/4cb1c8ab61186e138bed7d3ce47436d4530f90a2))
+* **informed:** Unlock "informed" package version, fix related issues ([#1212](https://github.com/johnsonandjohnson/bodiless-js/issues/1212)) ([7742a3f](https://github.com/johnsonandjohnson/bodiless-js/commit/7742a3ff614b0c58a35b5c028852e74645266591))
+
+
+### Features
+
+* Add tree shaking support to all browser packages ([#1251](https://github.com/johnsonandjohnson/bodiless-js/issues/1251)) ([0c73113](https://github.com/johnsonandjohnson/bodiless-js/commit/0c73113c7c2d0c9dcc2dd8be922048173b1e9138)), closes [#1254](https://github.com/johnsonandjohnson/bodiless-js/issues/1254) [#1244](https://github.com/johnsonandjohnson/bodiless-js/issues/1244) [#1245](https://github.com/johnsonandjohnson/bodiless-js/issues/1245) [#1261](https://github.com/johnsonandjohnson/bodiless-js/issues/1261) [#1283](https://github.com/johnsonandjohnson/bodiless-js/issues/1283)
+* **Content library:** Content editor can create Library Item ([#1191](https://github.com/johnsonandjohnson/bodiless-js/issues/1191)) ([0569087](https://github.com/johnsonandjohnson/bodiless-js/commit/05690870ba6ee2d17c168b981e69e6184ebaac8a)), closes [#839](https://github.com/johnsonandjohnson/bodiless-js/issues/839)
+* **tokens:** Token Browser ([#926](https://github.com/johnsonandjohnson/bodiless-js/issues/926)) ([c09d22d](https://github.com/johnsonandjohnson/bodiless-js/commit/c09d22d9644558f370084d219fbfe698832f0cd3)), closes [#925](https://github.com/johnsonandjohnson/bodiless-js/issues/925)
+
+
+
+
+
 # [1.0.0-rc.15](https://github.com/johnsonandjohnson/bodiless-js/compare/v1.0.0-rc.14...v1.0.0-rc.15) (2022-08-24)
 
 **Note:** Version bump only for package @bodiless/tokens
