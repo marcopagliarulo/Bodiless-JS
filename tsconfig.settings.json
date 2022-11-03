@@ -115,7 +115,9 @@
       "@bodiless/fclasses": ["fclasses/src"],
       "@bodiless/fclasses/*": ["fclasses/src/*"],
       "@bodiless/gatsby-theme-bodiless": ["gatsby-theme-bodiless/src"],
-      "@bodiless/gatsby-theme-bodiless/*": ["gatsby-theme-bodiless/src/*"]
+      "@bodiless/gatsby-theme-bodiless/*": ["gatsby-theme-bodiless/src/*"],
+      "@bodiless/contentful-editor": ["bodiless-contentful-editor/src"],
+      "@bodiless/contentful-editor/*": ["bodiless-contentful-editor/src/*"]
     }
   }
 }
