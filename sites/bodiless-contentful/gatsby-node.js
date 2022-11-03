@@ -1,4 +1,4 @@
-const { addTokenShadowPlugin, addStatoscopePlugin } = require('@bodiless/webpack');
+const { addTokenShadowPlugin } = require('@bodiless/webpack');
 const shadow = require('--vital--/shadow');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require('path');
