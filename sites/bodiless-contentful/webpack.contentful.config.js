@@ -1,7 +1,35 @@
 const webpack = require('webpack');
+const { addTokenShadowPlugin } = require('@bodiless/webpack');
+const shadow = require('--vital--/shadow');
+const contentfulShadown = require('@vital/contentful-editor/shadow');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const fs = require('fs');
 const path = require('path');
+const getbuildCSSPlugins = require('@bodiless/gatsby-theme-bodiless/build-css');
 const babelConfig = require('./babel.config');
+
+const getTailwindConfig = () => {
+  const processDirFile = path.resolve(process.cwd(), 'tailwind.config.js');
+  if (fs.existsSync(processDirFile)) {
+    return processDirFile;
+  }
+  const siteDirFile = path.resolve(__dirname, 'tailwind.config.js');
+  if (fs.existsSync(siteDirFile)) {
+    return siteDirFile;
+  }
+  return false;
+};
+
+const tokenShadowPlugin = addTokenShadowPlugin({}, { resolvers: [contentfulShadown, shadow] });
+process.env.BODILESS_TAILWIND_THEME_ENABLED=1;
+const tailWindConfigFile = getTailwindConfig();
+console.log(tailWindConfigFile);
+const postCssPlugins = tailWindConfigFile ? [
+  // eslint-disable-next-line global-require
+  require('tailwindcss')(tailWindConfigFile),
+  // eslint-disable-next-line global-require
+  require('autoprefixer')(),
+] : [];
 
 module.exports = {
   entry: './src/index.tsx',
@@ -33,7 +61,14 @@ module.exports = {
         use: [
           { loader: 'style-loader' },
           { loader: 'css-loader' },
-          { loader: 'postcss-loader' },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: postCssPlugins,
+              }
+            }
+          },
         ],
       },
       {
@@ -47,7 +82,7 @@ module.exports = {
         options: babelConfig,
       },
       {
-        test: [/\.jpeg?$/, /\.jpg?$/, /\.svg?$/, /\.png?$/],
+        test: [/\.jpeg?$/, /\.jpg?$/, /\.svg?$/, /\.png?$/, /\.woff?$/, /\.woff2?$/, /\.eot?$/, /\.ttf?$/],
         loader: require.resolve('url-loader'),
       },
     ],
@@ -60,7 +95,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html'
-    })
+    }),
+    ...tokenShadowPlugin.plugins
   ],
   optimization: {
     splitChunks: false,

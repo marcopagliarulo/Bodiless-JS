@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import './css/style.css';
 
 import DefaultPage from './templates/_default';
 
@@ -19,7 +20,10 @@ const Page = () => {
 
   return React.createElement(
     DefaultPage,
-    {},
+    {
+      pageContext,
+      pageData,
+    }
   );
 };
 
