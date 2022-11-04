@@ -247,22 +247,45 @@ export class ContentfulClient implements BodilessStoreBackend {
 
   clonePage(origin: string, destination: string) {
     const payload = {
-      origin,
-      destination,
+      path: {
+        'en-US': destination
+      },
     };
-    console.log('clonePage');
-    console.log(payload);
-    return Promise.resolve() as unknown as AxiosPromise<any>;
+    return this.getContentType('page')
+      .then(() => this.getPage(origin))
+      .then((entries: CollectionProp<EntryProps>) => {
+        if (entries.total === 0) {
+          throw new Error(JSON.stringify({
+            ...this.response,
+            status: 409,
+            statusText: `Error: page ${origin} doesn't exists`,
+          }));
+        }
+        const props = { ...entries.items[0], ...{ fields: payload} };
+        return this.createEntry('page', props);
+      });
+    // Handle content clone from here.
   }
 
   movePage(origin: string, destination: string) {
     const payload = {
-      origin,
-      destination,
+      path: {
+        'en-US': destination
+      },
     };
-    console.log(payload);
-    console.log('movePage');
-    return Promise.resolve() as unknown as AxiosPromise<any>;
+    return this.getContentType('page')
+      .then(() => this.getPage(origin))
+      .then((entries: CollectionProp<EntryProps>) => {
+        if (entries.total === 0) {
+          throw new Error(JSON.stringify({
+            ...this.response,
+            status: 409,
+            statusText: `Error: page ${origin} doesn't exists`,
+          }));
+        }
+        const entryId = entries.items[0].sys.id;
+        const props = { ...entries.items[0], ...{ fields: payload} };
+        return this.updateEntry(entryId, props);
+      });
   }
-
 }
