@@ -12,7 +12,13 @@
  * limitations under the License.
  */
 
-import React, { FC, ComponentType, Fragment } from 'react';
+import React, {
+  FC,
+  ComponentType,
+  Fragment,
+  useEffect,
+  useState
+} from 'react';
 import {
   NotificationProvider,
   withNotificationButton,
@@ -32,6 +38,7 @@ import { PageProps } from '@bodiless/gatsby-theme-bodiless';
 import { SDKProvider, useSDK } from '@contentful/react-apps-toolkit';
 import { ContentfulStoreProvider } from './ContentfulEditProvider';
 import { ContentfulEditPageButtons } from './ContentfulEditPageButtons';
+import { ContentfulClientDataRetriever } from './ContentfulClientDataRetriever';
 
 const defaultUI: FinalUI = {
   ContextWrapper,
@@ -62,6 +69,18 @@ export const ContentfulStoreProviderWithSDK: FC<ContentfulPageProp> = ({
 }) => {
   const sdk = useSDK();
 
+  const [contentfulData, setContentfulData] = useState(new Map());
+
+  useEffect(() => {
+    // React advises to declare the async function directly inside useEffect
+    async function getData() {
+      const contentfulData = await ContentfulClientDataRetriever(sdk, pagePath);
+      setContentfulData(contentfulData);
+    }
+
+    getData();
+  }, []);
+
   const { PageEditor: Editor, ContextWrapper: Wrapper } = getUI(ui);
   const { pageContext } = rest;
   const {
@@ -69,16 +88,16 @@ export const ContentfulStoreProviderWithSDK: FC<ContentfulPageProp> = ({
     slug, subPageTemplate, template,
   } = pageContext;
 
+  const pagePath = window.location.pathname || slug;
+
   const pageData = {
-    pagePath: slug,
+    pagePath,
     subPageTemplate,
     template,
   };
 
-  data.set('sdk', sdk);
-
-  return (
-    <ContentfulStoreProvider {...rest} data={data}>
+  return contentfulData.get('sdk') ? (
+    <ContentfulStoreProvider {...rest} data={contentfulData}>
       <PageDataProvider pageData={pageData}>
         <NotificationProvider>
           <SwitcherButton />
@@ -95,7 +114,7 @@ export const ContentfulStoreProviderWithSDK: FC<ContentfulPageProp> = ({
         </NotificationProvider>
       </PageDataProvider>
     </ContentfulStoreProvider>
-  );
+  ): <>Waiting for the SDK to be loaded</>;
 };
 
 export const ContentfulEditPage: FC<ContentfulPageProp> = observer((props) => (

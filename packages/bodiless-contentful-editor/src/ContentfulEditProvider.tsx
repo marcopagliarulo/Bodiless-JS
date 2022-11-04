@@ -23,8 +23,9 @@ export class ContentfulStoreProvider extends BodilessStoreProvider {
    * @param config
    */
   protected createStore(): BodilessStore<any> {
-    const sdk = this.props.data.get('sdk');
-    this.props.data.delete('sdk');
+    const { data } = this.props;
+    const sdk = data.get('sdk');
+    data.delete('sdk');
     return new DefaultStore({ slug: this.slug, client: new ContentfulClient(sdk) });
   }
 }
