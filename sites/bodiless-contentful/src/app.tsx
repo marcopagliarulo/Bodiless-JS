@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import './css/style.css';
 
+//  @ts-ignore
 import DefaultPage from './templates/_default';
 
 const root = document.getElementById('root');

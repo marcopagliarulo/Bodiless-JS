@@ -23,7 +23,7 @@ const getTailwindConfig = () => {
 const tokenShadowPlugin = addTokenShadowPlugin({}, { resolvers: [contentfulShadown, shadow] });
 process.env.BODILESS_TAILWIND_THEME_ENABLED=1;
 const tailWindConfigFile = getTailwindConfig();
-console.log(tailWindConfigFile);
+
 const postCssPlugins = tailWindConfigFile ? [
   // eslint-disable-next-line global-require
   require('tailwindcss')(tailWindConfigFile),
@@ -32,7 +32,7 @@ const postCssPlugins = tailWindConfigFile ? [
 ] : [];
 
 module.exports = {
-  entry: './src/index.tsx',
+  entry: './src/app.tsx',
   devtool: 'source-map',
   devServer: {
     compress: true,
