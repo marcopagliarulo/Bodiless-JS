@@ -4,12 +4,7 @@ import { AxiosPromise, AxiosResponse } from 'axios';
 import { createClient } from 'contentful-management';
 import { KnownSDK } from '@contentful/app-sdk';
 
-import type { PlainClientAPI, EntryProps, KeyValueMap, CollectionProp } from 'contentful-management';
-
-type ContentfulPageData = {
-  path: KeyValueMap,
-  template?: KeyValueMap
-};
+import type { PlainClientAPI, EntryProps, CollectionProp } from 'contentful-management';
 
 export class ContentfulClient implements BodilessStoreBackend {
   private cma: PlainClientAPI;
@@ -44,7 +39,7 @@ export class ContentfulClient implements BodilessStoreBackend {
         throw new Error(JSON.stringify({
           ...this.response,
           status: 501,
-          statusText: 'Error: content type page doesn\'t exists',
+          statusText: 'Error: content type doesn\'t exists',
         }));
       });
   }
@@ -58,9 +53,9 @@ export class ContentfulClient implements BodilessStoreBackend {
     });
   }
 
-  createPage(payload: ContentfulPageData) {
+  createEntry(contentTypeId: string, payload: any) {
     return this.cma.entry.create(
-      {contentTypeId: 'page'},
+      {contentTypeId},
       {
         fields: payload,
       }
@@ -74,13 +69,40 @@ export class ContentfulClient implements BodilessStoreBackend {
       });
   }
 
-  publishPage(entryId: string, props: EntryProps) {
+  updateEntry(entryId: string, props: EntryProps) {
+    return this.cma.entry.update(
+      { entryId },
+      {
+        ...props,
+      }
+    )
+      .catch((error) => {
+        throw new Error(JSON.stringify({
+          ...this.response,
+          status: 500,
+          statusText: `Error: ${JSON.parse(error.message).message}`,
+        }));
+      });
+  }
+
+  publishEntry(entryId: string, props: EntryProps) {
     return this.cma.entry.publish({ entryId }, props)
       .catch(() => {
         throw new Error(JSON.stringify({
           ...this.response,
           status: 500,
-          statusText: 'Error: Unable to publish the page.',
+          statusText: 'Error: Unable to publish the entry.',
+        }));
+      });
+  }
+
+  unpublishEntry(entryId: string) {
+    return this.cma.entry.unpublish({ entryId })
+      .catch(() => {
+        throw new Error(JSON.stringify({
+          ...this.response,
+          status: 500,
+          statusText: 'Error: Unable to unpublish the entry.',
         }));
       });
   }
@@ -112,10 +134,10 @@ export class ContentfulClient implements BodilessStoreBackend {
           }));
         }
       })
-      .then(() => this.createPage(payload))
+      .then(() => this.createEntry('page', payload))
       .then((props: EntryProps) => {
         const entryId = props.sys.id;
-        return this.publishPage(entryId, props)
+        return this.publishEntry(entryId, props)
           .then(() => ({ ...this.response, data }));
       })
       .catch((error) => JSON.parse(error.message));
@@ -141,43 +163,86 @@ export class ContentfulClient implements BodilessStoreBackend {
       .catch((error) => JSON.parse(error.message));
   }
 
+  getPath(path: string) {
+    return this.cma.entry.getMany({
+      query: {
+        content_type: 'path',
+        'fields.path': path,
+      }
+    });
+  }
+
   /**
    * Posts a message back to the parent window containing the data to be serialized.
    * Note - these data should be **merged** with data which were previously serialized.
    */
-   savePath(resourcePath: string, data: any): Promise<any> {
-    console.log(resourcePath);
-    console.log(JSON.parse(JSON.stringify(data)));
-    return Promise.resolve();
+  savePath(resourcePath: string, data: any): Promise<any> {
+    const payload = {
+      path: {
+        'en-US': resourcePath
+      },
+      content: {
+        'en-US': JSON.parse(JSON.stringify(data))
+      }
+    };
+
+    return this.getContentType('path')
+      .then(() => this.getPath(resourcePath))
+      .then((entries: CollectionProp<EntryProps>) => {
+        if (entries.total === 0) {
+          return this.createEntry('path', payload);
+        }
+        const entryId = entries.items[0].sys.id;
+        const props = { ...entries.items[0], ...{ fields: payload} };
+        return this.updateEntry(entryId, props);
+      })
+      .then((props: EntryProps) => {
+        const entryId = props.sys.id;
+        return this.publishEntry(entryId, props)
+          .then(() => ({ ...this.response, data }));
+      })
+      .catch((error) => JSON.parse(error.message));
   }
 
-  deletePath(): Promise<any> {
-    console.log('deletePath');
-    // No need to worry about deleting items.
-    return Promise.resolve();
-  }
-
-  get(resourcePath: string) {
-    console.log('get');
-    return Promise.resolve();
-  }
-
-  post(resourcePath: string, data: any) {
-    console.log('post');
-    return Promise.resolve();
-  }
-
-  delete(resourcePath: string) {
-    console.log('delete');
-    return Promise.resolve();
+  deletePath(resourcePath: string): Promise<any> {
+    return this.getContentType('path')
+      .then(() => this.getPath(resourcePath))
+      .then((entries: CollectionProp<EntryProps>) => {
+        if (entries.total === 0) {
+          throw new Error(JSON.stringify({
+            ...this.response,
+            status: 409,
+            statusText: `Error: page ${resourcePath} doesn't exists`,
+          }));
+        }
+        return entries;
+      })
+      .then((entries: CollectionProp<EntryProps>) => {
+        const entryId = entries.items[0].sys.id;
+        return this.cma.entry.unpublish({ entryId });
+      })
+      .then((props: EntryProps) => {
+        const entryId = props.sys.id;
+        return this.cma.entry.delete({ entryId });
+      })
+      .catch((error) => JSON.parse(error.message));
   }
 
   disablePage(path: string) {
-  }
-
-  log() {
-    console.log('log');
-    return Promise.resolve();
+    return this.getContentType('page')
+      .then(() => this.getPage(path))
+      .then((entries: CollectionProp<EntryProps>) => {
+        if (entries.total === 0) {
+          throw new Error(JSON.stringify({
+            ...this.response,
+            status: 409,
+            statusText: `Error: page ${path} doesn't exists`,
+          }));
+        }
+        const entryId = entries.items[0].sys.id;
+        return this.unpublishEntry(entryId)
+          .then(() => ({ ...this.response }));
+      });
   }
 
   clonePage(origin: string, destination: string) {
