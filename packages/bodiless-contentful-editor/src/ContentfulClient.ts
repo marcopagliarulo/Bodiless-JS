@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { BodilessStoreBackend } from '@bodiless/core';
-import { AxiosPromise, AxiosResponse } from 'axios';
+import { AxiosResponse } from 'axios';
 import { createClient } from 'contentful-management';
 import { KnownSDK } from '@contentful/app-sdk';
 
@@ -262,8 +262,10 @@ export class ContentfulClient implements BodilessStoreBackend {
           }));
         }
         const props = { ...entries.items[0], ...{ fields: payload} };
-        return this.createEntry('page', props);
-      });
+        return this.createEntry('page', props)
+          .then(() => ({ ...this.response, ...{ data: { origin, destination } } }));
+      })
+      .catch((error) => JSON.parse(error.message));
     // Handle content clone from here.
   }
 
@@ -285,7 +287,9 @@ export class ContentfulClient implements BodilessStoreBackend {
         }
         const entryId = entries.items[0].sys.id;
         const props = { ...entries.items[0], ...{ fields: payload} };
-        return this.updateEntry(entryId, props);
-      });
+        return this.updateEntry(entryId, props)
+          .then(() => ({ ...this.response, ...{ data: { origin, destination } } }));
+      })
+      .catch((error) => JSON.parse(error.message));
   }
 }

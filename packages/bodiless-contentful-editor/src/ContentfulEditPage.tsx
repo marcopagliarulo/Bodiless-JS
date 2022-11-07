@@ -59,12 +59,11 @@ const SwitcherButton = withSwitcherButton(Fragment);
 const DisablePageButton = withPageDisableButton(Fragment);
 const RedirectAliasButton = withRedirectAliasButton(Fragment);
 
-type ContentfulPageProp = Omit<PageProps, 'gitInfo'>;
+export type ContentfulPageProp = Omit<PageProps, 'gitInfo' | 'data'>;
 
 export const ContentfulStoreProviderWithSDK: FC<ContentfulPageProp> = ({
   children,
   ui,
-  data = new Map(),
   ...rest
 }) => {
   const sdk = useSDK();

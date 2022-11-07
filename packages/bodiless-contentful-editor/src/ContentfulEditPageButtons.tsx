@@ -20,11 +20,11 @@ import {
   menuFormPageMove,
   menuFormPageClone,
   menuFormPageDelete,
-  menuFormPageNew,
   usePageMenuOptions,
 } from '@bodiless/page';
 import { useSDK } from '@contentful/react-apps-toolkit';
 import { ContentfulClient } from './ContentfulClient';
+import { menuFormPageNew } from './MenuFormPageNew';
 
 export const ContentfulEditPageButtons: FC = () => {
   const sdk = useSDK();
