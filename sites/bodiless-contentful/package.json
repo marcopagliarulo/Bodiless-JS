@@ -73,7 +73,7 @@
     "url": "https://github.com/johnsonandjohnson/bodiless-js.git"
   },
   "scripts": {
-    "build": "npm-run-all build:env-vars build:lib build:search",
+    "build": "npm-run-all build:env-vars build-contentful",
     "build:env-vars": "bodiless generate-env-vars",
     "build:lib": "bl-clear-logs && gatsby build && bl-validate-logs",
     "build:search": "create-search-index",
@@ -106,6 +106,7 @@
     "webpack-dev-server": "3.x",
     "html-webpack-plugin": "^5.5.0",
     "@bodiless/webpack": "^1.0.0-rc.22",
-    "postcss-loader": "5.3.0"
+    "postcss-loader": "5.3.0",
+    "mini-css-extract-plugin": "^2.6.1"
   }
 }

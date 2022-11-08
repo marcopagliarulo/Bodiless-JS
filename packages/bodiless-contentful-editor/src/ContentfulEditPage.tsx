@@ -64,39 +64,32 @@ export type ContentfulPageProp = Omit<PageProps, 'gitInfo' | 'data'>;
 export const ContentfulStoreProviderWithSDK: FC<ContentfulPageProp> = ({
   children,
   ui,
-  ...rest
+  pageData,
+  pageContext
 }) => {
   const sdk = useSDK();
+  const { PageEditor: Editor, ContextWrapper: Wrapper } = getUI(ui);
+  const {
+    // @ts-ignore non-existing gitInfo, subPageTemplate, and template, types in pageContext.
+    slug,
+  } = pageContext;
 
   const [contentfulData, setContentfulData] = useState(new Map());
 
   useEffect(() => {
     // React advises to declare the async function directly inside useEffect
     async function getData() {
-      const contentfulData = await ContentfulClientDataRetriever(sdk, pagePath);
+      const contentfulData = await ContentfulClientDataRetriever(
+        sdk, slug
+      );
       setContentfulData(contentfulData);
     }
 
     getData();
   }, []);
 
-  const { PageEditor: Editor, ContextWrapper: Wrapper } = getUI(ui);
-  const { pageContext } = rest;
-  const {
-    // @ts-ignore non-existing gitInfo, subPageTemplate, and template, types in pageContext.
-    slug, subPageTemplate, template,
-  } = pageContext;
-
-  const pagePath = window.location.pathname || slug;
-
-  const pageData = {
-    pagePath,
-    subPageTemplate,
-    template,
-  };
-
   return contentfulData.get('sdk') ? (
-    <ContentfulStoreProvider {...rest} data={contentfulData}>
+    <ContentfulStoreProvider pageContext={pageContext} data={contentfulData}>
       <PageDataProvider pageData={pageData}>
         <NotificationProvider>
           <SwitcherButton />

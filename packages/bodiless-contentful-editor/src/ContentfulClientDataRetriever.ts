@@ -15,6 +15,7 @@ export const ContentfulClientDataRetriever = async (sdk: KnownSDK, pagePath: str
     }
   );
   const result = new Map();
+  const pagePathNoTrailing = pagePath === '/' ? pagePath :pagePath.replace(/\/$/, '');
 
   // Temporary store sdk inside data object in order to pass it to the contentful client store.
   result.set('sdk', sdk);
@@ -23,7 +24,7 @@ export const ContentfulClientDataRetriever = async (sdk: KnownSDK, pagePath: str
   const pages = await cma.entry.getMany({
     query: {
       content_type: 'page',
-      'fields.path': pagePath,
+      'fields.path': pagePathNoTrailing,
     }
   });
 
@@ -36,15 +37,13 @@ export const ContentfulClientDataRetriever = async (sdk: KnownSDK, pagePath: str
       }
     });
     nodes.items.forEach(async (node) => {
-      const pathRegex = new RegExp(`^pages${pagePath.replace('/', '\\/')}`);
-      if (node.fields.path['en-US'].replace(pathRegex, '').indexOf('/') === -1) {
-        const key = `Page${BodilessMobxStore.nodeChildDelimiter}${node.fields.path['en-US'].replace('pages/', '')}`;
+      if (node.fields.path['en-US'].replace(`pages${pagePath}`, '').indexOf('/') === -1) {
+        const key = `Page${BodilessMobxStore.nodeChildDelimiter}${node.fields.path['en-US'].replace(`pages${pagePath}`, '')}`;
         const data = node.fields.content['en-US'];
         result.set(key, data);
       }
     });
   }
-
   // Retrieve the page for the current path.
   const siteEntries = await cma.entry.getMany({
     query: {

@@ -3,9 +3,9 @@ const { addTokenShadowPlugin } = require('@bodiless/webpack');
 const shadow = require('--vital--/shadow');
 const contentfulShadown = require('@vital/contentful-editor/shadow');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const fs = require('fs');
 const path = require('path');
-const getbuildCSSPlugins = require('@bodiless/gatsby-theme-bodiless/build-css');
 const babelConfig = require('./babel.config');
 
 const getTailwindConfig = () => {
@@ -20,6 +20,8 @@ const getTailwindConfig = () => {
   return false;
 };
 
+const isProductionMode = process.env.NODE_ENV === 'production';
+
 const tokenShadowPlugin = addTokenShadowPlugin({}, { resolvers: [contentfulShadown, shadow] });
 process.env.BODILESS_TAILWIND_THEME_ENABLED=1;
 const tailWindConfigFile = getTailwindConfig();
@@ -31,13 +33,9 @@ const postCssPlugins = tailWindConfigFile ? [
   require('autoprefixer')(),
 ] : [];
 
-module.exports = {
+const webPackConf = {
   entry: './src/app.tsx',
   devtool: 'source-map',
-  devServer: {
-    compress: true,
-    port: 8000,
-  },
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'index.js',
@@ -59,7 +57,7 @@ module.exports = {
         test: /\.css$/,
         sideEffects: true,
         use: [
-          { loader: 'style-loader' },
+          { loader: isProductionMode ? MiniCssExtractPlugin.loader : 'style-loader'},
           { loader: 'css-loader' },
           {
             loader: 'postcss-loader',
@@ -70,11 +68,6 @@ module.exports = {
             }
           },
         ],
-      },
-      {
-        test: (file) => file.endsWith('js') && file.includes('gatsby/cache-dir'),
-        loader: 'babel-loader',
-        options: babelConfig,
       },
       {
         test: /\.(js|jsx|mjs|ts|tsx)$/,
@@ -91,14 +84,45 @@ module.exports = {
     new webpack.DefinePlugin({
       // @todo serializing the whole env is not a good idea -- it's likely to contain credentials.
       'process.env': JSON.stringify(process.env),
-      HAS_REACT_18: false
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
-    ...tokenShadowPlugin.plugins
+    ...tokenShadowPlugin.plugins,
+    new MiniCssExtractPlugin({
+      filename: isProductionMode ? '[name].[contenthash].css' : '[name].css',
+    }),
   ],
   optimization: {
-    splitChunks: false,
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: 'styles',
+          type: 'css/mini-extract',
+          chunks: 'all',
+          enforce: true,
+        },
+      },
+    },
+    concatenateModules: false,
+    providedExports: true,
+    usedExports: true,
+    sideEffects: true,
+    minimize: true,
   },
 };
+
+if (!isProductionMode) {
+  webPackConf.devServer = {
+    compress: true,
+    port: 8000,
+    index: '/index.html',
+    historyApiFallback: {
+      rewrites: [
+        { from: /^\/.?$/, to: '/index.html' },
+      ],
+    },
+  };
+}
+
+module.exports=webPackConf;
