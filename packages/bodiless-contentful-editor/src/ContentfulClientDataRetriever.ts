@@ -37,8 +37,8 @@ export const ContentfulClientDataRetriever = async (sdk: KnownSDK, pagePath: str
       }
     });
     nodes.items.forEach(async (node) => {
-      if (node.fields.path['en-US'].replace(`pages${pagePath}`, '').indexOf('/') === -1) {
-        const key = `Page${BodilessMobxStore.nodeChildDelimiter}${node.fields.path['en-US'].replace(`pages${pagePath}`, '')}`;
+      if (node.fields.path['en-US'].replace(`pages${pagePathNoTrailing}/`, '').indexOf('/') === -1) {
+        const key = `Page${BodilessMobxStore.nodeChildDelimiter}${node.fields.path['en-US'].replace(`pages${pagePathNoTrailing}/`, '')}`;
         const data = node.fields.content['en-US'];
         result.set(key, data);
       }
