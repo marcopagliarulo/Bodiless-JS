@@ -26,16 +26,16 @@ const tokenShadowPlugin = addTokenShadowPlugin({}, { resolvers: [contentfulShado
 process.env.BODILESS_TAILWIND_THEME_ENABLED=1;
 const tailWindConfigFile = getTailwindConfig();
 
-const postCssPlugins = tailWindConfigFile ? [
+const postCssPlugins = [
   // eslint-disable-next-line global-require
   require('tailwindcss')(tailWindConfigFile),
   // eslint-disable-next-line global-require
   require('autoprefixer')(),
-] : [];
+];
 
 const webPackConf = {
   entry: './src/app.tsx',
-  devtool: 'source-map',
+  devtool: isProductionMode ? false : 'source-map',
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'index.js',
