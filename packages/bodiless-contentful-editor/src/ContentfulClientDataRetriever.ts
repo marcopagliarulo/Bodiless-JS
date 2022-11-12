@@ -1,6 +1,11 @@
 import { BodilessMobxStore } from '@bodiless/core';
 import { createClient } from 'contentful-management';
 import { KnownSDK } from '@contentful/app-sdk';
+import {
+  CONTENTFUL_DEFAULT_LANGUAGE,
+  CONTENTFUL_PAGE_CONTENT_TYPE,
+  CONTENTFUL_NODE_CONTENT_TYPE
+} from './Constants';
 
 export const ContentfulClientDataRetriever = async (sdk: KnownSDK, pagePath: string) => {
   const cma = createClient(
@@ -23,7 +28,7 @@ export const ContentfulClientDataRetriever = async (sdk: KnownSDK, pagePath: str
   // Retrieve the page for the current path.
   const pages = await cma.entry.getMany({
     query: {
-      content_type: 'page',
+      content_type: CONTENTFUL_PAGE_CONTENT_TYPE,
       'fields.path': pagePathNoTrailing,
     }
   });
@@ -32,14 +37,14 @@ export const ContentfulClientDataRetriever = async (sdk: KnownSDK, pagePath: str
     // Retrieve all the nodes for the current path.
     const nodes = await cma.entry.getMany({
       query: {
-        content_type: 'path',
-        'fields.path[match]': `pages${pages.items[0].fields.path['en-US']}`,
+        content_type: CONTENTFUL_NODE_CONTENT_TYPE,
+        'fields.path[match]': `pages${pages.items[0].fields.path[CONTENTFUL_DEFAULT_LANGUAGE]}`,
       }
     });
     nodes.items.forEach(async (node) => {
-      if (node.fields.path['en-US'].replace(`pages${pagePathNoTrailing}/`, '').indexOf('/') === -1) {
-        const key = `Page${BodilessMobxStore.nodeChildDelimiter}${node.fields.path['en-US'].replace(`pages${pagePathNoTrailing}/`, '')}`;
-        const data = node.fields.content['en-US'];
+      if (node.fields.path[CONTENTFUL_DEFAULT_LANGUAGE].replace(`pages${pagePathNoTrailing}/`, '').indexOf('/') === -1) {
+        const key = `Page${BodilessMobxStore.nodeChildDelimiter}${node.fields.path[CONTENTFUL_DEFAULT_LANGUAGE].replace(`pages${pagePathNoTrailing}/`, '')}`;
+        const data = node.fields.content[CONTENTFUL_DEFAULT_LANGUAGE];
         result.set(key, data);
       }
     });
@@ -47,14 +52,14 @@ export const ContentfulClientDataRetriever = async (sdk: KnownSDK, pagePath: str
   // Retrieve the page for the current path.
   const siteEntries = await cma.entry.getMany({
     query: {
-      content_type: 'path',
+      content_type: CONTENTFUL_NODE_CONTENT_TYPE,
       'fields.path[match]': 'site',
     }
   });
 
   siteEntries.items.forEach(siteItem => {
-    const key = `Site${BodilessMobxStore.nodeChildDelimiter}${siteItem.fields.path['en-US'].replace('site/', '')}`;
-    const data = siteItem.fields.content['en-US'];
+    const key = `Site${BodilessMobxStore.nodeChildDelimiter}${siteItem.fields.path[CONTENTFUL_DEFAULT_LANGUAGE].replace('site/', '')}`;
+    const data = siteItem.fields.content[CONTENTFUL_DEFAULT_LANGUAGE];
     result.set(key, data);
   });
 

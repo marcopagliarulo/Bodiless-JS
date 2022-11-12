@@ -3,8 +3,12 @@ import { BodilessStoreBackend } from '@bodiless/core';
 import { AxiosResponse } from 'axios';
 import { createClient } from 'contentful-management';
 import { KnownSDK } from '@contentful/app-sdk';
-
 import type { PlainClientAPI, EntryProps, CollectionProp } from 'contentful-management';
+import {
+  CONTENTFUL_DEFAULT_LANGUAGE,
+  CONTENTFUL_PAGE_CONTENT_TYPE,
+  CONTENTFUL_NODE_CONTENT_TYPE
+} from './Constants';
 
 export class ContentfulClient implements BodilessStoreBackend {
   private cma: PlainClientAPI;
@@ -47,7 +51,7 @@ export class ContentfulClient implements BodilessStoreBackend {
   getPage(path: string) {
     return this.cma.entry.getMany({
       query: {
-        content_type: 'page',
+        content_type: CONTENTFUL_PAGE_CONTENT_TYPE,
         'fields.path': path,
       }
     });
@@ -115,15 +119,15 @@ export class ContentfulClient implements BodilessStoreBackend {
 
     const payload = {
       path: {
-        'en-US': path
+        [CONTENTFUL_DEFAULT_LANGUAGE]: path
       },
       template: {
-        'en-US': template || '_default'
+        [CONTENTFUL_DEFAULT_LANGUAGE]: template || '_default'
       }
     };
 
     // Retrieve the content type page.
-    return this.getContentType('page')
+    return this.getContentType(CONTENTFUL_PAGE_CONTENT_TYPE)
       .then(() => this.getPage(path))
       .then((entries: CollectionProp<EntryProps>) => {
         if (entries.total > 0) {
@@ -134,7 +138,7 @@ export class ContentfulClient implements BodilessStoreBackend {
           }));
         }
       })
-      .then(() => this.createEntry('page', payload))
+      .then(() => this.createEntry(CONTENTFUL_PAGE_CONTENT_TYPE, payload))
       .then((props: EntryProps) => {
         const entryId = props.sys.id;
         return this.publishEntry(entryId, props)
@@ -144,7 +148,7 @@ export class ContentfulClient implements BodilessStoreBackend {
   }
 
   deletePage(path: string) {
-    return this.getContentType('page')
+    return this.getContentType(CONTENTFUL_PAGE_CONTENT_TYPE)
       .then(() => this.getPage(path))
       .then((entries: CollectionProp<EntryProps>) => {
         if (entries.total === 0) {
@@ -166,7 +170,7 @@ export class ContentfulClient implements BodilessStoreBackend {
   getPath(path: string) {
     return this.cma.entry.getMany({
       query: {
-        content_type: 'path',
+        content_type: CONTENTFUL_NODE_CONTENT_TYPE,
         'fields.path': path,
       }
     });
@@ -179,18 +183,18 @@ export class ContentfulClient implements BodilessStoreBackend {
   savePath(resourcePath: string, data: any): Promise<any> {
     const payload = {
       path: {
-        'en-US': resourcePath
+        [CONTENTFUL_DEFAULT_LANGUAGE]: resourcePath
       },
       content: {
-        'en-US': JSON.parse(JSON.stringify(data))
+        [CONTENTFUL_DEFAULT_LANGUAGE]: JSON.parse(JSON.stringify(data))
       }
     };
 
-    return this.getContentType('path')
+    return this.getContentType(CONTENTFUL_NODE_CONTENT_TYPE)
       .then(() => this.getPath(resourcePath))
       .then((entries: CollectionProp<EntryProps>) => {
         if (entries.total === 0) {
-          return this.createEntry('path', payload);
+          return this.createEntry(CONTENTFUL_NODE_CONTENT_TYPE, payload);
         }
         const entryId = entries.items[0].sys.id;
         const props = { ...entries.items[0], ...{ fields: payload} };
@@ -205,7 +209,7 @@ export class ContentfulClient implements BodilessStoreBackend {
   }
 
   deletePath(resourcePath: string): Promise<any> {
-    return this.getContentType('path')
+    return this.getContentType(CONTENTFUL_NODE_CONTENT_TYPE)
       .then(() => this.getPath(resourcePath))
       .then((entries: CollectionProp<EntryProps>) => {
         if (entries.total === 0) {
@@ -229,7 +233,7 @@ export class ContentfulClient implements BodilessStoreBackend {
   }
 
   disablePage(path: string) {
-    return this.getContentType('page')
+    return this.getContentType(CONTENTFUL_PAGE_CONTENT_TYPE)
       .then(() => this.getPage(path))
       .then((entries: CollectionProp<EntryProps>) => {
         if (entries.total === 0) {
@@ -248,10 +252,10 @@ export class ContentfulClient implements BodilessStoreBackend {
   clonePage(origin: string, destination: string) {
     const payload = {
       path: {
-        'en-US': destination
+        [CONTENTFUL_DEFAULT_LANGUAGE]: destination
       },
     };
-    return this.getContentType('page')
+    return this.getContentType(CONTENTFUL_PAGE_CONTENT_TYPE)
       .then(() => this.getPage(origin))
       .then((entries: CollectionProp<EntryProps>) => {
         if (entries.total === 0) {
@@ -262,7 +266,7 @@ export class ContentfulClient implements BodilessStoreBackend {
           }));
         }
         const props = { ...entries.items[0], ...{ fields: payload} };
-        return this.createEntry('page', props)
+        return this.createEntry(CONTENTFUL_PAGE_CONTENT_TYPE, props)
           .then(() => ({ ...this.response, ...{ data: { origin, destination } } }));
       })
       .catch((error) => JSON.parse(error.message));
@@ -272,10 +276,10 @@ export class ContentfulClient implements BodilessStoreBackend {
   movePage(origin: string, destination: string) {
     const payload = {
       path: {
-        'en-US': destination
+        [CONTENTFUL_DEFAULT_LANGUAGE]: destination
       },
     };
-    return this.getContentType('page')
+    return this.getContentType(CONTENTFUL_PAGE_CONTENT_TYPE)
       .then(() => this.getPage(origin))
       .then((entries: CollectionProp<EntryProps>) => {
         if (entries.total === 0) {
