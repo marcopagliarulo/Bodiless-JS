@@ -5,9 +5,9 @@ import {
   CONTENTFUL_DEFAULT_LANGUAGE,
   CONTENTFUL_PAGE_CONTENT_TYPE,
   CONTENTFUL_NODE_CONTENT_TYPE
-} from './Constants';
+} from '../Constants';
 
-export const ContentfulClientDataRetriever = async (sdk: KnownSDK, pagePath: string) => {
+export const ContentfulEditorDataRetriever = async (sdk: KnownSDK, pagePath: string) => {
   const cma = createClient(
     { apiAdapter: sdk.cmaAdapter },
     {

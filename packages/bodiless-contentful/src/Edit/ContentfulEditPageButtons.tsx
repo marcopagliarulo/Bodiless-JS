@@ -23,12 +23,12 @@ import {
   usePageMenuOptions,
 } from '@bodiless/page';
 import { useSDK } from '@contentful/react-apps-toolkit';
-import { ContentfulClient } from './ContentfulClient';
+import { ContentfulEditClient } from './ContentfulEditClient';
 import { menuFormPageNew } from './MenuFormPageNew';
 
 export const ContentfulEditPageButtons: FC = () => {
   const sdk = useSDK();
-  const defaultClient = new ContentfulClient(sdk);
+  const defaultClient = new ContentfulEditClient(sdk);
 
   const cloneOptions = {
     name: 'clone',

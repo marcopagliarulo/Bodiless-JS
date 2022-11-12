@@ -10,7 +10,7 @@ import { vitalPageBase } from '@bodiless/vital-templates';
 import { asFluidToken } from '@bodiless/vital-elements';
 import type { FC } from 'react';
 import type { Enhancer, DesignableProps } from '@bodiless/fclasses';
-import { ContentfulEditPage, ContentfulStoreProvider } from '@bodiless/contentful-editor';
+import { ContentfulEditPage, ContentfulStoreProvider } from '@bodiless/contentful';
 
 export type FinalUI = {
   ContextWrapper: ComponentType<ContextWrapperProps>;

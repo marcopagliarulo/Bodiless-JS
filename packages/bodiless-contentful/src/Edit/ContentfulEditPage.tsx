@@ -34,11 +34,11 @@ import {
   withRedirectAliasButton,
 } from '@bodiless/page';
 
-import { PageProps } from '@bodiless/gatsby-theme-bodiless';
 import { SDKProvider, useSDK } from '@contentful/react-apps-toolkit';
-import { ContentfulStoreProvider } from './ContentfulEditProvider';
+import { ContentfulEditStoreProvider } from './ContentfulEditProvider';
 import { ContentfulEditPageButtons } from './ContentfulEditPageButtons';
-import { ContentfulClientDataRetriever } from './ContentfulClientDataRetriever';
+import { ContentfulEditorDataRetriever } from './ContentfulEditorDataRetriever';
+import { ContentfulPageProp } from '../Types';
 
 const defaultUI: FinalUI = {
   ContextWrapper,
@@ -59,8 +59,6 @@ const SwitcherButton = withSwitcherButton(Fragment);
 const DisablePageButton = withPageDisableButton(Fragment);
 const RedirectAliasButton = withRedirectAliasButton(Fragment);
 
-export type ContentfulPageProp = Omit<PageProps, 'gitInfo' | 'data'>;
-
 export const ContentfulStoreProviderWithSDK: FC<ContentfulPageProp> = ({
   children,
   ui,
@@ -79,9 +77,7 @@ export const ContentfulStoreProviderWithSDK: FC<ContentfulPageProp> = ({
   useEffect(() => {
     // React advises to declare the async function directly inside useEffect
     async function getData() {
-      const contentfulData = await ContentfulClientDataRetriever(
-        sdk, slug
-      );
+      const contentfulData = await ContentfulEditorDataRetriever(sdk, slug);
       setContentfulData(contentfulData);
     }
 
@@ -89,7 +85,7 @@ export const ContentfulStoreProviderWithSDK: FC<ContentfulPageProp> = ({
   }, []);
 
   return contentfulData.get('sdk') ? (
-    <ContentfulStoreProvider pageContext={pageContext} data={contentfulData}>
+    <ContentfulEditStoreProvider pageContext={pageContext} data={contentfulData}>
       <PageDataProvider pageData={pageData}>
         <NotificationProvider>
           <SwitcherButton />
@@ -105,7 +101,7 @@ export const ContentfulStoreProviderWithSDK: FC<ContentfulPageProp> = ({
           </Editor>
         </NotificationProvider>
       </PageDataProvider>
-    </ContentfulStoreProvider>
+    </ContentfulEditStoreProvider>
   ): <>Waiting for the SDK to be loaded</>;
 };
 

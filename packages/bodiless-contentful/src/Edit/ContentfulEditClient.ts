@@ -8,9 +8,9 @@ import {
   CONTENTFUL_DEFAULT_LANGUAGE,
   CONTENTFUL_PAGE_CONTENT_TYPE,
   CONTENTFUL_NODE_CONTENT_TYPE
-} from './Constants';
+} from '../Constants';
 
-export class ContentfulClient implements BodilessStoreBackend {
+export class ContentfulEditClient implements BodilessStoreBackend {
   private cma: PlainClientAPI;
 
   private response: AxiosResponse;

@@ -57,7 +57,7 @@
     "react-mde": "^11.0.0",
     "@contentful/app-sdk": "^4.13.0",
     "@contentful/react-apps-toolkit": "^1.2.8",
-    "@bodiless/contentful-editor": "^1.0.0-rc.22",
+    "@bodiless/contentful": "^1.0.0-rc.22",
     "@vital/contentful-editor": "^1.0.0-rc.22"
   },
   "files": [

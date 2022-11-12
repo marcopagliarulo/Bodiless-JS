@@ -5,7 +5,7 @@ import {
   BodilessStore,
 } from '@bodiless/core';
 import { LocalContextMenu } from '@bodiless/core-ui';
-import { ContentfulClient } from './ContentfulClient';
+import { ContentfulEditClient } from './ContentfulEditClient';
 
 class DefaultStore
   extends BodilessMobxStore<Map<string, any>>
@@ -16,7 +16,7 @@ class DefaultStore
   }
 }
 
-export class ContentfulStoreProvider extends BodilessStoreProvider {
+export class ContentfulEditStoreProvider extends BodilessStoreProvider {
   /**
    * Creates the store which will be provided.
    *
@@ -26,7 +26,7 @@ export class ContentfulStoreProvider extends BodilessStoreProvider {
     const { data } = this.props;
     const sdk = data.get('sdk');
     data.delete('sdk');
-    return new DefaultStore({ slug: this.slug, client: new ContentfulClient(sdk) });
+    return new DefaultStore({ slug: this.slug, client: new ContentfulEditClient(sdk) });
   }
 }
 
@@ -48,19 +48,19 @@ export const withAlwaysEditable: HOC = Component => props => {
   return <Component {...props} />;
 };
 
-export const withBodilessStore: HOC = Component => props => (
-  <ContentfulStoreProvider
+export const withEditBodilessStore: HOC = Component => props => (
+  <ContentfulEditStoreProvider
     data={new Map()}
     pageContext={{ slug: './' }}
   >
     <Component {...props} />
-  </ContentfulStoreProvider>
+  </ContentfulEditStoreProvider>
 );
 
 export const ContentfulEditProvider = as(
   withPageEditor,
   withAlwaysEditable,
-  withBodilessStore,
+  withEditBodilessStore,
 )('div');
 
 export const withContentfulEditProvider: HOC = Component => props => (
