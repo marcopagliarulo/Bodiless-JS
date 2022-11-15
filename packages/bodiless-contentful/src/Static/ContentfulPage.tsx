@@ -57,6 +57,7 @@ const getUI = (ui: UI = {}): Omit<FinalUI, 'PageEditor'> => ({ ...defaultUI, ...
 export const ContentfulPage: FC<ContentfulPageProp> = ({
   children,
   ui,
+  data,
   pageData,
   pageContext
 }) => {
@@ -66,7 +67,7 @@ export const ContentfulPage: FC<ContentfulPageProp> = ({
     slug,
   } = pageContext;
 
-  const [contentfulData, setContentfulData] = useState(new Map());
+  const [contentfulData, setContentfulData] = useState(data);
 
   if (!process.env.BODILESS_CONTENTFUL_SPACE_ID || !process.env.BODILESS_CONTENTFUL_ACCESS_TOKEN) {
     throw new Error('Configure BODILESS_CONTENTFUL_SPACE_ID and BODILESS_CONTENTFUL_ACCESS_TOKEN to get access to contentful');

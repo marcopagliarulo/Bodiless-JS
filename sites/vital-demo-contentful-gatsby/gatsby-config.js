@@ -79,6 +79,10 @@ const plugins = [
     resolve: 'gatsby-plugin-sitemap',
     options: { excludes: disabledPages },
   },
+  {
+    resolve: '@bodiless/contentful',
+    options: { stage: 'static' },
+  },
   // ...createDefaultContentPlugins(
   //   ...getSampleDefaultContentConfig(),
   //   ...getSiteDefaultContentConfig(),

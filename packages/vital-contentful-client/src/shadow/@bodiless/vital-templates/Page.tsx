@@ -19,17 +19,28 @@ export type FinalUI = {
 
 export type UI = Partial<FinalUI>;
 
+export type Props = {
+  data: any,
+  pageContext: {
+    slug: string
+    data?: any,
+  }
+};
+
 export type PageProps = {
   ui?: UI,
+  data?: Object,
 } & DesignableProps & React.ComponentProps<typeof ContentfulStoreProvider>
-& PageDataContextProviderProps;
+& PageDataContextProviderProps & Props;
 
 export const asBodilessPage: Enhancer<PageProps, DesignableProps<any>> = Component => {
   const AsBodilessPage: FC<any> = (props: PageProps) => {
-    const { design, ...rest } = props;
+    const { design, pageContext, ...rest } = props;
     const designProp: any = { design };
+    const { data } = pageContext;
+
     return (
-      <ContentfulPage {...rest}>
+      <ContentfulPage {...rest} pageContext={pageContext} data={new Map(Object.entries(data))}>
         <Component {...designProp} />
       </ContentfulPage>
     );

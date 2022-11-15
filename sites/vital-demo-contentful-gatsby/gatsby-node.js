@@ -9,11 +9,8 @@ const path = require('path');
 const fs = require('fs');
 const glob = require('glob');
 const { addTokenShadowPlugin, addStatoscopePlugin } = require('@bodiless/webpack');
-// const shadow = require('vital-demo-contentful-gatsby/shadow');
-const contentful = require('contentful');
 const shadow = require('--vital--/shadow');
-const Logger = require('@bodiless/gatsby-theme-bodiless/Logger');
-const contentfulShadow = require('./shadow');
+const contentfulShadow = require('@vital/contentful-client/shadow');
 
 // Fix sourcemap issue
 // See: https://github.com/gatsbyjs/gatsby/issues/6278#issuecomment-402540404
@@ -65,38 +62,4 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
       addStatoscopePlugin({}, options)
     );
   }
-};
-
-exports.createPages = async ({ actions, graphql, getNode }) => {
-  const logger = new Logger('gatsby');
-  const { createPage } = actions;
-
-  const client = contentful.createClient({
-    space: process.env.BODILESS_CONTENTFUL_SPACE_ID,
-    accessToken: process.env.BODILESS_CONTENTFUL_ACCESS_TOKEN
-  });
-
-  const pages = await client.getEntries({
-    content_type: 'page',
-  });
-
-  pages.items.forEach(item => {
-    const templateBasePath = ['.', 'src', 'templates'];
-    const { path: slug, template } = item.fields;
-    const pageData = {
-      path: slug,
-      component: path.resolve(...templateBasePath, `${template}.jsx`),
-      context: {
-        slug,
-        template,
-        subPageTemplate: ''
-      },
-    };
-    try {
-      logger.log('Creating page ', slug, pageData.path, pageData.component);
-      createPage(pageData);
-    } catch (exception) {
-      logger.warn(`Error trying to create ${pageData.path}`, exception);
-    }
-  });
 };

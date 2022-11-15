@@ -40,6 +40,7 @@
     "axios": "^0.21.0",
     "contentful-management": "^10.19.0",
     "contentful": "^9.2.11",
-    "@contentful/app-sdk": "^4.13.0"
+    "@contentful/app-sdk": "^4.13.0",
+    "esm": "^3.2.25"
   }
 }

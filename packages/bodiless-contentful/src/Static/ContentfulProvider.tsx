@@ -21,7 +21,7 @@ export class ContentfulStoreProvider extends BodilessStoreProvider {
    * @param config
    */
    protected createStore(): BodilessStore<any> {
-    return new DefaultStore( { slug: '' });
+    return new DefaultStore( { slug: this.slug } );
   }
 }
 

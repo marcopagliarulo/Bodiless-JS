@@ -64,6 +64,5 @@ export const ContentfulClientDataRetriever = async (
     result.set(key, data);
   });
 
-  console.log(result);
   return result;
 };
