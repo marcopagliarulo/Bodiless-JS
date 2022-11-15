@@ -9,27 +9,14 @@ const path = require('path');
 const babelConfig = require('./babel.config');
 
 module.exports=(env) => {
-  const getTailwindConfig = () => {
-    const processDirFile = path.resolve(process.cwd(), 'tailwind.config.js');
-    if (fs.existsSync(processDirFile)) {
-      return processDirFile;
-    }
-    const siteDirFile = path.resolve(__dirname, 'tailwind.config.js');
-    if (fs.existsSync(siteDirFile)) {
-      return siteDirFile;
-    }
-    return false;
-  };
-
   const isPackagingMode = env.packaging || false;
 
   const tokenShadowPlugin = addTokenShadowPlugin({}, { resolvers: [contentfulShadown, shadow] });
   process.env.BODILESS_TAILWIND_THEME_ENABLED=1;
-  const tailWindConfigFile = getTailwindConfig();
 
-  const postCssPlugins = [
+  const postCssPlugins = (configFile) => [
     // eslint-disable-next-line global-require
-    require('tailwindcss')(tailWindConfigFile),
+    require('tailwindcss')(configFile),
     // eslint-disable-next-line global-require
     require('autoprefixer')(),
   ];
@@ -42,6 +29,9 @@ module.exports=(env) => {
       filename: 'index.js',
     },
     resolve: {
+      alias: {
+        './bodiless.index.css': false,
+      },
       fallback: {
         crypto: require.resolve('crypto-browserify'),
         // stream is required for crypto
@@ -55,7 +45,7 @@ module.exports=(env) => {
     module: {
       rules: [
         {
-          test: /\.css$/,
+          test: /edit\.css$/,
           sideEffects: true,
           use: [
             { loader: isPackagingMode ? MiniCssExtractPlugin.loader : 'style-loader'},
@@ -64,7 +54,24 @@ module.exports=(env) => {
               loader: 'postcss-loader',
               options: {
                 postcssOptions: {
-                  plugins: postCssPlugins,
+                  plugins: postCssPlugins('edit.tailwind.config.js'),
+                }
+              }
+            },
+          ],
+        },
+        {
+          test: /\.css$/,
+          exclude: /edit\.css$/,
+          sideEffects: true,
+          use: [
+            { loader: isPackagingMode ? MiniCssExtractPlugin.loader : 'style-loader'},
+            { loader: 'css-loader' },
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: postCssPlugins('style.tailwind.config.js'),
                 }
               }
             },

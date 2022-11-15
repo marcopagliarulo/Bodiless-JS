@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './css/style.css';
+import './css/edit.css';
 import {
   EditorExtensionSDK,
   init,
