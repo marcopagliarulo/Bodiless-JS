@@ -20,7 +20,10 @@ export const ContentfulEditorDataRetriever = async (sdk: KnownSDK, pagePath: str
     }
   );
   const result = new Map();
-  const pagePathNoTrailing = pagePath === '/' ? pagePath :pagePath.replace(/\/$/, '');
+  const regexp = new RegExp('[^/]+/index.html');
+  const path = pagePath.replace(regexp, '');
+
+  const pagePathNoTrailing = path === '/' ? path : path.replace(/\/$/, '');
 
   // Temporary store sdk inside data object in order to pass it to the contentful client store.
   result.set('sdk', sdk);

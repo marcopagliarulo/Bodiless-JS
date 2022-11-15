@@ -37,6 +37,11 @@ export class ContentfulEditClient implements BodilessStoreBackend {
     };
   }
 
+  static purgeResourcePath(path: string) {
+    const regexp = new RegExp('[^/]+/index.html');
+    return path.replace(regexp, '');
+  }
+
   getContentType(contentTypeId: string) {
     return this.cma.contentType.get({contentTypeId})
       .catch(() => {
@@ -171,7 +176,7 @@ export class ContentfulEditClient implements BodilessStoreBackend {
     return this.cma.entry.getMany({
       query: {
         content_type: CONTENTFUL_NODE_CONTENT_TYPE,
-        'fields.path': path,
+        'fields.path': ContentfulEditClient.purgeResourcePath(path),
       }
     });
   }
@@ -181,9 +186,10 @@ export class ContentfulEditClient implements BodilessStoreBackend {
    * Note - these data should be **merged** with data which were previously serialized.
    */
   savePath(resourcePath: string, data: any): Promise<any> {
+    const path = ContentfulEditClient.purgeResourcePath(resourcePath);
     const payload = {
       path: {
-        [CONTENTFUL_DEFAULT_LANGUAGE]: resourcePath
+        [CONTENTFUL_DEFAULT_LANGUAGE]: path
       },
       content: {
         [CONTENTFUL_DEFAULT_LANGUAGE]: JSON.parse(JSON.stringify(data))
@@ -191,7 +197,7 @@ export class ContentfulEditClient implements BodilessStoreBackend {
     };
 
     return this.getContentType(CONTENTFUL_NODE_CONTENT_TYPE)
-      .then(() => this.getPath(resourcePath))
+      .then(() => this.getPath(path))
       .then((entries: CollectionProp<EntryProps>) => {
         if (entries.total === 0) {
           return this.createEntry(CONTENTFUL_NODE_CONTENT_TYPE, payload);
@@ -209,14 +215,15 @@ export class ContentfulEditClient implements BodilessStoreBackend {
   }
 
   deletePath(resourcePath: string): Promise<any> {
+    const path = ContentfulEditClient.purgeResourcePath(resourcePath);
     return this.getContentType(CONTENTFUL_NODE_CONTENT_TYPE)
-      .then(() => this.getPath(resourcePath))
+      .then(() => this.getPath(path))
       .then((entries: CollectionProp<EntryProps>) => {
         if (entries.total === 0) {
           throw new Error(JSON.stringify({
             ...this.response,
             status: 409,
-            statusText: `Error: page ${resourcePath} doesn't exists`,
+            statusText: `Error: page ${path} doesn't exists`,
           }));
         }
         return entries;
