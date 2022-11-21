@@ -73,7 +73,7 @@
     "gatsby-plugin-sitemap": "^5.10.2",
     "gatsby-react-router-scroll": "^5.11.0",
     "glob": "^7.1.6",
-    "informed": "^3.34.0",
+    "informed": "^4.36.2",
     "isomorphic-git": "^1.10.1",
     "lodash": "^4.17.19",
     "mobx-react": "^7.2.1",
@@ -81,11 +81,11 @@
     "postcss": "^8.4.12",
     "pure-react-carousel": "^1.27.6",
     "rc-tooltip": "^5.1.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-helmet": "^6.1.0",
     "react-markdown": "^8.0.0",
-    "react-mde": "^11.0.0"
+    "@uiw/react-md-editor": "^3.19.7"
   },
   "files": [
     "lib"

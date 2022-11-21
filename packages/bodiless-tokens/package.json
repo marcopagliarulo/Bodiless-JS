@@ -37,13 +37,13 @@
     "@bodiless/fclasses": "^1.0.0-rc.29",
     "@bodiless/layouts": "^1.0.0-rc.29",
     "@bodiless/layouts-ui": "^1.0.0-rc.29",
-    "informed": "^3.34.0",
+    "informed": "^4.36.2",
     "lodash": "^4.17.19",
     "md5-hex": "^4.0.0",
     "uuid": "^3.3.2"
   },
   "peerDependencies": {
     "mobx-react": "^7.2.1",
-    "react": "^17.0.2"
+    "react": "^18.0.0"
   }
 }

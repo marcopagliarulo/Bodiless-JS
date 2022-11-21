@@ -42,6 +42,6 @@
   },
   "peerDependencies": {
     "mobx-react": "^7.2.1",
-    "react": "^17.0.2"
+    "react": "^18.0.0"
   }
 }
