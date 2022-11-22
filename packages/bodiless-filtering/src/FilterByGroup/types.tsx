@@ -17,8 +17,8 @@ import { TagType as BaseTagType, WithNodeProps, ContentNode } from '@bodiless/co
 import { StylableProps, DesignableComponentsProps, DesignableProps } from '@bodiless/fclasses';
 import { ListProps } from '@bodiless/components';
 
-export type TagType = Omit<BaseTagType, 'id'> & {
-  id: string,
+export type TagType = Omit<BaseTagType, 'value'> & {
+  value: string,
   isEqual: (tag: TagType) => boolean,
   categoryId: string,
 };

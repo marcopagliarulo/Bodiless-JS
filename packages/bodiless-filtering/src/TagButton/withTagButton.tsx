@@ -47,15 +47,12 @@ export const tagButtonOptions: TagButtonType = {
     const {
       getSuggestions = () => [],
       placeholder = 'Select Tags',
-      noSuggestionsText = 'No matching tags found.',
-      minQueryLength = 1,
+      noOptionsText = 'No matching tags found.',
       allowNew = true,
       allowMultipleTags = true,
-      inputAttributes = { name: 'react-tags-input' },
       formTitle = 'Tags',
       formBodyText = 'Select from available tags:',
       seeAllText = 'See all tags',
-      autofocus = false,
     } = componentProps;
 
     const suggestions = getSuggestions();
@@ -64,7 +61,7 @@ export const tagButtonOptions: TagButtonType = {
     const displayListOfTags = () => context.showPageOverlay({
       message: suggestions
         .slice()
-        .reduce((acc: any, _tag: TagType) => `${acc}\n${_tag.name}`, ''),
+        .reduce((acc: any, _tag: TagType) => `${acc}\n${_tag.label}`, ''),
       hasSpinner: false,
       hasCloseButton: true,
     });
@@ -76,12 +73,11 @@ export const tagButtonOptions: TagButtonType = {
         <ReactTags
           suggestions={suggestions}
           placeholderText={placeholder}
-          noSuggestionsText={noSuggestionsText}
-          minQueryLength={minQueryLength}
+          noOptionsText={noOptionsText}
           allowNew={allowNew}
           allowMultipleTags={allowMultipleTags}
-          inputAttributes={inputAttributes}
-          autofocus={autofocus}
+          onAdd={() => {}}
+          selected={[]}
         />
         <ComponentFormUnwrapButton type="button" onClick={displayListOfTags}>
           {seeAllText}

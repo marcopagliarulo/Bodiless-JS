@@ -63,6 +63,12 @@ module.exports = {
       variants: ['first', 'last', 'ltr', 'rtl', 'hover', 'group-hover', 'sm', 'md', 'lg', 'even'],
     },
   ],
+  content: [
+    './lib/**/!(*.d).{ts,js,jsx,tsx}',
+    // All the following packages, bl-* classes were found so
+    // whitelist. Best way or look for alternative.
+    '../bodiless-*/lib/**/!(*.d).{ts,js,jsx,tsx}',
+  ],
   prefix: 'bl-',
   theme: {
     extend: {

@@ -110,12 +110,12 @@ const useLinkOverrides = (useOverrides: UseLinkOverrides = () => ({})): UseLinkO
           <>
             <ComponentFormTitle>Link</ComponentFormTitle>
             <ComponentFormLabel htmlFor="link-href">URL</ComponentFormLabel>
-            <ComponentFormText field="href" id="link-href" aria-describedby="description" placeholder="/link" />
+            <ComponentFormText name="href" id="link-href" aria-describedby="description" placeholder="/link" />
             <ComponentFormDescription id="description">
               {instructions}
             </ComponentFormDescription>
             <ComponentFormLabel htmlFor="aria-label">Aria Label</ComponentFormLabel>
-            <ComponentFormText field="aria-label" id="aria-label" aria-describedby="description" placeholder="aria-label" />
+            <ComponentFormText name="aria-label" id="aria-label" aria-describedby="description" placeholder="aria-label" />
             <ComponentFormLabel>File Upload</ComponentFormLabel>
             <FileUpload ui={fileUploadUI} accept={fileUploadAccept} />
             {unwrap && (

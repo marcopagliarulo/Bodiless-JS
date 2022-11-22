@@ -31,7 +31,7 @@ const Form: FC<Omit<ContextMenuPropsType<Data>, 'children'>> = props => {
     <ContextMenuForm {...props}>
       <ComponentFormLabel>
         URL
-        <ComponentFormText field="url" />
+        <ComponentFormText name="url" />
       </ComponentFormLabel>
     </ContextMenuForm>
   );

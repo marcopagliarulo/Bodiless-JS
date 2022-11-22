@@ -37,7 +37,7 @@
     "@bodiless/fclasses": "^1.0.0-rc.29",
     "@bodiless/layouts": "^1.0.0-rc.29",
     "@bodiless/layouts-ui": "^1.0.0-rc.29",
-    "informed": "^4.36.2",
+    "informed": "^4.44.0",
     "lodash": "^4.17.19",
     "md5-hex": "^4.0.0",
     "uuid": "^3.3.2"

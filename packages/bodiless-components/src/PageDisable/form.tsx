@@ -104,7 +104,7 @@ const FormBodyBase = () => {
         <ComponentFormFieldWrapper>
           <ComponentFormLabel>
             <ComponentFormCheckBox
-              field="pageDisabled"
+              name="pageDisabled"
               keepState
               onChange={toggleSubCheckboxes}
             />
@@ -112,15 +112,15 @@ const FormBodyBase = () => {
           </ComponentFormLabel>
           <ComponentFormFieldWrapper className="bl-pl-5">
             <ComponentFormLabel>
-              <ComponentFormCheckBox keepState field="menuLinksDisabled" onChange={toggleOffPageCheckbox} />
+              <ComponentFormCheckBox keepState name="menuLinksDisabled" onChange={toggleOffPageCheckbox} />
               Menu links
             </ComponentFormLabel>
             <ComponentFormLabel>
-              <ComponentFormCheckBox keepState field="contentLinksDisabled" onChange={toggleOffPageCheckbox} />
+              <ComponentFormCheckBox keepState name="contentLinksDisabled" onChange={toggleOffPageCheckbox} />
               Non-menu links
             </ComponentFormLabel>
             <ComponentFormLabel>
-              <ComponentFormCheckBox keepState field="indexingDisabled" onChange={toggleOffPageCheckbox} />
+              <ComponentFormCheckBox keepState name="indexingDisabled" onChange={toggleOffPageCheckbox} />
               Indexing
             </ComponentFormLabel>
           </ComponentFormFieldWrapper>

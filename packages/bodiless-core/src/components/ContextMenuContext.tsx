@@ -14,7 +14,7 @@
 
 import React, { FC, createContext, useContext } from 'react';
 import {
-  Text, TextArea, Radio, RadioGroup, Checkbox, Option, Select,
+  Input, TextArea, Radio, RadioGroup, Checkbox, Select,
 } from 'informed';
 import ReactTooltip from 'rc-tooltip';
 import omit from 'lodash/omit';
@@ -42,7 +42,7 @@ const defaultUI: Required<ContextMenuUI> = {
   ComponentFormCloseButton: 'button',
   ComponentFormSubmitButton: 'button',
   ComponentFormUnwrapButton: 'button',
-  ComponentFormText: Text,
+  ComponentFormText: Input,
   ComponentFormTextArea: TextArea,
   ComponentFormError: 'div',
   ComponentFormWarning: 'div',
@@ -67,7 +67,7 @@ const defaultUI: Required<ContextMenuUI> = {
   ComponentFormRadioGroup: RadioGroup,
   ComponentFormCheckBox: Checkbox,
   ComponentFormFieldTitle: 'title',
-  ComponentFormOption: Option,
+  ComponentFormOption: 'option',
   ComponentFormSelect: Select,
   ComponentFormFieldWrapper: 'div',
   Spinner: () => <div className="bodiless-spinner">Loading...</div>,

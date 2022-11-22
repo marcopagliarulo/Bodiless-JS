@@ -43,7 +43,7 @@
     "@bodiless/fclasses": "^1.0.0-rc.29",
     "axios": "^0.21.0",
     "html2canvas": "^1.0.0-rc.3",
-    "informed": "^4.36.2",
+    "informed": "^4.44.0",
     "lodash": "^4.17.19",
     "md5-hex": "^4.0.0",
     "prop-types": "^15.7.2",

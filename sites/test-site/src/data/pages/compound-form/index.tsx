@@ -53,7 +53,7 @@ const TestSnippet = (data: any) => {
         key => (
           <>
             <ComponentFormLabel>{key}</ComponentFormLabel>
-            <ComponentFormText field={key} />
+            <ComponentFormText name={key} />
           </>
         ),
       )}

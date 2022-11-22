@@ -51,7 +51,7 @@ const useToggleByTags = (props: WithFilterByTagsProps) => {
 
   if (multipleAllowedTags) {
     const selectedCategories = tags.reduce((prev, curr) => {
-      const selectedTag = selectedTags.find(tag => tag.id === curr.id);
+      const selectedTag = selectedTags.find(tag => tag.value === curr.value);
       const categoryId = selectedTag ? selectedTag.categoryId : undefined;
       return {
         ...prev,
@@ -71,7 +71,9 @@ const useToggleByTags = (props: WithFilterByTagsProps) => {
     differenceWith(
       selectedTags,
       tags,
-      (selectedTag, itemTag) => (selectedTag.id === TAG_ANY_KEY || selectedTag.id === itemTag.id),
+      (selectedTag, itemTag) => (
+        selectedTag.value === TAG_ANY_KEY || selectedTag.value === itemTag.value
+      ),
     ).length === 0
   );
 };

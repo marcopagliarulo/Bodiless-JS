@@ -13,14 +13,26 @@
  */
 
 import isEmpty from 'lodash/isEmpty';
-import { useNode } from '@bodiless/core';
+import { useNode, TagType } from '@bodiless/core';
 import { TagsNodeType } from './types';
 
 const useTagsAccessors = () => {
   const { node } = useNode<TagsNodeType>();
+  const nodeDataTag = { value: '', label: '' } as TagType;
+
+  if (!isEmpty(node.data.tags)) {
+    const {
+      id = '',
+      name = '',
+      value = '',
+      label = ''
+    } = node.data.tags[0];
+    nodeDataTag.value = value || id;
+    nodeDataTag.label = label || name;
+  }
   return {
     getTags: () => node.data.tags || [],
-    tag: isEmpty(node.data.tags) ? { id: '', name: '' } : node.data.tags[0],
+    tag: nodeDataTag,
     nodeId: node.path[node.path.length - 2] === 'default' ? node.path.toString() : node.path[node.path.length - 2],
   };
 };

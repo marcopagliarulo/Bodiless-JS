@@ -36,7 +36,11 @@ const withCuratorFormSnippet = withFormSnippet({
   defaultData: { feedId: '', containerId: '' },
   snippetOptions: {
     renderForm: ({ formState, scope }) => {
-      const errors = scope ? formState.errors[scope] : formState.error;
+      type Errors = {
+        feedId?: string,
+        containerId?: string,
+      };
+      const errors = (scope ? formState.errors[scope] : formState.errors) as Errors;
       const {
         ComponentFormLabel,
         ComponentFormText,
@@ -48,16 +52,16 @@ const withCuratorFormSnippet = withFormSnippet({
         <React.Fragment key="curator">
           <ComponentFormLabel htmlFor="feedId">Feed ID</ComponentFormLabel>
           <ComponentFormText
-            field="feedId"
+            name="feedId"
             placeholder="Feed ID..."
           />
           <ComponentFormLabel htmlFor="containerId">Container ID</ComponentFormLabel>
           <ComponentFormText
-            field="containerId"
+            name="containerId"
             placeholder="Container ID..."
           />
-          {errors && errors.feedID && (
-            <ComponentFormWarning>{errors.feedID}</ComponentFormWarning>
+          {errors && errors.feedId && (
+            <ComponentFormWarning>{errors.feedId}</ComponentFormWarning>
           )}
         </React.Fragment>
       );

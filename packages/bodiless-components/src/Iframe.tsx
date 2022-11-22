@@ -79,7 +79,7 @@ const withHeightSnippet = withFormSnippet({
         <React.Fragment key="height">
           <ComponentFormLabel htmlFor="height">Height (in pixels)</ComponentFormLabel>
           <ComponentFormText
-            field="height"
+            namem="height"
             validate={validate}
             validateOnChange
             validateOnBlur
@@ -102,7 +102,7 @@ const withSrcSnippet = withFormSnippet({
       return (
         <React.Fragment key="src">
           <ComponentFormLabel htmlFor="src">URL</ComponentFormLabel>
-          <ComponentFormText field="src" />
+          <ComponentFormText name="src" />
         </React.Fragment>
       );
     },
