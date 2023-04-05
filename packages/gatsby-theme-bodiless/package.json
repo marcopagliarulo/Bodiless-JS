@@ -104,7 +104,8 @@
     "sleep-promise": "^8.0.1",
     "stream-browserify": "^3.0.0",
     "walk": "^2.3.14",
-    "walkdir": "^0.4.1"
+    "walkdir": "^0.4.1",
+    "webpack": "^5.69.1"
   },
   "devDependencies": {
     "@statoscope/webpack-plugin": "^5.20.1",
