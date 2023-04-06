@@ -18,7 +18,7 @@ import {
 } from '@bodiless/vital-elements';
 import { addProps, as, replaceWith } from '@bodiless/fclasses';
 import { vitalLink } from '@bodiless/vital-link';
-import { withNodeKey } from '@bodiless/core';
+import { withNodeKey } from '@bodiless/data';
 import { asCopyrightRowToken } from '../CopyrightRowClean';
 import type { CopyrightRowToken } from '../CopyrightRowClean';
 import { vitalSocialLinks } from '../../SocialLinks';

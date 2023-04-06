@@ -19,7 +19,7 @@ import type { HOC } from '@bodiless/fclasses';
 import withNode, { withNodeKey } from '../src/withNode';
 import { useNode } from '../src/NodeProvider';
 import withSidecarNodes, { endSidecarNodes } from '../src/withSidecarNodes';
-import { ifToggledOn } from '../src/withFlowToggle';
+import { ifToggledOn } from '@bodiless/core';
 
 type Bodiless = (key?: string) => HOC;
 

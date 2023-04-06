@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import { useNode } from '@bodiless/core';
+import { useNode } from '@bodiless/data';
 import { flowIf, replaceWith, Fragment } from '@bodiless/fclasses';
 import { useLanguageContext } from '@bodiless/i18n';
 import { vitalGenericTemplateBase, asGenericTemplateToken } from '@bodiless/vital-templates';

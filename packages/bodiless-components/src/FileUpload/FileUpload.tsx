@@ -21,7 +21,7 @@ import React, {
 } from 'react';
 import debug from 'debug';
 import type { FieldApi } from 'informed';
-import { useNode } from '@bodiless/core';
+import { useNode } from '@bodiless/data';
 import { useDropzone } from 'react-dropzone';
 import BackendSave from '../BackendSave';
 

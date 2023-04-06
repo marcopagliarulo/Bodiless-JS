@@ -25,7 +25,7 @@ import { asBodilessChameleon } from '@bodiless/components';
 import { vitalLayout } from '@bodiless/vital-layout';
 import { vitalFlowContainer } from '@bodiless/vital-flowcontainer';
 import { ContentListingClean, vitalContentListing } from '@bodiless/vital-content-listing';
-import { withNode, withNodeKey, useNode } from '@bodiless/core';
+import { withNode, withNodeKey, useNode } from '@bodiless/data';
 import { vitalSpacing } from '@bodiless/vital-elements';
 import { vitalBreadcrumbs } from '@bodiless/vital-navigation';
 import { vitalImage } from '@bodiless/vital-image';

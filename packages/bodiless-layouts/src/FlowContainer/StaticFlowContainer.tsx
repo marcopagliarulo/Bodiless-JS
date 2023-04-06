@@ -13,7 +13,7 @@
  */
 
 import React, { FC } from 'react';
-import { withNode } from '@bodiless/core';
+import { withNode } from '@bodiless/data';
 import {
   Div,
   withoutProps,
