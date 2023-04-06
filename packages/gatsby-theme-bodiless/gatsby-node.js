@@ -281,9 +281,6 @@ exports.onCreateWebpackConfig = ({
       ],
       resolve: {
         fallback: {
-          crypto: require.resolve('crypto-browserify'),
-          // stream is required for crypto
-          stream: require.resolve('stream-browserify'),
           path: require.resolve('path-browserify'),
         },
       },
