@@ -1,0 +1,33 @@
+{
+  "name": "@bodiless/utils",
+  "version": "1.0.0-rc.33",
+  "description": "Utilities .",
+  "author": "Marco Pagliarulo <mpaglia1@its.jnj.com>",
+  "homepage": "",
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "sideEffects": false,
+  "typings": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "/lib",
+    "/doc"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnsonandjohnson/bodiless-js.git"
+  },
+  "scripts": {
+    "build": "run-p build:lib",
+    "build:lib": "tsc -p ./tsconfig.json",
+    "build:watch": "npm run build:lib -- --watch",
+    "build:api-doc": "typedoc --options ../../typedoc.js --out doc/api ./src",
+    "clean": "rimraf \"lib/*\" && rimraf tsconfig.tsbuildinfo && rimraf \"doc/api\""
+  }
+}

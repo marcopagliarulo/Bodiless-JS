@@ -72,6 +72,8 @@
       "@bodiless/tokens/*": ["bodiless-tokens/src/*"],
       "@bodiless/ui": ["bodiless-ui/src"],
       "@bodiless/ui/*": ["bodiless-ui/src/*"],
+      "@bodiless/utils": ["bodiless-utils/src"],
+      "@bodiless/utils/*": ["bodiless-utils/src/*"],
       "@bodiless/vital-accordion": ["vital-accordion/src"],
       "@bodiless/vital-accordion/*": ["vital-accordion/src/*"],
       "@bodiless/vital-content-listing": ["vital-content-listing/src/"],
