@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import omit from 'lodash/omit';
+import { omit } from '@bodiless/utils';
 import React, { ComponentType, PropsWithChildren } from 'react';
 import { HOC, DesignableComponentsProps, extendDesignable } from '@bodiless/fclasses';
 

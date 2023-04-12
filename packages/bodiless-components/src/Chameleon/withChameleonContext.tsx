@@ -23,7 +23,7 @@ import {
 } from '@bodiless/fclasses';
 import { SelectorComponents, SelectorComponentsProps } from '@bodiless/layouts';
 
-import omit from 'lodash/omit';
+import { omit } from '@bodiless/utils';
 import identity from 'lodash/identity';
 import type {
   ChameleonState, ChameleonData, ChameleonProps,
@@ -135,7 +135,7 @@ const withChameleonContext = (
       <Component
         {...omit(
           props,
-          'componentData', 'components', 'setComponentData', 'startComponents',
+          ['componentData', 'components', 'setComponentData', 'startComponents'],
         ) as any}
       />
     </ChameleonContext.Provider>

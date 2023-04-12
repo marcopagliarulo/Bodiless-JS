@@ -60,7 +60,7 @@ shadowing and using the `omit` function from the Lodash package.
     will shadow the vital Rich Text editor.
 
     ```js
-    import omit from 'lodash/omit';
+    import { omit } from '@bodiless/utils';
     import { asFluidToken } from '@bodiless/vital-elements';
     import { vitalRichTextBase } from '@bodiless/vital-editors';
 

@@ -41,6 +41,7 @@
     "@bodiless/ga4": "^1.0.0-rc.33",
     "@bodiless/gatsby-theme-bodiless": "^1.0.0-rc.33",
     "@bodiless/schema-org": "^1.0.0-rc.33",
+    "@bodiless/utils": "^1.0.0-rc.33",
     "@bodiless/vital-card": "^1.0.0-rc.33",
     "@bodiless/vital-content-listing": "^1.0.0-rc.33",
     "@bodiless/vital-editors": "^1.0.0-rc.33",

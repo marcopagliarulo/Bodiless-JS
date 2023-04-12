@@ -38,6 +38,7 @@
     "@bodiless/fclasses": "^1.0.0-rc.33",
     "@bodiless/hydration": "^1.0.0-rc.33",
     "@bodiless/layouts": "^1.0.0-rc.33",
+    "@bodiless/utils": "^1.0.0-rc.33",
     "@bodiless/vital-buttons": "^1.0.0-rc.33",
     "@bodiless/vital-editors": "^1.0.0-rc.33",
     "@bodiless/vital-elements": "^1.0.0-rc.33",

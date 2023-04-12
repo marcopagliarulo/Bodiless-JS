@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import omit from 'lodash/omit';
+import { omit } from '@bodiless/utils';
 import {
   flowHoc, replaceWith, Div, extendMeta, H1, H4,
 } from '@bodiless/fclasses';

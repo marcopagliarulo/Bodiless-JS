@@ -18,7 +18,7 @@ import React, {
 import { shallow, mount } from 'enzyme';
 import { Text } from 'informed';
 import { observer } from 'mobx-react';
-import omit from 'lodash/omit';
+import { omit } from '@bodiless/utils';
 import withEditButton from '../src/withEditButton';
 import { useEditContext } from '../src/hooks';
 import ContextMenuItem from '../src/components/ContextMenuItem';

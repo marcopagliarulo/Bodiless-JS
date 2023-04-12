@@ -20,7 +20,7 @@ import { withNodeKey } from '@bodiless/core';
 import { asSchemaSource, WithProductSchema } from '@bodiless/schema-org';
 import { vitalEditorPlain } from '@bodiless/vital-editors';
 import { vitalTypography } from '@bodiless/vital-elements';
-import omit from 'lodash/omit';
+import { omit } from '@bodiless/utils';
 import { asPDPTemplateToken } from '../PDPTemplateClean';
 import { vitalGenericTemplate } from '../../GenericTemplate';
 import { TemplateNodeKeys } from '../../TemplatesNodeKeys';

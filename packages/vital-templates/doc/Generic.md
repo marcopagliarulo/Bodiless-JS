@@ -53,7 +53,7 @@ Example:
 ```js
 // Import the base collection.
 import { vitalGenericTemplateBase } from '@bodiless/vital-templates';
-import omit from 'lodash/omit';
+import { omit } from '@bodiless/utils';
 
 // Example 1
 //   Make bottom content full-width.

@@ -343,7 +343,7 @@ where we did not want the link to be editable by a Content Editor. We could easi
 non-editable link as:
 
 ```ts
-import omit from 'lodash/omit';
+import { omit } from '@bodiless/utils';
 import { LinkClean } from '@bodiless/vital-link';
 import { brandLink } from '@bodiless/brand';
 

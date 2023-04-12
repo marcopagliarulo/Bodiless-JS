@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import omit from 'lodash/omit';
+import { omit } from '@bodiless/utils';
 import { vitalSpacing, vitalTypography } from '@bodiless/vital-elements';
 import {
   EditorPlainClean, vitalEditorPlain, RichTextClean, vitalRichText

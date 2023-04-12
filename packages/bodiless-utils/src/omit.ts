@@ -11,4 +11,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-export * from './omit';
+
+export const omit = <T extends object, K extends keyof T>
+  (obj: T | null | undefined, keys: K | K[]): Omit<T, K> => {
+  if (obj == null) {
+    return {} as T;
+  }
+  const stringKeys = (Array.isArray(keys) ? keys : [keys]).map((key: any) => String(key));
+
+  return Object.keys(obj).filter(
+    k => !stringKeys.includes(k)
+  )
+    .reduce((acc, next) => {
+      const key = next as keyof T;
+      return {
+        ...acc,
+        next: obj[key],
+      };
+    }, {}) as T;
+};

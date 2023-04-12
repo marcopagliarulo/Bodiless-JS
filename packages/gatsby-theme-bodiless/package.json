@@ -65,6 +65,7 @@
     "@bodiless/organisms": "^1.0.0-rc.33",
     "@bodiless/page": "^1.0.0-rc.33",
     "@bodiless/ui": "^1.0.0-rc.33",
+    "@bodiless/utils": "^1.0.0-rc.33",
     "@bodiless/webpack": "^1.0.0-rc.33",
     "@types/walk": "^2.3.0",
     "autoprefixer": "^10.4.2",

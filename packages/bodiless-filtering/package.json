@@ -39,6 +39,7 @@
     "@bodiless/core": "^1.0.0-rc.33",
     "@bodiless/fclasses": "^1.0.0-rc.33",
     "@bodiless/organisms": "^1.0.0-rc.33",
+    "@bodiless/utils": "^1.0.0-rc.33",
     "informed": "^3.34.0",
     "lodash": "^4.17.19",
     "uuid": "^3.3.2"

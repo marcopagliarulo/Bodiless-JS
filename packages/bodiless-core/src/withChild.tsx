@@ -17,7 +17,7 @@ import React, {
 } from 'react';
 import { extendDesignable } from '@bodiless/fclasses';
 import type { DesignableComponentsProps, HOC } from '@bodiless/fclasses';
-import omit from 'lodash/omit';
+import { omit } from '@bodiless/utils';
 
 type InsertChildOptions = {
   designKey: string,

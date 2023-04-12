@@ -13,7 +13,7 @@
  */
 
 import React, { ComponentType as CT, HTMLProps } from 'react';
-import omit from 'lodash/omit';
+import { omit } from '@bodiless/utils';
 import {
   GatsbyImage as GatsbyPluginImage,
   GatsbyImageProps as GatsbyPluginImageProps,
@@ -229,7 +229,7 @@ const asDesignableGatsbyImage = (ImageComponent: CT<any>) => {
     } = components;
     if (imageData !== undefined) {
       return (
-        <GatsbyImage {...omit(rest, 'canonicalPreset', '_nodeKey')} alt={alt} image={imageData} />
+        <GatsbyImage {...omit(rest, ['canonicalPreset', '_nodeKey'])} alt={alt} image={imageData} />
       );
     }
 
@@ -241,7 +241,7 @@ const asDesignableGatsbyImage = (ImageComponent: CT<any>) => {
     } = props;
 
     return (
-      <Image {...omit(restImg, 'canonicalPreset', '_nodeKey', 'imgStyle')} />
+      <Image {...omit(restImg, ['canonicalPreset', '_nodeKey', 'imgStyle'])} />
     );
   };
   return designable(startComponents, 'GatsbyImage')(AsDesignableGatsbyImage);

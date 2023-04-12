@@ -15,7 +15,7 @@
 import React, { FC } from 'react';
 import differenceWith from 'lodash/differenceWith';
 import isEmpty from 'lodash/isEmpty';
-import omit from 'lodash/omit';
+import { omit } from '@bodiless/utils';
 import negate from 'lodash/negate';
 import { useNode } from '@bodiless/core';
 import {
@@ -103,7 +103,7 @@ const withFilterByTags: Enhancer<WithFilterByTagsProps> = Component => {
     const styleProp = isDisplayed ? { style } : { style: { ...style, display: 'none' } };
     return (
       <Component
-        {...omit(rest, 'selectedTags', 'showWhenNoTagSelected') as any}
+        {...omit(rest, ['selectedTags', 'showWhenNoTagSelected']) as any}
         {...styleProp}
       />
     );

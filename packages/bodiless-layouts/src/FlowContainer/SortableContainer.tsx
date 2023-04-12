@@ -18,7 +18,7 @@ import { SortableContainer, SortEndHandler } from 'react-sortable-hoc';
 import {
   useContextActivator, withLocalContextMenu, withContextActivator,
 } from '@bodiless/core';
-import omit from 'lodash/omit';
+import { omit } from '@bodiless/utils';
 import { flowHoc } from '@bodiless/fclasses';
 
 type FinalUI = {

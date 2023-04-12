@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import omit from 'lodash/omit';
+import { omit } from '@bodiless/utils';
 import { withNodeKey } from '@bodiless/core';
 import { ifComponentSelector } from '@bodiless/layouts';
 import {

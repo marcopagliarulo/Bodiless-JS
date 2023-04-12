@@ -13,7 +13,7 @@
  */
 
 import flowRight from 'lodash/flowRight';
-import omit from 'lodash/omit';
+import { omit } from '@bodiless/utils';
 import { withoutProps } from '@bodiless/fclasses';
 import withCompoundForm from './withCompoundForm';
 import type { EditButtonOptions, OptionGroupDefinition } from './Types/EditButtonTypes';
@@ -67,7 +67,7 @@ const withEditButton = <P extends object, D extends object>(
   const useMenuOptions = (props: P) => createMenuOptionGroup(
     omit(
       typeof options === 'function' ? options(props) : options,
-      'renderForm', 'initialValueHandler', 'submitValueHandler',
+      ['renderForm', 'initialValueHandler', 'submitValueHandler'],
     ),
   );
   const useMenuDefinition = (props: P) => {
