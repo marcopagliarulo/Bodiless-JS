@@ -13,8 +13,7 @@
  */
 
 import React, { ComponentType, FC, Fragment as BaseFragment } from 'react';
-import pick from 'lodash/pick';
-import { omit } from '@bodiless/utils';
+import { omit, pick } from '@bodiless/utils';
 import type { HOC, Condition, Injector } from './types';
 
 type NotAFunction = { [key: string]: any, bind?: never, call?: never };

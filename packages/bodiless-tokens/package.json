@@ -37,6 +37,7 @@
     "@bodiless/fclasses": "^1.0.0-rc.33",
     "@bodiless/layouts": "^1.0.0-rc.33",
     "@bodiless/layouts-ui": "^1.0.0-rc.33",
+    "@bodiless/utils": "^1.0.0-rc.33",
     "crypto-js": "^4.1.1",
     "informed": "^3.34.0",
     "lodash": "^4.17.19",

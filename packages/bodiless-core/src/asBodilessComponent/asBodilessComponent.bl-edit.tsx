@@ -13,8 +13,7 @@
  */
 
 import React from 'react';
-import pick from 'lodash/pick';
-import { omit } from '@bodiless/utils';
+import { omit, pick } from '@bodiless/utils';
 import identity from 'lodash/identity';
 import flowRight from 'lodash/flowRight';
 import type { HOC, ComponentOrTag } from '@bodiless/fclasses';

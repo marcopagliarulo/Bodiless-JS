@@ -43,6 +43,7 @@
     "@bodiless/richtext": "^1.0.0-rc.33",
     "@bodiless/richtext-ui": "^1.0.0-rc.33",
     "@bodiless/tokens": "^1.0.0-rc.33",
+    "@bodiless/utils": "^1.0.0-rc.33",
     "@bodiless/vital-elements": "^1.0.0-rc.33",
     "@bodiless/vital-link": "^1.0.0-rc.33",
     "lodash": "^4.17.19"

@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import pick from 'lodash/pick';
+import { pick } from '@bodiless/utils';
 import {
   H1,
   H2,

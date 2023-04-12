@@ -13,7 +13,7 @@
  */
 
 import React from 'react';
-import pick from 'lodash/pick';
+import { pick } from '@bodiless/utils';
 import { HOC } from '@bodiless/fclasses';
 
 // eslint-disable-next-line max-len

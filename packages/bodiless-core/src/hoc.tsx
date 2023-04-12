@@ -21,7 +21,7 @@ import React, {
   useState,
 } from 'react';
 import flowRight from 'lodash/flowRight';
-import pick from 'lodash/pick';
+import { pick } from '@bodiless/utils';
 import { HOC, Injector } from '@bodiless/fclasses';
 import { useContextActivator, useExtendHandler, useClickOutside } from './hooks';
 import { useNodeDataHandlers, NodeDataHandlers } from './NodeProvider';

@@ -13,7 +13,7 @@
  */
 
 export const omit = <T extends object, K extends keyof T>
-  (obj: T | null | undefined, keys: K | K[]): Omit<T, K> => {
+  (obj: T | null | undefined, keys: K | K[] | string | string[]): Omit<T, K> => {
   if (obj == null) {
     return {} as T;
   }

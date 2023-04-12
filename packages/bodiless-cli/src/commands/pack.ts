@@ -15,7 +15,7 @@
 import { Command, flags as commandFlags } from '@oclif/command';
 import * as fs from 'fs-extra';
 import * as path from 'path';
-import pick from 'lodash/pick';
+import { pick } from '@bodiless/utils';
 import isEmpty from 'lodash/isEmpty';
 import intersection from 'lodash/intersection';
 import Spawner from '../helpers/Spawner';

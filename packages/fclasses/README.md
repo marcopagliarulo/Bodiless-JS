@@ -744,7 +744,7 @@ introduce border color into the mix, we may not want to allow certain
 combinations of backgrounds and borders. This can be done by creating
 an intermediate design with the exact variations we want:
 ```js
-import pick from 'lodash/pick';
+import { pick } from '@bodiless/utils';
 
 const borderColors = {
   Blue: withBlueBorder,

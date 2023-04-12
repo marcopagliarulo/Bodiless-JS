@@ -13,7 +13,7 @@
  */
 
 import { flow } from 'lodash';
-import pick from 'lodash/pick';
+import { pick } from '@bodiless/utils';
 import {
   FilterByGroupClean,
   asTestableFilterByGroup,

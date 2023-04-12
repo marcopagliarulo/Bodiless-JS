@@ -13,7 +13,7 @@
  */
 
 import { ComponentType } from 'react';
-import pick from 'lodash/pick';
+import { pick } from '@bodiless/utils';
 import { withDesign, replaceWith, flowHoc } from '@bodiless/fclasses';
 import { withResponsiveVariants } from '@bodiless/components';
 

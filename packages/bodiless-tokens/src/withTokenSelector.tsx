@@ -23,7 +23,7 @@ import {
 } from '@bodiless/core';
 import type { HOC, ComponentOrTag } from '@bodiless/fclasses';
 import flowRight from 'lodash/flowRight';
-import pick from 'lodash/pick';
+import { pick } from '@bodiless/utils';
 import { v4 } from 'uuid';
 import type { TokensProps } from './withTokensFromProps';
 import TokenMap from './TokenMap';

@@ -20,7 +20,7 @@ import {
 import {
   withAllTitlesFromTerms, ifComponentSelector, withTailwindWidthConstraints,
 } from '@bodiless/layouts';
-import pick from 'lodash/pick';
+import { pick } from '@bodiless/utils';
 // @ts-ignore
 import resolvedConfigs from
   '@bodiless/fclasses/src/tailwindcss/resolveConfig';

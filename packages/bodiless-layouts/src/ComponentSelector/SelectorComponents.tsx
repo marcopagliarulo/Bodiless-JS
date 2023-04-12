@@ -15,7 +15,7 @@
 /* eslint-disable no-underscore-dangle */
 import { applyDesign, Fragment } from '@bodiless/fclasses';
 import type { Design, ComponentOrTag, DesignableComponents } from '@bodiless/fclasses';
-import pick from 'lodash/pick';
+import { pick } from '@bodiless/utils';
 import { useRef } from 'react';
 
 /**

@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import pick from 'lodash/pick';
+import { pick } from '@bodiless/utils';
 import {
   replaceWith,
   P,
@@ -107,14 +107,14 @@ const Default = asVitalTokenSpec()({
 
 const Basic = asVitalTokenSpec()({
   ...Default,
-  Core: pick(Default.Core, 'paragraph', 'Bold', 'Link', 'SuperScript'),
-  Theme: pick(Default.Theme, 'paragraph', 'Bold', 'Link', 'SuperScript'),
+  Core: pick(Default.Core, ['paragraph', 'Bold', 'Link', 'SuperScript']),
+  Theme: pick(Default.Theme, ['paragraph', 'Bold', 'Link', 'SuperScript']),
 });
 
 const BasicNoLink = asVitalTokenSpec()({
   ...Basic,
-  Core: pick(Basic.Core, 'paragraph', 'Bold', 'SuperScript'),
-  Theme: pick(Basic.Theme, 'paragraph', 'Bold', 'SuperScript'),
+  Core: pick(Basic.Core, ['paragraph', 'Bold', 'SuperScript']),
+  Theme: pick(Basic.Theme, ['paragraph', 'Bold', 'SuperScript']),
   Behavior: {},
 });
 

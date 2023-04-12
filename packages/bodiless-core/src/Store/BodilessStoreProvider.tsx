@@ -13,7 +13,7 @@
  */
 
 import React, { Component } from 'react';
-import pick from 'lodash/pick';
+import { pick } from '@bodiless/utils';
 import path from 'path';
 import NodeProvider from '../NodeProvider';
 import { DefaultContentNode } from '../ContentNode';

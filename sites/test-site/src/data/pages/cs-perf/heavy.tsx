@@ -17,7 +17,7 @@ import {
   flowHoc, addClasses, Div, addProps, startWith, varyDesigns, HOC, withDesign
 } from '@bodiless/fclasses';
 import type { FC, ReactNode } from 'react';
-import pick from 'lodash/pick';
+import { pick } from '@bodiless/utils';
 import { FlowContainer } from '@bodiless/layouts-ui';
 import { asBodilessChameleon } from '@bodiless/components';
 import { withNodeKey, withParent } from '@bodiless/core';
@@ -60,7 +60,7 @@ export const heavyDesign = varyDesigns(
 export const withPrunedDesign: HOC = Component => {
   const WithPrunedDesign: FC<any> = props => {
     const { design } = props;
-    const newDesign = pick(design, 'Wrapper', 'ComponentWrapper');
+    const newDesign = pick(design, ['Wrapper', 'ComponentWrapper']);
     return <Component {...props} design={newDesign} />;
   };
   return WithPrunedDesign;

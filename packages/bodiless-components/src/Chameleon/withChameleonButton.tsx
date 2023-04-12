@@ -13,7 +13,7 @@
  */
 
 import React, { ComponentType } from 'react';
-import pick from 'lodash/pick';
+import { pick } from '@bodiless/utils';
 import { v1 } from 'uuid';
 // @todo We should not depend on a ui package (bu we already do for withImageLibary)
 import { componentSelectorForm } from '@bodiless/layouts';
@@ -184,7 +184,7 @@ const withChameleonButton = <P extends object, D extends object>(
   ): MenuOptionsDefinition<P & EditButtonProps<D>> => ({
     useMenuOptions,
     name: 'Chameleon',
-    ...pick(useOverrides(props), 'root', 'peer'),
+    ...pick(useOverrides(props), ['root', 'peer']),
   });
   const useHasLocalContext = (props: P & EditButtonProps<D>): boolean => {
     const def = useMenuOptionsDefinition(props);
