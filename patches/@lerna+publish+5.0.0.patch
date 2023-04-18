@@ -1,0 +1,11 @@
+--- node_modules/@lerna/publish/index.js	2023-04-18 13:29:38.745551467 +0100
++++ node_modules/@lerna/publish/index-fixed.js	2023-04-18 13:39:03.781232832 +0100
+@@ -361,7 +361,7 @@
+ 
+       // semver.inc() starts a new prerelease at .0, git describe starts at .1
+       // and build metadata is always ignored when comparing dependency ranges
+-      return `${nextVersion}-${preid}.${Math.max(0, refCount - 1)}+${sha}`;
++      return `${nextVersion}-${preid}.${Math.max(0, refCount - 1)}.${sha}`;
+     };
+ 
+     if (this.project.isIndependent()) {
