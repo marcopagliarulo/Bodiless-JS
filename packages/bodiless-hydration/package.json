@@ -33,10 +33,10 @@
   "devDependencies": {
     "@types/crypto-js": "4.1.1",
     "cheerio": "1.0.0-rc.3",
-    "enzyme": "^3.9.0"
+    "@testing-library/react": "^13.4.0"
   },
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   }
 }
