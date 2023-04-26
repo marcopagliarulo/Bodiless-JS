@@ -16,7 +16,6 @@
 import React, { useCallback, useEffect } from 'react';
 import {
   useFormApi,
-  useFormState,
   Multistep,
   useMultistepApi
 } from 'informed';
@@ -145,8 +144,9 @@ const FormBodyBase = () => {
   const {
     setValue,
     setValues,
+    getFormState
   } = useFormApi();
-  const { values: formValues } = useFormState();
+  const { values: formValues } = getFormState();
   const { node } = useNode();
   const initialAliases = convertAliasJsonToText(useGetRedirectAliases(node));
   const { next } = useMultistepApi();

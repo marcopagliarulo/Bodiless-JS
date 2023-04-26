@@ -88,6 +88,7 @@ type PageDataContextProviderProps = {
 };
 
 export {
+  CustomFieldProps,
   PageClient,
   PageProps,
   PageMenuOptions,

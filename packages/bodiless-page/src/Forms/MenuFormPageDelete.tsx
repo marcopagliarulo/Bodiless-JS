@@ -161,7 +161,7 @@ const menuFormPageDelete = (client: PageClient) => contextMenuForm({
   const { ComponentFormText } = usePageMenuOptionUI();
   const {
     invalid,
-    submits,
+    submitted,
     values,
   } = formState;
   const {
@@ -192,7 +192,7 @@ const menuFormPageDelete = (client: PageClient) => contextMenuForm({
         });
     }
 
-    if (submits && path && !invalid) {
+    if (submitted && path && !invalid) {
       context.showPageOverlay({ hasSpinner: false });
       actualState = PageStatus.Pending;
       setState({ status: PageStatus.Pending });
@@ -219,7 +219,7 @@ const menuFormPageDelete = (client: PageClient) => contextMenuForm({
           formApi.setValue('keepOpen', false);
         });
     }
-  }, [submits]);
+  }, [submitted]);
   const { status, errorMessage } = state;
 
   return (

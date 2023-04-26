@@ -193,7 +193,7 @@ const menuFormPageMove = (client: PageClient) => contextMenuForm({
   const origin = usePagePath();
 
   const {
-    submits, invalid, values,
+    submitted, invalid, values,
   } = formState;
   const [state, setState] = useState<PageState>({
     status: PageStatus.Init,
@@ -219,7 +219,7 @@ const menuFormPageMove = (client: PageClient) => contextMenuForm({
         });
     }
 
-    if (submits && path && invalid === false) {
+    if (submitted && path && invalid === false) {
       let destination = '';
       if (values.pagePath[0] === '/') {
         destination = values.pagePath;
@@ -263,7 +263,7 @@ const menuFormPageMove = (client: PageClient) => contextMenuForm({
           });
       }
     }
-  }, [submits]);
+  }, [submitted]);
   const { status, errorMessage } = state;
   return (
     <>

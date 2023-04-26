@@ -14,10 +14,10 @@
 
 import React, {
   FC,
-  ReactNode, useCallback, PropsWithChildren
+  ReactNode, useCallback, PropsWithChildren, useRef
 } from 'react';
 import {
-  Form, useFormApi, useFormState
+  Form, useFormApi, useFormState,
 } from 'informed';
 import type { FormApi, FormState } from 'informed';
 import flow from 'lodash/flow';
@@ -37,7 +37,7 @@ export type Options<D> = {
  */
 export type FormBodyProps<D> = ContextMenuFormProps & Options<D> & {
   formApi: FormApi;
-  formState: FormState;
+  formState?: FormState;
   scope?: string;
 };
 
@@ -109,18 +109,11 @@ export const ContextMenuForm = <D extends object>(props: ContextMenuPropsType<D>
     closeForm(e);
   };
 
-  const formApi = useFormApi();
-  const formState = useFormState();
-  return (
-    <Form
-      onSubmit={(formState: FormState) => {
-        if (!submitValues(formState.values as D)) {
-          callOnClose(null, formState.values as D);
-        }
-      }}
-      initialValues={initialValues}
-      {...rest}
-    >
+  const FormContent = () => {
+    const formApi = useFormApi();
+    const formState = useFormState();
+
+    return (
       <FormChrome
         onClickOutside={(e: KeyboardEvent | MouseEvent) => callOnClose(e, formState.values as D)}
         hasSubmit={typeof hasSubmit === 'function'
@@ -136,6 +129,22 @@ export const ContextMenuForm = <D extends object>(props: ContextMenuPropsType<D>
           })
           : children}
       </FormChrome>
+    );
+  };
+
+  const formApiRef = useRef();
+  return (
+    <Form
+      formApiRef={formApiRef}
+      onSubmit={(formState: FormState) => {
+        if (!submitValues(formState.values as D)) {
+          callOnClose(null, formState.values as D);
+        }
+      }}
+      initialValues={initialValues}
+      {...rest}
+    >
+      <FormContent />
     </Form>
   );
 };

@@ -19,7 +19,6 @@ import React, {
 import {
   Multistep,
   useFormApi,
-  useFormState,
   useMultistepApi
 } from 'informed';
 import {
@@ -75,9 +74,9 @@ const FormBodyBase = () => {
     ComponentFormSubmitButton,
   } = useMenuOptionUI();
   const {
-    setValue, setValues,
+    setValue, setValues, getFormState
   } = useFormApi();
-  const { values: formValues } = useFormState();
+  const { values: formValues } = getFormState();
 
   const toggleSubCheckboxes = () => {
     const { pageDisabled } = formValues;

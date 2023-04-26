@@ -21,7 +21,7 @@ import {
   INPUT_FIELD_INLINE_CLASSES,
   INPUT_FIELD_BLOCK_CLASSES,
 } from '../constants';
-import type { FieldProps } from '../types';
+import type { FieldProps, CustomFieldProps } from '../types';
 import {
   fieldValueToUrl,
   getPageUrlValidator,
@@ -33,7 +33,8 @@ import {
 
 type UserPropsWithPlaceholder = {
   placeholder: string
-};
+  onChange?: any
+} & CustomFieldProps;
 
 /**
  * informed custom field that provides ability to enter new page path
@@ -62,7 +63,7 @@ const PageURLField = (props: FieldProps) => {
   } = props;
 
   const {
-    fieldState, fieldApi, render, ref, userProps, informed
+    fieldState, fieldApi, render, ref, userProps
   } = useField<UserPropsWithPlaceholder, string>({
     type: 'string',
     name: PAGE_URL_FIELD_NAME,
@@ -72,7 +73,7 @@ const PageURLField = (props: FieldProps) => {
   });
   const { value } = fieldState;
   const { setValue, setError } = fieldApi;
-  const { onChange } = informed;
+  const { onChange, ...restUserProps } = userProps;
 
   const label = fieldLabel || (isFullUrl ? 'URL' : 'Page Path');
   const inputClasses = isFullUrl ? INPUT_FIELD_BLOCK_CLASSES : INPUT_FIELD_INLINE_CLASSES;
@@ -93,7 +94,7 @@ const PageURLField = (props: FieldProps) => {
       <input
         name="new-page-path"
         className={inputClasses}
-        {...userProps}
+        {...restUserProps}
         ref={ref}
         value={isEmptyValue(value) ? '' : value as string}
         onChange={e => {
@@ -157,7 +158,7 @@ const MovePageURLField = (props: FieldProps) => {
 
   const { required, validate, ...rest } = props;
   const {
-    fieldState, fieldApi, render, ref, userProps, informed
+    fieldState, fieldApi, render, ref, userProps
   } = useField<UserPropsWithPlaceholder, string>({
     type: 'string',
     name: PAGE_URL_FIELD_NAME,
@@ -167,7 +168,7 @@ const MovePageURLField = (props: FieldProps) => {
   });
   const { value } = fieldState;
   const { setValue } = fieldApi;
-  const { onChange } = informed;
+  const { onChange, ...restUserProps } = userProps;
   const fieldLabel = 'New URL';
   const inputClasses = INPUT_FIELD_INLINE_CLASSES;
   return render(
@@ -181,7 +182,7 @@ const MovePageURLField = (props: FieldProps) => {
       <input
         name="new-page-path"
         className={inputClasses}
-        {...userProps}
+        {...restUserProps}
         ref={ref}
         value={isEmptyValue(value) ? '' : value as string}
         onChange={e => {
