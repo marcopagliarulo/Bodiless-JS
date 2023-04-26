@@ -99,7 +99,7 @@ const menuFormPageNew = (client: PageClient) => contextMenuForm({
 
   return (
     <>
-      <ComponentFormText type="hidden" field="keepOpen" initialValue />
+      <ComponentFormText type="hidden" name="keepOpen" initialValue />
       <MenuFormPage
         formTitle="Add a Blank Page"
         status={status}
@@ -112,7 +112,7 @@ const menuFormPageNew = (client: PageClient) => contextMenuForm({
           <>
             <Label>Template</Label>
             <ComponentFormText
-              field="template"
+              name="template"
               disabled
               initialValue={currentTemplate}
             />

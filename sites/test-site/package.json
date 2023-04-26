@@ -74,7 +74,7 @@
     "gatsby-plugin-sitemap": "^5.10.2",
     "gatsby-react-router-scroll": "^5.11.0",
     "glob": "^7.1.6",
-    "informed": "^4.36.2",
+    "informed": "^4.44.0",
     "isomorphic-git": "^1.10.1",
     "lodash": "^4.17.19",
     "ora": "^4.0.2",

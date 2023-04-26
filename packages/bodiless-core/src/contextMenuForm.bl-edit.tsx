@@ -14,7 +14,7 @@
 
 import React, { FC, ReactNode, useCallback } from 'react';
 import {
-  Form, FormApi, FormState, FormValues,
+  Form, FormApi, FormState,
 } from 'informed';
 import flow from 'lodash/flow';
 import { withClickOutside } from './hoc.bl-edit';
@@ -32,8 +32,8 @@ export type Options<D> = {
  * The type of the props that are passed to a form body renderer.
  */
 export type FormBodyProps<D> = ContextMenuFormProps & Options<D> & {
-  formApi: FormApi<D>;
-  formState: FormState<D & FormValues>;
+  formApi: FormApi;
+  formState: FormState;
   scope?: string;
 };
 
@@ -90,7 +90,7 @@ export const ContextMenuForm = <D extends object>(props: ContextMenuPropsType<D>
     onClose,
     ui,
     submitValues = () => undefined,
-    initialValues = {} as D,
+    initialValues = {},
     hasSubmit = true,
     children = () => <></>,
     title,
@@ -106,21 +106,21 @@ export const ContextMenuForm = <D extends object>(props: ContextMenuPropsType<D>
   };
   return (
     <Form
-      onSubmit={(values: D) => {
-        if (!submitValues(values)) {
-          callOnClose(null, values);
+      onSubmit={(formState: FormState) => {
+        if (!submitValues(formState.values as D)) {
+          callOnClose(null, formState.values as D);
         }
       }}
       initialValues={initialValues}
       {...rest}
     >
-      {({ formApi, formState }) => (
+      {({ formApi, formState }: {formApi: FormApi, formState: FormState}) => (
         <FormChrome
-          onClickOutside={(e: KeyboardEvent | MouseEvent) => callOnClose(e, formState.values)}
+          onClickOutside={(e: KeyboardEvent | MouseEvent) => callOnClose(e, formState.values as D)}
           hasSubmit={typeof hasSubmit === 'function'
-            ? hasSubmit(formState.values) && !formState.invalid
+            ? hasSubmit(formState.values as D) && !formState.invalid
             : hasSubmit && !formState.invalid}
-          closeForm={(e: KeyboardEvent | MouseEvent) => callOnClose(e, formState.values)}
+          closeForm={(e: KeyboardEvent | MouseEvent) => callOnClose(e, formState.values as D)}
           title={title}
           description={description}
         >

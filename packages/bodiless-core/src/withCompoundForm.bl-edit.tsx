@@ -13,14 +13,34 @@
  */
 
 import React, {
-  createContext, useRef, useContext, MutableRefObject, FC,
+  createContext, useRef, useContext, MutableRefObject, FC, ReactNode
 } from 'react';
-import { useFormState, useFormApi, Scope } from 'informed';
+import { useFormState, useFormApi, useScope } from 'informed';
 import { HOC } from '@bodiless/fclasses';
 import { ContextMenuForm, FormBodyProps, FormBodyRenderer } from './contextMenuForm.bl-edit';
 import type { ContextMenuFormProps } from './Types/ContextMenuTypes';
 import type { MenuOptionsDefinition } from './Types/PageContextProviderTypes';
 import { withMenuOptions } from './PageContextProvider';
+
+// Informed doesn't export type definition for scope, so it is not detected as exported member.
+// @todo: Remove Temporary fix as soon as Scope is available properly from informed.
+const Scope = ({ scope, children }: {scope: string, children: ReactNode}) => {
+  const ScopeContext = createContext('');
+  // Name might be scoped
+  const parentScope = useScope();
+
+  let newScope;
+
+  if (!parentScope) {
+    newScope = scope;
+  } else {
+    newScope = `${parentScope}.${scope}`;
+  }
+
+  return (
+    <ScopeContext.Provider value={newScope}>{children}</ScopeContext.Provider>
+  );
+};
 
 /**
  * A collection of form fields (with initial values and submit handler) which can be rendered

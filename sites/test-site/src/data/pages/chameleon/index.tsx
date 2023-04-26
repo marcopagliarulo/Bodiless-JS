@@ -215,7 +215,7 @@ const addToCartButtonOptions = {
         <ComponentFormTitle>Add-to-Cart Configuration</ComponentFormTitle>
         <ComponentFormLabel>
           Product ID
-          <ComponentFormText field="productId" />
+          <ComponentFormText name="productId" />
         </ComponentFormLabel>
         {unwrap && (
           <ComponentFormUnwrapButton onClick={unwrap}>

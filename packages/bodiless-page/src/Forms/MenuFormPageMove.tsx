@@ -125,7 +125,7 @@ const MovePageComp = (props : PageState) => {
             />
             <ComponentFormLabel>
               <ComponentFormCheckBox
-                field="redirectEnabled"
+                name="redirectEnabled"
                 initialValue
                 keepState
               />
@@ -268,7 +268,7 @@ const menuFormPageMove = (client: PageClient) => contextMenuForm({
   const { status, errorMessage } = state;
   return (
     <>
-      <ComponentFormText type="hidden" field="keepOpen" initialValue />
+      <ComponentFormText type="hidden" name="keepOpen" initialValue />
       <MovePageComp
         status={status}
         errorMessage={errorMessage}

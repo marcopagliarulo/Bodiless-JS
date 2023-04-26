@@ -80,7 +80,7 @@ describe('withEditButton', () => {
       label: itemRendered,
       activateContext: false,
       renderForm: () => (
-        <Text field="foo" />
+        <Text name="foo" />
       ),
     };
 

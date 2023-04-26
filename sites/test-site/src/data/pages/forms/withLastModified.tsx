@@ -32,7 +32,7 @@ const renderForm = () => {
   return (
     <ComponentFormLabel>
       Last modified by
-      <ComponentFormText field="lastModified" />
+      <ComponentFormText name="lastModified" />
     </ComponentFormLabel>
   );
 };

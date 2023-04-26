@@ -38,7 +38,7 @@
     "@bodiless/data": "^1.0.0-rc.37",
     "@bodiless/fclasses": "^1.0.0-rc.37",
     "@bodiless/vital-elements": "^1.0.0-rc.37",
-    "informed": "^4.36.2",
+    "informed": "^4.44.0",
     "lodash": "^4.17.19"
   }
 }

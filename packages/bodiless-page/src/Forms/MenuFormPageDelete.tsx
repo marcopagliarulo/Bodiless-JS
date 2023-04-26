@@ -225,7 +225,7 @@ const menuFormPageDelete = (client: PageClient) => contextMenuForm({
 
   return (
     <>
-      <ComponentFormText type="hidden" field="keepOpen" initialValue />
+      <ComponentFormText type="hidden" name="keepOpen" initialValue />
       <DeletePageForm
         status={status}
         errorMessage={errorMessage}

@@ -43,7 +43,7 @@
     "common-tags": "^1.8.0",
     "copyfiles": "^2.1.1",
     "debug": "^4.1.1",
-    "informed": "^4.36.2",
+    "informed": "^4.44.0",
     "lodash": "^4.17.19",
     "rc-tooltip": "^5.1.1",
     "react-contenteditable": "^3.2.6",

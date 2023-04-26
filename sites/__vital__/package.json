@@ -43,7 +43,7 @@
     "gatsby-plugin-canonical-urls": "^4.10.0",
     "gatsby-plugin-sitemap": "^5.10.2",
     "glob": "^7.1.6",
-    "informed": "^4.36.2",
+    "informed": "^4.44.0",
     "lodash": "^4.17.19",
     "ora": "^4.0.2",
     "postcss": "^8.4.12",

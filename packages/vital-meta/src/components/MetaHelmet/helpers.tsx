@@ -64,7 +64,7 @@ export const SocialShareFormImage = () => {
   const { ComponentFormText, ComponentFormDescription } = useMenuOptionUI();
   return (
     <>
-      <ComponentFormText field={metaSocialShareImageName} id="social-share-img-src" />
+      <ComponentFormText name={metaSocialShareImageName} id="social-share-img-src" />
       <ComponentFormDescription>
         Provide an absolute image url.
       </ComponentFormDescription>

@@ -12,8 +12,8 @@
  * limitations under the License.
  */
 
-import React, { useCallback, useEffect } from 'react';
-import { useFormState, useFormApi } from 'informed';
+import React, { useCallback, useEffect, useState } from 'react';
+import { useFormState } from 'informed';
 import {
   withEditButton,
   EditButtonOptions,
@@ -82,8 +82,8 @@ const getRenderForm = (node: ContentNode<DefaultFilterData>) => (props: ContextM
     ComponentFormSubmitButton,
   } = getUI(ui);
   const { tags: defaultTags = [] } = node.data;
-  const { setStep } = useFormApi();
-  const { values, step } = useFormState();
+  const [step, setStep] = useState(1);
+  const { values } = useFormState();
 
   useEffect(() => {
     if (!defaultTags.length) {
@@ -137,7 +137,7 @@ const getRenderForm = (node: ContentNode<DefaultFilterData>) => (props: ContextM
         </ComponentFormDescription>
         <ComponentFormText
           type="hidden"
-          field="filterSelectionAction"
+          name="filterSelectionAction"
           keepState
           initialValue={FilterSelectionAction.save}
         />
@@ -172,16 +172,16 @@ const getRenderForm = (node: ContentNode<DefaultFilterData>) => (props: ContextM
           {MSG_RESET_CLEAR}
         </ComponentFormDescription>
         <ComponentFormRadioGroup
-          field="filterSelectionAction"
+          name="filterSelectionAction"
           keepState
           initialValue={FilterSelectionAction.reset}
         >
           <ComponentFormLabel key={FilterSelectionAction.reset}>
-            <ComponentFormRadio value={FilterSelectionAction.reset} />
+            <ComponentFormRadio value={FilterSelectionAction.reset.toString()} />
             Reset Local Filter UI to Saved State
           </ComponentFormLabel>
           <ComponentFormLabel key={FilterSelectionAction.clear}>
-            <ComponentFormRadio value={FilterSelectionAction.clear} />
+            <ComponentFormRadio value={FilterSelectionAction.clear.toString()} />
             Clear Saved State from Page
           </ComponentFormLabel>
         </ComponentFormRadioGroup>

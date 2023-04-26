@@ -67,11 +67,11 @@ const options: BodilessOptions<Props, Data> = {
     return (
       <>
         <ComponentFormLabel htmlFor="image-src">Src</ComponentFormLabel>
-        <ComponentFormText field="src" id="image-src" />
+        <ComponentFormText name="src" id="image-src" />
         <ComponentFormLabel htmlFor="image-alt">Alt</ComponentFormLabel>
-        <ComponentFormText field="alt" id="image-alt" />
+        <ComponentFormText name="alt" id="image-alt" />
         <ComponentFormLabel htmlFor="image-title">Title</ComponentFormLabel>
-        <ComponentFormText field="title" id="image-title" />
+        <ComponentFormText name="title" id="image-title" />
         <ImageDropZonePlugin ui={imagePickerUI} />
       </>
     );

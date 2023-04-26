@@ -93,7 +93,7 @@ const menuFormPageClone = (client: PageClient) => contextMenuForm({
   const { status, errorMessage, pagePath } = state;
   return (
     <>
-      <ComponentFormText type="hidden" field="keepOpen" initialValue />
+      <ComponentFormText type="hidden" name="keepOpen" initialValue />
       <MenuFormPage
         formTitle="Clone (this) Page"
         status={status}

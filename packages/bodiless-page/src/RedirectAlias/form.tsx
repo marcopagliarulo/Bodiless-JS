@@ -181,11 +181,11 @@ const FormBodyBase = () => {
       <>
         <CustomComponentFormTextArea
           keepState
-          field="aliases"
+          name="aliases"
           onFocus={() => setValue('isValid', true)}
           placeholder={REDIRECT_ALIASES_PLACEHOLDER}
         />
-        <ComponentFormIsValid keepState field="isValid" />
+        <ComponentFormIsValid keepState name="isValid" />
         <i>{ !formValues.isValid && INVALIDATED }</i>
         <p>
           If your page that you are redirecting from exists,

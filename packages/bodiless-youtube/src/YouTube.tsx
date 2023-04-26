@@ -155,14 +155,17 @@ const withYouTubeFormSrcSnippet = withFormSnippet({
   defaultData: { src: '' },
   snippetOptions: {
     renderForm: ({ formState, scope }) => {
-      const errors = scope ? formState.errors[scope] : formState.error;
+      type Errors = {
+        src?: string,
+      };
+      const errors = (scope ? formState.errors[scope] : formState.errors) as Errors;
       const {
         ComponentFormLabel,
         ComponentFormText,
         ComponentFormWarning,
       } = useMenuOptionUI();
       const validate = useCallback(
-        (value: string) => (!value || !isValidYouTubeUrl(value)
+        (value: unknown) => (!value || !isValidYouTubeUrl(value as string)
           ? 'Invalid YouTube URL specified.'
           : undefined),
         [],
@@ -171,11 +174,10 @@ const withYouTubeFormSrcSnippet = withFormSnippet({
         <React.Fragment key="src">
           <ComponentFormLabel htmlFor="src">URL</ComponentFormLabel>
           <ComponentFormText
-            field="src"
+            name="src"
             placeholder="https://"
             validate={validate}
-            validateOnChange
-            validateOnBlur
+            validateOn="change-blur"
           />
           {errors && errors.src && (
           <ComponentFormWarning>{errors.src}</ComponentFormWarning>

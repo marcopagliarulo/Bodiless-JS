@@ -173,7 +173,7 @@ const withYouTubeFormSrcSnippet = withFormSnippet({
         <React.Fragment key="src">
           <ComponentFormLabel htmlFor="src">URL</ComponentFormLabel>
           <ComponentFormText
-            field="src"
+            name="src"
             placeholder="https://"
             validate={validate}
             validateOnChange

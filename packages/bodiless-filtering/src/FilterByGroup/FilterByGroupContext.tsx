@@ -108,7 +108,7 @@ const FilterByGroupProvider: FC<FBGContextOptions> = ({
       (acc: any, ref: any) => [...acc, ...ref.current.tags],
       suggestions || [],
     );
-    return uniqBy(allSuggestions, 'id').sort((a, b) => a.name.localeCompare(b.name));
+    return uniqBy(allSuggestions, 'id').sort((a, b) => a.label.localeCompare(b.label));
   };
 
   const useRegisterSuggestions = () => {
