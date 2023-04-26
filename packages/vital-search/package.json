@@ -33,7 +33,7 @@
     "clean": "rimraf \"lib/*\" && rimraf tsconfig.tsbuildinfo"
   },
   "peerDependencies": {
-    "react": "^18.0.0"
+    "react": "^18.2.0"
   },
   "dependencies": {
     "@bodiless/cli": "^1.0.0-rc.37",

@@ -49,7 +49,7 @@
   },
   "peerDependencies": {
     "rc-tooltip": "^5.1.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
