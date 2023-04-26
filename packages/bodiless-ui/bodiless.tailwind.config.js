@@ -57,17 +57,9 @@ const remGrid = {
 const tailwindcssDir = require('tailwindcss-dir');
 
 module.exports = {
-  safelist: [
-    {
-      pattern: /^bl-/, // Covers all bl-classes
-      variants: ['first', 'last', 'ltr', 'rtl', 'hover', 'group-hover', 'sm', 'md', 'lg', 'even'],
-    },
-  ],
   content: [
-    './lib/**/!(*.d).{ts,js,jsx,tsx}',
-    // All the following packages, bl-* classes were found so
-    // whitelist. Best way or look for alternative.
-    '../bodiless-*/lib/**/!(*.d).{ts,js,jsx,tsx}',
+    '../bodiless-*/src/**/!(*.d).{ts,js,jsx,tsx}',
+    '../fclasses/src/**/!(*.d).{ts,js,jsx,tsx}'
   ],
   prefix: 'bl-',
   theme: {
