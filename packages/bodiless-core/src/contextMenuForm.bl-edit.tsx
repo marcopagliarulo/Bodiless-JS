@@ -37,7 +37,7 @@ export type Options<D> = {
  */
 export type FormBodyProps<D> = ContextMenuFormProps & Options<D> & {
   formApi: FormApi;
-  formState?: FormState;
+  formState: FormState;
   scope?: string;
 };
 
