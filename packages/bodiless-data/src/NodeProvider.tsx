@@ -63,11 +63,12 @@ export type Props = {
 
 const NodeProvider: React.FC<PropsWithChildren<Props>> = ({ node, collection, children }) => {
   const currentValue = useContext(NodeContext);
+  const { activeCollection: currentActiveCollection, collections} = currentValue;
   // If no collection specified, then create a new node in the active collection.
-  const activeCollection = collection || currentValue.activeCollection || '_default';
+  const activeCollection = collection || currentActiveCollection || '_default';
   const newValue = {
     activeCollection,
-    collections: { ...currentValue.collections, [activeCollection]: node },
+    collections: { ...collections, [activeCollection]: node },
   };
   return <NodeContext.Provider value={newValue}>{children}</NodeContext.Provider>;
 };

@@ -12,7 +12,12 @@
  * limitations under the License.
  */
 
-import React, { ComponentType, Fragment, FC, PropsWithChildren } from 'react';
+import React, {
+  ComponentType,
+  Fragment,
+  FC,
+  PropsWithChildren
+} from 'react';
 import {
   Div, designable, addClasses, replaceWith, DesignableComponentsProps, flowHoc, flowIf,
   HOC,

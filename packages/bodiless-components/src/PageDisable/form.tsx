@@ -16,7 +16,12 @@
 import React, {
   useCallback, useEffect,
 } from 'react';
-import { Multistep, useFormApi, useFormState, useMultistepApi } from 'informed';
+import {
+  Multistep,
+  useFormApi,
+  useFormState,
+  useMultistepApi
+} from 'informed';
 import {
   useEditContext,
   withMenuOptions,

@@ -14,7 +14,12 @@
  */
 
 import React, { useCallback, useEffect } from 'react';
-import { useFormApi, useFormState, Multistep, useMultistepApi } from 'informed';
+import {
+  useFormApi,
+  useFormState,
+  Multistep,
+  useMultistepApi
+} from 'informed';
 import {
   DefaultNormalHref,
   withToolsButton,

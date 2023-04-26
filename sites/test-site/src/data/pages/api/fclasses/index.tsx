@@ -12,7 +12,12 @@
  * limitations under the License.
  */
 
-import React, { useContext, useState, FC, PropsWithChildren } from 'react';
+import React, {
+  useContext,
+  useState,
+  FC,
+  PropsWithChildren,
+} from 'react';
 import { graphql } from 'gatsby';
 import { Page } from '@bodiless/gatsby-theme-bodiless';
 import {
