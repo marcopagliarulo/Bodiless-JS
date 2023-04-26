@@ -150,15 +150,16 @@ const useYouTubePlayerAPI = () => useContext(YouTubePlayerAPIContext);
 const ifYouTubePlayerAPILoaded = () => useContext(YouTubePlayerAPIContext).isLoaded;
 const ifNotYouTubePlayerAPILoaded = () => !useContext(YouTubePlayerAPIContext).isLoaded;
 
+type YouTubeFormSrcErrors = {
+  src?: string,
+};
+
 const withYouTubeFormSrcSnippet = withFormSnippet({
   nodeKeys: 'src',
   defaultData: { src: '' },
   snippetOptions: {
     renderForm: ({ formState, scope }) => {
-      type Errors = {
-        src?: string,
-      };
-      const errors = (scope ? formState.errors[scope] : formState.errors) as Errors;
+      const errors = (scope ? formState.errors[scope] : formState.errors) as YouTubeFormSrcErrors;
       const {
         ComponentFormLabel,
         ComponentFormText,

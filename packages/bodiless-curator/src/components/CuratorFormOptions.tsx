@@ -31,16 +31,17 @@ const options: BodilessOptions<CuratorProps, CuratorData> = {
 
 const useCuratorFormOptions = () => options;
 
+type CuratorErrors = {
+  feedId?: string,
+  containerId?: string,
+};
+
 const withCuratorFormSnippet = withFormSnippet({
   nodeKeys: 'curator',
   defaultData: { feedId: '', containerId: '' },
   snippetOptions: {
     renderForm: ({ formState, scope }) => {
-      type Errors = {
-        feedId?: string,
-        containerId?: string,
-      };
-      const errors = (scope ? formState.errors[scope] : formState.errors) as Errors;
+      const errors = (scope ? formState.errors[scope] : formState.errors) as CuratorErrors;
       const {
         ComponentFormLabel,
         ComponentFormText,

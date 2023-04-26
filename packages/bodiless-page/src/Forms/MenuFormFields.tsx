@@ -31,6 +31,10 @@ import {
   validatePageUrl,
 } from '../utils';
 
+type UserPropsWithPlaceholder = {
+  placeholder: string
+};
+
 /**
  * informed custom field that provides ability to enter new page path
  * the field contains 2 inputs: base path and page path
@@ -58,16 +62,16 @@ const PageURLField = (props: FieldProps) => {
   } = props;
 
   const {
-    fieldState, fieldApi, render, ref, userProps,
-  } = useField({
-    field: PAGE_URL_FIELD_NAME,
+    fieldState, fieldApi, render, ref, userProps, informed
+  } = useField<UserPropsWithPlaceholder, string>({
+    name: PAGE_URL_FIELD_NAME,
     validate: getPageUrlValidator(validate, required, simpleValidation),
     placeholder: isFullUrl ? '/mypath/mypage' : 'my-page',
     ...rest,
   });
   const { value } = fieldState;
   const { setValue, setError } = fieldApi;
-  const { onChange, ...restUserProps } = userProps;
+  const { onChange } = informed;
 
   const label = fieldLabel || (isFullUrl ? 'URL' : 'Page Path');
   const inputClasses = isFullUrl ? INPUT_FIELD_BLOCK_CLASSES : INPUT_FIELD_INLINE_CLASSES;
@@ -83,14 +87,14 @@ const PageURLField = (props: FieldProps) => {
       <input
         {...restBasePathProps}
         type="hidden"
-        value={isBasePathEmpty ? BASE_PATH_EMPTY_VALUE : basePathValue}
+        value={(isBasePathEmpty ? BASE_PATH_EMPTY_VALUE : basePathValue) as string}
       />
       <input
         name="new-page-path"
         className={inputClasses}
-        {...restUserProps}
+        {...userProps}
         ref={ref}
-        value={isEmptyValue(value) ? '' : value}
+        value={isEmptyValue(value) ? '' : value as string}
         onChange={e => {
           setValue(e.target.value);
           if (onChange) {
@@ -106,7 +110,7 @@ const PageURLField = (props: FieldProps) => {
           >
             <ComponentFormLinkEdit
               onClick={() => {
-                setValue(joinPath(basePathValue, fieldValueToUrl(value)));
+                setValue(joinPath(basePathValue as string, fieldValueToUrl(value)));
                 setBasePathValue(BASE_PATH_EMPTY_VALUE);
                 if (validatePageUrl(value) === undefined) setError(undefined);
               }}
@@ -143,7 +147,7 @@ const MovePageURLField = (props: FieldProps) => {
     ...restBasePathProps
   } = useBasePathField();
 
-  const basePathArray = basePathValue.split('/');
+  const basePathArray = (basePathValue as string).split('/');
   basePathArray.splice(-2, 1);
   const parentBasePathValue = basePathArray.join('/');
 
@@ -152,16 +156,16 @@ const MovePageURLField = (props: FieldProps) => {
 
   const { required, validate, ...rest } = props;
   const {
-    fieldState, fieldApi, render, ref, userProps,
-  } = useField({
-    field: PAGE_URL_FIELD_NAME,
+    fieldState, fieldApi, render, ref, userProps, informed
+  } = useField<UserPropsWithPlaceholder, string>({
+    name: PAGE_URL_FIELD_NAME,
     validate: getPageUrlValidator(validate, required),
     placeholder: '/parentpage/thispage',
     ...rest,
   });
   const { value } = fieldState;
   const { setValue } = fieldApi;
-  const { onChange, ...restUserProps } = userProps;
+  const { onChange } = informed;
   const fieldLabel = 'New URL';
   const inputClasses = INPUT_FIELD_INLINE_CLASSES;
   return render(
@@ -175,9 +179,9 @@ const MovePageURLField = (props: FieldProps) => {
       <input
         name="new-page-path"
         className={inputClasses}
-        {...restUserProps}
+        {...userProps}
         ref={ref}
-        value={isEmptyValue(value) ? '' : value}
+        value={isEmptyValue(value) ? '' : value as string}
         onChange={e => {
           setValue(e.target.value);
           if (onChange) {

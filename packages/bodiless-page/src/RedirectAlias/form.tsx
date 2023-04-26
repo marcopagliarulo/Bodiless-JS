@@ -14,7 +14,7 @@
  */
 
 import React, { useCallback, useEffect } from 'react';
-import { useFormApi, useFormState } from 'informed';
+import { useFormApi, useFormState, Multistep, useMultistepApi } from 'informed';
 import {
   DefaultNormalHref,
   withToolsButton,
@@ -45,8 +45,6 @@ import {
 import { ComponentFormDefaultPanelSize } from '@bodiless/ui';
 import { useGetRedirectAliases } from './hooks';
 import type { AliasItem } from './types';
-
-enum Steps { Edit, Confirmation }
 
 const REDIRECT_ALIASES = 'Redirect Aliases';
 const REDIRECT_ALIASES_PLACEHOLDER = '/page-1/ /page-2/ 301'
@@ -142,11 +140,11 @@ const FormBodyBase = () => {
   const {
     setValue,
     setValues,
-    setStep,
   } = useFormApi();
-  const { values: formValues, step } = useFormState();
+  const { values: formValues } = useFormState();
   const { node } = useNode();
   const initialAliases = convertAliasJsonToText(useGetRedirectAliases(node));
+  const { next } = useMultistepApi();
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -161,7 +159,7 @@ const FormBodyBase = () => {
 
     // Saves json file.
     node.setData(convertAliasTextToJson(aliases as string));
-    setStep(Steps.Confirmation);
+    next();
   };
 
   const EditForm = useCallback(() => {
@@ -178,7 +176,7 @@ const FormBodyBase = () => {
     // If validation fails, clears error message when the user focus
     // on the form to type again.
     return (
-      <>
+      <Multistep.Step step="Edit">
         <CustomComponentFormTextArea
           keepState
           name="aliases"
@@ -196,14 +194,16 @@ const FormBodyBase = () => {
           aria-label="Submit"
           onClick={handleSubmit}
         />
-      </>
+      </Multistep.Step>
     );
   }, [formValues]);
 
   const ConfirmationForm = () => (
-    <ComponentFormDescription>
-      {CONFIRMATION}
-    </ComponentFormDescription>
+    <Multistep.Step step="Confirmation">
+      <ComponentFormDescription>
+        {CONFIRMATION}
+      </ComponentFormDescription>
+    </Multistep.Step>
   );
 
   return (
@@ -211,8 +211,8 @@ const FormBodyBase = () => {
       <ComponentFormTitle>
         { REDIRECT_ALIASES }
       </ComponentFormTitle>
-      { step === Steps.Edit && <EditForm /> }
-      { step === Steps.Confirmation && <ConfirmationForm /> }
+      <EditForm />
+      <ConfirmationForm />
     </>
   );
 };

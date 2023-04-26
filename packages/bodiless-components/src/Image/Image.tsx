@@ -24,7 +24,7 @@ import {
   AsBodiless,
 } from '@bodiless/core';
 import { addProps } from '@bodiless/fclasses';
-import { withFieldApi } from 'informed';
+import { useFieldApi } from 'informed';
 import { FileUpload } from '../FileUpload';
 import type { FileUploadPickerUI } from '../FileUpload';
 import withPropsFromPlaceholder from '../withPropsFromPlaceholder';
@@ -52,7 +52,10 @@ export const DropZonePlugin = flow(
 type ImageProps = HTMLProps<HTMLImageElement>;
 type Props = ImageProps & { ui?: TImagePickerUI};
 
-const ImageDropZonePlugin: ComponentType<{ ui?: Partial<TImagePickerUI> }> = withFieldApi('src')(DropZonePlugin);
+const ImageDropZonePlugin: ComponentType<{ ui?: Partial<TImagePickerUI> }> = (props) => {
+  const fieldApi = useFieldApi('src');
+  return <DropZonePlugin fieldApi={fieldApi} {...props} />;
+};
 
 // Options used to create an edit button.
 const options: BodilessOptions<Props, Data> = {

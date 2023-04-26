@@ -16,7 +16,7 @@
 import React, {
   useCallback, useEffect,
 } from 'react';
-import { useFormApi, useFormState } from 'informed';
+import { Multistep, useFormApi, useFormState, useMultistepApi } from 'informed';
 import {
   useEditContext,
   withMenuOptions,
@@ -52,9 +52,6 @@ const defaultFormValues: FormValues = {
   indexingDisabled: false,
 };
 
-// Create an enum with the step values
-enum Steps { FeaturesSelect, Confirmation }
-
 const FormBodyBase = () => {
   const { node } = useNode<PageDisabledData>();
   const disabledPages = useGetDisabledPages(node);
@@ -73,9 +70,9 @@ const FormBodyBase = () => {
     ComponentFormSubmitButton,
   } = useMenuOptionUI();
   const {
-    setValue, setValues, setStep,
+    setValue, setValues,
   } = useFormApi();
-  const { values: formValues, step } = useFormState();
+  const { values: formValues } = useFormState();
 
   const toggleSubCheckboxes = () => {
     const { pageDisabled } = formValues;
@@ -93,13 +90,14 @@ const FormBodyBase = () => {
   };
 
   const FeaturesSelectForm = useCallback(() => {
+    const { next } = useMultistepApi();
     useEffect(() => {
       // Get initial values from node.
       setValues(pageData);
     }, []);
 
     return (
-      <>
+      <Multistep.Step step="FeaturesSelect">
         <ComponentFormDescription>
           Features to disable:
         </ComponentFormDescription>
@@ -129,12 +127,9 @@ const FormBodyBase = () => {
         </ComponentFormFieldWrapper>
         <ComponentFormSubmitButton
           aria-label="Submit"
-          onClick={(e: any) => {
-            e.preventDefault();
-            setStep(Steps.Confirmation);
-          }}
+          onClick={next}
         />
-      </>
+      </Multistep.Step>
     );
   }, [formValues]);
 
@@ -171,22 +166,24 @@ const FormBodyBase = () => {
     };
 
     return (
-      <ul>
-        {Object.entries(formValues).map(
-          ([key, value]) => <li key={key}>{`${mapKeysToLabels(key)}: ${value ? 'Disabled' : 'Enabled'}`}</li>,
-        )}
-      </ul>
+      <Multistep.Step step="Confirmation">
+        <ul>
+          {Object.entries(formValues).map(
+            ([key, value]) => <li key={key}>{`${mapKeysToLabels(key)}: ${value ? 'Disabled' : 'Enabled'}`}</li>,
+          )}
+        </ul>
+      </Multistep.Step>
     );
   };
 
   return (
-    <>
+    <Multistep>
       <ComponentFormTitle>
         Disable Status
       </ComponentFormTitle>
-      {step === Steps.FeaturesSelect && <FeaturesSelectForm />}
-      {step === Steps.Confirmation && <ConfirmationForm />}
-    </>
+      <FeaturesSelectForm />
+      <ConfirmationForm />
+    </Multistep>
   );
 };
 

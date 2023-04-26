@@ -18,10 +18,7 @@ import {
 } from 'react';
 import { AxiosPromise } from 'axios';
 import type {
-  BaseFieldProps,
-  FormValue,
-  FormValues,
-  FormError,
+  FieldProps as BaseFieldProps,
 } from 'informed';
 
 enum PageStatus {
@@ -76,8 +73,8 @@ type CustomFieldProps = {
   required?: boolean,
   simpleValidation?: boolean,
 };
-type FieldProps = Omit<BaseFieldProps, 'field'> & CustomFieldProps;
-type FieldValidate = (value: FormValue, values: FormValues) => FormError;
+type FieldProps = Omit<BaseFieldProps<any>, 'name'> & CustomFieldProps;
+type FieldValidate = (value: unknown) => Record<string, unknown>;
 
 type PageDataContextProps = {
   pagePath: string,

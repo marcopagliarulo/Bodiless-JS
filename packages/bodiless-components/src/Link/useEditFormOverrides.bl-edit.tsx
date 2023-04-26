@@ -17,7 +17,7 @@ import {
   useMenuOptionUI,
 } from '@bodiless/core';
 import identity from 'lodash/identity';
-import { withFieldApi } from 'informed';
+import { useFieldApi } from 'informed';
 import DefaultNormalHref from './NormalHref';
 import {
   LinkData,
@@ -42,7 +42,10 @@ const DEFAULT_ALLOWED_FILE_TYPES = [
   'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
 ];
 
-const FileUpload: ComponentType<Omit<FileUploadProps, 'fieldApi'>> = withFieldApi('href')(BaseFileUpload);
+const FileUpload: ComponentType<Omit<FileUploadProps, 'fieldApi'>> = (props) => {
+  const fieldApi = useFieldApi('href');
+  return <BaseFileUpload fieldApi={fieldApi} {...props} />;
+};
 
 const useEditFormOverrides = (
   overrides: ReturnType<UseLinkOverrides>
