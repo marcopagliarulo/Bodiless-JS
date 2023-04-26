@@ -42,6 +42,7 @@ const useBasePathField = () => {
   const {
     fieldState, fieldApi, ref, informed, userProps
   } = useField({
+    type: 'string',
     name: BASE_PATH_FIELD_NAME,
     initialValue: basePath,
   });

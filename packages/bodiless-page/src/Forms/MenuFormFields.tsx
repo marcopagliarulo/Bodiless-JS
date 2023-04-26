@@ -64,6 +64,7 @@ const PageURLField = (props: FieldProps) => {
   const {
     fieldState, fieldApi, render, ref, userProps, informed
   } = useField<UserPropsWithPlaceholder, string>({
+    type: 'string',
     name: PAGE_URL_FIELD_NAME,
     validate: getPageUrlValidator(validate, required, simpleValidation),
     placeholder: isFullUrl ? '/mypath/mypage' : 'my-page',
@@ -158,6 +159,7 @@ const MovePageURLField = (props: FieldProps) => {
   const {
     fieldState, fieldApi, render, ref, userProps, informed
   } = useField<UserPropsWithPlaceholder, string>({
+    type: 'string',
     name: PAGE_URL_FIELD_NAME,
     validate: getPageUrlValidator(validate, required),
     placeholder: '/parentpage/thispage',
