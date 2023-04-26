@@ -87,8 +87,7 @@ const DeletePageForm = (props : PageState) => {
               fieldLabel="Add optional redirect"
               placeholder="/redirectpage"
               simpleValidation
-              validateOnChange
-              validateOnBlur
+              validateOn="change-blur"
             />
           </ContextMenuProvider>
         </>

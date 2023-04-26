@@ -120,8 +120,7 @@ const MovePageComp = (props : PageState) => {
             <ComponentFormDescription>{basePathValue}</ComponentFormDescription>
             <MovePageURLField
               required
-              validateOnChange
-              validateOnBlur
+              validateOn="change-blur"
             />
             <ComponentFormLabel>
               <ComponentFormCheckBox
