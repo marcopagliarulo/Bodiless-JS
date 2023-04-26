@@ -12,10 +12,9 @@
  * limitations under the License.
  */
 
-// import { SortableElement, SortableHandle } from 'react-sortable-hoc';
+import React, { ComponentType, HTMLProps } from 'react';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS, Transform } from '@dnd-kit/utilities';
-import React, { ComponentType, HTMLProps } from 'react';
 import CleanReresizable, { ResizeCallback, ResizableProps } from 're-resizable';
 import { SnapData } from '../FlowContainer/utils/appendTailwindWidthClass';
 import { DIRECTIONS } from '../withDirection/withDirection';
@@ -120,6 +119,7 @@ const SortableResizableWrapper = (props: Props) => {
       enable={ENABLED_DRAG_SIDES}
       scale={1}
       className={className}
+      // @ts-ignore
       handleComponent={
         direction === DIRECTIONS.RTL
           ? { left: ResizeHandleRTL }

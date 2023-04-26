@@ -15,6 +15,7 @@
 import {
   ComponentType,
   HTMLProps,
+  ReactNode,
 } from 'react';
 import { AxiosPromise } from 'axios';
 import type {
@@ -37,7 +38,7 @@ type PageState = {
   formTitle?: string,
   linkId?: string,
   isRedirectActive?: boolean,
-  FormFields?: (Label: ComponentType<HTMLProps<HTMLLabelElement>>) => void,
+  FormFields?: (Label: ComponentType<HTMLProps<HTMLLabelElement>>) => ReactNode,
 };
 
 type PageMenuOptions = {

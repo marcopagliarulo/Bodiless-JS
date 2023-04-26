@@ -123,7 +123,7 @@ const PageURLField = (props: FieldProps) => {
       }
       {
         fieldState.error ? (
-          <ComponentFormWarning>{fieldState.error}</ComponentFormWarning>
+          <ComponentFormWarning>{fieldState.error as string}</ComponentFormWarning>
         ) : null
       }
     </>,
@@ -193,7 +193,7 @@ const MovePageURLField = (props: FieldProps) => {
       />
       {
         fieldState.error ? (
-          <ComponentFormWarning>{fieldState.error}</ComponentFormWarning>
+          <ComponentFormWarning>{fieldState.error as string}</ComponentFormWarning>
         ) : null
       }
     </>,

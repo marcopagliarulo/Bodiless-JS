@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import React, { FC, useCallback } from 'react';
+import React, { FC, PropsWithChildren, useCallback } from 'react';
 import {
   designable,
   Span,
@@ -35,7 +35,7 @@ const accordionTitleComponents: AccordionTitleComponents = {
   OpenIcon: AddIcon,
   CloseIcon: RemoveIcon,
 };
-const AccordionTitleBase: FC<AccordionTitleBaseProps> = ({
+const AccordionTitleBase: FC<PropsWithChildren<AccordionTitleBaseProps>> = ({
   components, children,
 }) => {
   const {

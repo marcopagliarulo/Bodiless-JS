@@ -12,10 +12,14 @@
  * limitations under the License.
  */
 
-import React, { FC, ReactNode, useCallback } from 'react';
+import React, {
+  FC,
+  ReactNode, useCallback, PropsWithChildren
+} from 'react';
 import {
-  Form, FormApi, FormState,
+  Form, useFormApi, useFormState
 } from 'informed';
+import type { FormApi, FormState } from 'informed';
 import flow from 'lodash/flow';
 import { withClickOutside } from './hoc.bl-edit';
 import { useMenuOptionUI } from './components/ContextMenuContext.bl-edit';
@@ -53,7 +57,7 @@ export type FormChromeProps = {
   hasSubmit: boolean;
 } & ContextMenuFormProps;
 
-const FormChromeBase: FC<FormChromeProps> = (props) => {
+const FormChromeBase: FC<PropsWithChildren<FormChromeProps>> = (props) => {
   const {
     children,
     title,
@@ -104,6 +108,9 @@ export const ContextMenuForm = <D extends object>(props: ContextMenuPropsType<D>
     }
     closeForm(e);
   };
+
+  const formApi = useFormApi();
+  const formState = useFormState();
   return (
     <Form
       onSubmit={(formState: FormState) => {
@@ -114,23 +121,21 @@ export const ContextMenuForm = <D extends object>(props: ContextMenuPropsType<D>
       initialValues={initialValues}
       {...rest}
     >
-      {({ formApi, formState }: {formApi: FormApi, formState: FormState}) => (
-        <FormChrome
-          onClickOutside={(e: KeyboardEvent | MouseEvent) => callOnClose(e, formState.values as D)}
-          hasSubmit={typeof hasSubmit === 'function'
-            ? hasSubmit(formState.values as D) && !formState.invalid
-            : hasSubmit && !formState.invalid}
-          closeForm={(e: KeyboardEvent | MouseEvent) => callOnClose(e, formState.values as D)}
-          title={title}
-          description={description}
-        >
-          {typeof children === 'function'
-            ? children({
-              closeForm, formApi, formState, ui,
-            })
-            : children}
-        </FormChrome>
-      )}
+      <FormChrome
+        onClickOutside={(e: KeyboardEvent | MouseEvent) => callOnClose(e, formState.values as D)}
+        hasSubmit={typeof hasSubmit === 'function'
+          ? hasSubmit(formState.values as D) && !formState.invalid
+          : hasSubmit && !formState.invalid}
+        closeForm={(e: KeyboardEvent | MouseEvent) => callOnClose(e, formState.values as D)}
+        title={title}
+        description={description}
+      >
+        {typeof children === 'function'
+          ? children({
+            closeForm, formApi, formState, ui,
+          })
+          : children}
+      </FormChrome>
     </Form>
   );
 };

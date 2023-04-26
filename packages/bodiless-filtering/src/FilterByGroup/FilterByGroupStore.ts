@@ -79,7 +79,7 @@ const useStateCallback = (initialState: any) => {
   const [state, setState] = useState(initialState);
   const cbRef = useRef<Function | null>(null); // init mutable ref container for callbacks
 
-  const setStateCallback = useCallback((newState, cb) => {
+  const setStateCallback = useCallback((newState: any, cb: Function) => {
     cbRef.current = cb; // store current, passed callback in ref
     setState(newState);
   }, []); // keep object reference stable, exactly like `useState`

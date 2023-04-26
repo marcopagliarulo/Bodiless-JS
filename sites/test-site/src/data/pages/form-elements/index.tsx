@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import React, { FC } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 import { graphql } from 'gatsby';
 import { PageContextProvider, contextMenuForm, getUI } from '@bodiless/core';
 import { Page } from '@bodiless/gatsby-theme-bodiless';
@@ -110,7 +110,7 @@ const ExampleForm = () => contextMenuForm()(
   },
 );
 
-const ExampleFormButtonProvider: FC = ({ children }) => {
+const ExampleFormButtonProvider: FC<PropsWithChildren> = ({ children }) => {
   const getMenuOptions = () => [{
     name: 'Example Form',
     label: 'Test',

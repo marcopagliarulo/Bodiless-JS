@@ -12,7 +12,12 @@
  * limitations under the License.
  */
 
-import React, { FC, createContext, useContext } from 'react';
+import React, {
+  FC,
+  createContext,
+  useContext,
+  PropsWithChildren
+} from 'react';
 import {
   Input, TextArea, Radio, RadioGroup, Checkbox, Select,
 } from 'informed';
@@ -84,7 +89,9 @@ const ContextMenuUIContext = createContext<ContextMenuUI>({});
 const useContextMenuContext = () => useContext(ContextMenuContext);
 const useMenuOptionUI = () => getUI(useContext(ContextMenuUIContext));
 
-const ContextMenuProvider: FC<ContextType & ContextUIType> = ({ children, setRenderForm, ui }) => (
+const ContextMenuProvider: FC<PropsWithChildren<ContextType & ContextUIType>> = (
+  { children, setRenderForm, ui }
+) => (
   <ContextMenuUIContext.Provider value={getUI(ui)}>
     <ContextMenuContext.Provider value={{ setRenderForm }}>
       { children }

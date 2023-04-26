@@ -21,6 +21,7 @@ import React, {
   useMemo,
   createContext,
   FC,
+  PropsWithChildren,
 } from 'react';
 import { v1 } from 'uuid';
 import uniqBy from 'lodash/uniqBy';
@@ -84,7 +85,7 @@ const useIsFilterTagSelected = () => {
  * @private
  * Context provider for the FilterByGroup context.
  */
-const FilterByGroupProvider: FC<FBGContextOptions> = ({
+const FilterByGroupProvider: FC<PropsWithChildren<FBGContextOptions>> = ({
   children,
   suggestions,
   multipleAllowedTags,

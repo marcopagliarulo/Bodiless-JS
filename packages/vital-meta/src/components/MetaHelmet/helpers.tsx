@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { HOC } from '@bodiless/fclasses';
 import { withMetaForm } from '@bodiless/components';
 import { useMenuOptionUI } from '@bodiless/core';
@@ -81,7 +81,7 @@ export const withMetaHtmlAttributes = (
   dir: string,
   nodeKey: string,
   nodeCollection: string | undefined,
-): HOC => HelmetComponent => props => {
+): HOC<PropsWithChildren> => HelmetComponent => props => {
   const { children, ...rest } = props;
   const { node } = useNode(nodeCollection);
   const childNode = node.child(nodeKey);
