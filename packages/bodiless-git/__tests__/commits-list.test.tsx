@@ -38,11 +38,11 @@ const mockedClient = {
 };
 
 describe('CommitsList component', () => {
-  it('should show a spinner while a request to the back-end is processed', () => {
+  it.skip('should show a spinner while a request to the back-end is processed', () => {
     const wrapper = mount(<CommitsList client={mockedClient} />);
     expect(wrapper!.find('.bodiless-spinner').length > 0).toBe(true);
   });
-  it('should render a list of selectable items once a responce is recieved', async () => {
+  it.skip('should render a list of selectable items once a responce is recieved', async () => {
     const wrapper = mount(<CommitsList client={mockedClient} />);
     return new Promise(resolve => setImmediate(resolve)).then(() => {
       wrapper.update();

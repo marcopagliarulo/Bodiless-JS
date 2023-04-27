@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@types/crypto-js": "4.1.1",
-    "@types/rc-tooltip": "^3.7.7",
-    "@testing-library/react": "^13.4.0"
+    "@types/rc-tooltip": "^3.7.1",
+    "enzyme": "^3.9.0"
   }
 }

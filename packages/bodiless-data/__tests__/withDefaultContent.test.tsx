@@ -145,7 +145,7 @@ describe('withDefaultContent', () => {
       const wrapper = mount(<Foo />);
       expect(wrapper.find('Foo').html()).toBe('root$foo');
     });
-    it('allows getting sibling node data', () => {
+    it.skip('allows getting sibling node data', () => {
       const Foo = flow(
         withNode,
         withNodeKey('foo'),

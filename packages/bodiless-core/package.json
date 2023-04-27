@@ -47,8 +47,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@testing-library/react": "^13.4.0",
-    "@types/rc-tooltip": "^3.7.7",
+    "enzyme": "^3.9.0",
+    "informed": "^3.34.0",
+    "@types/rc-tooltip": "^3.7.1",
     "@types/uuid": "^3.4.4"
   }
 }

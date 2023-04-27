@@ -30,8 +30,7 @@
     "@bodiless/fclasses": "^1.0.0-rc.37",
     "@bodiless/layouts": "^1.0.0-rc.37",
     "@bodiless/ui": "^1.0.0-rc.37",
-    "re-resizable": "^4.11.0",
-    "@dnd-kit/sortable": "^7.0.1"
+    "re-resizable": "^4.11.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",

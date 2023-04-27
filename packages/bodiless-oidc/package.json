@@ -28,11 +28,13 @@
   "dependencies": {
     "@bodiless/cli": "^1.0.0-rc.37",
     "axios": "^0.21.0",
-    "@testing-library/react": "^13.4.0",
     "oidc-client-ts": "2.0.0-rc.2"
   },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "enzyme": "^3.9.0"
   }
 }
