@@ -11,7 +11,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import React from 'react';
+import { flowHoc, HOC } from '@bodiless/fclasses';
 
-import identity from 'lodash/identity';
+const staticToken: HOC = Component => props => <Component {...props} />;
 
-export default identity;
+const withResetButton = (): HOC => flowHoc(
+  staticToken
+);
+
+export default withResetButton;
