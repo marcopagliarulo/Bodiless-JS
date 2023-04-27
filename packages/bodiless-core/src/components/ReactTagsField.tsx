@@ -14,7 +14,7 @@
 
 import React from 'react';
 import { v4 } from 'uuid';
-import { useFormApi, Input } from 'informed';
+import { useFieldApi, Input, useFieldState } from 'informed';
 import { ReactTags, ReactTagsProps, Tag as TagType } from 'react-tag-autocomplete';
 
 class Tag {
@@ -32,8 +32,9 @@ export type ReactTagsFieldProps = {
 } & Omit<ReactTagsProps, 'onDelete' | 'onAddition'>;
 
 const ReactTagsField = (props: ReactTagsFieldProps) => {
-  const formApi = useFormApi();
-  const currentTags = formApi.getValue('tags') as TagType[] || [];
+  const { setValue } = useFieldApi('tags');
+  const { value } = useFieldState('tags');
+  const currentTags = value as TagType[] || [];
   const { allowMultipleTags, ...rest } = props;
 
   const handleAddition = (tag: TagType) => {
@@ -44,14 +45,14 @@ const ReactTagsField = (props: ReactTagsFieldProps) => {
     }
     if (!currentTags.some(currentTag => currentTag.label === tagToAdd.label)) {
       const newTags = allowMultipleTags ? [...currentTags, tagToAdd] : [tagToAdd];
-      formApi.setValue('tags', newTags);
+      setValue(newTags);
     }
   };
 
   const handleDelete = (i: number) => {
     const newTags = currentTags.slice(0);
     newTags.splice(i, 1);
-    formApi.setValue('tags', newTags);
+    setValue(newTags);
   };
 
   return (

@@ -24,16 +24,16 @@ const ReactTagsField: ComponentType<ReactTagsFieldProps> = props => {
     rootIsDisabled: 'is-disabled',
     rootIsInvalid: 'is-invalid',
     label: 'react-tags__label',
-    tagList: 'bl-max-w-xl-grid-1 bl-inline',
-    tagListItem: 'react-tags__selected-tag',
     tag: `
-        bl-inline-block bl-box-border bl-mr-grid-1 bl-mb-grid-1
-        bl-py-grid-1 bl-px-grid-2 bl-border bl-border-solid
-        bl-border-gray-400 bl-gray-900 bl-rounded-sm bl-bg-gray-100
-        bl-react-tags__tag`,
+    bl-box-border bl-mr-grid-1 bl-mb-grid-1
+    bl-py-grid-1 bl-px-grid-2 bl-border bl-border-solid
+    bl-border-gray-400 bl-gray-900 bl-rounded-sm bl-bg-gray-100
+    bl-react-tags__selected-tag`,
+    tagList: 'bl-max-w-xl-grid-1 bl-inline',
+    tagListItem: 'bl-inline-block',
     tagName: 'bl-text-gray-900',
-    comboBox: 'bl-text-gray-900 bl-react-tags__combobox-input',
-    input: 'bl-inline-block bl-py-grid-1 bl-px-grid-0 bl-mb-grid-1 bl-max-w-full bl-min-w-xl-grid-1',
+    comboBox: 'bl-inline-block bl-py-grid-1 bl-px-grid-0 bl-mb-grid-1 bl-max-w-full bl-min-w-xl-grid-1',
+    input: 'bl-text-gray-900 bl-react-tags__search-input',
     listBox: 'bl-text-gray-900 bl-absolute bl-top-full bl-w-full bl-left-grid-0 bl-z-10 bl-react-tags__listbox',
     noOptions: 'react-tags__listbox-no-options',
     option: 'react-tags__listbox-option',
