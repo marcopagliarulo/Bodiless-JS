@@ -1,4 +1,9 @@
-import React, { useState, useEffect, FC, PropsWithChildren } from 'react';
+import React, {
+  useState,
+  useEffect,
+  FC,
+  PropsWithChildren
+} from 'react';
 import { HOC } from '@bodiless/fclasses';
 
 import { WithoutHydrationWrapperFunction } from '../src/withoutHydration/types';

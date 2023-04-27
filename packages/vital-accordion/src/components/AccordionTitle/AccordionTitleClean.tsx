@@ -22,7 +22,7 @@ import {
 import { asVitalTokenSpec } from '@bodiless/vital-elements';
 import { useEditContext } from '@bodiless/core';
 import { AddIcon, RemoveIcon } from '../../assets';
-import { useAccordionContext } from '../Accordion';
+import { useAccordionContext } from '../Accordion/AccordionContext';
 import {
   AccordionTitleBaseProps,
   AccordionTitleComponents,

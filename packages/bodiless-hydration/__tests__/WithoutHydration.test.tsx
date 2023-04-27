@@ -134,8 +134,7 @@ describe('when using withoutHydration', () => {
           hydrateRoot(root,
             <RemountingComponent>
               <DryComponent />
-            </RemountingComponent>
-          );
+            </RemountingComponent>);
         });
 
         const $ = cheerio.load(root.outerHTML);
@@ -155,8 +154,7 @@ describe('when using withoutHydration', () => {
 
         act(() => {
           hydrateRoot(root,
-            <Component />
-          );
+            <Component />);
         });
 
         const $ = cheerio.load(root.outerHTML);
