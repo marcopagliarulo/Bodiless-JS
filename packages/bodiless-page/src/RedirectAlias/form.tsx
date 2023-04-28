@@ -17,7 +17,7 @@ import React, { useCallback, useEffect } from 'react';
 import {
   useFormApi,
   Multistep,
-  useMultistepApi
+  useMultistepApi,
 } from 'informed';
 import {
   DefaultNormalHref,
@@ -149,23 +149,6 @@ const FormBodyBase = () => {
   const { values: formValues } = getFormState();
   const { node } = useNode();
   const initialAliases = convertAliasJsonToText(useGetRedirectAliases(node));
-  const { next } = useMultistepApi();
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-
-    const { aliases } = formValues;
-    if (!isTextValid(aliases as string)) {
-      setValue('isValid', false);
-      return;
-    }
-
-    setValue('isValid', true);
-
-    // Saves json file.
-    node.setData(convertAliasTextToJson(aliases as string));
-    next();
-  };
 
   const EditForm = useCallback(() => {
     useEffect(() => {
@@ -177,6 +160,25 @@ const FormBodyBase = () => {
 
       setValues(values);
     }, []);
+    const { next } = useMultistepApi();
+    const handleSubmit = (e: any) => {
+      e.preventDefault();
+      const { values: formValues } = getFormState();
+
+      // @ts-ignore
+      const { Edit: { aliases} } = formValues;
+
+      if (!isTextValid(aliases as string)) {
+        setValue('isValid', false);
+        return;
+      }
+
+      setValue('isValid', true);
+
+      // Saves json file.
+      node.setData(convertAliasTextToJson(aliases as string));
+      next();
+    };
 
     // If validation fails, clears error message when the user focus
     // on the form to type again.
@@ -212,13 +214,13 @@ const FormBodyBase = () => {
   );
 
   return (
-    <>
+    <Multistep>
       <ComponentFormTitle>
         { REDIRECT_ALIASES }
       </ComponentFormTitle>
       <EditForm />
       <ConfirmationForm />
-    </>
+    </Multistep>
   );
 };
 
