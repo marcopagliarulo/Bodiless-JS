@@ -12,8 +12,8 @@
  * limitations under the License.
  */
 
-import vitalHeaderBaseOrig, { VitalHeader } from './tokens/vitalHeader';
-
+import vitalHeaderBaseOrig from './tokens/vitalHeader';
+import type { VitalHeader } from './tokens/vitalHeader';
 /**
  * Use this version of the vital helmet tokens when extending or shadowing.
  * @category Token Collection
@@ -25,4 +25,5 @@ export { default as HeaderClean, asHeaderToken, HeaderStatic } from './HeaderCle
 export { default as vitalHeader } from './tokens';
 export type { HeaderComponents, HeaderProps } from './types';
 
-export { vitalHeaderBase, VitalHeader };
+export { vitalHeaderBase };
+export type { VitalHeader };

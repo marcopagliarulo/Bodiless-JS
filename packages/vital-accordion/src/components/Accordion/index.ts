@@ -25,7 +25,7 @@ export {
   useIsAccordionFocusedIn,
   useIsAccordionFocusedOut,
 } from './AccordionContext';
-export {
+export type {
   AccordionComponents,
   AccordionProps,
   AccordionContextInterface,

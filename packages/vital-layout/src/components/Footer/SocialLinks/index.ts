@@ -15,7 +15,8 @@
 // @TODO: As Social Links are implemented, move them outside Footer component into
 // a more appropriate place.
 // Also requires component structure reorganization for new static pattern.
-import vitalSocialLinksBaseOrig, { VitalSocialLinks } from './tokens/vitalSocialLinks';
+import vitalSocialLinksBaseOrig from './tokens/vitalSocialLinks';
+import type { VitalSocialLinks } from './tokens/vitalSocialLinks';
 
 /**
  * Use this version of the vital sociallinks tokens when extending or shadowing.
@@ -28,4 +29,5 @@ export { SocialLinksClean, asSocialLinksToken } from './SocialLinksClean';
 export { default as vitalSocialLinks } from './tokens';
 export type { SocialLinksComponents, SocialLinksProps } from './types';
 
-export { vitalSocialLinksBase, VitalSocialLinks };
+export { vitalSocialLinksBase };
+export type { VitalSocialLinks };

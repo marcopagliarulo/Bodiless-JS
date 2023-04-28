@@ -18,4 +18,4 @@ export {
 } from './SearchMenuClean';
 export { default as vitalSearchMenu } from './tokens';
 export { default as vitalSearchMenuBase } from './tokens/vitalSearchMenu';
-export { SearchMenuComponents } from './types';
+export type { SearchMenuComponents } from './types';

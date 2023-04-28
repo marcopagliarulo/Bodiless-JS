@@ -19,4 +19,4 @@ export {
 } from './SearchTogglerClean';
 export { default as vitalSearchToggler } from './tokens';
 export { default as vitalSearchTogglerBase } from './tokens/vitalSearchToggler';
-export { SearchTogglerComponents } from './types';
+export type { SearchTogglerComponents } from './types';

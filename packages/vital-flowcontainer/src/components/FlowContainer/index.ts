@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import FlowContainerClean, { FlowContainerComponents } from './FlowContainerClean';
+import FlowContainerClean from './FlowContainerClean';
+import type { FlowContainerComponents } from './FlowContainerClean';
 import vitalFlowContainer from './tokens';
 import vitalFlowContainerOrig from './tokens/vitalFlowContainer';
 import type { VitalFlowContainer } from './tokens/vitalFlowContainer';
@@ -24,10 +25,9 @@ import type { VitalFlowContainer } from './tokens/vitalFlowContainer';
  */
 const vitalFlowContainerBase = vitalFlowContainerOrig;
 
-export type { VitalFlowContainer };
+export type { VitalFlowContainer, FlowContainerComponents };
 export {
   FlowContainerClean, vitalFlowContainer, vitalFlowContainerBase,
-  FlowContainerComponents,
 };
 
 // Static flow container has edit/static alternatives.

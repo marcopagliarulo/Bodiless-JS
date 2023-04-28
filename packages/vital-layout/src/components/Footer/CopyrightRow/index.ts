@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import vitalCopyrightRowBaseOrig, { VitalCopyrightRow } from './tokens/vitalCopyrightRow';
+import vitalCopyrightRowBaseOrig from './tokens/vitalCopyrightRow';
+import type { VitalCopyrightRow } from './tokens/vitalCopyrightRow';
 
 /**
   * Use this version of the vital copyrightrow tokens when extending or shadowing.
@@ -25,4 +26,5 @@ export { default as CopyrightRowClean, asCopyrightRowToken, CopyrightRowStatic }
 export { default as vitalCopyrightRow } from './tokens';
 export type { CopyrightRowComponents, CopyrightRowProps } from './types';
 
-export { vitalCopyrightRowBase, VitalCopyrightRow };
+export { vitalCopyrightRowBase };
+export type { VitalCopyrightRow };

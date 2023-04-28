@@ -15,4 +15,4 @@
 export { default as SearchBoxClean, asSearchBoxToken } from './SearchBoxClean';
 export { default as vitalSearchBox } from './tokens';
 export { default as vitalSearchBoxBase } from './tokens/vitalSearchBox';
-export { SearchBoxComponents } from './types';
+export type { SearchBoxComponents } from './types';
