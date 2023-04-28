@@ -20,7 +20,6 @@ import {
   Multistep,
   useFormApi,
   useMultistepApi,
-  Debug,
   FieldState,
   useFormState
 } from 'informed';
@@ -69,7 +68,7 @@ const FeaturesSelectForm = () => {
     ...disabledItems,
   };
   const {
-    setValue, setValues, getFormState
+    setValue, getFormState
   } = useFormApi();
 
   const {
@@ -83,7 +82,6 @@ const FeaturesSelectForm = () => {
   useEffect(() => {
     // Get initial values from node.
     setValue('FeaturesSelect', pageData);
-    const { values } = getFormState();
   }, []);
 
   const toggleSubCheckboxes = (
