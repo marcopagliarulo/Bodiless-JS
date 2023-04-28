@@ -21,6 +21,7 @@ import {
   useEditContext,
   TagType,
 } from '@bodiless/core';
+import type { InputRenderer } from 'react-tag-autocomplete';
 import { useNodeDataHandlers } from '@bodiless/data';
 import { flowHoc } from '@bodiless/fclasses';
 import type { HOC } from '@bodiless/fclasses';
@@ -50,6 +51,7 @@ export const tagButtonOptions: TagButtonType = {
       noOptionsText = 'No matching tags found.',
       allowNew = true,
       allowMultipleTags = true,
+      inputAttributes = { name: 'react-tags-input' },
       formTitle = 'Tags',
       formBodyText = 'Select from available tags:',
       seeAllText = 'See all tags',
@@ -66,6 +68,15 @@ export const tagButtonOptions: TagButtonType = {
       hasCloseButton: true,
     });
 
+    const Input: InputRenderer = ({ classNames, inputWidth, ...inputProps }) => (
+      <input
+        className={classNames.input}
+        style={{ width: inputWidth }}
+        {...inputProps}
+        {...inputAttributes}
+      />
+    );
+
     return (
       <>
         <ComponentFormTitle>{formTitle}</ComponentFormTitle>
@@ -76,8 +87,8 @@ export const tagButtonOptions: TagButtonType = {
           noOptionsText={noOptionsText}
           allowNew={allowNew}
           allowMultipleTags={allowMultipleTags}
-          onAdd={() => {}}
           selected={[]}
+          renderInput={Input}
         />
         <ComponentFormUnwrapButton type="button" onClick={displayListOfTags}>
           {seeAllText}

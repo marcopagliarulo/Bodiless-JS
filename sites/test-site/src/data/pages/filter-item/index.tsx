@@ -42,7 +42,7 @@ const TaggableFilterSelector = () => {
     seeAllText: 'View All Groups',
     formBodyText: 'Select from available groups:',
     allowNew: true,
-    noSuggestionsText: 'No matching groups found.',
+    noOptionsText: 'No matching groups found.',
     showWhenNoTagSelected: showAll,
   };
   return (

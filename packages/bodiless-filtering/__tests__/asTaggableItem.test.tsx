@@ -44,7 +44,7 @@ const props = {
   seeAllText: 'See all groups',
   formBodyText: 'Select from available tags:',
   allowNew: true,
-  noSuggestionsText: 'No suggestions found',
+  noOptionsText: 'No suggestions found',
   inputAttributes: { name: 'react-tags' },
 };
 
@@ -92,7 +92,7 @@ describe('Filter item interactions', () => {
     menuButton.simulate('click');
     const reactTags = wrapper.find('ReactTags');
     expect(reactTags.prop('placeholderText')).toBe('Add or create');
-    expect(reactTags.prop('noSuggestionsText')).toBe('No suggestions found');
+    expect(reactTags.prop('noOptionsText')).toBe('No suggestions found');
     expect(reactTags.prop('allowNew')).toBe(true);
   });
 

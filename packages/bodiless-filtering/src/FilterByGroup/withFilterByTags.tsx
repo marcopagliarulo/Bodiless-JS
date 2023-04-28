@@ -72,7 +72,7 @@ const useToggleByTags = (props: WithFilterByTagsProps) => {
       selectedTags,
       tags,
       (selectedTag, itemTag) => (
-        selectedTag.value === TAG_ANY_KEY || selectedTag.value === itemTag.value
+        selectedTag.value === TAG_ANY_KEY || selectedTag.value === (itemTag.value || itemTag.id)
       ),
     ).length === 0
   );
@@ -99,6 +99,7 @@ const withFilterByTags: Enhancer<WithFilterByTagsProps> = Component => {
     const [id] = node.path.slice(-2);
     const isDisplayed = useToggleByTags(props);
     const { getFilteredItemData = () => {}, style = {}, ...rest } = props;
+
     useRegisterItem({ id, isDisplayed, data: getFilteredItemData(node) });
 
     // Hide with CSS to avoid remounting the component every time the filters change.

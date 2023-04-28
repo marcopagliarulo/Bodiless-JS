@@ -29,7 +29,7 @@ class Tag {
 
 export type ReactTagsFieldProps = {
   allowMultipleTags?: boolean,
-} & Omit<ReactTagsProps, 'onDelete' | 'onAddition'>;
+} & Omit<ReactTagsProps, 'onDelete' | 'onAdd'>;
 
 const ReactTagsField = (props: ReactTagsFieldProps) => {
   const { setValue } = useFieldApi('tags');

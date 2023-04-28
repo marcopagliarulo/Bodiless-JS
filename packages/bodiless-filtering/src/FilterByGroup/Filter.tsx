@@ -138,7 +138,7 @@ const TagTitle = flow(
     'onContextMenu',
     'getSuggestions',
     'allowMultipleTags',
-    'noSuggestionsText',
+    'noOptionsText',
     'seeAllText',
     'formTitle',
     'formBodyText',
