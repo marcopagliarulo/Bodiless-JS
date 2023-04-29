@@ -15,6 +15,7 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { mount } from 'enzyme';
+import { act } from 'react-test-renderer';
 import {
   FetchChanges,
   PullChanges,
@@ -92,19 +93,19 @@ const nonPullableChangesClient = mockClient({
 });
 
 describe('Fetch Changes component', () => {
-  it.skip('should detect changes are not available', async () => {
-    const wrapper = mount(
-      <FetchChanges
-        client={noChangesClient}
-        formApi={mockFormApi}
-        notifyOfChanges={jest.fn()}
-        ui={{}}
-      />,
-    );
-    return new Promise(resolve => setImmediate(resolve)).then(() => {
-      wrapper.update();
-      expect(wrapper.text()).toBe('No changes are available, your Edit Environment is up to date!');
+  it('should detect changes are not available', async () => {
+    let wrapper;
+    await act(async () => {
+      wrapper = mount(
+        <FetchChanges
+          client={noChangesClient}
+          formApi={mockFormApi}
+          notifyOfChanges={jest.fn()}
+          ui={{}}
+        />,
+      );
     });
+    expect(wrapper.text()).toBe('No changes are available, your Edit Environment is up to date!');
   });
 
   it.skip('should indicate changes to download if upstream changes', async () => {

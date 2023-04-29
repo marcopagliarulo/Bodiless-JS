@@ -38,7 +38,7 @@ const mockedClient = {
 };
 
 describe('CommitsList component', () => {
-  it.skip('should show a spinner while a request to the back-end is processed', () => {
+  it('should show a spinner while a request to the back-end is processed', () => {
     const wrapper = mount(<CommitsList client={mockedClient} />);
     expect(wrapper!.find('.bodiless-spinner').length > 0).toBe(true);
   });

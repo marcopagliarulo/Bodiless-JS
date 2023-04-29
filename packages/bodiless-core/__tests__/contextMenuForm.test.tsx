@@ -76,31 +76,31 @@ describe('ContextMenuForm', () => {
         {() => <></>}
       </ContextMenuForm>
     );
-    it.skip('Closes the form when the submit handler returns nothing', () => {
+    it('Closes the form when the submit handler returns nothing', () => {
       const wrapper = shallow(jsx);
-      wrapper.prop('onSubmit')();
+      wrapper.prop('onSubmit')({values: {}});
       expect(close).toHaveBeenCalled();
     });
-    it.skip('Does not close the form when the submit handler returns true', () => {
+    it('Does not close the form when the submit handler returns true', () => {
       submit.mockReturnValueOnce(true);
       close.mockReset();
       const wrapper = shallow(
         (<ContextMenuForm closeForm={close}>{() => <></>}</ContextMenuForm>),
       );
-      wrapper.prop('onSubmit')();
+      wrapper.prop('onSubmit')({values: {}});
       expect(close).toHaveBeenCalled();
     });
-    it.skip('Closes the form when no submit handler is provided', () => {
+    it('Closes the form when no submit handler is provided', () => {
       close.mockReset();
       const wrapper = shallow(jsx);
-      wrapper.prop('onSubmit')();
+      wrapper.prop('onSubmit')({values: {}});
       expect(close).not.toHaveBeenCalled();
     });
   });
 });
 
 describe('ContextMenuForm (High Level)', () => {
-  it.skip('Allows state from an enclosing component to be used in the form and submit handler', () => {
+  it('Allows state from an enclosing component to be used in the form and submit handler', () => {
     const submit = jest.fn();
     const close = jest.fn();
     const Form = (props: ContextMenuFormProps) => {
@@ -116,9 +116,10 @@ describe('ContextMenuForm (High Level)', () => {
       );
     };
     const wrapper = mount(<Form closeForm={close} />);
-    const stateButton = wrapper.find('button#clickme');
+    let stateButton = wrapper.find('button#clickme');
     expect(stateButton.text()).toBe('unclicked');
     stateButton.simulate('click');
+    stateButton = wrapper.find('button#clickme');
     expect(stateButton.text()).toBe('clicked');
     const submitButton = wrapper.find('button[aria-label="Submit"]');
     submitButton.simulate('submit');
