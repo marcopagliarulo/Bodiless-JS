@@ -43,7 +43,6 @@ const ContextLogger: FC<Props> = ({ onAdd, onSelect }) => {
   } = useFilterByGroupContext();
 
   const allSuggestions = getSuggestions() as FilterTagType[];
-
   const tags = allSuggestions.map(tag => (<span id={tag.value} key={tag.value}>{tag.label}</span>));
   const registerSuggestion = useRegisterSuggestions();
 
@@ -70,10 +69,10 @@ describe('Filter By Group', () => {
     expect(wrapper.find('button[data-filter-by-group="reset-button"]').length).toBe(1);
   });
 
-  it.skip('should add default suggestions to the context', () => {
+  it('should add default suggestions to the context', () => {
     const suggestions = [
-      { id: 'test-id-1', name: 'Test Tag 1' },
-      { id: 'test-id-2', name: 'Test Tag 2' },
+      { value: 'test-id-1', label: 'Test Tag 1' },
+      { value: 'test-id-2', label: 'Test Tag 2' },
     ];
 
     const wrapper = mount(
@@ -89,7 +88,7 @@ describe('Filter By Group', () => {
     expect(wrapper.find('#test-id-2').text()).toBe('Test Tag 2');
   });
 
-  it.skip('should provide a method to add tags to the context', () => {
+  it('should provide a method to add tags to the context', () => {
     const suggestions = [
       new Tag('test-id-1', 'Test Tag 1'),
       new Tag('test-id-2', 'Test Tag 2'),

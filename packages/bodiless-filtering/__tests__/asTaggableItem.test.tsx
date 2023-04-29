@@ -30,10 +30,10 @@ setEditMode(true);
 import { asTaggableItem } from '../src/Taggable/asTaggableItem';
 
 const getSuggestions = () => [
-  { id: 'a', name: 'Bananas' },
-  { id: 'b', name: 'Mangos' },
-  { id: 'c', name: 'Lemons' },
-  { id: 'd', name: 'Apricots' },
+  { value: 'a', label: 'Bananas' },
+  { value: 'b', label: 'Mangos' },
+  { value: 'c', label: 'Lemons' },
+  { value: 'd', label: 'Apricots' },
 ];
 
 const props = {
@@ -48,7 +48,7 @@ const props = {
   inputAttributes: { name: 'react-tags' },
 };
 
-const testTag = { id: 0, name: 'bananas' };
+const testTag = { value: 0, label: 'bananas' };
 
 const Taggable = flow(asTaggableItem())('span');
 
@@ -88,9 +88,11 @@ describe('Filter item interactions', () => {
     expect(menuPopup.prop('visible')).toBeFalsy();
   });
 
-  it.skip('React Tags should have all props', () => {
+  it('React Tags should have all props', () => {
     menuButton.simulate('click');
-    const reactTags = wrapper.find('ReactTags');
+    const tooltips = wrapper.find(Tooltip);
+
+    const reactTags = wrapper.find('ReactTagsField');
     expect(reactTags.prop('placeholderText')).toBe('Add or create');
     expect(reactTags.prop('noOptionsText')).toBe('No suggestions found');
     expect(reactTags.prop('allowNew')).toBe(true);
@@ -107,7 +109,7 @@ describe('Filter item interactions', () => {
     // allTags.simulate('click');
   });
 
-  it.skip('context form should have interactive all tags button', () => {
+  it('context form should have interactive all tags button', () => {
     menuButton.simulate('click');
     const tooltips = wrapper.find(Tooltip);
     menuPopup = tooltips.at(1);
@@ -127,8 +129,8 @@ describe('Filter item interactions', () => {
     expect(submitButton.prop('type')).toBeUndefined();
   });
 
-  it.skip('context menu form should close and save content when done is clicked', () => {
-    let input = menuForm.find('input[name="tags"]');
+  it('context menu form should close and save content when done is clicked', () => {
+    let input = menuForm.find('input[name$="tags"][type="hidden"]');
     input.simulate('change', { target: { value: [testTag] } });
 
     const doneButton = menuForm.find('button[aria-label="Submit"]');
@@ -141,23 +143,22 @@ describe('Filter item interactions', () => {
 
     menuPopup = wrapper.find(Tooltip).filter('[visible=true]').at(1);
     menuForm = menuPopup.find('form');
-    input = menuForm.find('input[name="tags"]');
+    input = menuForm.find('input[name$="tags"][type="hidden"]');
     expect(input.prop('value')).toStrictEqual([testTag]);
     input.simulate('change', { target: { value: [] } });
   });
 
   it.skip('context form should not save content when cancel is clicked', () => {
-    let input = menuForm.find('input[name="react-tags"]');
+    let input = menuForm.find('input[name$="tags"][type="hidden"]');
     input.simulate('change', { target: { value: [testTag] } });
 
     const cancelButton = menuForm.find('button[aria-label="Cancel"]');
     cancelButton.simulate('submit');
 
     menuButton.simulate('click');
-
     menuPopup = wrapper.find(Tooltip).filter('[visible=true]').at(1);
     menuForm = menuPopup.find('form');
-    input = menuForm.find('input[name="tags"]');
+    input = menuForm.find('input[name$="tags"][type="hidden"]');
     expect(input.prop('value')).toStrictEqual([]);
   });
 });
