@@ -15,6 +15,7 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { mount } from 'enzyme';
+import { act } from 'react-test-renderer';
 import {
   FetchChanges,
   PullChanges,
@@ -92,7 +93,7 @@ const nonPullableChangesClient = mockClient({
 });
 
 describe('Fetch Changes component', () => {
-  it.skip('should detect changes are not available', async () => {
+  it('should detect changes are not available', async () => {
     const wrapper = mount(
       <FetchChanges
         client={noChangesClient}
@@ -101,13 +102,16 @@ describe('Fetch Changes component', () => {
         ui={{}}
       />,
     );
-    return new Promise(resolve => setImmediate(resolve)).then(() => {
+    await act(async () => {
       wrapper.update();
-      expect(wrapper.text()).toBe('No changes are available, your Edit Environment is up to date!');
     });
+    await act(async () => {
+      wrapper.update();
+    });
+    expect(wrapper.text()).toBe('No changes are available, your Edit Environment is up to date!');
   });
 
-  it.skip('should indicate changes to download if upstream changes', async () => {
+  it('should indicate changes to download if upstream changes', async () => {
     const wrapper = mount(
       <FetchChanges
         client={upstreamChangesOnlyClient}
@@ -116,13 +120,16 @@ describe('Fetch Changes component', () => {
         ui={{}}
       />,
     );
-    return new Promise(resolve => setImmediate(resolve)).then(() => {
+    await act(async () => {
       wrapper.update();
-      expect(wrapper.text()).toBe('There are updates available to be pulled. Click check (✓) to initiate.');
     });
+    await act(async () => {
+      wrapper.update();
+    });
+    expect(wrapper.text()).toBe('There are updates available to be pulled. Click check (✓) to initiate.');
   });
 
-  it('should show a spinner while a request to the back-end is processed', () => {
+  it('should show a spinner while a request to the back-end is processed', async () => {
     const wrapper = mount(
       <FetchChanges
         client={mockChangesClient}
@@ -131,6 +138,9 @@ describe('Fetch Changes component', () => {
         ui={{}}
       />,
     );
+    await act(async () => {
+      wrapper.update();
+    });
     expect(wrapper.find('.bodiless-spinner').length > 0).toBe(true);
   });
   it('should detect changes are available', async () => {
@@ -142,15 +152,18 @@ describe('Fetch Changes component', () => {
         ui={{}}
       />,
     );
-    return new Promise(resolve => setImmediate(resolve)).then(() => {
+    await act(async () => {
       wrapper.update();
-      expect(wrapper.text()).toBe(
-        'There are updates available to be pulled. Click check (✓) to initiate.',
-      );
     });
+    await act(async () => {
+      wrapper.update();
+    });
+    expect(wrapper.text()).toBe(
+      'There are updates available to be pulled. Click check (✓) to initiate.',
+    );
   });
 
-  it.skip('should detect changes are available but cannot be pulled', async () => {
+  it('should detect changes are available but cannot be pulled', async () => {
     const wrapper = mount(
       <FetchChanges
         client={nonPullableChangesClient}
@@ -161,17 +174,20 @@ describe('Fetch Changes component', () => {
         }}
       />,
     );
-    return new Promise(resolve => setImmediate(resolve)).then(() => {
+    await act(async () => {
       wrapper.update();
-      expect(wrapper.text()).toMatch(
-        /Changes are available but cannot be pulled, contact your development team for assistance. \(code 1002\)/,
-      );
     });
+    await act(async () => {
+      wrapper.update();
+    });
+    expect(wrapper.text()).toMatch(
+      /Changes are available but cannot be pulled, contact your development team for assistance. \(code 1002\)/,
+    );
   });
 });
 
 describe('Pull Changes component', () => {
-  it('should show a spinner while a request to the back-end is processed', () => {
+  it('should show a spinner while a request to the back-end is processed', async () => {
     const wrapper = mount(
       <PullChanges
         client={mockChangesClient}
@@ -179,6 +195,9 @@ describe('Pull Changes component', () => {
         notifyOfChanges={jest.fn()}
       />,
     );
+    await act(async () => {
+      wrapper.update();
+    });
     expect(wrapper.find('.bodiless-spinner').length > 0).toBe(true);
   });
   it('should pull changes', async () => {
@@ -189,9 +208,12 @@ describe('Pull Changes component', () => {
         notifyOfChanges={jest.fn()}
       />,
     );
-    return new Promise(resolve => setImmediate(resolve)).then(() => {
+    await act(async () => {
       wrapper.update();
-      expect(wrapper.text()).toBe('Pull success, your Edit Environment is up to date!');
     });
+    await act(async () => {
+      wrapper.update();
+    });
+    expect(wrapper.text()).toBe('Pull success, your Edit Environment is up to date!');
   });
 });
