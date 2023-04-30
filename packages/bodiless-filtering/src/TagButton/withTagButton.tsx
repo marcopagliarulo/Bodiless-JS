@@ -58,6 +58,9 @@ export const tagButtonOptions: TagButtonType = {
     } = componentProps;
 
     const suggestions = getSuggestions();
+    const suggestionsTransform = (value: string, suggestions: TagType[]) => (
+      suggestions.filter((tag: TagType) => value && tag.label.search(value) >= 0)
+    );
 
     const context = useEditContext();
     const displayListOfTags = () => context.showPageOverlay({
@@ -89,6 +92,7 @@ export const tagButtonOptions: TagButtonType = {
           allowMultipleTags={allowMultipleTags}
           selected={[]}
           renderInput={Input}
+          suggestionsTransform={suggestionsTransform}
         />
         <ComponentFormUnwrapButton type="button" onClick={displayListOfTags}>
           {seeAllText}

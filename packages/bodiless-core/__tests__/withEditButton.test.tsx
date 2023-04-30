@@ -63,7 +63,7 @@ describe('withEditButton', () => {
     });
   });
 
-  it.skip('does not re-render a menu option when data changes', () => {
+  it('does not re-render a menu option when data changes', () => {
     const MockMenu = observer(() => {
       const { contextMenuOptions } = useEditContext();
       const op = contextMenuOptions[0] || false;
@@ -102,16 +102,16 @@ describe('withEditButton', () => {
     const wrapper = mount(<Test componentData={{ foo: 'foo' }} />);
     expect(itemRendered).toBeCalledTimes(1);
     wrapper.find('div[aria-label="Foo"]').simulate('click');
-    expect(wrapper.find('input[name="foo"]').prop('value')).toEqual('foo');
+    expect(wrapper.find('input[name$="foo"]').prop('value')).toEqual('foo');
     expect(itemRendered).toBeCalledTimes(2);
     wrapper.find('button[aria-label="Cancel"]').simulate('click');
     expect(itemRendered).toBeCalledTimes(3);
-    expect(wrapper.find('input[name="foo"]')).toHaveLength(0);
+    expect(wrapper.find('input[name$="foo"]')).toHaveLength(0);
     wrapper.setProps({ componentData: { foo: 'bar' } });
     // @TODO: investigate why it is triggering extra render.
     // expect(itemRendered).toBeCalledTimes(3);
     wrapper.find('div[aria-label="Foo"]').simulate('click');
-    expect(wrapper.find('input[name="foo"]').prop('value')).toEqual('bar');
+    expect(wrapper.find('input[name$="foo"]').prop('value')).toEqual('bar');
     // @TODO: investigate why it is triggering extra render.
     // expect(itemRendered).toBeCalledTimes(4);
   });

@@ -148,6 +148,7 @@ describe('Filter item interactions', () => {
     input.simulate('change', { target: { value: [] } });
   });
 
+  // Skip because the feature actually works and this test doesn't cover anymore the scenario.
   it.skip('context form should not save content when cancel is clicked', () => {
     let input = menuForm.find('input[name$="tags"][type="hidden"]');
     input.simulate('change', { target: { value: [testTag] } });

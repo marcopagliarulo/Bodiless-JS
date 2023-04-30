@@ -145,7 +145,7 @@ describe('withDefaultContent', () => {
       const wrapper = mount(<Foo />);
       expect(wrapper.find('Foo').html()).toBe('root$foo');
     });
-    it.skip('allows getting sibling node data', () => {
+    it('allows getting sibling node data', () => {
       const Foo = flow(
         withNode,
         withNodeKey('foo'),
@@ -165,7 +165,7 @@ describe('withDefaultContent', () => {
         bar: 'defaultBarValue',
       })(BazBase);
       const wrapper = mount(<Baz />);
-      expect(wrapper.find('Foo').html()).toBe('');
+      expect(wrapper.find('Foo').text()).toBe('');
     });
     it('allows merging default content with node data', () => {
       const FooConsumer = createNodeConsumer('Foo');
