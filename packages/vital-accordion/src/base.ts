@@ -14,32 +14,32 @@
 
 /**
  * Use this version of the vital card tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-templates/lib/shadow.
+ * Import the  token directly from @bodiless/vital-accordion/lib/shadow.
  * @category Token Collection
- * @see [[vitalGenericTemplate]]
+ * @see [[vitalAccordion]]
  */
-export { default as vitalGenericTemplateBase } from './components/GenericTemplate/tokens/vitalGenericTemplate';
+export { default as vitalAccordion } from './components/Accordion/tokens/vitalAccordion';
 
 /**
  * Use this version of the vital card tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-templates/lib/shadow.
+ * Import the  token directly from @bodiless/vital-accordion/lib/shadow.
  * @category Token Collection
- * @see [[vitalPage]]
+ * @see [[vitalAccordionBody]]
  */
-export { default as vitalPageBase } from './components/Page/tokens/vitalPage';
+export { default as vitalAccordionBody } from './components/AccordionBody/tokens/vitalAccordionBody';
 
 /**
  * Use this version of the vital card tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-templates/lib/shadow.
+ * Import the  token directly from @bodiless/vital-accordion/lib/shadow.
  * @category Token Collection
- * @see [[vitalPDPTemplate]]
+ * @see [[vitalAccordionTitle]]
  */
-export { default as vitalPDPTemplateBase } from './components/PDPTemplate/tokens/vitalPDPTemplate';
+export { default as vitalAccordionTitle } from './components/AccordionTitle/tokens/vitalAccordionTitle';
 
 /**
  * Use this version of the vital card tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-templates/lib/shadow.
+ * Import the  token directly from @bodiless/vital-accordion/lib/shadow.
  * @category Token Collection
- * @see [[vitalStyleGuideTemplate]]
+ * @see [[vitalAccordionFlowContainer]]
  */
-export { default as vitalStyleGuideTemplate } from './components/StyleGuideTemplate/tokens/vitalStyleGuideTemplate';
+export { default as vitalAccordionFlowContainer } from './components/FlowContainer/tokens/vitalAccordionFlowContainer';

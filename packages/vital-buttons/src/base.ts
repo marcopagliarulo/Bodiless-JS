@@ -14,24 +14,16 @@
 
 /**
  * Use this version of the vital card tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-list/lib/shadow.
+ * Import the  token directly from @bodiless/vital-buttons/lib/shadow.
  * @category Token Collection
- * @see [[vitalList]]
+ * @see [[vitalButtons]]
  */
-export { default as vitalListBase } from './components/List/tokens/vitalList';
+export { default as vitalButtons } from './components/Buttons/tokens/vitalButtons';
 
 /**
  * Use this version of the vital card tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-list/lib/shadow.
+ * Import the  token directly from @bodiless/vital-buttons/lib/shadow.
  * @category Token Collection
- * @see [[vitalTitleInfographic]]
+ * @see [[vitalButtonsFlowContainer]]
  */
-export { default as vitalTitleInfographicBase } from './components/TitleInfographic/tokens/vitalTitleInfographic';
-
-/**
- * Use this version of the vital card tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-list/lib/shadow.
- * @category Token Collection
- * @see [[vitalFlowContainerList]]
- */
-export { default as vitalFlowContainerListBase } from './components/FlowContainer/tokens/vitalListFlowContainer';
+export { default as vitalButtonsFlowContainer } from './components/FlowContainer/tokens/vitalButtonFlowContainer';

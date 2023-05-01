@@ -13,16 +13,16 @@
  */
 
 import { asLogoToken } from '@bodiless/vital-layout';
-import { vitalLogoBase } from '@bodiless/vital-layout/lib/shadow';
+import { vitalLogo } from '@bodiless/vital-layout/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
-const Default = asLogoToken(vitalLogoBase.Default, {
+const Default = asLogoToken(vitalLogo.Default, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': '__vitaltest__:Logo' }),
   },
 });
 
 export default {
-  ...vitalLogoBase,
+  ...vitalLogo,
   Default,
 };

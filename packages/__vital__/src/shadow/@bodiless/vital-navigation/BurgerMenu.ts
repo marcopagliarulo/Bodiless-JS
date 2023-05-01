@@ -14,7 +14,7 @@
 
 import { on } from '@bodiless/fclasses';
 import { asBurgerMenuToken } from '@bodiless/vital-navigation';
-import { vitalBurgerMenuBase } from '@bodiless/vital-navigation/lib/shadow';
+import { vitalBurgerMenu } from '@bodiless/vital-navigation/lib/base';
 import { LinkClean, vitalLink, asLinkToken } from '@bodiless/vital-link';
 import { asLanguageSelector } from '@bodiless/i18n';
 
@@ -27,7 +27,7 @@ export const asLanguageSelectorLink = on(LinkClean)(
   asLanguageSelector
 );
 
-const Default = asBurgerMenuToken(vitalBurgerMenuBase.Base, {
+const Default = asBurgerMenuToken(vitalBurgerMenu.Base, {
   Components: {
     LanguageSelector: asLanguageSelectorLink,
   },
@@ -37,6 +37,6 @@ const Default = asBurgerMenuToken(vitalBurgerMenuBase.Base, {
 });
 
 export default {
-  ...vitalBurgerMenuBase,
+  ...vitalBurgerMenu,
   Default,
 };

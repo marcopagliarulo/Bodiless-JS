@@ -14,32 +14,32 @@
 
 /**
  * Use this version of the vital card tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-accordion/lib/shadow.
+ * Import the  token directly from @bodiless/vital-content-listing/lib/shadow.
  * @category Token Collection
- * @see [[vitalAccordion]]
+ * @see [[vitalContentListing]]
  */
-export { default as vitalAccordionBase } from './components/Accordion/tokens/vitalAccordion';
+export { default as vitalContentListing } from './components/ContentListing/tokens/vitalContentListing';
 
 /**
  * Use this version of the vital card tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-accordion/lib/shadow.
+ * Import the  token directly from @bodiless/vital-content-listing/lib/shadow.
  * @category Token Collection
- * @see [[vitalAccordionBody]]
+ * @see [[vitalContentListingTemplate]]
  */
-export { default as vitalAccordionBodyBase } from './components/AccordionBody/tokens/vitalAccordionBody';
+export { default as vitalContentListingTemplate } from './components/ContentListingTemplate/tokens/vitalContentListingTemplate';
 
 /**
  * Use this version of the vital card tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-accordion/lib/shadow.
+ * Import the  token directly from @bodiless/vital-content-listing/lib/shadow.
  * @category Token Collection
- * @see [[vitalAccordionTitle]]
+ * @see [[vitalFilter]]
  */
-export { default as vitalAccordionTitleBase } from './components/AccordionTitle/tokens/vitalAccordionTitle';
+export { default as vitalFilter } from './components/Filter/tokens/vitalFilter';
 
 /**
  * Use this version of the vital card tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-accordion/lib/shadow.
+ * Import the  token directly from @bodiless/vital-content-listing/lib/shadow.
  * @category Token Collection
- * @see [[vitalAccordionFlowContainer]]
+ * @see [[vitalFilterByGroup]]
  */
-export { default as vitalAccordionFlowContainerBase } from './components/FlowContainer/tokens/vitalAccordionFlowContainer';
+export { default as vitalFilterByGroup } from './components/FilterByGroup/tokens/vitalFilterByGroup';

@@ -13,16 +13,16 @@
  */
 
 import { asListToken } from '@bodiless/vital-list';
-import { vitalListBase } from '@bodiless/vital-list/lib/shadow';
+import { vitalList } from '@bodiless/vital-list/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
-const Default = asListToken(vitalListBase.Default, {
+const Default = asListToken(vitalList.Default, {
   Behavior: {
     _: addProps({ 'data-shadowed-by': '__vital__:List' }),
   },
 });
 
 export default {
-  ...vitalListBase,
+  ...vitalList,
   Default,
 };

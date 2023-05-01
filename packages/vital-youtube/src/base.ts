@@ -14,16 +14,16 @@
 
 /**
  * Use this version of the vital card tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-card/lib/shadow.
+ * Import the  token directly from @bodiless/vital-youtube/lib/shadow.
  * @category Token Collection
- * @see [[vitalCard]]
+ * @see [[vitalYouTube]]
  */
-export { default as vitalCardBase } from './components/Card/tokens/vitalCard';
+export { default as vitalYouTube } from './components/YouTube/tokens/vitalYouTube';
 
 /**
- * Use this version of the vital card flow container tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-card/lib/shadow.
+ * Use this version of the vital card tokens when extending or shadowing.
+ * Import the  token directly from @bodiless/vital-youtube/lib/shadow.
  * @category Token Collection
- * @see [[vitalCardFlowContainer]]
+ * @see [[vitalYouTubeFlowContainer]]
  */
-export { default as vitalCardFlowContainerBase } from './components/FlowContainer/tokens/vitalCardFlowContainer';
+export { default as vitalYouTubeFlowContainer } from './components/FlowContainer/tokens/vitalYouTubeFlowContainer';

@@ -14,32 +14,32 @@
 
 /**
  * Use this version of the vital card tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-content-listing/lib/shadow.
+ * Import the  token directly from @bodiless/vital-templates/lib/shadow.
  * @category Token Collection
- * @see [[vitalContentListing]]
+ * @see [[vitalGenericTemplate]]
  */
-export { default as vitalContentListingBase } from './components/ContentListing/tokens/vitalContentListing';
+export { default as vitalGenericTemplate } from './components/GenericTemplate/tokens/vitalGenericTemplate';
 
 /**
  * Use this version of the vital card tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-content-listing/lib/shadow.
+ * Import the  token directly from @bodiless/vital-templates/lib/shadow.
  * @category Token Collection
- * @see [[vitalContentListingTemplate]]
+ * @see [[vitalPage]]
  */
-export { default as vitalContentListingTemplateBase } from './components/ContentListingTemplate/tokens/vitalContentListingTemplate';
+export { default as vitalPage } from './components/Page/tokens/vitalPage';
 
 /**
  * Use this version of the vital card tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-content-listing/lib/shadow.
+ * Import the  token directly from @bodiless/vital-templates/lib/shadow.
  * @category Token Collection
- * @see [[vitalFilter]]
+ * @see [[vitalPDPTemplate]]
  */
-export { default as vitalFilterBase } from './components/Filter/tokens/vitalFilter';
+export { default as vitalPDPTemplate } from './components/PDPTemplate/tokens/vitalPDPTemplate';
 
 /**
  * Use this version of the vital card tokens when extending or shadowing.
- * Import the base token directly from @bodiless/vital-content-listing/lib/shadow.
+ * Import the  token directly from @bodiless/vital-templates/lib/shadow.
  * @category Token Collection
- * @see [[vitalFilterByGroup]]
+ * @see [[vitalStyleGuideTemplate]]
  */
-export { default as vitalFilterByGroupBase } from './components/FilterByGroup/tokens/vitalFilterByGroup';
+export { default as vitalStyleGuideTemplate } from './components/StyleGuideTemplate/tokens/vitalStyleGuideTemplate';

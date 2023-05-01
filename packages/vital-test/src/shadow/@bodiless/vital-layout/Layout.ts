@@ -13,16 +13,16 @@
  */
 
 import { asLayoutToken } from '@bodiless/vital-layout';
-import { vitalLayoutBase } from '@bodiless/vital-layout/lib/shadow';
+import { vitalLayout } from '@bodiless/vital-layout/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
-const Default = asLayoutToken(vitalLayoutBase.Default, {
+const Default = asLayoutToken(vitalLayout.Default, {
   Behavior: {
     OuterContainer: addProps({ 'data-shadowed-by': '__vitaltest__:Layout' }),
   },
 });
 
 export default {
-  ...vitalLayoutBase,
+  ...vitalLayout,
   Default,
 };

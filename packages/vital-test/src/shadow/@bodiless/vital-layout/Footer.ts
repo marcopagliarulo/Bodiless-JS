@@ -13,19 +13,19 @@
  */
 
 import { asFooterToken } from '@bodiless/vital-layout';
-import { vitalFooterBase } from '@bodiless/vital-layout/lib/shadow';
+import { vitalFooter } from '@bodiless/vital-layout/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
 // Note: when used with the __vital__ package on vital-demo, that package takes precedence
 // over this one.  This test override has no effect and just an example.
 
-const Default = asFooterToken(vitalFooterBase.Default, {
+const Default = asFooterToken(vitalFooter.Default, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': '__vitaltest__:Footer' }),
   },
 });
 
 export default {
-  ...vitalFooterBase,
+  ...vitalFooter,
   Default,
 };

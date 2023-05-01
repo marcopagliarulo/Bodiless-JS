@@ -19,7 +19,7 @@ import { asFluidToken } from '@bodiless/vital-elements';
 import {
   vitalPDPTemplate, vitalGenericTemplate, GenericTemplateClean, PDPTemplateClean,
 } from '@bodiless/vital-templates';
-import { vitalPageBase } from '@bodiless/vital-templates/lib/shadow';
+import { vitalPage as vitalPageBase } from '@bodiless/vital-templates/lib/base';
 
 const Default = asFluidToken(vitalPageBase.Default, {
   Core: {
@@ -49,7 +49,7 @@ const Default = asFluidToken(vitalPageBase.Default, {
   },
 });
 
-const vitalPage: typeof vitalPageBase = {
+const vitalPage: typeof vitalPage = {
   ...vitalPageBase,
   Default,
 };

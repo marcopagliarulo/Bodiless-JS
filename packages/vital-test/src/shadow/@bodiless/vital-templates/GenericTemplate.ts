@@ -16,12 +16,12 @@ import {
   addProps, Div, flowHoc, replaceWith
 } from '@bodiless/fclasses';
 import { asGenericTemplateToken } from '@bodiless/vital-templates';
-import { vitalGenericTemplateBase } from '@bodiless/vital-templates/lib/shadow';
+import { vitalGenericTemplate } from '@bodiless/vital-templates/lib/base';
 
 // Note: when used with the __vital__ package on vital-demo, that package takes precedence
 // over this one.  This test override has no effect and just an example.
 
-const Default = asGenericTemplateToken(vitalGenericTemplateBase.Default, {
+const Default = asGenericTemplateToken(vitalGenericTemplate.Default, {
   Behavior: {
     TemplateWrapper: flowHoc(
       replaceWith(Div),
@@ -31,6 +31,6 @@ const Default = asGenericTemplateToken(vitalGenericTemplateBase.Default, {
 });
 
 export default {
-  ...vitalGenericTemplateBase,
+  ...vitalGenericTemplate,
   Default,
 };

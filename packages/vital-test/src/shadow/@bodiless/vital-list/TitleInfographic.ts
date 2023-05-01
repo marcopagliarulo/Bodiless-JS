@@ -13,16 +13,16 @@
  */
 
 import { asTitleInfographicToken } from '@bodiless/vital-list';
-import { vitalTitleInfographicBase } from '@bodiless/vital-list/lib/shadow';
+import { vitalTitleInfographic } from '@bodiless/vital-list/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
-const Default = asTitleInfographicToken(vitalTitleInfographicBase.Default, {
+const Default = asTitleInfographicToken(vitalTitleInfographic.Default, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': '__vital__:TitleInfographic' }),
   },
 });
 
 export default {
-  ...vitalTitleInfographicBase,
+  ...vitalTitleInfographic,
   Default,
 };

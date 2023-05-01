@@ -13,41 +13,41 @@
  */
 
 import { asButtonToken } from '@bodiless/vital-buttons';
-import { vitalButtonsBase } from '@bodiless/vital-buttons/lib/shadow';
+import { vitalButtons } from '@bodiless/vital-buttons/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
-const Default = asButtonToken(vitalButtonsBase.Default, {
+const Default = asButtonToken(vitalButtons.Default, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': '__vital__:DefaultButtons' }),
   },
 });
 
-const Primary = asButtonToken(vitalButtonsBase.Primary, {
+const Primary = asButtonToken(vitalButtons.Primary, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': '__vital__:PrimaryButtons' }),
   },
 });
 
-const Secondary = asButtonToken(vitalButtonsBase.Secondary, {
+const Secondary = asButtonToken(vitalButtons.Secondary, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': '__vital__:SecondaryButtons' }),
   },
 });
 
-const PrimarySelected = asButtonToken(vitalButtonsBase.PrimarySelected, {
+const PrimarySelected = asButtonToken(vitalButtons.PrimarySelected, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': '__vital__:PrimarySelectedButtons' }),
   },
 });
 
-const SecondarySelected = asButtonToken(vitalButtonsBase.SecondarySelected, {
+const SecondarySelected = asButtonToken(vitalButtons.SecondarySelected, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': '__vital__:SecondarySelectedButtons' }),
   },
 });
 
 export default {
-  ...vitalButtonsBase,
+  ...vitalButtons,
   Default,
   Primary,
   Secondary,

@@ -13,10 +13,10 @@
  */
 
 import { asTokenGroup, ColorMeta} from '@bodiless/vital-elements';
-import { vitalColorBase } from '@bodiless/vital-elements/lib/shadow';
+import { vitalColor } from '@bodiless/vital-elements/lib/base';
 
 const OverrideColors = asTokenGroup(ColorMeta)({
-  ...vitalColorBase,
+  ...vitalColor,
   BgSecondaryFooter: 'bg-vital-secondary-footer-bg shadowed-bgsecondaryfooter-class',
 });
 
