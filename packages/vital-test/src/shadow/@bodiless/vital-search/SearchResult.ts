@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalSearchResultBase, asSearchResultToken } from '@bodiless/vital-search';
+import { asSearchResultToken } from '@bodiless/vital-search';
+import { vitalSearchResultBase } from '@bodiless/vital-search/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asSearchResultToken(vitalSearchResultBase.Default, {

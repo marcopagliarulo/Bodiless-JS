@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalSearchMenuBase, asSearchMenuToken } from '@bodiless/vital-search';
+import { asSearchMenuToken } from '@bodiless/vital-search';
+import { vitalSearchMenuBase } from '@bodiless/vital-search/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asSearchMenuToken(vitalSearchMenuBase.Default, {

@@ -16,7 +16,8 @@ import {
   as, flowHoc, Img, on
 } from '@bodiless/fclasses';
 import { asFluidToken, asMetaToken } from '@bodiless/vital-elements';
-import { vitalImageFlowContainerBase, vitalImage } from '@bodiless/vital-image';
+import { vitalImage } from '@bodiless/vital-image';
+import { vitalImageFlowContainerBase } from '@bodiless/vital-image/lib/shadow';
 
 const imagePlainVariations = {
   ImagePlainSquare: on(Img)(as(

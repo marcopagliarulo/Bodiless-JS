@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalBurgerMenuBase, asBurgerMenuToken } from '@bodiless/vital-navigation';
+import { asBurgerMenuToken } from '@bodiless/vital-navigation';
+import { vitalBurgerMenuBase } from '@bodiless/vital-navigation/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asBurgerMenuToken(vitalBurgerMenuBase.Default, {

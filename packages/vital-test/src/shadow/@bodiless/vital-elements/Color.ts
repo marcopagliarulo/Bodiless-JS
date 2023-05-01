@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { asTokenGroup, vitalColorBase, ColorMeta} from '@bodiless/vital-elements';
+import { asTokenGroup, ColorMeta} from '@bodiless/vital-elements';
+import { vitalColorBase } from '@bodiless/vital-elements/lib/shadow';
 
 const OverrideColors = asTokenGroup(ColorMeta)({
   ...vitalColorBase,

@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalFooterBase, asFooterToken } from '@bodiless/vital-layout';
+import { asFooterToken } from '@bodiless/vital-layout';
+import { vitalFooterBase } from '@bodiless/vital-layout/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 // Note: when used with the __vital__ package on vital-demo, that package takes precedence

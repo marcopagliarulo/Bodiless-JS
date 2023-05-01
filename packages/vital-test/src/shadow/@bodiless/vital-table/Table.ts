@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalTableBase, asTableToken } from '@bodiless/vital-table';
+import { asTableToken } from '@bodiless/vital-table';
+import { vitalTableBase } from '@bodiless/vital-table/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asTableToken(vitalTableBase.Default, {

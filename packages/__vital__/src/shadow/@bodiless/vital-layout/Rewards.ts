@@ -18,10 +18,8 @@ import {
   withProps,
 } from '@bodiless/fclasses';
 import { useLanguageContext } from '@bodiless/i18n';
-import {
-  asRewardsToken,
-  vitalRewardsBase
-} from '@bodiless/vital-layout';
+import { asRewardsToken } from '@bodiless/vital-layout';
+import { vitalRewardsBase } from '@bodiless/vital-layout/lib/shadow';
 
 const isCurrentLanguageEs = () => useLanguageContext().getCurrentLanguage().name === 'es';
 

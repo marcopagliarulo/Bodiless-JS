@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import { vitalCardFlowContainerBase } from '@bodiless/vital-card';
+import { vitalCardFlowContainerBase } from '@bodiless/vital-card/lib/shadow';
 import { asFluidToken } from '@bodiless/vital-elements';
 
 // Demostrating only showing Basic & Hero Card Variations in Component Picker

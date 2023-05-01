@@ -11,7 +11,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { vitalFooterBase, asFooterToken } from '@bodiless/vital-layout';
+import { asFooterToken } from '@bodiless/vital-layout';
+import { vitalFooterBase } from '@bodiless/vital-layout/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 import { withLanguageNode } from '@bodiless/i18n';
 

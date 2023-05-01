@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalYouTubeBase, asYouTubeToken } from '@bodiless/vital-youtube';
+import { asYouTubeToken } from '@bodiless/vital-youtube';
+import { vitalYouTubeBase } from '@bodiless/vital-youtube/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asYouTubeToken(vitalYouTubeBase.Default, {

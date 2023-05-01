@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalMenuBase, asMenuToken } from '@bodiless/vital-navigation';
+import { asMenuToken } from '@bodiless/vital-navigation';
+import { vitalMenuBase } from '@bodiless/vital-navigation/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 const TopNav = asMenuToken(vitalMenuBase.TopNav, {

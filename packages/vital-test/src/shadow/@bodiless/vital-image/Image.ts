@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalImageBase, asImageToken } from '@bodiless/vital-image';
+import { asImageToken } from '@bodiless/vital-image';
+import { vitalImageBase } from '@bodiless/vital-image/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asImageToken(vitalImageBase.Default, {

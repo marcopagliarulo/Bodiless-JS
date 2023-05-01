@@ -18,5 +18,4 @@ export {
   withAccordionTitleHandler,
 } from './AccordionTitleClean';
 export { default as vitalAccordionTitle } from './tokens';
-export { default as vitalAccordionTitleBase } from './tokens/vitalAccordionTitle';
 export type { AccordionTitleComponents, AccordionTitleProps } from './types';

@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalSearchLayoutBase, asSearchLayoutToken } from '@bodiless/vital-search';
+import { asSearchLayoutToken } from '@bodiless/vital-search';
+import { vitalSearchLayoutBase } from '@bodiless/vital-search/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asSearchLayoutToken(vitalSearchLayoutBase.Default, {

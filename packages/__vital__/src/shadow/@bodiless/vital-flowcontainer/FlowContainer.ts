@@ -14,7 +14,8 @@
 
 import { on } from '@bodiless/fclasses';
 import { asFluidToken } from '@bodiless/vital-elements';
-import { FlowContainerClean, vitalFlowContainerBase } from '@bodiless/vital-flowcontainer';
+import { FlowContainerClean } from '@bodiless/vital-flowcontainer';
+import { vitalFlowContainerBase } from '@bodiless/vital-flowcontainer/lib/shadow';
 import { vitalImageFlowContainer } from '@bodiless/vital-image';
 import {vitalEditorsFlowContainer } from '@bodiless/vital-editors';
 import { vitalYouTubeFlowContainer } from '@bodiless/vital-youtube';

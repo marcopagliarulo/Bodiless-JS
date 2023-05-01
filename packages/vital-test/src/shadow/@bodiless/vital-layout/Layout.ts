@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalLayoutBase, asLayoutToken } from '@bodiless/vital-layout';
+import { asLayoutToken } from '@bodiless/vital-layout';
+import { vitalLayoutBase } from '@bodiless/vital-layout/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asLayoutToken(vitalLayoutBase.Default, {

@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalLogoBase, asLogoToken } from '@bodiless/vital-layout';
+import { asLogoToken } from '@bodiless/vital-layout';
+import { vitalLogoBase } from '@bodiless/vital-layout/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asLogoToken(vitalLogoBase.Default, {

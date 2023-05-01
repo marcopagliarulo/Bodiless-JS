@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import { vitalSeparatorBase } from '@bodiless/vital-navigation';
+import { vitalSeparatorBase } from '@bodiless/vital-navigation/lib/shadow';
 import { asElementToken } from '@bodiless/vital-elements';
 import { addProps } from '@bodiless/fclasses';
 

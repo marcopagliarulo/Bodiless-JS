@@ -12,15 +12,7 @@
  * limitations under the License.
  */
 
-import vitalFooterBaseOrig from './tokens/vitalFooter';
 import type { VitalFooter } from './tokens/vitalFooter';
-
-/**
- * Use this version of the vital footer tokens when extending or shadowing.
- * @category Token Collection
- * @see [[vitalFooter]]
- */
-const vitalFooterBase = vitalFooterBaseOrig;
 
 export { default as FooterClean, asFooterToken } from './FooterClean';
 export { default as vitalFooter } from './tokens';
@@ -30,5 +22,4 @@ export * from './Rewards';
 export * from './CopyrightRow';
 export * from './SocialLinks';
 
-export { vitalFooterBase };
 export type { VitalFooter };

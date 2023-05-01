@@ -15,7 +15,8 @@
 import { flowIf } from '@bodiless/fclasses';
 import { useNode } from '@bodiless/data';
 import { asElementToken } from '@bodiless/vital-elements';
-import { vitalEditorPlainBase, withAutoSuperscript } from '@bodiless/vital-editors';
+import { withAutoSuperscript } from '@bodiless/vital-editors';
+import { vitalEditorPlainBase } from '@bodiless/vital-editors/lib/shadow';
 
 /* Test case to get superscript working on /styleguide/editors-monofont */
 const isEditorMonoRepo = () => useNode().node.pagePath === '/styleguide/editors-monofont/';

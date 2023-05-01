@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalHeaderBase, asHeaderToken } from '@bodiless/vital-layout';
+import { asHeaderToken } from '@bodiless/vital-layout';
+import { vitalHeaderBase } from '@bodiless/vital-layout/lib/shadow';
 import { LinkClean, vitalLink, asLinkToken } from '@bodiless/vital-link';
 import { asLanguageSelector, withLanguageNode } from '@bodiless/i18n';
 import {

@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalSearchTogglerBase, asSearchTogglerToken } from '@bodiless/vital-search';
+import { asSearchTogglerToken } from '@bodiless/vital-search';
+import { vitalSearchTogglerBase } from '@bodiless/vital-search/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asSearchTogglerToken(vitalSearchTogglerBase.Default, {

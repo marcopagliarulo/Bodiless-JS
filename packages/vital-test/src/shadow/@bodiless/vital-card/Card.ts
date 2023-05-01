@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import vitalCardBase from '@bodiless/vital-card/lib/components/Card/tokens/index';
+import { vitalCardBase } from '@bodiless/vital-card/lib/shadow';
 import { asCardToken } from '@bodiless/vital-card';
 import {
   addProps,

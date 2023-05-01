@@ -15,7 +15,8 @@
 import {
   addProps, Div, flowHoc, replaceWith
 } from '@bodiless/fclasses';
-import { asGenericTemplateToken, vitalGenericTemplateBase } from '@bodiless/vital-templates';
+import { asGenericTemplateToken } from '@bodiless/vital-templates';
+import { vitalGenericTemplateBase } from '@bodiless/vital-templates/lib/shadow';
 
 // Note: when used with the __vital__ package on vital-demo, that package takes precedence
 // over this one.  This test override has no effect and just an example.

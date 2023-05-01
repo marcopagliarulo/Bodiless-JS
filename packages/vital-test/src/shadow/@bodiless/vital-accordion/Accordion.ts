@@ -12,8 +12,9 @@
  * limitations under the License.
  */
 
-import { vitalAccordionBase, asAccordionToken } from '@bodiless/vital-accordion';
+import { asAccordionToken } from '@bodiless/vital-accordion';
 import { addProps } from '@bodiless/fclasses';
+import { vitalAccordionBase } from '@bodiless/vital-accordion/lib/shadow';
 
 const Default = asAccordionToken(vitalAccordionBase.Default, {
   Behavior: {

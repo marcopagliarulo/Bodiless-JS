@@ -11,7 +11,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { vitalHelmetBase, asHelmetToken } from '@bodiless/vital-layout';
+import { asHelmetToken } from '@bodiless/vital-layout';
+import { vitalHelmetBase } from '@bodiless/vital-layout/lib/shadow';
 import { withLangDirProps } from '@bodiless/i18n';
 import { as, addProps } from '@bodiless/fclasses';
 

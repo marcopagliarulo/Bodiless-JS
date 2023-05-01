@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalTitleInfographicBase, asTitleInfographicToken } from '@bodiless/vital-list';
+import { asTitleInfographicToken } from '@bodiless/vital-list';
+import { vitalTitleInfographicBase } from '@bodiless/vital-list/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asTitleInfographicToken(vitalTitleInfographicBase.Default, {

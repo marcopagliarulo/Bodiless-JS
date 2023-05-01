@@ -13,7 +13,7 @@
  */
 
 import { asFluidToken } from '@bodiless/vital-elements';
-import { vitalRichTextBase } from '@bodiless/vital-editors';
+import { vitalRichTextBase } from '@bodiless/vital-editors/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asFluidToken({

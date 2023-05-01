@@ -13,7 +13,8 @@
  */
 
 import { on } from '@bodiless/fclasses';
-import { vitalBurgerMenuBase, asBurgerMenuToken } from '@bodiless/vital-navigation';
+import { asBurgerMenuToken } from '@bodiless/vital-navigation';
+import { vitalBurgerMenuBase } from '@bodiless/vital-navigation/lib/shadow';
 import { LinkClean, vitalLink, asLinkToken } from '@bodiless/vital-link';
 import { asLanguageSelector } from '@bodiless/i18n';
 

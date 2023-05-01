@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { asTokenGroup, vitalFontSizeBase, FontSizeMeta } from '@bodiless/vital-elements';
+import { asTokenGroup, FontSizeMeta } from '@bodiless/vital-elements';
+import { vitalFontSizeBase } from '@bodiless/vital-elements/lib/shadow';
 
 const OverrideFontSize = asTokenGroup(FontSizeMeta)({
   ...vitalFontSizeBase,

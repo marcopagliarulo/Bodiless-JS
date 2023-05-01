@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { asTokenGroup, vitalSpacingBase, SpacingMeta } from '@bodiless/vital-elements';
+import { asTokenGroup, SpacingMeta } from '@bodiless/vital-elements';
+import { vitalSpacingBase } from '@bodiless/vital-elements/lib/shadow';
 
 const OverrideSpacing = asTokenGroup(SpacingMeta)({
   ...vitalSpacingBase,

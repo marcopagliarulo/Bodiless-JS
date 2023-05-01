@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalLinkBase, asLinkToken } from '@bodiless/vital-link';
+import { asLinkToken } from '@bodiless/vital-link';
+import { vitalLinkBase } from '@bodiless/vital-link/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asLinkToken(vitalLinkBase.Default, {

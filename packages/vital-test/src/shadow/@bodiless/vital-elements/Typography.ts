@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { asElementToken, vitalTypographyBase } from '@bodiless/vital-elements';
+import { asElementToken } from '@bodiless/vital-elements';
+import { vitalTypographyBase } from '@bodiless/vital-elements/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 export default {

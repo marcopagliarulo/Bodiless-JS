@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalListBase, asListToken } from '@bodiless/vital-list';
+import { asListToken } from '@bodiless/vital-list';
+import { vitalListBase } from '@bodiless/vital-list/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asListToken(vitalListBase.Default, {

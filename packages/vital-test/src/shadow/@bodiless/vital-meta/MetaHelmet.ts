@@ -15,7 +15,6 @@
 import { withMeta } from '@bodiless/components';
 import { asElementToken, asSimpleToken } from '@bodiless/vital-elements';
 import {
-  vitalMetaHelmetBase,
   WithShareDescription,
   WithShareImage,
   WithShareTitle,
@@ -27,6 +26,7 @@ import {
   WithUTMCampaign,
   WithUTMContent,
 } from '@bodiless/vital-meta';
+import { vitalMetaHelmetBase } from '@bodiless/vital-meta/lib/shadow';
 
 const WithMetaKeywords = asSimpleToken(withMeta({
   name: 'keywords',

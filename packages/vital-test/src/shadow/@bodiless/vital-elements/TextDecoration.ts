@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { asTokenGroup, vitalTextDecorationBase, TextDecorationMeta } from '@bodiless/vital-elements';
+import { asTokenGroup, TextDecorationMeta } from '@bodiless/vital-elements';
+import { vitalTextDecorationBase } from '@bodiless/vital-elements/lib/shadow';
 
 const OverrideTextDecoration = asTokenGroup(TextDecorationMeta)({
   ...vitalTextDecorationBase,

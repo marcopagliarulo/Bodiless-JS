@@ -15,7 +15,7 @@
 // Note: when used with the __vital__ package on vital-demo, that package takes precedence
 // over this one.  This test override has no effect and just an example.
 
-import { vitalHelmetBase } from '@bodiless/vital-layout';
+import { vitalHelmetBase } from '@bodiless/vital-layout/lib/shadow';
 import { asFluidToken } from '@bodiless/vital-elements';
 import { addProps } from '@bodiless/fclasses';
 

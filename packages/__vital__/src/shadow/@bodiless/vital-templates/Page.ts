@@ -17,8 +17,9 @@ import { on, as } from '@bodiless/fclasses';
 import { withLanguages } from '@bodiless/i18n';
 import { asFluidToken } from '@bodiless/vital-elements';
 import {
-  vitalPageBase, vitalPDPTemplate, vitalGenericTemplate, GenericTemplateClean, PDPTemplateClean,
+  vitalPDPTemplate, vitalGenericTemplate, GenericTemplateClean, PDPTemplateClean,
 } from '@bodiless/vital-templates';
+import { vitalPageBase } from '@bodiless/vital-templates/lib/shadow';
 
 const Default = asFluidToken(vitalPageBase.Default, {
   Core: {

@@ -12,7 +12,8 @@
  * limitations under the License.
  */
 
-import { vitalSearchBoxBase, asSearchBoxToken } from '@bodiless/vital-search';
+import { asSearchBoxToken } from '@bodiless/vital-search';
+import { vitalSearchBoxBase } from '@bodiless/vital-search/lib/shadow';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asSearchBoxToken(vitalSearchBoxBase.Default, {
