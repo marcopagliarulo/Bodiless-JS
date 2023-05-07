@@ -12,15 +12,12 @@
  * limitations under the License.
  */
 
-// import { asTokenGroup, ColorMeta} from '@bodiless/vital-elements';
-import { vitalColor } from '@bodiless/vital-elements/lib/base';
+import { asTokenGroup, ColorMeta} from '@bodiless/vital-elements';
+import { vitalColorBase } from '@bodiless/vital-elements/lib/base';
 
-// Temporary remove asTokenGroup which causes maximum call stack size exceeded.
-// const OverrideColors = asTokenGroup(ColorMeta)({
-const OverrideColors = {
-  ...vitalColor,
+const OverrideColors = asTokenGroup(ColorMeta)({
+  ...vitalColorBase,
   BgSecondaryFooter: 'bg-vital-secondary-footer-bg shadowed-bgsecondaryfooter-class',
-};
-// });
+});
 
 export default OverrideColors;

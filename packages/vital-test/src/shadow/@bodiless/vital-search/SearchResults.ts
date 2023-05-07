@@ -13,16 +13,16 @@
  */
 
 import { asSearchResultsToken } from '@bodiless/vital-search';
-import { vitalSearchResults } from '@bodiless/vital-search/lib/base';
+import { vitalSearchResultsBase } from '@bodiless/vital-search/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
-const Default = asSearchResultsToken(vitalSearchResults.Default, {
+const Default = asSearchResultsToken(vitalSearchResultsBase.Default, {
   Behavior: {
     SearchResultWrapper: addProps({ 'data-shadowed-by': '__vital__:SearchResults' }),
   },
 });
 
 export default {
-  ...vitalSearchResults,
+  ...vitalSearchResultsBase,
   Default,
 };

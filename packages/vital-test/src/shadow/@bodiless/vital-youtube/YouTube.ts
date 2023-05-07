@@ -13,16 +13,16 @@
  */
 
 import { asYouTubeToken } from '@bodiless/vital-youtube';
-import { vitalYouTube } from '@bodiless/vital-youtube/lib/base';
+import { vitalYouTubeBase } from '@bodiless/vital-youtube/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
-const Default = asYouTubeToken(vitalYouTube.Default, {
+const Default = asYouTubeToken(vitalYouTubeBase.Default, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': '__vital__:YouTube' }),
   },
 });
 
 export default {
-  ...vitalYouTube,
+  ...vitalYouTubeBase,
   Default,
 };

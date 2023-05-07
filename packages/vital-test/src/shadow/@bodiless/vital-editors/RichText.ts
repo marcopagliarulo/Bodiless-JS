@@ -13,13 +13,13 @@
  */
 
 import { asFluidToken } from '@bodiless/vital-elements';
-import { vitalRichText } from '@bodiless/vital-editors/lib/base';
+import { vitalRichTextBase } from '@bodiless/vital-editors/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asFluidToken({
-  ...vitalRichText.Default,
+  ...vitalRichTextBase.Default,
   Compose: {
-    ...(vitalRichText.Default.Compose || {}),
+    ...(vitalRichTextBase.Default.Compose || {}),
     WithShadowedBy: addProps({ 'data-shadowed-by': '__vital__:RichText' }),
   },
   // Demonstrates how to remove a component from the default editor.
@@ -35,6 +35,6 @@ const Default = asFluidToken({
 });
 
 export default {
-  ...vitalRichText,
+  ...vitalRichTextBase,
   Default,
 };

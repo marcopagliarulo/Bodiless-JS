@@ -13,10 +13,10 @@
  */
 
 import { asTokenGroup, TextDecorationMeta } from '@bodiless/vital-elements';
-import { vitalTextDecoration } from '@bodiless/vital-elements/lib/base';
+import { vitalTextDecorationBase } from '@bodiless/vital-elements/lib/base';
 
 const OverrideTextDecoration = asTokenGroup(TextDecorationMeta)({
-  ...vitalTextDecoration,
+  ...vitalTextDecorationBase,
   Bold: 'font-bold shadowed-bold-class',
 });
 

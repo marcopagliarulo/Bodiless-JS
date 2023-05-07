@@ -12,23 +12,23 @@
  * limitations under the License.
  */
 
-import { vitalSeparator } from '@bodiless/vital-navigation/lib/base';
+import { vitalSeparatorBase } from '@bodiless/vital-navigation/lib/base';
 import { asElementToken } from '@bodiless/vital-elements';
 import { addProps } from '@bodiless/fclasses';
 
-const FooterMenu = asElementToken(vitalSeparator.FooterMenu, {
+const FooterMenu = asElementToken(vitalSeparatorBase.FooterMenu, {
   Behavior: {
     _: addProps({ 'data-shadowed-by': '__vital__:FooterMenuSeparator' }),
   },
 });
-const UtilityMenu = asElementToken(vitalSeparator.UtilityMenu, {
+const UtilityMenu = asElementToken(vitalSeparatorBase.UtilityMenu, {
   Behavior: {
     _: addProps({ 'data-shadowed-by': '__vital__:UtilityMenuSeparator' }),
   },
 });
 
 export default {
-  ...vitalSeparator,
+  ...vitalSeparatorBase,
   FooterMenu,
   UtilityMenu,
 };

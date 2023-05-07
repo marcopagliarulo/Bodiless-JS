@@ -26,7 +26,7 @@ import {
   WithUTMCampaign,
   WithUTMContent,
 } from '@bodiless/vital-meta';
-import { vitalMetaHelmet } from '@bodiless/vital-meta/lib/base';
+import { vitalMetaHelmetBase } from '@bodiless/vital-meta/lib/base';
 
 const WithMetaKeywords = asSimpleToken(withMeta({
   name: 'keywords',
@@ -35,10 +35,10 @@ const WithMetaKeywords = asSimpleToken(withMeta({
 })('page-keywords'));
 
 const SEO = asElementToken({
-  ...vitalMetaHelmet.SEO,
+  ...vitalMetaHelmetBase.SEO,
   Compose: {
     WithMetaKeywords,
-    ...vitalMetaHelmet.SEO.Compose,
+    ...vitalMetaHelmetBase.SEO.Compose,
   },
 });
 
@@ -47,7 +47,7 @@ const WithTwitterDescription = asSimpleToken(withMeta({
 })('twitter-description'));
 
 const Share = asElementToken({
-  ...vitalMetaHelmet.Share,
+  ...vitalMetaHelmetBase.Share,
   Compose: {
     WithUTMCampaign,
     WithSiteName,
@@ -64,7 +64,7 @@ const Share = asElementToken({
 });
 
 export default {
-  ...vitalMetaHelmet,
+  ...vitalMetaHelmetBase,
   SEO,
   Share,
 };

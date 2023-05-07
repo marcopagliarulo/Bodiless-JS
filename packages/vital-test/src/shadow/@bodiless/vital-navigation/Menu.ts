@@ -13,29 +13,29 @@
  */
 
 import { asMenuToken } from '@bodiless/vital-navigation';
-import { vitalMenu } from '@bodiless/vital-navigation/lib/base';
+import { vitalMenuBase } from '@bodiless/vital-navigation/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
-const TopNav = asMenuToken(vitalMenu.TopNav, {
+const TopNav = asMenuToken(vitalMenuBase.TopNav, {
   Core: {
     _: addProps({ 'data-shadowed-by': '__vital__Menu_TopNav' }),
   },
 });
 
-const Footer = asMenuToken(vitalMenu.Footer, {
+const Footer = asMenuToken(vitalMenuBase.Footer, {
   Core: {
     _: addProps({ 'data-shadowed-by': '__vital__Menu_Footer' }),
   },
 });
 
-const Utility = asMenuToken(vitalMenu.Utility, {
+const Utility = asMenuToken(vitalMenuBase.Utility, {
   Core: {
     _: addProps({ 'data-shadowed-by': '__vital__Menu_Utility' }),
   },
 });
 
 export default {
-  ...vitalMenu,
+  ...vitalMenuBase,
   TopNav,
   Footer,
   Utility,

@@ -13,10 +13,10 @@
  */
 
 import { asLinkToken } from '@bodiless/vital-link';
-import { vitalLink } from '@bodiless/vital-link/lib/base';
+import { vitalLinkBase } from '@bodiless/vital-link/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
-const Default = asLinkToken(vitalLink.Default, {
+const Default = asLinkToken(vitalLinkBase.Default, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': '__vital__:Link' }),
   },
@@ -24,6 +24,6 @@ const Default = asLinkToken(vitalLink.Default, {
 });
 
 export default {
-  ...vitalLink,
+  ...vitalLinkBase,
   Default,
 };

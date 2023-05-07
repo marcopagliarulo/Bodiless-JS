@@ -20,7 +20,7 @@ import { asFluidToken } from '@bodiless/vital-elements';
 import { vitalFlowContainer } from '@bodiless/vital-flowcontainer';
 import { vitalImageFlowContainer } from '@bodiless/vital-image';
 import { asPDPTemplateToken } from '@bodiless/vital-templates';
-import { vitalPDPTemplate } from '@bodiless/vital-templates/lib/base';
+import { vitalPDPTemplateBase } from '@bodiless/vital-templates/lib/base';
 import { vitalYouTubeFlowContainer } from '@bodiless/vital-youtube';
 
 /* Limit the product description to only images, video & editor */
@@ -38,7 +38,7 @@ const ProductDescription = asFluidToken(
 );
 
 const Default = asPDPTemplateToken({
-  ...vitalPDPTemplate.Default,
+  ...vitalPDPTemplateBase.Default,
   Behavior: {
     TopWrapper: flowHoc(
       replaceWith(Div),
@@ -46,12 +46,12 @@ const Default = asPDPTemplateToken({
     ),
   },
   Components: {
-    ...vitalPDPTemplate.Default.Components,
+    ...vitalPDPTemplateBase.Default.Components,
     ProductDescription,
   },
 });
 
 export default {
-  ...vitalPDPTemplate,
+  ...vitalPDPTemplateBase,
   Default,
 };

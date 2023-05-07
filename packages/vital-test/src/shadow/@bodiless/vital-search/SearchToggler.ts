@@ -13,16 +13,16 @@
  */
 
 import { asSearchTogglerToken } from '@bodiless/vital-search';
-import { vitalSearchToggler } from '@bodiless/vital-search/lib/base';
+import { vitalSearchTogglerBase } from '@bodiless/vital-search/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
-const Default = asSearchTogglerToken(vitalSearchToggler.Default, {
+const Default = asSearchTogglerToken(vitalSearchTogglerBase.Default, {
   Behavior: {
     _: addProps({ 'data-shadowed-by': '__vital__:SearchToggler' }),
   },
 });
 
 export default {
-  ...vitalSearchToggler,
+  ...vitalSearchTogglerBase,
   Default,
 };

@@ -14,15 +14,15 @@
 
 import { asAccordionToken } from '@bodiless/vital-accordion';
 import { addProps } from '@bodiless/fclasses';
-import { vitalAccordion } from '@bodiless/vital-accordion/lib/base';
+import { vitalAccordionBase } from '@bodiless/vital-accordion/lib/base';
 
-const Default = asAccordionToken(vitalAccordion.Default, {
+const Default = asAccordionToken(vitalAccordionBase.Default, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': 'vital:Accordion' }),
   },
 });
 
 export default {
-  ...vitalAccordion,
+  ...vitalAccordionBase,
   Default,
 };

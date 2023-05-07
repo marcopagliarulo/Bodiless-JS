@@ -12,32 +12,32 @@
  * limitations under the License.
  */
 
-import { vitalCard } from '@bodiless/vital-card/lib/base';
+import { vitalCardBase } from '@bodiless/vital-card/lib/base';
 import { asCardToken } from '@bodiless/vital-card';
 import {
   addProps,
 } from '@bodiless/fclasses';
 
-const Basic = asCardToken(vitalCard.Basic, {
+const Basic = asCardToken(vitalCardBase.Basic, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': '__vitaltest__:Card:Basic' }),
   },
 });
 
-const Hero = asCardToken(vitalCard.Hero, {
+const Hero = asCardToken(vitalCardBase.Hero, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': '__vitaltest__:Card:Hero' }),
   },
 });
 
-const HeroLeftImageContentCentered = asCardToken(vitalCard.HeroLeftImageContentCentered, {
+const HeroLeftImageContentCentered = asCardToken(vitalCardBase.HeroLeftImageContentCentered, {
   Content: {
     Title: addProps({ 'data-shadowed-by': '__vitaltest__:Card:HeroLeftImageCentered' }),
   },
 });
 
 export default {
-  ...vitalCard,
+  ...vitalCardBase,
   Basic,
   Hero,
   HeroLeftImageContentCentered,

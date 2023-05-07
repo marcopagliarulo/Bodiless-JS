@@ -17,7 +17,7 @@ import {
 } from '@bodiless/fclasses';
 import { asFluidToken, asMetaToken } from '@bodiless/vital-elements';
 import { vitalImage } from '@bodiless/vital-image';
-import { vitalImageFlowContainer } from '@bodiless/vital-image/lib/base';
+import { vitalImageFlowContainerBase } from '@bodiless/vital-image/lib/base';
 
 const imagePlainVariations = {
   ImagePlainSquare: on(Img)(as(
@@ -31,11 +31,11 @@ const imagePlainVariations = {
 };
 
 /* Extend the WithImageVariations and add Plain images */
-const WithImageVariations = asFluidToken(vitalImageFlowContainer.WithImageVariations, {
+const WithImageVariations = asFluidToken(vitalImageFlowContainerBase.WithImageVariations, {
   Components: imagePlainVariations,
 });
 
 export default {
-  ...vitalImageFlowContainer,
+  ...vitalImageFlowContainerBase,
   WithImageVariations,
 };

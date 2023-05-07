@@ -13,7 +13,7 @@
  */
 
 import { asMenuTitleToken } from '@bodiless/vital-navigation';
-import { vitalMenuTitle as vitalMenuTitleBase } from '@bodiless/vital-navigation/lib/base';
+import { vitalMenuTitleBase } from '@bodiless/vital-navigation/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asMenuTitleToken(vitalMenuTitleBase.Default, {

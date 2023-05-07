@@ -13,10 +13,10 @@
  */
 
 import { asTokenGroup, SpacingMeta } from '@bodiless/vital-elements';
-import { vitalSpacing } from '@bodiless/vital-elements/lib/base';
+import { vitalSpacingBase } from '@bodiless/vital-elements/lib/base';
 
 const OverrideSpacing = asTokenGroup(SpacingMeta)({
-  ...vitalSpacing,
+  ...vitalSpacingBase,
   WithSiteMargin: 'mx-site-percent md:mx-md-site-percent 2xl:px-40 shadowed-sitemargin-class',
 });
 

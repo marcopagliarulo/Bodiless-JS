@@ -13,16 +13,16 @@
  */
 
 import { asBurgerMenuToken } from '@bodiless/vital-navigation';
-import { vitalBurgerMenu } from '@bodiless/vital-navigation/lib/base';
+import { vitalBurgerMenuBase } from '@bodiless/vital-navigation/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
-const Default = asBurgerMenuToken(vitalBurgerMenu.Default, {
+const Default = asBurgerMenuToken(vitalBurgerMenuBase.Default, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': '__vital__:BurgerMenu' }),
   },
 });
 
 export default {
-  ...vitalBurgerMenu,
+  ...vitalBurgerMenuBase,
   Default,
 };

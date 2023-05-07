@@ -13,16 +13,16 @@
  */
 
 import { asSearchSuggestionsToken } from '@bodiless/vital-search';
-import { vitalSearchSuggestions } from '@bodiless/vital-search/lib/base';
+import { vitalSearchSuggestionsBase } from '@bodiless/vital-search/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
-const Default = asSearchSuggestionsToken(vitalSearchSuggestions.Default, {
+const Default = asSearchSuggestionsToken(vitalSearchSuggestionsBase.Default, {
   Behavior: {
     _: addProps({ 'data-shadowed-by': '__vital__:SearchSuggestions' }),
   },
 });
 
 export default {
-  ...vitalSearchSuggestions,
+  ...vitalSearchSuggestionsBase,
   Default,
 };

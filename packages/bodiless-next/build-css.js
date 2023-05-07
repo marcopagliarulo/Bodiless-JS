@@ -46,7 +46,6 @@ if (!tailwindThemeEnabled) {
             const paths = require.resolve.paths(asset.url);
             const filePath = require.resolve(asset.url, {paths: [...paths, process.cwd()]});
             const from = asset.absolutePath.replace(asset.relativePath, '');
-            console.log(path.relative(from, filePath));
             return path.relative(from, filePath);
           } catch (error) {
             return asset.url;

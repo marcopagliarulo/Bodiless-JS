@@ -13,10 +13,10 @@
  */
 
 import { asTokenGroup, FontSizeMeta } from '@bodiless/vital-elements';
-import { vitalFontSize } from '@bodiless/vital-elements/lib/base';
+import { vitalFontSizeBase } from '@bodiless/vital-elements/lib/base';
 
 const OverrideFontSize = asTokenGroup(FontSizeMeta)({
-  ...vitalFontSize,
+  ...vitalFontSizeBase,
   Base: 'text-m-base lg:text-base shadowed-textsizebase-class',
 });
 

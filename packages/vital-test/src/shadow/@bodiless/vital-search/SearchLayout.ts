@@ -13,16 +13,16 @@
  */
 
 import { asSearchLayoutToken } from '@bodiless/vital-search';
-import { vitalSearchLayout } from '@bodiless/vital-search/lib/base';
+import { vitalSearchLayoutBase } from '@bodiless/vital-search/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
-const Default = asSearchLayoutToken(vitalSearchLayout.Default, {
+const Default = asSearchLayoutToken(vitalSearchLayoutBase.Default, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': '__vital__:SearchLayout' }),
   },
 });
 
 export default {
-  ...vitalSearchLayout,
+  ...vitalSearchLayoutBase,
   Default,
 };

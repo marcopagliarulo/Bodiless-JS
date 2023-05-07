@@ -13,29 +13,29 @@
  */
 
 import { asImageToken } from '@bodiless/vital-image';
-import { vitalImage } from '@bodiless/vital-image/lib/base';
+import { vitalImageBase } from '@bodiless/vital-image/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
-const Default = asImageToken(vitalImage.Default, {
+const Default = asImageToken(vitalImageBase.Default, {
   Behavior: {
     _: addProps({ 'data-shadowed-by': '__vital__:Image:Gatsby' }),
   },
 });
 
-const Plain = asImageToken(vitalImage.Plain, {
+const Plain = asImageToken(vitalImageBase.Plain, {
   Behavior: {
     _: addProps({ 'data-shadowed-by': '__vital__:Image:Plain' }),
   },
 });
 
-const Hero = asImageToken(vitalImage.Hero, {
+const Hero = asImageToken(vitalImageBase.Hero, {
   Behavior: {
     _: addProps({ 'data-shadowed-by': '__vital__:Image:Hero' }),
   },
 });
 
 export default {
-  ...vitalImage,
+  ...vitalImageBase,
   Default,
   Plain,
   Hero,

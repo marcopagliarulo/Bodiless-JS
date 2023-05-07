@@ -13,10 +13,10 @@
  */
 
 import { asTableToken } from '@bodiless/vital-table';
-import { vitalTable } from '@bodiless/vital-table/lib/base';
+import { vitalTableBase } from '@bodiless/vital-table/lib/base';
 import { addProps } from '@bodiless/fclasses';
 
-const Default = asTableToken(vitalTable.Default, {
+const Default = asTableToken(vitalTableBase.Default, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': '__vital__:Table' }),
   },
@@ -33,6 +33,6 @@ const Default = asTableToken(vitalTable.Default, {
 });
 
 export default {
-  ...vitalTable,
+  ...vitalTableBase,
   Default,
 };
