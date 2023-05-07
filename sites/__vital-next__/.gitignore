@@ -7,13 +7,7 @@ yarn-error.log
 .DS_Store
 .swp
 
-public/lunr.en.json
-public/robots.txt
-public/sitemap-*.xml
-public/manifest.webmanifest
-public/doc
-public/icons/icon-*x*.png
-public/icons/favicon-32x32.png
+public/generated
 out
 .cache
 src/components/index.css

@@ -55,7 +55,11 @@ const generateSitemapXml = async (options: Partial<SitemapxmlConfig> | undefined
     outputDir = '', excludes, ...rest
   } = mergedOptions;
   const sitemapPublicPath = outputDir;
-  const sitemapWritePath = join('public', outputDir);
+  const sitemapWritePath = join(
+    'public',
+    process.env.BODILESS_GENERATED_DESTINATION_PATH|| 'generated',
+    outputDir
+  );
 
   const filteredPages = excludes ? pages.filter((page: string) => !excludes.some(
     (exclude :string) => minimatch(

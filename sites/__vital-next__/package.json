@@ -74,7 +74,7 @@
     "prestart": "run-s build:env-vars build:docs",
     "search-index": "create-search-index",
     "serve": "next start -p ${APP_PORT:-9000}",
-    "serve:docs": "docsify serve ./public/doc",
+    "serve:docs": "docsify serve ./public/generated/doc",
     "start": "run-p -r dev-frontend dev-backend"
   },
   "devDependencies": {

@@ -14,12 +14,15 @@
 import robotsTxt from 'generate-robotstxt';
 
 import { join, resolve } from 'path';
-import { writeFileSync } from 'fs';
+import { writeFileSync, existsSync, mkdirSync } from 'fs';
 import bodilessNextConfigPath, { RobotstxtConfig } from '../NextConfig/bodilessNextConfigLoader';
 
 const generateRobotsTxt = (options: Partial<RobotstxtConfig> | undefined) => {
   if (!process.env.ROBOTSTXT_ENABLED) return;
-  const publicPath = './public';
+  const publicPath = join('public', process.env.BODILESS_GENERATED_DESTINATION_PATH || 'generated');
+  if (!existsSync(publicPath)) {
+    mkdirSync(publicPath, { recursive: true });
+  }
 
   const mergedOptions = {
     ...bodilessNextConfigPath.robotstxt || {},

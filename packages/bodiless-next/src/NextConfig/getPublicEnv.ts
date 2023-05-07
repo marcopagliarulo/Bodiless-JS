@@ -46,7 +46,8 @@ const getPublicEnv = () => {
     BV_CLIENT_NAME: null,
     BV_SITE_ID: null,
     BV_ENVIRONMENT: null,
-    BV_LOCALE: null
+    BV_LOCALE: null,
+    BODILESS_GENERATED_DESTINATION_PATH: null
   };
 
   const editVariables = {

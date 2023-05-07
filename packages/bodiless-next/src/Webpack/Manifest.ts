@@ -33,8 +33,11 @@ async function generateIcon(imgPath: string, srcIcon: string, size: number) {
 }
 
 const generateManifest = (options: ManifestConfig | undefined) => {
-  const publicPath = './public';
+  const publicPath = join('public', process.env.BODILESS_GENERATED_DESTINATION_PATH || 'generated');
   const manigestFileName = 'manifest.webmanifest';
+  if (!existsSync(publicPath)) {
+    mkdirSync(publicPath, { recursive: true });
+  }
 
   const config = {
     ...bodilessNextConfigPath.manifest || {},
@@ -51,7 +54,7 @@ const generateManifest = (options: ManifestConfig | undefined) => {
     ...manifest
   } = config;
   if (!manifest.icons && icon && typeof icon === 'string' && existsSync(icon)) {
-    const destinationDir = join('public', 'icons');
+    const destinationDir = join(publicPath, 'icons');
     if (!existsSync(destinationDir)) {
       try {
         mkdirSync(destinationDir);

@@ -12,24 +12,33 @@
  * limitations under the License.
  */
 const createRewrites = () => {
-  const rewrites = process.env.NODE_ENV === 'development' ? {
-    beforeFiles: [
-      {
-        source: `${process.env.BODILESS_DOCS_URL || '/___docs'}`,
-        destination: '/doc/index.html',
-      },
-      {
-        source: `${process.env.BODILESS_DOCS_URL || '/___docs'}/:slug*`,
-        destination: '/doc/:slug*',
-      },
-      {
-        source: `/${process.env.BODILESS_BACKEND_PREFIX || '___backend'}/:slug*`,
-        destination: `http://localhost:${process.env.BODILESS_BACKEND_PORT || 8001}/${process.env.BODILESS_BACKEND_PREFIX || '___backend'}/:slug*`,
-      },
-    ],
-  } : {};
+  const beforeFiles = [];
+  const generateDestinationPath = process.env.BODILESS_GENERATED_DESTINATION_PATH || 'generated';
+  if (process.env.NODE_ENV === 'development') {
+    const docBasePath = (process.env.BODILESS_DOCS_DESTINATION_PATH || `/${generateDestinationPath}/doc`).replace('./public', '');
+    beforeFiles.push({
+      source: `${process.env.BODILESS_DOCS_URL || '/___docs'}`,
+      destination: `${docBasePath}/index.html`
+    });
+    beforeFiles.push({
+      source: `${process.env.BODILESS_DOCS_URL || '/___docs'}/:slug*`,
+      destination: `${docBasePath}/:slug*`,
+    });
+    beforeFiles.push({
+      source: `/${process.env.BODILESS_BACKEND_PREFIX || '___backend'}/:slug*`,
+      destination: `http://localhost:${process.env.BODILESS_BACKEND_PORT || 8001}/${process.env.BODILESS_BACKEND_PREFIX || '___backend'}/:slug*`,
+    });
+  }
 
-  return rewrites;
+  return {
+    beforeFiles,
+    fallback: [
+      {
+        source: '/:slug*',
+        destination: `/${generateDestinationPath}/:slug*`,
+      }
+    ]
+  };
 };
 
 export default createRewrites;
