@@ -61,7 +61,8 @@ export type BodilessNextConfig = {
   manifest?: ManifestConfig,
   robotstxt?: RobotstxtConfig,
   sitemapxml?: SitemapxmlConfig,
-  staticReplacement?: any
+  staticReplacement?: any,
+  onNextWebpackConfig?: string[],
 };
 
 try {

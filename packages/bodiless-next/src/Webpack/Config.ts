@@ -50,6 +50,12 @@ const findPackageName = (resourcePath: string): string | undefined => {
   return findPackageName(dir);
 };
 
+/**
+ *
+ * Creates a webpack plugin which replaces files ending with .gatsby with the equivalent .next.
+ * @param {boolean} logging
+ *  Boolean whatever enable logging.
+ */
 const createTokenNextPlugin = (
   { logging }: { logging: boolean}
 ) => {
@@ -77,6 +83,15 @@ const createTokenNextPlugin = (
   );
 };
 
+/**
+ *
+ * Helper function which replace the default next CSS loader with a new one provided.
+ * @param {Object} config
+ *  Webpack configuration.
+ * @param {Object} newCssLoader
+ *  New CSS loader configuration.
+ * @returns {Object} Webpack configuration.
+ */
 const replaceCssLoader = (config: any, newCssLoader: any) => (
   {
     ...config,
@@ -165,6 +180,56 @@ const enableGlobalCssOnEdit = (config: any, options: any) => {
 
 const ignoreGlobalCssOnStatic = (config: any) => replaceCssLoader(config, 'null-loader');
 
+/**
+ * Helper function which return a string rapresentation of the webpack generation stage.
+ * @param {Object} nextWebpack
+ *  Next Webpack config object.
+ * @returns string
+ */
+const getStage = (nextWebpack: any) => {
+  if (nextWebpack.nextRuntime === 'edge') {
+    return 'edge';
+  }
+  if (nextWebpack.isDev) {
+    return nextWebpack.isServer ? 'develop-html' : 'develop';
+  }
+  return nextWebpack.isServer ? 'build-html' : 'build-javascript';
+};
+
+/**
+ * Helper function which allow external packages to modify webpack config.
+ * @param {string} stage
+ *  String rapresentation of the webpack generation stage.
+ * @param {Object} config
+ *  Webpack config object.
+ * @returns string
+ */
+const onCreateWebpackConfig = (stage: string, config: any) => {
+  let newConfig = config;
+  if (!bodilessNextConfig?.onNextWebpackConfig) {
+    return config;
+  }
+  bodilessNextConfig?.onNextWebpackConfig.forEach((pkg: string) => {
+    try {
+      const modulePath = require.resolve(join(pkg, 'onNextWebpackConfig'), { paths: [process.cwd()] });
+      // eslint-disable-next-line global-require, import/no-dynamic-require
+      const onNextWebpackConfig = require(modulePath);
+      newConfig = onNextWebpackConfig({stage, config: newConfig});
+    } catch (error) {
+      console.log(`Unable to apply webpack config from package ${pkg}`);
+    }
+  });
+  return newConfig;
+};
+
+/**
+ * Applies the changes to webpack required to run BodilessJS with NextJS.
+ * @param {Object} config
+ *  Webpack config object.
+ * @param {Object} options
+ *  BodilessNextConfig object plus nextWebpack config as defined by NextJs.
+ * @returns string
+ */
 const bodilessWepackConfig = (config: any, options: BodilessNextConfigWithNext) => {
   const { nextWebpack } = options;
   const isEdit = process.env.NODE_ENV === 'development';
@@ -213,7 +278,7 @@ const bodilessWepackConfig = (config: any, options: BodilessNextConfigWithNext) 
     ),
   } : {};
 
-  return {
+  const newConfig = {
     ...config,
     plugins: [
       ...(config.plugins || []),
@@ -239,6 +304,8 @@ const bodilessWepackConfig = (config: any, options: BodilessNextConfigWithNext) 
     },
     snapshot,
   };
+
+  return onCreateWebpackConfig(getStage(nextWebpack), newConfig);
 };
 
 const configuration = (
