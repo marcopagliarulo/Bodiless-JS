@@ -68,7 +68,7 @@
     "check": "tsc -p ./tsconfig.check.json",
     "clean": "rimraf .next next-env.d.ts",
     "dev-backend": "bodiless-backend",
-    "dev-frontend": "next dev -p ${APP_PORT:-8000}",
+    "dev-frontend": "node --stack-size=3200 ./node_modules/.bin/next dev -p ${APP_PORT:-8000}",
     "lint": "next lint",
     "docs": "run-s build:docs serve:docs",
     "prepare": "node ../../scripts/set-missing-symlinks.js @bodiless",
