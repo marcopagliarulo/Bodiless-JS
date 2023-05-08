@@ -33,7 +33,7 @@
       ],
       "indexFileName": "lunr.en.json",
       "indexUrlName": "",
-      "indexFilePath": "public",
+      "indexFilePath": "public/generated",
       "searchPath": "search"
     }
   ]
