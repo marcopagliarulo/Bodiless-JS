@@ -1,8 +1,8 @@
 {
-  "name": "--vital--",
+  "name": "--vital-next--",
   "sideEffects": false,
   "version": "1.0.0-rc.37",
-  "description": "Starter template for a Design System package based on Vital DS",
+  "description": "Starter template for a Design System package based on Vital DS - nextjs version",
   "author": "Chris Oden <coden@its.jnj.com>",
   "license": "Apache-2.0",
   "private": true,
@@ -21,10 +21,11 @@
     "url": "https://github.com/johnsonandjohnson/bodiless-js.git"
   },
   "scripts": {
-    "build": "run-p build:lib",
+    "build": "run-p copy build:lib",
     "build:lib": "tsc -p ./tsconfig.json",
     "build:watch": "npm run build:lib -- --watch",
     "build:api-doc": "typedoc --options ../../typedoc.js --out doc/api ./src",
+    "copy": "copyfiles -u 1 \"./src/**/*.css\" \"./lib/\"",
     "clean": "rimraf \"lib/*\" && rimraf tsconfig.tsbuildinfo"
   },
   "peerDependencies": {
