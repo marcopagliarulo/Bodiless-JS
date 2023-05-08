@@ -12,10 +12,17 @@
  * limitations under the License.
  */
 
-import { StyleGuideTemplateClean } from '@bodiless/vital-templates';
-import { as } from '@bodiless/fclasses';
-import { VitalDemoStyleGuidePage } from '@bodiless/vital-demo';
+import { asLogoToken } from '@bodiless/vital-layout';
+import { vitalLogoBase } from '@bodiless/vital-layout/lib/base';
+import { addProps } from '@bodiless/fclasses';
 
-const StyleGuidePage = as(VitalDemoStyleGuidePage.Default)(StyleGuideTemplateClean);
+const Default = asLogoToken(vitalLogoBase.Default, {
+  Behavior: {
+    Wrapper: addProps({ 'data-shadowed-by': 'vital-demo:Logo' }),
+  },
+});
 
-export default StyleGuidePage;
+export default {
+  ...vitalLogoBase,
+  Default,
+};

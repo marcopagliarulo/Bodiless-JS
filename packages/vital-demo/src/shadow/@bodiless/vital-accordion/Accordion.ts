@@ -12,10 +12,17 @@
  * limitations under the License.
  */
 
-import { StyleGuideTemplateClean } from '@bodiless/vital-templates';
-import { as } from '@bodiless/fclasses';
-import { VitalDemoStyleGuidePage } from '@bodiless/vital-demo';
+import { asAccordionToken } from '@bodiless/vital-accordion';
+import { addProps } from '@bodiless/fclasses';
+import { vitalAccordionBase } from '@bodiless/vital-accordion/lib/base';
 
-const StyleGuidePage = as(VitalDemoStyleGuidePage.Default)(StyleGuideTemplateClean);
+const Default = asAccordionToken(vitalAccordionBase.Default, {
+  Behavior: {
+    Wrapper: addProps({ 'data-shadowed-by': 'vital-demo:Accordion' }),
+  },
+});
 
-export default StyleGuidePage;
+export default {
+  ...vitalAccordionBase,
+  Default,
+};

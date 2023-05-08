@@ -12,10 +12,17 @@
  * limitations under the License.
  */
 
-import { StyleGuideTemplateClean } from '@bodiless/vital-templates';
-import { as } from '@bodiless/fclasses';
-import { VitalDemoStyleGuidePage } from '@bodiless/vital-demo';
+import { asSearchMenuToken } from '@bodiless/vital-search';
+import { vitalSearchMenuBase } from '@bodiless/vital-search/lib/base';
+import { addProps } from '@bodiless/fclasses';
 
-const StyleGuidePage = as(VitalDemoStyleGuidePage.Default)(StyleGuideTemplateClean);
+const Default = asSearchMenuToken(vitalSearchMenuBase.Default, {
+  Behavior: {
+    _: addProps({ 'data-shadowed-by': 'vital-demo:SearchMenu' }),
+  },
+});
 
-export default StyleGuidePage;
+export default {
+  ...vitalSearchMenuBase,
+  Default,
+};

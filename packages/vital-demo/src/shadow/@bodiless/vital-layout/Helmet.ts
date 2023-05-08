@@ -12,10 +12,17 @@
  * limitations under the License.
  */
 
-import { StyleGuideTemplateClean } from '@bodiless/vital-templates';
-import { as } from '@bodiless/fclasses';
-import { VitalDemoStyleGuidePage } from '@bodiless/vital-demo';
+import { vitalHelmetBase } from '@bodiless/vital-layout/lib/base';
+import { asFluidToken } from '@bodiless/vital-elements';
+import { addProps } from '@bodiless/fclasses';
 
-const StyleGuidePage = as(VitalDemoStyleGuidePage.Default)(StyleGuideTemplateClean);
+const Default = asFluidToken(vitalHelmetBase.Default, {
+  Behavior: {
+    BodyHelmet: addProps({ 'data-shadowed-by': 'vital-demo:Helmet' }),
+  },
+});
 
-export default StyleGuidePage;
+export default {
+  ...vitalHelmetBase,
+  Default,
+};

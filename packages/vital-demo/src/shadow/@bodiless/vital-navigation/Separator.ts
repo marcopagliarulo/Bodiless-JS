@@ -12,10 +12,23 @@
  * limitations under the License.
  */
 
-import { StyleGuideTemplateClean } from '@bodiless/vital-templates';
-import { as } from '@bodiless/fclasses';
-import { VitalDemoStyleGuidePage } from '@bodiless/vital-demo';
+import { vitalSeparatorBase } from '@bodiless/vital-navigation/lib/base';
+import { asElementToken } from '@bodiless/vital-elements';
+import { addProps } from '@bodiless/fclasses';
 
-const StyleGuidePage = as(VitalDemoStyleGuidePage.Default)(StyleGuideTemplateClean);
+const FooterMenu = asElementToken(vitalSeparatorBase.FooterMenu, {
+  Behavior: {
+    _: addProps({ 'data-shadowed-by': 'vital-demo:FooterMenuSeparator' }),
+  },
+});
+const UtilityMenu = asElementToken(vitalSeparatorBase.UtilityMenu, {
+  Behavior: {
+    _: addProps({ 'data-shadowed-by': 'vital-demo:UtilityMenuSeparator' }),
+  },
+});
 
-export default StyleGuidePage;
+export default {
+  ...vitalSeparatorBase,
+  FooterMenu,
+  UtilityMenu,
+};

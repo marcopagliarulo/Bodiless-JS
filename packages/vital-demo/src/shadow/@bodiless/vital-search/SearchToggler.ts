@@ -12,10 +12,17 @@
  * limitations under the License.
  */
 
-import { StyleGuideTemplateClean } from '@bodiless/vital-templates';
-import { as } from '@bodiless/fclasses';
-import { VitalDemoStyleGuidePage } from '@bodiless/vital-demo';
+import { asSearchTogglerToken } from '@bodiless/vital-search';
+import { vitalSearchTogglerBase } from '@bodiless/vital-search/lib/base';
+import { addProps } from '@bodiless/fclasses';
 
-const StyleGuidePage = as(VitalDemoStyleGuidePage.Default)(StyleGuideTemplateClean);
+const Default = asSearchTogglerToken(vitalSearchTogglerBase.Default, {
+  Behavior: {
+    _: addProps({ 'data-shadowed-by': 'vital-demo:SearchToggler' }),
+  },
+});
 
-export default StyleGuidePage;
+export default {
+  ...vitalSearchTogglerBase,
+  Default,
+};

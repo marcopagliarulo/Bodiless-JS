@@ -12,10 +12,17 @@
  * limitations under the License.
  */
 
-import { StyleGuideTemplateClean } from '@bodiless/vital-templates';
-import { as } from '@bodiless/fclasses';
-import { VitalDemoStyleGuidePage } from '@bodiless/vital-demo';
+import { asSearchResultToken } from '@bodiless/vital-search';
+import { vitalSearchResultBase } from '@bodiless/vital-search/lib/base';
+import { addProps } from '@bodiless/fclasses';
 
-const StyleGuidePage = as(VitalDemoStyleGuidePage.Default)(StyleGuideTemplateClean);
+const Default = asSearchResultToken(vitalSearchResultBase.Default, {
+  Behavior: {
+    _: addProps({ 'data-shadowed-by': 'vital-demo:SearchResult' }),
+  },
+});
 
-export default StyleGuidePage;
+export default {
+  ...vitalSearchResultBase,
+  Default,
+};

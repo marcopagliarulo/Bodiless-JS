@@ -12,10 +12,19 @@
  * limitations under the License.
  */
 
-import { StyleGuideTemplateClean } from '@bodiless/vital-templates';
-import { as } from '@bodiless/fclasses';
-import { VitalDemoStyleGuidePage } from '@bodiless/vital-demo';
+import { asMenuTitleToken } from '@bodiless/vital-navigation';
+import { vitalMenuTitleBase } from '@bodiless/vital-navigation/lib/base';
+import { addProps } from '@bodiless/fclasses';
 
-const StyleGuidePage = as(VitalDemoStyleGuidePage.Default)(StyleGuideTemplateClean);
+const Default = asMenuTitleToken(vitalMenuTitleBase.Default, {
+  Behavior: {
+    _: addProps({ 'data-shadowed-by': 'vital-demo:MenuTitle' }),
+  },
+});
 
-export default StyleGuidePage;
+const vitalMenuTitle: typeof vitalMenuTitleBase = {
+  ...vitalMenuTitleBase,
+  Default,
+};
+
+export default vitalMenuTitle;

@@ -12,10 +12,17 @@
  * limitations under the License.
  */
 
-import { StyleGuideTemplateClean } from '@bodiless/vital-templates';
-import { as } from '@bodiless/fclasses';
-import { VitalDemoStyleGuidePage } from '@bodiless/vital-demo';
+import { asFooterToken } from '@bodiless/vital-layout';
+import { vitalFooterBase } from '@bodiless/vital-layout/lib/base';
+import { addProps } from '@bodiless/fclasses';
 
-const StyleGuidePage = as(VitalDemoStyleGuidePage.Default)(StyleGuideTemplateClean);
+const Default = asFooterToken(vitalFooterBase.Default, {
+  Behavior: {
+    Wrapper: addProps({ 'data-shadowed-by': 'vital-demo:Footer' }),
+  },
+});
 
-export default StyleGuidePage;
+export default {
+  ...vitalFooterBase,
+  Default,
+};

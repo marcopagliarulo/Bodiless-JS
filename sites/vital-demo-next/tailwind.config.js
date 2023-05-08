@@ -44,5 +44,5 @@ const twConfig = {
 module.exports = buildTailwindConfig({
   twConfig,
   resolver: pkg => requireEsm.resolve(pkg),
-  prefer: ['--vital--', '@bodiless/vital-test'],
+  prefer: ['@bodiless/vital-demo'],
 });

@@ -12,10 +12,17 @@
  * limitations under the License.
  */
 
-import { StyleGuideTemplateClean } from '@bodiless/vital-templates';
-import { as } from '@bodiless/fclasses';
-import { VitalDemoStyleGuidePage } from '@bodiless/vital-demo';
+import { asTitleInfographicToken } from '@bodiless/vital-list';
+import { vitalTitleInfographicBase } from '@bodiless/vital-list/lib/base';
+import { addProps } from '@bodiless/fclasses';
 
-const StyleGuidePage = as(VitalDemoStyleGuidePage.Default)(StyleGuideTemplateClean);
+const Default = asTitleInfographicToken(vitalTitleInfographicBase.Default, {
+  Behavior: {
+    Wrapper: addProps({ 'data-shadowed-by': 'vital-demo:TitleInfographic' }),
+  },
+});
 
-export default StyleGuidePage;
+export default {
+  ...vitalTitleInfographicBase,
+  Default,
+};

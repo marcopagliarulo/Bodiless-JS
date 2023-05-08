@@ -2,8 +2,7 @@ const path = require('path');
 const NextWebpackConfig = require('@bodiless/next/lib/cjs/Webpack/Config').default;
 const bodilessNextConfig = require('@bodiless/next/lib/cjs/NextConfig/nextConfig');
 const { addTokenShadowPlugin, addStatoscopePlugin } = require('@bodiless/webpack');
-const shadow = require('--vital--/shadow');
-const shadowtest = require('@bodiless/vital-test/shadow');
+const shadow = require('@bodiless/vital-demo/shadow');
 
 module.exports = {
   ...bodilessNextConfig,
@@ -22,7 +21,7 @@ module.exports = {
 
       nextConfig = addStatoscopePlugin(nextConfig, options);
     }
-    nextConfig = addTokenShadowPlugin(nextConfig, { resolvers: [shadowtest, shadow] });
+    nextConfig = addTokenShadowPlugin(nextConfig, { resolvers: [shadow] });
 
     return nextConfig;
   },

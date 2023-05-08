@@ -12,10 +12,22 @@
  * limitations under the License.
  */
 
-import { StyleGuideTemplateClean } from '@bodiless/vital-templates';
-import { as } from '@bodiless/fclasses';
-import { VitalDemoStyleGuidePage } from '@bodiless/vital-demo';
+import {
+  addProps, Div, flowHoc, replaceWith
+} from '@bodiless/fclasses';
+import { asGenericTemplateToken } from '@bodiless/vital-templates';
+import { vitalGenericTemplateBase } from '@bodiless/vital-templates/lib/base';
 
-const StyleGuidePage = as(VitalDemoStyleGuidePage.Default)(StyleGuideTemplateClean);
+const Default = asGenericTemplateToken(vitalGenericTemplateBase.Default, {
+  Behavior: {
+    TemplateWrapper: flowHoc(
+      replaceWith(Div),
+      addProps({ 'data-shadowed-by': 'vital-demo:GenericTemplate' }),
+    ),
+  },
+});
 
-export default StyleGuidePage;
+export default {
+  ...vitalGenericTemplateBase,
+  Default,
+};
