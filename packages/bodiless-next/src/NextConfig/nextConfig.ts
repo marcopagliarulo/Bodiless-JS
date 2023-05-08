@@ -14,6 +14,7 @@
 import createRedirectAliases from './createRedirectAliases';
 import createRewrites from './createRewrites';
 import getPublicEnv from './getPublicEnv';
+import transpilePackages from './transpilePackages';
 
 module.exports = {
   async redirects() {
@@ -30,4 +31,5 @@ module.exports = {
   env: {
     ...getPublicEnv()
   },
+  transpilePackages: transpilePackages()
 };
