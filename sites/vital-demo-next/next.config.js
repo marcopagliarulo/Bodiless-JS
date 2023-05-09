@@ -25,4 +25,12 @@ module.exports = {
 
     return nextConfig;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
+      },
+    ],
+  },
 };

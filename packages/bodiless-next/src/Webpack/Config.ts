@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /**
  * Copyright © 2023 Johnson & Johnson
  *
@@ -29,8 +30,7 @@ type BodilessNextConfigWithNext = BodilessNextConfig & {
 const REGEXP = /\.gatsby/;
 const REPLACEMENT = '.next';
 
-const createLogger = (log = true) => (message :String) => {
-  // eslint-disable-next-line no-console
+const createLogger = (log = true) => (message :string) => {
   if (log) console.log(message);
 };
 

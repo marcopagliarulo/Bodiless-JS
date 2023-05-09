@@ -15,5 +15,6 @@
 module.exports = {
   manifest: {
     icon: 'src/images/vitalds-favicon.png', // This path is relative to the root of the site.
+    legacy: false,
   },
 };

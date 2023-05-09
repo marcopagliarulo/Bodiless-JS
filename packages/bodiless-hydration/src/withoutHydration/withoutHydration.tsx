@@ -93,23 +93,24 @@ const withoutHydrationClientSide: WithoutHydrationFunction = ({
       // component's dom manipulation), it renders the empty inner html.  Here, we grab
       // the server-rendered html and stash it in a hidden div so we can restore it if/when the
       // component re-mounts.
-      useLayoutEffect(() => {
-        // Component did mount.
-        if (rootRef.current) {
-          if (onUpdate) {
-            onUpdate(props, rootRef.current);
+      if (typeof window !== 'undefined') {
+        useLayoutEffect(() => {
+          // Component did mount.
+          if (rootRef.current) {
+            if (onUpdate) {
+              onUpdate(props, rootRef.current);
+            }
+            if (rootRef.current.innerHTML === '') {
+              rootRef.current.innerHTML = getInnerHTML(rootRef.current);
+            }
           }
-          if (rootRef.current.innerHTML === '') {
-            rootRef.current.innerHTML = getInnerHTML(rootRef.current);
-          }
-        }
-        // Component did unmount.
-        return () => {
-          // Memoize the innerHTML
-          getInnerHTML(rootRef.current);
-        };
-      }, []);
-
+          // Component did unmount.
+          return () => {
+            // Memoize the innerHTML
+            getInnerHTML(rootRef.current);
+          };
+        }, []);
+      }
       return (
         <WrapperElement
           data-no-hydrate
