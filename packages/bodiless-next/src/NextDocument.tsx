@@ -33,16 +33,6 @@ export default function Document(documentProps?: DocumentProps) {
       helmet.base.toComponent(),
     ];
 
-    // Push default viewport.
-    if (helmet.meta.toString().search('name="viewport"') === -1) {
-      helmetComponents.push(
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-      );
-    }
-
     return (
       <Html {...helmet.htmlAttributes.toComponent()}>
         <Head>

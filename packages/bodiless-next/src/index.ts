@@ -17,6 +17,7 @@ import Page from './Page.bl-edit';
 
 export * from './NextImage';
 export { default as Document } from './NextDocument';
+export { default as App } from './NextApp';
 
 export {
   NextMobxStore,

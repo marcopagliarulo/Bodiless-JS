@@ -17,4 +17,5 @@ export {
   asNextImage as asImage,
   withNextImageLogger as withImageLogger,
   withNextImageNode as withImageNode,
+  withNextImageClientLoader as withImageClientLoader
 } from '@bodiless/next';

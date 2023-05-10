@@ -24,51 +24,23 @@ const withNextImageClientLoader = (Component: ComponentOrTag<any>) => (
   props: any,
 ) => {
   const isEdit = process.env.NODE_ENV === 'development';
-
+  const script = `(function(){
+    const imgs = document.getElementsByTagName('img');
+    const removeImageBg = function(e) {
+      const t = e.target; if (void 0==t||void 0==t.style)return;
+      t.style.backgroundImage=null;t.style.backgroundSize=null;
+      t.style.backgroundPosition=null;t.style.backgroundRepeat=null;
+    };
+    for(let i = 0; i < imgs.length; i++) {
+      if(void 0===imgs[i].dataset.nimg)return;
+      if(imgs[i].loading==='eager') { removeImageBg({target: imgs[i]});}
+      else {imgs[i].addEventListener('load', removeImageBg, {once: true});}
+    }
+  })();`;
   return isEdit ? <Component {...props} /> : (
     <>
       <Helmet>
-        <script type="application/javascript">
-          {`
-          (function() {
-            const b = ('undefined' != typeof IntersectionObserver 
-            && "undefined" != typeof IntersectionObserverEntry 
-            && "intersectionRatio" in IntersectionObserverEntry.prototype 
-            && "isIntersecting" in IntersectionObserverEntry.prototype);
-          b && document.addEventListener("load", (function(e) {
-            if(void 0===e.target.dataset.nimg)return;
-            let options = {
-                threshold: 0.1
-            };
-            const observer = new IntersectionObserver((entries, observer) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting || entry.intersectionRatio > 0) {
-                  const t = entry.target;
-                  const n = t.nextSibling;
-                  if (t.srcset == '' || t.src == '' ) {
-                    if(!n || n.nodeName !== 'NOSCRIPT') {
-                      observer.disconnect();
-                      return;
-                    }
-                    const w = document.createElement('span');
-                    w.innerHTML = n.innerHTML.trim();
-                    t.srcset = w.firstChild.srcset;
-                    t.src = w.firstChild.src;
-                  }
-
-                  t.decode().catch((()=>{})).then((()=>{
-                    t.style.filter=null; t.style.backgroundImage=null;
-                    t.style.backgroundSize=null; t.style.backgroundPosition=null;
-                  }));
-                  observer.disconnect();
-                }
-              });
-            }, options);
-            observer.observe(e.target);
-          }), !0);
-          })();
-          `}
-        </script>
+        <script key="next-image-client-loader">{script}</script>
       </Helmet>
       <Component {...props} />
     </>

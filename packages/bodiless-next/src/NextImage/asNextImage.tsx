@@ -191,10 +191,8 @@ const asDesignableNextImage = (ImageComponent: CT<any>) => {
       imageProps.height = height as number;
     }
 
-    // if (process.env.NODE_ENV !== 'development') {
     imageProps.placeholder= presetProps.useBlur ? 'blur' : 'empty';
     imageProps.blurDataURL= presetProps.useBlur ? base64 : undefined;
-    // }
 
     return (
       <NextImage

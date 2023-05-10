@@ -1,11 +1,6 @@
-import React from 'react';
-import type { AppProps } from 'next/app';
+import { App } from '@bodiless/next';
 import '../css/style.css';
-// Add DM Sans font from --vital-next--
-import '--vital-next--/lib/dm-sans-font.css';
-
-function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
+// Add DM Sans font from Vital Demo
+import '@bodiless/vital-demo/lib/dm-sans-font.css';
 
 export default App;

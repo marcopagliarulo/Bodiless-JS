@@ -72,9 +72,12 @@ const getGitInfoFromFs = async (): Promise<gitInfo> => {
 */
 export const createGitInfo = async (): Promise<gitInfo> => {
   try {
-    const gitInfoFs = gitCache.get<gitInfo>('getGitInfoFromFs') || await getGitInfoFromFs();
+    const gitInfoFromCache = gitCache.get<gitInfo>('getGitInfoFromFs');
+    const gitInfoFs = gitInfoFromCache || await getGitInfoFromFs();
     if (gitInfoFs) {
-      console.log('Git info from fs. ', gitInfoFs);
+      if (!gitInfoFromCache) {
+        console.log('Git info from fs. ', gitInfoFs);
+      }
       return gitInfoFs;
     }
   } catch (err) {
