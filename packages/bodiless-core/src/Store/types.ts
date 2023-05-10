@@ -32,6 +32,7 @@ export enum ItemState {
 export type BodilessStoreBackend = {
   savePath(resourcePath: string, data: any): Promise<any>;
   deletePath(resourcePath: string): Promise<any>;
+  webSocketConnection(): WebSocket;
 };
 
 export type BodilessStoreConfig = {

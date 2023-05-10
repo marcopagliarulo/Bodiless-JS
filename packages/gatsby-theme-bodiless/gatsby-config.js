@@ -61,7 +61,7 @@ const plugins = [
   {
     resolve: 'gatsby-plugin-env-variables',
     options: {
-      allowList: ['BODILESS_GOOGLE_YOUTUBE_API_KEY']
+      allowList: ['BODILESS_GOOGLE_YOUTUBE_API_KEY', 'BL_IS_EDIT']
     },
   },
   {
@@ -72,13 +72,13 @@ const plugins = [
   // 'gatsby-plugin-remove-serviceworker',
 ];
 
-if (!process.env.BODILESS_GATSBY_PLUGIN_IMAGE_OMIT || process.env.NODE_ENV === 'development') {
+if (!process.env.BODILESS_GATSBY_PLUGIN_IMAGE_OMIT || process.env.BL_IS_EDIT === '1') {
   plugins.push('gatsby-plugin-image');
 }
 /**
  * Google Fonts plugin.
  */
-if (process.env.NODE_ENV === 'development' || process.env.GOOGLE_FONTS_ENABLED === '1') {
+if (process.env.BL_IS_EDIT === '1' || process.env.GOOGLE_FONTS_ENABLED === '1') {
   plugins.push({
     resolve: 'gatsby-plugin-google-fonts',
     options: {

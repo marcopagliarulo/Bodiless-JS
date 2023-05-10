@@ -18,13 +18,14 @@ import { Helmet } from 'react-helmet';
  * Conditionally load Google fonts used by Bodiless.
  */
 const GoogleFonts: FC = () => (
-  (process.env.NODE_ENV === 'development' || process.env.GOOGLE_FONTS_ENABLED === '1') ? (
-    <Helmet>
-      <link href="https://fonts.googleapis.com/css2?family=Material+Icons&display=swap" rel="stylesheet" type="text/css" />
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" type="text/css" />
-    </Helmet>
-  ) : (
-    <></>
-  )
+  (
+    process.env.BL_IS_EDIT === '1' || process.env.GOOGLE_FONTS_ENABLED === '1') ? (
+      <Helmet>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons&display=swap" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" type="text/css" />
+      </Helmet>
+    ) : (
+      <></>
+    )
 );
 export default GoogleFonts;

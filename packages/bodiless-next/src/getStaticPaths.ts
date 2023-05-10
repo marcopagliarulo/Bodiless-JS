@@ -21,20 +21,24 @@ import type { AliasItem } from '@bodiless/page';
 import { hasTrailingSlash } from './nextConfig';
 
 const getStaticPaths = async () => {
-  const pages = await getPages();
-  const disablePageList = getDisabledPages();
-  const disabledPages = Object.keys(disablePageList).filter(
-    item => disablePageList[item].pageDisabled === true,
-  ) || [];
+  let activePages: string[] = [];
+  let redirects: AliasItem[] = [];
+  if (!process.env.BL_IS_EDIT) {
+    const pages = await getPages();
+    const disablePageList = getDisabledPages();
+    const disabledPages = Object.keys(disablePageList).filter(
+      item => disablePageList[item].pageDisabled === true,
+    ) || [];
 
-  const activePages = pages.filter(
-    page => (!(
-      process.env.NODE_ENV === 'production'
-      && disabledPages.indexOf(hasTrailingSlash() ? `${page}/` : page) > -1)
-    )
-  );
+    activePages = pages.filter(
+      page => (!(
+        process.env.BL_IS_EDIT !== '1'
+        && disabledPages.indexOf(hasTrailingSlash() ? `${page}/` : page) > -1)
+      )
+    );
 
-  const redirects = getRedirectAliases();
+    redirects = getRedirectAliases();
+  }
 
   return {
     paths: [
@@ -43,13 +47,13 @@ const getStaticPaths = async () => {
           slug: page.split('/').filter(Boolean) || []
         }
       })),
-      ...redirects.map((redirect: AliasItem) => ({
+      ...(redirects || []).map((redirect: AliasItem) => ({
         params: {
           slug: redirect.fromPath.split('/').filter(Boolean) || [],
         }
       }))
     ],
-    fallback: false,
+    fallback: process.env.BL_IS_EDIT ? 'blocking' : false,
   };
 };
 

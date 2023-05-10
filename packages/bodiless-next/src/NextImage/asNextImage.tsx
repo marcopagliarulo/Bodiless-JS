@@ -97,7 +97,7 @@ const asDesignableNextImage = (ImageComponent: CT<any>) => {
     const priority = loading === 'eager';
 
     // On edit environemnt Next Image raise an unclear error, use image.
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.BL_IS_EDIT === '1') {
       return (
         <Image
           src={(src as StaticImageData).src || src}

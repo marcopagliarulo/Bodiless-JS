@@ -23,7 +23,7 @@ import { Helmet } from 'react-helmet';
 const withNextImageClientLoader = (Component: ComponentOrTag<any>) => (
   props: any,
 ) => {
-  const isEdit = process.env.NODE_ENV === 'development';
+  const isEdit = process.env.BL_IS_EDIT === '1';
   const script = `(function(){
     const imgs = document.getElementsByTagName('img');
     const removeImageBg = function(e) {

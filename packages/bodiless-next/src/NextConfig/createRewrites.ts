@@ -14,7 +14,7 @@
 const createRewrites = () => {
   const beforeFiles = [];
   const generateDestinationPath = process.env.BODILESS_GENERATED_DESTINATION_PATH || 'generated';
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env.BL_IS_EDIT === '1') {
     const docBasePath = (process.env.BODILESS_DOCS_DESTINATION_PATH || `/${generateDestinationPath}/doc`).replace('./public', '');
     beforeFiles.push({
       source: `${process.env.BODILESS_DOCS_URL || '/___docs'}`,

@@ -18,12 +18,20 @@ import { spawn } from 'child_process';
 import formidable from 'formidable';
 import tmp from 'tmp';
 import path from 'path';
+import fs from 'fs';
 import uniq from 'lodash/uniq';
 import morgan from 'morgan';
 import morganBody from 'morgan-body';
 import type {
   Express, IRoute, Request, Response,
 } from 'express';
+import WebSocket from 'ws';
+import chokidar from 'chokidar';
+import type {
+  Server as HTTPServer,
+} from 'http';
+import type { Server as HTTPSServer } from 'https';
+
 import Page from './page';
 import GitCmd, { GitCmdError } from './gitCmd';
 import gitUtil from './tools/git';
@@ -925,7 +933,75 @@ class Backend {
 
   start(port: string | number) {
     logger.log('Start');
-    this.app.listen(port, () => logger.log(`Backend listening on Port: ${port}`));
+    const server = this.app.listen(port, () => logger.log(`Backend listening on Port: ${port}`));
+    if (process.env.BL_IS_EDIT === '1' && process.env.NODE_ENV === 'production') {
+      this.watchFilesystem(server);
+    }
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  watchFilesystem(server: HTTPServer | HTTPSServer) {
+    const wss = new WebSocket.Server({ server });
+    const watchDirectory = (dir: string) => {
+      const watcher = chokidar.watch(dir, {
+        ignored: /(^|[/\\])\../, // ignore dotfiles
+        persistent: true,
+        ignoreInitial: true, // don't trigger on initial scan
+        awaitWriteFinish: true
+      });
+
+      const sendData = (path: string, action: string) => {
+        let message: string;
+        let errorMessage: string;
+
+        switch (action) {
+          case 'add':
+            message = `A new file has beed detected ${path}, sending the content to the clients`;
+            errorMessage = `Unable to send the new file ${path} to the client`;
+            break;
+          case 'change':
+          default:
+            message = `Change detected on file ${path}, sending the content to the clients`;
+            errorMessage = `Unable to send the new content of file ${path} to the client`;
+            break;
+        }
+
+        wss.clients.forEach((client) => {
+          if (client.readyState === WebSocket.OPEN) {
+            console.log(message);
+            try {
+              const content = fs.readFileSync(path, 'utf-8');
+              const key = path.replace(dir, '').replace('.json', '');
+              client.send(JSON.stringify({[key]: JSON.parse(content)}));
+            } catch (error) {
+              console.log(errorMessage);
+            }
+          }
+        });
+      };
+      watcher.on('change', (path) => {
+        sendData(path, 'change');
+      });
+      watcher.on('add', (path) => {
+        sendData(path, 'add');
+      });
+    };
+
+    console.log(`Watching the directory ${this.filePath} for changes`);
+    watchDirectory(this.filePath);
+
+    // Handle WebSocket connections
+    wss.on('connection', (ws) => {
+      console.log('WebSocket client connected');
+      // Handle WebSocket messages
+      ws.on('message', (message) => {
+        console.log(`Received message: ${message}`);
+      });
+      // Handle WebSocket disconnections
+      ws.on('close', () => {
+        console.log('WebSocket client disconnected');
+      });
+    });
   }
 }
 

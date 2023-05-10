@@ -32,6 +32,8 @@ const BreadcrumbStoreProvider: ComponentType<any> = ({ children, store }: any) =
  */
 const useBreadcrumbStore = () => React.useContext(BreadcrumbsStoreContext);
 
+// Clone NodeProvider to prevent React to.
+const BreadcrumbNodeProvider = NodeProvider.bind({});
 /**
  * @private
  *
@@ -42,18 +44,17 @@ const useBreadcrumbStore = () => React.useContext(BreadcrumbsStoreContext);
  * @param Component
  */
 const asHiddenBreadcrumbSource: HOC = Component => {
-  const AsHiddenBreadcrumbSource = (props: any) => {
+  let AsHiddenBreadcrumbSource = (props: any) => {
     const store = useBreadcrumbStore();
     const { node } = useNode();
-    ReactDOMServer.renderToString(
-      <NodeProvider node={node}>
-        <BreadcrumbStoreProvider store={store}>
-          <Component {...props} />
-        </BreadcrumbStoreProvider>
-      </NodeProvider>,
+    ReactDOMServer.renderToPipeableStream(
+      <BreadcrumbNodeProvider node={node}>
+        <BreadcrumbStoreProvider store={store} />
+      </BreadcrumbNodeProvider>,
     );
     return null;
   };
+  AsHiddenBreadcrumbSource = () => null;
   return AsHiddenBreadcrumbSource;
 };
 

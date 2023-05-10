@@ -61,6 +61,7 @@ const getPublicEnv = () => {
     BODILESS_BACKEND_STATIC_PATH: null,
     BODILESS_BACKEND_COMMIT_ENABLED: null,
     BODILESS_ALERT_ON_PAGE_LOAD_ENABLED: null,
+    BL_IS_EDIT: null,
   };
 
   const env = {
@@ -68,7 +69,7 @@ const getPublicEnv = () => {
     ...getExistingVariables(variables)
   };
 
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env.BL_IS_EDIT === '1') {
     return {
       ...env,
       ...getExistingVariables(editVariables)

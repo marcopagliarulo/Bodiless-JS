@@ -17,6 +17,7 @@ import getPublicEnv from './getPublicEnv';
 import transpilePackages from './transpilePackages';
 
 module.exports = {
+  distDir: process.env.BL_IS_EDIT ? '.edit' : '.next',
   async redirects() {
     return [
       ...(await createRedirectAliases())

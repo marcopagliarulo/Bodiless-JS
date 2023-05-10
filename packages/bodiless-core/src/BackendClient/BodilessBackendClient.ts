@@ -14,6 +14,7 @@
 
 import path from 'path';
 import axios from 'axios';
+
 import type { BodilessStoreBackend } from '../Store';
 
 const backendPort = process.env.GATSBY_BODILESS_BACKEND_PORT || 8001;
@@ -41,6 +42,12 @@ export class BodilessBackendClient implements BodilessStoreBackend {
     }
     this.root = baseUrl || process.env.GATSBY_BODILESS_BACKEND_URL || host;
     this.prefix = prefix || process.env.GATSBY_BODILESS_BACKEND_PREFIX || '/___backend';
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  webSocketConnection() {
+    const ws = new WebSocket(`ws://localhost:${backendPort}`);
+    return ws;
   }
 
   get(resourcePath: string) {

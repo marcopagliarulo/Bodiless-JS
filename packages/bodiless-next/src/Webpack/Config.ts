@@ -232,7 +232,7 @@ const onCreateWebpackConfig = (stage: string, config: any) => {
  */
 const bodilessWepackConfig = (config: any, options: BodilessNextConfigWithNext) => {
   const { nextWebpack } = options;
-  const isEdit = process.env.NODE_ENV === 'development';
+  const isEdit = process.env.BL_IS_EDIT === '1';
   const buildJS = !nextWebpack.dev && !nextWebpack.isServer;
   const devJS = nextWebpack.dev && !nextWebpack.isServer;
 
@@ -259,7 +259,7 @@ const bodilessWepackConfig = (config: any, options: BodilessNextConfigWithNext) 
     path: require.resolve('path-browserify'),
   } : {};
 
-  const staticReplacement = buildJS && !isEdit ? addStaticReplacementPlugin({}, {
+  const staticReplacement = !isEdit ? addStaticReplacementPlugin({}, {
     ...bodilessNextConfig.staticReplacement,
     ...options.staticReplacement || {}
   }) : { plugins: []};
@@ -285,7 +285,7 @@ const bodilessWepackConfig = (config: any, options: BodilessNextConfigWithNext) 
       ...(staticReplacement.plugins || []),
       createTokenNextPlugin({logging: true}),
       new webpack.DefinePlugin({
-        BL_IS_EDIT: JSON.stringify(process.env.NODE_ENV !== 'production')
+        BL_IS_EDIT: JSON.stringify(process.env.BL_IS_EDIT)
       })
     ],
     resolve: {
@@ -300,7 +300,7 @@ const bodilessWepackConfig = (config: any, options: BodilessNextConfigWithNext) 
     },
     optimization: {
       ...optimization,
-      providedExports: true
+      providedExports: true,
     },
     snapshot,
   };

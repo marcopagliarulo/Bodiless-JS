@@ -45,6 +45,30 @@ export abstract class BodilessMobxStore<D> implements BodilessStore<D> {
   constructor(config: BodilessStoreConfig = {}) {
     this.slug = config.slug;
     this.client = config.client;
+    if (process.env.BL_IS_EDIT && process.env.NODE_ENV === 'production') {
+      const ws = this.client?.webSocketConnection();
+      if (ws) {
+        ws.onmessage = (event) => {
+          const data = JSON.parse(event.data);
+          Object.keys(data).forEach(key => {
+            const keyPath = key.split('/').filter(Boolean).map((value) => {
+              let newValue = value;
+              if (value === 'site') newValue = 'Site';
+              if (value === 'pages') newValue = 'Pages';
+              return newValue;
+            });
+            this.setNode(keyPath, data[key], ItemStateEvent.UpdateFromServer);
+          });
+        };
+        ws.onopen = () => console.log('Socket connection estabilished');
+        ws.onclose = (event) => {
+          console.log('Socket is closed. Reconnect will be attempted in 1 second.', event.reason);
+          setTimeout(() => {
+            //
+          }, 1000);
+        };
+      }
+    }
   }
 
   /**
