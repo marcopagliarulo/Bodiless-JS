@@ -278,8 +278,31 @@ const bodilessWepackConfig = (config: any, options: BodilessNextConfigWithNext) 
     ),
   } : {};
 
+  let commonTags = '';
+  const commonTagsRule = [];
+  try {
+    const commonTagsPath = require.resolve('common-tags');
+    commonTags = join(commonTagsPath.split('common-tags')[0], 'common-tags');
+  } catch (error) {
+    // Empty catch.
+  }
+  if (commonTags) {
+    // Force common-tags to be tree shakeable. Issue submitted to common-tags https://github.com/zspecza/common-tags/issues/219.
+    commonTagsRule.push({
+      include: commonTags,
+      sideEffects: false
+    });
+  }
+
   const newConfig = {
     ...config,
+    module: {
+      ...config.module,
+      rules: [
+        ...config.module.rules,
+        ...commonTagsRule
+      ]
+    },
     plugins: [
       ...(config.plugins || []),
       ...(staticReplacement.plugins || []),
