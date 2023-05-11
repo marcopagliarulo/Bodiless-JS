@@ -66,7 +66,7 @@ export const withMeta = (meta: TokenMeta): HOC => Component => {
     ? (props: any) => <Component {...props} />
     : Component;
   // const WithMeta = (props: any) => <Component {...props} />;
-  return Object.assign(WithMeta, meta);
+  return mergeWith(WithMeta, meta, mergeMeta);
 };
 
 type TokenWithParents = HOCWithMeta & {
