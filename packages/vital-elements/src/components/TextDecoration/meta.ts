@@ -1,5 +1,5 @@
 /**
- * Copyright © 2022 Johnson & Johnson
+ * Copyright © 2023 Johnson & Johnson
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -12,6 +12,9 @@
  * limitations under the License.
  */
 
-import vitalFontSize from './vitalFontSize';
-
-export default vitalFontSize;
+export const TextDecorationMeta = {
+  categories: {
+    Type: ['Element'],
+    Group: ['FontDecoration'],
+  },
+};
