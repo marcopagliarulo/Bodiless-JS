@@ -42,7 +42,7 @@ const ManifestMeta: FC = () => {
     <link
       key="manifest-icon-link-png"
       rel="icon"
-      href="icons/favicon-32x32.png"
+      href="/icons/favicon-32x32.png"
       type="image/png"
     />
   ) : <></>;

@@ -68,7 +68,7 @@ const generateSitemapXml = async (options: Partial<SitemapxmlConfig> | undefined
     )
   )) : pages;
 
-  const serializedPages = filteredPages.map((page: string) => serialize(
+  const serializedPages = filteredPages.filter(Boolean).map((page: string) => serialize(
     new URL(page, siteUrl).pathname
   ));
 

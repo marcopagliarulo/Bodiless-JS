@@ -96,7 +96,6 @@ const asDesignableNextImage = (ImageComponent: CT<any>) => {
 
     const priority = loading === 'eager';
 
-    // On edit environemnt Next Image raise an unclear error, use image.
     if (process.env.NODE_ENV === 'development') {
       return (
         <Image
@@ -129,7 +128,7 @@ const asDesignableNextImage = (ImageComponent: CT<any>) => {
 
       return (
         <Image
-          src={src}
+          src={(src as StaticImageData).src || src}
           alt={alt}
           style={style}
           loading={loading}
