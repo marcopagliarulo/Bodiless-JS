@@ -122,14 +122,17 @@ const loadDataFromFiles = async (filepath :string, publicPath: string) => {
 };
 
 const getStaticProps = async ({ params }: getServerSideProps) => {
-  const redirects = redirectsCache.get('redirects') || getRedirectAliases();
+  const isEdit = process.env.NODE_ENV === 'development';
+  const redirects = isEdit ? getRedirectAliases() : redirectsCache.get('redirects') || getRedirectAliases();
   redirectsCache.set('redirects', redirects);
 
   const { slug = [''] } = params;
 
   const slugString = `/${slug.join('/')}`;
 
-  const redirect = redirects.filter((redirect: AliasItem) => redirect.fromPath === slugString);
+  const realSlug = hasTrailingSlash() ? `${slugString}/`.replace('//', '/') : slugString;
+
+  const redirect = redirects.filter((redirect: AliasItem) => redirect.fromPath === realSlug);
 
   // If the page is a redirect meta returns the minimal info
   if (redirect.length) {
@@ -141,8 +144,6 @@ const getStaticProps = async ({ params }: getServerSideProps) => {
   }
   const defaultContentSources = [];
   const gitInfo = await createGitInfo();
-
-  const realSlug = hasTrailingSlash() ? `${slugString}/`.replace('//', '/') : slugString;
 
   const templateBasePath = ['.', 'src', 'templates'];
   const pagesBasePath = ['.', 'src', 'data', 'pages'];
@@ -156,8 +157,8 @@ const getStaticProps = async ({ params }: getServerSideProps) => {
     },
     data: {
       Page: [],
-      Site: propsCache.get('pageDataSite') || [],
-      DefaultContent: propsCache.get('pageDataDefaultContent') || [],
+      Site: isEdit ? [] : propsCache.get('pageDataSite') || [],
+      DefaultContent: isEdit ? [] : propsCache.get('pageDataDefaultContent') || [],
     },
   };
 
