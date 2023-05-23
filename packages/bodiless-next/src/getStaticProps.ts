@@ -16,7 +16,8 @@ import {
   findComponentPath,
   findSubPageTemplateTemplate,
   findTemplate,
-  getRedirectAliases
+  getRedirectAliases,
+  getPages
 } from '@bodiless/page/lib/cjs/NodeApi';
 import { createGitInfo } from '@bodiless/git/lib/cjs/NodeApi';
 import path from 'path';
@@ -219,6 +220,14 @@ const getStaticProps = async ({ params }: getServerSideProps) => {
     console.warn(`Error trying to create ${pageData.path}`, exception);
   }
 
+  if (isEdit) {
+    const pages = await getPages();
+    if (!pages.includes(slugString === '/' ? '' : slugString)) {
+      return {
+        notFound: true
+      };
+    }
+  }
   return {
     props: pageData,
   };
