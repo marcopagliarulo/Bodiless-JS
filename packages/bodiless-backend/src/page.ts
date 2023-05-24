@@ -441,7 +441,7 @@ class Page {
       const { sep, normalize } = path;
       const dirPath = normalize(this.directory);
       const [, pageRelativeDir] = dirPath.split(`${sep}data${sep}pages${sep}`);
-      if (!pageRelativeDir) {
+      if (!pageRelativeDir || !fs.existsSync(this.directory)) {
         resolve('The page cannot be deleted.');
         return;
       }
