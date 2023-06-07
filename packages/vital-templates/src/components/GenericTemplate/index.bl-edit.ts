@@ -12,10 +12,7 @@
  * limitations under the License.
  */
 
-export { default as GenericTemplateClean, asGenericTemplateToken } from './GenericTemplateClean';
-export { default as vitalGenericTemplate } from './tokens';
-export { knapsackGenericTemplateSpec } from './GenericTemplate.knapsackSpec';
+import vitalGenericTemplateStatic from './tokens';
+import { GenericTemplateStatic } from './GenericTemplateClean';
 
-export { GenericTemplateStatic, vitalGenericTemplateStatic } from './index.bl-edit';
-
-export type { GenericTemplateComponents } from './types';
+export { GenericTemplateStatic, vitalGenericTemplateStatic };
