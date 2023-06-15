@@ -16,6 +16,7 @@ import type { VitalHeader } from './tokens/vitalHeader';
 
 export { default as HeaderClean, asHeaderToken, HeaderStatic } from './HeaderClean';
 export { default as vitalHeader } from './tokens';
+export { default as BurgerIcon } from './assets/BurgerIcon';
 export type { HeaderComponents, HeaderProps } from './types';
 
 export type { VitalHeader };

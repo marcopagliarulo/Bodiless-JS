@@ -17,11 +17,16 @@ import { vitalHeaderBase } from '@bodiless/vital-layout/lib/base';
 import { LinkClean, vitalLink, asLinkToken } from '@bodiless/vital-link';
 import { vitalSearchHeader } from '@bodiless/vital-search';
 import { asLanguageSelector, withLanguageNode } from '@bodiless/i18n';
+import { withIsland } from '@bodiless/hydration';
+import {
+  asBurgerMenuToggler,
+} from '@bodiless/vital-navigation';
 import {
   addProps,
   on,
   startWith,
-  Div
+  Div,
+  flowHoc
 } from '@bodiless/fclasses';
 
 export const asLanguageSelectorLink = on(LinkClean)(
@@ -38,6 +43,13 @@ const Default = asHeaderToken(
   vitalSearchHeader.WithSearch,
   vitalHeaderBase.WithLanguageSelector,
   {
+    Core: {
+      BurgerMenu: withIsland('VitalBurgerMenu'),
+      MenuToggler: flowHoc(
+        withIsland('VitalMenuToggler'),
+        asBurgerMenuToggler,
+      ),
+    },
     Schema: {
       _: withLanguageNode,
     },
