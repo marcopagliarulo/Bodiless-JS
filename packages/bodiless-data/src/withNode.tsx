@@ -35,7 +35,11 @@ const withNode:HOC<{}, WithNodeProps> = Component => {
     const node = useNode(nodeCollection).node.child(nodeKey);
     return (
       <NodeProvider node={node} collection={nodeCollection}>
-        <Component {...rest as any} />
+        <Component
+          {...rest as any}
+          data-node-collection={nodeCollection}
+          data-nodekey-trail={useNode(nodeCollection).node.path.join('$')}
+        />
       </NodeProvider>
     );
   };
