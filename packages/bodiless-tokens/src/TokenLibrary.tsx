@@ -33,6 +33,7 @@ type TokenData = {
 };
 
 const TokenLibraryContext = createContext<TokenData[]>([]);
+TokenLibraryContext.displayName = 'TokenLibraryContext';
 
 export const useTokenLibrary = (target: string, groupName = 'Group'): Tokens => {
   const data = useContext(TokenLibraryContext).filter(t => t.target === target);

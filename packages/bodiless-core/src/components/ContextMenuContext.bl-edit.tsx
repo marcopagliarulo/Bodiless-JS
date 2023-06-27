@@ -84,7 +84,9 @@ const getUI = (ui: ContextMenuUI = {}) => ({
 });
 
 const ContextMenuContext = createContext<ContextType>({});
+ContextMenuContext.displayName = 'ContextMenuContext';
 const ContextMenuUIContext = createContext<ContextMenuUI>({});
+ContextMenuUIContext.displayName = 'ContextMenuUIContext';
 
 const useContextMenuContext = () => useContext(ContextMenuContext);
 const useMenuOptionUI = () => getUI(useContext(ContextMenuUIContext));

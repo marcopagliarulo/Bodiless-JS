@@ -30,6 +30,8 @@ const defaultActivateOnEffectState: ActivateOnEffectState = {
  * it is created
  */
 const activateOnEffect = React.createContext(defaultActivateOnEffectState);
+activateOnEffect.displayName = 'activateOnEffect';
+
 export const ActivateOnEffectProvider:FC<PropsWithChildren> = ({ children }) => {
   const [id, setId] = React.useState('');
   const value = { id, setId };

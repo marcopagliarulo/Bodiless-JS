@@ -42,6 +42,7 @@ const PageDimensionsContext = createContext<PageDimensions>({
   height: 0,
   size: 'sm',
 });
+PageDimensionsContext.displayName = 'PageDimensionsContext';
 
 /**
  * From large to small, find the first matching breakpoint from BreakpointsType

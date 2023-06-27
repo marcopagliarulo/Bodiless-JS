@@ -29,6 +29,7 @@ const defaultPageData: PageDataContextProps = {
 };
 
 const PageDataContext = React.createContext<PageDataContextProps>(defaultPageData);
+PageDataContext.displayName = 'PageDataContext';
 
 const PageDataProvider: FC<PropsWithChildren<PageDataContextProviderProps>> = ({
   children,

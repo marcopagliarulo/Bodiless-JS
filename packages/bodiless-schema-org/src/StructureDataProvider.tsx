@@ -29,6 +29,7 @@ export type SDProvider = {
 const StructuredDataContext = createContext<SDProvider>({
   setStructuredData: () => undefined,
 });
+StructuredDataContext.displayName = 'StructuredDataContext';
 
 export const useStructuredData = () => useContext(StructuredDataContext);
 

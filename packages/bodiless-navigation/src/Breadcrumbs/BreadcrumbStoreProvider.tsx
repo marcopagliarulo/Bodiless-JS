@@ -19,6 +19,7 @@ import { HOC } from '@bodiless/fclasses';
 import type { BreadcrumbStoreType } from './BreadcrumbStore';
 
 const BreadcrumbsStoreContext = React.createContext<BreadcrumbStoreType | undefined>(undefined);
+BreadcrumbsStoreContext.displayName = 'BreadcrumbsStoreContext';
 
 /**
  * Component that adds react context provider containing store to its children.

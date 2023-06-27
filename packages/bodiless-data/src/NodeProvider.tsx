@@ -33,6 +33,7 @@ const NodeContext = React.createContext<NodeMap<any>>({
     _default: DefaultContentNode.dummy(),
   },
 });
+NodeContext.displayName = 'NodeContext';
 
 /**
  * Hook to obtain the current node.

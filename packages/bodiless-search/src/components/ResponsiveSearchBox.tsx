@@ -63,6 +63,8 @@ const searchToggleButtonContext = createContext<ToggleButtonContext>({
   isExpanded: false,
   setExpanded: () => false,
 });
+searchToggleButtonContext.displayName = 'searchToggleButtonContext';
+
 export const useSearchToggleButtonContext = () => useContext(searchToggleButtonContext);
 export const isSearchToggleButtonExpanded = () => useSearchToggleButtonContext().isExpanded;
 

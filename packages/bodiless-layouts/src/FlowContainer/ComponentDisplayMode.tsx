@@ -27,6 +27,7 @@ const defaultMode = ComponentDisplayMode.StaticFlowContainer;
 const ComponentDisplayModeContext = React.createContext({
   mode: defaultMode,
 });
+ComponentDisplayModeContext.displayName = 'ComponentDisplayModeContext';
 
 const useComponentDisplayModeContext = () => useContext(ComponentDisplayModeContext);
 

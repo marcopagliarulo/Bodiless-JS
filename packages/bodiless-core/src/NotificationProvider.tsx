@@ -44,12 +44,14 @@ type NotifyContextType = {
 const NotificationContext = React.createContext<NotificationsContextType>({
   notifications: [],
 });
+NotificationContext.displayName = 'NotificationContext';
 
 const useNotifications = () => useContext(NotificationContext);
 
 const NotifyContext = React.createContext<NotifyContextType>({
   notify: () => undefined,
 });
+NotifyContext.displayName = 'NotifyContext';
 
 /**
  * A component used to provide notifications.

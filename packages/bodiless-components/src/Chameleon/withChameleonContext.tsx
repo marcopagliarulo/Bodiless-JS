@@ -30,6 +30,7 @@ import type {
 } from './types';
 
 const ChameleonContext = createContext<ChameleonState|undefined>(undefined);
+ChameleonContext.displayName = 'ChameleonContext';
 
 export const DEFAULT_KEY = '_default';
 

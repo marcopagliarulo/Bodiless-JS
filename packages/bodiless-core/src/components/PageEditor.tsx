@@ -41,6 +41,7 @@ const uiContext = createContext<CompleteUI>({
   GlobalContextMenu: ContextMenu,
   LocalContextMenu: ContextMenu,
 });
+uiContext.displayName = 'PageEditorUiContext';
 
 export const useUI = () => useContext(uiContext);
 

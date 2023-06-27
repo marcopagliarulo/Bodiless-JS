@@ -33,6 +33,7 @@ const AccordionContext = createContext<AccordionContextType>({
     accordionContentId: '',
   },
 });
+AccordionContext.displayName = 'AccordionContext';
 
 const useAccordionContext = () => useContext(AccordionContext);
 

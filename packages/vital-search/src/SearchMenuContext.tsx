@@ -32,6 +32,7 @@ const SearchMenuContext = createContext<SearchMenuContextValue>({
   toggle: () => undefined,
   togglerId: '',
 });
+SearchMenuContext.displayName = 'SearchMenuContext';
 
 const useSearchMenuContext = () => useContext(SearchMenuContext);
 

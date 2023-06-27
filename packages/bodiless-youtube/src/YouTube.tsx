@@ -109,6 +109,7 @@ type YouTubePlayerContextData = {
 const YouTubePlayerAPIContext = React.createContext<YouTubePlayerContextData>({
   isLoaded: false,
 });
+YouTubePlayerAPIContext.displayName = 'YouTubePlayerAPIContext';
 
 const YouTubePlayerAPIProvider: ComponentType<any> = ({ children }) => {
   const [isLoaded, setIsLoaded] = useState(false);

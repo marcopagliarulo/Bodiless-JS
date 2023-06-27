@@ -48,4 +48,5 @@ export const getUI = (ui: UI & PreviewUI = {}) => ({
 });
 
 export const uiContext = createContext<Required<UI>>(defaultUI);
+uiContext.displayName = 'RichTextUiContext';
 export const useUI = () => useContext(uiContext);

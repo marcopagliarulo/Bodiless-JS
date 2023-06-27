@@ -57,6 +57,7 @@ export const LibraryItemContext = createContext<LibraryItemContextProps>({
   isLibraryItem: false,
   setIsLibraryItem: () => null,
 });
+LibraryItemContext.displayName = 'LibraryItemContext';
 
 /**
  * Hook that can be used to access the Flow Container Library Item Context.

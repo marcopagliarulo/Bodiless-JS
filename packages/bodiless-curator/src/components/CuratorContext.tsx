@@ -18,5 +18,6 @@ import { CuratorContextData } from './types';
 const CuratorContext = createContext<CuratorContextData>({
   isLoaded: false,
 });
+CuratorContext.displayName = 'CuratorContext';
 
 export default CuratorContext;

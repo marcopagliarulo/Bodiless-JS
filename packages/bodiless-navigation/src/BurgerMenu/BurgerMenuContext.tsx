@@ -33,6 +33,7 @@ const BurgerMenuContext = createContext<BurgerMenuContextType>({
   toggle: () => null,
   setIsTransitionComplete: () => null,
 });
+BurgerMenuContext.displayName = 'BurgerMenuContext';
 
 /**
  * A Hook to get the current Burger Menu `isVisible` and `toggle()` context values.

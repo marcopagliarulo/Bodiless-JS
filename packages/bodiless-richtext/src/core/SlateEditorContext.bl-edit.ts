@@ -16,6 +16,7 @@ import React, { useContext } from 'react';
 import { EditorContext } from '../Type';
 
 const SlateEditorContext = React.createContext<EditorContext>(null);
+SlateEditorContext.displayName = 'SlateEditorContext';
 
 export const useSlateContext = () => useContext(SlateEditorContext);
 

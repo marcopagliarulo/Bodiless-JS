@@ -21,6 +21,7 @@ import { AuthContextProps, SignOutRedirectArgs, SigninRedirectArgs } from './typ
  * @see AuthContextProps
  */
 export const AuthContext = React.createContext<AuthContextProps | undefined>(undefined);
+AuthContext.displayName = 'AuthContext';
 
 /**
  * Hook that can be used to access the Authorization Context.

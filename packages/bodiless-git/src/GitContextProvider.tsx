@@ -22,6 +22,7 @@ const defaultGitInfo: GitContextProps = {
 };
 
 const GitContext = React.createContext<GitContextProps>(defaultGitInfo);
+GitContext.displayName = 'GitContext';
 
 /**
  * Component which provides its children with `GitContext` of site git info.

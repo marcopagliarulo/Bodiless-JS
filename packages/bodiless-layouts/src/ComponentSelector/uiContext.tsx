@@ -55,4 +55,5 @@ export const defaultUI: FinalUI = {
 };
 
 const uiContext = React.createContext(defaultUI);
+uiContext.displayName = 'ComponentSelectorUiContext';
 export default uiContext;

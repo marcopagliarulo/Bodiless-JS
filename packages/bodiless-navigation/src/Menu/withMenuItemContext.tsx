@@ -39,6 +39,7 @@ const SubmenuContext = createContext<SubmenuContextType>({
   menuItemId: '',
   menuItemTitle: '',
 });
+SubmenuContext.displayName = 'SubmenuContext';
 
 const useSubmenuContext = () => useContext(SubmenuContext);
 

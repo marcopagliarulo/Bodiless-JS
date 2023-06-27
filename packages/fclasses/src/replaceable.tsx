@@ -26,6 +26,7 @@ import { flowHoc } from './flowHoc';
 
 const designContextDefault = undefined as undefined | ComponentType<any>;
 const DesignContext = React.createContext(designContextDefault);
+DesignContext.displayName = 'DesignContext';
 
 /**
  * HOC which makes a component capable of replacement via [[startWith]].

@@ -40,6 +40,7 @@ const defaultValue = {
 };
 
 const BVLoaderContext = React.createContext<BVLoaderData>(defaultValue);
+BVLoaderContext.displayName = 'BVLoaderContext';
 
 export const BVLoaderProvider: FC<PropsWithChildren<Props>> = (
   { children, scriptUrl, bvConfig }

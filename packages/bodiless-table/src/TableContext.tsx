@@ -21,6 +21,7 @@ const TableContext = React.createContext({
   headRows: [] as string[],
   footRows: [] as string[],
 } as TableBaseProps);
+TableContext.displayName = 'TableContext';
 
 type TableRowContextValue = {
   index: number,
@@ -31,14 +32,17 @@ type TableColumnContextValue = {
   name: string,
 };
 const TableSectionContext = React.createContext(Section.body as Section);
+TableSectionContext.displayName = 'TableSectionContext';
 const TableRowContext = React.createContext({
   index: 0,
   name: '',
 } as TableRowContextValue);
+TableRowContext.displayName = 'TableRowContext';
 const TableColumnContext = React.createContext({
   index: 0,
   name: '',
 } as TableColumnContextValue);
+TableColumnContext.displayName = 'TableColumnContext';
 
 const useTableSectionContext = () => useContext(TableSectionContext);
 const useTableRowContext = () => useContext(TableRowContext);

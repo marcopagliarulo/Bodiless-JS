@@ -41,6 +41,7 @@ import { TagButtonProps } from '../TagButton';
 const RegisterItemContext = React.createContext<RegisterItemContextType>({
   registerItem: () => undefined,
 });
+RegisterItemContext.displayName = 'RegisterItemContext';
 
 /**
  * @private
@@ -60,6 +61,7 @@ const FilterByGroupContext = createContext<FBGContextType>({
   getFilteredItems: () => [],
   filtersInitialized: false,
 });
+FilterByGroupContext.displayName = 'FilterByGroupContext';
 
 /**
  * Hook which provides access to the current state of the filters, an methods

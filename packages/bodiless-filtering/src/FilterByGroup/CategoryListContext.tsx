@@ -26,6 +26,7 @@ type CategoryListContextType = {
 };
 
 const CategoryListContext = createContext<CategoryListContextType>({});
+CategoryListContext.displayName = 'CategoryListContext';
 const useCategoryListContext = () => useContext(CategoryListContext);
 
 const withCategoryListContextProvider = (Component: ComponentOrTag<any>) => {

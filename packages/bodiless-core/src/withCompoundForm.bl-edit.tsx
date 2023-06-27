@@ -58,7 +58,10 @@ type FormProps<D> = ContextMenuFormProps & {
  * @private
  */
 const Context = createContext<SnippetRegister<any>>(() => {});
+Context.displayName = 'SnippetRegisterContext';
+
 const SnippetContext = createContext<MutableRefObject<Snippet<any>[]>|undefined>(undefined);
+SnippetContext.displayName = 'SnippetContext';
 
 const Snippets = <D extends object>(props$: FormProps<D>) => {
   const { snippets: snippets$, ...rest$ } = props$;

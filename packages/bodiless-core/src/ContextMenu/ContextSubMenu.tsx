@@ -25,6 +25,7 @@ import type { IContextMenuItemProps, ContextMenuFormProps } from '../Types/Conte
 
 // A context to hold the child menu items.
 const SubMenuContext = createContext<ReactNode>(null);
+SubMenuContext.displayName = 'SubMenuContext';
 const SubMenuChildren = () => {
   const children = useContext(SubMenuContext);
   return <>{children}</>;

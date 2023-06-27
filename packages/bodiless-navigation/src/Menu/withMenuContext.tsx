@@ -31,6 +31,7 @@ const MenuContext = createContext<MenuContextType>({
   activeSubmenu: undefined,
   setActiveSubmenu: () => null,
 });
+MenuContext.displayName = 'MenuContext';
 
 /**
  * Hook which can be used to get a current active submenu ID

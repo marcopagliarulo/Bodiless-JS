@@ -15,6 +15,7 @@
 import React from 'react';
 
 const SlateEditorContext = React.createContext({});
+SlateEditorContext.displayName = 'SlateEditorContext';
 
 export const useSlateContext = () => {};
 

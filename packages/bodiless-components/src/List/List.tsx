@@ -29,6 +29,8 @@ import {
 } from './types';
 
 const ListContext = React.createContext<ListContextValue>({});
+ListContext.displayName = 'ListContext';
+
 const useListContext = () => React.useContext(ListContext);
 
 const ListItemNodeProvider = withNode(Fragment);

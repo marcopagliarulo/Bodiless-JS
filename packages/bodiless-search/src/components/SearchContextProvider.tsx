@@ -43,6 +43,8 @@ const defaultSearchResults: TSearchResultContextValue = {
   suggest: () => [],
 };
 const searchResultContext = React.createContext<TSearchResultContextValue>(defaultSearchResults);
+searchResultContext.displayName = 'searchResultContext';
+
 export const useSearchResultContext = () => useContext(searchResultContext);
 export const SearchResultProvider: FC<PropsWithChildren> = ({ children }) => {
   const [results, setResult] = useState<TSearchResults>([]);
