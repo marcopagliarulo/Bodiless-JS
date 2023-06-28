@@ -23,28 +23,36 @@ type IslandsHydratorProps = {
 type IslandWithNodeProps = {
   nodeCollection?: string,
   nodeKeys: string[]
-}
-const IslandWithNode :FC<PropsWithChildren<IslandWithNodeProps>> = ({nodeCollection, nodeKeys, children} ) => {
-  let node = useNode(nodeCollection).node;
-  for (const nodeKey of nodeKeys) {
-    node = node.child(nodeKey);
-  }
+};
 
-  return(
-    <NodeProvider node={node} collection={nodeCollection} >
+const IslandWithNode :FC<PropsWithChildren<IslandWithNodeProps>> = ({
+  nodeCollection,
+  nodeKeys,
+  children
+}) => {
+  let { node } = useNode(nodeCollection);
+  nodeKeys.forEach(nodeKey => {
+    node = node.child(nodeKey);
+  });
+
+  return (
+    <NodeProvider node={node} collection={nodeCollection}>
       {children}
     </NodeProvider>
   );
+};
 
-}
 const IslandComponents = ({islands}: {islands: Islands}) => {
   const [islandComponents, setIslandComponents] = useState<ReactPortal[]>([]);
   if (typeof window !== 'undefined') {
     useLayoutEffect(() => {
       const components: ReactPortal[] = [];
       document.querySelectorAll('[data-island-component]').forEach((island) => {
-
-        const { dataset: { nodekeyParentTrail = '', islandProps,  nodeCollection, islandComponent } } = island as HTMLElement;
+        const {
+          dataset: {
+            nodekeyParentTrail = '', islandProps, nodeCollection, islandComponent
+          }
+        } = island as HTMLElement;
 
         if (typeof islandComponent === 'undefined') return;
 
@@ -54,19 +62,20 @@ const IslandComponents = ({islands}: {islands: Islands}) => {
 
         const props = JSON.parse(islandProps || '{}');
 
-        console.log(nodekeyParentTrail);
+        // eslint-disable-next-line no-param-reassign
         island.innerHTML = '';
         if (nodekeyParentTrail) {
           const nodeKeys = nodekeyParentTrail.split('$');
           // Remove first item which refers to NodeCollection.
           nodeKeys.shift();
 
-          if (nodeKeys.length) {    
+          if (nodeKeys.length) {
             components.push(createPortal(
               <IslandWithNode nodeCollection={nodeCollection} nodeKeys={nodeKeys}>
                 <Component {...props} />
-              </IslandWithNode>
-            , island));
+              </IslandWithNode>,
+              island
+            ));
             return;
           }
         }

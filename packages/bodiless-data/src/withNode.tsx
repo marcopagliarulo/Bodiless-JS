@@ -24,22 +24,25 @@ const withNodeKeyParentTrail:HOC<{}, Omit<WithNodeProps, 'nodeKey'>> = Component
     children,
     ...rest
   }: PropsWithChildren<Omit<WithNodeProps, 'nodeKey'>>) => {
-    const map = useContext(NodeContext);
+    const { activeCollection } = useContext(NodeContext);
     // If no collection is specified, then return a node from the
     // collection which was set by the most recent NodeProvider.
-    const collection = nodeCollection || map.activeCollection || '_default';
-  
+    const collection = nodeCollection || activeCollection || '_default';
+
     const parentTrail = useNode(collection).node.path.join('$');
     return (
       <Component
         {...rest as any}
         data-node-collection={collection}
         data-nodekey-parent-trail={[parentTrail].join('$')}
-      >{children}</Component>
+      >
+        {children}
+      </Component>
     );
   };
   return WithNodeKeyParentTrail;
-}
+};
+
 /**
  * HOC which gives a component a content node.  The enhanced component accepts an optional
  * a `nodeKey` prop.  When specified, the component will be given a new node which is
