@@ -12,12 +12,34 @@
  * limitations under the License.
  */
 
-import React, { FC } from 'react';
+import React, { FC, PropsWithChildren, useContext } from 'react';
 import flow from 'lodash/flow';
 import { HOC, Injector } from '@bodiless/fclasses';
-import NodeProvider, { useNode } from './NodeProvider';
+import NodeProvider, { useNode, NodeContext } from './NodeProvider';
 import { WithNodeProps } from './NodeTypes';
 
+const withNodeKeyParentTrail:HOC<{}, Omit<WithNodeProps, 'nodeKey'>> = Component => {
+  const WithNodeKeyParentTrail = ({
+    nodeCollection,
+    children,
+    ...rest
+  }: PropsWithChildren<Omit<WithNodeProps, 'nodeKey'>>) => {
+    const map = useContext(NodeContext);
+    // If no collection is specified, then return a node from the
+    // collection which was set by the most recent NodeProvider.
+    const collection = nodeCollection || map.activeCollection || '_default';
+  
+    const parentTrail = useNode(collection).node.path.join('$');
+    return (
+      <Component
+        {...rest as any}
+        data-node-collection={collection}
+        data-nodekey-parent-trail={[parentTrail].join('$')}
+      >{children}</Component>
+    );
+  };
+  return WithNodeKeyParentTrail;
+}
 /**
  * HOC which gives a component a content node.  The enhanced component accepts an optional
  * a `nodeKey` prop.  When specified, the component will be given a new node which is
@@ -37,8 +59,6 @@ const withNode:HOC<{}, WithNodeProps> = Component => {
       <NodeProvider node={node} collection={nodeCollection}>
         <Component
           {...rest as any}
-          data-node-collection={nodeCollection}
-          data-nodekey-trail={useNode(nodeCollection).node.path.join('$')}
         />
       </NodeProvider>
     );
@@ -85,4 +105,4 @@ const withChildNode = (
 ) as HOC;
 
 export default withNode;
-export { withNodeKey, withChildNode };
+export { withNodeKey, withChildNode, withNodeKeyParentTrail };

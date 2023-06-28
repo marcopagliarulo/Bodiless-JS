@@ -1,10 +1,13 @@
 import React, {
   Component,
+  FC,
   ReactPortal,
   ReactNode,
   useLayoutEffect,
-  useState
+  useState,
+  PropsWithChildren
 } from 'react';
+import { useNode, NodeProvider } from '@bodiless/data';
 import { createPortal /* hydrateRoot */ } from 'react-dom';
 import { HOC, ComponentWithMeta } from '@bodiless/fclasses';
 
@@ -17,32 +20,64 @@ type IslandsHydratorProps = {
   Islands: Islands
 };
 
+type IslandWithNodeProps = {
+  nodeCollection?: string,
+  nodeKeys: string[]
+}
+const IslandWithNode :FC<PropsWithChildren<IslandWithNodeProps>> = ({nodeCollection, nodeKeys, children} ) => {
+  let node = useNode(nodeCollection).node;
+  for (const nodeKey of nodeKeys) {
+    node = node.child(nodeKey);
+  }
+
+  return(
+    <NodeProvider node={node} collection={nodeCollection} >
+      {children}
+    </NodeProvider>
+  );
+
+}
 const IslandComponents = ({islands}: {islands: Islands}) => {
   const [islandComponents, setIslandComponents] = useState<ReactPortal[]>([]);
   if (typeof window !== 'undefined') {
     useLayoutEffect(() => {
       const components: ReactPortal[] = [];
       document.querySelectorAll('[data-island-component]').forEach((island) => {
-        // @ts-ignore
-        const { dataset = {} } = island;
 
-        if (typeof dataset.islandComponent === 'undefined') return;
+        const { dataset: { nodekeyParentTrail = '', islandProps,  nodeCollection, islandComponent } } = island as HTMLElement;
 
-        // @ts-ignore
-        if (typeof islands[dataset.islandComponent] === 'undefined') return;
+        if (typeof islandComponent === 'undefined') return;
 
-        // @ts-ignore
-        const Component = islands[dataset.islandComponent];
-        const props = JSON.parse(dataset.islandProps || {});
-        // Remove existing html and replace with the component in portal.
+        if (typeof islands[islandComponent] === 'undefined') return;
+
+        const Component = islands[islandComponent];
+
+        const props = JSON.parse(islandProps || '{}');
+
+        console.log(nodekeyParentTrail);
         island.innerHTML = '';
+        if (nodekeyParentTrail) {
+          const nodeKeys = nodekeyParentTrail.split('$');
+          // Remove first item which refers to NodeCollection.
+          nodeKeys.shift();
+
+          if (nodeKeys.length) {    
+            components.push(createPortal(
+              <IslandWithNode nodeCollection={nodeCollection} nodeKeys={nodeKeys}>
+                <Component {...props} />
+              </IslandWithNode>
+            , island));
+            return;
+          }
+        }
         components.push(createPortal(<Component {...props} />, island));
+
+        // Remove existing html and replace with the component in portal.
       });
       setIslandComponents(components);
     }, []);
   }
 
-  // eslint-disable-next-line consistent-return
   return (<>{islandComponents}</>);
 };
 

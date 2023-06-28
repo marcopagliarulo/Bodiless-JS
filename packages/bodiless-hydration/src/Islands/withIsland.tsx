@@ -1,5 +1,6 @@
 import React from 'react';
-import { HOC } from '@bodiless/fclasses';
+import { HOC, Span } from '@bodiless/fclasses';
+import { withNodeKeyParentTrail } from '@bodiless/data';
 
 const stringifyReplacer = (key: string, value: any): any => {
   const propsToRemove = ['__source', '__self', 'stateNode', '_context', 'return', 'children'];
@@ -11,9 +12,10 @@ const createSerializedData = (props: any) => JSON.stringify(props, stringifyRepl
 const withIsland = (ComponentName: string) : HOC => (Component) => {
   const WithIsland = (props: any) => {
     const serializedData = createSerializedData(props);
+    const ComponentWithNodeKeyParentTrail = withNodeKeyParentTrail(Span);
 
     return (
-      <span
+      <ComponentWithNodeKeyParentTrail
         data-island-component={ComponentName}
         data-island-props={serializedData}
         style={{display: 'content'}}
@@ -21,7 +23,7 @@ const withIsland = (ComponentName: string) : HOC => (Component) => {
         <Component
           {...props}
         />
-      </span>
+      </ComponentWithNodeKeyParentTrail>
     );
   };
 
