@@ -32,11 +32,15 @@ export type VitalCarouselToken = TokenSpec<VitalCarouselComponents, DefaultDomai
  * @category Token Collection
  * @see [[VitalCarouselClean]]
  */
-export interface VitalVitalCarousel {
+export interface VitalCarousel {
   /**
    * Default styling and behavior.
    */
   Default: VitalCarouselToken;
+  /**
+   * add Navigation buttons on the left & right side of items
+   */
+  withNavigationButtons: VitalCarouselToken;
 
   // Document other tokens here.
-};
+}

@@ -22,7 +22,7 @@ import {
   Img,
 } from '@bodiless/fclasses';
 import {
-  CarouselClean,
+  CarouselClean as BodilessCarouselClean,
   asEditableCarousel,
   // withIntrinsicHeight,
   // withNoDragIfEditable,
@@ -34,6 +34,11 @@ import {
   // asAccessibleCarousel,
   // withNoAutoPlayIfEditable
 } from '@bodiless/carousel';
+import {
+  VitalCarouselClean,
+  withEditor,
+  vitalCarousel,
+} from '@bodiless/vital-carousel';
 import { vitalImage } from '@bodiless/vital-image';
 import { asFluidToken } from '@bodiless/vital-elements';
 import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vital-templates';
@@ -57,11 +62,18 @@ const withImageSlide = withDesign({
 
 const vitalCarouselFlowContainer = asFluidToken({
   Components: {
-    Carousel: on(CarouselClean)(
+    Carousel: on(BodilessCarouselClean)(
       asEditableCarousel(CAROUSEL_NODE_KEY),
       withImageSlide,
       withInfinitiveLoop,
       withNode,
+    ),
+    VitalCarousel: on(VitalCarouselClean)(
+      withEditor(CAROUSEL_NODE_KEY),
+      withImageSlide,
+      withNode,
+      vitalCarousel.Default,
+      vitalCarousel.withNavigationButtons,
     ),
   },
 });

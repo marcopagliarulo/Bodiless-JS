@@ -1,5 +1,136 @@
+import { addProps, replaceWith, stylable } from '@bodiless/fclasses';
+import { ButtonBack, ButtonNext } from 'pure-react-carousel';
 import { asVitalCarouselToken } from '../VitalCarouselClean';
-import type { VitalVitalCarousel } from '../types';
+import type { VitalCarousel } from '../types';
+
+// import negate from 'lodash/negate';
+// import {
+//   ButtonBack,
+//   ButtonNext,
+//   ButtonPlay,
+// } from 'pure-react-carousel';
+// import CarouselDot from './CarouselDot';
+// import { useIsCarouselItemActive } from './hooks';
+
+// const withIntrinsicHeight = withDesign({
+//   Wrapper: addProps({
+//     isIntrinsicHeight: true,
+//   }),
+// });
+
+// const withNoDragIfEditable = withDesign({
+//   Wrapper: ifEditable(
+//     addProps({
+//       dragEnabled: false,
+//     }),
+//   ),
+// });
+
+// const withNoAutoPlayIfEditable = withDesign({
+//   Wrapper: ifEditable(
+//     addProps({
+//       isPlaying: false,
+//     }),
+//   ),
+// });
+
+// const withDisabledPlayButtonIfEditable = withDesign({
+//   ButtonPlay: ifEditable(
+//     addProps({
+//       disabled: true,
+//     }),
+//   ),
+// });
+
+// const withInfinitiveLoop = withDesign({
+//   Wrapper: addProps({
+//     infinite: true,
+//   }),
+// });
+
+// const withCarouselDots = (nodeKeys?: WithNodeKeyProps) => flowHoc(
+//   withDesign({
+//     Dots: flowHoc(
+//       replaceWith(Ul),
+//       asBodilessList(nodeKeys, undefined, () => ({ groupLabel: 'Slide' })),
+//       withDesign({
+//         Item: replaceWith(
+//           withChild(
+//             stylable(CarouselDot), 'Dot',
+//           )(Li),
+//         ),
+//       }),
+//     ),
+//   }),
+// );
+
+// const withAutoPlayButton = flowHoc(
+//   withDesign({
+//     ButtonPlay: replaceWith(stylable(ButtonPlay)),
+//   }),
+//   withDisabledPlayButtonIfEditable,
+// );
+
+// const withAutoPlayInterval = (interval: number = 3000) => withDesign({
+//   Wrapper: addProps({
+//     interval,
+//   }),
+// });
+
+// const withCarouselItemTabIndex: HOC = Component => {
+//   const WithCarouselItemTabIndex: FC<any> = props => {
+//     const isItemActive = useIsCarouselItemActive();
+//     const tabIndex = isItemActive ? 0 : -1;
+//     return <Component {...props} tabIndex={tabIndex} />;
+//   };
+//   return WithCarouselItemTabIndex;
+// };
+
+// const asAccessibleCarouselButton = flowHoc(
+//   addProps({
+//     role: 'button',
+//   }),
+// );
+
+// const withAriaSelectedCarouselItem = flowHoc(
+//   addPropsIf(useIsCarouselItemActive)({
+//     'aria-selected': true,
+//     'aria-hidden': false,
+//   }),
+//   addPropsIf(negate(useIsCarouselItemActive))({
+//     'aria-selected': false,
+//     'aria-hidden': true,
+//   }),
+// );
+
+// const asAccessibleCarousel = withDesign({
+//   Slider: flowHoc(
+//     addProps({
+//       tabIndex: 'auto',
+//     }),
+//     withDesign({
+//       Item: flowHoc(
+//         withCarouselItemTabIndex,
+//         withAriaSelectedCarouselItem,
+//       ),
+//     }),
+//   ),
+//   ButtonBack: asAccessibleCarouselButton,
+//   ButtonNext: asAccessibleCarouselButton,
+//   Dots: withDesign({
+//     Item: flowHoc(
+//       withAriaSelectedCarouselItem,
+//       addProps({
+//         'aria-hidden': false,
+//         role: 'presentation',
+//       }),
+//       withDesign({
+//         Dot: asAccessibleCarouselButton,
+//       }),
+//     ),
+//   }),
+//   ButtonPlay: asAccessibleCarouselButton,
+// });
 
 const Default = asVitalCarouselToken({
   Core: {
@@ -62,19 +193,40 @@ const Default = asVitalCarouselToken({
   // },
 });
 
-// Add additional variant tokens or variators here.
-// ...
+const withNavigationButtons = asVitalCarouselToken({
+  Components: {
+    ButtonBack: replaceWith(stylable(ButtonBack)),
+    ButtonNext: replaceWith(stylable(ButtonNext)),
+  },
+  Theme: {
+    ButtonNext: 'text-white uppercase disabled:opacity-50 disabled:cursor-not-allowed',
+    ButtonBack: 'text-white uppercase disabled:opacity-50 disabled:cursor-not-allowed',
+  },
+  Layout: {
+    SliderWrapper: 'relative',
+    ButtonNext: 'absolute transform -translate-y-1/2 top-1/2 right-0 left-auto rtl:left-0 rtl:right-auto',
+    ButtonBack: 'absolute transform -translate-y-1/2 top-1/2 left-0 right-auto rtl:right-0 rtl:left-auto',
+  },
+  Content: {
+    ButtonNext: addProps({ children: 'Next' }),
+    ButtonBack: addProps({ children: 'Back' }),
+  },
+  Spacing: {
+    ButtonNext: 'p-2',
+    ButtonBack: 'p-2'
+  },
+});
 
 /**
  * Tokens for VitalCarouselClean
  *
  * @category Token Collection
- * @see [[VitalVitalCarousel]]
+ * @see [[VitalCarousel]]
  * @see [[VitalCarouselClean]]
  */
-const vitalVitalCarousel: VitalVitalCarousel = {
+const vitalCarousel: VitalCarousel = {
   Default,
-  // ...
+  withNavigationButtons,
 };
 
-export default vitalVitalCarousel;
+export default vitalCarousel;

@@ -11,29 +11,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+import { ifEditable } from '@bodiless/core';
 import { withNode } from '@bodiless/data';
 import type { WithNodeKeyProps } from '@bodiless/data';
 import { asBodilessList } from '@bodiless/components';
-import { withDesign, replaceWith, flowHoc } from '@bodiless/fclasses';
+import { withDesign, replaceWith, flowHoc, as, addProps } from '@bodiless/fclasses';
 import { Slide } from 'pure-react-carousel';
-import withTotalSlides from './withTotalSlides';
-import { withIntrinsicHeight, withNoDragIfEditable, withNoAutoPlayIfEditable } from './token';
+import withTotalSlides from '../utils/withTotalSlides';
+
+// import { withIntrinsicHeight, withNoDragIfEditable, withNoAutoPlayIfEditable } from './token';
 
 const withEditor = (nodeKeys?: WithNodeKeyProps) => flowHoc(
   withNode,
   withDesign({
-    Wrapper: withTotalSlides(nodeKeys),
+    Wrapper: as(
+      withTotalSlides(nodeKeys),
+      // below is withIntrinsicHeigght
+      addProps({ isIntrinsicHeight: true }),
+      // below is withNoDragIfEditable
+      ifEditable(addProps({ dragEnabled: false })),
+    ),
     Slider: flowHoc(
       asBodilessList(nodeKeys, undefined, () => ({ groupLabel: 'Slide' })),
       withDesign({
         Item: replaceWith(Slide),
       }),
     ),
+    // withNoAutoPlayIfEditable
+    ButtonPlay: ifEditable(addProps({ disabled: true })),
   }),
-  withIntrinsicHeight,
-  withNoDragIfEditable,
-  withNoAutoPlayIfEditable,
 );
 
 export default withEditor;
