@@ -1,5 +1,5 @@
 /**
- * Copyright © 2022 Johnson & Johnson
+ * Copyright © 2023 Johnson & Johnson
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,20 +20,8 @@ import {
   withDesign,
   as,
   Img,
+  varyDesigns,
 } from '@bodiless/fclasses';
-import {
-  CarouselClean as BodilessCarouselClean,
-  asEditableCarousel,
-  // withIntrinsicHeight,
-  // withNoDragIfEditable,
-  withInfinitiveLoop,
-  // withCarouselDots,
-  // withNavigationButtons,
-  // withAutoPlayButton,
-  // withAutoPlayInterval,
-  // asAccessibleCarousel,
-  // withNoAutoPlayIfEditable
-} from '@bodiless/carousel';
 import {
   VitalCarouselClean,
   withEditor,
@@ -42,7 +30,7 @@ import {
 import { vitalImage } from '@bodiless/vital-image';
 import { asFluidToken } from '@bodiless/vital-elements';
 import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vital-templates';
-import { withNode, withNodeKey } from '@bodiless/data';
+import { withDefaultContent, withNode, withNodeKey } from '@bodiless/data';
 import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
@@ -60,23 +48,63 @@ const withImageSlide = withDesign({
   }),
 });
 
+const BaseVariation = {
+  // using '' means it won't add any string to name key of the variations
+  '': on(VitalCarouselClean)(
+    withEditor(CAROUSEL_NODE_KEY),
+    withImageSlide,
+    withNode,
+    vitalCarousel.Default,
+  ),
+};
+
+const CarouselVariations = {
+  Default: '',
+  NavButtons: vitalCarousel.withNavigationButtons,
+};
+
+const vitalCarouselVariations = varyDesigns(
+  BaseVariation,
+  CarouselVariations,
+);
+
 const vitalCarouselFlowContainer = asFluidToken({
   Components: {
-    Carousel: on(BodilessCarouselClean)(
-      asEditableCarousel(CAROUSEL_NODE_KEY),
-      withImageSlide,
-      withInfinitiveLoop,
-      withNode,
-    ),
-    VitalCarousel: on(VitalCarouselClean)(
-      withEditor(CAROUSEL_NODE_KEY),
-      withImageSlide,
-      withNode,
-      vitalCarousel.Default,
-      vitalCarousel.withNavigationButtons,
-    ),
+    ...vitalCarouselVariations,
   },
 });
+
+// Setup Default Data
+const image1 = {
+  src: 'https://placehold.co/1400x300/ff0000/FFF',
+  alt: 'red',
+  title: 'red'
+};
+const image2 = {
+  src: 'https://placehold.co/1400x300/00ff00/FFF',
+  alt: 'green',
+  title: 'green'
+};
+const image3 = {
+  src: 'https://placehold.co/1400x300/0000ff/FFF',
+  alt: 'blue',
+  title: 'blue'
+};
+
+const data = {
+  examples$Default$slides: {
+    items: ['image1', 'image2', 'image3'],
+  },
+  examples$Default$slides$image1$defaultlandscapeimage: image1,
+  examples$Default$slides$image2$defaultlandscapeimage: image2,
+  examples$Default$slides$image3$defaultlandscapeimage: image3,
+  examples$NavButtons$slides: {
+    items: ['image1', 'image2', 'image3'],
+  },
+  examples$NavButtons$slides$image1$defaultlandscapeimage: image1,
+  examples$NavButtons$slides$image2$defaultlandscapeimage: image2,
+  examples$NavButtons$slides$image3$defaultlandscapeimage: image3,
+};
 
 export const Carousel = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
   Meta: flowHoc.meta.term('Token')('Carousel'),
@@ -86,6 +114,7 @@ export const Carousel = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Defaul
     Examples: on(StyleGuideExamplesClean)(
       vitalStyleGuideExamples.Default,
       vitalCarouselFlowContainer,
+      withDefaultContent(data),
     ),
   },
 });
