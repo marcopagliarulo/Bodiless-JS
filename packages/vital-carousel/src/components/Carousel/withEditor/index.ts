@@ -15,7 +15,9 @@ import { ifEditable } from '@bodiless/core';
 import { withNode } from '@bodiless/data';
 import type { WithNodeKeyProps } from '@bodiless/data';
 import { asBodilessList } from '@bodiless/components';
-import { withDesign, replaceWith, flowHoc, as, addProps } from '@bodiless/fclasses';
+import {
+  withDesign, replaceWith, flowHoc, as, addProps
+} from '@bodiless/fclasses';
 import { Slide } from 'pure-react-carousel';
 import withTotalSlides from '../utils/withTotalSlides';
 

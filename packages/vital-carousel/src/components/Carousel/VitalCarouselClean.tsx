@@ -2,12 +2,12 @@ import React, { FC, Fragment } from 'react';
 import { asVitalTokenSpec } from '@bodiless/vital-elements';
 import { designable, Div, stylable } from '@bodiless/fclasses';
 import type { DesignableComponentsProps } from '@bodiless/fclasses';
-import type { VitalCarouselComponents } from './types';
 import {
   CarouselProvider,
   Slider,
   Slide,
 } from 'pure-react-carousel';
+import type { VitalCarouselComponents } from './types';
 
 type VitalCarouselBaseProps = DesignableComponentsProps<VitalCarouselComponents>;
 
