@@ -59,6 +59,9 @@ exports.onCreateBabelConfig = args => {
   setBabelPlugin({
     name: 'babel-plugin-preval',
   });
+  setBabelPlugin({
+    name: '@loadable/babel-plugin',
+  });
 };
 
 const createPagesFromFS = async ({ actions, graphql, getNode }) => {

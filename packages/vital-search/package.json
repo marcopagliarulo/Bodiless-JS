@@ -40,6 +40,7 @@
     "@bodiless/core": "^1.0.0-rc.42",
     "@bodiless/fclasses": "^1.0.0-rc.42",
     "@bodiless/ga4": "^1.0.0-rc.42",
+    "@bodiless/hydration": "^1.0.0-rc.42",
     "@bodiless/search": "^1.0.0-rc.42",
     "@bodiless/vital-elements": "^1.0.0-rc.42",
     "@bodiless/vital-layout": "^1.0.0-rc.42",

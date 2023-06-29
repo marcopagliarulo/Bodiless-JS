@@ -15,7 +15,7 @@
 import { asHeaderToken } from '@bodiless/vital-layout';
 import { vitalHeaderBase } from '@bodiless/vital-layout/lib/base';
 import { LinkClean, vitalLink, asLinkToken } from '@bodiless/vital-link';
-import { vitalSearchHeader } from '@bodiless/vital-search';
+import { vitalSearchHeader, asSearchMenuToggler } from '@bodiless/vital-search';
 import { asLanguageSelector, withLanguageNode } from '@bodiless/i18n';
 import { withIsland } from '@bodiless/hydration';
 import {
@@ -40,7 +40,17 @@ export const asLanguageSelectorLink = on(LinkClean)(
 
 const Default = asHeaderToken(
   vitalHeaderBase.Default,
-  vitalSearchHeader.WithSearch,
+  {
+    ...vitalSearchHeader.WithSearch,
+    Core: {
+      SearchToggler: flowHoc(
+        withIsland('VitalSearchToggler'),
+        asSearchMenuToggler
+      ),
+      DesktopSearch: withIsland('VitalDesktopSearch'),
+      MobileSearch: withIsland('VitalMobileSearch'),
+    }
+  },
   vitalHeaderBase.WithLanguageSelector,
   {
     Core: {

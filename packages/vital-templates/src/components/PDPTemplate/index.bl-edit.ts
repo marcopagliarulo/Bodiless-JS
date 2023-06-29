@@ -12,9 +12,7 @@
  * limitations under the License.
  */
 
-export { default as PDPTemplateClean, asPDPTemplateToken } from './PDPTemplateClean';
-export { default as vitalPDPTemplate } from './tokens';
+import vitalPDPTemplateStatic from './tokens';
 
-export { PDPTemplateStatic, vitalPDPTemplateStatic } from './index.bl-edit';
-
-export type { PDPTemplateComponents } from './types';
+export { default as PDPTemplateStatic} from './PDPTemplateClean';
+export { vitalPDPTemplateStatic };

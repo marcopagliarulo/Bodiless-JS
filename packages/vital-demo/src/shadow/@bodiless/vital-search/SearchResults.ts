@@ -14,9 +14,13 @@
 
 import { asSearchResultsToken } from '@bodiless/vital-search';
 import { vitalSearchResultsBase } from '@bodiless/vital-search/lib/base';
+import { withIsland } from '@bodiless/hydration';
 import { addProps } from '@bodiless/fclasses';
 
 const Default = asSearchResultsToken(vitalSearchResultsBase.Default, {
+  Core: {
+    _: withIsland('VitalSearchResults'),
+  },
   Behavior: {
     SearchResultWrapper: addProps({ 'data-shadowed-by': 'vital-demo:SearchResults' }),
   },

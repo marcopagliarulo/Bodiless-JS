@@ -12,9 +12,17 @@
  * limitations under the License.
  */
 
-export { default as PDPTemplateClean, asPDPTemplateToken } from './PDPTemplateClean';
-export { default as vitalPDPTemplate } from './tokens';
+import { as } from '@bodiless/fclasses';
+import { addSearchDataLayer } from '@bodiless/ga4';
+import { asSearchLayoutToken, vitalSearchResults, SearchLayoutClean } from '@bodiless/vital-search';
 
-export { PDPTemplateStatic, vitalPDPTemplateStatic } from './index.bl-edit';
+const VitalSearchResults = as(asSearchLayoutToken({
+  Behavior: {
+    _: addSearchDataLayer,
+  },
+  Components: {
+    Result: as(vitalSearchResults.Default),
+  },
+}))(SearchLayoutClean);
 
-export type { PDPTemplateComponents } from './types';
+export default VitalSearchResults;

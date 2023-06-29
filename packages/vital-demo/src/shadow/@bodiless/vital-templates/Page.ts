@@ -1,26 +1,38 @@
 import { vitalPageBase } from '@bodiless/vital-templates/lib/base';
 import { on, as } from '@bodiless/fclasses';
-// import { vitalContentListingTemplate } from '@bodiless/vital-content-listing';
+import { vitalContentListingTemplate } from '@bodiless/vital-content-listing';
 import { withLanguages } from '@bodiless/i18n';
 import { asFluidToken } from '@bodiless/vital-elements';
 import { withIslandsHydrator } from '@bodiless/hydration';
-import { GenericTemplateStatic, vitalGenericTemplateStatic } from '@bodiless/vital-templates';
-/*
 import {
-  PDPTemplateClean, vitalPDPTemplate, GenericTemplateClean,
+  GenericTemplateStatic,
+  vitalGenericTemplateStatic,
+  GenericTemplateClean,
+  PDPTemplateClean,
+  vitalPDPTemplate
 } from '@bodiless/vital-templates';
+
+import { withBurgerMenuProvider } from '@bodiless/navigation';
 import {
   vitalSearchGenericTemplate, withSearchMenuProvider, withSearchResult
 } from '@bodiless/vital-search';
-*/
 
-import { withBurgerMenuProvider } from '@bodiless/navigation';
-import { withSearchMenuProvider, withSearchResult } from '@bodiless/vital-search';
-import { VitalMenuToggler, VitalBurgerMenu } from '../../../Islands';
+import {
+  VitalMenuToggler,
+  VitalBurgerMenu,
+  VitalDesktopSearch,
+  VitalMobileSearch,
+  VitalSearchToggler,
+  VitalSearchResults,
+} from '../../../islands';
 
 const islands = {
   VitalMenuToggler,
-  VitalBurgerMenu
+  VitalBurgerMenu,
+  VitalDesktopSearch,
+  VitalMobileSearch,
+  VitalSearchToggler,
+  VitalSearchResults
 };
 
 const Base = asFluidToken(vitalPageBase.Default, {
@@ -47,9 +59,9 @@ const Default = asFluidToken({
   ...Base,
   Components: {
     _default: on(GenericTemplateStatic)(vitalGenericTemplateStatic.Default),
-    // PDP: on(PDPTemplateClean)(vitalPDPTemplate.Default),
-    // Search: on(GenericTemplateClean)(vitalSearchGenericTemplate.Search),
-    // ContentListing: on(GenericTemplateClean)(vitalContentListingTemplate.Default),
+    PDP: on(PDPTemplateClean)(vitalPDPTemplate.Default),
+    Search: on(GenericTemplateStatic)(vitalSearchGenericTemplate.Search),
+    ContentListing: on(GenericTemplateClean)(vitalContentListingTemplate.Default),
   },
   Compose: {
     ...vitalPageBase.Default.Compose,

@@ -14,7 +14,7 @@ const shadow = require('@bodiless/vital-demo/shadow');
 
 // Fix sourcemap issue
 // See: https://github.com/gatsbyjs/gatsby/issues/6278#issuecomment-402540404
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
+exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
   actions.setWebpackConfig(
     addTokenShadowPlugin({}, { resolvers: [shadow] })
   );
@@ -51,6 +51,15 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
   }
   // Always on bottom to keep the plugin as last,
   if (stage === 'build-javascript') {
+    const webpackConfig = getConfig();
+    Object.keys(webpackConfig.optimization.splitChunks.cacheGroups).forEach((key) => {
+      if (key !== 'framework') {
+        webpackConfig.optimization.splitChunks.cacheGroups[key] = false;
+      }
+    });
+    console.log(webpackConfig.optimization.splitChunks);
+    actions.replaceWebpackConfig(webpackConfig);
+
     const options = {
       enabled: process.env.BODILESS_BUILD_STATS === '1',
       sitePath: process.env.BODILESS_STATS_PATH || path.resolve('./public'),

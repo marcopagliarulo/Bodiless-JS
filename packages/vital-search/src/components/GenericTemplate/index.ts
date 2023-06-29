@@ -1,1 +1,1 @@
-export { default as vitalSearchGenericTemplate } from './tokens';
+export * from './index.bl-edit';

@@ -36,6 +36,7 @@
     "@bodiless/data": "^1.0.0-rc.42",
     "@bodiless/fclasses": "^1.0.0-rc.42",
     "@bodiless/filtering": "^1.0.0-rc.42",
+    "@bodiless/hydration": "^1.0.0-rc.42",
     "@bodiless/ga4": "^1.0.0-rc.42",
     "@bodiless/vital-card": "^1.0.0-rc.42",
     "@bodiless/vital-elements": "^1.0.0-rc.42",
