@@ -60,6 +60,7 @@ const plugins = [
         include: true,
         // Pass false to disable logging all resolving operations. Defaults to true.
         logging: true,
+        exclude: /components\/GenericTemplate\/index\.bl-edit/,
       }
     },
   },

@@ -12,6 +12,7 @@
  * limitations under the License.
  */
 import { join } from 'path';
+import type { StaticReplacementPluginOptions } from '@bodiless/webpack';
 
 const bodilessNextConfig = require('../../bodiless.next.config');
 
@@ -61,7 +62,7 @@ export type BodilessNextConfig = {
   manifest?: ManifestConfig,
   robotstxt?: RobotstxtConfig,
   sitemapxml?: SitemapxmlConfig,
-  staticReplacement?: any,
+  staticReplacement?: StaticReplacementPluginOptions,
   onNextWebpackConfig?: string[],
 };
 

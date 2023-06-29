@@ -25,3 +25,17 @@ export type PluginOptions = {
   include?: IncludeSetting,
   exclude?: RegExp,
 };
+
+export type StatoscopePluginOptions = Omit<PluginOptions, 'include' | 'logging'> & {
+  sitePath: string;
+  root?: string;
+  open?: false | 'dir' | 'file';
+  name?: string;
+  additionalStats?: string[];
+};
+
+type Resolver = (args: { componentName: string, packageName?: string }) => string;
+
+export type TokenShadowPluginOptions = Omit<PluginOptions, 'exclude'> & {
+  resolvers: Resolver[];
+};

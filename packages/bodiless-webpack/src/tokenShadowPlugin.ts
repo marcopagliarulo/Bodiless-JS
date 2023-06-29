@@ -15,15 +15,9 @@
 import webpack, { Configuration } from 'webpack';
 import path from 'path';
 import fs from 'fs';
-import { createLogger, PluginOptions } from './util';
+import { createLogger, TokenShadowPluginOptions } from './util';
 
 const TOKENS_REGEX = /\.\/tokens$/;
-
-type Resolver = (args: { componentName: string, packageName?: string }) => string;
-
-type TokenShadowPluginOptions = Omit<PluginOptions, 'exclude'> & {
-  resolvers: Resolver[];
-};
 
 const findPackageName = (resourcePath: string): string|undefined => {
   if (resourcePath.length === 1) return undefined;

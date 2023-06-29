@@ -13,6 +13,6 @@
  */
 
 import vitalGenericTemplateStatic from './tokens';
-import { GenericTemplateStatic } from './GenericTemplateClean';
 
-export { GenericTemplateStatic, vitalGenericTemplateStatic };
+export { default as GenericTemplateStatic} from './GenericTemplateClean';
+export { vitalGenericTemplateStatic };

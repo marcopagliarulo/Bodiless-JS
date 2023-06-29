@@ -6,5 +6,9 @@ module.exports = {
     background_color: '#663399',
     theme_color: '#663399',
     display: 'minimal-ui',
+  },
+  staticReplacement: {
+    include: true,
+    exclude: /components\/GenericTemplate\/index\.bl-edit/,
   }
 };

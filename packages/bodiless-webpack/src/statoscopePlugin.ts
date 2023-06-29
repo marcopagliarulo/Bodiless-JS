@@ -1,15 +1,7 @@
 import { Configuration } from 'webpack';
 import fs from 'fs';
 import StatoscopeWebpackPlugin from '@statoscope/webpack-plugin';
-import { PluginOptions } from './util';
-
-type StatoscopePluginOptions = Omit<PluginOptions, 'include' | 'logging'> & {
-  sitePath: string;
-  root?: string;
-  open?: false | 'dir' | 'file';
-  name?: string;
-  additionalStats?: string[];
-};
+import { StatoscopePluginOptions } from './util';
 
 export const createStatoscopePlugin = ({
   sitePath, root = '', enabled = false, open = false, name = 'webpack', additionalStats = []
