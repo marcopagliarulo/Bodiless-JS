@@ -40,7 +40,24 @@ export interface VitalCarousel {
   /**
    * add Navigation buttons on the left & right side of items
    */
-  withNavigationButtons: VitalCarouselToken;
+  WithNavigationButtons: VitalCarouselToken;
+  /**
+   * with Infinite loops continue to start
+   */
+  WithInfinitiveLoop: VitalCarouselToken;
+  /**
+   * with autoplay
+   */
+  WithAutoPlay: VitalCarouselToken;
+  /**
+   * withIntrinsicHeight
+   */
+  WithIntrinsicHeight: VitalCarouselToken;
+  WithNoDragIfEditable: VitalCarouselToken;
+  WithNoAutoPlayIfEditable: VitalCarouselToken;
+  WithCarouselDots: VitalCarouselToken;
+  WithAutoPlayInterval: VitalCarouselToken;
+  WithThumbnail: VitalCarouselToken;
+  WithPeek: VitalCarouselToken;
 
-  // Document other tokens here.
 }

@@ -60,7 +60,9 @@ const BaseVariation = {
 
 const CarouselVariations = {
   Default: '',
-  NavButtons: vitalCarousel.withNavigationButtons,
+  NavButtons: vitalCarousel.WithNavigationButtons,
+  InfiteLoop: as(vitalCarousel.WithInfinitiveLoop, vitalCarousel.WithNavigationButtons),
+  AutoPlay: vitalCarousel.WithAutoPlay,
 };
 
 const vitalCarouselVariations = varyDesigns(
@@ -104,6 +106,18 @@ const data = {
   examples$NavButtons$slides$image1$defaultlandscapeimage: image1,
   examples$NavButtons$slides$image2$defaultlandscapeimage: image2,
   examples$NavButtons$slides$image3$defaultlandscapeimage: image3,
+  examples$InfiteLoop$slides: {
+    items: ['image1', 'image2', 'image3'],
+  },
+  examples$InfiteLoop$slides$image1$defaultlandscapeimage: image1,
+  examples$InfiteLoop$slides$image2$defaultlandscapeimage: image2,
+  examples$InfiteLoop$slides$image3$defaultlandscapeimage: image3,
+  examples$AutoPlay$slides: {
+    items: ['image1', 'image2', 'image3'],
+  },
+  examples$AutoPlay$slides$image1$defaultlandscapeimage: image1,
+  examples$AutoPlay$slides$image2$defaultlandscapeimage: image2,
+  examples$AutoPlay$slides$image3$defaultlandscapeimage: image3,
 };
 
 export const Carousel = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
