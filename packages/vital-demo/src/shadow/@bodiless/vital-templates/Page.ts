@@ -1,22 +1,26 @@
 import { vitalPageBase } from '@bodiless/vital-templates/lib/base';
 import { on, as } from '@bodiless/fclasses';
-import { vitalContentListingTemplate } from '@bodiless/vital-content-listing';
+// import { vitalContentListingTemplate } from '@bodiless/vital-content-listing';
 import { withLanguages } from '@bodiless/i18n';
 import { asFluidToken } from '@bodiless/vital-elements';
 import { withIslandsHydrator } from '@bodiless/hydration';
 import {
   GenericTemplateStatic,
   vitalGenericTemplateStatic,
+  /*
   GenericTemplateClean,
   PDPTemplateClean,
   vitalPDPTemplate
+  */
 } from '@bodiless/vital-templates';
 
 import { withBurgerMenuProvider } from '@bodiless/navigation';
 import {
-  vitalSearchGenericTemplate, withSearchMenuProvider, withSearchResult
+  /* vitalSearchGenericTemplate, */ withSearchMenuProvider, withSearchResult
 } from '@bodiless/vital-search';
+import { _default } from '../../../pageComponents';
 
+/*
 import {
   VitalMenuToggler,
   VitalBurgerMenu,
@@ -34,6 +38,8 @@ const islands = {
   VitalSearchToggler,
   VitalSearchResults
 };
+*/
+const islands = {};
 
 const Base = asFluidToken(vitalPageBase.Default, {
   Core: {
@@ -59,9 +65,9 @@ const Default = asFluidToken({
   ...Base,
   Components: {
     _default: on(GenericTemplateStatic)(vitalGenericTemplateStatic.Default),
-    PDP: on(PDPTemplateClean)(vitalPDPTemplate.Default),
-    Search: on(GenericTemplateStatic)(vitalSearchGenericTemplate.Search),
-    ContentListing: on(GenericTemplateClean)(vitalContentListingTemplate.Default),
+    // PDP: on(PDPTemplateClean)(vitalPDPTemplate.Default),
+    // Search: on(GenericTemplateStatic)(vitalSearchGenericTemplate.Search),
+    // ContentListing: on(GenericTemplateClean)(vitalContentListingTemplate.Default),
   },
   Compose: {
     ...vitalPageBase.Default.Compose,

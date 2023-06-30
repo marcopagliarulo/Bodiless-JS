@@ -57,7 +57,6 @@ exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
         webpackConfig.optimization.splitChunks.cacheGroups[key] = false;
       }
     });
-    console.log(webpackConfig.optimization.splitChunks);
     actions.replaceWebpackConfig(webpackConfig);
 
     const options = {
