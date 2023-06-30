@@ -55,9 +55,10 @@ export interface VitalCarousel {
   WithIntrinsicHeight: VitalCarouselToken;
   WithNoDragIfEditable: VitalCarouselToken;
   WithNoAutoPlayIfEditable: VitalCarouselToken;
+  WithControls: VitalCarouselToken;
   WithCarouselDots: VitalCarouselToken;
-  WithAutoPlayInterval: VitalCarouselToken;
   WithThumbnail: VitalCarouselToken;
   WithPeek: VitalCarouselToken;
+  asAccessibleCarousel: VitalCarouselToken;
 
 }

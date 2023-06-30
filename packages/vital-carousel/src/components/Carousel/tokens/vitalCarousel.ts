@@ -1,10 +1,23 @@
-import { ifReadOnly, ifEditable } from '@bodiless/core';
 import {
-  Ul, addProps, as, replaceWith, stylable
+  ifReadOnly, ifEditable, withChild, ifToggledOn, withAppendChild
+} from '@bodiless/core';
+import { asBodilessList } from '@bodiless/components';
+// import type { WithNodeKeyProps } from '@bodiless/data';
+import negate from 'lodash/negate';
+import {
+  Ul, Li, Img, addProps, as, replaceWith, stylable, flowHoc, addPropsIf, withDesign, addClasses,
 } from '@bodiless/fclasses';
 import { ButtonBack, ButtonNext } from 'pure-react-carousel';
+import { vitalImage } from '@bodiless/vital-image';
+import { vitalColor } from '@bodiless/vital-elements';
 import { asVitalCarouselToken } from '../VitalCarouselClean';
 import type { VitalCarousel } from '../types';
+import { useIsCarouselItemActive } from '../utils/hooks';
+import withCarouselItemTabIndex from '../utils/withCarouselItemTabIndex';
+import CarouselDot from '../utils/CarouselDot';
+// import withEditor from '../withEditor';
+
+const CAROUSEL_NODE_KEY = 'slides';
 
 const WithNavigationButtons = asVitalCarouselToken({
   Components: {
@@ -39,37 +52,22 @@ const WithInfinitiveLoop = asVitalCarouselToken({
 const WithAutoPlay = asVitalCarouselToken({
   Behavior: {
     Wrapper: ifReadOnly(
-      addProps({
-        isPlaying: true,
-      }),
+      addProps({ isPlaying: true }),
+      addProps({ number: 3000 })
     ),
   }
 });
 
-// TODO (now to pass in tokens:  (interval: number = 3000) )
-const WithAutoPlayInterval = asVitalCarouselToken({
-// const withAutoPlayInterval = (interval: number = 3000) => withDesign({
-  Behavior: {
-    Wrapper: addProps({
-      // interval,
-    }),
-  },
-});
-
 const WithIntrinsicHeight = asVitalCarouselToken({
   Behavior: {
-    Wrapper: addProps({
-      isIntrinsicHeight: true,
-    }),
+    Wrapper: addProps({ isIntrinsicHeight: true }),
   }
 });
 
 const WithNoDragIfEditable = asVitalCarouselToken({
   Behavior: {
     Wrapper: ifEditable(
-      addProps({
-        dragEnabled: false,
-      }),
+      addProps({ dragEnabled: false }),
     ),
   }
 });
@@ -77,224 +75,161 @@ const WithNoDragIfEditable = asVitalCarouselToken({
 const WithNoAutoPlayIfEditable = asVitalCarouselToken({
   Behavior: {
     Wrapper: ifEditable(
-      addProps({
-        isPlaying: false,
-      }),
+      addProps({ isPlaying: false }),
     ),
   }
 });
 
-// TODO (now to pass in tokens:  (nodeKeys?: WithNodeKeyProps) )
-const WithCarouselDots = asVitalCarouselToken({
-// const withCarouselDots = (nodeKeys?: WithNodeKeyProps) => flowHoc(
+// const WithCarouselDots = (nodeKeys?: WithNodeKeyProps) => asVitalCarouselToken({
+const WithControls = asVitalCarouselToken({
   Components: {
     Dots: as(
       replaceWith(Ul),
-      //       asBodilessList(nodeKeys, undefined, () => ({ groupLabel: 'Slide' })),
-      //       withDesign({
-      //         Item: replaceWith(
-      //           withChild(
-      //             stylable(CarouselDot), 'Dot',
-      //           )(Li),
-      //         ),
-      //       }),
-      //     ),
-      //   }),
-      // );
+      asBodilessList(CAROUSEL_NODE_KEY, undefined, () => ({ groupLabel: 'Slide' })),
+      withDesign({
+        Item: replaceWith(
+          withChild(
+            stylable(CarouselDot), 'Dot',
+          )(Li),
+        ),
+      }),
     ),
   },
 });
 
+const WithCarouselDots = asVitalCarouselToken(
+  WithControls,
+  {
+    // TODO Unwrap this styling in theme/layout/spacing & remove withDesign
+    Theme: {
+    // Need to handle dots better -> https://github.com/express-labs/pure-react-carousel/issues/177
+      ControlsWrapper: 'flex pt-2',
+      Dots: as(
+        'flex items-center',
+        withDesign({
+          Item: as(
+            'w-2 h-2 m-1 inline-block align-middle rounded-full',
+            vitalColor.BgPrimaryDivider,
+            // TODO color-neutral.600 #D2D1D2
+            withDesign({
+              Dot: ifToggledOn(useIsCarouselItemActive)(
+                addClasses('bg-vital-primary-interactive'),
+                // TODO Can't added tokens to ifToggeldOn
+                // vitalColor.BgPrimaryInteractive,
+              ),
+            }),
+          ),
+        }),
+      ),
+    },
+  }
+);
+
+const ThumbImage = as(
+  vitalImage.Default,
+)(Img);
+
 // src: https://github.com/johnsonandjohnson/Bodiless-JS/pull/1260/files#diff-04c34c2e135143e1c8e492ed23602d7608b159e226659d00cc0cfd8cd38da9ba
-const WithThumbnail = asVitalCarouselToken({
-  Components: {
-    // Dots: withDesign({
-    //   Item: withDesign({
-    //     Dot: withAppendChild(SquareImage, 'Thumbnail'),
-    //   }),
-    // }),
-  },
-  Theme: {
-    // ControlsWrapper: addClasses('flex justify-left pt-2'),
-    // Dots: flowHoc(
-    //   addClasses('flex items-center'),
-    //   withDesign({
-    //     Item: withDesign({
-    //       Dot: flowHoc(
-    //         addClasses('mr-5 inline-block align-middle'),
-    //         withDesign({
-    //           Thumbnail: flowHoc(
-    //             asImageRounded,
-    //             ifToggledOn(useIsCarouselItemActive)(
-    //               addClasses('border-2 border-black'),
-    //             ),
-    //           ),
-    //         }),
-    //       ),
-    //     }),
-    //   }),
-    // ),
+const WithThumbnail = asVitalCarouselToken(
+  WithControls,
+  {
+    Components: {
+      Dots: withDesign({
+        Item: withDesign({
+          Dot: withAppendChild(ThumbImage, 'Thumbnail'),
+        }),
+      }),
+    },
+    Theme: {
+      Dots: withDesign({
+        Item: withDesign({
+          Dot: as(
+            'mr-3 inline-block align-middle',
+            // withDesign({
+            //   Thumbnail: ifToggledOn(useIsCarouselItemActive)(
+            //     addClasses('border-2 border-black'),
+            //   ),
+            // }),
+          ),
+        }),
+      }),
+    },
+    Layout: {
+      ControlsWrapper: 'flex justify-left',
+      Dots: as(
+        'flex items-center',
+        withDesign({
+          Item: withDesign({
+            Dot: 'max-w-[94px] max-h-[94px]',
+          })
+        }),
+      ),
+    },
+    Spacing: {
+      ControlsWrapper: 'pt-2',
+    },
+  }
+);
+
+// https://github.com/express-labs/pure-react-carousel/issues/234 to show partial slides
+const WithPeek = asVitalCarouselToken({
+  Behavior: {
+    Wrapper: addProps({ visibleSlides: 1.3 }),
   }
 });
 
-// COMPOSE example
-// /* Thumbnail & Image that will share the same image */
-// const ThumbnailCarousel = flowHoc(
-//   asEditableCarousel(CAROUSEL_NODE_KEY),
-//   withCarouselDots(CAROUSEL_NODE_KEY),
-//   withThumbbailDots,
-//   withThumbnailStyles,
-//   asAccessibleCarousel,
-//   withImageSlide,
-// )(CarouselClean);
+const asAccessibleCarouselButton = flowHoc(
+  addProps({
+    role: 'button',
+  }),
+);
 
-// Need to handle dots better -> https://github.com/express-labs/pure-react-carousel/issues/177
-// const withReactDotStyles = flowHoc(
-  // withControlsWrapperStyles,
-  // withDesign({
-  //   Dots: flowHoc(
-  //     addClasses('flex items-center'),
-  //     withDesign({
-  //       Item: withDesign({
-  //         Dot: flowHoc(
-  //           addClasses('w-20 h-2 inline-block border-2 border-solid align-middle'),
-  //           ifToggledOn(useIsCarouselItemActive)(
-  //             addClasses('bg-blue-700'),
-  //           ),
-  //         ),
-  //       }),
-  //     }),
-  //   ),
-  // }),
-// );
+const withAriaSelectedCarouselItem = flowHoc(
+  addPropsIf(useIsCarouselItemActive)({
+    'aria-selected': true,
+    'aria-hidden': false,
+  }),
+  addPropsIf(negate(useIsCarouselItemActive))({
+    'aria-selected': false,
+    'aria-hidden': true,
+  }),
+);
 
-// https://github.com/express-labs/pure-react-carousel/issues/234 to show partial slides
-// const withFourSlides = flowHoc(
-//   withDesign({
-//     Wrapper: addProps({ visibleSlides: 4.2 }),
-//   }),
-// );
-
-const WithPeek = asVitalCarouselToken({
-  // TO DO
+const asAccessibleCarousel = asVitalCarouselToken({
+  A11y: {
+    Slider: flowHoc(
+      addProps({
+        tabIndex: 'auto',
+      }),
+      withDesign({
+        Item: flowHoc(
+          withCarouselItemTabIndex,
+          withAriaSelectedCarouselItem,
+        ),
+      }),
+    ),
+    ButtonBack: asAccessibleCarouselButton,
+    ButtonNext: asAccessibleCarouselButton,
+    Dots: withDesign({
+      Item: flowHoc(
+        withAriaSelectedCarouselItem,
+        addProps({
+          'aria-hidden': false,
+          role: 'presentation',
+        }),
+        withDesign({
+          Dot: asAccessibleCarouselButton,
+        }),
+      ),
+    }),
+    ButtonPlay: asAccessibleCarouselButton,
+  }
 });
 
-// TODO
-// const withCarouselItemTabIndex: HOC = Component => {
-//   const WithCarouselItemTabIndex: FC<any> = props => {
-//     const isItemActive = useIsCarouselItemActive();
-//     const tabIndex = isItemActive ? 0 : -1;
-//     return <Component {...props} tabIndex={tabIndex} />;
-//   };
-//   return WithCarouselItemTabIndex;
-// };
-
-// const asAccessibleCarouselButton = flowHoc(
-//   addProps({
-//     role: 'button',
-//   }),
-// );
-
-// const withAriaSelectedCarouselItem = flowHoc(
-//   addPropsIf(useIsCarouselItemActive)({
-//     'aria-selected': true,
-//     'aria-hidden': false,
-//   }),
-//   addPropsIf(negate(useIsCarouselItemActive))({
-//     'aria-selected': false,
-//     'aria-hidden': true,
-//   }),
-// );
-
-// const asAccessibleCarousel = withDesign({
-//   Slider: flowHoc(
-//     addProps({
-//       tabIndex: 'auto',
-//     }),
-//     withDesign({
-//       Item: flowHoc(
-//         withCarouselItemTabIndex,
-//         withAriaSelectedCarouselItem,
-//       ),
-//     }),
-//   ),
-//   ButtonBack: asAccessibleCarouselButton,
-//   ButtonNext: asAccessibleCarouselButton,
-//   Dots: withDesign({
-//     Item: flowHoc(
-//       withAriaSelectedCarouselItem,
-//       addProps({
-//         'aria-hidden': false,
-//         role: 'presentation',
-//       }),
-//       withDesign({
-//         Dot: asAccessibleCarouselButton,
-//       }),
-//     ),
-//   }),
-//   ButtonPlay: asAccessibleCarouselButton,
-// });
-
-const Default = asVitalCarouselToken({
-  Core: {
-    // Essential behavior or styling added by this token which are very unlikely to be
-    // overridden.
-    // ...
-  },
-  // Components: {
-  //   // When the design elements of a complex component are themselves complex components,
-  //   // it is generally best practice to define tokens which apply to the sub-components as a
-  //   // whole, and apply them in the Components domain of the enclosing component.
-  //   // ...
-  // },
-  // A11y: {
-  //   // Behavior or props related to accessibility; e.g. an `aria-labeledby' prop.
-  //   // ...
-  // },
-  // Analytics: {
-  //   // Behavior or props related to analytics; e.g., pushing events to a data layer.
-  //   // ...
-  // },
-  // SEO: {
-  //   // Behavior or props related to search engine optimization, e.g., adding schema.org markup.
-  //   // ...
-  // },
-  // Layout: {
-  //   // Tokens which define the visual structure of a component, and are thus unlikely to be
-  //   // overridden; e.g., those which define the orientation of a card.
-  //   // ...
-  // },
-  // Spacing: {
-  //   // Tokens which sit somewhere between Theme and Layout; e.g., padding, margin,
-  //   // line-spacing, etc.
-  //   // ...
-  // },
-  // Theme: {
-  //   // Tokens which apply styling which is very likely to be overridden; e.g., colors,
-  //   // typography, sizing such as width and height, etc.
-  //   // ...
-  // },
-  // A11yContent: {
-  //   // Tokens which provide default, localized content related to accessibility.
-  //   // ...
-  // },
-  // Content: {
-  //   // Tokens which provide default content or other fixed props. Any hardcoded,
-  //   // translatable strings belong in this domain.
-  //   // ...
-  // },
-  // Behavior: {
-  //   // Tokens which define or add behaviors to a component; e.g., the expanding and contracting
-  //   // of an accordion.
-  //   // ...
-  // },
-  // Schema: {
-  //   // Tokens which define how a component's data are organized; e.g., node keys.
-  //   Slot1: withChildNode('slot-1'),
-  //   Slot2: withChildNode('slot-2),
-  //   // ...
-  // },
-});
+const Default = asVitalCarouselToken(
+  asAccessibleCarousel,
+  // withEditor(CAROUSEL_NODE_KEY),
+);
 
 /**
  * Tokens for VitalCarouselClean
@@ -311,10 +246,11 @@ const vitalCarousel: VitalCarousel = {
   WithIntrinsicHeight,
   WithNoDragIfEditable,
   WithNoAutoPlayIfEditable,
+  WithControls,
   WithCarouselDots,
-  WithAutoPlayInterval,
   WithThumbnail,
   WithPeek,
+  asAccessibleCarousel,
 };
 
 export default vitalCarousel;

@@ -63,6 +63,12 @@ const CarouselVariations = {
   NavButtons: vitalCarousel.WithNavigationButtons,
   InfiteLoop: as(vitalCarousel.WithInfinitiveLoop, vitalCarousel.WithNavigationButtons),
   AutoPlay: vitalCarousel.WithAutoPlay,
+  Thumbs: vitalCarousel.WithThumbnail,
+  Dots: vitalCarousel.WithCarouselDots,
+  Peek: as(
+    vitalCarousel.WithPeek,
+    vitalCarousel.WithCarouselDots,
+  ),
 };
 
 const vitalCarouselVariations = varyDesigns(
@@ -94,12 +100,6 @@ const image3 = {
 };
 
 const data = {
-  examples$Default$slides: {
-    items: ['image1', 'image2', 'image3'],
-  },
-  examples$Default$slides$image1$defaultlandscapeimage: image1,
-  examples$Default$slides$image2$defaultlandscapeimage: image2,
-  examples$Default$slides$image3$defaultlandscapeimage: image3,
   examples$NavButtons$slides: {
     items: ['image1', 'image2', 'image3'],
   },
@@ -118,6 +118,24 @@ const data = {
   examples$AutoPlay$slides$image1$defaultlandscapeimage: image1,
   examples$AutoPlay$slides$image2$defaultlandscapeimage: image2,
   examples$AutoPlay$slides$image3$defaultlandscapeimage: image3,
+  // examples$Thumbs$slides: {
+  //   items: ['image1', 'image2', 'image3'],
+  // },
+  // examples$Thumbs$slides$image1$defaultlandscapeimage: image1,
+  // examples$Thumbs$slides$image2$defaultlandscapeimage: image2,
+  // examples$Thumbs$slides$image3$defaultlandscapeimage: image3,
+  examples$Dots$slides: {
+    items: ['image1', 'image2', 'image3'],
+  },
+  examples$Dots$slides$image1$defaultlandscapeimage: image1,
+  examples$Dots$slides$image2$defaultlandscapeimage: image2,
+  examples$Dots$slides$image3$defaultlandscapeimage: image3,
+  examples$Peek$slides: {
+    items: ['image1', 'image2', 'image3'],
+  },
+  examples$Peek$slides$image1$defaultlandscapeimage: image1,
+  examples$Peek$slides$image2$defaultlandscapeimage: image2,
+  examples$Peek$slides$image3$defaultlandscapeimage: image3,
 };
 
 export const Carousel = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
