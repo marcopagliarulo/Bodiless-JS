@@ -2,20 +2,20 @@ import {
   ifReadOnly, ifEditable, withChild, ifToggledOn, withAppendChild
 } from '@bodiless/core';
 import { asBodilessList } from '@bodiless/components';
-// import type { WithNodeKeyProps } from '@bodiless/data';
+import { withNodeKey } from '@bodiless/data';
 import negate from 'lodash/negate';
 import {
   Ul, Li, Img, addProps, as, replaceWith, stylable, flowHoc, addPropsIf, withDesign, addClasses,
 } from '@bodiless/fclasses';
 import { ButtonBack, ButtonNext } from 'pure-react-carousel';
 import { vitalImage } from '@bodiless/vital-image';
+// import { vitalCard, CardClean } from '@bodiless/vital-card';
 import { vitalColor } from '@bodiless/vital-elements';
 import { asVitalCarouselToken } from '../VitalCarouselClean';
 import type { VitalCarousel } from '../types';
 import { useIsCarouselItemActive } from '../utils/hooks';
 import withCarouselItemTabIndex from '../utils/withCarouselItemTabIndex';
 import CarouselDot from '../utils/CarouselDot';
-// import withEditor from '../withEditor';
 
 const CAROUSEL_NODE_KEY = 'slides';
 
@@ -166,7 +166,7 @@ const WithThumbnail = asVitalCarouselToken(
       ),
     },
     Spacing: {
-      ControlsWrapper: 'pt-2',
+      ControlsWrapper: 'pt-6',
     },
   }
 );
@@ -174,7 +174,7 @@ const WithThumbnail = asVitalCarouselToken(
 // https://github.com/express-labs/pure-react-carousel/issues/234 to show partial slides
 const WithPeek = asVitalCarouselToken({
   Behavior: {
-    Wrapper: addProps({ visibleSlides: 1.3 }),
+    Wrapper: addProps({ visibleSlides: 3.3 }),
   }
 });
 
@@ -228,8 +228,34 @@ const asAccessibleCarousel = asVitalCarouselToken({
 
 const Default = asVitalCarouselToken(
   asAccessibleCarousel,
-  // withEditor(CAROUSEL_NODE_KEY),
 );
+
+const ImageSlide = as(
+  vitalImage.Default,
+  vitalImage.WithLandscapePlaceholder,
+  withNodeKey('image'),
+)(Img);
+
+// const CardSlide = as(
+//   vitalCard.Default,
+//   withNodeKey('card'),
+// )(CardClean);
+
+const WithImageSlide = asVitalCarouselToken({
+  Components: {
+    Slider: withDesign({
+      Title: replaceWith(ImageSlide),
+    }),
+  }
+});
+
+const WithCardSlide = asVitalCarouselToken({
+  Components: {
+    Slider: withDesign({
+      // Title: replaceWith(CardSlide),
+    }),
+  }
+});
 
 /**
  * Tokens for VitalCarouselClean
@@ -251,6 +277,8 @@ const vitalCarousel: VitalCarousel = {
   WithThumbnail,
   WithPeek,
   asAccessibleCarousel,
+  WithImageSlide,
+  WithCardSlide,
 };
 
 export default vitalCarousel;

@@ -60,5 +60,7 @@ export interface VitalCarousel {
   WithThumbnail: VitalCarouselToken;
   WithPeek: VitalCarouselToken;
   asAccessibleCarousel: VitalCarouselToken;
+  WithImageSlide: VitalCarouselToken;
+  WithCardSlide: VitalCarouselToken;
 
 }

@@ -20,6 +20,7 @@ import type { ListData } from '@bodiless/components';
 import { observer } from '@bodiless/core';
 import { HOC } from '@bodiless/fclasses';
 
+// Used to map slides to nodekeys
 const withTotalSlides = (nodeKeys?: WithNodeKeyProps): HOC => Component => {
   if (nodeKeys === undefined) return identity;
   const nodeKeys$ = typeof nodeKeys === 'string'
