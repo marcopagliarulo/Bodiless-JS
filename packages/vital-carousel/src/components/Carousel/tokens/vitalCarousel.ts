@@ -115,7 +115,7 @@ const WithThumbnail = asVitalCarouselToken({
     // }),
   },
   Theme: {
-    ControlsWrapper: addClasses('flex justify-left pt-2'),
+    // ControlsWrapper: addClasses('flex justify-left pt-2'),
     // Dots: flowHoc(
     //   addClasses('flex items-center'),
     //   withDesign({
@@ -149,31 +149,31 @@ const WithThumbnail = asVitalCarouselToken({
 // )(CarouselClean);
 
 // Need to handle dots better -> https://github.com/express-labs/pure-react-carousel/issues/177
-const withReactDotStyles = flowHoc(
-  withControlsWrapperStyles,
-  withDesign({
-    Dots: flowHoc(
-      addClasses('flex items-center'),
-      withDesign({
-        Item: withDesign({
-          Dot: flowHoc(
-            addClasses('w-20 h-2 inline-block border-2 border-solid align-middle'),
-            ifToggledOn(useIsCarouselItemActive)(
-              addClasses('bg-blue-700'),
-            ),
-          ),
-        }),
-      }),
-    ),
-  }),
-);
+// const withReactDotStyles = flowHoc(
+  // withControlsWrapperStyles,
+  // withDesign({
+  //   Dots: flowHoc(
+  //     addClasses('flex items-center'),
+  //     withDesign({
+  //       Item: withDesign({
+  //         Dot: flowHoc(
+  //           addClasses('w-20 h-2 inline-block border-2 border-solid align-middle'),
+  //           ifToggledOn(useIsCarouselItemActive)(
+  //             addClasses('bg-blue-700'),
+  //           ),
+  //         ),
+  //       }),
+  //     }),
+  //   ),
+  // }),
+// );
 
 // https://github.com/express-labs/pure-react-carousel/issues/234 to show partial slides
-const withFourSlides = flowHoc(
-  withDesign({
-    Wrapper: addProps({ visibleSlides: 4.2 }),
-  }),
-);
+// const withFourSlides = flowHoc(
+//   withDesign({
+//     Wrapper: addProps({ visibleSlides: 4.2 }),
+//   }),
+// );
 
 const WithPeek = asVitalCarouselToken({
   // TO DO
