@@ -18,9 +18,7 @@ import { withBurgerMenuProvider } from '@bodiless/navigation';
 import {
   /* vitalSearchGenericTemplate, */ withSearchMenuProvider, withSearchResult
 } from '@bodiless/vital-search';
-import { _default } from '../../../pageComponents';
 
-/*
 import {
   VitalMenuToggler,
   VitalBurgerMenu,
@@ -38,8 +36,6 @@ const islands = {
   VitalSearchToggler,
   VitalSearchResults
 };
-*/
-const islands = {};
 
 const Base = asFluidToken(vitalPageBase.Default, {
   Core: {
