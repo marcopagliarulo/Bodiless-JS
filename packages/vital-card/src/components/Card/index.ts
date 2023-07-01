@@ -15,6 +15,7 @@
 import vitalCard from './tokens';
 import type { VitalCard } from './tokens/vitalCard';
 import vitalCardBaseOrig from './tokens/vitalCard';
+import vitalProductCard from './tokens/Product';
 import CardClean, { asCardToken } from './CardClean';
 import type { CardComponents } from './CardClean';
 import { vitalCardStatic, CardStatic } from './index.bl-edit';
@@ -26,6 +27,9 @@ import { vitalCardStatic, CardStatic } from './index.bl-edit';
  */
 const vitalCardBase = vitalCardBaseOrig;
 
+/**
+ * @TODO: These exports are not what we do for most vital components.
+ */
 export {
   asCardToken,
   CardClean,
@@ -33,7 +37,8 @@ export {
   vitalCard,
   vitalCardBase,
   vitalCardStatic,
+  vitalProductCard,
 };
 
-export { knapsackCardSpec } from './Card.knapsackSpec';
+export { knapsackCardSpec, knapsackProductCardSpec } from './Card.knapsackSpec';
 export type { CardComponents, VitalCard };
