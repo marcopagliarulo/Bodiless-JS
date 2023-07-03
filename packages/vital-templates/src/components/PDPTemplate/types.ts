@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import { ComponentOrTag, DesignableComponentsProps } from '@bodiless/fclasses';
+import { ComponentOrTag, DesignableComponentsProps, DesignableProps } from '@bodiless/fclasses';
 
 export type PDPTemplateComponents = {
   PageWrapper: ComponentOrTag<any>,
@@ -37,3 +37,4 @@ export type PDPTemplateComponents = {
 };
 
 export type BasePDPTemplateProps = DesignableComponentsProps<PDPTemplateComponents>;
+export type PDPTemplateProps = DesignableProps<PDPTemplateComponents>;

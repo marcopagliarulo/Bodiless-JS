@@ -11,6 +11,8 @@ const VitalMobileSearch = loadable(() => import('./VitalMobileSearch'));
 const VitalDesktopSearch = loadable(() => import('./VitalDesktopSearch'));
 // @ts-ignore
 const VitalSearchResults = loadable(() => import('./VitalSearchResults'));
+// @ts-ignore
+const VitalContentListing = loadable(() => import('./VitalContentListing'));
 
 export {
   VitalMenuToggler,
@@ -18,5 +20,6 @@ export {
   VitalSearchToggler,
   VitalDesktopSearch,
   VitalMobileSearch,
-  VitalSearchResults
+  VitalSearchResults,
+  VitalContentListing
 };

@@ -11,5 +11,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import {
+  staticTokenCollection as vitalContentListingTemplate,
+} from '@bodiless/hydration';
 
-export { default as vitalContentListingTemplate } from './tokens/index.bl-edit';
+export default vitalContentListingTemplate;

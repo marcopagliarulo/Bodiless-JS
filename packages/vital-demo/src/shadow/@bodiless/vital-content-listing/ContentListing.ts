@@ -11,5 +11,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import { asContentListingToken } from '@bodiless/vital-content-listing';
+import { vitalContentListingBase } from '@bodiless/vital-content-listing/lib/base';
+import { withIsland } from '@bodiless/hydration';
 
-export { default as vitalContentListingTemplate } from './tokens/index.bl-edit';
+const Default = asContentListingToken(vitalContentListingBase.Default, {
+  Core: {
+    _: withIsland('VitalContentListing'),
+  },
+});
+
+export default {
+  ...vitalContentListingBase,
+  Default,
+};

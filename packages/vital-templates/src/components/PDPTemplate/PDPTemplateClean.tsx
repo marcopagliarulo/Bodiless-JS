@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-import React from 'react';
+import React, { ComponentType } from 'react';
 import {
   designable,
   Div,
@@ -22,8 +22,9 @@ import {
 import { asVitalTokenSpec } from '@bodiless/vital-elements';
 import { EditorPlainClean } from '@bodiless/vital-editors';
 import { LayoutClean } from '@bodiless/vital-layout';
+import { withoutHydration } from '@bodiless/hydration';
 import { FlowContainerClean } from '@bodiless/vital-flowcontainer';
-import { PDPTemplateComponents, BasePDPTemplateProps } from './types';
+import { PDPTemplateComponents, BasePDPTemplateProps, PDPTemplateProps } from './types';
 
 const pdpTemplateComponents: PDPTemplateComponents = {
   PageWrapper: LayoutClean,
@@ -84,8 +85,12 @@ const PDPTemplateBase = (props: BasePDPTemplateProps) => {
 
 const PDPTemplateClean = designable(pdpTemplateComponents, 'PDP Template')(PDPTemplateBase);
 
+const PDPTemplateStatic: ComponentType<PDPTemplateProps> = withoutHydration()(
+  PDPTemplateClean
+);
+
 const asPDPTemplateToken = asVitalTokenSpec<PDPTemplateComponents>();
 
-export { asPDPTemplateToken };
+export { asPDPTemplateToken, PDPTemplateStatic };
 
 export default PDPTemplateClean;
