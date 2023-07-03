@@ -13,8 +13,8 @@
  */
 import type { VitalDesignSpec } from '@bodiless/vital-elements';
 
-import vitalCard from './tokens';
-import CardClean, { CardComponents, cardComponentStart } from './CardClean';
+import vitalProductCard from './tokens/vitalProductCard';
+import CardClean, { CardComponents, cardComponentStart } from '../Card/CardClean';
 
 // @TODO: Move to a shared Knapsack package where `VitalDesignSpec` will be.
 // Currently `@bodiless/knapsack-renderer` can't be used since it's build target is CommonJs
@@ -28,14 +28,14 @@ export const toKnapsackSlots = (obj: Record<string, any>, baseComponentName: str
   }), {}
 );
 
-export const knapsackCardSpec: VitalDesignSpec<CardComponents> = {
-  tokens: vitalCard,
-  tokensExportName: 'vitalCard',
+export const knapsackProductCardSpec: VitalDesignSpec<CardComponents> = {
+  tokens: vitalProductCard,
+  tokensExportName: 'vitalProductCard',
   component: CardClean,
   componentExportName: 'CardClean',
   slots: toKnapsackSlots(
     cardComponentStart,
-    'Card',
+    'ProductCard',
     ['font-size', 'text-decoration', 'typography', 'color', 'button']
   ),
 };

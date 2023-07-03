@@ -10,6 +10,8 @@ export const ProductCardMeta = {
 
 /**
  * @TODO: What should be the name for these token groups with vital 2.0 component tokens?
+ * It feels redundant to have `vitalProductCard.BorderProductCard` etc. We should either change
+ * the collection name or discuss the options we have for changing the token names (in JSON file?).
  */
 const vitalProductCard = asTokenGroup(ProductCardMeta)({
   BorderProductCard: as(vitalColor.BorderLight, 'border-solid border-1'),

@@ -38,6 +38,11 @@ import { withoutHydration } from '@bodiless/hydration';
  */
 export interface CardComponents extends DesignableComponents {
   /**
+   * To prevent a TS error when using with `TokenCollection<CardComponents, {}>`:
+   * `Index signature for type 'string' is missing in type 'CardComponents'.ts(2344)`
+   */
+  [key: string]: ComponentType<StylableProps>,
+  /**
    * The outer wrapper of the card.  By default this is A to make entire card clickable.
    */
   Wrapper: ComponentType<StylableProps>,
