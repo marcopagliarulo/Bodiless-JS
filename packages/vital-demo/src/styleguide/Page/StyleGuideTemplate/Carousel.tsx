@@ -78,6 +78,13 @@ const vitalCarouselVariations = varyDesigns(
 const vitalCarouselFlowContainer = asFluidToken({
   Components: {
     ...vitalCarouselVariations,
+    Card: on(VitalCarouselClean)(
+      withEditor(CAROUSEL_NODE_KEY),
+      withNode,
+      vitalCarousel.WithCardSlide,
+      vitalCarousel.Default,
+      vitalCarousel.WithCarouselDots
+    ),
   },
 });
 
@@ -150,6 +157,9 @@ const data = {
   examples$Peek$slides$image1$image: image1,
   examples$Peek$slides$image2$image: image2,
   examples$Peek$slides$image3$image: image3,
+  examples$Card$slides: {
+    items: ['card1', 'card2', 'card3', 'card4', 'card5'],
+  },
 };
 
 export const Carousel = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {

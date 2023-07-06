@@ -9,7 +9,7 @@ import {
 } from '@bodiless/fclasses';
 import { ButtonBack, ButtonNext } from 'pure-react-carousel';
 import { vitalImage } from '@bodiless/vital-image';
-// import { vitalCard, CardClean } from '@bodiless/vital-card';
+import { vitalCard, CardClean } from '@bodiless/vital-card';
 import { vitalColor } from '@bodiless/vital-elements';
 import { asVitalCarouselToken } from '../VitalCarouselClean';
 import type { VitalCarousel } from '../types';
@@ -21,29 +21,39 @@ import '../../../../../../node_modules/pure-react-carousel/dist/react-carousel.e
 
 const CAROUSEL_NODE_KEY = 'slides';
 
-const WithNavigationButtons = asVitalCarouselToken({
-  Components: {
-    ButtonBack: replaceWith(stylable(ButtonBack)),
-    ButtonNext: replaceWith(stylable(ButtonNext)),
-  },
-  Theme: {
-    ButtonNext: 'text-white uppercase disabled:opacity-50 disabled:cursor-not-allowed',
-    ButtonBack: 'text-white uppercase disabled:opacity-50 disabled:cursor-not-allowed',
-  },
+const withHiddenMobile = asVitalCarouselToken({
   Layout: {
-    SliderWrapper: 'relative',
-    ButtonNext: 'absolute transform -translate-y-1/2 top-1/2 right-0 left-auto rtl:left-0 rtl:right-auto',
-    ButtonBack: 'absolute transform -translate-y-1/2 top-1/2 left-0 right-auto rtl:right-0 rtl:left-auto',
-  },
-  Content: {
-    ButtonNext: addProps({ children: 'Next' }),
-    ButtonBack: addProps({ children: 'Back' }),
-  },
-  Spacing: {
-    ButtonNext: 'p-2',
-    ButtonBack: 'p-2'
+    ButtonNext: 'hidden lg:inline-block',
+    ButtonBack: 'hidden lg:inline-block',
   },
 });
+
+const WithNavigationButtons = asVitalCarouselToken(
+  {
+    Components: {
+      ButtonBack: replaceWith(stylable(ButtonBack)),
+      ButtonNext: replaceWith(stylable(ButtonNext)),
+    },
+    Theme: {
+      ButtonNext: 'text-white uppercase disabled:opacity-50 disabled:cursor-not-allowed',
+      ButtonBack: 'text-white uppercase disabled:opacity-50 disabled:cursor-not-allowed',
+    },
+    Layout: {
+      SliderWrapper: 'relative',
+      ButtonNext: 'absolute transform -translate-y-1/2 top-1/2 right-0 left-auto rtl:left-0 rtl:right-auto',
+      ButtonBack: 'absolute transform -translate-y-1/2 top-1/2 left-0 right-auto rtl:right-0 rtl:left-auto',
+    },
+    Content: {
+      ButtonNext: addProps({ children: 'Next' }),
+      ButtonBack: addProps({ children: 'Back' }),
+    },
+    Spacing: {
+      ButtonNext: 'p-2',
+      ButtonBack: 'p-2'
+    },
+  },
+  withHiddenMobile,
+);
 
 const WithInfinitiveLoop = asVitalCarouselToken({
   Behavior: {
@@ -242,10 +252,10 @@ const ImageSlide = as(
   withNodeKey('image'),
 )(Img);
 
-// const CardSlide = as(
-//   vitalCard.Default,
-//   withNodeKey('card'),
-// )(CardClean);
+const CardSlide = as(
+  vitalCard.Product,
+  withNodeKey('card'),
+)(CardClean);
 
 const WithImageSlide = asVitalCarouselToken({
   Components: {
@@ -258,8 +268,9 @@ const WithImageSlide = asVitalCarouselToken({
 const WithCardSlide = asVitalCarouselToken({
   Components: {
     Slider: withDesign({
-      // Title: replaceWith(CardSlide),
+      Title: replaceWith(CardSlide),
     }),
+    Wrapper: addProps({ visibleSlides: 3 }),
   }
 });
 
