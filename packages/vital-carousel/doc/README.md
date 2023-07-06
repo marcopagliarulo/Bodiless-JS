@@ -1,6 +1,6 @@
 
 # things to fix
-Navigation buttons only show on desktop.
+card slides should show 1 on mobile and 3 on desktop.
 
 # bugs
 1) In editor mode, when I click on move (either awy) I only get to first & last slide and not any in between.
@@ -9,5 +9,3 @@ Navigation buttons only show on desktop.
 
 3) Carousel dots don't show active.
 
-# variations
-Varitions: Support card slides
