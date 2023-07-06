@@ -24,13 +24,12 @@ import {
   VitalCarouselClean,
   withEditor,
   vitalCarousel,
+  asVitalCarouselToken,
 } from '@bodiless/vital-carousel';
 import { asFluidToken } from '@bodiless/vital-elements';
 import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vital-templates';
 import { withDefaultContent, withNode } from '@bodiless/data';
 import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples';
-// TO DO package should be part of pacakge.
-import 'pure-react-carousel/dist/react-carousel.es.css';
 
 export const CAROUSEL_NODE_KEY = 'slides';
 
@@ -44,13 +43,27 @@ const BaseVariation = {
   ),
 };
 
+const forceHalf = asVitalCarouselToken({
+  Theme: {
+    Wrapper: 'w-1/2'
+  }
+});
+
 const CarouselVariations = {
   Default: '',
   NavButtons: vitalCarousel.WithNavigationButtons,
   InfiniteLoop: as(vitalCarousel.WithInfinitiveLoop, vitalCarousel.WithNavigationButtons),
   AutoPlay: vitalCarousel.WithAutoPlay,
-  Thumbs: vitalCarousel.WithThumbnail,
-  Dots: vitalCarousel.WithCarouselDots,
+  Thumbs: as(
+    vitalCarousel.WithThumbnail,
+    vitalCarousel.WithNavigationButtons,
+    forceHalf, // forcing half since this is how it will dispaly on PDP
+  ),
+
+  Dots: as(
+    vitalCarousel.WithCarouselDots,
+    vitalCarousel.WithNavigationButtons,
+  ),
   Peek: as(
     vitalCarousel.WithPeek,
     vitalCarousel.WithCarouselDots,
@@ -85,17 +98,17 @@ const image3 = {
   title: 'blue'
 };
 const squareimage1 = {
-  src: 'https://placehold.co/600x600/ff0000/FFF',
+  src: 'https://placehold.co/800x800/ff0000/FFF',
   alt: 'red',
   title: 'red'
 };
 const squareimage2 = {
-  src: 'https://placehold.co/600x600/00ff00/FFF',
+  src: 'https://placehold.co/800x800/00ff00/FFF',
   alt: 'green',
   title: 'green'
 };
 const squareimage3 = {
-  src: 'https://placehold.co/600x600/0000ff/FFF',
+  src: 'https://placehold.co/800x800/0000ff/FFF',
   alt: 'blue',
   title: 'blue'
 };
@@ -132,11 +145,11 @@ const data = {
   examples$Dots$slides$image2$image: image2,
   examples$Dots$slides$image3$image: image3,
   examples$Peek$slides: {
-    items: ['image1', 'image2', 'image3', 'image1', 'image2', 'image3'],
+    items: ['image1', 'image2', 'image3'],
   },
-  examples$Peek$slides$image1$image: squareimage1,
-  examples$Peek$slides$image2$image: squareimage2,
-  examples$Peek$slides$image3$image: squareimage3,
+  examples$Peek$slides$image1$image: image1,
+  examples$Peek$slides$image2$image: image2,
+  examples$Peek$slides$image3$image: image3,
 };
 
 export const Carousel = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {

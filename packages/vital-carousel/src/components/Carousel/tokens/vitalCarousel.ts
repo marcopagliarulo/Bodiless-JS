@@ -16,6 +16,8 @@ import type { VitalCarousel } from '../types';
 import { useIsCarouselItemActive } from '../utils/hooks';
 import withCarouselItemTabIndex from '../utils/withCarouselItemTabIndex';
 import CarouselDot from '../utils/CarouselDot';
+// TODO is there better way to get this css file than 6 relative links back??
+import '../../../../../../node_modules/pure-react-carousel/dist/react-carousel.es.css';
 
 const CAROUSEL_NODE_KEY = 'slides';
 
@@ -108,14 +110,18 @@ const WithCarouselDots = asVitalCarouselToken(
         'flex items-center',
         withDesign({
           Item: as(
-            'w-2 h-2 m-1 inline-block align-middle rounded-full',
-            vitalColor.BgPrimaryDivider,
+            'inline-block align-middle',
+            'w-2 h-2 m-1 rounded-full',
             // TODO color-neutral.600 #D2D1D2
+            vitalColor.BgPrimaryDivider,
             withDesign({
-              Dot: ifToggledOn(useIsCarouselItemActive)(
-                addClasses('bg-vital-primary-interactive'),
-                // TODO Can't added tokens to ifToggeldOn
-                // vitalColor.BgPrimaryInteractive,
+              Dot: as(
+                'w-2 h-2 m-1 rounded-full',
+                ifToggledOn(useIsCarouselItemActive)(
+                  addClasses('bg-vital-primary-interactive'),
+                  // TODO Can't added tokens to ifToggeldOn
+                  // vitalColor.BgPrimaryInteractive,
+                )
               ),
             }),
           ),
@@ -174,7 +180,7 @@ const WithThumbnail = asVitalCarouselToken(
 // https://github.com/express-labs/pure-react-carousel/issues/234 to show partial slides
 const WithPeek = asVitalCarouselToken({
   Behavior: {
-    Wrapper: addProps({ visibleSlides: 3.3 }),
+    Wrapper: addProps({ visibleSlides: 1.3 }),
   }
 });
 
