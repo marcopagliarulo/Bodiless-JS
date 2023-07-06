@@ -62,5 +62,9 @@ export interface VitalCarousel {
   asAccessibleCarousel: VitalCarouselToken;
   WithImageSlide: VitalCarouselToken;
   WithCardSlide: VitalCarouselToken;
-
+  WithThreeSlides: VitalCarouselToken;
+  WithFourSlides: VitalCarouselToken;
+  MobileOnly: VitalCarouselToken;
+  TabletOnly: VitalCarouselToken;
+  DesktopOnly: VitalCarouselToken;
 }

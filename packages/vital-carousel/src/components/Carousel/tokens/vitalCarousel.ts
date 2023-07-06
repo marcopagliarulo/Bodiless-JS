@@ -5,12 +5,12 @@ import { asBodilessList } from '@bodiless/components';
 import { withNodeKey } from '@bodiless/data';
 import negate from 'lodash/negate';
 import {
-  Ul, Li, Img, addProps, as, replaceWith, stylable, flowHoc, addPropsIf, withDesign, addClasses,
+  Ul, Li, Img, addProps, as, replaceWith, stylable, flowHoc, addPropsIf, withDesign, addClasses, on,
 } from '@bodiless/fclasses';
 import { ButtonBack, ButtonNext } from 'pure-react-carousel';
 import { vitalImage } from '@bodiless/vital-image';
 import { vitalCard, CardClean } from '@bodiless/vital-card';
-import { vitalColor } from '@bodiless/vital-elements';
+import vitalCarouselTokens from '../../CarouselTokens';
 import { asVitalCarouselToken } from '../VitalCarouselClean';
 import type { VitalCarousel } from '../types';
 import { useIsCarouselItemActive } from '../utils/hooks';
@@ -18,8 +18,7 @@ import withCarouselItemTabIndex from '../utils/withCarouselItemTabIndex';
 import CarouselDot from '../utils/CarouselDot';
 // TODO is there better way to get this css file than 6 relative links back??
 import '../../../../../../node_modules/pure-react-carousel/dist/react-carousel.es.css';
-
-const CAROUSEL_NODE_KEY = 'slides';
+import { CAROUSEL_NODE_KEY } from '../utils/constants';
 
 const withHiddenMobile = asVitalCarouselToken({
   Layout: {
@@ -28,6 +27,7 @@ const withHiddenMobile = asVitalCarouselToken({
   },
 });
 
+// No Design Navigation buttons designed yet so going with basics
 const WithNavigationButtons = asVitalCarouselToken(
   {
     Components: {
@@ -121,16 +121,20 @@ const WithCarouselDots = asVitalCarouselToken(
         withDesign({
           Item: as(
             'inline-block align-middle',
-            'w-2 h-2 m-1 rounded-full',
-            // TODO color-neutral.600 #D2D1D2
-            vitalColor.BgPrimaryDivider,
+            'rounded-full',
+            vitalCarouselTokens.SizeCarouselScrollDot,
+            vitalCarouselTokens.SpacingCarouselScrollDot,
+            vitalCarouselTokens.ColorCarouselScrollDotInactive,
             withDesign({
               Dot: as(
-                'w-2 h-2 m-1 rounded-full',
+                'rounded-full',
+                // Forcing these the same size & padding makes cursor correct
+                vitalCarouselTokens.SizeCarouselScrollDot,
+                vitalCarouselTokens.SpacingCarouselScrollDot,
                 ifToggledOn(useIsCarouselItemActive)(
-                  addClasses('bg-vital-primary-interactive'),
-                  // TODO Can't added tokens to ifToggeldOn
-                  // vitalColor.BgPrimaryInteractive,
+                  addClasses('bg-primary-500'),
+                  // TODO Can't added tokens to ifToggeledOn
+                  // vitalCarouselTokens.ColorCarouselScrollDotActive,
                 )
               ),
             }),
@@ -161,11 +165,13 @@ const WithThumbnail = asVitalCarouselToken(
         Item: withDesign({
           Dot: as(
             'mr-3 inline-block align-middle',
-            // withDesign({
-            //   Thumbnail: ifToggledOn(useIsCarouselItemActive)(
-            //     addClasses('border-2 border-black'),
-            //   ),
-            // }),
+            withDesign({
+              Thumbnail: ifToggledOn(useIsCarouselItemActive)(
+                // TODO Can't added tokens to ifToggledOn
+                addClasses('border-2 border-black'),
+                // vitalCarouselTokens.BorderCarouselThumbnail,
+              ),
+            }),
           ),
         }),
       }),
@@ -246,21 +252,14 @@ const Default = asVitalCarouselToken(
   asAccessibleCarousel,
 );
 
-const ImageSlide = as(
-  vitalImage.Default,
-  vitalImage.WithLandscapePlaceholder,
-  withNodeKey('image'),
-)(Img);
-
-const CardSlide = as(
-  vitalCard.Product,
-  withNodeKey('card'),
-)(CardClean);
-
 const WithImageSlide = asVitalCarouselToken({
   Components: {
     Slider: withDesign({
-      Title: replaceWith(ImageSlide),
+      Title: on(Img)(
+        vitalImage.Default,
+        vitalImage.WithLandscapePlaceholder,
+        withNodeKey('image'),
+      )
     }),
   }
 });
@@ -268,10 +267,53 @@ const WithImageSlide = asVitalCarouselToken({
 const WithCardSlide = asVitalCarouselToken({
   Components: {
     Slider: withDesign({
-      Title: replaceWith(CardSlide),
+      Title: on(CardClean)(
+        vitalCard.Product,
+        withNodeKey('card'),
+      )
     }),
+  },
+  Spacing: {
+    Slider: as(
+      '-m-2',
+      withDesign({
+        Title: 'p-2',
+      }),
+    ),
+  },
+});
+
+const WithThreeSlides = asVitalCarouselToken({
+  Behavior: {
     Wrapper: addProps({ visibleSlides: 3 }),
-  }
+  },
+});
+
+const WithFourSlides = asVitalCarouselToken(
+  {
+    Behavior: {
+      Wrapper: addProps({ visibleSlides: 4 }),
+    },
+  },
+  WithNavigationButtons,
+);
+
+const MobileOnly = asVitalCarouselToken({
+  Layout: {
+    Wrapper: 'md:hidden'
+  },
+});
+
+const TabletOnly = asVitalCarouselToken({
+  Layout: {
+    Wrapper: 'hidden md:block lg:hidden'
+  },
+});
+
+const DesktopOnly = asVitalCarouselToken({
+  Layout: {
+    Wrapper: 'hidden lg:block'
+  },
 });
 
 /**
@@ -296,6 +338,11 @@ const vitalCarousel: VitalCarousel = {
   asAccessibleCarousel,
   WithImageSlide,
   WithCardSlide,
+  WithThreeSlides,
+  WithFourSlides,
+  MobileOnly,
+  TabletOnly,
+  DesktopOnly,
 };
 
 export default vitalCarousel;

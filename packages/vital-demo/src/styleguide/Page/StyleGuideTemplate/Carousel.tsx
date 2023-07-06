@@ -22,16 +22,15 @@ import {
 } from '@bodiless/fclasses';
 import {
   VitalCarouselClean,
-  withEditor,
   vitalCarousel,
   asVitalCarouselToken,
+  CAROUSEL_NODE_KEY,
+  withEditor,
 } from '@bodiless/vital-carousel';
 import { asFluidToken } from '@bodiless/vital-elements';
 import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vital-templates';
 import { withDefaultContent, withNode } from '@bodiless/data';
 import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples';
-
-export const CAROUSEL_NODE_KEY = 'slides';
 
 const BaseVariation = {
   // using '' means it won't add any string to name key of the variations
@@ -40,6 +39,16 @@ const BaseVariation = {
     withNode,
     vitalCarousel.WithImageSlide,
     vitalCarousel.Default,
+  ),
+};
+
+const CardVariations = {
+  '': on(VitalCarouselClean)(
+    withEditor(CAROUSEL_NODE_KEY),
+    withNode,
+    vitalCarousel.WithCardSlide,
+    vitalCarousel.Default,
+    vitalCarousel.WithCarouselDots
   ),
 };
 
@@ -57,16 +66,7 @@ const CarouselVariations = {
   Thumbs: as(
     vitalCarousel.WithThumbnail,
     vitalCarousel.WithNavigationButtons,
-    forceHalf, // forcing half since this is how it will dispaly on PDP
-  ),
-
-  Dots: as(
-    vitalCarousel.WithCarouselDots,
-    vitalCarousel.WithNavigationButtons,
-  ),
-  Peek: as(
-    vitalCarousel.WithPeek,
-    vitalCarousel.WithCarouselDots,
+    forceHalf, // forcing half since this is how it will display on PDP
   ),
 };
 
@@ -75,16 +75,19 @@ const vitalCarouselVariations = varyDesigns(
   CarouselVariations,
 );
 
+const vitalCardCarouselVariations = varyDesigns(
+  CardVariations,
+  {
+    Mobile: as(vitalCarousel.WithPeek, vitalCarousel.MobileOnly),
+    Tablet: as(vitalCarousel.WithThreeSlides, vitalCarousel.TabletOnly),
+    Desktop: as(vitalCarousel.WithFourSlides, vitalCarousel.DesktopOnly),
+  },
+);
+
 const vitalCarouselFlowContainer = asFluidToken({
   Components: {
     ...vitalCarouselVariations,
-    Card: on(VitalCarouselClean)(
-      withEditor(CAROUSEL_NODE_KEY),
-      withNode,
-      vitalCarousel.WithCardSlide,
-      vitalCarousel.Default,
-      vitalCarousel.WithCarouselDots
-    ),
+    ...vitalCardCarouselVariations,
   },
 });
 
@@ -145,19 +148,13 @@ const data = {
   examples$Thumbs$slides$image1$image: squareimage1,
   examples$Thumbs$slides$image2$image: squareimage2,
   examples$Thumbs$slides$image3$image: squareimage3,
-  examples$Dots$slides: {
-    items: ['image1', 'image2', 'image3'],
+  examples$Mobile$slides: {
+    items: ['card1', 'card2', 'card3', 'card4', 'card5'],
   },
-  examples$Dots$slides$image1$image: image1,
-  examples$Dots$slides$image2$image: image2,
-  examples$Dots$slides$image3$image: image3,
-  examples$Peek$slides: {
-    items: ['image1', 'image2', 'image3'],
+  examples$Tablet$slides: {
+    items: ['card1', 'card2', 'card3', 'card4', 'card5'],
   },
-  examples$Peek$slides$image1$image: image1,
-  examples$Peek$slides$image2$image: image2,
-  examples$Peek$slides$image3$image: image3,
-  examples$Card$slides: {
+  examples$Desktop$slides: {
     items: ['card1', 'card2', 'card3', 'card4', 'card5'],
   },
 };
