@@ -125,18 +125,12 @@ const WithCarouselDots = asVitalCarouselToken(
             vitalCarouselTokens.SizeCarouselScrollDot,
             vitalCarouselTokens.SpacingCarouselScrollDot,
             vitalCarouselTokens.ColorCarouselScrollDotInactive,
+            ifToggledOn(useIsCarouselItemActive)(
+              // TODO Can't added tokens to ifToggledOn
+              addClasses('bg-primary-500'),
+            ),
             withDesign({
-              Dot: as(
-                'rounded-full',
-                // Forcing these the same size & padding makes cursor correct
-                vitalCarouselTokens.SizeCarouselScrollDot,
-                vitalCarouselTokens.SpacingCarouselScrollDot,
-                ifToggledOn(useIsCarouselItemActive)(
-                  addClasses('bg-primary-500'),
-                  // TODO Can't added tokens to ifToggeledOn
-                  // vitalCarouselTokens.ColorCarouselScrollDotActive,
-                )
-              ),
+              Dot: 'w-full h-full'
             }),
           ),
         }),
@@ -310,6 +304,12 @@ const TabletOnly = asVitalCarouselToken({
   },
 });
 
+const TabletDesktopOnly = asVitalCarouselToken({
+  Layout: {
+    Wrapper: 'hidden md:block'
+  },
+});
+
 const DesktopOnly = asVitalCarouselToken({
   Layout: {
     Wrapper: 'hidden lg:block'
@@ -342,6 +342,7 @@ const vitalCarousel: VitalCarousel = {
   WithFourSlides,
   MobileOnly,
   TabletOnly,
+  TabletDesktopOnly,
   DesktopOnly,
 };
 

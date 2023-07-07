@@ -54,7 +54,7 @@ const CardVariations = {
 
 const forceHalf = asVitalCarouselToken({
   Theme: {
-    Wrapper: 'w-1/2'
+    Wrapper: 'md:w-1/2'
   }
 });
 
@@ -63,11 +63,6 @@ const CarouselVariations = {
   NavButtons: vitalCarousel.WithNavigationButtons,
   InfiniteLoop: as(vitalCarousel.WithInfinitiveLoop, vitalCarousel.WithNavigationButtons),
   AutoPlay: vitalCarousel.WithAutoPlay,
-  Thumbs: as(
-    vitalCarousel.WithThumbnail,
-    vitalCarousel.WithNavigationButtons,
-    forceHalf, // forcing half since this is how it will display on PDP
-  ),
 };
 
 const vitalCarouselVariations = varyDesigns(
@@ -75,12 +70,29 @@ const vitalCarouselVariations = varyDesigns(
   CarouselVariations,
 );
 
+const vitalPDPVariations = varyDesigns(
+  BaseVariation,
+  {
+    MobilePDPCarousel: as(
+      vitalCarousel.WithCarouselDots,
+      vitalCarousel.WithPeek,
+      vitalCarousel.MobileOnly
+    ),
+    DesktopTabletPDPCarousel: as(
+      vitalCarousel.WithThumbnail,
+      vitalCarousel.WithNavigationButtons,
+      vitalCarousel.TabletDesktopOnly,
+      forceHalf, // forcing half since this is how it will display on PDP
+    ),
+  },
+);
+
 const vitalCardCarouselVariations = varyDesigns(
   CardVariations,
   {
-    Mobile: as(vitalCarousel.WithPeek, vitalCarousel.MobileOnly),
-    Tablet: as(vitalCarousel.WithThreeSlides, vitalCarousel.TabletOnly),
-    Desktop: as(vitalCarousel.WithFourSlides, vitalCarousel.DesktopOnly),
+    MobileProductCarousel: as(vitalCarousel.WithPeek, vitalCarousel.MobileOnly),
+    TabletProductCarousel: as(vitalCarousel.WithThreeSlides, vitalCarousel.TabletOnly),
+    DesktopProductCarousel: as(vitalCarousel.WithFourSlides, vitalCarousel.DesktopOnly),
   },
 );
 
@@ -88,6 +100,7 @@ const vitalCarouselFlowContainer = asFluidToken({
   Components: {
     ...vitalCarouselVariations,
     ...vitalCardCarouselVariations,
+    ...vitalPDPVariations,
   },
 });
 
@@ -142,19 +155,25 @@ const data = {
   examples$AutoPlay$slides$image1$image: image1,
   examples$AutoPlay$slides$image2$image: image2,
   examples$AutoPlay$slides$image3$image: image3,
-  examples$Thumbs$slides: {
+  examples$MobilePDPCarousel$slides: {
     items: ['image1', 'image2', 'image3'],
   },
-  examples$Thumbs$slides$image1$image: squareimage1,
-  examples$Thumbs$slides$image2$image: squareimage2,
-  examples$Thumbs$slides$image3$image: squareimage3,
-  examples$Mobile$slides: {
+  examples$MobilePDPCarousel$slides$image1$image: squareimage1,
+  examples$MobilePDPCarousel$slides$image2$image: squareimage2,
+  examples$MobilePDPCarousel$slides$image3$image: squareimage3,
+  examples$DesktopTabletPDPCarousel$slides: {
+    items: ['image1', 'image2', 'image3'],
+  },
+  examples$DesktopTabletPDPCarousel$slides$image1$image: squareimage1,
+  examples$DesktopTabletPDPCarousel$slides$image2$image: squareimage2,
+  examples$DesktopTabletPDPCarousel$slides$image3$image: squareimage3,
+  examples$MobileProductCarousel$slides: {
     items: ['card1', 'card2', 'card3', 'card4', 'card5'],
   },
-  examples$Tablet$slides: {
+  examples$TabletProductCarousel$slides: {
     items: ['card1', 'card2', 'card3', 'card4', 'card5'],
   },
-  examples$Desktop$slides: {
+  examples$DesktopProductCarousel$slides: {
     items: ['card1', 'card2', 'card3', 'card4', 'card5'],
   },
 };

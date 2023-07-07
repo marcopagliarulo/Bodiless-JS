@@ -66,5 +66,6 @@ export interface VitalCarousel {
   WithFourSlides: VitalCarouselToken;
   MobileOnly: VitalCarouselToken;
   TabletOnly: VitalCarouselToken;
+  TabletDesktopOnly: VitalCarouselToken;
   DesktopOnly: VitalCarouselToken;
 }
