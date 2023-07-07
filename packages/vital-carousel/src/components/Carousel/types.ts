@@ -38,34 +38,79 @@ export interface VitalCarousel {
    */
   Default: VitalCarouselToken;
   /**
-   * add Navigation buttons on the left & right side of items
+   * WithNavigationButtons: add Navigation buttons on the left & right side of items
    */
   WithNavigationButtons: VitalCarouselToken;
   /**
-   * with Infinite loops continue to start
+   * WithInfinitiveLoop: when at end loops back to start
    */
   WithInfinitiveLoop: VitalCarouselToken;
   /**
-   * with autoplay
+   * WithAutoPlay: will autorotate
    */
   WithAutoPlay: VitalCarouselToken;
   /**
-   * withIntrinsicHeight
+   * withIntrinsicHeight: sets height to tallest slide
    */
   WithIntrinsicHeight: VitalCarouselToken;
+  /**
+   * WithNoDragIfEditable: if edit mode is not draggable carousel
+   */
   WithNoDragIfEditable: VitalCarouselToken;
+  /**
+   * WithNoAutoPlayIfEditable: if edit mode will not autoplay
+   */
   WithNoAutoPlayIfEditable: VitalCarouselToken;
+  /**
+   * WithControls: Use controls, must setup display of controls (WithCarouselDots or WithThumbnail)
+   */
   WithControls: VitalCarouselToken;
+  /**
+   * WithCarouselDots: Show dots
+   */
   WithCarouselDots: VitalCarouselToken;
+  /**
+   * WithThumbnail: Show dots as thumbnail images.
+   */
   WithThumbnail: VitalCarouselToken;
+  /**
+   * WithPeek: Show 1 + partial of next slide
+   */
   WithPeek: VitalCarouselToken;
+  /**
+   * asAccessibleCarousel: make carousel accessible
+   */
   asAccessibleCarousel: VitalCarouselToken;
+  /**
+   * WithImageSlide: Show Image for each slide
+   */
   WithImageSlide: VitalCarouselToken;
+  /**
+   * WithCardSlide: Show Product Card for each slide
+   */
   WithCardSlide: VitalCarouselToken;
+  /**
+   * WithThreeSlides: Show 3 slides
+   */
   WithThreeSlides: VitalCarouselToken;
+  /**
+   * WithFourSlides: Show 4 slides
+   */
   WithFourSlides: VitalCarouselToken;
+  /**
+   * MobileOnly: Show only on Mobile
+   */
   MobileOnly: VitalCarouselToken;
+  /**
+   * TabletOnly: Show only on Tablet
+   */
   TabletOnly: VitalCarouselToken;
+  /**
+   * TabletDesktopOnly: Show only on Tablet/Desktop
+   */
   TabletDesktopOnly: VitalCarouselToken;
+  /**
+   * DesktopOnly: Show only Desktop
+   */
   DesktopOnly: VitalCarouselToken;
 }
