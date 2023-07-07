@@ -36,16 +36,19 @@ const BaseVariation = {
   '': on(VitalCarouselClean)(
     withEditor(CAROUSEL_NODE_KEY),
     withNode,
-    vitalCarousel.WithImageSlide,
     vitalCarousel.Default,
   ),
 };
 
 const CarouselVariations = {
-  Default: '',
-  NavButtons: vitalCarousel.WithNavigationButtons,
-  InfiniteLoop: as(vitalCarousel.WithInfinitiveLoop, vitalCarousel.WithNavigationButtons),
-  AutoPlay: vitalCarousel.WithAutoPlay,
+  Default: vitalCarousel.WithImageSlide,
+  NavButtons: as(vitalCarousel.WithImageSlide, vitalCarousel.WithNavigationButtons),
+  InfiniteLoop: as(
+    vitalCarousel.WithImageSlide,
+    vitalCarousel.WithInfinitiveLoop,
+    vitalCarousel.WithNavigationButtons
+  ),
+  AutoPlay: as(vitalCarousel.WithImageSlide, vitalCarousel.WithAutoPlay),
 };
 
 const vitalCarouselVariations = varyDesigns(
