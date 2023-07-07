@@ -17,8 +17,8 @@ import {
   flowHoc,
   replaceWith,
   on,
-  as,
-  varyDesigns,
+  // as,
+  // varyDesigns,
 } from '@bodiless/fclasses';
 import {
   VitalCarouselClean,
@@ -37,6 +37,7 @@ import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples
 //     withEditor(CAROUSEL_NODE_KEY),
 //     withNode,
 //     vitalCarousel.Default,
+//     vitalCarousel.WithImageSlide,
 //   ),
 // };
 
@@ -79,6 +80,7 @@ const CarouselVariations = {
 const vitalCarouselFlowContainer = asFluidToken({
   Components: {
     ...CarouselVariations,
+    // ...vitalCarouselVariations
   },
 });
 
