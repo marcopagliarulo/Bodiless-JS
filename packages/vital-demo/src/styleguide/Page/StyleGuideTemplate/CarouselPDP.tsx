@@ -23,6 +23,7 @@ import {
 import {
   VitalCarouselClean,
   vitalCarousel,
+  asVitalCarouselToken,
   CAROUSEL_NODE_KEY,
   withEditor,
 } from '@bodiless/vital-carousel';
@@ -41,67 +42,74 @@ const BaseVariation = {
   ),
 };
 
-const CarouselVariations = {
-  Default: '',
-  NavButtons: vitalCarousel.WithNavigationButtons,
-  InfiniteLoop: as(vitalCarousel.WithInfinitiveLoop, vitalCarousel.WithNavigationButtons),
-  AutoPlay: vitalCarousel.WithAutoPlay,
-};
+const forceHalf = asVitalCarouselToken({
+  Theme: {
+    Wrapper: 'md:w-1/2'
+  }
+});
 
-const vitalCarouselVariations = varyDesigns(
+const vitalPDPVariations = varyDesigns(
   BaseVariation,
-  CarouselVariations,
+  {
+    MobilePDPCarousel: as(
+      vitalCarousel.WithCarouselDots,
+      vitalCarousel.WithPeek,
+      vitalCarousel.MobileOnly
+    ),
+    DesktopTabletPDPCarousel: as(
+      vitalCarousel.WithThumbnail,
+      vitalCarousel.WithNavigationButtons,
+      vitalCarousel.TabletDesktopOnly,
+      forceHalf, // forcing half since this is how it will display on PDP
+    ),
+  },
 );
 
 const vitalCarouselFlowContainer = asFluidToken({
   Components: {
-    ...vitalCarouselVariations,
+    ...vitalPDPVariations,
   },
 });
 
 // Setup Default Data
-const image1 = {
-  src: 'https://placehold.co/1400x300/ff0000/FFF',
+const squareimage1 = {
+  src: 'https://placehold.co/800x800/ff0000/FFF',
   alt: 'red',
   title: 'red'
 };
-const image2 = {
-  src: 'https://placehold.co/1400x300/00ff00/FFF',
+const squareimage2 = {
+  src: 'https://placehold.co/800x800/00ff00/FFF',
   alt: 'green',
   title: 'green'
 };
-const image3 = {
-  src: 'https://placehold.co/1400x300/0000ff/FFF',
+const squareimage3 = {
+  src: 'https://placehold.co/800x800/0000ff/FFF',
   alt: 'blue',
   title: 'blue'
 };
 
 const data = {
-  examples$NavButtons$slides: {
+  examples$MobilePDPCarousel$slides: {
     items: ['image1', 'image2', 'image3'],
   },
-  examples$NavButtons$slides$image1$image: image1,
-  examples$NavButtons$slides$image2$image: image2,
-  examples$NavButtons$slides$image3$image: image3,
-  examples$InfiniteLoop$slides: {
+  examples$MobilePDPCarousel$slides$image1$image: squareimage1,
+  examples$MobilePDPCarousel$slides$image2$image: squareimage2,
+  examples$MobilePDPCarousel$slides$image3$image: squareimage3,
+  examples$DesktopTabletPDPCarousel$slides: {
     items: ['image1', 'image2', 'image3'],
   },
-  examples$InfiniteLoop$slides$image1$image: image1,
-  examples$InfiniteLoop$slides$image2$image: image2,
-  examples$InfiniteLoop$slides$image3$image: image3,
-  examples$AutoPlay$slides: {
-    items: ['image1', 'image2', 'image3'],
-  },
-  examples$AutoPlay$slides$image1$image: image1,
-  examples$AutoPlay$slides$image2$image: image2,
-  examples$AutoPlay$slides$image3$image: image3,
+  examples$DesktopTabletPDPCarousel$slides$image1$image: squareimage1,
+  examples$DesktopTabletPDPCarousel$slides$image2$image: squareimage2,
+  examples$DesktopTabletPDPCarousel$slides$image3$image: squareimage3,
 };
 
-export const Carousel = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
-  Meta: flowHoc.meta.term('Token')('Carousel'),
+export const CarouselPDP = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
+  Meta: flowHoc.meta.term('Token')('Carousel for Product Detail Page'),
   Content: {
     Title: replaceWith(() => <>Carousel</>),
-    Description: replaceWith(() => <>The following are examples of Vital Carousel.</>),
+    Description: replaceWith(
+      () => <>The following are examples of Vital Carousel for use of Product Detail Page.</>
+    ),
     Examples: on(StyleGuideExamplesClean)(
       vitalStyleGuideExamples.Default,
       vitalCarouselFlowContainer,

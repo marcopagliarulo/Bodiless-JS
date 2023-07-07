@@ -27,11 +27,15 @@ import { _default } from './_default';
 import { Video } from './Video';
 import { Accordion } from './Accordion';
 import { Carousel } from './Carousel';
+import { CarouselPDP } from './CarouselPDP';
+import { CarouselPC } from './CarouselPC';
 import { Section } from './Section';
 
 export const VitalDemoStyleGuideTemplate = {
   _default,
   Carousel,
+  CarouselPDP,
+  CarouselPC,
   ContentListing,
   ContentListingMultiple,
   Editors,

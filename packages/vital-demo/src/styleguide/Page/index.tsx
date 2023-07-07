@@ -34,6 +34,8 @@ const {
   Buttons,
   Section,
   Carousel,
+  CarouselPC,
+  CarouselPDP,
   _default
 } = VitalDemoStyleGuideTemplate;
 
@@ -57,7 +59,9 @@ const Default = asFluidToken({
     Accordion,
     Buttons,
     Section,
-    Carousel
+    Carousel,
+    CarouselPC,
+    CarouselPDP
   },
 });
 
