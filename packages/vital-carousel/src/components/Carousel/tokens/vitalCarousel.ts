@@ -5,7 +5,8 @@ import { asBodilessList } from '@bodiless/components';
 import { withNodeKey } from '@bodiless/data';
 import negate from 'lodash/negate';
 import {
-  Ul, Li, Img, addProps, as, replaceWith, stylable, flowHoc, addPropsIf, withDesign, addClasses, on,
+  Ul, Li, Img, addProps, as, replaceWith, stylable, flowHoc,
+  addPropsIf, withDesign, addClasses, on, removeClasses,
 } from '@bodiless/fclasses';
 import { ButtonBack, ButtonNext } from 'pure-react-carousel';
 import { vitalImage } from '@bodiless/vital-image';
@@ -128,6 +129,7 @@ const WithCarouselDots = asVitalCarouselToken(
             ifToggledOn(useIsCarouselItemActive)(
               // TODO Can't added tokens to ifToggledOn
               addClasses('bg-primary-500'),
+              removeClasses('bg-neutral-400'),
             ),
             withDesign({
               Dot: 'w-full h-full'
@@ -289,7 +291,6 @@ const WithFourSlides = asVitalCarouselToken(
       Wrapper: addProps({ visibleSlides: 4 }),
     },
   },
-  WithNavigationButtons,
 );
 
 const MobileOnly = asVitalCarouselToken({
