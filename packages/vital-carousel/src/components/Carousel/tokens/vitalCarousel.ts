@@ -161,13 +161,13 @@ const WithThumbnail = asVitalCarouselToken(
         Item: withDesign({
           Dot: as(
             'mr-3 inline-block align-middle',
-            withDesign({
-              Thumbnail: ifToggledOn(useIsCarouselItemActive)(
-                // TODO Can't added tokens to ifToggledOn
-                addClasses('border-2 border-black'),
-                // vitalCarouselTokens.BorderCarouselThumbnail,
-              ),
-            }),
+            // withDesign({
+            //   Thumbnail: ifToggledOn(useIsCarouselItemActive)(
+            //     // TODO Can't added tokens to ifToggledOn
+            //     addClasses('border-2 border-black'),
+            //     // vitalCarouselTokens.BorderCarouselThumbnail,
+            //   ),
+            // }),
           ),
         }),
       }),
