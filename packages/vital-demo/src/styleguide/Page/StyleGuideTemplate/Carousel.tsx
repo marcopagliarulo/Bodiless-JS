@@ -31,34 +31,54 @@ import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vi
 import { withDefaultContent, withNode } from '@bodiless/data';
 import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples';
 
-const BaseVariation = {
-  // using '' means it won't add any string to name key of the variations
-  '': on(VitalCarouselClean)(
+// const BaseVariation = {
+//   // using '' means it won't add any string to name key of the variations
+//   '': on(VitalCarouselClean)(
+//     withEditor(CAROUSEL_NODE_KEY),
+//     withNode,
+//     vitalCarousel.Default,
+//   ),
+// };
+
+const CarouselVariations = {
+  Default: on(VitalCarouselClean)(
     withEditor(CAROUSEL_NODE_KEY),
     withNode,
     vitalCarousel.Default,
+    vitalCarousel.WithImageSlide,
   ),
-};
-
-const CarouselVariations = {
-  Default: vitalCarousel.WithImageSlide,
-  NavButtons: as(vitalCarousel.WithImageSlide, vitalCarousel.WithNavigationButtons),
-  InfiniteLoop: as(
+  NavButtons: on(VitalCarouselClean)(
+    withEditor(CAROUSEL_NODE_KEY),
+    withNode,
+    vitalCarousel.Default,
+    vitalCarousel.WithImageSlide,
+    vitalCarousel.WithNavigationButtons,
+  ),
+  InfiniteLoop: on(VitalCarouselClean)(
+    withEditor(CAROUSEL_NODE_KEY),
+    withNode,
+    vitalCarousel.Default,
     vitalCarousel.WithImageSlide,
     vitalCarousel.WithInfinitiveLoop,
     vitalCarousel.WithNavigationButtons
   ),
-  AutoPlay: as(vitalCarousel.WithImageSlide, vitalCarousel.WithAutoPlay),
+  AutoPlay: on(VitalCarouselClean)(
+    withEditor(CAROUSEL_NODE_KEY),
+    withNode,
+    vitalCarousel.Default,
+    vitalCarousel.WithImageSlide,
+    vitalCarousel.WithAutoPlay
+  ),
 };
 
-const vitalCarouselVariations = varyDesigns(
-  BaseVariation,
-  CarouselVariations,
-);
+// const vitalCarouselVariations = varyDesigns(
+//   BaseVariation,
+//   CarouselVariations,
+// );
 
 const vitalCarouselFlowContainer = asFluidToken({
   Components: {
-    ...vitalCarouselVariations,
+    ...CarouselVariations,
   },
 });
 
