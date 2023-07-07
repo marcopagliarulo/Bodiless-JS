@@ -44,7 +44,7 @@ const CarouselVariations = {
 const ControlVariations = {
   '': '',
   Dots: vitalCarousel.WithCarouselDots,
-  //Thumbs: vitalCarousel.WithCardSlide,
+  // Thumbs: vitalCarousel.WithCardSlide,
 };
 
 const vitalCarouselVariations = varyDesigns(

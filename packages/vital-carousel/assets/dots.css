@@ -4,13 +4,11 @@ label {
   cursor: pointer;
 }
 
-/*
 input[type="radio"] {
   position: absolute;
   bottom: 0;
   left: -9999px;
 }
-*/
 
 
 /* Dots */
