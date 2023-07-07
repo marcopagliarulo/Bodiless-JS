@@ -1,12 +1,7 @@
 import React, { FC, Fragment } from 'react';
 import { asVitalTokenSpec } from '@bodiless/vital-elements';
-import { designable, Div, stylable } from '@bodiless/fclasses';
+import { designable, Div } from '@bodiless/fclasses';
 import type { DesignableComponentsProps } from '@bodiless/fclasses';
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-} from 'pure-react-carousel';
 import type { VitalCarouselComponents } from './types';
 
 type VitalCarouselBaseProps = DesignableComponentsProps<VitalCarouselComponents>;
@@ -15,10 +10,10 @@ type VitalCarouselBaseProps = DesignableComponentsProps<VitalCarouselComponents>
  * The starting components for each slot.
  */
 const vitalCarouselComponents: VitalCarouselComponents = {
-  Wrapper: stylable(CarouselProvider),
+  Wrapper: Div,
   SliderWrapper: Div,
-  Slider: stylable(Slider),
-  Slide,
+  Slider: Div,
+  Slide: Div,
   ControlsWrapper: Div,
   Dots: Fragment,
   ButtonBack: Fragment,

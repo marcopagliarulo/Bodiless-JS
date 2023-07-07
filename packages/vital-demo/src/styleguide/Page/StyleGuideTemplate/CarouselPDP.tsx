@@ -17,91 +17,91 @@ import {
   flowHoc,
   replaceWith,
   on,
-  as,
-  varyDesigns,
+  // as,
+  // varyDesigns,
 } from '@bodiless/fclasses';
-import {
-  VitalCarouselClean,
-  vitalCarousel,
-  asVitalCarouselToken,
-  CAROUSEL_NODE_KEY,
-  withEditor,
-} from '@bodiless/vital-carousel';
-import { asFluidToken } from '@bodiless/vital-elements';
+// import {
+//   VitalCarouselClean,
+//   vitalCarousel,
+//   asVitalCarouselToken,
+//   CAROUSEL_NODE_KEY,
+//   withEditor,
+// } from '@bodiless/vital-carousel';
+// import { asFluidToken } from '@bodiless/vital-elements';
 import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vital-templates';
-import { withDefaultContent, withNode } from '@bodiless/data';
+// import { withDefaultContent, withNode } from '@bodiless/data';
 import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples';
 
-const BaseVariation = {
-  // using '' means it won't add any string to name key of the variations
-  '': on(VitalCarouselClean)(
-    withEditor(CAROUSEL_NODE_KEY),
-    withNode,
-    vitalCarousel.WithImageSlide,
-    vitalCarousel.Default,
-  ),
-};
+// const BaseVariation = {
+//   // using '' means it won't add any string to name key of the variations
+//   '': on(VitalCarouselClean)(
+//     withEditor(CAROUSEL_NODE_KEY),
+//     withNode,
+//     vitalCarousel.WithImageSlide,
+//     vitalCarousel.Default,
+//   ),
+// };
 
-const forceHalf = asVitalCarouselToken({
-  Theme: {
-    Wrapper: 'md:w-1/2'
-  }
-});
+// const forceHalf = asVitalCarouselToken({
+//   Theme: {
+//     Wrapper: 'md:w-1/2'
+//   }
+// });
 
-const vitalPDPVariations = varyDesigns(
-  BaseVariation,
-  {
-    MobilePDPCarousel: as(
-      vitalCarousel.WithCarouselDots,
-      vitalCarousel.WithPeek,
-      vitalCarousel.MobileOnly
-    ),
-    DesktopTabletPDPCarousel: as(
-      vitalCarousel.WithThumbnail,
-      vitalCarousel.WithNavigationButtons,
-      vitalCarousel.TabletDesktopOnly,
-      forceHalf, // forcing half since this is how it will display on PDP
-    ),
-  },
-);
+// const vitalPDPVariations = varyDesigns(
+//   BaseVariation,
+//   {
+//     MobilePDPCarousel: as(
+//       // vitalCarousel.WithCarouselDots,
+//       // vitalCarousel.WithPeek,
+//       // vitalCarousel.MobileOnly
+//     ),
+//     DesktopTabletPDPCarousel: as(
+//       // vitalCarousel.WithThumbnail,
+//       // vitalCarousel.WithNavigationButtons,
+//       // vitalCarousel.TabletDesktopOnly,
+//       forceHalf, // forcing half since this is how it will display on PDP
+//     ),
+//   },
+// );
 
-const vitalCarouselFlowContainer = asFluidToken({
-  Components: {
-    ...vitalPDPVariations,
-  },
-});
+// const vitalCarouselFlowContainer = asFluidToken({
+//   Components: {
+//     ...vitalPDPVariations,
+//   },
+// });
 
-// Setup Default Data
-const squareimage1 = {
-  src: 'https://placehold.co/800x800/ff0000/FFF',
-  alt: 'red',
-  title: 'red'
-};
-const squareimage2 = {
-  src: 'https://placehold.co/800x800/00ff00/FFF',
-  alt: 'green',
-  title: 'green'
-};
-const squareimage3 = {
-  src: 'https://placehold.co/800x800/0000ff/FFF',
-  alt: 'blue',
-  title: 'blue'
-};
+// // Setup Default Data
+// const squareimage1 = {
+//   src: 'https://placehold.co/800x800/ff0000/FFF',
+//   alt: 'red',
+//   title: 'red'
+// };
+// const squareimage2 = {
+//   src: 'https://placehold.co/800x800/00ff00/FFF',
+//   alt: 'green',
+//   title: 'green'
+// };
+// const squareimage3 = {
+//   src: 'https://placehold.co/800x800/0000ff/FFF',
+//   alt: 'blue',
+//   title: 'blue'
+// };
 
-const data = {
-  examples$MobilePDPCarousel$slides: {
-    items: ['image1', 'image2', 'image3'],
-  },
-  examples$MobilePDPCarousel$slides$image1$image: squareimage1,
-  examples$MobilePDPCarousel$slides$image2$image: squareimage2,
-  examples$MobilePDPCarousel$slides$image3$image: squareimage3,
-  examples$DesktopTabletPDPCarousel$slides: {
-    items: ['image1', 'image2', 'image3'],
-  },
-  examples$DesktopTabletPDPCarousel$slides$image1$image: squareimage1,
-  examples$DesktopTabletPDPCarousel$slides$image2$image: squareimage2,
-  examples$DesktopTabletPDPCarousel$slides$image3$image: squareimage3,
-};
+// const data = {
+//   examples$MobilePDPCarousel$slides: {
+//     items: ['image1', 'image2', 'image3'],
+//   },
+//   examples$MobilePDPCarousel$slides$image1$image: squareimage1,
+//   examples$MobilePDPCarousel$slides$image2$image: squareimage2,
+//   examples$MobilePDPCarousel$slides$image3$image: squareimage3,
+//   examples$DesktopTabletPDPCarousel$slides: {
+//     items: ['image1', 'image2', 'image3'],
+//   },
+//   examples$DesktopTabletPDPCarousel$slides$image1$image: squareimage1,
+//   examples$DesktopTabletPDPCarousel$slides$image2$image: squareimage2,
+//   examples$DesktopTabletPDPCarousel$slides$image3$image: squareimage3,
+// };
 
 export const CarouselPDP = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
   Meta: flowHoc.meta.term('Token')('Carousel for Product Detail Page'),
@@ -112,8 +112,8 @@ export const CarouselPDP = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Def
     ),
     Examples: on(StyleGuideExamplesClean)(
       vitalStyleGuideExamples.Default,
-      vitalCarouselFlowContainer,
-      withDefaultContent(data),
+      // vitalCarouselFlowContainer,
+      // withDefaultContent(data),
     ),
   },
 });

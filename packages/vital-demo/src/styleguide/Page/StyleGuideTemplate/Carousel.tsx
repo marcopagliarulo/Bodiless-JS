@@ -23,12 +23,10 @@ import {
 import {
   VitalCarouselClean,
   vitalCarousel,
-  CAROUSEL_NODE_KEY,
-  withEditor,
 } from '@bodiless/vital-carousel';
 import { asFluidToken } from '@bodiless/vital-elements';
 import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vital-templates';
-import { withDefaultContent, withNode } from '@bodiless/data';
+import { withDefaultContent } from '@bodiless/data';
 import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples';
 
 // const BaseVariation = {
@@ -43,33 +41,33 @@ import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples
 
 const CarouselVariations = {
   Default: on(VitalCarouselClean)(
-    withEditor(CAROUSEL_NODE_KEY),
-    withNode,
+    // withEditor(CAROUSEL_NODE_KEY),
+    // withNode,
     vitalCarousel.Default,
     vitalCarousel.WithImageSlide,
   ),
-  NavButtons: on(VitalCarouselClean)(
-    withEditor(CAROUSEL_NODE_KEY),
-    withNode,
-    vitalCarousel.Default,
-    vitalCarousel.WithImageSlide,
-    vitalCarousel.WithNavigationButtons,
-  ),
-  InfiniteLoop: on(VitalCarouselClean)(
-    withEditor(CAROUSEL_NODE_KEY),
-    withNode,
-    vitalCarousel.Default,
-    vitalCarousel.WithImageSlide,
-    vitalCarousel.WithInfinitiveLoop,
-    vitalCarousel.WithNavigationButtons
-  ),
-  AutoPlay: on(VitalCarouselClean)(
-    withEditor(CAROUSEL_NODE_KEY),
-    withNode,
-    vitalCarousel.Default,
-    vitalCarousel.WithImageSlide,
-    vitalCarousel.WithAutoPlay
-  ),
+  // NavButtons: on(VitalCarouselClean)(
+  //   withEditor(CAROUSEL_NODE_KEY),
+  //   withNode,
+  //   vitalCarousel.Default,
+  //   vitalCarousel.WithImageSlide,
+  //   // vitalCarousel.WithNavigationButtons,
+  // ),
+  // InfiniteLoop: on(VitalCarouselClean)(
+  //   withEditor(CAROUSEL_NODE_KEY),
+  //   withNode,
+  //   vitalCarousel.Default,
+  //   vitalCarousel.WithImageSlide,
+  //   // vitalCarousel.WithInfinitiveLoop,
+  //   // vitalCarousel.WithNavigationButtons
+  // ),
+  // AutoPlay: on(VitalCarouselClean)(
+  //   withEditor(CAROUSEL_NODE_KEY),
+  //   withNode,
+  //   vitalCarousel.Default,
+  //   vitalCarousel.WithImageSlide,
+  //   // vitalCarousel.WithAutoPlay
+  // ),
 };
 
 // const vitalCarouselVariations = varyDesigns(
@@ -86,22 +84,30 @@ const vitalCarouselFlowContainer = asFluidToken({
 
 // Setup Default Data
 const image1 = {
-  src: 'https://placehold.co/1400x300/ff0000/FFF',
+  src: 'https://placehold.co/600x600/ff0000/FFF',
   alt: 'red',
   title: 'red'
 };
 const image2 = {
-  src: 'https://placehold.co/1400x300/00ff00/FFF',
+  src: 'https://placehold.co/600x600/00ff00/FFF',
   alt: 'green',
   title: 'green'
 };
 const image3 = {
-  src: 'https://placehold.co/1400x300/0000ff/FFF',
+  src: 'https://placehold.co/600x600/0000ff/FFF',
   alt: 'blue',
   title: 'blue'
 };
 
 const data = {
+  examples$Default$slides: {
+    items: ['image1', 'image2', 'image3', 'image4', 'image5'],
+  },
+  examples$Default$slides$image1$image: image1,
+  examples$Default$slides$image2$image: image2,
+  examples$Default$slides$image3$image: image3,
+  examples$Default$slides$image4$image: image1,
+  examples$Default$slides$image5$image: image2,
   examples$NavButtons$slides: {
     items: ['image1', 'image2', 'image3'],
   },
