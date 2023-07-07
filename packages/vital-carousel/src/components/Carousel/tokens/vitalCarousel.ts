@@ -1,6 +1,9 @@
 // import {
 //   ifReadOnly, ifEditable, withChild, ifToggledOn, withAppendChild
 // } from '@bodiless/core';
+import {
+  withChild,
+} from '@bodiless/core';
 // import { asBodilessList } from '@bodiless/components';
 import { withNodeKey } from '@bodiless/data';
 // import negate from 'lodash/negate';
@@ -9,21 +12,21 @@ import { withNodeKey } from '@bodiless/data';
 //   addPropsIf, withDesign, addClasses, on, removeClasses,
 // } from '@bodiless/fclasses';
 import {
-  Img, Div, addProps, as, on, replaceWith, flowHoc,
+  Img, Div, Ul, Li, addProps, as, on, replaceWith, stylable, flowHoc,
   withDesign,
 } from '@bodiless/fclasses';
 import { vitalImage } from '@bodiless/vital-image';
-// import { vitalCard, CardClean } from '@bodiless/vital-card';
+import { vitalCard, CardClean } from '@bodiless/vital-card';
 import { asBodilessList } from '@bodiless/components';
 // import vitalCarouselTokens from '../../CarouselTokens';
 import { asVitalCarouselToken } from '../VitalCarouselClean';
 import type { VitalCarousel } from '../types';
-// import { useIsCarouselItemActive } from '../utils/hooks';
 // import withCarouselItemTabIndex from '../utils/withCarouselItemTabIndex';
-// import CarouselDot from '../utils/CarouselDot';
-// TODO is there better way to get this css file than 6 relative links back??
 import '../../../../assets/swiped.css';
+import '../../../../assets/dots.css';
 import { CAROUSEL_NODE_KEY } from '../utils/constants';
+import CarouselDot from '../utils/CarouselDot';
+import CarouselRadio from '../utils/CarouselRadio';
 
 // const withHiddenMobile = asVitalCarouselToken({
 //   Layout: {
@@ -62,90 +65,58 @@ import { CAROUSEL_NODE_KEY } from '../utils/constants';
 //   withHiddenMobile,
 // );
 
-// const WithInfinitiveLoop = asVitalCarouselToken({
-//   Behavior: {
-//     Wrapper: addProps({ infinite: true }),
-//   },
-// });
+const WithControls = asVitalCarouselToken({
+  Components: {
+    Inputs: as(
+      asBodilessList(CAROUSEL_NODE_KEY, undefined, () => ({ groupLabel: 'Slide' })),
+      withDesign({
+        Item: replaceWith(
+          withChild(
+            stylable(CarouselRadio), 'Radio',
+          )(Div),
+        ),
+      }),
+    ),
+    Dots: as(
+      replaceWith(Ul),
+      asBodilessList(CAROUSEL_NODE_KEY, undefined, () => ({ groupLabel: 'Slide' })),
+      'controls',
+      withDesign({
+        Item: as(
+          replaceWith(
+            withChild(
+              stylable(CarouselDot), 'Dot',
+            )(Li),
+          ),
+          'dots'
+        ),
+      }),
+    ),
+  },
+});
 
-// const WithAutoPlay = asVitalCarouselToken({
-//   Behavior: {
-//     Wrapper: ifReadOnly(
-//       addProps({ isPlaying: true }),
-//       addProps({ number: 3000 })
-//     ),
-//   }
-// });
-
-// const WithIntrinsicHeight = asVitalCarouselToken({
-//   Behavior: {
-//     Wrapper: addProps({ isIntrinsicHeight: true }),
-//   }
-// });
-
-// const WithNoDragIfEditable = asVitalCarouselToken({
-//   Behavior: {
-//     Wrapper: ifEditable(
-//       addProps({ dragEnabled: false }),
-//     ),
-//   }
-// });
-
-// const WithNoAutoPlayIfEditable = asVitalCarouselToken({
-//   Behavior: {
-//     Wrapper: ifEditable(
-//       addProps({ isPlaying: false }),
-//     ),
-//   }
-// });
-
-// // const WithCarouselDots = (nodeKeys?: WithNodeKeyProps) => asVitalCarouselToken({
-// const WithControls = asVitalCarouselToken({
-//   Components: {
-//     Dots: as(
-//       replaceWith(Ul),
-//       asBodilessList(CAROUSEL_NODE_KEY, undefined, () => ({ groupLabel: 'Slide' })),
-//       withDesign({
-//         Item: replaceWith(
-//           withChild(
-//             stylable(CarouselDot), 'Dot',
-//           )(Li),
-//         ),
-//       }),
-//     ),
-//   },
-// });
-
-// const WithCarouselDots = asVitalCarouselToken(
-//   WithControls,
-//   {
-//     // TODO Unwrap this styling in theme/layout/spacing & remove withDesign
-//     Theme: {
-//     // Need to handle dots better -> https://github.com/express-labs/pure-react-carousel/issues/177
-//       ControlsWrapper: 'flex pt-2',
-//       Dots: as(
-//         'flex items-center',
-//         withDesign({
-//           Item: as(
-//             'inline-block align-middle',
-//             'rounded-full',
-//             vitalCarouselTokens.SizeCarouselScrollDot,
-//             vitalCarouselTokens.SpacingCarouselScrollDot,
-//             vitalCarouselTokens.ColorCarouselScrollDotInactive,
-//             ifToggledOn(useIsCarouselItemActive)(
-//               // TODO Can't added tokens to ifToggledOn
-//               addClasses('bg-primary-500'),
-//               removeClasses('bg-neutral-400'),
-//             ),
-//             withDesign({
-//               Dot: 'w-full h-full'
-//             }),
-//           ),
-//         }),
-//       ),
-//     },
-//   }
-// );
+const WithCarouselDots = asVitalCarouselToken(
+  WithControls,
+  {
+    // TODO Unwrap this styling in theme/layout/spacing & remove withDesign
+    Theme: {
+    // Need to handle dots better -> https://github.com/express-labs/pure-react-carousel/issues/177
+      ControlsWrapper: 'flex pt-2',
+      Dots: as(
+        'flex items-center',
+        // withDesign({
+        //   Item: as(
+        //     'inline-block align-middle',
+        //     'rounded-full',
+        //     vitalCarouselTokens.SizeCarouselScrollDot,
+        //     vitalCarouselTokens.SpacingCarouselScrollDot,
+        //     vitalCarouselTokens.ColorCarouselScrollDotInactive,
+        //   ),
+        // }),
+      ),
+    },
+  }
+);
 
 // const ThumbImage = as(
 //   vitalImage.Default,
@@ -194,13 +165,6 @@ import { CAROUSEL_NODE_KEY } from '../utils/constants';
 //     },
 //   }
 // );
-
-// // https://github.com/express-labs/pure-react-carousel/issues/234 to show partial slides
-// const WithPeek = asVitalCarouselToken({
-//   Behavior: {
-//     Wrapper: addProps({ visibleSlides: 1.3 }),
-//   }
-// });
 
 // const asAccessibleCarouselButton = flowHoc(
 //   addProps({
@@ -255,7 +219,7 @@ const Default = asVitalCarouselToken({
     Slider: flowHoc(
       asBodilessList(CAROUSEL_NODE_KEY, undefined, () => ({ groupLabel: 'Slide' })),
       withDesign({
-        Item: replaceWith(Div),
+        Item: replaceWith(Li),
       }),
     ),
   },
@@ -287,38 +251,16 @@ const WithImageSlide = asVitalCarouselToken({
   }
 });
 
-// const WithCardSlide = asVitalCarouselToken({
-//   Components: {
-//     Slider: withDesign({
-//       Title: on(CardClean)(
-//         vitalCard.Product,
-//         withNodeKey('card'),
-//       )
-//     }),
-//   },
-//   Spacing: {
-//     Slider: as(
-//       '-m-2',
-//       withDesign({
-//         Title: 'p-2',
-//       }),
-//     ),
-//   },
-// });
-
-// const WithThreeSlides = asVitalCarouselToken({
-//   Behavior: {
-//     Wrapper: addProps({ visibleSlides: 3 }),
-//   },
-// });
-
-// const WithFourSlides = asVitalCarouselToken(
-//   {
-//     Behavior: {
-//       Wrapper: addProps({ visibleSlides: 4 }),
-//     },
-//   },
-// );
+const WithCardSlide = asVitalCarouselToken({
+  Components: {
+    Slider: withDesign({
+      Title: on(CardClean)(
+        vitalCard.Product,
+        withNodeKey('card'),
+      )
+    }),
+  },
+});
 
 // const MobileOnly = asVitalCarouselToken({
 //   Layout: {
@@ -354,20 +296,12 @@ const WithImageSlide = asVitalCarouselToken({
 const vitalCarousel: VitalCarousel = {
   Default,
   // WithNavigationButtons,
-  // WithInfinitiveLoop,
-  // WithAutoPlay,
-  // WithIntrinsicHeight,
-  // WithNoDragIfEditable,
-  // WithNoAutoPlayIfEditable,
-  // WithControls,
-  // WithCarouselDots,
+  WithControls,
+  WithCarouselDots,
   // WithThumbnail,
-  // WithPeek,
   // asAccessibleCarousel,
   WithImageSlide,
-  // WithCardSlide,
-  // WithThreeSlides,
-  // WithFourSlides,
+  WithCardSlide,
   // MobileOnly,
   // TabletOnly,
   // TabletDesktopOnly,

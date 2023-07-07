@@ -1,6 +1,6 @@
 import React, { FC, Fragment } from 'react';
 import { asVitalTokenSpec } from '@bodiless/vital-elements';
-import { designable, Div } from '@bodiless/fclasses';
+import { designable, Div, Ul } from '@bodiless/fclasses';
 import type { DesignableComponentsProps } from '@bodiless/fclasses';
 import type { VitalCarouselComponents } from './types';
 
@@ -11,8 +11,9 @@ type VitalCarouselBaseProps = DesignableComponentsProps<VitalCarouselComponents>
  */
 const vitalCarouselComponents: VitalCarouselComponents = {
   Wrapper: Div,
+  Inputs: Fragment,
   SliderWrapper: Div,
-  Slider: Div,
+  Slider: Ul,
   Slide: Div,
   ControlsWrapper: Div,
   Dots: Fragment,
@@ -23,6 +24,7 @@ const vitalCarouselComponents: VitalCarouselComponents = {
 
 const VitalCarouselBase: FC<VitalCarouselBaseProps> = ({ components: C, ...rest }) => (
   <C.Wrapper {...rest}>
+    <C.Inputs />
     <C.SliderWrapper>
       <C.Slider />
       <C.ButtonBack />

@@ -6,6 +6,7 @@ import type { DefaultDomains } from '@bodiless/vital-elements';
  */
 export type VitalCarouselComponents = {
   Wrapper: ComponentOrTag<any>,
+  Inputs: ComponentOrTag<any>,
   SliderWrapper: ComponentOrTag<any>,
   Slider: ComponentOrTag<any>,
   Slide: ComponentOrTag<any>,
@@ -41,43 +42,18 @@ export interface VitalCarousel {
    * WithNavigationButtons: add Navigation buttons on the left & right side of items
    */
   // WithNavigationButtons: VitalCarouselToken;
-  // /**
-  //  * WithInfinitiveLoop: when at end loops back to start
-  //  */
-  // WithInfinitiveLoop: VitalCarouselToken;
-  // /**
-  //  * WithAutoPlay: will autorotate
-  //  */
-  // WithAutoPlay: VitalCarouselToken;
-  // /**
-  //  * withIntrinsicHeight: sets height to tallest slide
-  //  */
-  // WithIntrinsicHeight: VitalCarouselToken;
-  // /**
-  //  * WithNoDragIfEditable: if edit mode is not draggable carousel
-  //  */
-  // WithNoDragIfEditable: VitalCarouselToken;
-  // /**
-  //  * WithNoAutoPlayIfEditable: if edit mode will not autoplay
-  //  */
-  // WithNoAutoPlayIfEditable: VitalCarouselToken;
-  // /**
-  // eslint-disable-next-line max-len
-  //  * WithControls: Use controls, must setup display of controls (WithCarouselDots or WithThumbnail)
-  //  */
-  // WithControls: VitalCarouselToken;
-  // /**
-  //  * WithCarouselDots: Show dots
-  //  */
-  // WithCarouselDots: VitalCarouselToken;
+  /**
+   * WithControls: Use controls, must setup display of controls (WithCarouselDots or WithThumbnail)
+   */
+  WithControls: VitalCarouselToken;
+  /**
+   * WithCarouselDots: Show dots
+   */
+  WithCarouselDots: VitalCarouselToken;
   // /**
   //  * WithThumbnail: Show dots as thumbnail images.
   //  */
   // WithThumbnail: VitalCarouselToken;
-  // /**
-  //  * WithPeek: Show 1 + partial of next slide
-  //  */
-  // WithPeek: VitalCarouselToken;
   // /**
   //  * asAccessibleCarousel: make carousel accessible
   //  */
@@ -86,18 +62,11 @@ export interface VitalCarousel {
   //  * WithImageSlide: Show Image for each slide
   //  */
   WithImageSlide: VitalCarouselToken;
-  // /**
-  //  * WithCardSlide: Show Product Card for each slide
-  //  */
-  // WithCardSlide: VitalCarouselToken;
-  // /**
-  //  * WithThreeSlides: Show 3 slides
-  //  */
-  // WithThreeSlides: VitalCarouselToken;
-  // /**
-  //  * WithFourSlides: Show 4 slides
-  //  */
-  // WithFourSlides: VitalCarouselToken;
+  /**
+   * WithCardSlide: Show Product Card for each slide
+   */
+  WithCardSlide: VitalCarouselToken;
+
   // /**
   //  * MobileOnly: Show only on Mobile
   //  */

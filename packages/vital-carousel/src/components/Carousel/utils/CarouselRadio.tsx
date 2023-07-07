@@ -13,14 +13,14 @@
 //  */
 
 import React from 'react';
-import { Label } from '@bodiless/fclasses';
+import { Input } from '@bodiless/fclasses';
 import { useCarouselSlideIndex } from './hooks';
 
-const CarouselDot = (props: any) => {
+const CarouselRadio = (props: any) => {
   const slideIndex = useCarouselSlideIndex();
   // eslint-disable-next-line prefer-template
   const slideLabel = 'slide-' + slideIndex;
-  return <Label for={slideLabel} {...props} />;
+  return <Input type="radio" id={slideLabel} name="slide" {...props} />;
 };
 
-export default CarouselDot;
+export default CarouselRadio;

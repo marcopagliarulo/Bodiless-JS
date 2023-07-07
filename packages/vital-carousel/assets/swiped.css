@@ -4,6 +4,7 @@
   overflow-x: hidden;
   margin: -100px;
   padding: 100px;
+  height: 800px; /* Force height until I figure out why it scrolls */
 }
 
 .swiped > .swiped-controls {

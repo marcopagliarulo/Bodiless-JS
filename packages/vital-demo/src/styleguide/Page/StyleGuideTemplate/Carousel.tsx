@@ -18,7 +18,7 @@ import {
   replaceWith,
   on,
   // as,
-  // varyDesigns,
+  varyDesigns,
 } from '@bodiless/fclasses';
 import {
   VitalCarouselClean,
@@ -29,56 +29,33 @@ import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vi
 import { withDefaultContent } from '@bodiless/data';
 import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples';
 
-// const BaseVariation = {
-//   // using '' means it won't add any string to name key of the variations
-//   '': on(VitalCarouselClean)(
-//     withEditor(CAROUSEL_NODE_KEY),
-//     withNode,
-//     vitalCarousel.Default,
-//     vitalCarousel.WithImageSlide,
-//   ),
-// };
-
-const CarouselVariations = {
-  Default: on(VitalCarouselClean)(
-    // withEditor(CAROUSEL_NODE_KEY),
-    // withNode,
+const BaseVariation = {
+  // using '' means it won't add any string to name key of the variations
+  '': on(VitalCarouselClean)(
     vitalCarousel.Default,
-    vitalCarousel.WithImageSlide,
   ),
-  // NavButtons: on(VitalCarouselClean)(
-  //   withEditor(CAROUSEL_NODE_KEY),
-  //   withNode,
-  //   vitalCarousel.Default,
-  //   vitalCarousel.WithImageSlide,
-  //   // vitalCarousel.WithNavigationButtons,
-  // ),
-  // InfiniteLoop: on(VitalCarouselClean)(
-  //   withEditor(CAROUSEL_NODE_KEY),
-  //   withNode,
-  //   vitalCarousel.Default,
-  //   vitalCarousel.WithImageSlide,
-  //   // vitalCarousel.WithInfinitiveLoop,
-  //   // vitalCarousel.WithNavigationButtons
-  // ),
-  // AutoPlay: on(VitalCarouselClean)(
-  //   withEditor(CAROUSEL_NODE_KEY),
-  //   withNode,
-  //   vitalCarousel.Default,
-  //   vitalCarousel.WithImageSlide,
-  //   // vitalCarousel.WithAutoPlay
-  // ),
 };
 
-// const vitalCarouselVariations = varyDesigns(
-//   BaseVariation,
-//   CarouselVariations,
-// );
+const CarouselVariations = {
+  Image: vitalCarousel.WithImageSlide,
+  Card: vitalCarousel.WithCardSlide,
+};
+
+const ControlVariations = {
+  '': '',
+  Dots: vitalCarousel.WithCarouselDots,
+  //Thumbs: vitalCarousel.WithCardSlide,
+};
+
+const vitalCarouselVariations = varyDesigns(
+  BaseVariation,
+  CarouselVariations,
+  ControlVariations,
+);
 
 const vitalCarouselFlowContainer = asFluidToken({
   Components: {
-    ...CarouselVariations,
-    // ...vitalCarouselVariations
+    ...vitalCarouselVariations
   },
 });
 
@@ -99,33 +76,41 @@ const image3 = {
   title: 'blue'
 };
 
+// const data = {
+//   examples$MobileProductCarousel$slides: {
+//     items: ['card1', 'card2', 'card3', 'card4', 'card5'],
+//   },
+//   examples$TabletProductCarousel$slides: {
+//     items: ['card1', 'card2', 'card3', 'card4', 'card5'],
+//   },
+//   examples$DesktopProductCarousel$slides: {
+//     items: ['card1', 'card2', 'card3', 'card4', 'card5'],
+//   },
+// };
+
 const data = {
-  examples$Default$slides: {
+  examples$Image$slides: {
     items: ['image1', 'image2', 'image3', 'image4', 'image5'],
   },
-  examples$Default$slides$image1$image: image1,
-  examples$Default$slides$image2$image: image2,
-  examples$Default$slides$image3$image: image3,
-  examples$Default$slides$image4$image: image1,
-  examples$Default$slides$image5$image: image2,
-  examples$NavButtons$slides: {
-    items: ['image1', 'image2', 'image3'],
+  examples$Image$slides$image1$image: image1,
+  examples$Image$slides$image2$image: image2,
+  examples$Image$slides$image3$image: image3,
+  examples$Image$slides$image4$image: image1,
+  examples$Image$slides$image5$image: image2,
+  examples$ImageDots$slides: {
+    items: ['image1', 'image2', 'image3', 'image4', 'image5'],
   },
-  examples$NavButtons$slides$image1$image: image1,
-  examples$NavButtons$slides$image2$image: image2,
-  examples$NavButtons$slides$image3$image: image3,
-  examples$InfiniteLoop$slides: {
-    items: ['image1', 'image2', 'image3'],
+  examples$ImageDots$slides$image1$image: image1,
+  examples$ImageDots$slides$image2$image: image2,
+  examples$ImageDots$slides$image3$image: image3,
+  examples$ImageDots$slides$image4$image: image1,
+  examples$ImageDots$slides$image5$image: image2,
+  examples$Card$slides: {
+    items: ['card1', 'card2', 'card3', 'card4', 'card5'],
   },
-  examples$InfiniteLoop$slides$image1$image: image1,
-  examples$InfiniteLoop$slides$image2$image: image2,
-  examples$InfiniteLoop$slides$image3$image: image3,
-  examples$AutoPlay$slides: {
-    items: ['image1', 'image2', 'image3'],
+  examples$CardDots$slides: {
+    items: ['card1', 'card2', 'card3', 'card4', 'card5'],
   },
-  examples$AutoPlay$slides$image1$image: image1,
-  examples$AutoPlay$slides$image2$image: image2,
-  examples$AutoPlay$slides$image3$image: image3,
 };
 
 export const Carousel = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {

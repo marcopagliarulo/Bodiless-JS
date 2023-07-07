@@ -14,7 +14,7 @@
 
 // import { useContext, useState, useEffect } from 'react';
 // import { CarouselContext } from 'pure-react-carousel';
-// import { useListContext } from '@bodiless/components';
+import { useListContext } from '@bodiless/components';
 
 // /**
 //  * implemented per pure-react-carousel doc
@@ -41,10 +41,10 @@
 // // @ts-ignore
 // const useCarouselIsPlaying = () => useCarouselState().isPlaying;
 
-// const useCarouselSlideIndex = () => {
-//   const { currentItem, items } = useListContext();
-//   return items && currentItem ? items.indexOf(currentItem) : 0;
-// };
+const useCarouselSlideIndex = () => {
+  const { currentItem, items } = useListContext();
+  return items && currentItem ? items.indexOf(currentItem) : 0;
+};
 
 // const useIsCarouselItemActive = () => {
 //   const currentSlide = useCarouselCurrentSlide();
@@ -52,9 +52,9 @@
 //   return currentSlide === itemIndex;
 // };
 
-// export {
-//   useCarouselCurrentSlide,
-//   useIsCarouselItemActive,
-//   useCarouselIsPlaying,
-//   useCarouselSlideIndex,
-// };
+export {
+  // useCarouselCurrentSlide,
+  // useIsCarouselItemActive,
+  // useCarouselIsPlaying,
+  useCarouselSlideIndex,
+};
