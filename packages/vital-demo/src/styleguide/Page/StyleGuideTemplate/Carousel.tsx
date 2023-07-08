@@ -17,7 +17,7 @@ import {
   flowHoc,
   replaceWith,
   on,
-  // as,
+  as,
   varyDesigns,
 } from '@bodiless/fclasses';
 import {
@@ -43,8 +43,8 @@ const CarouselVariations = {
 
 const ControlVariations = {
   '': '',
-  Dots: vitalCarousel.WithCarouselDots,
-  Thumbs: vitalCarousel.WithThumbnail,
+  Dots: as(vitalCarousel.WithCarouselDots, vitalCarousel.ForSection),
+  Thumbs: as(vitalCarousel.WithThumbnail, vitalCarousel.ForPDP),
 };
 
 const vitalCarouselVariations = varyDesigns(
@@ -105,7 +105,18 @@ const data = {
   examples$ImageDots$slides$image3$image: image3,
   examples$ImageDots$slides$image4$image: image1,
   examples$ImageDots$slides$image5$image: image2,
+  examples$ImageThumbs$slides: {
+    items: ['image1', 'image2', 'image3', 'image4', 'image5'],
+  },
+  examples$ImageThumbs$slides$image1$image: image1,
+  examples$ImageThumbs$slides$image2$image: image2,
+  examples$ImageThumbs$slides$image3$image: image3,
+  examples$ImageThumbs$slides$image4$image: image1,
+  examples$ImageThumbs$slides$image5$image: image2,
   examples$Card$slides: {
+    items: ['card1', 'card2', 'card3', 'card4', 'card5'],
+  },
+  examples$CardThumbs$slides: {
     items: ['card1', 'card2', 'card3', 'card4', 'card5'],
   },
   examples$CardDots$slides: {
