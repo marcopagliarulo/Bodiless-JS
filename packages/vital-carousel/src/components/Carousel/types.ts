@@ -53,7 +53,7 @@ export interface VitalCarousel {
   // /**
   //  * WithThumbnail: Show dots as thumbnail images.
   //  */
-  // WithThumbnail: VitalCarouselToken;
+  WithThumbnail: VitalCarouselToken;
   // /**
   //  * asAccessibleCarousel: make carousel accessible
   //  */
@@ -67,20 +67,22 @@ export interface VitalCarousel {
    */
   WithCardSlide: VitalCarouselToken;
 
-  // /**
-  //  * MobileOnly: Show only on Mobile
-  //  */
-  // MobileOnly: VitalCarouselToken;
-  // /**
-  //  * TabletOnly: Show only on Tablet
-  //  */
-  // TabletOnly: VitalCarouselToken;
-  // /**
-  //  * TabletDesktopOnly: Show only on Tablet/Desktop
-  //  */
-  // TabletDesktopOnly: VitalCarouselToken;
-  // /**
-  //  * DesktopOnly: Show only Desktop
-  //  */
-  // DesktopOnly: VitalCarouselToken;
+  /**
+   * MobileOnly: Show only on Mobile
+   */
+  MobileOnly: VitalCarouselToken;
+  /**
+   * TabletOnly: Show only on Tablet
+   */
+  TabletOnly: VitalCarouselToken;
+  /**
+   * TabletDesktopOnly: Show only on Tablet/Desktop
+   */
+  TabletDesktopOnly: VitalCarouselToken;
+  /**
+   * DesktopOnly: Show only Desktop
+   */
+  DesktopOnly: VitalCarouselToken;
+  ForSection: VitalCarouselToken;
+  ForPDP: VitalCarouselToken;
 }

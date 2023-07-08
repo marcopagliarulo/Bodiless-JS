@@ -2,7 +2,7 @@
 //   ifReadOnly, ifEditable, withChild, ifToggledOn, withAppendChild
 // } from '@bodiless/core';
 import {
-  withChild,
+  withChild, withAppendChild
 } from '@bodiless/core';
 // import { asBodilessList } from '@bodiless/components';
 import { withNodeKey } from '@bodiless/data';
@@ -88,7 +88,6 @@ const WithControls = asVitalCarouselToken({
               stylable(CarouselDot), 'Dot',
             )(Li),
           ),
-          'dots'
         ),
       }),
     ),
@@ -104,6 +103,9 @@ const WithCarouselDots = asVitalCarouselToken(
       ControlsWrapper: 'flex pt-2',
       Dots: as(
         'flex items-center',
+        withDesign({
+          Item: 'dots',
+        })
         // withDesign({
         //   Item: as(
         //     'inline-block align-middle',
@@ -118,53 +120,53 @@ const WithCarouselDots = asVitalCarouselToken(
   }
 );
 
-// const ThumbImage = as(
-//   vitalImage.Default,
-// )(Img);
+const ThumbImage = as(
+  vitalImage.Default,
+)(Img);
 
 // // src: https://github.com/johnsonandjohnson/Bodiless-JS/pull/1260/files#diff-04c34c2e135143e1c8e492ed23602d7608b159e226659d00cc0cfd8cd38da9ba
-// const WithThumbnail = asVitalCarouselToken(
-//   WithControls,
-//   {
-//     Components: {
-//       Dots: withDesign({
-//         Item: withDesign({
-//           Dot: withAppendChild(ThumbImage, 'Thumbnail'),
-//         }),
-//       }),
-//     },
-//     Theme: {
-//       Dots: withDesign({
-//         Item: withDesign({
-//           Dot: as(
-//             'mr-3 inline-block align-middle',
-//             // withDesign({
-//             //   Thumbnail: ifToggledOn(useIsCarouselItemActive)(
-//             //     // TODO Can't added tokens to ifToggledOn
-//             //     addClasses('border-2 border-black'),
-//             //     // vitalCarouselTokens.BorderCarouselThumbnail,
-//             //   ),
-//             // }),
-//           ),
-//         }),
-//       }),
-//     },
-//     Layout: {
-//       ControlsWrapper: 'flex justify-left',
-//       Dots: as(
-//         'flex items-center',
-//         withDesign({
-//           Item: withDesign({
-//             Dot: 'max-w-[94px] max-h-[94px]',
-//           })
-//         }),
-//       ),
-//     },
-//     Spacing: {
-//       ControlsWrapper: 'pt-6',
-//     },
-//   }
-// );
+const WithThumbnail = asVitalCarouselToken(
+  WithControls,
+  {
+    Components: {
+      Dots: withDesign({
+        Item: withDesign({
+          Dot: withAppendChild(ThumbImage, 'Thumbnail'),
+        }),
+      }),
+    },
+    Theme: {
+      Dots: withDesign({
+        Item: withDesign({
+          Dot: as(
+            'mr-3 inline-block align-middle',
+            // withDesign({
+            //   Thumbnail: ifToggledOn(useIsCarouselItemActive)(
+            //     // TODO Can't added tokens to ifToggledOn
+            //     addClasses('border-2 border-black'),
+            //     // vitalCarouselTokens.BorderCarouselThumbnail,
+            //   ),
+            // }),
+          ),
+        }),
+      }),
+    },
+    Layout: {
+      ControlsWrapper: 'flex justify-left',
+      Dots: as(
+        'flex items-center',
+        withDesign({
+          Item: withDesign({
+            Dot: 'max-w-[94px] max-h-[94px]',
+          })
+        }),
+      ),
+    },
+    Spacing: {
+      ControlsWrapper: 'pt-6',
+    },
+  }
+);
 
 // const asAccessibleCarouselButton = flowHoc(
 //   addProps({
@@ -226,9 +228,6 @@ const Default = asVitalCarouselToken({
   Behavior: {
     SliderWrapper: as(
       'swiped swiped-has-preview-mobile',
-      addProps({ 'data-swiped-item-count': '1' }),
-      addProps({ 'data-swiped-item-count-tablet': '3' }),
-      addProps({ 'data-swiped-item-count-desktop': '4' }),
     ),
     Slider: as(
       'swiped-items',
@@ -236,6 +235,24 @@ const Default = asVitalCarouselToken({
         Item: 'swiped-item',
         Title: 'image is-1by1',
       }),
+    ),
+  },
+});
+
+const ForSection = asVitalCarouselToken({
+  Behavior: {
+    SliderWrapper: as(
+      addProps({ 'data-swiped-item-count-mobile': '1' }),
+      addProps({ 'data-swiped-item-count-tablet': '3' }),
+      addProps({ 'data-swiped-item-count-desktop': '4' }),
+    ),
+  },
+});
+
+const ForPDP = asVitalCarouselToken({
+  Behavior: {
+    SliderWrapper: as(
+      addProps({ 'data-swiped-item-count': '1' }),
     ),
   },
 });
@@ -262,29 +279,29 @@ const WithCardSlide = asVitalCarouselToken({
   },
 });
 
-// const MobileOnly = asVitalCarouselToken({
-//   Layout: {
-//     Wrapper: 'md:hidden'
-//   },
-// });
+const MobileOnly = asVitalCarouselToken({
+  Layout: {
+    Wrapper: 'md:hidden'
+  },
+});
 
-// const TabletOnly = asVitalCarouselToken({
-//   Layout: {
-//     Wrapper: 'hidden md:block lg:hidden'
-//   },
-// });
+const TabletOnly = asVitalCarouselToken({
+  Layout: {
+    Wrapper: 'hidden md:block lg:hidden'
+  },
+});
 
-// const TabletDesktopOnly = asVitalCarouselToken({
-//   Layout: {
-//     Wrapper: 'hidden md:block'
-//   },
-// });
+const TabletDesktopOnly = asVitalCarouselToken({
+  Layout: {
+    Wrapper: 'hidden md:block'
+  },
+});
 
-// const DesktopOnly = asVitalCarouselToken({
-//   Layout: {
-//     Wrapper: 'hidden lg:block'
-//   },
-// });
+const DesktopOnly = asVitalCarouselToken({
+  Layout: {
+    Wrapper: 'hidden lg:block'
+  },
+});
 
 /**
  * Tokens for VitalCarouselClean
@@ -298,14 +315,16 @@ const vitalCarousel: VitalCarousel = {
   // WithNavigationButtons,
   WithControls,
   WithCarouselDots,
-  // WithThumbnail,
+  WithThumbnail,
   // asAccessibleCarousel,
   WithImageSlide,
   WithCardSlide,
-  // MobileOnly,
-  // TabletOnly,
-  // TabletDesktopOnly,
-  // DesktopOnly,
+  MobileOnly,
+  TabletOnly,
+  TabletDesktopOnly,
+  DesktopOnly,
+  ForSection,
+  ForPDP,
 };
 
 export default vitalCarousel;

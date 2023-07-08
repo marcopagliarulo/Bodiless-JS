@@ -17,68 +17,48 @@ import {
   flowHoc,
   replaceWith,
   on,
-  // as,
-  // varyDesigns,
 } from '@bodiless/fclasses';
-// import {
-//   VitalCarouselClean,
-//   vitalCarousel,
-//   CAROUSEL_NODE_KEY,
-//   withEditor,
-// } from '@bodiless/vital-carousel';
-// import { asFluidToken } from '@bodiless/vital-elements';
+import {
+  VitalCarouselClean,
+  vitalCarousel,
+} from '@bodiless/vital-carousel';
+import { asFluidToken } from '@bodiless/vital-elements';
 import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vital-templates';
-// import { withDefaultContent, withNode } from '@bodiless/data';
+import { withDefaultContent } from '@bodiless/data';
 import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples';
 
-// const CardVariations = {
-//   '': on(VitalCarouselClean)(
-//     withEditor(CAROUSEL_NODE_KEY),
-//     withNode,
-//     // vitalCarousel.WithCardSlide,
-//     vitalCarousel.Default,
-//     // vitalCarousel.WithCarouselDots
-//   ),
-// };
+const CardVariations = {
+  ProductCardSection: on(VitalCarouselClean)(
+    vitalCarousel.Default,
+    vitalCarousel.WithCardSlide,
+    vitalCarousel.WithCarouselDots,
+    vitalCarousel.ForSection,
+  ),
+};
 
-// const vitalCardCarouselVariations = varyDesigns(
-//   CardVariations,
-//   {
-//     MobileProductCarousel: '', // as(vitalCarousel.WithPeek, vitalCarousel.MobileOnly),
-//     TabletProductCarousel: '', // as(vitalCarousel.WithThreeSlides, vitalCarousel.TabletOnly),
-//     DesktopProductCarousel: '', // as(vitalCarousel.WithFourSlides, vitalCarousel.DesktopOnly),
-//   },
-// );
+const vitalCarouselFlowContainer = asFluidToken({
+  Components: {
+    ...CardVariations
+  },
+});
 
-// const vitalCarouselFlowContainer = asFluidToken({
-//   Components: {
-//     ...vitalCardCarouselVariations,
-//   },
-// });
-
-// const data = {
-//   examples$MobileProductCarousel$slides: {
-//     items: ['card1', 'card2', 'card3', 'card4', 'card5'],
-//   },
-//   examples$TabletProductCarousel$slides: {
-//     items: ['card1', 'card2', 'card3', 'card4', 'card5'],
-//   },
-//   examples$DesktopProductCarousel$slides: {
-//     items: ['card1', 'card2', 'card3', 'card4', 'card5'],
-//   },
-// };
+const data = {
+  examples$ProductCardSection$slides: {
+    items: ['card1', 'card2', 'card3', 'card4', 'card5'],
+  },
+};
 
 export const CarouselPC = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
   Meta: flowHoc.meta.term('Token')('CarouselPC'),
   Content: {
-    Title: replaceWith(() => <>Carouse for Product Card Section</>),
+    Title: replaceWith(() => <>Carousel for Product Card Section</>),
     Description: replaceWith(
       () => <>The following are examples of Vital Carousel in the Product Card Section.</>
     ),
     Examples: on(StyleGuideExamplesClean)(
       vitalStyleGuideExamples.Default,
-      // vitalCarouselFlowContainer,
-      // withDefaultContent(data),
+      vitalCarouselFlowContainer,
+      withDefaultContent(data),
     ),
   },
 });
