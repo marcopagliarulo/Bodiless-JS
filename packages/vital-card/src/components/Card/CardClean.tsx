@@ -102,6 +102,18 @@ export interface CardComponents extends DesignableComponents {
    * The text of link.  Recommended: a plain editor.
    */
   CTAText: ComponentType<StylableProps>,
+  /**
+   * A wrapper to style the Button. By default is a Fragment.
+   */
+  ButtonWrapper: ComponentType<StylableProps>,
+  /**
+   * The cta link. By default is a Fragment.
+   */
+  ButtonLink: ComponentType<StylableProps>,
+  /**
+   * The text of link. By default is a Fragment.
+   */
+  ButtonText: ComponentType<StylableProps>,
 }
 
 export const cardComponentStart: CardComponents = {
@@ -121,6 +133,9 @@ export const cardComponentStart: CardComponents = {
   // @todo: use LinkClean without as throws ts type error.
   CTALink: as()(LinkClean),
   CTAWrapper: Div,
+  ButtonWrapper: Fragment,
+  ButtonLink: Fragment,
+  ButtonText: Fragment
 };
 
 export type CardProps = DesignableProps<CardComponents> & HTMLProps<HTMLElement>;
@@ -143,6 +158,9 @@ const CardBase: FC<CardBaseProps> = ({ components, ...rest }) => {
     CTAWrapper,
     CTALink,
     CTAText,
+    ButtonWrapper,
+    ButtonLink,
+    ButtonText
   } = components;
 
   return (
@@ -168,6 +186,11 @@ const CardBase: FC<CardBaseProps> = ({ components, ...rest }) => {
             <CTAText />
           </CTALink>
         </CTAWrapper>
+        <ButtonWrapper>
+          <ButtonLink>
+            <ButtonText />
+          </ButtonLink>
+        </ButtonWrapper>
       </ContentWrapper>
     </Wrapper>
   );

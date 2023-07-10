@@ -82,14 +82,14 @@ const WithDescription = asCardToken({
  */
 const WithPrimaryButton = asCardToken({
   Components: {
-    CTAWrapper: replaceWith(Div),
-    CTALink: replaceWith(ButtonClean),
+    ButtonWrapper: replaceWith(Div),
+    ButtonLink: replaceWith(ButtonClean),
   },
   Theme: {
-    CTALink: vitalButtons.Primary,
+    ButtonLink: vitalButtons.Primary,
   },
   Content: {
-    CTAText: withPlaceholder('Button Text'),
+    ButtonText: withPlaceholder('Button Text'),
   },
 });
 
@@ -100,11 +100,11 @@ const WithPrimaryButton = asCardToken({
  */
 const WithSecondaryButton = asCardToken({
   Components: {
-    CTAWrapper: replaceWith(Div),
-    CTALink: replaceWith(ButtonClean),
+    ButtonWrapper: replaceWith(Div),
+    ButtonLink: replaceWith(ButtonClean),
   },
   Theme: {
-    CTALink: vitalButtons.Secondary,
+    ButtonLink: vitalButtons.Secondary,
   },
   /**
    * @TODO: Do we need the meta for these tokens? What would it be?
@@ -122,14 +122,14 @@ const WithSecondaryButton = asCardToken({
  */
 const WithTertiaryButton = asCardToken({
   Components: {
-    CTAWrapper: replaceWith(Div),
-    CTALink: replaceWith(ButtonClean),
+    ButtonWrapper: replaceWith(Div),
+    ButtonLink: replaceWith(ButtonClean),
   },
   Theme: {
     /**
      * @TODO: Replace with `vitalButtons.Tertiary` once created.
      */
-    CTALink: vitalButtons.Default,
+    ButtonLink: vitalButtons.Default,
   },
   /**
    * @TODO: Do we need the meta for these tokens? What would it be?
