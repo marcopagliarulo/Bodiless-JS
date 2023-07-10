@@ -20,7 +20,7 @@ const CarouselRadio = (props: any) => {
   const slideIndex = useCarouselSlideIndex();
   // eslint-disable-next-line prefer-template
   const slideLabel = 'slide-' + slideIndex;
-  return <Input type="radio" id={slideLabel} name="slide" {...props} />;
+  return <Input type="radio" id={slideLabel} name="slide_switch" {...props} />;
 };
 
 export default CarouselRadio;

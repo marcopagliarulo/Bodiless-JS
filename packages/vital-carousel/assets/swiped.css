@@ -1,5 +1,7 @@
 /* Sourced from https://github.com/evulse/swiped/blob/master/dist/swiped.css */
 
+/* TODO convert these changes into scss and just build that scss in css */
+
 .swiped {
   overflow-x: hidden;
   /*

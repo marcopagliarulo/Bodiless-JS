@@ -12,7 +12,7 @@ import { withNodeKey } from '@bodiless/data';
 //   addPropsIf, withDesign, addClasses, on, removeClasses,
 // } from '@bodiless/fclasses';
 import {
-  Img, Div, Ul, Li, addProps, as, on, replaceWith, stylable, flowHoc,
+  Img, Fragment, Ul, Li, addProps, as, on, replaceWith, stylable, flowHoc,
   withDesign,
 } from '@bodiless/fclasses';
 import { vitalImage } from '@bodiless/vital-image';
@@ -24,46 +24,11 @@ import type { VitalCarousel } from '../types';
 // import withCarouselItemTabIndex from '../utils/withCarouselItemTabIndex';
 import '../../../../assets/swiped.css';
 import '../../../../assets/dots.css';
+// import '../../../../assets/switcher.css';
+
 import { CAROUSEL_NODE_KEY } from '../utils/constants';
 import CarouselDot from '../utils/CarouselDot';
 import CarouselRadio from '../utils/CarouselRadio';
-
-// const withHiddenMobile = asVitalCarouselToken({
-//   Layout: {
-//     ButtonNext: 'hidden lg:inline-block',
-//     ButtonBack: 'hidden lg:inline-block',
-//   },
-// });
-
-// // No Design Navigation buttons designed yet so going with basics
-// const WithNavigationButtons = asVitalCarouselToken(
-//   {
-//     Components: {
-//       ButtonBack: replaceWith(stylable(ButtonBack)),
-//       ButtonNext: replaceWith(stylable(ButtonNext)),
-//     },
-//     Theme: {
-//       ButtonNext: 'text-white uppercase disabled:opacity-50 disabled:cursor-not-allowed',
-//       ButtonBack: 'text-white uppercase disabled:opacity-50 disabled:cursor-not-allowed',
-//     },
-//     Layout: {
-//       SliderWrapper: 'relative',
-// eslint-disable-next-line max-len
-//       ButtonNext: 'absolute transform -translate-y-1/2 top-1/2 right-0 left-auto rtl:left-0 rtl:right-auto',
-// eslint-disable-next-line max-len
-//       ButtonBack: 'absolute transform -translate-y-1/2 top-1/2 left-0 right-auto rtl:right-0 rtl:left-auto',
-//     },
-//     Content: {
-//       ButtonNext: addProps({ children: 'Next' }),
-//       ButtonBack: addProps({ children: 'Back' }),
-//     },
-//     Spacing: {
-//       ButtonNext: 'p-2',
-//       ButtonBack: 'p-2'
-//     },
-//   },
-//   withHiddenMobile,
-// );
 
 const WithControls = asVitalCarouselToken({
   Components: {
@@ -73,7 +38,7 @@ const WithControls = asVitalCarouselToken({
         Item: replaceWith(
           withChild(
             stylable(CarouselRadio), 'Radio',
-          )(Div),
+          )(Fragment),
         ),
       }),
     ),
@@ -226,6 +191,7 @@ const Default = asVitalCarouselToken({
     ),
   },
   Behavior: {
+    Wrapper: 'slider',
     SliderWrapper: as(
       'swiped swiped-has-preview-mobile',
     ),
