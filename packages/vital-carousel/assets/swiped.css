@@ -2,9 +2,10 @@
 
 .swiped {
   overflow-x: hidden;
+  /*
   margin: -100px;
   padding: 100px;
-  height: 800px; /* Force height until I figure out why it scrolls */
+  */
 }
 
 .swiped > .swiped-controls {
@@ -30,9 +31,15 @@
   padding-right: 0;
 }
 
+.swiped > .swiped-items::-webkit-scrollbar{ display: none; }
+
 .swiped > .swiped-items {
   overflow-x: scroll;
   overflow-y: hidden;
+  
+  /* Hide the scroll bar on firefox */
+  scrollbar-width: none;
+
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   /* Chrome Canary */
@@ -45,8 +52,10 @@
   -webkit-scroll-snap-destination: 0% 0%;
   -webkit-overflow-scrolling: touch;
   /* important for iOS */
+  /*
   margin: -100px 0 -150px 0;
   padding: 100px 0 150px 0;
+  */
   display: flex;
 }
 
@@ -68,7 +77,7 @@
 
 @media screen and (min-width: 0) and (max-width: 99998px) {
   .swiped[data-swiped-item-count="1"].swiped-has-preview > .swiped-items > .swiped-item {
-    width: calc(100% - 3rem);
+    width: calc(100% - 6rem);
   }
   .swiped[data-swiped-item-count="1"].swiped-is-gapless > .swiped-items > .swiped-item {
     width: 100%;
@@ -100,7 +109,7 @@
 
 @media screen and (min-width: 0) and (max-width: 1023px) {
   .swiped[data-swiped-item-count="1"].swiped-has-preview-tablet > .swiped-items > .swiped-item {
-    width: calc(100% - 3rem);
+    width: calc(100% - 6rem);
   }
   .swiped[data-swiped-item-count="1"].swiped-is-gapless-tablet > .swiped-items > .swiped-item {
     width: 100%;
@@ -132,7 +141,7 @@
 
 @media screen and (min-width: 0) and (max-width: 768px) {
   .swiped[data-swiped-item-count="1"].swiped-has-preview-mobile > .swiped-items > .swiped-item {
-    width: calc(100% - 3rem);
+    width: calc(100% - 6rem);
   }
   .swiped[data-swiped-item-count="1"].swiped-is-gapless-mobile > .swiped-items > .swiped-item {
     width: 100%;
@@ -1368,7 +1377,7 @@
 
 @media screen and (min-width: 769px) and (max-width: 99998px) {
   .swiped[data-swiped-item-count-tablet="1"].swiped-has-preview > .swiped-items > .swiped-item {
-    width: calc(100% - 3rem);
+    width: calc(100% - 6rem);
   }
   .swiped[data-swiped-item-count-tablet="1"].swiped-is-gapless > .swiped-items > .swiped-item {
     width: 100%;
@@ -1400,7 +1409,7 @@
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
   .swiped[data-swiped-item-count-tablet="1"].swiped-has-preview-tablet > .swiped-items > .swiped-item {
-    width: calc(100% - 3rem);
+    width: calc(100% - 6rem);
   }
   .swiped[data-swiped-item-count-tablet="1"].swiped-is-gapless-tablet > .swiped-items > .swiped-item {
     width: 100%;
@@ -2284,7 +2293,7 @@
 
 @media screen and (min-width: 1024px) and (max-width: 99998px) {
   .swiped[data-swiped-item-count-desktop="1"].swiped-has-preview > .swiped-items > .swiped-item {
-    width: calc(100% - 3rem);
+    width: calc(100% - 6rem);
   }
   .swiped[data-swiped-item-count-desktop="1"].swiped-is-gapless > .swiped-items > .swiped-item {
     width: 100%;

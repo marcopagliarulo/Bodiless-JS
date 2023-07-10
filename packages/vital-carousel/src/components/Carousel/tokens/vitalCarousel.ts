@@ -233,7 +233,6 @@ const Default = asVitalCarouselToken({
       'swiped-items',
       withDesign({
         Item: 'swiped-item',
-        Title: 'image is-1by1',
       }),
     ),
   },
@@ -242,7 +241,7 @@ const Default = asVitalCarouselToken({
 const ForSection = asVitalCarouselToken({
   Behavior: {
     SliderWrapper: as(
-      addProps({ 'data-swiped-item-count-mobile': '1' }),
+      addProps({ 'data-swiped-item-count': '1' }),
       addProps({ 'data-swiped-item-count-tablet': '3' }),
       addProps({ 'data-swiped-item-count-desktop': '4' }),
     ),

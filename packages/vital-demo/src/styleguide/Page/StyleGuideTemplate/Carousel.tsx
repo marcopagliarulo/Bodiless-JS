@@ -29,26 +29,23 @@ import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vi
 import { withDefaultContent } from '@bodiless/data';
 import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples';
 
-const BaseVariation = {
-  // using '' means it won't add any string to name key of the variations
-  '': on(VitalCarouselClean)(
+const CarouselVariations = {
+  Image: on(VitalCarouselClean)(
     vitalCarousel.Default,
+    vitalCarousel.WithImageSlide,
+  ),
+  Card: on(VitalCarouselClean)(
+    vitalCarousel.Default,
+    vitalCarousel.WithCardSlide,
   ),
 };
 
-const CarouselVariations = {
-  Image: vitalCarousel.WithImageSlide,
-  Card: vitalCarousel.WithCardSlide,
-};
-
 const ControlVariations = {
-  '': '',
   Dots: as(vitalCarousel.WithCarouselDots, vitalCarousel.ForSection),
   Thumbs: as(vitalCarousel.WithThumbnail, vitalCarousel.ForPDP),
 };
 
 const vitalCarouselVariations = varyDesigns(
-  BaseVariation,
   CarouselVariations,
   ControlVariations,
 );
@@ -76,27 +73,7 @@ const image3 = {
   title: 'blue'
 };
 
-// const data = {
-//   examples$MobileProductCarousel$slides: {
-//     items: ['card1', 'card2', 'card3', 'card4', 'card5'],
-//   },
-//   examples$TabletProductCarousel$slides: {
-//     items: ['card1', 'card2', 'card3', 'card4', 'card5'],
-//   },
-//   examples$DesktopProductCarousel$slides: {
-//     items: ['card1', 'card2', 'card3', 'card4', 'card5'],
-//   },
-// };
-
 const data = {
-  examples$Image$slides: {
-    items: ['image1', 'image2', 'image3', 'image4', 'image5'],
-  },
-  examples$Image$slides$image1$image: image1,
-  examples$Image$slides$image2$image: image2,
-  examples$Image$slides$image3$image: image3,
-  examples$Image$slides$image4$image: image1,
-  examples$Image$slides$image5$image: image2,
   examples$ImageDots$slides: {
     items: ['image1', 'image2', 'image3', 'image4', 'image5'],
   },
@@ -113,9 +90,6 @@ const data = {
   examples$ImageThumbs$slides$image3$image: image3,
   examples$ImageThumbs$slides$image4$image: image1,
   examples$ImageThumbs$slides$image5$image: image2,
-  examples$Card$slides: {
-    items: ['card1', 'card2', 'card3', 'card4', 'card5'],
-  },
   examples$CardThumbs$slides: {
     items: ['card1', 'card2', 'card3', 'card4', 'card5'],
   },
