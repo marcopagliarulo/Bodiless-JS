@@ -12,8 +12,6 @@
  * limitations under the License.
  */
 
-export * from './components/Card';
-export * from './components/FlowContainer';
-export { default as vitalProductCardElements } from './components/ProductCardElements';
+import vitalProductCardElements from './vitalProductCardElements';
 
-export * from './components/ProductCard';
+export default vitalProductCardElements;

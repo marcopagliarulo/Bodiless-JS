@@ -13,7 +13,7 @@ export const ProductCardMeta = {
  * It feels redundant to have `vitalProductCard.BorderProductCard` etc. We should either change
  * the collection name or discuss the options we have for changing the token names (in JSON file?).
  */
-const vitalProductCard = asTokenGroup(ProductCardMeta)({
+export default asTokenGroup(ProductCardMeta)({
   BorderProductCard: as(vitalColor.BorderLight, 'border-solid border-1'),
   BorderRadiusProductCard: 'rounded-none',
   ColorProductCardIcon: vitalColor.IconDark,
@@ -30,5 +30,3 @@ const vitalProductCard = asTokenGroup(ProductCardMeta)({
   TextProductCardDescription: vitalTypography.BodyRegular,
   TextProductCardReview: vitalTypography.CrumbsReviewsRegular,
 });
-
-export default vitalProductCard;
