@@ -30,8 +30,8 @@ const Default = asCardToken({
   ...Base,
   Components: {
     ...Base.Components,
-    EyebrowWrapper: replaceWith(() => null),
-    Description: replaceWith(() => null),
+    Eyebrow: undefined,
+    Description: undefined,
   },
   Content: {
     Title: withPlaceholder('Product Title'),
@@ -99,20 +99,10 @@ const WithPrimaryButton = asCardToken({
  * Note: This token is meant to be layered on top of the `Product` token.
  */
 const WithSecondaryButton = asCardToken({
-  Components: {
-    ButtonWrapper: replaceWith(Div),
-    ButtonLink: replaceWith(ButtonClean),
-  },
+  ...WithPrimaryButton,
   Theme: {
     ButtonLink: vitalButtons.Secondary,
   },
-  /**
-   * @TODO: Do we need the meta for these tokens? What would it be?
-   */
-  Meta: extendMeta(
-    flowHoc.meta.term('CTA Style')('Secondary Button'),
-    flowHoc.meta.term('CTA Type')('Visible Link'),
-  ),
 });
 
 /**
@@ -121,23 +111,10 @@ const WithSecondaryButton = asCardToken({
  * Note: This token is meant to be layered on top of the `Product` token.
  */
 const WithTertiaryButton = asCardToken({
-  Components: {
-    ButtonWrapper: replaceWith(Div),
-    ButtonLink: replaceWith(ButtonClean),
-  },
+  ...WithPrimaryButton,
   Theme: {
-    /**
-     * @TODO: Replace with `vitalButtons.Tertiary` once created.
-     */
-    ButtonLink: vitalButtons.Default,
+    ButtonLink: vitalButtons.Tertiary,
   },
-  /**
-   * @TODO: Do we need the meta for these tokens? What would it be?
-   */
-  Meta: extendMeta(
-    flowHoc.meta.term('CTA Style')('Tertiary Button'),
-    flowHoc.meta.term('CTA Type')('Visible Link'),
-  ),
 });
 
 /**
@@ -145,7 +122,7 @@ const WithTertiaryButton = asCardToken({
  *
  * Note: This token is meant to be layered on top of the `Product` token.
  */
-const withRatings = asCardToken({
+const WithRatings = asCardToken({
   Components: {
     RatingWrapper: replaceWith(Div),
     Rating: on(Img)(addProps({
@@ -200,7 +177,7 @@ export interface VitalProductCard extends TokenCollection<CardComponents, {}> {
    *
    * Note: This token is meant to be layered on top of the `Product` token.
    */
-  withRatings: CardToken,
+  WithRatings: CardToken,
 }
 
 const vitalProductCard: VitalProductCard = {
@@ -210,7 +187,7 @@ const vitalProductCard: VitalProductCard = {
   WithPrimaryButton,
   WithSecondaryButton,
   WithTertiaryButton,
-  withRatings,
+  WithRatings,
 };
 
 export default vitalProductCard;
