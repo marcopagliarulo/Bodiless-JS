@@ -83,6 +83,4 @@ export interface VitalCarousel {
    * DesktopOnly: Show only Desktop
    */
   DesktopOnly: VitalCarouselToken;
-  ForSection: VitalCarouselToken;
-  ForPDP: VitalCarouselToken;
 }

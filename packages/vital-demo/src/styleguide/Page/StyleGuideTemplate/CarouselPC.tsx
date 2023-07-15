@@ -32,7 +32,6 @@ const CardVariations = {
     vitalCarousel.Default,
     vitalCarousel.WithCardSlide,
     vitalCarousel.WithCarouselDots,
-    vitalCarousel.ForSection,
   ),
 };
 

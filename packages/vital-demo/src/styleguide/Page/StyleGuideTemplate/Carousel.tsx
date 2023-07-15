@@ -17,7 +17,6 @@ import {
   flowHoc,
   replaceWith,
   on,
-  as,
   varyDesigns,
 } from '@bodiless/fclasses';
 import {
@@ -41,8 +40,8 @@ const CarouselVariations = {
 };
 
 const ControlVariations = {
-  Dots: as(vitalCarousel.WithCarouselDots, vitalCarousel.ForSection),
-  Thumbs: as(vitalCarousel.WithThumbnail, vitalCarousel.ForPDP),
+  Dots: vitalCarousel.WithCarouselDots,
+  Thumbs: vitalCarousel.WithThumbnail,
 };
 
 const vitalCarouselVariations = varyDesigns(

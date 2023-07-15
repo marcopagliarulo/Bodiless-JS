@@ -48,13 +48,11 @@ const vitalPDPVariations = varyDesigns(
   BaseVariation,
   {
     MobilePDPCarousel: as(
-      vitalCarousel.ForSection,
       vitalCarousel.WithCarouselDots,
       vitalCarousel.MobileOnly,
     ),
     DesktopTabletPDPCarousel: as(
       vitalCarousel.WithThumbnail,
-      vitalCarousel.ForPDP,
       vitalCarousel.TabletDesktopOnly,
       forceHalf, // forcing half since this is how it will display on PDP
     ),

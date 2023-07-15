@@ -99,14 +99,6 @@ const WithThumbnail = asVitalCarouselToken(
         Item: withDesign({
           Dot: as(
             'flex items-center indicators -simple',
-            // 'mr-3 inline-block align-middle',
-            // withDesign({
-            //   Thumbnail: ifToggledOn(useIsCarouselItemActive)(
-            //     // TODO Can't added tokens to ifToggledOn
-            //     addClasses('border-2 border-black'),
-            //     // vitalCarouselTokens.BorderCarouselThumbnail,
-            //   ),
-            // }),
           ),
         }),
       }),
@@ -195,24 +187,6 @@ const Default = asVitalCarouselToken({
   },
 });
 
-const ForSection = asVitalCarouselToken({
-  Behavior: {
-    SliderWrapper: as(
-      // addProps({ 'data-swiped-item-count': '1' }),
-      // addProps({ 'data-swiped-item-count-tablet': '3' }),
-      // addProps({ 'data-swiped-item-count-desktop': '4' }),
-    ),
-  },
-});
-
-const ForPDP = asVitalCarouselToken({
-  Behavior: {
-    SliderWrapper: as(
-      // addProps({ 'data-swiped-item-count': '1' }),
-    ),
-  },
-});
-
 const WithImageSlide = asVitalCarouselToken({
   Components: {
     Slider: withDesign({
@@ -279,8 +253,6 @@ const vitalCarousel: VitalCarousel = {
   TabletOnly,
   TabletDesktopOnly,
   DesktopOnly,
-  ForSection,
-  ForPDP,
 };
 
 export default vitalCarousel;
