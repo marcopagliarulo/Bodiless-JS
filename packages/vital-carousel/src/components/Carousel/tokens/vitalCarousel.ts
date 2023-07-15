@@ -4,16 +4,10 @@
 import {
   withChild, withAppendChild
 } from '@bodiless/core';
-// import { asBodilessList } from '@bodiless/components';
 import { withNodeKey } from '@bodiless/data';
-// import negate from 'lodash/negate';
-// import {
-//   Ul, Li, Img, addProps, as, replaceWith, stylable, flowHoc,
-//   addPropsIf, withDesign, addClasses, on, removeClasses,
-// } from '@bodiless/fclasses';
 import {
-  Img, Fragment, Ul, Li, addProps, as, on, replaceWith, stylable, flowHoc,
-  withDesign,
+  Img, Div, Li, as, on, replaceWith, stylable, flowHoc,
+  withDesign, Fragment,
 } from '@bodiless/fclasses';
 import { vitalImage } from '@bodiless/vital-image';
 import { vitalCard, CardClean } from '@bodiless/vital-card';
@@ -21,37 +15,24 @@ import { asBodilessList } from '@bodiless/components';
 // import vitalCarouselTokens from '../../CarouselTokens';
 import { asVitalCarouselToken } from '../VitalCarouselClean';
 import type { VitalCarousel } from '../types';
-// import withCarouselItemTabIndex from '../utils/withCarouselItemTabIndex';
-import '../../../../assets/swiped.css';
-import '../../../../assets/dots.css';
-// import '../../../../assets/switcher.css';
+import '../../../../assets/scroll-snap-slider.css';
 
 import { CAROUSEL_NODE_KEY } from '../utils/constants';
 import CarouselDot from '../utils/CarouselDot';
-import CarouselRadio from '../utils/CarouselRadio';
+import CarouselSlide from '../utils/CarouselSlide';
 
 const WithControls = asVitalCarouselToken({
   Components: {
-    Inputs: as(
-      asBodilessList(CAROUSEL_NODE_KEY, undefined, () => ({ groupLabel: 'Slide' })),
-      withDesign({
-        Item: replaceWith(
-          withChild(
-            stylable(CarouselRadio), 'Radio',
-          )(Fragment),
-        ),
-      }),
-    ),
     Dots: as(
-      replaceWith(Ul),
+      replaceWith(Div),
       asBodilessList(CAROUSEL_NODE_KEY, undefined, () => ({ groupLabel: 'Slide' })),
       'controls',
       withDesign({
         Item: as(
           replaceWith(
             withChild(
-              stylable(CarouselDot), 'Dot',
-            )(Li),
+              stylable(CarouselDot), 'DotIndicator',
+            )(Fragment),
           ),
         ),
       }),
@@ -64,12 +45,17 @@ const WithCarouselDots = asVitalCarouselToken(
   {
     // TODO Unwrap this styling in theme/layout/spacing & remove withDesign
     Theme: {
-    // Need to handle dots better -> https://github.com/express-labs/pure-react-carousel/issues/177
+      Slider: as(
+        '-multi space-x-1',
+        withDesign({
+          Item: 'w-5/6 md:w-1/3 lg:w-1/4',
+        }),
+      ),
       ControlsWrapper: 'flex pt-2',
       Dots: as(
-        'flex items-center',
+        'flex items-center indicators -simple spacing-x-1',
         withDesign({
-          Item: 'dots',
+          // Item: 'p-2',
         })
         // withDesign({
         //   Item: as(
@@ -101,10 +87,15 @@ const WithThumbnail = asVitalCarouselToken(
       }),
     },
     Theme: {
+      Slider: as(
+        withDesign({
+          Item: 'w-full',
+        }),
+      ),
       Dots: withDesign({
         Item: withDesign({
           Dot: as(
-            'mr-3 inline-block align-middle',
+            // 'mr-3 inline-block align-middle',
             // withDesign({
             //   Thumbnail: ifToggledOn(useIsCarouselItemActive)(
             //     // TODO Can't added tokens to ifToggledOn
@@ -186,19 +177,17 @@ const Default = asVitalCarouselToken({
     Slider: flowHoc(
       asBodilessList(CAROUSEL_NODE_KEY, undefined, () => ({ groupLabel: 'Slide' })),
       withDesign({
-        Item: replaceWith(Li),
+        Item: replaceWith(stylable(CarouselSlide)),
       }),
     ),
   },
   Behavior: {
     Wrapper: 'slider',
-    SliderWrapper: as(
-      'swiped swiped-has-preview-mobile',
-    ),
+    SliderWrapper: '',
     Slider: as(
-      'swiped-items',
+      'scroll-snap-slider -simple',
       withDesign({
-        Item: 'swiped-item',
+        Item: 'scroll-snap-slide',
       }),
     ),
   },
@@ -207,9 +196,9 @@ const Default = asVitalCarouselToken({
 const ForSection = asVitalCarouselToken({
   Behavior: {
     SliderWrapper: as(
-      addProps({ 'data-swiped-item-count': '1' }),
-      addProps({ 'data-swiped-item-count-tablet': '3' }),
-      addProps({ 'data-swiped-item-count-desktop': '4' }),
+      // addProps({ 'data-swiped-item-count': '1' }),
+      // addProps({ 'data-swiped-item-count-tablet': '3' }),
+      // addProps({ 'data-swiped-item-count-desktop': '4' }),
     ),
   },
 });
@@ -217,7 +206,7 @@ const ForSection = asVitalCarouselToken({
 const ForPDP = asVitalCarouselToken({
   Behavior: {
     SliderWrapper: as(
-      addProps({ 'data-swiped-item-count': '1' }),
+      // addProps({ 'data-swiped-item-count': '1' }),
     ),
   },
 });

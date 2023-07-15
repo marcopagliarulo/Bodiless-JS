@@ -13,12 +13,20 @@
 //  */
 
 import React from 'react';
-import { Button } from '@bodiless/fclasses';
+import { Img, Button, as } from '@bodiless/fclasses';
+import { vitalImage } from '@bodiless/vital-image';
 import { useCarouselSlideIndex } from './hooks';
 
-const CarouselDot = (props: any) => {
+const ThumbImage = as(
+  vitalImage.Default,
+)(Img);
+
+const CarouselThumb = (props: any) => {
   const slideIndex = useCarouselSlideIndex();
-  return <Button class="indicator" data-index={slideIndex} tab-index="-1" type="button" {...props} />;
+  return;
+    <Button class="indicator" data-index={slideIndex} tab-index="-1" type="button" {...props}>
+      <ThumbImage />
+    </Button>;
 };
 
-export default CarouselDot;
+export default CarouselThumb;
