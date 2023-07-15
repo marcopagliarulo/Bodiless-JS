@@ -45,7 +45,7 @@ const WithControls = asVitalCarouselToken({
     Dots: as(
       replaceWith(Div),
       asBodilessList(CAROUSEL_NODE_KEY, undefined, () => ({ groupLabel: 'Slide' })),
-      'controls',
+      'controls indicators',
     ),
   },
 });
@@ -74,7 +74,7 @@ const WithCarouselDots = asVitalCarouselToken(
       ),
       ControlsWrapper: 'flex pt-2',
       Dots: as(
-        'flex items-center dots indicators -simple space-x-1',
+        'flex items-center dots -simple space-x-1',
         withDesign({
           Item: 'p-2',
         })
