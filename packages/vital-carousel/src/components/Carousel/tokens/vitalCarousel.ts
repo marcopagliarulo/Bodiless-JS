@@ -1,6 +1,3 @@
-// import {
-//   ifReadOnly, ifEditable, withChild, ifToggledOn, withAppendChild
-// } from '@bodiless/core';
 import {
   withChild,
 } from '@bodiless/core';
@@ -21,6 +18,27 @@ import { CAROUSEL_NODE_KEY } from '../utils/constants';
 import CarouselDot from '../utils/CarouselDot';
 import CarouselSlide from '../utils/CarouselSlide';
 import CarouselThumb from '../utils/CarouselThumb';
+
+const Default = asVitalCarouselToken({
+  Components: {
+    Slider: flowHoc(
+      asBodilessList(CAROUSEL_NODE_KEY, undefined, () => ({ groupLabel: 'Slide' })),
+      withDesign({
+        Item: replaceWith(stylable(CarouselSlide)),
+      }),
+    ),
+  },
+  Behavior: {
+    Wrapper: 'slider',
+    SliderWrapper: '',
+    Slider: as(
+      'scroll-snap-slider -simple',
+      withDesign({
+        Item: 'scroll-snap-slide',
+      }),
+    ),
+  },
+});
 
 const WithControls = asVitalCarouselToken({
   Components: {
@@ -56,9 +74,9 @@ const WithCarouselDots = asVitalCarouselToken(
       ),
       ControlsWrapper: 'flex pt-2',
       Dots: as(
-        'flex items-center dots indicators -simple spacing-x-1',
+        'flex items-center dots indicators -simple space-x-1',
         withDesign({
-          // Item: 'p-2',
+          Item: 'p-2',
         })
         // withDesign({
         //   Item: as(
@@ -74,7 +92,6 @@ const WithCarouselDots = asVitalCarouselToken(
   }
 );
 
-// // src: https://github.com/johnsonandjohnson/Bodiless-JS/pull/1260/files#diff-04c34c2e135143e1c8e492ed23602d7608b159e226659d00cc0cfd8cd38da9ba
 const WithThumbnail = asVitalCarouselToken(
   WithControls,
   {
@@ -106,7 +123,7 @@ const WithThumbnail = asVitalCarouselToken(
     Layout: {
       ControlsWrapper: 'flex justify-left',
       Dots: as(
-        'flex items-center spacing-x-1',
+        'flex items-center space-x-1',
         withDesign({
           Item: 'max-w-[94px] max-h-[94px]',
         }),
@@ -166,27 +183,6 @@ const WithThumbnail = asVitalCarouselToken(
 //   }
 // });
 
-const Default = asVitalCarouselToken({
-  Components: {
-    Slider: flowHoc(
-      asBodilessList(CAROUSEL_NODE_KEY, undefined, () => ({ groupLabel: 'Slide' })),
-      withDesign({
-        Item: replaceWith(stylable(CarouselSlide)),
-      }),
-    ),
-  },
-  Behavior: {
-    Wrapper: 'slider',
-    SliderWrapper: '',
-    Slider: as(
-      'scroll-snap-slider -simple',
-      withDesign({
-        Item: 'scroll-snap-slide',
-      }),
-    ),
-  },
-});
-
 const WithImageSlide = asVitalCarouselToken({
   Components: {
     Slider: withDesign({
@@ -209,6 +205,7 @@ const WithCardSlide = asVitalCarouselToken({
   },
 });
 
+// These are not ideal but allows to swap between tokens on responsive
 const MobileOnly = asVitalCarouselToken({
   Layout: {
     Wrapper: 'md:hidden'
