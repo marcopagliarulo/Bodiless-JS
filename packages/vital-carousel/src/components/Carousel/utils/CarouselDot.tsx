@@ -18,7 +18,7 @@ import { useCarouselSlideIndex } from './hooks';
 
 const CarouselDot = (props: any) => {
   const slideIndex = useCarouselSlideIndex();
-  return <Button class="indicator" data-index={slideIndex} tab-index="-1" type="button" {...props} />;
+  return <Button class="dots indicator" data-index={slideIndex} tab-index="-1" type="button" {...props} />;
 };
 
 export default CarouselDot;

@@ -2,11 +2,11 @@
 //   ifReadOnly, ifEditable, withChild, ifToggledOn, withAppendChild
 // } from '@bodiless/core';
 import {
-  withChild, withAppendChild
+  withChild,
 } from '@bodiless/core';
 import { withNodeKey } from '@bodiless/data';
 import {
-  Img, Div, Li, as, on, replaceWith, stylable, flowHoc,
+  Img, Div, as, on, replaceWith, stylable, flowHoc,
   withDesign, Fragment,
 } from '@bodiless/fclasses';
 import { vitalImage } from '@bodiless/vital-image';
@@ -20,6 +20,7 @@ import '../../../../assets/scroll-snap-slider.css';
 import { CAROUSEL_NODE_KEY } from '../utils/constants';
 import CarouselDot from '../utils/CarouselDot';
 import CarouselSlide from '../utils/CarouselSlide';
+import CarouselThumb from '../utils/CarouselThumb';
 
 const WithControls = asVitalCarouselToken({
   Components: {
@@ -27,7 +28,15 @@ const WithControls = asVitalCarouselToken({
       replaceWith(Div),
       asBodilessList(CAROUSEL_NODE_KEY, undefined, () => ({ groupLabel: 'Slide' })),
       'controls',
-      withDesign({
+    ),
+  },
+});
+
+const WithCarouselDots = asVitalCarouselToken(
+  WithControls,
+  {
+    Components: {
+      Dots: withDesign({
         Item: as(
           replaceWith(
             withChild(
@@ -36,13 +45,7 @@ const WithControls = asVitalCarouselToken({
           ),
         ),
       }),
-    ),
-  },
-});
-
-const WithCarouselDots = asVitalCarouselToken(
-  WithControls,
-  {
+    },
     // TODO Unwrap this styling in theme/layout/spacing & remove withDesign
     Theme: {
       Slider: as(
@@ -53,7 +56,7 @@ const WithCarouselDots = asVitalCarouselToken(
       ),
       ControlsWrapper: 'flex pt-2',
       Dots: as(
-        'flex items-center indicators -simple spacing-x-1',
+        'flex items-center dots indicators -simple spacing-x-1',
         withDesign({
           // Item: 'p-2',
         })
@@ -71,19 +74,19 @@ const WithCarouselDots = asVitalCarouselToken(
   }
 );
 
-const ThumbImage = as(
-  vitalImage.Default,
-)(Img);
-
 // // src: https://github.com/johnsonandjohnson/Bodiless-JS/pull/1260/files#diff-04c34c2e135143e1c8e492ed23602d7608b159e226659d00cc0cfd8cd38da9ba
 const WithThumbnail = asVitalCarouselToken(
   WithControls,
   {
     Components: {
       Dots: withDesign({
-        Item: withDesign({
-          Dot: withAppendChild(ThumbImage, 'Thumbnail'),
-        }),
+        Item: as(
+          replaceWith(
+            withChild(
+              stylable(CarouselThumb), 'ThumbIndicator',
+            )(Fragment),
+          ),
+        ),
       }),
     },
     Theme: {
@@ -95,6 +98,7 @@ const WithThumbnail = asVitalCarouselToken(
       Dots: withDesign({
         Item: withDesign({
           Dot: as(
+            'flex items-center indicators -simple',
             // 'mr-3 inline-block align-middle',
             // withDesign({
             //   Thumbnail: ifToggledOn(useIsCarouselItemActive)(
@@ -110,11 +114,9 @@ const WithThumbnail = asVitalCarouselToken(
     Layout: {
       ControlsWrapper: 'flex justify-left',
       Dots: as(
-        'flex items-center',
+        'flex items-center spacing-x-1',
         withDesign({
-          Item: withDesign({
-            Dot: 'max-w-[94px] max-h-[94px]',
-          })
+          Item: 'max-w-[94px] max-h-[94px]',
         }),
       ),
     },

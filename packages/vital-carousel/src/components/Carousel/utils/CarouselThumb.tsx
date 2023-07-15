@@ -23,10 +23,7 @@ const ThumbImage = as(
 
 const CarouselThumb = (props: any) => {
   const slideIndex = useCarouselSlideIndex();
-  return;
-    <Button class="indicator" data-index={slideIndex} tab-index="-1" type="button" {...props}>
-      <ThumbImage />
-    </Button>;
+  return <Button class="thumbs indicator" data-index={slideIndex} tab-index="-1" type="button" {...props}><ThumbImage /></Button>;
 };
 
 export default CarouselThumb;
