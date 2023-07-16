@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable max-len */
-
 /*
  * Sourced from https://github.com/barthy-koeln/scroll-snap-slider
  */
