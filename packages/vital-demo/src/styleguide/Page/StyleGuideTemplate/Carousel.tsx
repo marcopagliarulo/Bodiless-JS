@@ -20,8 +20,8 @@ import {
   varyDesigns,
 } from '@bodiless/fclasses';
 import {
-  VitalCarouselClean,
-  vitalCarousel,
+  CarouselStatic,
+  vitalCarouselStatic,
 } from '@bodiless/vital-carousel';
 import { asFluidToken } from '@bodiless/vital-elements';
 import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vital-templates';
@@ -29,19 +29,19 @@ import { withDefaultContent } from '@bodiless/data';
 import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples';
 
 const CarouselVariations = {
-  Image: on(VitalCarouselClean)(
-    vitalCarousel.Default,
-    vitalCarousel.WithImageSlide,
+  Image: on(CarouselStatic)(
+    vitalCarouselStatic.Default,
+    vitalCarouselStatic.WithImageSlide,
   ),
-  Card: on(VitalCarouselClean)(
-    vitalCarousel.Default,
-    vitalCarousel.WithCardSlide,
+  Card: on(CarouselStatic)(
+    vitalCarouselStatic.Default,
+    vitalCarouselStatic.WithCardSlide,
   ),
 };
 
 const ControlVariations = {
-  Dots: vitalCarousel.WithCarouselDots,
-  Thumbs: vitalCarousel.WithThumbnail,
+  Dots: vitalCarouselStatic.WithCarouselDots,
+  Thumbs: vitalCarouselStatic.WithThumbnail,
 };
 
 const vitalCarouselVariations = varyDesigns(

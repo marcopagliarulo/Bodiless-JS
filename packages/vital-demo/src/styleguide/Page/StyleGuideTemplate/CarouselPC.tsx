@@ -19,8 +19,8 @@ import {
   on,
 } from '@bodiless/fclasses';
 import {
-  VitalCarouselClean,
-  vitalCarousel,
+  CarouselStatic,
+  vitalCarouselStatic,
 } from '@bodiless/vital-carousel';
 import { asFluidToken } from '@bodiless/vital-elements';
 import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vital-templates';
@@ -28,10 +28,10 @@ import { withDefaultContent } from '@bodiless/data';
 import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples';
 
 const CardVariations = {
-  ProductCardSection: on(VitalCarouselClean)(
-    vitalCarousel.Default,
-    vitalCarousel.WithCardSlide,
-    vitalCarousel.WithCarouselDots,
+  ProductCardSection: on(CarouselStatic)(
+    vitalCarouselStatic.Default,
+    vitalCarouselStatic.WithCardSlide,
+    vitalCarouselStatic.WithCarouselDots,
   ),
 };
 
