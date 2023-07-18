@@ -218,43 +218,47 @@ class ScrollSnapSlider {
   };
 }
 
-const sliderSimpleElements = document.querySelectorAll('.scroll-snap-slider');
-
-sliderSimpleElements.forEach((sliderSimpleElement) => {
-  const slides = sliderSimpleElement.getElementsByClassName(
-    'scroll-snap-slide'
-  );
-  const sliderSimple = new ScrollSnapSlider({ element: sliderSimpleElement });
-
-  const buttons = document.querySelectorAll('.indicators .indicator');
-  const currentIndicator = document.querySelector(
-    '.indicators .current-indicator'
-  );
-
-  const setSelected = function (event) {
-    const slideElementIndex = event.detail;
-    const slideElement = slides[slideElementIndex];
-
+const sliderSimpleInit = (sliderSimpleElement) => {
+  try {
+    const slider = sliderSimpleElement.getElementsByClassName('scroll-snap-slider'); 
+    const slides = sliderSimpleElement.getElementsByClassName(
+      'scroll-snap-slide'
+    );
+    const sliderSimple = new ScrollSnapSlider({ element: slider[0] });
+  
+    const buttons = sliderSimpleElement.querySelectorAll('.indicators .indicator');
+  
+    const currentIndicator = sliderSimpleElement.querySelector(
+      '.indicators .current-indicator'
+    );
+  
+    const setSelected = function (event) {
+      const slideElementIndex = event.detail;
+      const slideElement = slides[slideElementIndex];
+  
+      for (const button of buttons) {
+        const isActive = button.classList.toggle(
+          '-active',
+          button.dataset.index === slideElement.dataset.index
+        );
+      }
+    };
+  
+    // Only needed if we want them clickable and then we need to remove the active dot if clickable
     for (const button of buttons) {
-      const isActive = button.classList.toggle(
-        '-active',
-        button.dataset.index === slideElement.dataset.index
-      );
+      button.addEventListener('click', (event) => {
+        const slideElementIndex = Array.prototype.slice
+          .call(slides)
+          .findIndex((item) => item.dataset.index === button.dataset.index);
+  
+        sliderSimple.slideTo(slideElementIndex);
+      });
     }
-  };
-
-  // Only needed if we want them clickable and then we need to remove the active dot if clickable
-  for (const button of buttons) {
-    button.addEventListener('click', (event) => {
-      const slideElementIndex = Array.prototype.slice
-        .call(slides)
-        .findIndex((item) => item.dataset.index === button.dataset.index);
-
-      sliderSimple.slideTo(slideElementIndex);
-    });
+  
+    sliderSimple.addEventListener('slide-pass', setSelected);
+    sliderSimple.addEventListener('slide-stop', setSelected);
+  } catch(e) {
+    //
   }
-
-  sliderSimple.addEventListener('slide-pass', setSelected);
-  sliderSimple.addEventListener('slide-stop', setSelected);
-});
+};
 `;

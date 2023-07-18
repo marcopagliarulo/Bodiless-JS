@@ -1,5 +1,6 @@
 import type { ComponentType } from 'react';
 import { withoutHydration, /* withoutHydrationInline */ } from '@bodiless/hydration';
+import vitalCarouselStatic from './tokens';
 
 import type { VitalCarouselProps } from './types';
 import VitalCarouselClean from './VitalCarouselClean';
@@ -21,12 +22,11 @@ import VitalCarouselClean from './VitalCarouselClean';
 //   WrapperElement: 'div'|'span',
 // };
 
-const options = {};
 // {
-//  onUpdate: (carouselScript)
+//  onUpdate: (onUpdateCarouselInit)
 // };
 
-const VitalCarouselStatic: ComponentType<VitalCarouselProps> = withoutHydration(options)(
+const CarouselStatic: ComponentType<VitalCarouselProps> = withoutHydration()(
   VitalCarouselClean
 );
 // @TODO Use withoutHydrationInline if your component renders inline
@@ -35,8 +35,6 @@ const VitalCarouselStatic: ComponentType<VitalCarouselProps> = withoutHydration(
 // );
 
 export {
-  VitalCarouselClean,
-  VitalCarouselStatic,
+  vitalCarouselStatic,
+  CarouselStatic,
 };
-export { default as vitalCarousel } from './tokens';
-export { default as vitalCarouselStatic } from './tokens';
