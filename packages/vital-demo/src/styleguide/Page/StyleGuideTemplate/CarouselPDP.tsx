@@ -21,8 +21,8 @@ import {
   varyDesigns,
 } from '@bodiless/fclasses';
 import {
-  VitalCarouselClean,
-  vitalCarousel,
+  CarouselStatic,
+  vitalCarouselStatic,
   asVitalCarouselToken,
 } from '@bodiless/vital-carousel';
 import { asFluidToken } from '@bodiless/vital-elements';
@@ -32,9 +32,9 @@ import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples
 
 const BaseVariation = {
   // using '' means it won't add any string to name key of the variations
-  '': on(VitalCarouselClean)(
-    vitalCarousel.Default,
-    vitalCarousel.WithImageSlide,
+  '': on(CarouselStatic)(
+    vitalCarouselStatic.Default,
+    vitalCarouselStatic.WithImageSlide,
   ),
 };
 
@@ -48,12 +48,12 @@ const vitalPDPVariations = varyDesigns(
   BaseVariation,
   {
     MobilePDPCarousel: as(
-      vitalCarousel.WithCarouselDots,
-      vitalCarousel.MobileOnly,
+      vitalCarouselStatic.WithCarouselDots,
+      vitalCarouselStatic.MobileOnly,
     ),
     DesktopTabletPDPCarousel: as(
-      vitalCarousel.WithThumbnail,
-      vitalCarousel.TabletDesktopOnly,
+      vitalCarouselStatic.WithThumbnail,
+      vitalCarouselStatic.TabletDesktopOnly,
       forceHalf, // forcing half since this is how it will display on PDP
     ),
   },
