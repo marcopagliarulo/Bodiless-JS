@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { asVitalTokenSpec } from '@bodiless/vital-elements';
-import { designable, Fragment, Img } from '@bodiless/fclasses';
+import { designable, Div, Img } from '@bodiless/fclasses';
 import type { DesignableComponentsProps } from '@bodiless/fclasses';
 import type { VitalCarouselThumbComponents } from './types';
 import { useCarouselSlideIndex } from './utils/hooks';
@@ -11,7 +11,7 @@ type VitalCarouselThumbBaseProps = DesignableComponentsProps<VitalCarouselThumbC
  * The starting components for each slot.
  */
 const vitalCarouselThumbComponents: VitalCarouselThumbComponents = {
-  Wrapper: Fragment,
+  Wrapper: Div,
   Image: Img,
 };
 
