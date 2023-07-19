@@ -2,7 +2,7 @@ import { asVitalCarouselDotToken } from '../VitalCarouselDotClean';
 
 const Default = asVitalCarouselDotToken({
   Theme: {
-    Dot: 'w-full bg-[#BFBFBF] rounded-full border-none',
+    Dot: 'bg-[#BFBFBF] rounded-full border-none',
   },
   Layout: {
     // Hardcdoded for now, site builders can override this.
