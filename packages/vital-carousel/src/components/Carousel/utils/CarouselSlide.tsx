@@ -16,6 +16,7 @@ import React from 'react';
 import { Li } from '@bodiless/fclasses';
 import { useCarouselSlideIndex } from './hooks';
 
+// Simple Component that adds Slide Index controls to Li
 const CarouselSlide = (props: any) => {
   const slideIndex = useCarouselSlideIndex();
   return <Li data-index={slideIndex} tab-index="-1" name="slide_switch" {...props} />;

@@ -27,7 +27,7 @@ const vitalCarouselComponents: VitalCarouselComponents = {
   Slider: Ul,
   Slide: Div,
   ControlsWrapper: Div,
-  Dots: Fragment,
+  Indicator: Fragment,
   ButtonBack: Fragment,
   ButtonNext: Fragment,
   ButtonPlay: Fragment,
@@ -43,7 +43,7 @@ const VitalCarouselBase: FC<VitalCarouselBaseProps> = ({ components: C, ...rest 
       <C.ButtonNext />
     </C.SliderWrapper>
     <C.ControlsWrapper>
-      <C.Dots />
+      <C.Indicator />
       <C.ButtonPlay />
     </C.ControlsWrapper>
   </C.Wrapper>

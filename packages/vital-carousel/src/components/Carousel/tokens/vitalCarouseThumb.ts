@@ -6,13 +6,15 @@ const Default = asVitalCarouselThumbToken({
     Image: vitalImage.Default,
   },
   Theme: {
-    Image: 'border-none',
+    Wrapper: 'border-none',
   },
   Layout: {
-    Image: 'block w-[94px] h-[94px]',
+    Wrapper: 'block',
+    // Fixed width for now. Site builder can override if they choose
+    Image: 'w-[94px] h-[94px]',
   },
   Behavior: {
-    Image: 'cursor-pointer'
+    Wrapper: 'cursor-pointer'
   }
 });
 

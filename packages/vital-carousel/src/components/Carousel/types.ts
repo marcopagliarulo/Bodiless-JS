@@ -12,17 +12,23 @@ export type VitalCarouselComponents = {
   Slider: ComponentOrTag<any>,
   Slide: ComponentOrTag<any>,
   ControlsWrapper: ComponentOrTag<any>,
-  Dots: ComponentOrTag<any>,
+  Indicator: ComponentOrTag<any>,
   ButtonBack: ComponentOrTag<any>,
   ButtonNext: ComponentOrTag<any>,
   ButtonPlay: ComponentOrTag<any>,
 };
 
+/**
+ * Type representing the "slots" exposed by the VitalCarouselDotClean component.
+ */
 export type VitalCarouselDotComponents = {
   Wrapper: ComponentOrTag<any>,
   Button: ComponentOrTag<any>,
 };
 
+/**
+ * Type representing the "slots" exposed by the VitalCarouselThumbClean component.
+ */
 export type VitalCarouselThumbComponents = {
   Wrapper: ComponentOrTag<any>,
   Image: ComponentOrTag<any>,

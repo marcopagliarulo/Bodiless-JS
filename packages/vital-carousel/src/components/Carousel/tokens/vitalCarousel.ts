@@ -18,11 +18,15 @@ import VitalCarouselDotClean from '../VitalCarouselDotClean';
 import VitalCarouselThumbClean from '../VitalCarouselThumbClean';
 import vitalThumbCarousel from './vitalCarouseThumb';
 
+// Using withDesign throughout file to target the list that is added by asBodilessList.
+
 const Default = asVitalCarouselToken({
   Components: {
     Slider: flowHoc(
+      // Convert to Bodiless List with carousel node key
       asBodilessList(CAROUSEL_NODE_KEY, undefined, () => ({ groupLabel: 'Slide' })),
       withDesign({
+        // Replaces Slide with LI that adds slide indexing
         Item: replaceWith(stylable(CarouselSlide)),
       }),
     ),
@@ -49,8 +53,9 @@ const Default = asVitalCarouselToken({
 
 const WithControls = asVitalCarouselToken({
   Components: {
-    Dots: as(
+    Indicator: as(
       replaceWith(Div),
+      // Convert Indicators to List and use the same node key as slides to keep in sync
       asBodilessList(CAROUSEL_NODE_KEY, undefined, () => ({ groupLabel: 'Slide' })),
       'controls indicators',
       'align-center flex-row justify-center opacity-100',
@@ -62,20 +67,25 @@ const WithCarouselDots = asVitalCarouselToken(
   WithControls,
   {
     Components: {
-      Dots: withDesign({
+      Indicator: withDesign({
+        // Replace list items with styled dots
         Item: on(VitalCarouselDotClean)(vitalDotCarousel.Default),
       }),
     },
-    Theme: {
-      Slider: as(
-        '-multi space-x-1',
-        withDesign({
-          Item: 'w-5/6 md:w-1/3 lg:w-1/4',
-        }),
-      ),
-      ControlsWrapper: 'flex pt-2',
-      Dots: 'flex items-center dots -simple space-x-2 lg:hidden', // Spacing-8
+    Spacing: {
+      Slider: '-multi space-x-2',
+      ControlsWrapper: 'pt-2',
+      Indicator: 'space-x-2', // Spacing-8
     },
+    Layout: {
+      Slider: withDesign({
+        // Controls Responspivenes Behavior.
+        // A setting of at mobile of w-5/6 gives peek of next slide.
+        Item: 'w-5/6 md:w-1/3 lg:w-1/4',
+      }),
+      ControlsWrapper: 'flex',
+      Indicator: 'flex items-center dots -simple lg:hidden',
+    }
   }
 );
 
@@ -83,28 +93,23 @@ const WithThumbnail = asVitalCarouselToken(
   WithControls,
   {
     Components: {
-      Dots: withDesign({
+      Indicator: withDesign({
+        // Replace list items with styled thumbs
         Item: on(VitalCarouselThumbClean)(vitalThumbCarousel.Default),
       }),
     },
     Theme: {
-      Slider: as(
-        withDesign({
-          Item: 'w-full',
-        }),
-      ),
-      Dots: withDesign({
-        Item: withDesign({
-          Dot: 'flex items-center indicators -simple',
-        }),
+      Slider: withDesign({
+        Item: 'w-full',
       }),
     },
     Layout: {
       ControlsWrapper: 'flex justify-left',
-      Dots: 'flex items-center space-x-1',
+      Indicator: 'flex items-center',
     },
     Spacing: {
       ControlsWrapper: 'pt-6',
+      Indicator: 'space-x-2',
     },
   }
 );
@@ -139,8 +144,6 @@ const WithThumbnail = asVitalCarouselToken(
 //         ),
 //       }),
 //     ),
-//     ButtonBack: asAccessibleCarouselButton,
-//     ButtonNext: asAccessibleCarouselButton,
 //     Dots: withDesign({
 //       Item: flowHoc(
 //         withAriaSelectedCarouselItem,
@@ -153,7 +156,6 @@ const WithThumbnail = asVitalCarouselToken(
 //         }),
 //       ),
 //     }),
-//     ButtonPlay: asAccessibleCarouselButton,
 //   }
 // });
 
