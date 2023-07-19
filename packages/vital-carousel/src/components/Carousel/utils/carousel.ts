@@ -228,10 +228,6 @@ const sliderSimpleInit = (sliderSimpleElement) => {
   
     const buttons = sliderSimpleElement.querySelectorAll('.indicators .indicator');
   
-    const currentIndicator = sliderSimpleElement.querySelector(
-      '.indicators .current-indicator'
-    );
-  
     const setSelected = function (event) {
       const slideElementIndex = event.detail;
       const slideElement = slides[slideElementIndex];
