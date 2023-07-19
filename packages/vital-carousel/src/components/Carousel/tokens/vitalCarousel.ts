@@ -32,22 +32,35 @@ const Default = asVitalCarouselToken({
     ),
   },
   Behavior: {
+    // Setup scroll snap behavior
     Wrapper: 'slider',
-    SliderWrapper: 'scrollbar',
     Slider: as(
-      'flex flex-nowrap justify-normal overflow-x-auto',
       'scroll-smooth snap-always snap-x',
       'scroll-snap-slider -simple',
-      'pb-8',
+      // Colors the scrollbar
+      'scrollbar',
       withDesign({
         Item: as(
           'scroll-snap-slide',
-          'items-center flex flex-col justify-center max-w-none',
-          'shrink-0 grow-0',
           'snap-start',
         ),
       }),
     ),
+  },
+  Layout: {
+    Slider: as(
+      'flex flex-nowrap justify-normal overflow-x-auto',
+      withDesign({
+        Item: as(
+          'items-center flex flex-col justify-center max-w-none',
+          'shrink-0 grow-0',
+        ),
+      }),
+    ),
+  },
+  Spacing: {
+    // Padding under slider above controls
+    Slider: 'pb-5 lg:pb-6', // TODO Convert to SpacingMedium = Spacing20 and lg:Spacing24
   },
 });
 
@@ -75,7 +88,7 @@ const WithCarouselDots = asVitalCarouselToken(
     Spacing: {
       Slider: '-multi space-x-2',
       ControlsWrapper: 'pt-2',
-      Indicator: 'space-x-2', // Spacing-8
+      Indicator: 'space-x-2', // TODO: Convert to Spacing8
     },
     Layout: {
       Slider: withDesign({

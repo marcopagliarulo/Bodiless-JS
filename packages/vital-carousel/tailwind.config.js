@@ -1,6 +1,6 @@
 /* eslint-disable import/no-dynamic-require, global-require */
 /**
- * Copyright © 2022 Johnson & Johnson
+ * Copyright © 2023 Johnson & Johnson
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,18 +28,20 @@ const twConfig = {
       addBase({
         '.scrollbar': {
           overflowY: 'auto',
-          scrollbarColor: '#019881 #019881',
+          scrollbarColor: '#019881 #BFBFBF',
           scrollbarWidth: 'thin',
         },
         '.scrollbar::-webkit-scrollbar': {
           height: '8px',
           width: '2px',
+          'border-radius': '10px',
         },
         '.scrollbar::-webkit-scrollbar-thumb': {
           backgroundColor: '#019881',
+          'border-radius': '10px',
         },
         '.scrollbar::-webkit-scrollbar-track-piece': {
-          backgroundColor: '#019881',
+          backgroundColor: '#BFBFBF',
         },
       });
     }),
@@ -50,7 +52,6 @@ const twConfig = {
             'padding-inline': '0',
           },
           '.scroll-snap-slider.-multi': {
-            'max-width': 'calc(3 * 900px)',
             width: '100%',
           },
           '.scroll-snap-slider.-draggable': {
@@ -77,15 +78,6 @@ const twConfig = {
           // '.indicators .indicator.-active': {
           //   'background-color': '#019881',
           // },
-          '.visually-hidden:not(:focus, :active)': {
-            clip: 'rect(0 0 0 0)',
-            'clip-path': 'inset(50%)',
-            height: '1px',
-            overflow: 'hidden',
-            position: 'absolute',
-            'white-space': 'nowrap',
-            width: '1px'
-          }
         }
       );
     }),

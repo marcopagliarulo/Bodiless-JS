@@ -7,15 +7,11 @@ import type { DefaultDomains } from '@bodiless/vital-elements';
 export type VitalCarouselComponents = {
   Wrapper: ComponentOrTag<any>,
   Script: ComponentOrTag<any>,
-  Inputs: ComponentOrTag<any>,
   SliderWrapper: ComponentOrTag<any>,
   Slider: ComponentOrTag<any>,
   Slide: ComponentOrTag<any>,
   ControlsWrapper: ComponentOrTag<any>,
   Indicator: ComponentOrTag<any>,
-  ButtonBack: ComponentOrTag<any>,
-  ButtonNext: ComponentOrTag<any>,
-  ButtonPlay: ComponentOrTag<any>,
 };
 
 /**

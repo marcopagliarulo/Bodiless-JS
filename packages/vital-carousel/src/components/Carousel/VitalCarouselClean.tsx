@@ -22,29 +22,21 @@ const CarouselScript = () => (
 const vitalCarouselComponents: VitalCarouselComponents = {
   Wrapper: Div,
   Script: CarouselScript,
-  Inputs: Fragment,
   SliderWrapper: Div,
   Slider: Ul,
   Slide: Div,
   ControlsWrapper: Div,
   Indicator: Fragment,
-  ButtonBack: Fragment,
-  ButtonNext: Fragment,
-  ButtonPlay: Fragment,
 };
 
 const VitalCarouselBase: FC<VitalCarouselBaseProps> = ({ components: C, ...rest }) => (
   <C.Wrapper {...rest}>
     <C.Script />
-    <C.Inputs />
     <C.SliderWrapper>
       <C.Slider />
-      <C.ButtonBack />
-      <C.ButtonNext />
     </C.SliderWrapper>
     <C.ControlsWrapper>
       <C.Indicator />
-      <C.ButtonPlay />
     </C.ControlsWrapper>
   </C.Wrapper>
 );
