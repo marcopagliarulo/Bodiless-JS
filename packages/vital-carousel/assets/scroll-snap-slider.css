@@ -93,7 +93,6 @@
 */
 
 
-/* Move to Tailwind 
 .indicator:not(.-active):hover {
   background-color: #019881; 
 }
@@ -102,6 +101,7 @@
   background-color: #019881; 
 }
 
+/* Move to Tailwind 
 .visually-hidden:not(:focus, :active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);

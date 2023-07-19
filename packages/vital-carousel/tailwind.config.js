@@ -71,12 +71,12 @@ const twConfig = {
           '.indicators input[type="radio"]': {
             display: 'none',
           },
-          '.indicator:not(.-active):hover': {
-            'background-color': '#019881',
-          },
-          '.indicators .indicator.-active': {
-            'background-color': '#019881',
-          },
+          // '.indicator:not(.-active):hover': {
+          //   'background-color': '#019881',
+          // },
+          // '.indicators .indicator.-active': {
+          //   'background-color': '#019881',
+          // },
           '.visually-hidden:not(:focus, :active)': {
             clip: 'rect(0 0 0 0)',
             'clip-path': 'inset(50%)',
