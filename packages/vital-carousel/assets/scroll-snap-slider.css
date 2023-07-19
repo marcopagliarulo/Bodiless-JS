@@ -81,7 +81,8 @@
 }
 */
 
-.dot.indicator {
+/* Moved to vitalCarouselDots 
+.dots .indicator {
   background-color: #BFBFBF;
   border: 0;
   border-radius: 50%;
@@ -89,8 +90,8 @@
   display: block;
   transition: black 0.3s cubic-bezier(0.42, 0.42, 0.84, 1);
   width: 8px;
-  height: 8px;
-};
+  height: 8px';
+}; */
 
 /* 
 .thumbs.indicator {

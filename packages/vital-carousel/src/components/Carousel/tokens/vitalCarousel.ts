@@ -1,10 +1,7 @@
-import {
-  withChild,
-} from '@bodiless/core';
 import { withNodeKey } from '@bodiless/data';
 import {
   Img, Div, as, on, replaceWith, stylable, flowHoc,
-  withDesign, Fragment,
+  withDesign,
 } from '@bodiless/fclasses';
 import { vitalImage } from '@bodiless/vital-image';
 import { vitalCard, CardClean } from '@bodiless/vital-card';
@@ -15,9 +12,11 @@ import type { VitalCarousel } from '../types';
 import '../../../../assets/scroll-snap-slider.css';
 
 import { CAROUSEL_NODE_KEY } from '../utils/constants';
-import CarouselDot from '../utils/CarouselDot';
 import CarouselSlide from '../utils/CarouselSlide';
-import CarouselThumb from '../utils/CarouselThumb';
+import vitalDotCarousel from './vitalCarouseDot';
+import VitalCarouselDotClean from '../VitalCarouselDotClean';
+import VitalCarouselThumbClean from '../VitalCarouselThumbClean';
+import vitalThumbCarousel from './vitalCarouseThumb';
 
 const Default = asVitalCarouselToken({
   Components: {
@@ -64,13 +63,7 @@ const WithCarouselDots = asVitalCarouselToken(
   {
     Components: {
       Dots: withDesign({
-        Item: as(
-          replaceWith(
-            withChild(
-              stylable(CarouselDot), 'DotIndicator',
-            )(Fragment),
-          ),
-        ),
+        Item: on(VitalCarouselDotClean)(vitalDotCarousel.Default),
       }),
     },
     Theme: {
@@ -81,9 +74,7 @@ const WithCarouselDots = asVitalCarouselToken(
         }),
       ),
       ControlsWrapper: 'flex pt-2',
-      Dots: as(
-        'flex items-center dots -simple space-x-2 lg:hidden', // Spacing-8
-      ),
+      Dots: 'flex items-center dots -simple space-x-2 lg:hidden', // Spacing-8
     },
   }
 );
@@ -93,13 +84,7 @@ const WithThumbnail = asVitalCarouselToken(
   {
     Components: {
       Dots: withDesign({
-        Item: as(
-          replaceWith(
-            withChild(
-              stylable(CarouselThumb), 'ThumbIndicator',
-            )(Fragment),
-          ),
-        ),
+        Item: on(VitalCarouselThumbClean)(vitalThumbCarousel.Default),
       }),
     },
     Theme: {

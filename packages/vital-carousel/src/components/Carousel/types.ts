@@ -18,6 +18,16 @@ export type VitalCarouselComponents = {
   ButtonPlay: ComponentOrTag<any>,
 };
 
+export type VitalCarouselDotComponents = {
+  Wrapper: ComponentOrTag<any>,
+  Button: ComponentOrTag<any>,
+};
+
+export type VitalCarouselThumbComponents = {
+  Wrapper: ComponentOrTag<any>,
+  Image: ComponentOrTag<any>,
+};
+
 /**
  * The props accepted by the VitalCarouselClean component
  */
