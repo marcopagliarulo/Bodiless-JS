@@ -15,10 +15,32 @@
 import React from 'react';
 import { Button } from '@bodiless/fclasses';
 import { useCarouselSlideIndex } from './hooks';
+// import vitalCarouselTokens from '../../CarouselTokens';
+
+const styles = {
+  indicator: {
+    'background-color': '#BFBFBF', //  vitalCarouselTokens.ScrollIndicatorInactive,
+    border: '0',
+    'border-radius': '50%',
+    cursor: 'pointer',
+    display: 'block',
+    transition: 'black 0.3s cubic-bezier(0.42, 0.42, 0.84, 1)',
+    width: '8px',
+    height: '8px',
+  },
+
+  // .indicator:not(.-active):hover {
+  //   'background-color': vitalCarouselTokens.ScrollIndicatorActive,
+  // }
+
+  // .indicator.-active {
+  //   'background-color': vitalCarouselTokens.ScrollIndicatorActive,
+  // }
+};
 
 const CarouselDot = (props: any) => {
   const slideIndex = useCarouselSlideIndex();
-  return <Button class="dots indicator" data-index={slideIndex} tab-index="-1" type="button" {...props} />;
+  return <Button data-index={slideIndex} tab-index="-1" type="button" class="dots indicator" style={styles.indicator} {...props} />;
 };
 
 export default CarouselDot;

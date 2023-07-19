@@ -32,9 +32,16 @@ const Default = asVitalCarouselToken({
     Wrapper: 'slider',
     SliderWrapper: '',
     Slider: as(
+      'flex flex-nowrap justify-normal overflow-x-auto',
+      'scroll-smooth snap-always snap-x',
       'scroll-snap-slider -simple',
       withDesign({
-        Item: 'scroll-snap-slide',
+        Item: as(
+          'scroll-snap-slide',
+          'items-center flex flex-col justify-center max-w-none',
+          'shrink-0 grow-0',
+          'snap-start',
+        ),
       }),
     ),
   },
@@ -46,6 +53,7 @@ const WithControls = asVitalCarouselToken({
       replaceWith(Div),
       asBodilessList(CAROUSEL_NODE_KEY, undefined, () => ({ groupLabel: 'Slide' })),
       'controls indicators',
+      'align-center flex-row justify-center opacity-100',
     ),
   },
 });
@@ -64,7 +72,6 @@ const WithCarouselDots = asVitalCarouselToken(
         ),
       }),
     },
-    // TODO Unwrap this styling in theme/layout/spacing & remove withDesign
     Theme: {
       Slider: as(
         '-multi space-x-1',
@@ -73,21 +80,7 @@ const WithCarouselDots = asVitalCarouselToken(
         }),
       ),
       ControlsWrapper: 'flex pt-2',
-      Dots: as(
-        'flex items-center dots -simple space-x-1',
-        withDesign({
-          Item: 'p-2',
-        })
-        // withDesign({
-        //   Item: as(
-        //     'inline-block align-middle',
-        //     'rounded-full',
-        //     vitalCarouselTokens.SizeCarouselScrollDot,
-        //     vitalCarouselTokens.SpacingCarouselScrollDot,
-        //     vitalCarouselTokens.ColorCarouselScrollDotInactive,
-        //   ),
-        // }),
-      ),
+      Dots: 'flex items-center dots -simple space-x-2 lg:hidden', // Spacing-8
     },
   }
 );
@@ -122,12 +115,7 @@ const WithThumbnail = asVitalCarouselToken(
     },
     Layout: {
       ControlsWrapper: 'flex justify-left',
-      Dots: as(
-        'flex items-center space-x-1',
-        withDesign({
-          Item: 'max-w-[94px] max-h-[94px]',
-        }),
-      ),
+      Dots: 'flex items-center space-x-1',
     },
     Spacing: {
       ControlsWrapper: 'pt-6',
