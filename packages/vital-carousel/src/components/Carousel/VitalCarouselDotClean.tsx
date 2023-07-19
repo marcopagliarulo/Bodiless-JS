@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { asVitalTokenSpec } from '@bodiless/vital-elements';
-import { designable, Div, Button } from '@bodiless/fclasses';
+import { designable, Div, Span } from '@bodiless/fclasses';
 import type { DesignableComponentsProps } from '@bodiless/fclasses';
 import type { VitalCarouselDotComponents } from './types';
 import { useCarouselSlideIndex } from './utils/hooks';
@@ -12,7 +12,7 @@ type VitalCarouselDotBaseProps = DesignableComponentsProps<VitalCarouselDotCompo
  */
 const vitalCarouselDotComponents: VitalCarouselDotComponents = {
   Wrapper: Div,
-  Button,
+  Dot: Span,
 };
 
 const VitalCarouselDotBase: FC<VitalCarouselDotBaseProps> = ({ components: C, ...rest }) => {
@@ -20,7 +20,7 @@ const VitalCarouselDotBase: FC<VitalCarouselDotBaseProps> = ({ components: C, ..
 
   return (
     <C.Wrapper {...rest}>
-      <C.Button class="dot indicator" data-index={slideIndex} tab-index="-1" type="button" />
+      <C.Dot class="dot indicator" data-index={slideIndex} tab-index="-1" />
     </C.Wrapper>
   );
 };

@@ -2,15 +2,14 @@ import { asVitalCarouselDotToken } from '../VitalCarouselDotClean';
 
 const Default = asVitalCarouselDotToken({
   Theme: {
-    // !bg has to be background to override tailwinds button bg-transparency
-    Button: '!bg-[#BFBFBF] rounded-full border-none',
+    Dot: 'w-full bg-[#BFBFBF] rounded-full border-none',
   },
   Layout: {
     // Hardcdoded for now, site builders can override this.
-    Button: 'block w-[8px] h-[8px]',
+    Dot: 'block w-[8px] h-[8px]',
   },
   Behavior: {
-    Button: 'cursor-pointer'
+    Wrapper: 'cursor-pointer'
   }
 });
 

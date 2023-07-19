@@ -19,7 +19,7 @@ export type VitalCarouselComponents = {
  */
 export type VitalCarouselDotComponents = {
   Wrapper: ComponentOrTag<any>,
-  Button: ComponentOrTag<any>,
+  Dot: ComponentOrTag<any>,
 };
 
 /**
