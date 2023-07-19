@@ -19,14 +19,14 @@ import { useCarouselSlideIndex } from './hooks';
 
 const styles = {
   indicator: {
-    'background-color': '#BFBFBF', //  vitalCarouselTokens.ScrollIndicatorInactive,
-    border: '0',
-    'border-radius': '50%',
-    cursor: 'pointer',
-    display: 'block',
-    transition: 'black 0.3s cubic-bezier(0.42, 0.42, 0.84, 1)',
-    width: '8px',
-    height: '8px',
+    // 'background-color': '#BFBFBF', //  vitalCarouselTokens.ScrollIndicatorInactive,
+    // border: '0',
+    // 'border-radius': '50%',
+    // cursor: 'pointer',
+    // display: 'block',
+    // transition: 'black 0.3s cubic-bezier(0.42, 0.42, 0.84, 1)',
+    // width: '8px',
+    // height: '8px',
   },
 
   // .indicator:not(.-active):hover {
@@ -40,7 +40,7 @@ const styles = {
 
 const CarouselDot = (props: any) => {
   const slideIndex = useCarouselSlideIndex();
-  return <Button data-index={slideIndex} tab-index="-1" type="button" class="dots indicator" style={styles.indicator} {...props} />;
+  return <Button data-index={slideIndex} tab-index="-1" type="button" class="dot indicator" style={styles.indicator} {...props} />;
 };
 
 export default CarouselDot;
