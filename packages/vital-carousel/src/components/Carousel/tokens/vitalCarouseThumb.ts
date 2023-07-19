@@ -14,7 +14,10 @@ const Default = asVitalCarouselThumbToken({
     Image: 'w-[94px] h-[94px]',
   },
   Behavior: {
-    Wrapper: 'cursor-pointer'
+    Image: 'cursor-pointer'
+  },
+  Spacing: {
+    Wrapper: 'space-x-2',
   }
 });
 

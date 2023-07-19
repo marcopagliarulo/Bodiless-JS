@@ -6,6 +6,7 @@ const Default = asVitalCarouselDotToken({
     Button: '!bg-[#BFBFBF] rounded-full border-none',
   },
   Layout: {
+    // Hardcdoded for now, site builders can override this.
     Button: 'block w-[8px] h-[8px]',
   },
   Behavior: {
