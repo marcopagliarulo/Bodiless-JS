@@ -226,7 +226,7 @@ const sliderSimpleInit = (sliderSimpleElement) => {
     );
     const sliderSimple = new ScrollSnapSlider({ element: slider[0] });
   
-    const buttons = sliderSimpleElement.querySelectorAll('.indicators .indicator');
+    const buttons = sliderSimpleElement.querySelectorAll('.indicators .indicator .dot');
   
     const currentIndicator = sliderSimpleElement.querySelector(
       '.indicators .current-indicator'

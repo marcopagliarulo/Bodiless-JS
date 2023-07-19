@@ -105,12 +105,12 @@
 */
 
 
-.indicator:not(.-active):hover {
-  background-color: #019881!important; 
+.indicator>.dot:not(.-active):hover {
+  background-color: #019881; 
 }
 
-.indicators .indicator.-active {
-  background-color: #019881!important; 
+.indicators .indicator>.dot.-active {
+  background-color: #019881; 
 }
 
 /* Move to Tailwind 

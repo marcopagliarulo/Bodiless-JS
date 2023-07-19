@@ -34,16 +34,15 @@ const twConfig = {
         '.scrollbar::-webkit-scrollbar': {
           height: '8px',
           width: '2px',
+          'border-radius': '10px',
         },
         '.scrollbar::-webkit-scrollbar-thumb': {
           backgroundColor: '#019881',
           'border-radius': '10px',
         },
         '.scrollbar::-webkit-scrollbar-track': {
-          'border-radius': '10px',
-        },
-        '.scrollbar::-webkit-scrollbar-track-piece': {
           backgroundColor: '#BFBFBF',
+          'border-radius': '10px',
         },
       });
     }),
