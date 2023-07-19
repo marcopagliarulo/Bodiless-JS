@@ -19,8 +19,8 @@ const VitalCarouselDotBase: FC<VitalCarouselDotBaseProps> = ({ components: C, ..
   const slideIndex = useCarouselSlideIndex();
 
   return (
-    <C.Wrapper {...rest}>
-      <C.Dot class="dot indicator" data-index={slideIndex} tab-index="-1" />
+    <C.Wrapper class="dot indicator" data-index={slideIndex} tab-index="-1" {...rest}>
+      <C.Dot />
     </C.Wrapper>
   );
 };
