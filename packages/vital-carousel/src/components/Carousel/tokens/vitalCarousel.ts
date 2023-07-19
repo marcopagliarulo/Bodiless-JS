@@ -30,11 +30,12 @@ const Default = asVitalCarouselToken({
   },
   Behavior: {
     Wrapper: 'slider',
-    SliderWrapper: '',
+    SliderWrapper: 'scrollbar',
     Slider: as(
       'flex flex-nowrap justify-normal overflow-x-auto',
       'scroll-smooth snap-always snap-x',
       'scroll-snap-slider -simple',
+      'pb-8',
       withDesign({
         Item: as(
           'scroll-snap-slide',
@@ -80,7 +81,9 @@ const WithCarouselDots = asVitalCarouselToken(
         }),
       ),
       ControlsWrapper: 'flex pt-2',
-      Dots: 'flex items-center dots -simple space-x-2 lg:hidden', // Spacing-8
+      Dots: as(
+        'flex items-center dots -simple space-x-2 lg:hidden', // Spacing-8
+      ),
     },
   }
 );
@@ -107,9 +110,7 @@ const WithThumbnail = asVitalCarouselToken(
       ),
       Dots: withDesign({
         Item: withDesign({
-          Dot: as(
-            'flex items-center indicators -simple',
-          ),
+          Dot: 'flex items-center indicators -simple',
         }),
       }),
     },

@@ -1,16 +1,18 @@
+/* 
 .scroll-snap-slider {
-  /* display: flex;
+  display: flex;
   flex-wrap: nowrap;
   justify-content: normal;
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-stop: always;
   scroll-snap-type: x mandatory;
-  */
+
+  /* Moved to tailwind config
   padding-inline: 0;
   
-  /* TODO Style the scrollbar handle */
 }
+*/
 
 /* Move this to tailwind */
 @media (max-width: 1024px) { 
@@ -37,7 +39,7 @@
 }
 */
 
-/* move to tailwind */
+/* move to tailwind
 .scroll-snap-slider.-multi,
 .scroll-snap-slider.-responsive {
   max-width: calc(3 * 900px);
@@ -55,18 +57,21 @@
 .scroll-snap-slider .scroll-snap-slide {
   scroll-snap-align: start;
 }
+*/
 
+/*
 .indicators {
-  /*
+
   align-items: center;
   flex-direction: row;
   gap: var(--spacer-half);
   justify-content: center;
   opacity: 1;
-  */
   transition: opacity 0.3s cubic-bezier(0.42, 0.42, 0.84, 1);
 }
+*/
 
+/* Moved to tailwind
 .indicators.-hidden {
   opacity: 0;
 }
@@ -74,7 +79,9 @@
 .indicators input[type="radio"] {
   display: none;
 }
+*/
 
+/* 
 .thumbs.indicator {
   border: 0;
   cursor: pointer;
@@ -83,13 +90,16 @@
   width: 94px;
   height: 94px;
 }
+*/
 
+
+/* Move to Tailwind 
 .indicator:not(.-active):hover {
-  background-color: #019881; /* Components/Scroll Indicator/Active */
+  background-color: #019881; 
 }
 
 .indicators .indicator.-active {
-  background-color: #019881; /* Components/Scroll Indicator/Active */
+  background-color: #019881; 
 }
 
 .visually-hidden:not(:focus, :active) {
@@ -101,3 +111,4 @@
   white-space: nowrap;
   width: 1px;
 }
+*/

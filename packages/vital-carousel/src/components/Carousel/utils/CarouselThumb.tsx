@@ -17,13 +17,24 @@ import { Img, Button, as } from '@bodiless/fclasses';
 import { vitalImage } from '@bodiless/vital-image';
 import { useCarouselSlideIndex } from './hooks';
 
+const styles = {
+  thumbs: {
+    border: '0',
+    cursor: 'pointer',
+    display: 'block',
+    transition: 'black 0.3s cubic-bezier(0.42, 0.42, 0.84, 1)',
+    width: '94px',
+    height: '94px',
+  },
+};
+
 const ThumbImage = as(
   vitalImage.Default,
 )(Img);
 
 const CarouselThumb = (props: any) => {
   const slideIndex = useCarouselSlideIndex();
-  return <Button class="thumbs indicator" data-index={slideIndex} tab-index="-1" type="button" {...props}><ThumbImage /></Button>;
+  return <Button class="thumbs indicator" data-index={slideIndex} tab-index="-1" type="button" style={styles.thumbs} {...props}><ThumbImage /></Button>;
 };
 
 export default CarouselThumb;

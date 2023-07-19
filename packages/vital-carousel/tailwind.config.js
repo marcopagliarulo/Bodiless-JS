@@ -14,6 +14,8 @@
  */
 import { getPackageTailwindConfig } from '@bodiless/fclasses';
 
+const plugin = require('tailwindcss/plugin');
+
 const twConfig = {
   content: [
     './lib/**/!(*.d).{ts,js,jsx,tsx}',
@@ -21,6 +23,73 @@ const twConfig = {
   theme: {
     extend: {},
   },
+  plugins: [
+    plugin(({ addBase }) => {
+      addBase({
+        '.scrollbar': {
+          overflowY: 'auto',
+          scrollbarColor: '#019881 #019881',
+          scrollbarWidth: 'thin',
+        },
+        '.scrollbar::-webkit-scrollbar': {
+          height: '8px',
+          width: '2px',
+        },
+        '.scrollbar::-webkit-scrollbar-thumb': {
+          backgroundColor: '#019881',
+        },
+        '.scrollbar::-webkit-scrollbar-track-piece': {
+          backgroundColor: '#019881',
+        },
+      });
+    }),
+    plugin(({ addUtilities }) => {
+      addUtilities(
+        {
+          '.scroll-snap-slider': {
+            'padding-inline': '0',
+          },
+          '.scroll-snap-slider.-multi': {
+            'max-width': 'calc(3 * 900px)',
+            width: '100%',
+          },
+          '.scroll-snap-slider.-draggable': {
+            cursor: 'grab',
+          },
+          '.scroll-snap-slider.-draggable.-dragging': {
+            cursor: 'grabbing',
+          },
+          '.scroll-snap-slider .scroll-snap-slide': {
+            'scroll-snap-align': 'start',
+          },
+          '.indicators': {
+            transition: 'opacity 0.3s cubic-bezier(0.42, 0.42, 0.84, 1)',
+          },
+          '.indicators.-hidden': {
+            opacity: '0',
+          },
+          '.indicators input[type="radio"]': {
+            display: 'none',
+          },
+          '.indicator:not(.-active):hover': {
+            'background-color': '#019881',
+          },
+          '.indicators .indicator.-active': {
+            'background-color': '#019881',
+          },
+          '.visually-hidden:not(:focus, :active)': {
+            clip: 'rect(0 0 0 0)',
+            'clip-path': 'inset(50%)',
+            height: '1px',
+            overflow: 'hidden',
+            position: 'absolute',
+            'white-space': 'nowrap',
+            width: '1px'
+          }
+        }
+      );
+    }),
+  ],
 };
 
 module.exports = getPackageTailwindConfig({
