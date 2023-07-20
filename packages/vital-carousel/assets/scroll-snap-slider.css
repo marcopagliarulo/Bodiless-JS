@@ -105,11 +105,11 @@
 */
 
 
-.indicator:not(.-active):hover {
+.indicator:not(.-active):hover .dot {
   background-color: #019881; 
 }
 
-.indicators .indicator.-active {
+.indicators .indicator.-active .dot {
   background-color: #019881; 
 }
 
