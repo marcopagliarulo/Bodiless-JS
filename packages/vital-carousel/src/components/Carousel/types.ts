@@ -15,22 +15,6 @@ export type VitalCarouselComponents = {
 };
 
 /**
- * Type representing the "slots" exposed by the VitalCarouselDotClean component.
- */
-export type VitalCarouselDotComponents = {
-  Wrapper: ComponentOrTag<any>,
-  Dot: ComponentOrTag<any>,
-};
-
-/**
- * Type representing the "slots" exposed by the VitalCarouselThumbClean component.
- */
-export type VitalCarouselThumbComponents = {
-  Wrapper: ComponentOrTag<any>,
-  Image: ComponentOrTag<any>,
-};
-
-/**
  * The props accepted by the VitalCarouselClean component
  */
 export type VitalCarouselProps = DesignableProps<VitalCarouselComponents>;

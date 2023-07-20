@@ -11,10 +11,8 @@ import { asVitalCarouselToken } from '../VitalCarouselClean';
 import type { VitalCarousel } from '../types';
 import { CAROUSEL_NODE_KEY } from '../utils/constants';
 import CarouselSlide from '../utils/CarouselSlide';
-import vitalDotCarousel from './vitalCarouseDot';
-import VitalCarouselDotClean from '../VitalCarouselDotClean';
-import VitalCarouselThumbClean from '../VitalCarouselThumbClean';
-import vitalThumbCarousel from './vitalCarouseThumb';
+import { CarouselThumbClean, vitalCarouselThumb } from '../../CarouselThumb';
+import { CarouselDotClean, vitalCarouselDot } from '../../CarouselDot';
 
 // Using withDesign throughout file to target the list that is added by asBodilessList.
 
@@ -81,7 +79,7 @@ const WithCarouselDots = asVitalCarouselToken(
     Components: {
       Indicator: withDesign({
         // Replace list items with styled dots
-        Item: on(VitalCarouselDotClean)(vitalDotCarousel.Default),
+        Item: on(CarouselDotClean)(vitalCarouselDot.Default),
       }),
     },
     Spacing: {
@@ -107,7 +105,7 @@ const WithThumbnail = asVitalCarouselToken(
     Components: {
       Indicator: withDesign({
         // Replace list items with styled thumbs
-        Item: on(VitalCarouselThumbClean)(vitalThumbCarousel.Default),
+        Item: on(CarouselThumbClean)(vitalCarouselThumb.Default),
       }),
     },
     Theme: {
