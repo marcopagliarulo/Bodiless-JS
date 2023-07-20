@@ -103,7 +103,7 @@ const WithCarouselDots = asVitalCarouselToken(
         withDesign({
           // Controls Responspivenes Behavior.
           // A setting of at mobile of w-5/6 gives peek of next slide.
-          Item: 'w-11/12 md:w-1/3 lg:w-1/4',
+          Item: 'w-5/6 md:w-1/3 lg:w-1/4',
         }),
       ),
       ControlsWrapper: 'flex',
