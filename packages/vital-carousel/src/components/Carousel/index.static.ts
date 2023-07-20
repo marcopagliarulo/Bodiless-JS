@@ -4,7 +4,6 @@ import {
   // Use `StaticInline` if your component renders inline elements.
   // StaticInline as StaticComponent,
 } from '@bodiless/hydration';
-import '../../../assets/scroll-snap-slider.css';
 
 const vitalCarouselStatic = staticTokenCollection;
 
