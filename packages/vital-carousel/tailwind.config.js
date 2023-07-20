@@ -28,7 +28,7 @@ const twConfig = {
       addBase({
         '.scrollbar': {
           overflowY: 'auto',
-          scrollbarColor: '#019881 #BFBFBF',
+          scrollbarColor: 'var(--carouselActive) var(--carouselInActive)',
           scrollbarWidth: 'thin',
         },
         '.scrollbar::-webkit-scrollbar': {
@@ -37,11 +37,11 @@ const twConfig = {
           'border-radius': '10px',
         },
         '.scrollbar::-webkit-scrollbar-thumb': {
-          backgroundColor: '#019881',
+          backgroundColor: 'var(--carouselActive)',
           'border-radius': '10px',
         },
         '.scrollbar::-webkit-scrollbar-track': {
-          backgroundColor: '#BFBFBF',
+          backgroundColor: 'var(--carouselActive)',
           'border-radius': '10px',
         },
       });
@@ -73,12 +73,12 @@ const twConfig = {
           '.indicators input[type="radio"]': {
             display: 'none',
           },
-          // '.indicator:not(.-active):hover': {
-          //   'background-color': '#019881',
-          // },
-          // '.indicators .indicator.-active': {
-          //   'background-color': '#019881',
-          // },
+          '.indicator:not(.-active):hover .dot': {
+            'background-color': 'var(--carouselActive)',
+          },
+          '.indicators .indicator.-active .dot': {
+            'background-color': 'var(--carouselActive)',
+          },
         }
       );
     }),

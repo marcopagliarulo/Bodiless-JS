@@ -8,11 +8,15 @@ import { carouselScript } from './utils/carousel';
 
 type VitalCarouselBaseProps = DesignableComponentsProps<VitalCarouselComponents>;
 
+const cssString = ':root { --carouselActive: #019881; --carouselInActive: #BFBFBF; }';
 const CarouselScript = () => (
   <Helmet>
     <script type="text/javascript">
       {carouselScript}
     </script>
+    <style>
+      {cssString}
+    </style>
   </Helmet>
 );
 

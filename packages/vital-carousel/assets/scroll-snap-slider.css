@@ -105,13 +105,13 @@
 */
 
 
-.indicator:not(.-active):hover .dot {
+/* .indicator:not(.-active):hover .dot {
   background-color: #019881; 
 }
 
 .indicators .indicator.-active .dot {
   background-color: #019881; 
-}
+} */
 
 /* Move to Tailwind 
 .visually-hidden:not(:focus, :active) {
