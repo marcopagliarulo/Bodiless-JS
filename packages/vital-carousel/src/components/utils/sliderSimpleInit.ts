@@ -39,6 +39,14 @@ const sliderSimpleInit = (sliderSimpleElement) => {
   
         sliderSimple.slideTo(slideElementIndex);
       });
+      button.addEventListener('keydown', (event) => {
+        const slideElementIndex = Array.prototype.slice
+        .call(slides)
+        .findIndex((item) => item.dataset.index === button.dataset.index);
+
+      sliderSimple.slideTo(slideElementIndex);
+
+      });
     }
   
     sliderSimple.addEventListener('slide-pass', setSelected);

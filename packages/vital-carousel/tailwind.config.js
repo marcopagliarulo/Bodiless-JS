@@ -52,30 +52,27 @@ const twConfig = {
           '.scroll-snap-slider': {
             'padding-inline': '0',
           },
-          '.scroll-snap-slider.-multi': {
-            width: '100%',
-          },
           '.scroll-snap-slider.-draggable': {
             cursor: 'grab',
           },
           '.scroll-snap-slider.-draggable.-dragging': {
             cursor: 'grabbing',
           },
-          '.scroll-snap-slider .scroll-snap-slide': {
-            'scroll-snap-align': 'start',
-          },
-          '.indicators': {
-            transition: 'opacity 0.3s cubic-bezier(0.42, 0.42, 0.84, 1)',
-          },
+          // '.scroll-snap-slider .scroll-snap-slide': {
+          //   'scroll-snap-align': 'start',
+          // },
+          // '.indicators': {
+          //   transition: 'opacity 0.3s cubic-bezier(0.42, 0.42, 0.84, 1)',
+          // },
           '.indicators.-hidden': {
             opacity: '0',
           },
-          '.indicators input[type="radio"]': {
-            display: 'none',
-          },
-          '.indicator:not(.-active):hover .dot': {
-            'background-color': '#019881',
-          },
+          // '.indicators input[type="radio"]': {
+          //   display: 'none',
+          // },
+          // '.indicator:not(.-active):hover .dot': {
+          //   'background-color': '#019881',
+          // },
           '.indicators .indicator.-active .dot': {
             'background-color': '#019881',
           },
