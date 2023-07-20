@@ -19,7 +19,7 @@ import { useCarouselSlideIndex } from './hooks';
 // Simple Component that adds Slide Index controls to Li
 const CarouselSlide = (props: any) => {
   const slideIndex = useCarouselSlideIndex();
-  return <Li data-index={slideIndex} tab-index="-1" name="slide_switch" {...props} />;
+  return <Li data-index={slideIndex} name="slide_switch" {...props} />;
 };
 
 export default CarouselSlide;

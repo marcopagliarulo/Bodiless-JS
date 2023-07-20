@@ -2,6 +2,7 @@ import { withNodeKey } from '@bodiless/data';
 import {
   Img, Div, as, on, replaceWith, stylable, flowHoc,
   withDesign,
+  addProps,
 } from '@bodiless/fclasses';
 import { vitalImage } from '@bodiless/vital-image';
 import { vitalCard, CardClean } from '@bodiless/vital-card';
@@ -83,6 +84,11 @@ const WithCarouselDots = asVitalCarouselToken(
         Item: on(CarouselDotClean)(vitalCarouselDot.Default),
       }),
     },
+    A11y: {
+      Slider: withDesign({
+        Item: addProps({ tabindex: '0' }),
+      }),
+    },
     Behavior: {
       Slider: 'scrollbar-hide lg:scrollbar-default',
     },
@@ -92,11 +98,14 @@ const WithCarouselDots = asVitalCarouselToken(
       Indicator: vitalCarouselTokens.Spacing8,
     },
     Layout: {
-      Slider: withDesign({
-        // Controls Responspivenes Behavior.
-        // A setting of at mobile of w-5/6 gives peek of next slide.
-        Item: 'w-5/6 md:w-1/3 lg:w-1/4',
-      }),
+      Slider: as(
+        'w-screen',
+        withDesign({
+          // Controls Responspivenes Behavior.
+          // A setting of at mobile of w-5/6 gives peek of next slide.
+          Item: 'w-11/12 md:w-1/3 lg:w-1/4',
+        }),
+      ),
       ControlsWrapper: 'flex',
       Indicator: 'flex items-center dots -simple lg:hidden',
     }
@@ -130,51 +139,6 @@ const WithThumbnail = asVitalCarouselToken(
     },
   }
 );
-
-// const asAccessibleCarouselButton = flowHoc(
-//   addProps({
-//     role: 'button',
-//   }),
-// );
-
-// const withAriaSelectedCarouselItem = flowHoc(
-//   addPropsIf(useIsCarouselItemActive)({
-//     'aria-selected': true,
-//     'aria-hidden': false,
-//   }),
-//   addPropsIf(negate(useIsCarouselItemActive))({
-//     'aria-selected': false,
-//     'aria-hidden': true,
-//   }),
-// );
-
-// const asAccessibleCarousel = asVitalCarouselToken({
-//   A11y: {
-//     Slider: flowHoc(
-//       addProps({
-//         tabIndex: 'auto',
-//       }),
-//       withDesign({
-//         Item: flowHoc(
-//           withCarouselItemTabIndex,
-//           withAriaSelectedCarouselItem,
-//         ),
-//       }),
-//     ),
-//     Dots: withDesign({
-//       Item: flowHoc(
-//         withAriaSelectedCarouselItem,
-//         addProps({
-//           'aria-hidden': false,
-//           role: 'presentation',
-//         }),
-//         withDesign({
-//           Dot: asAccessibleCarouselButton,
-//         }),
-//       ),
-//     }),
-//   }
-// });
 
 const WithImageSlide = asVitalCarouselToken({
   Components: {
@@ -236,7 +200,6 @@ const vitalCarousel: VitalCarousel = {
   WithControls,
   WithCarouselDots,
   WithThumbnail,
-  // asAccessibleCarousel,
   WithImageSlide,
   WithCardSlide,
   MobileOnly,
