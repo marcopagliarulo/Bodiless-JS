@@ -1,11 +1,16 @@
+import { as } from '@bodiless/fclasses';
 import { asVitalCarouselDotToken } from '../VitalCarouselDotClean';
+import vitalCarouselTokens from '../../CarouselTokens';
 
 const Default = asVitalCarouselDotToken({
   Theme: {
-    Dot: 'bg-[ ] rounded-full border-none',
+    Dot: as(
+      'rounded-full border-none',
+      vitalCarouselTokens.ScrollIndicatorBackgroundInactive,
+    ),
   },
   Layout: {
-    // Hardcdoded for now, site builders can override this.
+    // Hardcoded for now, site builders can override this.
     Dot: 'dot block w-[8px] h-[8px]',
   },
   Behavior: {

@@ -6,7 +6,7 @@ import {
 import { vitalImage } from '@bodiless/vital-image';
 import { vitalCard, CardClean } from '@bodiless/vital-card';
 import { asBodilessList } from '@bodiless/components';
-// import vitalCarouselTokens from '../../CarouselTokens';
+import vitalCarouselTokens from '../../CarouselTokens';
 import { asVitalCarouselToken } from '../VitalCarouselClean';
 import type { VitalCarousel } from '../types';
 import { CAROUSEL_NODE_KEY } from '../utils/constants';
@@ -59,7 +59,7 @@ const Default = asVitalCarouselToken({
   },
   Spacing: {
     // Padding under slider above controls
-    Slider: 'pb-5 lg:pb-6', // TODO Convert to SpacingMedium = Spacing20 and lg:Spacing24
+    Slider: vitalCarouselTokens.SpacingMedium,
   },
 });
 
@@ -85,9 +85,9 @@ const WithCarouselDots = asVitalCarouselToken(
       }),
     },
     Spacing: {
-      Slider: '-multi space-x-2',
+      Slider: as('-multi', vitalCarouselTokens.Spacing8),
       ControlsWrapper: 'pt-2',
-      Indicator: 'space-x-2', // TODO: Convert to Spacing8
+      Indicator: vitalCarouselTokens.Spacing8,
     },
     Layout: {
       Slider: withDesign({
@@ -121,7 +121,7 @@ const WithThumbnail = asVitalCarouselToken(
     },
     Spacing: {
       ControlsWrapper: 'pt-6',
-      Indicator: 'space-x-2',
+      Indicator: vitalCarouselTokens.Spacing8,
     },
   }
 );

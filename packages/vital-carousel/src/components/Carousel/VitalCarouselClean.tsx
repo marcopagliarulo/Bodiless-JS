@@ -9,8 +9,8 @@ import vitalCarouselTokens from '../CarouselTokens';
 
 type VitalCarouselBaseProps = DesignableComponentsProps<VitalCarouselComponents>;
 
-const carouselActive = vitalCarouselTokens.ScrollIndicatorInactive;
-const carouselInActive = vitalCarouselTokens.ScrollIndicatorActive;
+const carouselActive = '#019881'; // vitalCarouselTokens.ScrollIndicatorInactive
+const carouselInActive = '#BFBFBF'; // vitalCarouselTokens.ScrollIndicatorActive;
 
 const cssString = `:root { --carouselActive: ${carouselActive}; --carouselInActive: ${carouselInActive}; }`;
 
