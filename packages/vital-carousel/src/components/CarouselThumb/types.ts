@@ -32,4 +32,4 @@ export interface VitalCarouselThumb {
   Default: CarouselThumbToken;
 
   // Document other tokens here.
-};
+}

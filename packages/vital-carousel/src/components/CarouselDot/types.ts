@@ -32,4 +32,4 @@ export interface VitalCarouselDot {
   Default: CarouselDotToken;
 
   // Document other tokens here.
-};
+}
