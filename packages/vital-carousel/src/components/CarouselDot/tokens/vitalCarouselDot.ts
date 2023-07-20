@@ -14,9 +14,6 @@ const Default = asCarouselDotToken({
     // Hardcoded for now, site builders can override this.
     Dot: 'dot block w-[8px] h-[8px]',
   },
-  Behavior: {
-    Wrapper: 'cursor-pointer'
-  }
 });
 
 // Add additional variant tokens or variators here.

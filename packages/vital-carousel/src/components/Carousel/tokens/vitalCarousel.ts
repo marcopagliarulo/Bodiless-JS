@@ -33,9 +33,7 @@ const Default = asVitalCarouselToken({
     Slider: as(
       'scroll-smooth snap-always snap-x',
       'scroll-snap-slider -simple',
-      'scrollbar-hide lg:scrollbar-default',
-      // Colors the scrollbar
-      'scrollbar',
+      'scrollbar', // Colors the scrollbar
       withDesign({
         Item: as(
           'scroll-snap-slide',
@@ -82,6 +80,9 @@ const WithCarouselDots = asVitalCarouselToken(
         Item: on(CarouselDotClean)(vitalCarouselDot.Default),
       }),
     },
+    Behavior: {
+      Slider: 'scrollbar-hide lg:scrollbar-default',
+    },
     Spacing: {
       Slider: as('-multi', vitalCarouselTokens.Spacing8),
       ControlsWrapper: 'pt-2',
@@ -107,6 +108,9 @@ const WithThumbnail = asVitalCarouselToken(
         // Replace list items with styled thumbs
         Item: on(CarouselThumbClean)(vitalCarouselThumb.Default),
       }),
+    },
+    Behavior: {
+      Slider: 'scrollbar-hide',
     },
     Theme: {
       Slider: withDesign({

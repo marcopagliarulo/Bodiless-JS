@@ -28,7 +28,7 @@ const twConfig = {
       addBase({
         '.scrollbar': {
           overflowY: 'auto',
-          scrollbarColor: 'var(--carouselActive) var(--carouselInActive)',
+          scrollbarColor: '#019881 #BFBFBF',
           scrollbarWidth: 'thin',
         },
         '.scrollbar::-webkit-scrollbar': {
@@ -37,11 +37,11 @@ const twConfig = {
           'border-radius': '10px',
         },
         '.scrollbar::-webkit-scrollbar-thumb': {
-          backgroundColor: 'var(--carouselActive)',
+          backgroundColor: '#019881',
           'border-radius': '10px',
         },
         '.scrollbar::-webkit-scrollbar-track': {
-          backgroundColor: 'var(--carouselInActive)',
+          backgroundColor: '#019881',
           'border-radius': '10px',
         },
       });

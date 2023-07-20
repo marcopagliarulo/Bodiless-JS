@@ -19,7 +19,7 @@ const CarouselThumbBase: FC<CarouselThumbBaseProps> = ({ components: C, ...rest 
   const slideIndex = useCarouselSlideIndex();
 
   return (
-    <C.Wrapper class="thumbs indicator" data-index={slideIndex} tab-index="-1" type="button" {...rest}>
+    <C.Wrapper class="thumbs indicator" data-index={slideIndex} tab-index="0" type="button" {...rest}>
       <C.Image />
     </C.Wrapper>
   );
