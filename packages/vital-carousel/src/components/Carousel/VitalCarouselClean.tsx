@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import type { DesignableComponentsProps } from '@bodiless/fclasses';
 import type { VitalCarouselComponents } from './types';
 import { carouselScript } from './utils/carousel';
-import vitalCarouselTokens from '../CarouselTokens';
+// import vitalCarouselTokens from '../CarouselTokens';
 
 type VitalCarouselBaseProps = DesignableComponentsProps<VitalCarouselComponents>;
 
