@@ -5,10 +5,15 @@ import { Helmet } from 'react-helmet';
 import type { DesignableComponentsProps } from '@bodiless/fclasses';
 import type { VitalCarouselComponents } from './types';
 import { carouselScript } from './utils/carousel';
+import vitalCarouselTokens from '../CarouselTokens';
 
 type VitalCarouselBaseProps = DesignableComponentsProps<VitalCarouselComponents>;
 
-const cssString = ':root { --carouselActive: #019881; --carouselInActive: #BFBFBF; }';
+const carouselActive = vitalCarouselTokens.ScrollIndicatorInactive;
+const carouselInActive = vitalCarouselTokens.ScrollIndicatorActive;
+
+const cssString = `:root { --carouselActive: ${carouselActive}; --carouselInActive: ${carouselInActive}; }`;
+
 const CarouselScript = () => (
   <Helmet>
     <script type="text/javascript">

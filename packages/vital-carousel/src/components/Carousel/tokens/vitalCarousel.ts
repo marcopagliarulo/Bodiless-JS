@@ -9,8 +9,6 @@ import { asBodilessList } from '@bodiless/components';
 // import vitalCarouselTokens from '../../CarouselTokens';
 import { asVitalCarouselToken } from '../VitalCarouselClean';
 import type { VitalCarousel } from '../types';
-import '../../../../assets/scroll-snap-slider.css';
-
 import { CAROUSEL_NODE_KEY } from '../utils/constants';
 import CarouselSlide from '../utils/CarouselSlide';
 import vitalDotCarousel from './vitalCarouseDot';
@@ -37,6 +35,7 @@ const Default = asVitalCarouselToken({
     Slider: as(
       'scroll-smooth snap-always snap-x',
       'scroll-snap-slider -simple',
+      'scrollbar-hide lg:scrollbar-default',
       // Colors the scrollbar
       'scrollbar',
       withDesign({
