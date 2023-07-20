@@ -7,16 +7,19 @@ import { vitalImage } from '@bodiless/vital-image';
 import { vitalCard, CardClean } from '@bodiless/vital-card';
 import { asBodilessList } from '@bodiless/components';
 import vitalCarouselTokens from '../../CarouselTokens';
-import { asVitalCarouselToken } from '../VitalCarouselClean';
+import { asVitalCarouselToken, withCarouselInit } from '../VitalCarouselClean';
 import type { VitalCarousel } from '../types';
-import { CAROUSEL_NODE_KEY } from '../utils/constants';
-import CarouselSlide from '../utils/CarouselSlide';
+import { CAROUSEL_NODE_KEY } from '../../utils/constants';
+import CarouselSlide from '../../utils/CarouselSlide';
 import { CarouselThumbClean, vitalCarouselThumb } from '../../CarouselThumb';
 import { CarouselDotClean, vitalCarouselDot } from '../../CarouselDot';
 
 // Using withDesign throughout file to target the list that is added by asBodilessList.
 
 const Default = asVitalCarouselToken({
+  Core: {
+    Wrapper: withCarouselInit,
+  },
   Components: {
     Slider: flowHoc(
       // Convert to Bodiless List with carousel node key

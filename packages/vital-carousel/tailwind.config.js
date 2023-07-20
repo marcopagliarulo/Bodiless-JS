@@ -41,7 +41,7 @@ const twConfig = {
           'border-radius': '10px',
         },
         '.scrollbar::-webkit-scrollbar-track': {
-          backgroundColor: '#019881',
+          backgroundColor: '#BFBFBF',
           'border-radius': '10px',
         },
       });
@@ -74,10 +74,10 @@ const twConfig = {
             display: 'none',
           },
           '.indicator:not(.-active):hover .dot': {
-            'background-color': 'var(--carouselActive)',
+            'background-color': '#019881',
           },
           '.indicators .indicator.-active .dot': {
-            'background-color': 'var(--carouselActive)',
+            'background-color': '#019881',
           },
         }
       );

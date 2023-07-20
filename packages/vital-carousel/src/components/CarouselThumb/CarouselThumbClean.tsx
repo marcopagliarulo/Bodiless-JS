@@ -3,7 +3,7 @@ import { asVitalTokenSpec } from '@bodiless/vital-elements';
 import { designable, Div, Img } from '@bodiless/fclasses';
 import type { DesignableComponentsProps } from '@bodiless/fclasses';
 import type { CarouselThumbComponents } from './types';
-import { useCarouselSlideIndex } from '../Carousel/utils/hooks';
+import { useCarouselSlideIndex } from '../utils/hooks';
 
 type CarouselThumbBaseProps = DesignableComponentsProps<CarouselThumbComponents>;
 
