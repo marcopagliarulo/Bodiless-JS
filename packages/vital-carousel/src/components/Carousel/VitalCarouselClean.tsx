@@ -3,10 +3,10 @@ import React, {
 } from 'react';
 import { asVitalTokenSpec } from '@bodiless/vital-elements';
 import {
-  designable, Div, Ul, HOC
+  designable, Div, Ul
 } from '@bodiless/fclasses';
 import { Helmet } from 'react-helmet';
-import type { DesignableComponentsProps } from '@bodiless/fclasses';
+import type { DesignableComponentsProps, HOC } from '@bodiless/fclasses';
 import type { VitalCarouselComponents } from './types';
 import { carouselScrollSnapSliderScript } from '../utils/ScrollSnapSlider';
 import { sliderSimpleInitScript } from '../utils/sliderSimpleInit';
@@ -29,7 +29,7 @@ const withCarouselInit: HOC = Component => {
     const carouselRef = useRef<HTMLElement>(null);
 
     useLayoutEffect(() => {
-      if (sliderSimpleInit !== 'undefined') {
+      if (typeof sliderSimpleInit !== 'undefined') {
         sliderSimpleInit(carouselRef.current);
       }
     }, []);
@@ -64,6 +64,28 @@ const VitalCarouselBase: FC<VitalCarouselBaseProps> = ({ components: C, ...rest 
     </C.ControlsWrapper>
   </C.Wrapper>
 );
+
+// const VitalCarouselBase: FC<VitalCarouselBaseProps> = ({ components: C, ...rest }) => {
+//   const carouselRef = useRef<HTMLElement>(null);
+
+//   useLayoutEffect(() => {
+//     if (typeof sliderSimpleInit !== 'undefined') {
+//       sliderSimpleInit(carouselRef.current);
+//     }
+//   }, []);
+
+//   return (
+//     <C.Wrapper {...rest}>
+//       <C.Script />
+//       <C.SliderWrapper>
+//         <C.Slider forwardRef={carouselRef} />
+//       </C.SliderWrapper>
+//       <C.ControlsWrapper>
+//         <C.Indicator />
+//       </C.ControlsWrapper>
+//     </C.Wrapper>
+//   );
+// };
 
 const VitalCarouselClean = designable(vitalCarouselComponents, 'VitalCarousel')(VitalCarouselBase);
 
