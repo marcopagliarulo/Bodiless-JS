@@ -8,7 +8,7 @@ import { vitalImage } from '@bodiless/vital-image';
 import { vitalCard, CardClean } from '@bodiless/vital-card';
 import { asBodilessList } from '@bodiless/components';
 import vitalCarouselTokens from '../../CarouselTokens';
-import { asVitalCarouselToken } from '../VitalCarouselClean';
+import { asVitalCarouselToken, withCarouselInit } from '../VitalCarouselClean';
 import type { VitalCarousel } from '../types';
 import { CAROUSEL_NODE_KEY } from '../../utils/constants';
 import CarouselSlide from '../../utils/CarouselSlide';
@@ -18,9 +18,6 @@ import { CarouselDotClean, vitalCarouselDot } from '../../CarouselDot';
 // Using withDesign throughout file to target the list that is added by asBodilessList.
 
 const Default = asVitalCarouselToken({
-  // Core: {
-  //   Wrapper: withCarouselInit,
-  // },
   Components: {
     Slider: flowHoc(
       // Convert to Bodiless List with carousel node key
@@ -31,9 +28,12 @@ const Default = asVitalCarouselToken({
       }),
     ),
   },
-  Behavior: {
-    // Setup scroll snap behavior
+  Theme: {
     Wrapper: 'slider',
+  },
+  Behavior: {
+    Wrapper: withCarouselInit,
+    // Setup scroll snap behavior
     Slider: as(
       'scroll-smooth snap-always snap-x',
       'scroll-snap-slider -simple',
@@ -99,7 +99,7 @@ const WithCarouselDots = asVitalCarouselToken(
     },
     Layout: {
       Slider: as(
-        'w-screen',
+        'w-screen md:w-full',
         withDesign({
           // Controls Responspivenes Behavior.
           // A setting of at mobile of w-5/6 gives peek of next slide.
