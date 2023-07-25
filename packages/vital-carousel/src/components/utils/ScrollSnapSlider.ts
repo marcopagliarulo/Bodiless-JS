@@ -86,7 +86,7 @@ export class ScrollSnapSlider {
     this.element = element;
     this.sizingMethod = (slider: ScrollSnapSlider) => {
       if (slider.element.firstElementChild) {
-        return (slider.element.firstElementChild as HTMLElement).offsetWidth || 0
+        return (slider.element.firstElementChild as HTMLElement).offsetWidth || 0;
       }
       return 0;
     };
@@ -224,7 +224,7 @@ export class ScrollSnapSlider {
       this.scrollTimeout
     );
   };
-};
+}
 
 export const carouselScrollSnapSliderScript = `
 

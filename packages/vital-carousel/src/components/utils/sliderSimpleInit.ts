@@ -8,7 +8,7 @@ import { ScrollSnapSlider } from './ScrollSnapSlider';
 
 export const sliderSimpleInit = (sliderSimpleElement: HTMLElement) => {
   try {
-    const slider = sliderSimpleElement.getElementsByClassName('scroll-snap-slider'); 
+    const slider = sliderSimpleElement.getElementsByClassName('scroll-snap-slider');
     const slides = sliderSimpleElement.getElementsByClassName(
       'scroll-snap-slide'
     );
