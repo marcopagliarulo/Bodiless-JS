@@ -32,9 +32,9 @@ const Default = asVitalCarouselToken({
     Wrapper: 'slider',
   },
   Behavior: {
+    Wrapper: withCarouselInit,
     // Setup scroll snap behavior
     Slider: as(
-      withCarouselInit,
       'scroll-smooth snap-always snap-x',
       'scroll-snap-slider -simple',
       'scrollbar', // Colors the scrollbar

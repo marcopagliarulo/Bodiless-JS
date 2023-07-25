@@ -15,7 +15,8 @@ const Default = asCarouselThumbToken({
     Image: 'w-[94px] h-[94px]',
   },
   Behavior: {
-    Image: 'cursor-pointer'
+    Image: 'cursor-pointer',
+    Wrapper: 'thumbs indicator'
   },
   Spacing: {
     Wrapper: 'space-x-2',

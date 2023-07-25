@@ -9,11 +9,11 @@ import { Helmet } from 'react-helmet';
 import type { DesignableComponentsProps, HOC } from '@bodiless/fclasses';
 import type { VitalCarouselComponents } from './types';
 import { carouselScrollSnapSliderScript } from '../utils/ScrollSnapSlider';
-import { sliderSimpleInitScript } from '../utils/sliderSimpleInit';
+import { sliderSimpleInitScript, sliderSimpleInit } from '../utils/sliderSimpleInit';
 
 type VitalCarouselBaseProps = DesignableComponentsProps<VitalCarouselComponents>;
 
-const CarouselScript = () => (
+const CarouselScript = () => (process.env.NODE_ENV === 'production' ? (
   <Helmet>
     <script type="text/javascript">
       {carouselScrollSnapSliderScript}
@@ -22,14 +22,14 @@ const CarouselScript = () => (
       {sliderSimpleInitScript}
     </script>
   </Helmet>
-);
+): <></>);
 
 const withCarouselInit: HOC = Component => {
   const WithCarouselInit = (props: any) => {
     const carouselRef = useRef<HTMLElement>(null);
 
     useLayoutEffect(() => {
-      if (typeof sliderSimpleInit !== 'undefined') {
+      if (typeof sliderSimpleInit !== 'undefined' && carouselRef.current) {
         sliderSimpleInit(carouselRef.current);
       }
     }, []);
