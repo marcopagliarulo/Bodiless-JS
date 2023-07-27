@@ -154,5 +154,10 @@ tailwind variant prefixes (like 'hover:').
 The current curriculum articles on setting up typography, colors, etc are obsoleted by
 the new token architecture and need to be updated.
 
+### Add Version
+
+There seems to be a version number at the top of the tokens.json.  It would be very valuable
+to include this version number in a comment at the top of every generated file...
+
 
 
