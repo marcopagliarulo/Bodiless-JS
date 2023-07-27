@@ -1,12 +1,48 @@
+/**
+ * A normalized variable with all attributes calculated.
+ */
 export type NormalVariable = {
-  level?: Levels,
+  /**
+   * The token level (Core, Semantic or Component)
+   */
+  level?: string,
+  /**
+   * For component tokens, the component/subcomponent/variant to which the token applies, eg
+   * `CardPrimaryTitle`.  For Semantic tokens this is "All".
+   */
   component?: string,
-  category?: Categories,
-  target?: Targets,
-  subTarget?: SubTargets,
-  state?: States,
-  viewport?: Viewports,
-  normalValue?: NormalVariable|string,
+  /**
+   * The token category (eg Color, Spacing, Radius)
+   */
+  category?: string,
+  /**
+   * The specific css property to which the token applies
+   * eg. Text/Background/Border (for colors) or Padding/Margin for Spacing.
+   */
+  target?: string,
+  /**
+   * Some properties can be further qualified
+   * eg Spacing can be Top/Bottom/etc
+   */
+  subTarget?: string,
+  /**
+   * The interactive state to which the variable applies
+   * eg Active/Hover/etc...
+   */
+  state?: string,
+  /**
+   * The device size at which the token applies
+   * eg Mobile/Tablet/Desktop
+   */
+  viewport?: string,
+  /**
+   * The theme for which the token applies (used only for color variables)
+   * Light/Dark
+   */
+  theme?: string,
+  /**
+   * The value of the token suitable for use in code
+   */
   parsedValue?: string,
 };
 
@@ -220,9 +256,9 @@ export enum Sides {
   Right = 'Right',
   Top = 'Top',
   Bottom = 'Bottom',
-  X = 'X',
-  Y = 'Y',
-  ALL = 'ALL',
+  X = 'SidesX',
+  Y = 'SidesY',
+  ALL = 'All',
 }
 
 export const TwSides: Record<Sides, string> = {
@@ -230,9 +266,9 @@ export const TwSides: Record<Sides, string> = {
   Right: 'r',
   Top: 't',
   Bottom: 'b',
-  X: 'x',
-  Y: 'y',
-  ALL: '',
+  SidesX: 'x',
+  SidesY: 'y',
+  All: '',
 };
 
 export const isSide = (

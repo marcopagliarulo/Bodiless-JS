@@ -28,6 +28,7 @@ import {
   Themes,
   isDevice,
   TwDevicePrefixes,
+  NormalVariable,
 } from './types';
 
 class FigmaVariable implements FigmaVariableInterface {
@@ -115,6 +116,9 @@ class FigmaVariable implements FigmaVariableInterface {
     }
     if (this.isColor) {
       if (this.level === Levels.Component) {
+        // @TODO Sometimes component color variables point to core:
+        // eg `Components/Form Field/Border/Error` points to `Core/Color/Signal/Error/Error`
+        // This currently raises an error but we need to handle it
         if (!alias.isSemantic) this.errors.add(`Component color alias "(${alias.longName}" is not semantic`);
         if (!alias.isBrand) this.errors.add(`Component color alias "(${alias.longName}" is not brand`);
       } else if (!alias.isCore) {
@@ -307,6 +311,31 @@ class FigmaVariable implements FigmaVariableInterface {
       this.errors.add(`Non-viewport mode "${this.mode}" for device variable`);
     }
     return this.segments.find(isViewport);
+  }
+
+  get normalJson(): Required<NormalVariable> {
+    const {
+      level = 'undefined',
+      component = 'undefined',
+      category = 'undefined',
+      viewport = 'undefined',
+      theme = 'undefined',
+      target = 'undefined',
+      subTarget = 'undefined',
+      state = 'undefined',
+      parsedValue = 'undefined',
+    } = this;
+    return {
+      level,
+      component,
+      category,
+      viewport,
+      theme,
+      target,
+      subTarget,
+      state,
+      parsedValue,
+    };
   }
 
   get normalName(): string {

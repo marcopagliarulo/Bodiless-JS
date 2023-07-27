@@ -33,10 +33,11 @@ export const getDeviceTokensForComponent = (
     (acc, mobile) => {
       const tablet = variables.find(v => v.name === mobile.name && v.mode === Devices.Tablet);
       const desktop = variables.find(v => v.name === mobile.name && v.mode === Devices.Desktop);
-      const value = [mobile.parsedValue, tablet?.parsedValue, desktop?.parsedValue]
+      const value = [mobile, tablet, desktop]
+        .map(v => v?.parsedValue?.replace(/'/g, ''))
         .filter(Boolean)
         .join(' ');
-      const entry = { [mobile.vitalName]: value };
+      const entry = { [mobile.vitalName]: `'${value}'` };
       logErrors(mobile);
       return mobile.errors.size === 0 ? { ...acc, ...entry } : acc;
     },
