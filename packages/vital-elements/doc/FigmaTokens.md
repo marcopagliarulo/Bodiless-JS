@@ -35,8 +35,31 @@ to Core/Green.
 Currently, we only have semantic brand tokens for colors (but see "Device Tokens" below), and
 these produce the `vitalColor` token collection.  The values of each 
 
+### Theme Variables
 
-In some cases, one Semantic token may be an alias for another. For example, 
+The system is designed to support two themes, "Light" and "Dark" (Dark theme
+values are not yet implemented). Variables in the Brand collection are (or
+should be) always themed, ie, they should have eithr "Light Theme" or "Dark
+Theme" in their name. The "Theme Variables" collection contains variables with
+*unthemed* names. These use the Figma "Modes" (light and dark) to point to the
+pair of correspnoding variables in the Brand Collection. When examining a
+component in Figma, the tokens for a particular themable attrbute (mostly
+colors) will point to a Theme variable, which will in turn point to a pair of
+Brand variables.
+
+The import script does not actually look at the Theme Tokens collection.  Instead,
+for eery Light THeme component variable in the Brand Tokens collection, it creates
+a corresponding token with the ame name, leaving out the theme. For now, this has the
+same value as the Light THeme version, but in future it will combine boht light and
+dark theme.
+
+Tailwind provides built-in theme support via the `dark:` prefix, so -- once dark theme
+values are defined, we will attach both the light and dark theme tokens to the component,
+eg: `kenvue-green-green-80pct dark:kenvue-green-green-40pct`.
+
+For every semantic color variable which is not defined as dark theme, we create a matching
+variable with the smae name and the `dark:` prefix.
+
 
 ## Technical Details
 
