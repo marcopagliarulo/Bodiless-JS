@@ -10,7 +10,7 @@ const meta = {
 
 export default asTokenGroup(meta)({
   DropdownTextBody: vitalColor.TextLightThemeBase,
-  BorderColor: vitalColor.BorderLightThemeBase,
+  BorderBorder: vitalColor.BorderLightThemeBase,
   LabelBackgroundBackground: vitalColor.BackgroundBase,
   LabelTextLabel: vitalColor.TextLightThemeBase,
   DropdownBackgroundBackground: vitalColor.BackgroundBase,
@@ -19,7 +19,7 @@ export default asTokenGroup(meta)({
   DropdownTextDarkThemeBody: vitalColor.TextDarkThemeBase,
   DropdownTextLightThemeBody: vitalColor.TextLightThemeBase,
   DropdownBackgroundDarkThemeBackground: vitalColor.BackgroundAlt8,
-  BorderLightThemeColor: vitalColor.BorderLightThemeBase,
+  BorderLightThemeBorder: vitalColor.BorderLightThemeBase,
   LabelBorderRadiusActiveTopRight: 'rounded-tr-0px',
   LabelBorderRadiusActiveTopLeft: 'rounded-tl-0px',
   LabelBorderRadiusIdleBottomLeft: 'rounded-bl-0px',
@@ -34,7 +34,7 @@ export default asTokenGroup(meta)({
   LabelBorderRadiusActiveBottomLeft: 'rounded-bl-0px',
   DropdownBorderRadiusActiveTopLeft: 'rounded-tl-0px',
   DropdownBackgroundLightThemeBackground: vitalColor.BackgroundBase,
-  BorderDarkThemeColor: vitalColor.BorderDarkThemeBase,
+  BorderDarkThemeBorder: vitalColor.BorderDarkThemeBase,
   LabelBackgroundDarkThemeBackground: vitalColor.BackgroundAlt7,
   DropdownPaddingBottom: 'pb-16px md:pb-16px lg:pb-16px',
   DropdownPaddingLeft: 'pl-16px md:pl-16px lg:pl-24px',

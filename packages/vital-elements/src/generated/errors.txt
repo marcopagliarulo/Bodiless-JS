@@ -2,69 +2,152 @@ Errors for Brand Tokens/White Label/Semantic/Color/Background/Section/Light Them
  . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
 Errors for Brand Tokens/White Label/Semantic/Color/Background/Section/Light Theme/Tertiary
  . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
+Errors for Brand Tokens/White Label/Components/Input/Form Field/Border/Focus
+ . Brand variable has no theme
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Informational" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Informational" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Radio/Border/Light Theme/Focus - Unchecked
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Informational" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Informational" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Radio/Border/Light Theme/Error - Checked
+ . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Radio/Background/Light Theme/Error - Unchecked
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Radio/Border/Dark Theme/Hover
+ . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
+Errors for Brand Tokens/White Label/Components/Input/Radio/Border/Dark Theme/Idle
+ . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
+Errors for Brand Tokens/White Label/Components/Input/Radio/Background/Dark Theme/Checked
+ . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
+Errors for Brand Tokens/White Label/Components/Input/Radio/Background/Dark Theme/Hover
+ . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
+Errors for Brand Tokens/White Label/Components/Input/Radio/Background/Dark Theme/Idle
+ . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
+Errors for Brand Tokens/White Label/Components/Input/Radio/Background/Light Theme/Disabled - Unchecked
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Radio/Background/Light Theme/Idle - Unchecked
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Radio/Border/Light Theme/Error - Unchecked
+ . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Checkbox/Border/Light Theme/Focus - Unchecked
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Informational" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Informational" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Checkbox/Background/Dark Theme/Hover
+ . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
+Errors for Brand Tokens/White Label/Components/Input/Radio/Background/Light Theme/Error - Checked
+ . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Radio/Background/Dark Theme/Disabled
+ . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
+Errors for Brand Tokens/White Label/Components/Input/Checkbox/Background/Light Theme/Hover - Unchecked
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Checkbox/Background/Light Theme/Idle - Unchecked
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Checkbox/Border/Light Theme/Error - Unchecked
+ . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Checkbox/Border/Light Theme/Error - Checked
+ . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Checkbox/Background/Light Theme/Error - Unchecked
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Radio/Border/Dark Theme/Disabled
+ . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
+Errors for Brand Tokens/White Label/Components/Input/Radio/Border/Dark Theme/Checked
+ . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
+Errors for Brand Tokens/White Label/Components/Input/Checkbox/Background/Light Theme/Error - Checked
+ . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Checkbox/Border/Light Theme/Focus - Checked
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Informational" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Informational" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Form Field/Text/Caption
+ . Brand variable has no theme
+ . Component color alias "(Theme Tokens/undefined/Typography/Body/Small" is not semantic
+ . Component color alias "(Theme Tokens/undefined/Typography/Body/Small" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Form Field/Border/Error
+ . Brand variable has no theme
+ . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Checkbox/Background/Dark Theme/Disabled
+ . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
+Errors for Brand Tokens/White Label/Components/Input/Checkbox/Background/Dark Theme/Idle
+ . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
+Errors for Brand Tokens/White Label/Components/Input/Form Field/Text/Error
+ . Brand variable has no theme
+ . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Form Field/Border/Active
+ . Brand variable has no theme
+Errors for Brand Tokens/White Label/Components/Input/Form Field/Border/Idle
+ . Brand variable has no theme
+Errors for Brand Tokens/White Label/Components/Input/Form Field/Border/Selected
+ . Brand variable has no theme
+Errors for Brand Tokens/White Label/Components/Input/Checkbox/Background/Dark Theme/Checked
+ . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
+Errors for Brand Tokens/White Label/Components/Input/Form Field/Text/Input
+ . Brand variable has no theme
+ . Component color alias "(Theme Tokens/undefined/Typography/Body/Regular" is not semantic
+ . Component color alias "(Theme Tokens/undefined/Typography/Body/Regular" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Form Field/Text/Label
+ . Brand variable has no theme
+ . Component color alias "(Theme Tokens/undefined/Typography/Eyebrow/Eyebrow" is not semantic
+ . Component color alias "(Theme Tokens/undefined/Typography/Eyebrow/Eyebrow" is not brand
+Errors for Brand Tokens/White Label/Components/Input/Radio/Border/Light Theme/Focus - Checked
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Informational" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Informational" is not brand
+Errors for Brand Tokens/White Label/Components/Product Card/Image/All
+ . Unknown variable type
+Errors for Brand Tokens/White Label/Components/Filter/Breadcrumb/Border/Light Theme/Border
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not brand
+Errors for Brand Tokens/White Label/Components/Filter/Quick Filter/Border/Light Theme/Focus - Active
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Informational" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Informational" is not brand
+Errors for Brand Tokens/White Label/Components/Filter/Quick Filter/Border/Light Theme/Focus - Unchecked
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Informational" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Informational" is not brand
+Errors for Brand Tokens/White Label/Components/Filter/Category/Border/Light Theme/Border
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not brand
+Errors for Device Tokens/Mobile/Components/Filter/Padding/Bottom
+ . Device alias collection "Device Tokens/undefined/Section/Margin/SidesY" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Section/Margin/SidesY" is not core
+Errors for Device Tokens/Mobile/Components/Filter/Padding/Right
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+Errors for Device Tokens/Mobile/Components/Filter/Padding/Left
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+Errors for Device Tokens/Mobile/Components/Filter/Padding/Top
+ . Device alias collection "Device Tokens/undefined/Section/Margin/SidesY" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Section/Margin/SidesY" is not core
+Errors for Brand Tokens/White Label/Components/Link/Border/Dark Theme/Focus
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Tint/40%" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Tint/40%" is not brand
+Errors for Brand Tokens/White Label/Components/Link/Border/Light Theme/Focus
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Informational" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Signal/Informational/Informational" is not brand
 Errors for Device Tokens/Mobile/Components/Floating Button/Padding/Bottom
  . Device alias collection "Device Tokens/undefined/Spacing/X Small" is not core
  . Spcaing alias collection "Device Tokens/undefined/Spacing/X Small" is not core
 Errors for Device Tokens/Mobile/Components/Floating Button/Padding/Right
- . Device alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
- . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
 Errors for Device Tokens/Mobile/Components/Floating Button/Padding/Top
  . Device alias collection "Device Tokens/undefined/Spacing/X Small" is not core
  . Spcaing alias collection "Device Tokens/undefined/Spacing/X Small" is not core
 Errors for Device Tokens/Mobile/Components/Floating Button/Padding/Left
- . Device alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
- . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
-Errors for Brand Tokens/White Label/Components/Checkbox/Background/Dark Theme/Hover
- . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
-Errors for Brand Tokens/White Label/Components/Checkbox/Border/Dark Theme/Disabled
- . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
-Errors for Brand Tokens/White Label/Components/Checkbox/Border/Dark Theme/Checked
- . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
-Errors for Brand Tokens/White Label/Components/Checkbox/Border/Dark Theme/Hover
- . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
-Errors for Brand Tokens/White Label/Components/Checkbox/Border/Dark Theme/Idle
- . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
-Errors for Brand Tokens/White Label/Components/Checkbox/Background/Light Theme/Idle
- . Component color alias "(Core Values/undefined/Color/--NO VALUE--" is not semantic
- . Component color alias "(Core Values/undefined/Color/--NO VALUE--" is not brand
-Errors for Brand Tokens/White Label/Components/Checkbox/Background/Dark Theme/Disabled
- . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
-Errors for Brand Tokens/White Label/Components/Checkbox/Background/Dark Theme/Idle
- . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
-Errors for Brand Tokens/White Label/Components/Checkbox/Background/Dark Theme/Checked
- . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
-Errors for Brand Tokens/White Label/Components/Form Field/Text/Caption
- . Brand variable has no theme
- . Component color alias "(Theme Tokens/undefined/Typography/Body/Small" is not semantic
- . Component color alias "(Theme Tokens/undefined/Typography/Body/Small" is not brand
-Errors for Brand Tokens/White Label/Components/Form Field/Border/Error
- . Brand variable has no theme
- . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not semantic
- . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not brand
-Errors for Brand Tokens/White Label/Components/Form Field/Text/Error
- . Brand variable has no theme
- . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not semantic
- . Component color alias "(Core Values/undefined/Color/Signal/Error/Error" is not brand
-Errors for Brand Tokens/White Label/Components/Form Field/Border/Active
- . Brand variable has no theme
-Errors for Brand Tokens/White Label/Components/Form Field/Border/Idle
- . Brand variable has no theme
-Errors for Brand Tokens/White Label/Components/Form Field/Border/Success
- . Brand variable has no theme
- . Component color alias "(Core Values/undefined/Color/Signal/Success/Success" is not semantic
- . Component color alias "(Core Values/undefined/Color/Signal/Success/Success" is not brand
-Errors for Brand Tokens/White Label/Components/Form Field/Text/Input
- . Brand variable has no theme
- . Component color alias "(Theme Tokens/undefined/Typography/Body/Regular" is not semantic
- . Component color alias "(Theme Tokens/undefined/Typography/Body/Regular" is not brand
-Errors for Brand Tokens/White Label/Components/Form Field/Text/Label
- . Brand variable has no theme
- . Component color alias "(Theme Tokens/undefined/Typography/Eyebrow/Eyebrow" is not semantic
- . Component color alias "(Theme Tokens/undefined/Typography/Eyebrow/Eyebrow" is not brand
-Errors for Brand Tokens/White Label/Components/Navigation/Link
- . Component color target "undefined" invalid
- . Brand variable has no theme
- . KNOWN ISSUE: Non-core value "#FFFFFF" is not an alias
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
 Errors for Brand Tokens/White Label/Components/Navigation/Primary/Primary Link/Border/Hover
  . Brand variable has no theme
  . Component color alias "(Theme Tokens/undefined/Semantic/Color/Interactive/Default" is not brand
@@ -72,29 +155,27 @@ Errors for Brand Tokens/White Label/Components/Navigation/Primary/Primary Link/B
  . Brand variable has no theme
  . Component color alias "(Theme Tokens/undefined/Semantic/Color/Interactive/Hover" is not brand
 Errors for Device Tokens/Mobile/Components/Navigation/Primary/Padding/Left
- . Device alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
- . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
 Errors for Device Tokens/Mobile/Components/Navigation/Primary/Padding/Right
- . Device alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
- . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
 Errors for Device Tokens/Mobile/Components/Navigation/Secondary/Padding/Left
- . Device alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
- . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
 Errors for Device Tokens/Mobile/Components/Navigation/Secondary/Padding/Right
- . Device alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
- . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
-Errors for Device Tokens/Mobile/Components/Navigation/Primary/Primary Link/Padding/Number
- . KNOWN ISSUE: Non-core value "0" is not an alias
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
 Errors for Device Tokens/Mobile/Components/Navigation/Primary/Secondary Link/Padding/Right
- . Device alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
- . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
 Errors for Device Tokens/Mobile/Components/Navigation/Secondary/Link/Hover
  . Device alias collection "Theme Tokens/undefined/Semantic/Color/Interactive/Default" is not core
  . Component color alias "(Theme Tokens/undefined/Semantic/Color/Interactive/Default" is not brand
  . Component color target "undefined" invalid
 Errors for Device Tokens/Mobile/Components/Navigation/Primary/Dropdown/Background/Background
- . Component color alias "(Core Values/undefined/Color/--NO VALUE--" is not semantic
- . Component color alias "(Core Values/undefined/Color/--NO VALUE--" is not brand
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not brand
 Errors for Device Tokens/Mobile/Components/Navigation/Primary/Dropdown/Padding/Left
  . KNOWN ISSUE: Non-core value "0" is not an alias
 Errors for Device Tokens/Mobile/Components/Navigation/Primary/Dropdown/Padding/Bottom
@@ -102,8 +183,8 @@ Errors for Device Tokens/Mobile/Components/Navigation/Primary/Dropdown/Padding/B
 Errors for Device Tokens/Mobile/Components/Navigation/Secondary/Number
  . Unknown variable type
 Errors for Device Tokens/Mobile/Components/Navigation/Primary/Secondary Link/Padding/Left
- . Device alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
- . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
 Errors for Device Tokens/Mobile/Components/Navigation/Primary/Dropdown/Padding/Right
  . KNOWN ISSUE: Non-core value "0" is not an alias
 Errors for Device Tokens/Mobile/Components/Navigation/Primary/Dropdown/Padding/Top
@@ -118,8 +199,8 @@ Errors for Device Tokens/Mobile/Components/Navigation/Secondary/Link/Padding/Lef
  . Device alias collection "Device Tokens/undefined/Spacing/Small" is not core
  . Spcaing alias collection "Device Tokens/undefined/Spacing/Small" is not core
 Errors for Device Tokens/Mobile/Components/Navigation/Primary/Primary Link/Padding/Left
- . Device alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
- . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
 Errors for Device Tokens/Mobile/Components/Navigation/Primary/Secondary Link/Text/Active
  . Device alias collection "Theme Tokens/undefined/Semantic/Color/Interactive/Focus" is not core
  . Component color alias "(Theme Tokens/undefined/Semantic/Color/Interactive/Focus" is not brand
@@ -155,56 +236,52 @@ Errors for Device Tokens/Mobile/Components/Navigation/Secondary/Link/Active
  . Device alias collection "Theme Tokens/undefined/Semantic/Color/Interactive/Pressed" is not core
  . Component color alias "(Theme Tokens/undefined/Semantic/Color/Interactive/Pressed" is not brand
  . Component color target "undefined" invalid
+Errors for Brand Tokens/White Label/Components/Article Card/Border/Dark Theme/Border
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not brand
+Errors for Brand Tokens/White Label/Components/Article Card/Border/Light Theme/Border
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not brand
 Errors for Device Tokens/Mobile/Components/Jump Links/Padding/Left
- . Device alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
- . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
 Errors for Device Tokens/Mobile/Components/Jump Links/Padding/Right
- . Device alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
- . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
-Errors for Brand Tokens/White Label/Components/Category Card/Padding/Bottom
- . KNOWN ISSUE: Non-core value "0" is not an alias
-Errors for Brand Tokens/White Label/Components/Category Card/Padding/Top
- . KNOWN ISSUE: Non-core value "0" is not an alias
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
 Errors for Brand Tokens/White Label/Components/Category Card/Background/Light Theme/Background
- . Component color alias "(Core Values/undefined/Color/--NO VALUE--" is not semantic
- . Component color alias "(Core Values/undefined/Color/--NO VALUE--" is not brand
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not brand
 Errors for Brand Tokens/White Label/Components/Category Card/Background/Dark Theme/Background
- . Component color alias "(Core Values/undefined/Color/--NO VALUE--" is not semantic
- . Component color alias "(Core Values/undefined/Color/--NO VALUE--" is not brand
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not brand
 Errors for Brand Tokens/White Label/Components/Accordion/Dropdown/Border/Light Theme/Border
- . Component color alias "(Core Values/undefined/Color/--NO VALUE--" is not semantic
- . Component color alias "(Core Values/undefined/Color/--NO VALUE--" is not brand
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not semantic
+ . Component color alias "(Core Values/undefined/Color/Transparent" is not brand
 Errors for Device Tokens/Mobile/Components/Footer/Secondary/Padding/Right
- . Device alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
- . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
 Errors for Device Tokens/Mobile/Components/Footer/Secondary/Padding/Top
- . Device alias collection "Device Tokens/undefined/Section/Margin - Top, Bottom" is not core
- . Spcaing alias collection "Device Tokens/undefined/Section/Margin - Top, Bottom" is not core
+ . Device alias collection "Device Tokens/undefined/Section/Margin/SidesY" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Section/Margin/SidesY" is not core
 Errors for Device Tokens/Mobile/Components/Footer/Primary/Padding/Left
- . Device alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
- . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
 Errors for Device Tokens/Mobile/Components/Footer/Secondary/Padding/Left
- . Device alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
- . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
 Errors for Device Tokens/Mobile/Components/Footer/Primary/Padding/Top
- . Device alias collection "Device Tokens/undefined/Section/Margin - Top, Bottom" is not core
- . Spcaing alias collection "Device Tokens/undefined/Section/Margin - Top, Bottom" is not core
+ . Device alias collection "Device Tokens/undefined/Section/Margin/SidesY" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Section/Margin/SidesY" is not core
 Errors for Device Tokens/Mobile/Components/Footer/Secondary/Padding/Bottom
- . Device alias collection "Device Tokens/undefined/Section/Margin - Top, Bottom" is not core
- . Spcaing alias collection "Device Tokens/undefined/Section/Margin - Top, Bottom" is not core
+ . Device alias collection "Device Tokens/undefined/Section/Margin/SidesY" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Section/Margin/SidesY" is not core
 Errors for Device Tokens/Mobile/Components/Footer/Primary/Padding/Right
- . Device alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
- . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/Left, Right" is not core
+ . Device alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Screen Size/Margin/SidesX" is not core
 Errors for Device Tokens/Mobile/Components/Footer/Primary/Padding/Bottom
- . Device alias collection "Device Tokens/undefined/Section/Margin - Top, Bottom" is not core
- . Spcaing alias collection "Device Tokens/undefined/Section/Margin - Top, Bottom" is not core
-Errors for Brand Tokens/White Label/Components/Breadcrumb/Background/Light Theme/Color
+ . Device alias collection "Device Tokens/undefined/Section/Margin/SidesY" is not core
+ . Spcaing alias collection "Device Tokens/undefined/Section/Margin/SidesY" is not core
+Errors for Brand Tokens/White Label/Components/Breadcrumb/Background/Light Theme/Background
  . Component color alias "(Theme Tokens/undefined/Semantic/Color/Background/Page/Primary" is not brand
-Errors for Brand Tokens/White Label/Components/Breadcrumb/Background/Dark Theme/Color
+Errors for Brand Tokens/White Label/Components/Breadcrumb/Background/Dark Theme/Background
  . Component color alias "(Theme Tokens/undefined/Semantic/Color/Background/Page/Primary" is not brand
-Errors for Brand Tokens/White Label/Components/Article Card/Border/Dark Theme/Background
- . Component color alias "(Core Values/undefined/Color/--NO VALUE--" is not semantic
- . Component color alias "(Core Values/undefined/Color/--NO VALUE--" is not brand
-Errors for Brand Tokens/White Label/Components/Article Card/Border/Light Theme/Background
- . Component color alias "(Core Values/undefined/Color/--NO VALUE--" is not semantic
- . Component color alias "(Core Values/undefined/Color/--NO VALUE--" is not brand
