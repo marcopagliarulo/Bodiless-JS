@@ -96,7 +96,8 @@ export default asTokenGroup(meta)({
   RadioBorderLightThemeIdleChecked: vitalColor.BorderInteractiveLightThemeIdle,
   RadioBorderLightThemeHoverUnchecked: vitalColor.BorderLightThemeBase,
   RadioBorderLightThemeIdleUnchecked: vitalColor.BorderLightThemeBase,
-  SwitchInnerCircleBorderLightThemeDisabledUnchecked: vitalColor.BorderInteractiveLightThemeDisabled,
+  SwitchInnerCircleBorderLightThemeDisabledUnchecked:
+    vitalColor.BorderInteractiveLightThemeDisabled,
   SwitchBorderLightThemeDisabledUnchecked: vitalColor.BorderInteractiveLightThemeDisabled,
   CheckboxBorderLightThemeDisabledChecked: vitalColor.BorderInteractiveLightThemeDisabled,
   CheckboxBorderDarkThemeIdleChecked: vitalColor.BorderInteractiveLightThemeIdle,

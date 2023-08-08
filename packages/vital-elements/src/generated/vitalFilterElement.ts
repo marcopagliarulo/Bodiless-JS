@@ -49,7 +49,8 @@ export default asTokenGroup(meta)({
   HeaderBorderLightThemeBorder: vitalColor.BorderLightThemeBase,
   QuickFilterBorderLightThemeIdleUnchecked: vitalColor.BorderInteractiveLightThemeIdle,
   QuickFilterBorderLightThemeIdleChecked: vitalColor.BorderInteractiveLightThemeIdle,
-  QuickFilterBackgroundLightThemeDisabledChecked: vitalColor.BackgroundInteractiveLightThemeDisabled,
+  QuickFilterBackgroundLightThemeDisabledChecked:
+    vitalColor.BackgroundInteractiveLightThemeDisabled,
   CategoryPaddingBottom: 'pb-0px',
   QuickFilterBackgroundLightThemeHoverUnchecked: vitalColor.BackgroundBase,
   TextLightThemeLink: vitalColor.TextInteractiveLightThemeIdle,
