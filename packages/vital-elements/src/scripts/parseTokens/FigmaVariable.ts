@@ -432,7 +432,7 @@ class FigmaVariable implements FigmaVariableInterface {
       }
       if (this.alias) {
         const cleanedName = this.alias.segments.slice(1).join('/').replace(/[/ ]/g, '-')
-          .toLowerCase();
+          .toLowerCase().replace(/%/g, '');
         const statePrefix = TwStatePrefixes[this.state || States.Idle];
         const targetPrefix = TwColorTargetPrefixes[this.target];
         const themePrefix = this.theme === Themes.Dark ? 'dark:' : '';
