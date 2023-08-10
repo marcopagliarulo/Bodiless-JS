@@ -1,5 +1,5 @@
 import { asTokenGroup } from '../util';
-import { vitalColor } from './semantic';
+import { vitalColor } from '../components/Color';
 
 export const meta = {
   categories: {

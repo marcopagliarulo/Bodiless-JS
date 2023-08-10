@@ -1,7 +1,7 @@
 import { asTokenGroup } from '../util';
-import { vitalColor } from './semantic';
+import { vitalColor } from '../components/Color';
 
-const meta = {
+export const meta = {
   categories: {
     Type: ['Element'],
     Group: ['InputElement'],
@@ -96,8 +96,7 @@ export default asTokenGroup(meta)({
   RadioBorderLightThemeIdleChecked: vitalColor.BorderInteractiveLightThemeIdle,
   RadioBorderLightThemeHoverUnchecked: vitalColor.BorderLightThemeBase,
   RadioBorderLightThemeIdleUnchecked: vitalColor.BorderLightThemeBase,
-  SwitchInnerCircleBorderLightThemeDisabledUnchecked:
-    vitalColor.BorderInteractiveLightThemeDisabled,
+  SwitchInnerCircleBorderLightThemeDisabledUnchecked: vitalColor.BorderInteractiveLightThemeDisabled,
   SwitchBorderLightThemeDisabledUnchecked: vitalColor.BorderInteractiveLightThemeDisabled,
   CheckboxBorderLightThemeDisabledChecked: vitalColor.BorderInteractiveLightThemeDisabled,
   CheckboxBorderDarkThemeIdleChecked: vitalColor.BorderInteractiveLightThemeIdle,

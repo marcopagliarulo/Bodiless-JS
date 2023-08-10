@@ -1,7 +1,7 @@
 import { asTokenGroup } from '../util';
-import { vitalColor } from './semantic';
+import { vitalColor } from '../components/Color';
 
-const meta = {
+export const meta = {
   categories: {
     Type: ['Element'],
     Group: ['FilterElement'],
@@ -49,8 +49,7 @@ export default asTokenGroup(meta)({
   HeaderBorderLightThemeBorder: vitalColor.BorderLightThemeBase,
   QuickFilterBorderLightThemeIdleUnchecked: vitalColor.BorderInteractiveLightThemeIdle,
   QuickFilterBorderLightThemeIdleChecked: vitalColor.BorderInteractiveLightThemeIdle,
-  QuickFilterBackgroundLightThemeDisabledChecked:
-    vitalColor.BackgroundInteractiveLightThemeDisabled,
+  QuickFilterBackgroundLightThemeDisabledChecked: vitalColor.BackgroundInteractiveLightThemeDisabled,
   CategoryPaddingBottom: 'pb-0px',
   QuickFilterBackgroundLightThemeHoverUnchecked: vitalColor.BackgroundBase,
   TextLightThemeLink: vitalColor.TextInteractiveLightThemeIdle,
