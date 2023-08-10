@@ -14,30 +14,56 @@
 
 import { withPlaceholder } from '@bodiless/components';
 import { EditorPlainClean, vitalEditorPlain } from '@bodiless/vital-editors';
+import { vitalButton, ButtonClean, asButtonToken } from '@bodiless/vital-button';
+import { vitalArticleCardElement, vitalTypography, vitalSpacing } from '@bodiless/vital-elements';
 import {
-  flowHoc, extendMeta, TokenCollection, replaceWith, on, Div, P,
+  flowHoc, extendMeta, TokenCollection, replaceWith, on, Div, P, as,
 } from '@bodiless/fclasses';
 
 import { CardComponents } from '../../Card/CardClean';
 import type { CardToken } from '../../Card/CardClean';
-import Base from '../../Card/tokens/Base';
+import Base, { WithVerticalOrientation, WithHorizontalLeftOrientation, WithHorizontalContentCentered } from '../../Card/tokens/Base';
 
 import { asArticleCardToken } from '../ArticleCardClean';
 
 /**
-  * Default Article Card Token.
-  * By default Article Card has `Image`, `Title` and `Link` slots.
-  */
+ * Default Article Card Button.
+ * Plain vital button with `WithTertiaryStyle` token and `READ MORE` placeholder.
+ */
+const ArticleCardButton = asButtonToken(
+  vitalButton.Plain,
+  vitalButton.WithTertiaryStyle,
+  {
+    Content: {
+      Body: withPlaceholder('READ MORE'),
+    },
+  }
+);
+
+/**
+ * Default Article Card Token.
+ * By default Article Card has `Image`, `Title` and `Link` slots.
+ */
 const Default = asArticleCardToken({
   ...Base,
   Components: {
     ...Base.Components,
     Eyebrow: undefined,
     Description: undefined,
+    CTAWrapper: undefined,
+    CTALink: on(ButtonClean)(ArticleCardButton),
+  },
+  Theme: {
+    TitleWrapper: vitalTypography.HeadlineLarge,
+    Description: vitalTypography.BodyRegular,
+  },
+  Spacing: {
+    TitleWrapper: vitalSpacing.PaddingYXSmall,
+    CTAWrapper: vitalSpacing.PaddingYXSmall,
   },
   Content: {
     Title: withPlaceholder('Article Title'),
-    CTAText: withPlaceholder('Article Link'),
+    CTAText: withPlaceholder('Read More'),
   },
   Meta: extendMeta(
     flowHoc.meta.term('Sub Type')('Article'),
@@ -56,7 +82,11 @@ const WithEyebrow = asArticleCardToken({
     Eyebrow: on(EditorPlainClean)(vitalEditorPlain.Default),
   },
   Content: {
-    Eyebrow: withPlaceholder('Eyebrow Text'),
+    Eyebrow: withPlaceholder('Eyebrow'),
+  },
+  Theme: {
+    EyebrowWrapper: as(vitalTypography.EyebrowBold, vitalArticleCardElement.TextLightThemeEyebrow),
+    TitleWrapper: vitalArticleCardElement.TextLightThemeHeadline,
   }
 });
 
@@ -76,6 +106,18 @@ const WithDescription = asArticleCardToken({
     Description: withPlaceholder('Description Text'),
   }
 });
+
+/**
+ * Token that sets Horizontal Orientation for the Article Card.
+ * Re-Exported `WithHorizontalLeftOrientation` combined with the `WithHorizontalContentCentered`
+ * unchanged from the `vitalCard` collection.
+ *
+ * Note: This token is meant to be layered on top of the `vitalArticleCard.Default` Article token.
+ */
+const WithHorizontalOrientation = asArticleCardToken(
+  WithHorizontalLeftOrientation,
+  WithHorizontalContentCentered,
+);
 
 export interface VitalArticleCard extends TokenCollection<CardComponents, {}> {
   /**
@@ -98,6 +140,21 @@ export interface VitalArticleCard extends TokenCollection<CardComponents, {}> {
    * Note: This token is meant to be layered on top of the `vitalArticleCard.Default` Article token.
    */
   WithDescription: CardToken,
+  /**
+   * Token that sets Vertical Orientation for the Article Card.
+   * Re-Exported directly unchanged from the `vitalCard`.
+   *
+   * Note: This token is meant to be layered on top of the `vitalArticleCard.Default` Article token.
+   */
+  WithVerticalOrientation: CardToken,
+  /**
+   * Token that sets Horizontal Orientation for the Article Card.
+   * Re-Exported `WithHorizontalLeftOrientation` combined with the `WithHorizontalContentCentered`
+   * unchanged from the `vitalCard` collection.
+   *
+   * Note: This token is meant to be layered on top of the `vitalArticleCard.Default` Article token.
+   */
+  WithHorizontalOrientation: CardToken,
 }
 
 /**
@@ -111,6 +168,8 @@ const vitalArticleCard: VitalArticleCard = {
   Default,
   WithEyebrow,
   WithDescription,
+  WithVerticalOrientation,
+  WithHorizontalOrientation,
 };
 
 export default vitalArticleCard;
