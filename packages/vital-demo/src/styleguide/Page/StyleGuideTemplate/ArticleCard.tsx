@@ -3,47 +3,40 @@ import { asFluidToken } from '@bodiless/vital-elements';
 import { ArticleCardClean, vitalArticleCard } from '@bodiless/vital-card';
 import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vital-templates';
 import {
-  flowHoc, replaceWith, on, varyDesigns, addProps
+  flowHoc, replaceWith, on, varyDesigns, addProps, as
 } from '@bodiless/fclasses';
 
 import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples';
 
-const BasicVariation = {
-  Card: on(ArticleCardClean)(vitalArticleCard.Default),
-};
-
 /*
- * Content Variations to use all fields or remove specic fields.
- */
-// const ContentVariations = {
-//   WithEyebrow: vitalArticleCard.WithEyebrow,
-//   WithDescription: vitalArticleCard.WithDescription,
-// };
-
-/*
- * Vary Vertical Variations over Content Varitions
+ * Compose the default vertical & horizontal cards
  */
 const OrientationVariations = varyDesigns(
+  {
+    '': on(ArticleCardClean)(vitalArticleCard.Default), // Use '' to not get a name for these
+  },
   {
     Horizontal: vitalArticleCard.WithHorizontalOrientation,
     Vertical: vitalArticleCard.WithVerticalOrientation,
   },
-  {
-    WithDescription: vitalArticleCard.WithDescription,
-  },
-  {
-    WithEyebrow: vitalArticleCard.WithEyebrow,
-  }
 );
 
-const ArticleCardVariations = varyDesigns(
-  BasicVariation,
+/*
+ * Compose the orientated cards with Descriptions & Eyebrows & Both toggles
+ */
+const DescriptonVariations = varyDesigns(
   OrientationVariations,
+  {
+    WithDescription: vitalArticleCard.WithDescription,
+    WithEyebrow: vitalArticleCard.WithEyebrow,
+    WithDescriptionEyebrow: as(vitalArticleCard.WithDescription, vitalArticleCard.WithEyebrow),
+  },
 );
 
 const WithArticleCardVariations = asFluidToken({
   Components: {
-    ...ArticleCardVariations,
+    ...OrientationVariations,
+    ...DescriptonVariations,
   },
 });
 
@@ -56,7 +49,7 @@ const image = {
 };
 
 const title = {
-  text: 'Example Card Title TEST'
+  text: 'Example Article Card Title'
 };
 
 const description = [
@@ -93,6 +86,17 @@ const content = {
   description, image, link, title,
 };
 
+/**
+ * Add two columns for the component preview on the Styleguide page.
+ */
+const StyleGuideColumns = asFluidToken({
+  ...vitalStyleGuideExamples.Default,
+  Layout: {
+    Wrapper: 'flex flex-wrap',
+    ItemWrapper: 'w-1/2 p-4',
+  },
+});
+
 export const ArticleCard = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
   Meta: flowHoc.meta.term('Token')('Carousel'),
   Content: {
@@ -104,7 +108,7 @@ export const ArticleCard = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Def
       </>
     )),
     Examples: on(StyleGuideExamplesClean)(
-      vitalStyleGuideExamples.Default,
+      StyleGuideColumns,
       WithArticleCardVariations,
       addProps({ content }),
     ),

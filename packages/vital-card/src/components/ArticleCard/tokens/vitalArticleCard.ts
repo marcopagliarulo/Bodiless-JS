@@ -56,7 +56,10 @@ const Default = asArticleCardToken({
     CTALink: on(ButtonClean)(ArticleCardButton),
   },
   Theme: {
-    TitleWrapper: vitalTypography.HeadlineLarge,
+    TitleWrapper: as(
+      vitalTypography.HeadlineLarge,
+      vitalArticleCardElement.TextLightThemeHeadline,
+    ),
     Description: vitalTypography.BodyRegular,
   },
   Spacing: {
@@ -87,8 +90,10 @@ const WithEyebrow = asArticleCardToken({
     Eyebrow: withPlaceholder('Eyebrow'),
   },
   Theme: {
-    EyebrowWrapper: as(vitalTypography.EyebrowBold, vitalArticleCardElement.TextLightThemeEyebrow),
-    TitleWrapper: vitalArticleCardElement.TextLightThemeHeadline,
+    EyebrowWrapper: as(
+      vitalTypography.EyebrowBold,
+      vitalArticleCardElement.TextLightThemeEyebrow,
+    ),
   }
 });
 
