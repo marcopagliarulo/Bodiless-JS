@@ -431,8 +431,12 @@ class FigmaVariable implements FigmaVariableInterface {
         return value && `vitalColor.${value}`;
       }
       if (this.alias) {
-        const cleanedName = this.alias.segments.slice(1).join('/').replace(/[/ ]/g, '-')
-          .toLowerCase().replace(/%/g, '');
+        const replacements: { [key:string]: string } = { '%': '', '/': '-', ' ': '-' };
+        const cleanedName = this.alias.segments
+          .slice(1)
+          .join('/')
+          .replace(/[/% ]/g, m => replacements[m])
+          .toLowerCase();
         const statePrefix = TwStatePrefixes[this.state || States.Idle];
         const targetPrefix = TwColorTargetPrefixes[this.target];
         const themePrefix = this.theme === Themes.Dark ? 'dark:' : '';
