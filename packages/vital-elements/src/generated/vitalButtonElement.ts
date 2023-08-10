@@ -1,7 +1,7 @@
 import { asTokenGroup } from '../util';
 import { vitalColor } from './semantic';
 
-const meta = {
+export const meta = {
   categories: {
     Type: ['Element'],
     Group: ['ButtonElement'],
