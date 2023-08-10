@@ -15,7 +15,9 @@
 import { withPlaceholder } from '@bodiless/components';
 import { EditorPlainClean, vitalEditorPlain } from '@bodiless/vital-editors';
 import { vitalButton, ButtonClean, asButtonToken } from '@bodiless/vital-button';
-import { vitalArticleCardElement, vitalTypography, vitalSpacing } from '@bodiless/vital-elements';
+import {
+  vitalArticleCardElement, vitalTypography, vitalSpacing, DefaultDomains,
+} from '@bodiless/vital-elements';
 import {
   flowHoc, extendMeta, TokenCollection, replaceWith, on, Div, P, as,
 } from '@bodiless/fclasses';
@@ -119,7 +121,7 @@ const WithHorizontalOrientation = asArticleCardToken(
   WithHorizontalContentCentered,
 );
 
-export interface VitalArticleCard extends TokenCollection<CardComponents, {}> {
+export interface VitalArticleCard extends TokenCollection<CardComponents, DefaultDomains> {
   /**
    * Defines the default Article card for the Vital DS.
    * - Extends the Base card.
