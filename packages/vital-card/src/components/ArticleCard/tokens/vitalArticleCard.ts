@@ -24,7 +24,9 @@ import {
 
 import { CardComponents } from '../../Card/CardClean';
 import type { CardToken } from '../../Card/CardClean';
-import Base, { WithVerticalOrientation, WithHorizontalLeftOrientation, WithHorizontalContentCentered } from '../../Card/tokens/Base';
+import Base, {
+  WithVerticalOrientation, WithHorizontalLeftOrientation, WithHorizontalContentCentered,
+} from '../../Card/tokens/Base';
 
 import { asArticleCardToken } from '../ArticleCardClean';
 
