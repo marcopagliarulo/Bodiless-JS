@@ -13,24 +13,58 @@
  */
 
 import {
-  flowHoc, replaceWith, extendMeta,
+  flowHoc, replaceWith, extendMeta, Div, startWith, H3, Span, as,
 } from '@bodiless/fclasses';
+// import { asButtonToken, vitalButton } from '@bodiless/vital-button';
+// import { withPlaceholder } from '@bodiless/components';
+import { vitalLink } from '@bodiless/vital-link';
 import { asCardToken } from '../CardClean';
 import type { CardToken } from '../CardClean';
 import Base from './Base';
 
+// const CategoryCardButton = asButtonToken(
+//   vitalButton.Plain,
+//   vitalButton.WithTertiaryStyle,
+//   {
+//     Content: {
+//       Body: withPlaceholder('READ MORE'),
+//     },
+//   }
+// );
+
 /**
   * TBD: STUB Category Base Card Design.
   */
-const Category = asCardToken(Base, {
+const Category = asCardToken(Base,
+  {
+    Components: {
+      ...Base.Components,
+      EyebrowWrapper: replaceWith(() => null),
+      DescriptionWrapper: replaceWith(() => null),
+      RatingWrapper: replaceWith(() => null),
+      TitleWrapper: replaceWith(() => null),
+      CTAWrapper: replaceWith(Div),
+      CTALink: vitalLink.Default,
+    },
+    Theme: {
+      ContentWrapper: 'items-start',
+    },
+    Spacing: {
+      ContentWrapper: 'py-16px md:py-24px',
+    },
+    Meta: extendMeta(
+      flowHoc.meta.term('Sub Type')('Category'),
+      flowHoc.meta.term('CTA Type')('Fully Clickable'),
+    ),
+  });
+
+const WithTitle = asCardToken({
   Components: {
-    EyebrowWrapper: replaceWith(() => null),
-    DescriptionWrapper: replaceWith(() => null),
-    RatingWrapper: replaceWith(() => null),
+    TitleWrapper: startWith(H3),
+    Title: startWith(Span),
   },
   Meta: extendMeta(
-    flowHoc.meta.term('Sub Type')('Category'),
-    flowHoc.meta.term('CTA Type')('Fully Clickable'),
+    flowHoc.meta.term('Features')('With Title'),
   ),
 });
 
@@ -44,8 +78,10 @@ export interface VitalCardCategory {
    * <b>NOTE</b> Not Fully Implemented.
    */
   Category: CardToken,
+  WithTitle: CardToken,
 }
 
 export {
   Category,
+  WithTitle,
 };

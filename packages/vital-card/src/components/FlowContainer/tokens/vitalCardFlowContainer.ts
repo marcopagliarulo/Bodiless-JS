@@ -129,6 +129,11 @@ const WithHeroVariations = asFluidToken({
 
 const CategoryVariations = {
   Category: on(CardStatic)(vitalCardStatic.Category, vitalCardStatic.WithFlowContainerPreview),
+  WithTitle: on(CardStatic)(
+    vitalCardStatic.Category,
+    vitalCardStatic.WithTitle,
+    vitalCardStatic.WithFlowContainerPreview
+  ),
 };
 
 const WithCategoryVariations = asFluidToken({

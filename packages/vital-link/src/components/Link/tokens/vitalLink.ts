@@ -23,7 +23,7 @@ import {
   flowHoc,
 } from '@bodiless/fclasses';
 import { withSidecarNodes, withNodeKey } from '@bodiless/data';
-import { vitalColor, vitalTypography } from '@bodiless/vital-elements';
+import { vitalColor, vitalLinkElement } from '@bodiless/vital-elements';
 import { asLinkToken } from '../LinkClean';
 import { useExternalLinkToggle, asEditableLink, useIsDownloadLink } from '../util';
 
@@ -82,8 +82,19 @@ const Default = asLinkToken(Base, {
      * VitalDS typography and colors.
      */
   Theme: {
-    _: as(WithDownloadStyles, WithExternalStyles),
-    Wrapper: as(vitalTypography.Link),
+    // Turning Download & External styles off Default until we need it.
+    // _: as(WithDownloadStyles, WithExternalStyles),
+    Wrapper: as(
+      vitalLinkElement.TextLightThemeIdle,
+      vitalLinkElement.TextLightThemePressed,
+      vitalLinkElement.TextLightThemeHover,
+      vitalLinkElement.TextLightThemeFocus,
+      'hover:underline active:underline',
+      // @TODO: Manually adding for now, but outline color
+      // should be coming in via generated tokens. Rework parsetokens script
+      // to correctly import.
+      'outline-signal-informational'
+    ),
   },
 });
 
