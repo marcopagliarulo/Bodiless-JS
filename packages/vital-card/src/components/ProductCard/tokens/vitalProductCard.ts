@@ -14,7 +14,7 @@
 
 import { withPlaceholder } from '@bodiless/components';
 import { EditorPlainClean, vitalEditorPlain } from '@bodiless/vital-editors';
-import { ButtonClean, vitalButtons } from '@bodiless/vital-buttons';
+import { ButtonClean, vitalButton } from '@bodiless/vital-button';
 import {
   flowHoc, extendMeta, replaceWith, on, Div, P, Img, addProps, TokenCollection,
 } from '@bodiless/fclasses';
@@ -86,7 +86,7 @@ const WithPrimaryButton = asCardToken({
     ButtonLink: replaceWith(ButtonClean),
   },
   Theme: {
-    ButtonLink: vitalButtons.Primary,
+    ButtonLink: vitalButton.Primary,
   },
   Content: {
     ButtonText: withPlaceholder('Button Text'),
@@ -101,7 +101,7 @@ const WithPrimaryButton = asCardToken({
 const WithSecondaryButton = asCardToken({
   ...WithPrimaryButton,
   Theme: {
-    ButtonLink: vitalButtons.Secondary,
+    ButtonLink: vitalButton.Secondary,
   },
 });
 
@@ -113,7 +113,7 @@ const WithSecondaryButton = asCardToken({
 const WithTertiaryButton = asCardToken({
   ...WithPrimaryButton,
   Theme: {
-    ButtonLink: vitalButtons.Tertiary,
+    ButtonLink: vitalButton.Tertiary,
   },
 });
 
