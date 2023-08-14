@@ -1,11 +1,12 @@
 import { Fragment } from 'react';
-import { as, designable } from '@bodiless/fclasses';
+import { as, designable, H4 } from '@bodiless/fclasses';
 import { withNode } from '@bodiless/data';
 import { asCardToken, CardStatic } from '../Card';
 import { cardComponentStart, CardBase } from '../Card/CardClean';
 
 const productCardComponentStart = {
   ...cardComponentStart,
+  TitleWrapper: H4,
   EyebrowWrapper: Fragment,
   Eyebrow: Fragment,
   Description: Fragment,

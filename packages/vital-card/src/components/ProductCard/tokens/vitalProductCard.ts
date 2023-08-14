@@ -16,7 +16,10 @@ import { withPlaceholder } from '@bodiless/components';
 import { EditorPlainClean, vitalEditorPlain } from '@bodiless/vital-editors';
 import { ButtonClean, vitalButton } from '@bodiless/vital-button';
 import {
-  flowHoc, extendMeta, replaceWith, on, Div, P, Img, addProps, TokenCollection,
+  DefaultDomains, vitalSpacing, vitalTypography, vitalProductCardElement,
+} from '@bodiless/vital-elements';
+import {
+  flowHoc, extendMeta, on, Div, P, Img, addProps, TokenCollection, startWith, as,
 } from '@bodiless/fclasses';
 
 import { asCardToken, CardComponents } from '../../Card/CardClean';
@@ -40,6 +43,19 @@ const Default = asCardToken({
   Meta: extendMeta(
     flowHoc.meta.term('Sub Type')('Product'),
   ),
+  Theme: {
+    TitleWrapper: as(
+      vitalTypography.HeadlineMedium,
+      vitalProductCardElement.TextLightThemeHeadline,
+    ),
+  },
+  Layout: {
+    Wrapper: 'w-full flex flex-col',
+    ButtonWrapper: as('flex', vitalSpacing.MarginTopSmall),
+  },
+  Spacing: {
+    TitleWrapper: as(vitalSpacing.MarginTopXSmall, vitalSpacing.MarginBottomXSmall),
+  },
 });
 
 /**
@@ -50,7 +66,7 @@ const Default = asCardToken({
  */
 const WithEyebrow = asCardToken({
   Components: {
-    EyebrowWrapper: replaceWith(Div),
+    EyebrowWrapper: startWith(Div),
     Eyebrow: on(EditorPlainClean)(vitalEditorPlain.Default),
   },
   Content: {
@@ -67,7 +83,7 @@ const WithEyebrow = asCardToken({
  */
 const WithDescription = asCardToken({
   Components: {
-    DescriptionWrapper: replaceWith(P),
+    DescriptionWrapper: startWith(P),
     Description: on(EditorPlainClean)(vitalEditorPlain.Default),
   },
   Content: {
@@ -82,11 +98,11 @@ const WithDescription = asCardToken({
  */
 const WithPrimaryButton = asCardToken({
   Components: {
-    ButtonWrapper: replaceWith(Div),
-    ButtonLink: replaceWith(ButtonClean),
+    ButtonWrapper: startWith(Div),
+    ButtonLink: startWith(ButtonClean),
   },
   Theme: {
-    ButtonLink: vitalButton.Primary,
+    ButtonLink: vitalButton.WithPrimaryStyle,
   },
   Content: {
     ButtonText: withPlaceholder('Button Text'),
@@ -101,7 +117,7 @@ const WithPrimaryButton = asCardToken({
 const WithSecondaryButton = asCardToken({
   ...WithPrimaryButton,
   Theme: {
-    ButtonLink: vitalButton.Secondary,
+    ButtonLink: as(vitalButton.WithSecondaryStyle, 'w-full text-center'),
   },
 });
 
@@ -113,7 +129,7 @@ const WithSecondaryButton = asCardToken({
 const WithTertiaryButton = asCardToken({
   ...WithPrimaryButton,
   Theme: {
-    ButtonLink: vitalButton.Tertiary,
+    ButtonLink: vitalButton.WithTertiaryStyle,
   },
 });
 
@@ -124,7 +140,7 @@ const WithTertiaryButton = asCardToken({
  */
 const WithRatings = asCardToken({
   Components: {
-    RatingWrapper: replaceWith(Div),
+    RatingWrapper: startWith(Div),
     Rating: on(Img)(addProps({
       src: 'https://svgshare.com/i/sTg.svg',
       alt: 'Stars with 4.1 rating, out of 5 max.',
@@ -133,7 +149,7 @@ const WithRatings = asCardToken({
   },
 });
 
-export interface VitalProductCard extends TokenCollection<CardComponents, {}> {
+export interface VitalProductCard extends TokenCollection<CardComponents, DefaultDomains> {
   /**
    * Defines the Product card for the Vital DS.
    * - Extends the Base card with vertical orientation.
