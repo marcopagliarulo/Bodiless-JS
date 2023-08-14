@@ -14,6 +14,4 @@
 
 export * from './components/Card';
 export * from './components/FlowContainer';
-export { default as vitalProductCardElements } from './components/ProductCardElements';
-
 export * from './components/ProductCard';

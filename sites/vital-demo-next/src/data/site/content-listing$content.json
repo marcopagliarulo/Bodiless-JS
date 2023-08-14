@@ -118,6 +118,20 @@
         "className": "w-full"
       },
       "type": "FilterableContent"
+    },
+    {
+      "uuid": "a0c1dac0-06cf-11ee-9bdb-5b922047813b",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "FilterableContent"
+    },    
+    {
+      "uuid": "08f21ce0-1c6a-11ee-b437-9ff190668ab3",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "FilterableContent"
     }
   ]
 }

@@ -19,7 +19,7 @@ npm run setup
 
 ```shell-session
 cd sites/test-site
-npm run start
+npm run dev
 ```
 
 This will build all packages in _watch mode_, and then start `gatsby develop` on the Test Site. You
@@ -54,6 +54,6 @@ site.
 ## Next Steps
 
 - [Step-by-step walkthrough of site-building](/Development/Guides/BuildingSites/)
-- [Building and testing Bodiless sites](/Development/LocalSites)
+- [Building and testing Bodiless sites](../Development/LocalSites/)
 - [Read our Core Principles](./CorePrinciples)
 - [Understand our Platform Architecture](/Development/Architecture/Data)
