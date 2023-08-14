@@ -28,4 +28,5 @@ export { default as vitalCardBase } from './components/Card/tokens/vitalCard';
  */
 export { default as vitalCardFlowContainerBase } from './components/FlowContainer/tokens/vitalCardFlowContainer';
 
+// eslint-disable-next-line max-len
 // export { default as vitalCategoryCardBase } from './components/CategoryCard/tokens/vitalCategoryCard';
