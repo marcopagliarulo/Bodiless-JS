@@ -70,7 +70,7 @@ const WithTitle = asCategoryCardToken({
 
 export interface VitalCategoryCard extends TokenCollection<CardComponents, DefaultDomains> {
   /**
-   * Defines the default Article card for the Vital DS.
+   * Defines the default Category card for the Vital DS.
    * - Extends the Base card.
    */
   Default: CardToken,
