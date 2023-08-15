@@ -9,26 +9,24 @@ import {
 import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples';
 
 /*
- * Compose the default vertical & horizontal cards
+ * Compose the default category card
  */
-const CategoryCardVariations = varyDesigns(
-  {
-    Default: on(CategoryCardClean)(vitalCategoryCard.Default),
-  },
-);
+const Default = {
+  Default: on(
+    CategoryCardClean
+  )(vitalCategoryCard.Default), // vary on itself so you get the Default variation
+};
 
 const TitleVariations = varyDesigns(
+  Default,
   {
-    WithTitle: on(CategoryCardClean)(
-      vitalCategoryCard.Default,
-      vitalCategoryCard.WithTitle
-    ),
+    '': '', // vary on itself so you get the Default variation
+    WithTitle: vitalCategoryCard.WithTitle,
   },
 );
 
 const WithCategoryCardVariations = asFluidToken({
   Components: {
-    ...CategoryCardVariations,
     ...TitleVariations,
   },
 });
