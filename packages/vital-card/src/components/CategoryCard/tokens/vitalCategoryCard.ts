@@ -36,12 +36,17 @@ const Default = asCategoryCardToken({
     CTALink: on(ButtonClean)(CategoryCardButton),
   },
   Layout: {
+    ...Base.Layout,
     ImageWrapper: 'relative overflow-hidden aspect-5/3',
     Image: 'absolute top-0 h-full w-full',
     ContentWrapper: 'items-start',
   },
   Spacing: {
-    ContentWrapper: 'py-16px md:py-24px',
+    ...Base.Spacing,
+    ContentWrapper: as(
+      vitalCategoryCardElement.PaddingTop,
+      vitalCategoryCardElement.PaddingBottom
+    ),
   },
   Meta: extendMeta(
     flowHoc.meta.term('Sub Type')('Category'),
