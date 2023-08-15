@@ -12,78 +12,6 @@ import { CardToken } from 'src/components/Card/CardClean';
 import Base from '../../Card/tokens/Base';
 import { asCategoryCardToken } from '../CategoryCardClean';
 
-// const Default = asCategoryCardToken({
-//   ...Base.Default,
-// Core: {
-//   // Essential behavior or styling added by this token which are very unlikely to be
-//   // overridden.
-//   ...vitalCategoryCardBase.Default.Core,
-//   // ...
-// },
-// Components: {
-//   // When the design elements of a complex component are themselves complex components,
-//   // it is generally best practice to define tokens which apply to the sub-components as a
-//   // whole, and apply them in the Components domain of the enclosing component.
-//   ...vitalCategoryCardBase.Default.Components,
-//   // ...
-// },
-// A11y: {
-//   // Behavior or props related to accessibility; e.g. an `aria-labeledby' prop.
-//   ...vitalCategoryCardBase.Default.A11y,
-//   // ...
-// },
-// Analytics: {
-//   // Behavior or props related to analytics; e.g., pushing events to a data layer.
-//   ...vitalCategoryCardBase.Default.Analytics,
-//   // ...
-// },
-// SEO: {
-//   // Behavior or props related to search engine optimization, e.g., adding schema.org markup.
-//   ...vitalCategoryCardBase.Default.SEO,
-//   // ...
-// },
-// Layout: {
-//   // Tokens which define the visual structure of a component, and are thus unlikely to be
-//   // overridden; e.g., those which define the orientation of a card.
-//   ...vitalCategoryCardBase.Default.Layout,
-//   // ...
-// },
-// Spacing: {
-//   // Tokens which sit somewhere between Theme and Layout; e.g., padding, margin,
-//   // line-spacing, etc.
-//   ...vitalCategoryCardBase.Default.Spacing,
-//   // ...
-// },
-// Theme: {
-//   // Tokens which apply styling which is very likely to be overridden; e.g., colors,
-//   // typography, sizing such as width and height, etc.
-//   ...vitalCategoryCardBase.Default.Theme,
-//   // ...
-// },
-// A11yContent: {
-//   // Tokens which provide default content related to accessibility.
-//   ...vitalCategoryCardBase.Default.A11yContent,
-//   // ...
-// },
-// Content: {
-//   // Tokens which provide default content or other fixed props. Any hardcoded,
-//   // translatable strings belong in this domain.
-//   ...vitalCategoryCardBase.Default.Content,
-//   // ...
-// },
-// Behavior: {
-//   // Tokens which define or add behaviors to a component; e.g., the expanding and contracting
-//   // of an accordion.
-//   ...vitalCategoryCardBase.Default.Behavior,
-//   // ...
-// },
-// Schema: {
-//   // Tokens which define how a component's data are organized; e.g., node keys.
-//   ...vitalCategoryCardBase.Default.Schema,
-//   // ...
-// },
-// });
-
 const Default = asCategoryCardToken({
   ...Base,
   Components: {
@@ -91,17 +19,16 @@ const Default = asCategoryCardToken({
     Eyebrow: undefined,
     Description: undefined,
     CTAWrapper: undefined,
+    Title: undefined,
     CTALink: vitalLink.Default,
   },
-  Theme: {
+  Layout: {
+    ImageWrapper: 'relative overflow-hidden aspect-5/3',
+    Image: 'absolute top-0 h-full w-full',
     ContentWrapper: 'items-start',
   },
-  Layout: {
-    ImageWrapper: 'relative pb-[60%] overflow-hidden',
-    Image: 'absolute top-0 h-full w-full',
-  },
   Spacing: {
-    ContentWrapper: vitalSpacing.PaddingYXSmall,
+    ContentWrapper: 'py-16px md:py-24px',
   },
   Content: {
     CTAText: withPlaceholder('CATEGORY LINK'),
@@ -111,9 +38,6 @@ const Default = asCategoryCardToken({
     flowHoc.meta.term('CTA Type')('Fully Clickable'),
   ),
 });
-
-// Add additional variant tokens or variators here.
-// ...
 
 const WithTitle = asCategoryCardToken({
   Components: {
@@ -141,25 +65,10 @@ export interface VitalCategoryCard extends TokenCollection<CardComponents, Defau
    */
   Default: CardToken,
   /**
-   * Token that adds an Eyebrow to the Article Card.
-   * Adds the `EyebrowWrapper` slot as a `Div` and the `Eyebrow` slot as default Plain Editor.
+   * Token that adds an Title to the Category Card.
+   * Adds the `TitleWrapper` slot as an `H3` and the `Title` slot as default Plain Editor.
    *
-   * Note: This token is meant to be layered on top of the `Article` token.
-   */
-  // WithEyebrow: CardToken,
-  /**
-   * Token that adds the Description slot to the Article Card.
-   * Adds the `DescriptionWrapper` slot as `P` element and the `Description` slot
-   * as default Plain Text Editor.
-   *
-   * Note: This token is meant to be layered on top of the `vitalArticleCard.Default` Article token.
-   */
-  // WithDescription: CardToken,
-  /**
-   * Token that sets Vertical Orientation for the Article Card.
-   * Re-Exported directly unchanged from the `vitalCard`.
-   *
-   * Note: This token is meant to be layered on top of the `vitalArticleCard.Default` Article token.
+   * Note: This token is meant to be layered on top of the `Default` token.
    */
   WithTitle: CardToken,
 }
