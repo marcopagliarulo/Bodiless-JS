@@ -14,7 +14,7 @@ import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples
 const Default = {
   Default: on(
     CategoryCardClean
-  )(vitalCategoryCard.Default), // vary on itself so you get the Default variation
+  )(vitalCategoryCard.Default),
 };
 
 const TitleVariations = varyDesigns(
