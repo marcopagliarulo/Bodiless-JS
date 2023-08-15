@@ -2,16 +2,29 @@ import { withPlaceholder } from '@bodiless/components';
 import {
   as, extendMeta, flowHoc, H3, on, startWith, TokenCollection
 } from '@bodiless/fclasses';
+import { asButtonToken, ButtonClean, vitalButton } from '@bodiless/vital-button';
 import { EditorPlainClean, vitalEditorPlain } from '@bodiless/vital-editors';
 import {
   DefaultDomains, vitalCategoryCardElement, vitalSpacing, vitalTypography
 } from '@bodiless/vital-elements';
-import { vitalLink } from '@bodiless/vital-link';
 import { CardComponents } from 'src/components/Card';
 import { CardToken } from 'src/components/Card/CardClean';
 import Base from '../../Card/tokens/Base';
 import { asCategoryCardToken } from '../CategoryCardClean';
 
+/**
+ * Default Category Card Button.
+ * Plain vital button with `WithTertiaryStyle` token and `READ MORE` placeholder.
+ */
+const CategoryCardButton = asButtonToken(
+  vitalButton.Plain,
+  vitalButton.WithTertiaryStyle,
+  {
+    Content: {
+      Body: withPlaceholder('CATEGORY LINK'),
+    },
+  }
+);
 const Default = asCategoryCardToken({
   ...Base,
   Components: {
@@ -20,7 +33,7 @@ const Default = asCategoryCardToken({
     Description: undefined,
     CTAWrapper: undefined,
     Title: undefined,
-    CTALink: vitalLink.Default,
+    CTALink: on(ButtonClean)(CategoryCardButton),
   },
   Layout: {
     ImageWrapper: 'relative overflow-hidden aspect-5/3',
@@ -29,9 +42,6 @@ const Default = asCategoryCardToken({
   },
   Spacing: {
     ContentWrapper: 'py-16px md:py-24px',
-  },
-  Content: {
-    CTAText: withPlaceholder('CATEGORY LINK'),
   },
   Meta: extendMeta(
     flowHoc.meta.term('Sub Type')('Category'),
