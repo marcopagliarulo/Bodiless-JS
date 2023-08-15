@@ -28,6 +28,7 @@ import { Video } from './Video';
 import { Accordion } from './Accordion';
 import { Carousel } from './Carousel';
 import { Section } from './Section';
+import { CategoryCard } from './CategoryCard';
 
 export const VitalDemoStyleGuideTemplate = {
   _default,
@@ -36,6 +37,7 @@ export const VitalDemoStyleGuideTemplate = {
   ContentListingMultiple,
   Editors,
   EditorsMonoFont,
+  CategoryCard,
   Typography,
   Header,
   Images,
