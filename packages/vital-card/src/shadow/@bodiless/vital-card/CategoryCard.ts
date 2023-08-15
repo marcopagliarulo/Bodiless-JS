@@ -1,4 +1,4 @@
-// import { shadow } from '@bodiless/vital-elements';
-// import { vitalCardCategoryCard } from '../../../components/CategoryCard';
+import { shadow } from '@bodiless/vital-elements';
+import { vitalCategoryCard } from '../../../components/CategoryCard';
 
-// export default shadow(vitalCardCategoryCard, 'vitalCard:CategoryCard');
+export default shadow(vitalCategoryCard, 'vitalCard:CategoryCard');
