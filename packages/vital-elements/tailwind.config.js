@@ -215,9 +215,6 @@ const twConfig = {
         'site-percent': '5%',
         'md-site-percent': '8%',
       },
-      aspectRatio: {
-        '5/3': '5 / 3',
-      },
     },
   },
   plugins: [

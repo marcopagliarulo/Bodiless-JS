@@ -37,8 +37,6 @@ const Default = asCategoryCardToken({
   },
   Layout: {
     ...Base.Layout,
-    ImageWrapper: 'relative overflow-hidden aspect-5/3',
-    Image: 'absolute top-0 h-full w-full',
     ContentWrapper: 'items-start',
   },
   Spacing: {
