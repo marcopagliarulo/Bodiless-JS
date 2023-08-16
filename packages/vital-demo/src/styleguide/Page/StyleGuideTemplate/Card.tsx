@@ -14,7 +14,7 @@
 
 import React from 'react';
 import {
-  flowHoc, replaceWith, on, addProps, A, Li, Ul, H3
+  flowHoc, replaceWith, on, addProps, H3, Ul, Li, A,
 } from '@bodiless/fclasses';
 import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vital-templates';
 import { vitalCardFlowContainer } from '@bodiless/vital-card';
@@ -73,7 +73,9 @@ export const Card = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
       <>
         <H3 className="text-xl bold">A List Of Supported Card Variations:</H3>
         <Ul className="p-4">
+          <Li><A href="/styleguide/card/article">Article Card</A></Li>
           <Li><A href="/styleguide/card/category">Category Card</A></Li>
+          <Li><A href="/styleguide/card/product">Product Card</A></Li>
         </Ul>
       </>
     )),
