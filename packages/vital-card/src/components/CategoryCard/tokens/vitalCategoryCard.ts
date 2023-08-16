@@ -1,6 +1,6 @@
 import { withPlaceholder } from '@bodiless/components';
 import {
-  as, extendMeta, flowHoc, H3, on, startWith, TokenCollection
+  as, extendMeta, flowHoc, H3, on, replaceWith, startWith, TokenCollection
 } from '@bodiless/fclasses';
 import { asButtonToken, ButtonClean, vitalButton } from '@bodiless/vital-button';
 import { EditorPlainClean, vitalEditorPlain } from '@bodiless/vital-editors';
@@ -54,7 +54,7 @@ const Default = asCategoryCardToken({
 
 const WithTitle = asCategoryCardToken({
   Components: {
-    TitleWrapper: startWith(H3),
+    TitleWrapper: replaceWith(H3),
     Title: on(EditorPlainClean)(vitalEditorPlain.Default),
   },
   Theme: {
@@ -64,7 +64,7 @@ const WithTitle = asCategoryCardToken({
     ),
   },
   Spacing: {
-    TitleWrapper: vitalSpacing.MarginBottomMedium,
+    CTAWrapper: vitalSpacing.MarginTopMedium,
   },
   Content: {
     Title: withPlaceholder('Category Title'),
