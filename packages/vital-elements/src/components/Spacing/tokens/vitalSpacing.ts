@@ -52,5 +52,5 @@ export default asTokenGroup(SpacingMeta)({
   MarginMedium: 'm-36px md:48px',
   MarginLarge: 'm-36px md:48px',
   MarginXLarge: 'm-36px md:48px',
-  MarginBottomMedium: 'mb-20px md:mb-24px',
+  MarginTopMedium: 'mt-20px md:mt-24px',
 });
