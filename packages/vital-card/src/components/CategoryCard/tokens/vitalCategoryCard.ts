@@ -7,8 +7,8 @@ import { EditorPlainClean, vitalEditorPlain } from '@bodiless/vital-editors';
 import {
   DefaultDomains, vitalCategoryCardElement, vitalSpacing, vitalTypography
 } from '@bodiless/vital-elements';
-import { CardComponents } from 'src/components/Card';
-import { CardToken } from 'src/components/Card/CardClean';
+import { CardComponents } from '../../Card';
+import { CardToken } from '../../Card/CardClean';
 import Base from '../../Card/tokens/Base';
 import { asCategoryCardToken } from '../CategoryCardClean';
 
