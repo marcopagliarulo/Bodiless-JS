@@ -9,10 +9,10 @@ export const meta = {
 };
 
 export default asTokenGroup(meta)({
-  Primary: vitalColor.BorderLightThemeBase,
-  Secondary: vitalColor.BorderLightThemeAlt1,
-  DarkThemeSecondary: vitalColor.BorderDarkThemeBase,
-  LightThemePrimary: vitalColor.BorderLightThemeBase,
-  LightThemeSecondary: vitalColor.BorderLightThemeAlt1,
-  DarkThemePrimary: vitalColor.BorderDarkThemeBase,
+  Primary: vitalColor.BorderDarkBase,
+  Secondary: vitalColor.BorderDarkAlt1,
+  DarkThemeSecondary: vitalColor.BorderLightBase,
+  LightThemePrimary: vitalColor.BorderDarkBase,
+  LightThemeSecondary: vitalColor.BorderDarkAlt1,
+  DarkThemePrimary: vitalColor.BorderLightBase,
 });
