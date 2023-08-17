@@ -9,6 +9,78 @@
           "name": "Mode 1",
           "variables": [
             {
+              "name": "Border Radius/Rounded 400",
+              "type": "number",
+              "isAlias": false,
+              "value": 400
+            },
+            {
+              "name": "Color/Neutrogena/Platform Colors/Norwegian Formula Blue",
+              "type": "color",
+              "isAlias": false,
+              "value": "#254195"
+            },
+            {
+              "name": "Color/Neutrogena/Platform Colors/Norwegian Formula Dark Red",
+              "type": "color",
+              "isAlias": false,
+              "value": "#8A2732"
+            },
+            {
+              "name": "Color/Neutrogena/Platform Colors/Rainbath Amber",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F1A73B"
+            },
+            {
+              "name": "Color/Neutrogena/Platform Colors/DCFC Hydrating Blue",
+              "type": "color",
+              "isAlias": false,
+              "value": "#306FC8"
+            },
+            {
+              "name": "Color/Neutrogena/Platform Colors/DCFC Micellar Gel Purple",
+              "type": "color",
+              "isAlias": false,
+              "value": "#7040B7"
+            },
+            {
+              "name": "Color/Neutrogena/Platform Colors/DCFC Brightening Pink",
+              "type": "color",
+              "isAlias": false,
+              "value": "#E25C95"
+            },
+            {
+              "name": "Color/Neutrogena/Platform Colors/DCFC Hero Orange",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F0AC6D"
+            },
+            {
+              "name": "Color/Neutrogena/Platform Colors/DCFC Acne Orange",
+              "type": "color",
+              "isAlias": false,
+              "value": "#ED722E"
+            },
+            {
+              "name": "Color/Neutrogena/Platform Colors/DCFC Soothing Turquoise",
+              "type": "color",
+              "isAlias": false,
+              "value": "#5CC5B2"
+            },
+            {
+              "name": "Color/Neutrogena/Platform Colors/Bright Boost Coral",
+              "type": "color",
+              "isAlias": false,
+              "value": "#EF888D"
+            },
+            {
+              "name": "Color/Neutrogena/Platform Colors/Hydro Boost Blue",
+              "type": "color",
+              "isAlias": false,
+              "value": "#4DA7DB"
+            },
+            {
               "name": "Border Radius/Rounded 32",
               "type": "number",
               "isAlias": false,
@@ -73,6 +145,12 @@
               "type": "color",
               "isAlias": false,
               "value": "#FFFFFF00"
+            },
+            {
+              "name": "Color/Neutrogena/Platform Colors/Acne Red",
+              "type": "color",
+              "isAlias": false,
+              "value": "#E04344"
             },
             {
               "name": "Color/Lubriderm/Lightest Blue Grey",
@@ -705,6 +783,12 @@
               "value": "#FFA6A6"
             },
             {
+              "name": "Color/Neutrogena/Primary Brand/White",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF"
+            },
+            {
               "name": "Spacing/12",
               "type": "number",
               "isAlias": false,
@@ -721,6 +805,12 @@
               "type": "color",
               "isAlias": false,
               "value": "#FF9797"
+            },
+            {
+              "name": "Color/Neutrogena/Primary Brand/Pink",
+              "type": "color",
+              "isAlias": false,
+              "value": "#C50548"
             },
             {
               "name": "Spacing/10",
@@ -777,6 +867,12 @@
               "value": "#2A2630"
             },
             {
+              "name": "Color/Neutrogena/Primary Brand/Light Grey",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F4F4F4"
+            },
+            {
               "name": "Color/Kenvue/Green/Shade/20%",
               "type": "color",
               "isAlias": false,
@@ -805,6 +901,12 @@
               "type": "color",
               "isAlias": false,
               "value": "#BEAADA"
+            },
+            {
+              "name": "Color/Neutrogena/Primary Brand/Black",
+              "type": "color",
+              "isAlias": false,
+              "value": "#000000"
             },
             {
               "name": "Color/Kenvue/Green/Shade/30%",
@@ -1035,6 +1137,12 @@
               "value": "#FFC033"
             },
             {
+              "name": "Color/Neutrogena/Primary Brand/Dark Grey",
+              "type": "color",
+              "isAlias": false,
+              "value": "#606060"
+            },
+            {
               "name": "Color/Lubriderm/Light Blue",
               "type": "color",
               "isAlias": false,
@@ -1075,6 +1183,12 @@
               "type": "color",
               "isAlias": false,
               "value": "#FFB81A"
+            },
+            {
+              "name": "Color/Neutrogena/Primary Brand/Interactive Blue",
+              "type": "color",
+              "isAlias": false,
+              "value": "#0377A5"
             },
             {
               "name": "Color/Motrin/Medium Light Orange",
@@ -1197,6 +1311,12 @@
               "value": "#D3BDF2"
             },
             {
+              "name": "Color/Neutrogena/Primary Brand/Grey",
+              "type": "color",
+              "isAlias": false,
+              "value": "#C5C5C5"
+            },
+            {
               "name": "Color/Kenvue/Green/Shade/10%",
               "type": "color",
               "isAlias": false,
@@ -1305,6 +1425,12 @@
               "value": "#4A4E55"
             },
             {
+              "name": "Color/Neutrogena/Platform Colors/Rapid Wrinkle Repair",
+              "type": "color",
+              "isAlias": false,
+              "value": "#4571B7"
+            },
+            {
               "name": "Spacing/9",
               "type": "number",
               "isAlias": false,
@@ -1315,6 +1441,12 @@
               "type": "color",
               "isAlias": false,
               "value": "#0E274B"
+            },
+            {
+              "name": "Color/Neutrogena/Platform Colors/Ultra Sheer",
+              "type": "color",
+              "isAlias": false,
+              "value": "#5E86D3"
             },
             {
               "name": "Spacing/8",
@@ -1345,6 +1477,12 @@
               "type": "color",
               "isAlias": false,
               "value": "#CACBEE"
+            },
+            {
+              "name": "Color/Neutrogena/Platform Colors/Rapid V Silver",
+              "type": "color",
+              "isAlias": false,
+              "value": "#B1B3B6"
             },
             {
               "name": "Color/Listerine/Blue/Ocean Blue",
@@ -1591,6 +1729,24 @@
           "name": "White Label",
           "variables": [
             {
+              "name": "Components/Navigation/Primary/Border/Dark Theme/Border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Border/Light/Alt 1"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Border/Light Theme/Border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Border/Light/Alt 1"
+              }
+            },
+            {
               "name": "Components/Navigation/Secondary/Icon/Dark Theme/Idle",
               "type": "color",
               "isAlias": true,
@@ -1600,7 +1756,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Active",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -1609,7 +1765,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Hover",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -1618,7 +1774,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Idle",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -1654,7 +1810,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Active",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -1663,7 +1819,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Idle",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -1816,6 +1972,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
+              }
+            },
+            {
               "name": "Components/Content Card/Border Radius/Bottom Left",
               "type": "number",
               "isAlias": true,
@@ -1840,6 +2005,15 @@
               "value": {
                 "collection": "Core Values",
                 "name": "Color/Transparent"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
               }
             },
             {
@@ -2284,6 +2458,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Icon/Light Theme/Disabled - Active",
               "type": "color",
               "isAlias": true,
@@ -2302,12 +2485,30 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Theme Tokens",
+                "name": "Semantic/Color/Interactive/Pressed"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Icon/Light Theme/Hover - Checked",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Icon/Light/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
               }
             },
             {
@@ -2326,6 +2527,15 @@
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Icon/Light/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
               }
             },
             {
@@ -2356,10 +2566,37 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
+              }
+            },
+            {
               "name": "Components/Chip/Text/Light Theme/Label Alt 1",
               "type": "color",
               "isAlias": false,
               "value": "#FFFFFF"
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Dark/Base"
+              }
             },
             {
               "name": "Components/Chip/Text/Light Theme/Label Alt 2",
@@ -2395,6 +2632,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Dark/Base"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Border/Light Theme/Disabled - Checked",
               "type": "color",
               "isAlias": true,
@@ -2419,6 +2665,15 @@
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Interactive/Dark/Hover"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Theme Tokens",
+                "name": "Semantic/Color/Interactive/Hover"
               }
             },
             {
@@ -3148,7 +3403,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Hover",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -3691,6 +3946,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
               "name": "Components/Content Card/Border Radius/Top Right",
               "type": "number",
               "isAlias": true,
@@ -4197,7 +4461,7 @@
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
-                "name": "Semantic/Color/Background/Alt 8"
+                "name": "Semantic/Color/Background/Base"
               }
             },
             {
@@ -4219,7 +4483,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Background/Dark Theme/Primary Navigation",
+              "name": "Components/Navigation/Primary/Background/Dark Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -4228,7 +4492,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Background/Light Theme/Primary Navigation",
+              "name": "Components/Navigation/Primary/Background/Light Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -5788,6 +6052,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Background/Light Theme/Disabled - Checked",
               "type": "color",
               "isAlias": true,
@@ -5821,6 +6094,15 @@
               "value": {
                 "collection": "Core Values",
                 "name": "Border Radius/Rounded 0"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
               }
             },
             {
@@ -6000,7 +6282,7 @@
               "isAlias": true,
               "value": {
                 "collection": "Core Values",
-                "name": "Color/Transparent"
+                "name": "Color/Kenvue/Neutrals/Light Grey 2"
               }
             },
             {
@@ -6040,12 +6322,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Primary Link/Border/Hover",
+              "name": "Components/Navigation/Primary/Primary Link/Border/Light Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
-                "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Default"
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
               }
             },
             {
@@ -6103,12 +6385,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Primary Link/Border/Active",
+              "name": "Components/Navigation/Primary/Primary Link/Border/Light Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
-                "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Hover"
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
               }
             },
             {
@@ -6343,6 +6625,15 @@
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Text/Light/Alt 1"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Theme Tokens",
+                "name": "Semantic/Color/Interactive/Pressed"
               }
             },
             {
@@ -6823,6 +7114,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Theme Tokens",
+                "name": "Semantic/Color/Interactive/Hover"
+              }
+            },
+            {
               "name": "Components/Product Card/Image/Border Radius/Top Left",
               "type": "number",
               "isAlias": true,
@@ -6931,12 +7231,30 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
               "name": "Components/Product Card/Background/Light Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Background/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Primary Link/Border/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
               }
             },
             {
@@ -6972,7 +7290,7 @@
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
-                "name": "Semantic/Color/Background/Base"
+                "name": "Semantic/Color/Background/Alt 6"
               }
             },
             {
@@ -7030,6 +7348,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Dark/Base"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Border Radius/All",
               "type": "number",
               "isAlias": true,
@@ -7048,6 +7375,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Primary Link/Border/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
+              }
+            },
+            {
               "name": "Components/Button/Secondary/Text/Dark Theme/Hover",
               "type": "color",
               "isAlias": true,
@@ -7062,6 +7398,24 @@
           "name": "Motrin",
           "variables": [
             {
+              "name": "Components/Navigation/Primary/Border/Dark Theme/Border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Border/Dark/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Border/Light Theme/Border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Border/Dark/Base"
+              }
+            },
+            {
               "name": "Components/Navigation/Secondary/Icon/Dark Theme/Idle",
               "type": "color",
               "isAlias": true,
@@ -7071,7 +7425,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Active",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -7080,7 +7434,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Hover",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -7089,7 +7443,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Idle",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -7125,7 +7479,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Active",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -7134,7 +7488,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Idle",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -7287,6 +7641,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
+              }
+            },
+            {
               "name": "Components/Content Card/Border Radius/Bottom Left",
               "type": "number",
               "isAlias": true,
@@ -7311,6 +7674,15 @@
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Border/Dark/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
               }
             },
             {
@@ -7755,6 +8127,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Icon/Light Theme/Disabled - Active",
               "type": "color",
               "isAlias": true,
@@ -7773,12 +8154,30 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Icon/Light Theme/Hover - Checked",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Icon/Light/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
               }
             },
             {
@@ -7797,6 +8196,15 @@
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Icon/Light/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
               }
             },
             {
@@ -7827,12 +8235,39 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
+              }
+            },
+            {
               "name": "Components/Chip/Text/Light Theme/Label Alt 1",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Text/Dark/Alt 1"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Dark/Base"
               }
             },
             {
@@ -7869,6 +8304,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Dark/Alt 1"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Border/Light Theme/Disabled - Checked",
               "type": "color",
               "isAlias": true,
@@ -7888,6 +8332,15 @@
             },
             {
               "name": "Components/Filter/Quick Filter/Border/Light Theme/Hover - Checked",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -8622,7 +9075,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Hover",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -9165,6 +9618,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
               "name": "Components/Content Card/Border Radius/Top Right",
               "type": "number",
               "isAlias": true,
@@ -9674,7 +10136,7 @@
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
-                "name": "Semantic/Color/Background/Alt 3"
+                "name": "Semantic/Color/Background/Base"
               }
             },
             {
@@ -9696,7 +10158,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Background/Dark Theme/Primary Navigation",
+              "name": "Components/Navigation/Primary/Background/Dark Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -9705,7 +10167,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Background/Light Theme/Primary Navigation",
+              "name": "Components/Navigation/Primary/Background/Light Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -11259,6 +11721,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Background/Light Theme/Disabled - Checked",
               "type": "color",
               "isAlias": true,
@@ -11292,6 +11763,15 @@
               "value": {
                 "collection": "Core Values",
                 "name": "Border Radius/Rounded 0"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
               }
             },
             {
@@ -11471,7 +11951,7 @@
               "isAlias": true,
               "value": {
                 "collection": "Core Values",
-                "name": "Color/Transparent"
+                "name": "Color/Motrin/White"
               }
             },
             {
@@ -11511,12 +11991,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Primary Link/Border/Hover",
+              "name": "Components/Navigation/Primary/Primary Link/Border/Light Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
-                "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Default"
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
               }
             },
             {
@@ -11525,7 +12005,7 @@
               "isAlias": true,
               "value": {
                 "collection": "Core Values",
-                "name": "Color/Transparent"
+                "name": "Color/Motrin/Yellow Grey"
               }
             },
             {
@@ -11574,12 +12054,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Primary Link/Border/Active",
+              "name": "Components/Navigation/Primary/Primary Link/Border/Light Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
-                "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Hover"
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
               }
             },
             {
@@ -11811,6 +12291,15 @@
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
               }
             },
             {
@@ -12288,6 +12777,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
+              }
+            },
+            {
               "name": "Components/Product Card/Image/Border Radius/Top Left",
               "type": "number",
               "isAlias": true,
@@ -12396,12 +12894,30 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
               "name": "Components/Product Card/Background/Light Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Background/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Primary Link/Border/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
               }
             },
             {
@@ -12495,6 +13011,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Dark/Alt 1"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Border Radius/All",
               "type": "number",
               "isAlias": true,
@@ -12513,6 +13038,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Primary Link/Border/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
+              }
+            },
+            {
               "name": "Components/Button/Secondary/Text/Dark Theme/Hover",
               "type": "color",
               "isAlias": true,
@@ -12527,6 +13061,24 @@
           "name": "Lubriderm",
           "variables": [
             {
+              "name": "Components/Navigation/Primary/Border/Dark Theme/Border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Border/Light/Alt 1"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Border/Light Theme/Border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Border/Light/Alt 1"
+              }
+            },
+            {
               "name": "Components/Navigation/Secondary/Icon/Dark Theme/Idle",
               "type": "color",
               "isAlias": true,
@@ -12536,7 +13088,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Active",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -12545,7 +13097,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Hover",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -12554,7 +13106,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Idle",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -12590,7 +13142,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Active",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -12599,7 +13151,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Idle",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -12752,6 +13304,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
+              }
+            },
+            {
               "name": "Components/Content Card/Border Radius/Bottom Left",
               "type": "number",
               "isAlias": true,
@@ -12776,6 +13337,15 @@
               "value": {
                 "collection": "Core Values",
                 "name": "Color/Transparent"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
               }
             },
             {
@@ -13220,6 +13790,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Icon/Light Theme/Disabled - Active",
               "type": "color",
               "isAlias": true,
@@ -13238,12 +13817,30 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Icon/Light Theme/Hover - Checked",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Icon/Light/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
               }
             },
             {
@@ -13262,6 +13859,15 @@
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Icon/Light/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
               }
             },
             {
@@ -13292,7 +13898,34 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
+              }
+            },
+            {
               "name": "Components/Chip/Text/Light Theme/Label Alt 1",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Dark/Alt 1"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -13337,6 +13970,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Dark/Alt 1"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Border/Light Theme/Disabled - Checked",
               "type": "color",
               "isAlias": true,
@@ -13356,6 +13998,15 @@
             },
             {
               "name": "Components/Filter/Quick Filter/Border/Light Theme/Hover - Checked",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -14087,7 +14738,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Hover",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -14630,6 +15281,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
               "name": "Components/Content Card/Border Radius/Top Right",
               "type": "number",
               "isAlias": true,
@@ -15139,7 +15799,7 @@
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
-                "name": "Semantic/Color/Background/Alt 3"
+                "name": "Semantic/Color/Background/Base"
               }
             },
             {
@@ -15161,7 +15821,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Background/Dark Theme/Primary Navigation",
+              "name": "Components/Navigation/Primary/Background/Dark Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -15170,7 +15830,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Background/Light Theme/Primary Navigation",
+              "name": "Components/Navigation/Primary/Background/Light Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -16724,6 +17384,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Background/Light Theme/Disabled - Checked",
               "type": "color",
               "isAlias": true,
@@ -16757,6 +17426,15 @@
               "value": {
                 "collection": "Core Values",
                 "name": "Border Radius/Rounded 0"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
               }
             },
             {
@@ -16976,12 +17654,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Primary Link/Border/Hover",
+              "name": "Components/Navigation/Primary/Primary Link/Border/Light Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
-                "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Default"
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
               }
             },
             {
@@ -17039,12 +17717,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Primary Link/Border/Active",
+              "name": "Components/Navigation/Primary/Primary Link/Border/Light Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
-                "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Hover"
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
               }
             },
             {
@@ -17276,6 +17954,15 @@
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
               }
             },
             {
@@ -17747,6 +18434,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
+              }
+            },
+            {
               "name": "Components/Product Card/Image/Border Radius/Top Left",
               "type": "number",
               "isAlias": true,
@@ -17855,12 +18551,30 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
               "name": "Components/Product Card/Background/Light Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Background/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Primary Link/Border/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
               }
             },
             {
@@ -17954,6 +18668,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Dark/Alt 1"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Border Radius/All",
               "type": "number",
               "isAlias": true,
@@ -17972,6 +18695,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Primary Link/Border/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
+              }
+            },
+            {
               "name": "Components/Button/Secondary/Text/Dark Theme/Hover",
               "type": "color",
               "isAlias": true,
@@ -17986,6 +18718,24 @@
           "name": "Listerine",
           "variables": [
             {
+              "name": "Components/Navigation/Primary/Border/Dark Theme/Border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Core Values",
+                "name": "Color/Transparent"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Border/Light Theme/Border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Core Values",
+                "name": "Color/Transparent"
+              }
+            },
+            {
               "name": "Components/Navigation/Secondary/Icon/Dark Theme/Idle",
               "type": "color",
               "isAlias": true,
@@ -17995,7 +18745,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Active",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -18004,7 +18754,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Hover",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -18013,7 +18763,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Idle",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -18049,7 +18799,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Active",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -18058,7 +18808,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Idle",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -18208,6 +18958,15 @@
               "value": "#FFFFFF"
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
+              }
+            },
+            {
               "name": "Components/Content Card/Border Radius/Bottom Left",
               "type": "number",
               "isAlias": true,
@@ -18232,6 +18991,15 @@
               "value": {
                 "collection": "Core Values",
                 "name": "Color/Transparent"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
               }
             },
             {
@@ -18676,6 +19444,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Icon/Light Theme/Disabled - Active",
               "type": "color",
               "isAlias": true,
@@ -18694,12 +19471,30 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Icon/Light Theme/Hover - Checked",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Icon/Light/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
               }
             },
             {
@@ -18718,6 +19513,15 @@
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Icon/Light/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
               }
             },
             {
@@ -18748,12 +19552,39 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
+              }
+            },
+            {
               "name": "Components/Chip/Text/Light Theme/Label Alt 1",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Text/Dark/Alt 1"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
               }
             },
             {
@@ -18790,6 +19621,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Border/Light Theme/Disabled - Checked",
               "type": "color",
               "isAlias": true,
@@ -18814,6 +19654,15 @@
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Interactive/Dark/Idle"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
               }
             },
             {
@@ -19540,7 +20389,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Hover",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -20083,6 +20932,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
               "name": "Components/Content Card/Border Radius/Top Right",
               "type": "number",
               "isAlias": true,
@@ -20586,7 +21444,7 @@
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
-                "name": "Semantic/Color/Background/Alt 3"
+                "name": "Semantic/Color/Background/Base"
               }
             },
             {
@@ -20608,7 +21466,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Background/Dark Theme/Primary Navigation",
+              "name": "Components/Navigation/Primary/Background/Dark Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -20617,7 +21475,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Background/Light Theme/Primary Navigation",
+              "name": "Components/Navigation/Primary/Background/Light Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -21291,7 +22149,7 @@
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
-                "name": "Semantic/Color/Icon/Dark/Interactive"
+                "name": "Semantic/Color/Icon/Light/Base"
               }
             },
             {
@@ -22171,6 +23029,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Background/Light Theme/Disabled - Checked",
               "type": "color",
               "isAlias": true,
@@ -22204,6 +23071,15 @@
               "value": {
                 "collection": "Core Values",
                 "name": "Border Radius/Rounded 0"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
               }
             },
             {
@@ -22423,12 +23299,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Primary Link/Border/Hover",
+              "name": "Components/Navigation/Primary/Primary Link/Border/Light Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
-                "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Default"
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
               }
             },
             {
@@ -22486,12 +23362,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Primary Link/Border/Active",
+              "name": "Components/Navigation/Primary/Primary Link/Border/Light Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
-                "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Default"
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
               }
             },
             {
@@ -22723,6 +23599,15 @@
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
               }
             },
             {
@@ -23191,6 +24076,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
+              }
+            },
+            {
               "name": "Components/Product Card/Image/Border Radius/Top Left",
               "type": "number",
               "isAlias": true,
@@ -23299,12 +24193,30 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
               "name": "Components/Product Card/Background/Light Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Background/Alt 1"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Primary Link/Border/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
               }
             },
             {
@@ -23398,6 +24310,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Border Radius/All",
               "type": "number",
               "isAlias": true,
@@ -23416,6 +24337,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Primary Link/Border/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
+              }
+            },
+            {
               "name": "Components/Button/Secondary/Text/Dark Theme/Hover",
               "type": "color",
               "isAlias": true,
@@ -23430,6 +24360,24 @@
           "name": "Kenvue",
           "variables": [
             {
+              "name": "Components/Navigation/Primary/Border/Dark Theme/Border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Border/Dark/Alt 1"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Border/Light Theme/Border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Border/Dark/Alt 1"
+              }
+            },
+            {
               "name": "Components/Navigation/Secondary/Icon/Dark Theme/Idle",
               "type": "color",
               "isAlias": true,
@@ -23439,7 +24387,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Active",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -23448,7 +24396,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Hover",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -23457,7 +24405,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Idle",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -23493,7 +24441,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Active",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -23502,7 +24450,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Idle",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -23655,6 +24603,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
+              }
+            },
+            {
               "name": "Components/Content Card/Border Radius/Bottom Left",
               "type": "number",
               "isAlias": true,
@@ -23679,6 +24636,15 @@
               "value": {
                 "collection": "Core Values",
                 "name": "Color/Transparent"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
               }
             },
             {
@@ -24123,6 +25089,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Icon/Light Theme/Disabled - Active",
               "type": "color",
               "isAlias": true,
@@ -24141,12 +25116,30 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Icon/Light Theme/Hover - Checked",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Icon/Light/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
               }
             },
             {
@@ -24165,6 +25158,15 @@
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Icon/Light/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
               }
             },
             {
@@ -24195,12 +25197,39 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
+              }
+            },
+            {
               "name": "Components/Chip/Text/Light Theme/Label Alt 1",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Text/Dark/Alt 1"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Dark/Base"
               }
             },
             {
@@ -24240,6 +25269,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Dark/Base"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Border/Light Theme/Disabled - Checked",
               "type": "color",
               "isAlias": true,
@@ -24259,6 +25297,15 @@
             },
             {
               "name": "Components/Filter/Quick Filter/Border/Light Theme/Hover - Checked",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -24993,7 +26040,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Hover",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -25536,6 +26583,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
               "name": "Components/Content Card/Border Radius/Top Right",
               "type": "number",
               "isAlias": true,
@@ -26064,7 +27120,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Background/Dark Theme/Primary Navigation",
+              "name": "Components/Navigation/Primary/Background/Dark Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -26073,7 +27129,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Background/Light Theme/Primary Navigation",
+              "name": "Components/Navigation/Primary/Background/Light Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -27630,6 +28686,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Background/Light Theme/Disabled - Checked",
               "type": "color",
               "isAlias": true,
@@ -27663,6 +28728,15 @@
               "value": {
                 "collection": "Core Values",
                 "name": "Border Radius/Rounded 32"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
               }
             },
             {
@@ -27882,12 +28956,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Primary Link/Border/Hover",
+              "name": "Components/Navigation/Primary/Primary Link/Border/Light Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
-                "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Default"
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
               }
             },
             {
@@ -27945,12 +29019,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Primary Link/Border/Active",
+              "name": "Components/Navigation/Primary/Primary Link/Border/Light Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
-                "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Hover"
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
               }
             },
             {
@@ -28185,6 +29259,15 @@
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Text/Light/Alt 1"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
               }
             },
             {
@@ -28665,6 +29748,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
+              }
+            },
+            {
               "name": "Components/Product Card/Image/Border Radius/Top Left",
               "type": "number",
               "isAlias": true,
@@ -28773,12 +29865,30 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
               "name": "Components/Product Card/Background/Light Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Background/Alt 6"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Primary Link/Border/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
               }
             },
             {
@@ -28872,6 +29982,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Dark/Base"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Border Radius/All",
               "type": "number",
               "isAlias": true,
@@ -28890,6 +30009,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Primary Link/Border/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
+              }
+            },
+            {
               "name": "Components/Button/Secondary/Text/Dark Theme/Hover",
               "type": "color",
               "isAlias": true,
@@ -28904,6 +30032,24 @@
           "name": "Zyrtec",
           "variables": [
             {
+              "name": "Components/Navigation/Primary/Border/Dark Theme/Border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Border/Dark/Alt 1"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Border/Light Theme/Border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Border/Dark/Alt 1"
+              }
+            },
+            {
               "name": "Components/Navigation/Secondary/Icon/Dark Theme/Idle",
               "type": "color",
               "isAlias": true,
@@ -28913,7 +30059,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Active",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -28922,7 +30068,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Hover",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -28931,7 +30077,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Dark Theme/Idle",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -28967,7 +30113,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Active",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -28976,7 +30122,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Idle",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -29129,6 +30275,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
+              }
+            },
+            {
               "name": "Components/Content Card/Border Radius/Bottom Left",
               "type": "number",
               "isAlias": true,
@@ -29153,6 +30308,15 @@
               "value": {
                 "collection": "Core Values",
                 "name": "Color/Transparent"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
               }
             },
             {
@@ -29597,6 +30761,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Icon/Light Theme/Disabled - Active",
               "type": "color",
               "isAlias": true,
@@ -29615,12 +30788,30 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Icon/Light Theme/Hover - Checked",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Icon/Light/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
               }
             },
             {
@@ -29639,6 +30830,15 @@
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Icon/Light/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
               }
             },
             {
@@ -29669,12 +30869,39 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
+              }
+            },
+            {
               "name": "Components/Chip/Text/Light Theme/Label Alt 1",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Text/Dark/Alt 1"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Dark/Base"
               }
             },
             {
@@ -29714,6 +30941,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Dark/Base"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Border/Light Theme/Disabled - Checked",
               "type": "color",
               "isAlias": true,
@@ -29733,6 +30969,15 @@
             },
             {
               "name": "Components/Filter/Quick Filter/Border/Light Theme/Hover - Checked",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -30467,7 +31712,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Light Theme/Hover",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -31010,6 +32255,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
               "name": "Components/Content Card/Border Radius/Top Right",
               "type": "number",
               "isAlias": true,
@@ -31516,7 +32770,7 @@
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
-                "name": "Semantic/Color/Background/Alt 8"
+                "name": "Semantic/Color/Background/Base"
               }
             },
             {
@@ -31538,7 +32792,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Background/Dark Theme/Primary Navigation",
+              "name": "Components/Navigation/Primary/Background/Dark Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -31547,7 +32801,7 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Background/Light Theme/Primary Navigation",
+              "name": "Components/Navigation/Primary/Background/Light Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
@@ -33101,6 +34355,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Background/Light Theme/Disabled - Checked",
               "type": "color",
               "isAlias": true,
@@ -33134,6 +34397,15 @@
               "value": {
                 "collection": "Core Values",
                 "name": "Border Radius/Rounded 4"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
               }
             },
             {
@@ -33353,12 +34625,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Primary Link/Border/Hover",
+              "name": "Components/Navigation/Primary/Primary Link/Border/Light Theme/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
-                "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Default"
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
               }
             },
             {
@@ -33416,12 +34688,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Primary Link/Border/Active",
+              "name": "Components/Navigation/Primary/Primary Link/Border/Light Theme/Active",
               "type": "color",
               "isAlias": true,
               "value": {
-                "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Hover"
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
               }
             },
             {
@@ -33653,6 +34925,15 @@
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Text/Light/Alt 1"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Pressed"
               }
             },
             {
@@ -34127,6 +35408,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Dark/Hover"
+              }
+            },
+            {
               "name": "Components/Product Card/Image/Border Radius/Top Left",
               "type": "number",
               "isAlias": true,
@@ -34235,12 +35525,30 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Light/Base"
+              }
+            },
+            {
               "name": "Components/Product Card/Background/Light Theme/Background",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
                 "name": "Semantic/Color/Background/Base"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Primary Link/Border/Dark Theme/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Hover"
               }
             },
             {
@@ -34334,6 +35642,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Text/Dark/Base"
+              }
+            },
+            {
               "name": "Components/Filter/Quick Filter/Border Radius/All",
               "type": "number",
               "isAlias": true,
@@ -34349,6 +35666,15 @@
               "value": {
                 "collection": "Core Values",
                 "name": "Border Radius/Rounded 4"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Primary Link/Border/Dark Theme/Active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Semantic/Color/Interactive/Light/Pressed"
               }
             },
             {
@@ -34791,12 +36117,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Link/Hover",
+              "name": "Components/Navigation/Secondary/Link/Text/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Default"
+                "name": "Components/Navigation/Secondary/Text/Mobile/Hover"
               }
             },
             {
@@ -35133,6 +36459,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Button/Primary/Padding/SidesY",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Core Values",
+                "name": "Spacing/8"
+              }
+            },
+            {
               "name": "Components/Navigation/Primary/Primary Link/Padding/Left",
               "type": "number",
               "isAlias": true,
@@ -35178,12 +36513,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Link/Idle",
+              "name": "Components/Navigation/Secondary/Link/Text/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Theme Tokens",
-                "name": "Typography/Body/Regular"
+                "name": "Components/Navigation/Secondary/Text/Mobile/Idle"
               }
             },
             {
@@ -35373,12 +36708,12 @@
               "value": 844
             },
             {
-              "name": "Components/Navigation/Secondary/Link/Active",
+              "name": "Components/Navigation/Secondary/Link/Text/Active",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Pressed"
+                "name": "Components/Navigation/Secondary/Text/Mobile/Pressed"
               }
             },
             {
@@ -35415,6 +36750,15 @@
               "value": {
                 "collection": "Core Values",
                 "name": "Spacing/36"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Button/Primary/Padding/SidesX",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Core Values",
+                "name": "Spacing/24"
               }
             },
             {
@@ -35972,12 +37316,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Link/Hover",
+              "name": "Components/Navigation/Secondary/Link/Text/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Default"
+                "name": "Components/Navigation/Secondary/Text/Tablet/Hover"
               }
             },
             {
@@ -36314,6 +37658,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Button/Primary/Padding/SidesY",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Core Values",
+                "name": "Spacing/8"
+              }
+            },
+            {
               "name": "Components/Navigation/Primary/Primary Link/Padding/Left",
               "type": "number",
               "isAlias": true,
@@ -36359,12 +37712,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Link/Idle",
+              "name": "Components/Navigation/Secondary/Link/Text/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Theme Tokens",
-                "name": "Typography/Body/Regular"
+                "name": "Components/Navigation/Secondary/Text/Tablet/Idle"
               }
             },
             {
@@ -36554,12 +37907,12 @@
               "value": 1024
             },
             {
-              "name": "Components/Navigation/Secondary/Link/Active",
+              "name": "Components/Navigation/Secondary/Link/Text/Active",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Pressed"
+                "name": "Components/Navigation/Secondary/Text/Tablet/Pressed"
               }
             },
             {
@@ -36596,6 +37949,15 @@
               "value": {
                 "collection": "Core Values",
                 "name": "Spacing/36"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Button/Primary/Padding/SidesX",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Core Values",
+                "name": "Spacing/24"
               }
             },
             {
@@ -37153,12 +38515,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Link/Hover",
+              "name": "Components/Navigation/Secondary/Link/Text/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Default"
+                "name": "Components/Navigation/Secondary/Text/Tablet/Hover"
               }
             },
             {
@@ -37504,6 +38866,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Button/Primary/Padding/SidesY",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Core Values",
+                "name": "Spacing/8"
+              }
+            },
+            {
               "name": "Components/Navigation/Primary/Primary Link/Padding/Left",
               "type": "number",
               "isAlias": false,
@@ -37546,12 +38917,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Link/Idle",
+              "name": "Components/Navigation/Secondary/Link/Text/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Theme Tokens",
-                "name": "Typography/Headline/Small"
+                "name": "Components/Navigation/Secondary/Text/Tablet/Idle"
               }
             },
             {
@@ -37741,12 +39112,12 @@
               "value": 1080
             },
             {
-              "name": "Components/Navigation/Secondary/Link/Active",
+              "name": "Components/Navigation/Secondary/Link/Text/Active",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Theme Tokens",
-                "name": "Semantic/Color/Interactive/Pressed"
+                "name": "Components/Navigation/Secondary/Text/Tablet/Pressed"
               }
             },
             {
@@ -37783,6 +39154,15 @@
               "value": {
                 "collection": "Core Values",
                 "name": "Spacing/48"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Button/Primary/Padding/SidesX",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Core Values",
+                "name": "Spacing/16"
               }
             },
             {
@@ -37925,6 +39305,69 @@
           "name": "Light",
           "variables": [
             {
+              "name": "Components/Navigation/Primary/Primary Link/Border/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Primary/Primary Link/Border/Light Theme/Active"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Pressed"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Hover"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Primary/Secondary Link/Light Theme/Idle"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Idle"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Hover"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Idle"
+              }
+            },
+            {
               "name": "Components/Navigation/Primary/Primary Link/Text/Desktop/Hover",
               "type": "color",
               "isAlias": true,
@@ -38060,12 +39503,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Pressed",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Pressed",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
-                "name": "Components/Navigation/Secondary/Text/Light Theme/Active"
+                "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Active"
               }
             },
             {
@@ -38492,12 +39935,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Idle",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
-                "name": "Components/Navigation/Secondary/Text/Light Theme/Idle"
+                "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Idle"
               }
             },
             {
@@ -39335,12 +40778,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Hover",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
-                "name": "Components/Navigation/Secondary/Text/Light Theme/Hover"
+                "name": "Components/Navigation/Secondary/Text/Mobile/Light Theme/Hover"
               }
             },
             {
@@ -39647,6 +41090,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Hover"
+              }
+            },
+            {
               "name": "Components/Navigation/Primary/Icon/Icon",
               "type": "color",
               "isAlias": true,
@@ -39881,6 +41333,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Secondary/Text/Desktop/Light Theme/Active"
+              }
+            },
+            {
               "name": "Components/Category Card/Text/Headline",
               "type": "color",
               "isAlias": true,
@@ -39944,6 +41405,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Active"
+              }
+            },
+            {
               "name": "Components/Footer/Secondary/Text/Caption",
               "type": "color",
               "isAlias": true,
@@ -39953,12 +41423,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Background/Primary Navigation",
+              "name": "Components/Navigation/Primary/Background/Background",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
-                "name": "Components/Navigation/Primary/Background/Light Theme/Primary Navigation"
+                "name": "Components/Navigation/Primary/Background/Light Theme/Background"
               }
             },
             {
@@ -40511,6 +41981,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Primary/Primary Link/Border/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Primary/Primary Link/Border/Light Theme/Hover"
+              }
+            },
+            {
               "name": "Components/Modal/Icon/Icon",
               "type": "color",
               "isAlias": true,
@@ -40804,6 +42283,69 @@
           "name": "Dark",
           "variables": [
             {
+              "name": "Components/Navigation/Primary/Primary Link/Border/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Primary/Primary Link/Border/Dark Theme/Active"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Pressed"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Hover"
+              }
+            },
+            {
+              "name": "Components/Navigation/Primary/Secondary Link/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Primary/Secondary Link/Dark Theme/Idle"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Idle"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Hover"
+              }
+            },
+            {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Idle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Secondary/Text/Tablet/Dark Theme/Idle"
+              }
+            },
+            {
               "name": "Components/Navigation/Primary/Primary Link/Text/Desktop/Hover",
               "type": "color",
               "isAlias": true,
@@ -40918,12 +42460,12 @@
               "value": "#FFFFFF"
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Pressed",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Pressed",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
-                "name": "Components/Navigation/Secondary/Text/Dark Theme/Active"
+                "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Active"
               }
             },
             {
@@ -41227,12 +42769,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Idle",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Idle",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
-                "name": "Components/Navigation/Secondary/Text/Dark Theme/Idle"
+                "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Idle"
               }
             },
             {
@@ -41881,12 +43423,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Secondary/Text/Hover",
+              "name": "Components/Navigation/Secondary/Text/Mobile/Hover",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
-                "name": "Components/Navigation/Secondary/Text/Dark Theme/Hover"
+                "name": "Components/Navigation/Secondary/Text/Mobile/Dark Theme/Hover"
               }
             },
             {
@@ -42148,6 +43690,15 @@
               "value": "#FFFFFF"
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Hover"
+              }
+            },
+            {
               "name": "Components/Navigation/Primary/Icon/Icon",
               "type": "color",
               "isAlias": true,
@@ -42361,6 +43912,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Desktop/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Secondary/Text/Desktop/Dark Theme/Active"
+              }
+            },
+            {
               "name": "Components/Category Card/Text/Headline",
               "type": "color",
               "isAlias": true,
@@ -42412,6 +43972,15 @@
               }
             },
             {
+              "name": "Components/Navigation/Secondary/Text/Tablet/Pressed",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Secondary/Text/Tablet/Light Theme/Active"
+              }
+            },
+            {
               "name": "Components/Footer/Secondary/Text/Caption",
               "type": "color",
               "isAlias": true,
@@ -42421,12 +43990,12 @@
               }
             },
             {
-              "name": "Components/Navigation/Primary/Background/Primary Navigation",
+              "name": "Components/Navigation/Primary/Background/Background",
               "type": "color",
               "isAlias": true,
               "value": {
                 "collection": "Brand Tokens",
-                "name": "Components/Navigation/Primary/Background/Dark Theme/Primary Navigation"
+                "name": "Components/Navigation/Primary/Background/Dark Theme/Background"
               }
             },
             {
@@ -42929,6 +44498,15 @@
               "type": "color",
               "isAlias": false,
               "value": "#FFFFFF"
+            },
+            {
+              "name": "Components/Navigation/Primary/Primary Link/Border/Hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Brand Tokens",
+                "name": "Components/Navigation/Primary/Primary Link/Border/Dark Theme/Hover"
+              }
             },
             {
               "name": "Components/Modal/Icon/Icon",

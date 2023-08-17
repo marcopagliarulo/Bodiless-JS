@@ -131,7 +131,7 @@ export default asTokenGroup(meta)({
   CheckboxBorderLightThemeHoverChecked: vitalColor.BorderInteractiveDarkHover,
   CheckboxBorderDarkThemeIdleUnchecked: vitalColor.BorderDarkBase,
   VariantSelectorBorderRadiusAll: 'rounded-4px',
-  FormFieldBackgroundDarkThemeBackground: vitalColor.BackgroundAlt8,
+  FormFieldBackgroundDarkThemeBackground: vitalColor.BackgroundBase,
   SwitchBackgroundLightThemeHoverUnchecked: vitalColor.BackgroundAlt6,
   SwitchInnerCircleBackgroundLightThemeDisabledChecked: vitalColor.BackgroundBase,
   SwitchInnerCircleBorderLightThemeDisabledChecked: vitalColor.BorderInteractiveDarkDisabled,

@@ -36,7 +36,7 @@ export default asTokenGroup(meta)({
   BackgroundInteractiveLightFocus: 'focus:bg-kenvue-green-tint-60',
   TextInteractiveLightFocus: 'focus:text-kenvue-green-tint-60',
   ScrollbarInteractiveLightFocus: 'focus:scrollbar-kenvue-green-tint-60',
-  BorderLightAlt1: 'border-transparent',
+  BorderLightAlt1: 'border-kenvue-neutrals-light-grey-2',
   BackgroundAlt3: 'bg-kenvue-yellow-yellow',
   BorderInteractiveDarkDisabled: 'disabled:border-kenvue-neutrals-grey',
   BackgroundInteractiveDarkDisabled: 'disabled:bg-kenvue-neutrals-grey',

@@ -187,8 +187,7 @@ export const isState = (s?: string): s is States => Boolean(
 export const TwStatePrefixes: Partial<Record<States, string>> = {
   Idle: '',
   Hover: 'hover:',
-  // @todo Is there a tw resposive variant for disabled?
-  Disabled: 'aria-disabled:',
+  Disabled: 'disabled:',
   Pressed: 'active:',
   Focus: 'focus:',
 };
