@@ -222,7 +222,7 @@ const twConfig = {
   ],
   variants: {
     extend: {
-        backgroundColor: ["disabled"],
+      backgroundColor: ['disabled'],
     }
   },
 };
