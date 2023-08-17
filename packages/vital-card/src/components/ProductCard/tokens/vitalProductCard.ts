@@ -147,6 +147,9 @@ const WithRatings = asCardToken({
       title: 'Rating stars',
     })),
   },
+  Theme: {
+    Rating: 'brightness-50',
+  }
 });
 
 export interface VitalProductCard extends TokenCollection<CardComponents, DefaultDomains> {
