@@ -29,22 +29,22 @@ exports[`Button Matches snapshot for Plain 1`] = `
 
 exports[`Button Matches snapshot for PrimaryDisabled 1`] = `
 <button
-  className="px-24px py-16px aria-disabled:bg-kenvue-neutrals-grey"
+  className="px-24px py-16px disabled:bg-kenvue-neutrals-grey"
   disabled="true"
 >
   <span
-    className="dark:text-kenvue-neutrals-white"
+    className="text-kenvue-neutrals-white"
   />
 </button>
 `;
 
 exports[`Button Matches snapshot for SecondaryDisabled 1`] = `
 <button
-  className="px-24px py-16px border-solid border-1px aria-disabled:border-kenvue-neutrals-grey"
+  className="px-24px py-16px border-solid border-1px disabled:border-kenvue-neutrals-grey"
   disabled="true"
 >
   <span
-    className="aria-disabled:text-kenvue-neutrals-grey"
+    className="disabled:text-kenvue-neutrals-grey"
   />
 </button>
 `;
@@ -54,7 +54,7 @@ exports[`Button Matches snapshot for TertiaryDisabled 1`] = `
   disabled="true"
 >
   <span
-    className="aria-disabled:text-kenvue-neutrals-grey"
+    className="disabled:text-kenvue-neutrals-grey"
   />
 </button>
 `;
@@ -168,7 +168,7 @@ exports[`Button Matches snapshot for WithPrimary 1`] = `
   className="rounded hover:bg-vital-primary-interactive transition-colors duration-400 text-m-base lg:text-base uppercase font-bold text-white bg-vital-primary-brand"
 >
   <span
-    className="dark:text-kenvue-neutrals-white"
+    className="text-kenvue-neutrals-white"
   />
 </a>
 `;
@@ -178,7 +178,7 @@ exports[`Button Matches snapshot for WithPrimaryStyle 1`] = `
   className="active:bg-kenvue-green-shade-60 focus:bg-kenvue-green-shade-80 hover:bg-kenvue-green-shade-80 bg-kenvue-green-green px-24px py-16px focus:drop-shadow-button focus:outline-none active:drop-shadow-none"
 >
   <span
-    className="dark:text-kenvue-neutrals-white"
+    className="text-kenvue-neutrals-white"
   />
 </a>
 `;
