@@ -45,7 +45,6 @@ const Default = asProductCardToken({
     flowHoc.meta.term('Sub Type')('Product'),
   ),
   Theme: {
-    Title: 'line-clamp-3',
     TitleWrapper: as(
       vitalTypography.HeadlineMedium,
       vitalProductCardElement.TextLightThemeHeadline,
