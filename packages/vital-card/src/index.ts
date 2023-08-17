@@ -15,3 +15,4 @@
 export * from './components/Card';
 export * from './components/FlowContainer';
 export * from './components/ProductCard';
+export * from './components/ArticleCard';

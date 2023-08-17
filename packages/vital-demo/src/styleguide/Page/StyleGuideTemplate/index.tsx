@@ -18,6 +18,7 @@ import { Border } from './Border';
 import { Buttons } from './Buttons';
 import { Card } from './Card';
 import { ProductCard } from './ProductCard';
+import { ArticleCard } from './ArticleCard';
 import { Carousel } from './Carousel';
 import { Color } from './Color';
 import { ContentListing, ContentListingMultiple } from './ContentListing';
@@ -41,6 +42,7 @@ export const VitalDemoStyleGuideTemplate = {
   Buttons,
   Card,
   ProductCard,
+  ArticleCard,
   Carousel,
   Color,
   ContentListing,
