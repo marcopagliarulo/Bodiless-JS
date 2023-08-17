@@ -44,10 +44,18 @@ const ButtonVariations = varyDesigns(
   },
 );
 
+const LineClampingVariations = varyDesigns(
+  RatingVariations,
+  {
+    WithLineClamping: vitalProductCard.WithTitleLineClamp,
+  },
+);
+
 const WithProductCardVariations = asFluidToken({
   Components: {
     ...RatingVariations,
     ...ButtonVariations,
+    ...LineClampingVariations,
   },
 });
 

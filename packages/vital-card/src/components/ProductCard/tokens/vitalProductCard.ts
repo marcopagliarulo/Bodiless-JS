@@ -22,14 +22,15 @@ import {
   flowHoc, extendMeta, on, Div, P, Img, addProps, TokenCollection, startWith, as,
 } from '@bodiless/fclasses';
 
-import { asCardToken, CardComponents } from '../../Card/CardClean';
+import { asProductCardToken } from '../ProductCardClean';
+import { CardComponents } from '../../Card/CardClean';
 import type { CardToken } from '../../Card/CardClean';
 import Base from '../../Card/tokens/Base';
 
 /**
   * Default Product Card Token. By default Product Card has `Image`, `Title` and `Link` slots.
   */
-const Default = asCardToken({
+const Default = asProductCardToken({
   ...Base,
   Components: {
     ...Base.Components,
@@ -60,12 +61,28 @@ const Default = asCardToken({
 });
 
 /**
+ * Token that adds a Line Clamping to the Product Card Title.
+ * Ensures that the Title doesn't span on more than 3 lines.
+ *
+ * Note: This token is meant to be layered on top of the `Default` token.
+ *
+ * @TODO: Consider making this more generic. A function that accepts (lines: number) as an
+ * argument since line clamping is different based on card placement / page. Will need to tweak
+ * types of `TokenCollection` to allow functions that returns token.
+ */
+const WithTitleLineClamp = asProductCardToken({
+  Theme: {
+    Title: 'line-clamp-3',
+  },
+});
+
+/**
  * Token that adds an Eyebrow slot to the Product Card.
  * Adds the `EyebrowWrapper` slot as a `Div` and the `Eyebrow` slot as default Plain Text Editor.
  *
  * Note: This token is meant to be layered on top of the `Product` token.
  */
-const WithEyebrow = asCardToken({
+const WithEyebrow = asProductCardToken({
   Components: {
     EyebrowWrapper: startWith(Div),
     Eyebrow: on(EditorPlainClean)(vitalEditorPlain.Default),
@@ -82,7 +99,7 @@ const WithEyebrow = asCardToken({
  *
  * Note: This token is meant to be layered on top of the `Product` token.
  */
-const WithDescription = asCardToken({
+const WithDescription = asProductCardToken({
   Components: {
     DescriptionWrapper: startWith(P),
     Description: on(EditorPlainClean)(vitalEditorPlain.Default),
@@ -97,7 +114,7 @@ const WithDescription = asCardToken({
  *
  * Note: This token is meant to be layered on top of the `Product` token.
  */
-const WithPrimaryButton = asCardToken({
+const WithPrimaryButton = asProductCardToken({
   Components: {
     ButtonWrapper: startWith(Div),
     ButtonLink: startWith(ButtonClean),
@@ -115,7 +132,7 @@ const WithPrimaryButton = asCardToken({
  *
  * Note: This token is meant to be layered on top of the `Product` token.
  */
-const WithSecondaryButton = asCardToken({
+const WithSecondaryButton = asProductCardToken({
   ...WithPrimaryButton,
   Theme: {
     ButtonLink: as(vitalButton.WithSecondaryStyle, 'w-full text-center'),
@@ -127,7 +144,7 @@ const WithSecondaryButton = asCardToken({
  *
  * Note: This token is meant to be layered on top of the `Product` token.
  */
-const WithTertiaryButton = asCardToken({
+const WithTertiaryButton = asProductCardToken({
   ...WithPrimaryButton,
   Theme: {
     ButtonLink: vitalButton.WithTertiaryStyle,
@@ -139,7 +156,7 @@ const WithTertiaryButton = asCardToken({
  *
  * Note: This token is meant to be layered on top of the `Product` token.
  */
-const WithRatings = asCardToken({
+const WithRatings = asProductCardToken({
   Components: {
     RatingWrapper: startWith(Div),
     Rating: on(Img)(addProps({
@@ -198,6 +215,13 @@ export interface VitalProductCard extends TokenCollection<CardComponents, Defaul
    * Note: This token is meant to be layered on top of the `Product` token.
    */
   WithRatings: CardToken,
+  /**
+   * Token that adds a Line Clamping to the Product Card Title.
+   * Ensures that the Title doesn't span on more than 3 lines.
+   *
+   * Note: This token is meant to be layered on top of the `Default` token.
+   */
+  WithTitleLineClamp: CardToken,
 }
 
 const vitalProductCard: VitalProductCard = {
@@ -208,6 +232,7 @@ const vitalProductCard: VitalProductCard = {
   WithSecondaryButton,
   WithTertiaryButton,
   WithRatings,
+  WithTitleLineClamp,
 };
 
 export default vitalProductCard;
