@@ -14,7 +14,7 @@ import { asCategoryCardToken } from '../CategoryCardClean';
 
 /**
  * Default Category Card Button.
- * Plain vital button with `WithTertiaryStyle` token and `READ MORE` placeholder.
+ * Plain vital button with `WithTertiaryStyle` token and `CATEGORY LINK` placeholder.
  */
 const CategoryCardButton = asButtonToken(
   vitalButton.Plain,
@@ -25,6 +25,11 @@ const CategoryCardButton = asButtonToken(
     },
   }
 );
+
+/**
+ * Default Category Card Token.
+ * By default Category Card has `Image` and `Link` slots.
+ */
 const Default = asCategoryCardToken({
   ...Base,
   Components: {
@@ -52,6 +57,12 @@ const Default = asCategoryCardToken({
   ),
 });
 
+/**
+ * Token that adds a Title to the Category Card.
+ * Adds the `TitleWrapper` slot as an `H3` and the `Title` slot as default Plain Editor.
+ *
+ * Note: This token is meant to be layered on top of the `Default` token.
+ */
 const WithTitle = asCategoryCardToken({
   Components: {
     TitleWrapper: replaceWith(H3),
