@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard Tokens Matches snapshot for Default 1`] = `
+<a
+  className="w-full flex flex-col"
+  href="#"
+>
+  <div>
+    <div
+      data-no-hydrate={true}
+      id="f64e1b3016f7c8d0d277ce020d98ee0d"
+      style={
+        Object {
+          "display": "contents",
+        }
+      }
+    >
+      <img
+        alt=""
+        src="test-file-stub"
+        title=""
+      />
+    </div>
+  </div>
+  <div>
+    <div />
+    <h3
+      className="text-kenvue-neutrals-black text-20.16px lg:text-23.04px leading-5 font-normal font-2 mb-8px md:mb-16px mt-8px md:mt-16px"
+    >
+      <span
+        data-no-hydrate={true}
+        id="6e5e36380662b0a36aed30babe228408"
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Product Title",
+            }
+          }
+        />
+      </span>
+    </h3>
+    <div
+      nodeKey="description"
+    />
+  </div>
+</a>
+`;
+
+exports[`ProductCard Tokens Matches snapshot for WithDescription 1`] = `
+<a>
+  <div>
+    <img />
+  </div>
+  <div>
+    <div />
+    <h3 />
+    <p>
+      <span
+        data-no-hydrate={true}
+        id="63a9f0ea7bb98050796b649e85481845"
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Description Text",
+            }
+          }
+        />
+      </span>
+    </p>
+    <div>
+      <a>
+        <span />
+      </a>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`ProductCard Tokens Matches snapshot for WithEyebrow 1`] = `
+<a>
+  <div>
+    <img />
+  </div>
+  <div>
+    <div>
+      <span
+        data-no-hydrate={true}
+        id="63a9f0ea7bb98050796b649e85481845"
+        style={
+          Object {
+            "display": "contents",
+          }
+        }
+      >
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Eyebrow Text",
+            }
+          }
+        />
+      </span>
+    </div>
+    <h3 />
+    <div />
+    <div>
+      <a>
+        <span />
+      </a>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`ProductCard Tokens Matches snapshot for WithPrimaryButton 1`] = `
+<a>
+  <div>
+    <img />
+  </div>
+  <div>
+    <div />
+    <h3 />
+    <div />
+    <div>
+      <a>
+        <span />
+      </a>
+    </div>
+    <div>
+      <a
+        className="active:bg-kenvue-green-shade-60 focus:bg-kenvue-green-shade-80 hover:bg-kenvue-green-shade-80 bg-kenvue-green-green px-24px py-16px focus:drop-shadow-button focus:outline-none active:drop-shadow-none"
+      >
+        <span
+          className="text-kenvue-neutrals-white"
+        />
+      </a>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`ProductCard Tokens Matches snapshot for WithRatings 1`] = `
+<a>
+  <div>
+    <img />
+  </div>
+  <div>
+    <div />
+    <h3 />
+    <div />
+    <div>
+      <img
+        alt="Stars with 4.1 rating, out of 5 max."
+        src="https://svgshare.com/i/sTg.svg"
+        title="Rating stars"
+      />
+    </div>
+    <div>
+      <a>
+        <span />
+      </a>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`ProductCard Tokens Matches snapshot for WithSecondaryButton 1`] = `
+<a>
+  <div>
+    <img />
+  </div>
+  <div>
+    <div />
+    <h3 />
+    <div />
+    <div>
+      <a>
+        <span />
+      </a>
+    </div>
+    <div>
+      <a
+        className="w-full text-center active:border-kenvue-green-shade-60 focus:border-kenvue-green-shade-80 hover:border-kenvue-green-shade-80 border-kenvue-green-green px-24px py-16px border-solid border-1px focus:shadow-button focus:outline-none active:shadow-none"
+      >
+        <span
+          className="group-active:text-kenvue-green-shade-60 focus:text-kenvue-green-shade-80 group-hover:text-kenvue-green-shade-80 text-kenvue-green-green"
+        />
+      </a>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`ProductCard Tokens Matches snapshot for WithTertiaryButton 1`] = `
+<a>
+  <div>
+    <img />
+  </div>
+  <div>
+    <div />
+    <h3 />
+    <div />
+    <div>
+      <a>
+        <span />
+      </a>
+    </div>
+    <div>
+      <a
+        className="focus:drop-shadow-button focus:outline-none active:drop-shadow-none"
+      >
+        <span
+          className="active:text-kenvue-green-shade-60 focus:text-kenvue-green-shade-80 hover:text-kenvue-green-shade-80 text-kenvue-green-green"
+        />
+      </a>
+    </div>
+  </div>
+</a>
+`;

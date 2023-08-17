@@ -36,33 +36,93 @@ exports[`Spacing Matches snapshot for GuttonRight 1`] = `
 />
 `;
 
+exports[`Spacing Matches snapshot for MarginBottomLarge 1`] = `
+<div
+  className="mb-24px md:mb-36px"
+/>
+`;
+
+exports[`Spacing Matches snapshot for MarginBottomMedium 1`] = `
+<div
+  className="mb-20px md:mb-24px"
+/>
+`;
+
+exports[`Spacing Matches snapshot for MarginBottomSmall 1`] = `
+<div
+  className="mb-16px md:mb-20px"
+/>
+`;
+
+exports[`Spacing Matches snapshot for MarginBottomXLarge 1`] = `
+<div
+  className="mb-36px md:mb-48px"
+/>
+`;
+
+exports[`Spacing Matches snapshot for MarginBottomXSmall 1`] = `
+<div
+  className="mb-8px md:mb-16px"
+/>
+`;
+
 exports[`Spacing Matches snapshot for MarginLarge 1`] = `
 <div
-  className="m-36px md:48px"
+  className="m-24px md:m-36px"
 />
 `;
 
 exports[`Spacing Matches snapshot for MarginMedium 1`] = `
 <div
-  className="m-36px md:48px"
+  className="m-20px md:m-24px"
 />
 `;
 
 exports[`Spacing Matches snapshot for MarginSmall 1`] = `
 <div
-  className="m-36px md:48px"
+  className="m-16px md:m-20px"
+/>
+`;
+
+exports[`Spacing Matches snapshot for MarginTopLarge 1`] = `
+<div
+  className="mt-24px md:mt-36px"
+/>
+`;
+
+exports[`Spacing Matches snapshot for MarginTopMedium 1`] = `
+<div
+  className="mt-20px md:mt-24px"
+/>
+`;
+
+exports[`Spacing Matches snapshot for MarginTopSmall 1`] = `
+<div
+  className="mt-16px md:mt-20px"
+/>
+`;
+
+exports[`Spacing Matches snapshot for MarginTopXLarge 1`] = `
+<div
+  className="mt-36px md:mt-48px"
+/>
+`;
+
+exports[`Spacing Matches snapshot for MarginTopXSmall 1`] = `
+<div
+  className="mt-8px md:mt-16px"
 />
 `;
 
 exports[`Spacing Matches snapshot for MarginXLarge 1`] = `
 <div
-  className="m-36px md:48px"
+  className="m-36px md:m-48px"
 />
 `;
 
 exports[`Spacing Matches snapshot for MarginXSmall 1`] = `
 <div
-  className="m-36px md:48px"
+  className="m-8px md:m-16px"
 />
 `;
 
