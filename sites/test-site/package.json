@@ -42,6 +42,7 @@
     "@bodiless/psh": "^1.0.0-rc.42",
     "@bodiless/richtext": "^1.0.0-rc.42",
     "@bodiless/richtext-ui": "^1.0.0-rc.42",
+    "@bodiless/scaffold": "^1.0.0-rc.42",
     "@bodiless/schema-org": "^1.0.0-rc.42",
     "@bodiless/search": "^1.0.0-rc.42",
     "@bodiless/table": "^1.0.0-rc.42",
