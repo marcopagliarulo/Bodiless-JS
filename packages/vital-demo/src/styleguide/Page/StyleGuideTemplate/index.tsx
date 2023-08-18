@@ -34,6 +34,7 @@ import { Table } from './Table';
 import { Typography } from './Typography';
 import { Video } from './Video';
 import { Section } from './Section';
+import { CategoryCard } from './CategoryCard';
 
 export const VitalDemoStyleGuideTemplate = {
   _default,
@@ -44,6 +45,7 @@ export const VitalDemoStyleGuideTemplate = {
   ProductCard,
   ArticleCard,
   Carousel,
+  CategoryCard,
   Color,
   ContentListing,
   ContentListingMultiple,

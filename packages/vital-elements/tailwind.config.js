@@ -221,6 +221,11 @@ const twConfig = {
     tailwindcssDir,
     require('@tailwindcss/line-clamp'),
   ],
+  variants: {
+    extend: {
+      backgroundColor: ['disabled'],
+    }
+  },
 };
 
 module.exports = getPackageTailwindConfig({

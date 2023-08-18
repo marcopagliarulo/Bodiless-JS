@@ -30,3 +30,5 @@ export { default as vitalCardFlowContainerBase } from './components/FlowContaine
 
 export { default as vitalProductCardBase } from './components/ProductCard/tokens/vitalProductCard';
 export { default as vitalArticleCardBase } from './components/ArticleCard/tokens/vitalArticleCard';
+
+export { default as vitalCategoryCardBase } from './components/CategoryCard/tokens/vitalCategoryCard';
