@@ -25,7 +25,7 @@ import {
 import { asProductCardToken } from '../ProductCardClean';
 import { CardComponents } from '../../Card/CardClean';
 import type { CardToken } from '../../Card/CardClean';
-import Base from '../../Card/tokens/Base';
+import Base, { WithHorizontalLeftOrientation, WithHorizontalContentCentered } from '../../Card/tokens/Base';
 
 /**
   * Default Product Card Token. By default Product Card has `Image`, `Title` and `Link` slots.
@@ -76,10 +76,37 @@ const WithTitleLineClamp = asProductCardToken({
 });
 
 /**
+ * Token that adds Background the Product Card Wrapper.
+ * Some Brands are expected to have a Product Card background.
+ *
+ * Note: This token is meant to be layered on top of the `Default` token.
+ */
+const WithBackground = asProductCardToken({
+  Theme: {
+    /**
+     * @TODO: When token PR merges, `BackgroundLightThemeBackground` name will change.
+     */
+    Wrapper: vitalProductCardElement.BackgroundLightThemeBackground,
+  }
+});
+
+/**
+ * Token that adds Padding the Product Card Wrapper.
+ * This is primarily used for the product carousels.
+ *
+ * Note: This token is meant to be layered on top of the `Default` token.
+ */
+const WithPaddings = asProductCardToken({
+  Spacing: {
+    Wrapper: vitalSpacing.PaddingXSmall,
+  }
+});
+
+/**
  * Token that adds an Eyebrow slot to the Product Card.
  * Adds the `EyebrowWrapper` slot as a `Div` and the `Eyebrow` slot as default Plain Text Editor.
  *
- * Note: This token is meant to be layered on top of the `Product` token.
+ * Note: This token is meant to be layered on top of the `Default` token.
  */
 const WithEyebrow = asProductCardToken({
   Components: {
@@ -96,7 +123,7 @@ const WithEyebrow = asProductCardToken({
  * Adds the `DescriptionWrapper` slot as `P` element and the `Description` slot
  * as default Plain Text Editor.
  *
- * Note: This token is meant to be layered on top of the `Product` token.
+ * Note: This token is meant to be layered on top of the `Default` token.
  */
 const WithDescription = asProductCardToken({
   Components: {
@@ -111,7 +138,7 @@ const WithDescription = asProductCardToken({
 /**
  * Token that adds the Primary Vital Button to the Product Card.
  *
- * Note: This token is meant to be layered on top of the `Product` token.
+ * Note: This token is meant to be layered on top of the `Default` token.
  */
 const WithPrimaryButton = asProductCardToken({
   Components: {
@@ -129,7 +156,7 @@ const WithPrimaryButton = asProductCardToken({
 /**
  * Token that adds the Secondary Vital Button to the Product Card.
  *
- * Note: This token is meant to be layered on top of the `Product` token.
+ * Note: This token is meant to be layered on top of the `Default` token.
  */
 const WithSecondaryButton = asProductCardToken({
   ...WithPrimaryButton,
@@ -141,7 +168,7 @@ const WithSecondaryButton = asProductCardToken({
 /**
  * Token that adds the Tertiary Vital Button to the Product Card.
  *
- * Note: This token is meant to be layered on top of the `Product` token.
+ * Note: This token is meant to be layered on top of the `Default` token.
  */
 const WithTertiaryButton = asProductCardToken({
   ...WithPrimaryButton,
@@ -153,7 +180,7 @@ const WithTertiaryButton = asProductCardToken({
 /**
  * A token that adds a placeholder ratings to the Product Card.
  *
- * Note: This token is meant to be layered on top of the `Product` token.
+ * Note: This token is meant to be layered on top of the `Default` token.
  */
 const WithRatings = asProductCardToken({
   Components: {
@@ -169,6 +196,18 @@ const WithRatings = asProductCardToken({
   }
 });
 
+/**
+ * Token that sets Horizontal Orientation for the Product Card.
+ * Re-Exported `WithHorizontalLeftOrientation` combined with the `WithHorizontalContentCentered`
+ * unchanged from the `vitalCard` collection.
+ *
+ * Note: This token is meant to be layered on top of the `vitalArticleCard.Default` token.
+ */
+const WithHorizontalOrientation = asProductCardToken(
+  WithHorizontalLeftOrientation,
+  WithHorizontalContentCentered,
+);
+
 export interface VitalProductCard extends TokenCollection<CardComponents, DefaultDomains> {
   /**
    * Defines the Product card for the Vital DS.
@@ -179,7 +218,7 @@ export interface VitalProductCard extends TokenCollection<CardComponents, Defaul
    * Token that adds an Eyebrow to the Product Card.
    * Adds the `EyebrowWrapper` slot as a `Div` and the `Eyebrow` slot as default Plain Editor.
    *
-   * Note: This token is meant to be layered on top of the `Product` token.
+   * Note: This token is meant to be layered on top of the `Default` token.
    */
   WithEyebrow: CardToken,
   /**
@@ -187,31 +226,31 @@ export interface VitalProductCard extends TokenCollection<CardComponents, Defaul
    * Adds the `DescriptionWrapper` slot as `P` element and the `Description` slot
    * as default Plain Text Editor.
    *
-   * Note: This token is meant to be layered on top of the `Product` token.
+   * Note: This token is meant to be layered on top of the `Default` token.
    */
   WithDescription: CardToken,
   /**
    * Token that adds the Primary Vital Button to the Product Card.
    *
-   * Note: This token is meant to be layered on top of the `Product` token.
+   * Note: This token is meant to be layered on top of the `Default` token.
    */
   WithPrimaryButton: CardToken,
   /**
    * Token that adds the Secondary Vital Button to the Product Card.
    *
-   * Note: This token is meant to be layered on top of the `Product` token.
+   * Note: This token is meant to be layered on top of the `Default` token.
    */
   WithSecondaryButton: CardToken,
   /**
    * Token that adds the Tertiary Vital Button to the Product Card.
    *
-   * Note: This token is meant to be layered on top of the `Product` token.
+   * Note: This token is meant to be layered on top of the `Default` token.
    */
   WithTertiaryButton: CardToken,
   /**
    * A token that adds a placeholder ratings to the Product Card.
    *
-   * Note: This token is meant to be layered on top of the `Product` token.
+   * Note: This token is meant to be layered on top of the `Default` token.
    */
   WithRatings: CardToken,
   /**
@@ -221,6 +260,28 @@ export interface VitalProductCard extends TokenCollection<CardComponents, Defaul
    * Note: This token is meant to be layered on top of the `Default` token.
    */
   WithTitleLineClamp: CardToken,
+  /**
+   * Token that adds Padding the Product Card.
+   * This is primarily used for the product carousels.
+   *
+   * Note: This token is meant to be layered on top of the `Default` token.
+   */
+  WithPaddings: CardToken,
+  /**
+   * Token that adds Background the Product Card Wrapper.
+   * Some Brands are expected to have a Product Card background.
+   *
+   * Note: This token is meant to be layered on top of the `Default` token.
+   */
+  WithBackground: CardToken,
+  /**
+   * Token that sets Horizontal Orientation for the Product Card.
+   * Re-Exported `WithHorizontalLeftOrientation` combined with the `WithHorizontalContentCentered`
+   * unchanged from the `vitalCard` collection.
+   *
+   * Note: This token is meant to be layered on top of the `vitalArticleCard.Default` token.
+   */
+  WithHorizontalOrientation: CardToken,
 }
 
 const vitalProductCard: VitalProductCard = {
@@ -232,6 +293,9 @@ const vitalProductCard: VitalProductCard = {
   WithTertiaryButton,
   WithRatings,
   WithTitleLineClamp,
+  WithPaddings,
+  WithBackground,
+  WithHorizontalOrientation,
 };
 
 export default vitalProductCard;

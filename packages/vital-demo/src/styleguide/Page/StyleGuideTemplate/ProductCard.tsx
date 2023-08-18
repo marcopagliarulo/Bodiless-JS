@@ -17,7 +17,7 @@ import { asFluidToken } from '@bodiless/vital-elements';
 import { ProductCardClean, vitalProductCard } from '@bodiless/vital-card';
 import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vital-templates';
 import {
-  flowHoc, replaceWith, on, varyDesigns, addProps,
+  flowHoc, replaceWith, on, varyDesigns, addProps, as,
 } from '@bodiless/fclasses';
 
 import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples';
@@ -37,25 +37,39 @@ const RatingVariations = varyDesigns(
 /*
  * Compose the Rating cards with buttons.
  */
-const ButtonVariations = varyDesigns(
+const CoreVariations = varyDesigns(
   RatingVariations,
   {
     WithSecondaryButton: vitalProductCard.WithSecondaryButton,
+    WithLineClamping: vitalProductCard.WithTitleLineClamp,
+    WithHorizontalOrientation: vitalProductCard.WithHorizontalOrientation,
+    WithBackground: vitalProductCard.WithBackground,
+    WithPaddings: vitalProductCard.WithPaddings,
   },
 );
 
-const LineClampingVariations = varyDesigns(
+const BackgroundVariations = varyDesigns(
   RatingVariations,
   {
-    WithLineClamping: vitalProductCard.WithTitleLineClamp,
+    /**
+     * EXAMPLE
+     *
+     * Since by default `vitalProductCard.WithBackground` refers to `BackgroundLightBackground`
+     * which is white color, adding here the custom color to better recognize paddings and BG.
+     *
+     * On real site this would be: `WithBackground: vitalProductCard.WithBackground,`
+     */
+    WithBackgroundAndPadding: as(
+      vitalProductCard.WithPaddings,
+      'bg-kenvue-neutrals-light-grey',
+    ),
   },
 );
 
 const WithProductCardVariations = asFluidToken({
   Components: {
-    ...RatingVariations,
-    ...ButtonVariations,
-    ...LineClampingVariations,
+    ...CoreVariations,
+    ...BackgroundVariations,
   },
 });
 
