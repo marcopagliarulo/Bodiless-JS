@@ -48,6 +48,31 @@ exports[`ProductCard Tokens Matches snapshot for Default 1`] = `
     <div
       nodeKey="description"
     />
+    <div>
+      <a>
+        <span />
+      </a>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`ProductCard Tokens Matches snapshot for WithBackground 1`] = `
+<a
+  className="bg-kenvue-neutrals-white"
+>
+  <div>
+    <img />
+  </div>
+  <div>
+    <div />
+    <h3 />
+    <div />
+    <div>
+      <a>
+        <span />
+      </a>
+    </div>
   </div>
 </a>
 `;
@@ -124,8 +149,36 @@ exports[`ProductCard Tokens Matches snapshot for WithEyebrow 1`] = `
 </a>
 `;
 
-exports[`ProductCard Tokens Matches snapshot for WithPrimaryButton 1`] = `
-<a>
+exports[`ProductCard Tokens Matches snapshot for WithHorizontalOrientation 1`] = `
+<a
+  className="flex-col md:flex-row w-full flex"
+>
+  <div
+    className="py-0 md:py-0 md:w-1/2 flex flex-col"
+  >
+    <img
+      className="w-full"
+    />
+  </div>
+  <div
+    className="px-4 md:content-center md:justify-center md:grow md:w-1/2 flex flex-col"
+  >
+    <div />
+    <h3 />
+    <div />
+    <div>
+      <a>
+        <span />
+      </a>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`ProductCard Tokens Matches snapshot for WithPaddings 1`] = `
+<a
+  className="p-8px md:p-16px"
+>
   <div>
     <img />
   </div>
@@ -138,9 +191,24 @@ exports[`ProductCard Tokens Matches snapshot for WithPrimaryButton 1`] = `
         <span />
       </a>
     </div>
-    <div>
+  </div>
+</a>
+`;
+
+exports[`ProductCard Tokens Matches snapshot for WithPrimaryButton 1`] = `
+<a>
+  <div>
+    <img />
+  </div>
+  <div>
+    <div />
+    <h3 />
+    <div />
+    <div
+      className="mt-16px md:mt-20px flex"
+    >
       <a
-        className="active:bg-kenvue-green-shade-60 focus:bg-kenvue-green-shade-80 hover:bg-kenvue-green-shade-80 bg-kenvue-green-green px-24px py-16px focus:drop-shadow-button focus:outline-none active:drop-shadow-none"
+        className="w-full text-center active:bg-kenvue-green-shade-60 focus:bg-kenvue-green-shade-80 hover:bg-kenvue-green-shade-80 bg-kenvue-green-green px-24px py-16px focus:drop-shadow-button focus:outline-none active:drop-shadow-none"
       >
         <span
           className="text-kenvue-neutrals-white"
@@ -163,6 +231,7 @@ exports[`ProductCard Tokens Matches snapshot for WithRatings 1`] = `
     <div>
       <img
         alt="Stars with 4.1 rating, out of 5 max."
+        className="brightness-50"
         src="https://svgshare.com/i/sTg.svg"
         title="Rating stars"
       />
@@ -170,6 +239,35 @@ exports[`ProductCard Tokens Matches snapshot for WithRatings 1`] = `
     <div>
       <a>
         <span />
+      </a>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`ProductCard Tokens Matches snapshot for WithSecondButton 1`] = `
+<a>
+  <div>
+    <img />
+  </div>
+  <div>
+    <div />
+    <h3 />
+    <div />
+    <div>
+      <a>
+        <span />
+      </a>
+    </div>
+    <div
+      className="mt-16px md:mt-20px flex"
+    >
+      <a
+        className="w-full text-center focus:drop-shadow-button focus:outline-none active:drop-shadow-none"
+      >
+        <span
+          className="active:text-kenvue-green-shade-60 focus:text-kenvue-green-shade-80 hover:text-kenvue-green-shade-80 text-kenvue-green-green"
+        />
       </a>
     </div>
   </div>
@@ -185,12 +283,9 @@ exports[`ProductCard Tokens Matches snapshot for WithSecondaryButton 1`] = `
     <div />
     <h3 />
     <div />
-    <div>
-      <a>
-        <span />
-      </a>
-    </div>
-    <div>
+    <div
+      className="mt-16px md:mt-20px flex"
+    >
       <a
         className="w-full text-center active:border-kenvue-green-shade-60 focus:border-kenvue-green-shade-80 hover:border-kenvue-green-shade-80 border-kenvue-green-green px-24px py-16px border-solid border-1px focus:shadow-button focus:outline-none active:shadow-none"
       >
@@ -212,18 +307,33 @@ exports[`ProductCard Tokens Matches snapshot for WithTertiaryButton 1`] = `
     <div />
     <h3 />
     <div />
-    <div>
-      <a>
-        <span />
-      </a>
-    </div>
-    <div>
+    <div
+      className="mt-16px md:mt-20px flex"
+    >
       <a
-        className="focus:drop-shadow-button focus:outline-none active:drop-shadow-none"
+        className="w-full text-center focus:drop-shadow-button focus:outline-none active:drop-shadow-none"
       >
         <span
           className="active:text-kenvue-green-shade-60 focus:text-kenvue-green-shade-80 hover:text-kenvue-green-shade-80 text-kenvue-green-green"
         />
+      </a>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`ProductCard Tokens Matches snapshot for WithTitleLineClamp 1`] = `
+<a>
+  <div>
+    <img />
+  </div>
+  <div>
+    <div />
+    <h3 />
+    <div />
+    <div>
+      <a>
+        <span />
       </a>
     </div>
   </div>
