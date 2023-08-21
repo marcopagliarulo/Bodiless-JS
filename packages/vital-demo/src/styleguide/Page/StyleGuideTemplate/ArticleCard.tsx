@@ -22,35 +22,45 @@ import {
 
 import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples';
 
-/*
- * Compose the default vertical & horizontal cards
- */
-const OrientationVariations = varyDesigns(
+const DefaultVariations = varyDesigns(
   {
-    '': on(ArticleCardClean)(vitalArticleCard.Default), // Use '' to not get a name for these
-  },
-  {
-    Horizontal: vitalArticleCard.WithHorizontalOrientation,
-    Vertical: vitalArticleCard.WithVerticalOrientation,
+    DefaultVertical: on(ArticleCardClean)(vitalArticleCard.Vertical),
+    DefaultHorizontal: on(ArticleCardClean)(
+      vitalArticleCard.Horizontal,
+      vitalArticleCard.WithHorizontalLeftOrientation,
+    ),
   },
 );
 
-/*
- * Compose the orientated cards with Descriptions & Eyebrows & Both toggles
- */
-const DescriptonVariations = varyDesigns(
-  OrientationVariations,
+const VerticalVariations = varyDesigns(
   {
-    WithDescription: vitalArticleCard.WithDescription,
-    WithEyebrow: vitalArticleCard.WithEyebrow,
-    WithDescriptionEyebrow: as(vitalArticleCard.WithDescription, vitalArticleCard.WithEyebrow),
+    '': on(ArticleCardClean)(vitalArticleCard.Vertical),
   },
+  {
+    Preview: as(vitalArticleCard.WithEyebrow, vitalArticleCard.WithDescription),
+    WithBackground: as(
+      vitalArticleCard.WithEyebrow,
+      vitalArticleCard.WithDescription,
+      vitalArticleCard.WithBackground,
+    ),
+  }
+);
+
+const HorizontalVariations = varyDesigns(
+  {
+    '': on(ArticleCardClean)(vitalArticleCard.Horizontal),
+  },
+  {
+    WithHorizontalLeftOrientation: vitalArticleCard.WithHorizontalLeftOrientation,
+    WithHorizontalRightOrientation: vitalArticleCard.WithHorizontalRightOrientation,
+  }
 );
 
 const WithArticleCardVariations = asFluidToken({
   Components: {
-    ...OrientationVariations,
-    ...DescriptonVariations,
+    ...VerticalVariations,
+    ...HorizontalVariations,
+    ...DefaultVariations,
   },
 });
 
@@ -107,7 +117,7 @@ const StyleGuideColumns = asFluidToken({
   ...vitalStyleGuideExamples.Default,
   Layout: {
     Wrapper: 'flex flex-wrap',
-    ItemWrapper: 'w-1/2 p-4',
+    ItemWrapper: 'md:w-1/2 p-4',
   },
 });
 
