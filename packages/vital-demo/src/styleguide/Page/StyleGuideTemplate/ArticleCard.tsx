@@ -53,14 +53,30 @@ const HorizontalVariations = varyDesigns(
   {
     WithHorizontalLeftOrientation: vitalArticleCard.WithHorizontalLeftOrientation,
     WithHorizontalRightOrientation: vitalArticleCard.WithHorizontalRightOrientation,
-  }
+    WithHorizontalLeftOrientationAndBackground: as(
+      vitalArticleCard.WithHorizontalLeftOrientation,
+      vitalArticleCard.WithBackground,
+    ),
+    WithHorizontalRightOrientationAndBackground: as(
+      vitalArticleCard.WithHorizontalRightOrientation,
+      vitalArticleCard.WithBackground,
+    ),
+  },
+);
+
+const TitleVariations = varyDesigns(
+  DefaultVariations,
+  {
+    WithH2Title: vitalArticleCard.WithH2Title,
+  },
 );
 
 const WithArticleCardVariations = asFluidToken({
   Components: {
     ...VerticalVariations,
-    ...HorizontalVariations,
     ...DefaultVariations,
+    ...HorizontalVariations,
+    ...TitleVariations,
   },
 });
 
@@ -118,6 +134,7 @@ const StyleGuideColumns = asFluidToken({
   Layout: {
     Wrapper: 'flex flex-wrap',
     ItemWrapper: 'md:w-1/2 p-4',
+    ItemTitle: 'truncate',
   },
 });
 

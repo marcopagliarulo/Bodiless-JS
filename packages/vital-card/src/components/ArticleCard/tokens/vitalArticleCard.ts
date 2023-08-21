@@ -19,7 +19,7 @@ import {
   vitalArticleCardElement, vitalTypography, vitalSpacing, DefaultDomains,
 } from '@bodiless/vital-elements';
 import {
-  flowHoc, extendMeta, TokenCollection, replaceWith, on, Div, P, as,
+  flowHoc, extendMeta, TokenCollection, replaceWith, on, Div, P, as, startWith, H2,
 } from '@bodiless/fclasses';
 
 import { CardComponents } from '../../Card/CardClean';
@@ -170,20 +170,29 @@ const WithDescription = asArticleCardToken({
 });
 
 /**
- * Token that adds Background the Product Card Wrapper.
- * Some Brands are expected to have a Product Card background.
+ * Token that adds Background the Article Card Wrapper.
+ * Some Brands are expected to have a Article Card background.
  *
  * Note: This token is meant to be layered on top of `Horizontal` or `Vertical` tokens.
  */
 const WithBackground = asArticleCardToken({
   Theme: {
-    /**
-     * @TODO: When token PR merges, `BackgroundLightThemeBackground` name will change.
-     */
     Wrapper: vitalArticleCardElement.BackgroundLightThemeBackground,
   },
   Spacing: {
     ContentWrapper: vitalSpacing.MarginXSmall,
+  },
+});
+
+/**
+ * Token that converts Article card Title into H2 element.
+ */
+const WithH2Title = asArticleCardToken({
+  Components: {
+    TitleWrapper: startWith(H2),
+  },
+  Theme: {
+    TitleWrapper: vitalTypography.HeadlineXLarge,
   },
 });
 
@@ -232,6 +241,10 @@ export interface VitalArticleCard extends TokenCollection<CardComponents, Defaul
    * Note: This token is meant to be layered on top of the `Horizontal` or `Vertical` tokens.
    */
   WithBackground: CardToken,
+  /**
+   * Token that converts Article card Title into H2 element.
+   */
+  WithH2Title: CardToken,
 }
 
 /**
@@ -249,6 +262,7 @@ const vitalArticleCard: VitalArticleCard = {
   WithEyebrow,
   WithDescription,
   WithBackground,
+  WithH2Title,
 };
 
 export default vitalArticleCard;
