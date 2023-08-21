@@ -34,12 +34,13 @@ const Default = asProductCardToken({
   ...Base,
   Components: {
     ...Base.Components,
+    CTAWrapper: undefined,
+    CTAText: undefined,
     Eyebrow: undefined,
     Description: undefined,
   },
   Content: {
     Title: withPlaceholder('Product Title'),
-    CTAText: withPlaceholder('Product Link'),
   },
   Meta: extendMeta(
     flowHoc.meta.term('Sub Type')('Product'),
@@ -52,7 +53,6 @@ const Default = asProductCardToken({
   },
   Layout: {
     Wrapper: 'w-full flex flex-col',
-    ButtonWrapper: as('flex', vitalSpacing.MarginTopSmall),
   },
   Spacing: {
     TitleWrapper: as(vitalSpacing.MarginTopXSmall, vitalSpacing.MarginBottomXSmall),
@@ -136,20 +136,55 @@ const WithDescription = asProductCardToken({
 });
 
 /**
- * Token that adds the Primary Vital Button to the Product Card.
+ * Token that adds the Vital Button to the Product Card.
  *
- * Note: This token is meant to be layered on top of the `Default` token.
+ * Note: This token is not part of the Token Collection for the Product Card.
+ * Used to create Primary, Secondary, or Tertiary button variations.
  */
-const WithPrimaryButton = asProductCardToken({
+const WithButton = asProductCardToken({
+  Components: {
+    CTAWrapper: startWith(Div),
+    CTALink: startWith(ButtonClean),
+  },
+  Theme: {
+    CTALink: 'w-full text-center',
+  },
+  Layout: {
+    CTAWrapper: as('flex', vitalSpacing.MarginTopSmall),
+  },
+  Content: {
+    CTAText: withPlaceholder('Button Text'),
+  },
+});
+
+/**
+ * Token that adds the Second Button to the Product Card.
+ * Second Button is a Tertiary button which will be rendered below the Main Card Button.
+ */
+const WithSecondButton = asProductCardToken({
   Components: {
     ButtonWrapper: startWith(Div),
     ButtonLink: startWith(ButtonClean),
   },
   Theme: {
-    ButtonLink: vitalButton.WithPrimaryStyle,
+    ButtonLink: as(vitalButton.WithTertiaryStyle, 'w-full text-center'),
+  },
+  Layout: {
+    ButtonWrapper: as('flex', vitalSpacing.MarginTopSmall),
   },
   Content: {
     ButtonText: withPlaceholder('Button Text'),
+  },
+});
+
+/**
+ * Token that adds the Primary Vital Button to the Product Card.
+ *
+ * Note: This token is meant to be layered on top of the `Default` token.
+ */
+const WithPrimaryButton = asProductCardToken(WithButton, {
+  Theme: {
+    CTALink: vitalButton.WithPrimaryStyle,
   },
 });
 
@@ -158,10 +193,9 @@ const WithPrimaryButton = asProductCardToken({
  *
  * Note: This token is meant to be layered on top of the `Default` token.
  */
-const WithSecondaryButton = asProductCardToken({
-  ...WithPrimaryButton,
+const WithSecondaryButton = asProductCardToken(WithButton, {
   Theme: {
-    ButtonLink: as(vitalButton.WithSecondaryStyle, 'w-full text-center'),
+    CTALink: vitalButton.WithSecondaryStyle,
   },
 });
 
@@ -170,10 +204,9 @@ const WithSecondaryButton = asProductCardToken({
  *
  * Note: This token is meant to be layered on top of the `Default` token.
  */
-const WithTertiaryButton = asProductCardToken({
-  ...WithPrimaryButton,
+const WithTertiaryButton = asProductCardToken(WithButton, {
   Theme: {
-    ButtonLink: vitalButton.WithTertiaryStyle,
+    CTALink: vitalButton.WithTertiaryStyle,
   },
 });
 
@@ -248,6 +281,11 @@ export interface VitalProductCard extends TokenCollection<CardComponents, Defaul
    */
   WithTertiaryButton: CardToken,
   /**
+   * Token that adds the Second Button to the Product Card.
+   * Second Button is a Tertiary button which will be rendered below the Main Card Button.
+   */
+  WithSecondButton: CardToken,
+  /**
    * A token that adds a placeholder ratings to the Product Card.
    *
    * Note: This token is meant to be layered on top of the `Default` token.
@@ -291,6 +329,7 @@ const vitalProductCard: VitalProductCard = {
   WithPrimaryButton,
   WithSecondaryButton,
   WithTertiaryButton,
+  WithSecondButton,
   WithRatings,
   WithTitleLineClamp,
   WithPaddings,

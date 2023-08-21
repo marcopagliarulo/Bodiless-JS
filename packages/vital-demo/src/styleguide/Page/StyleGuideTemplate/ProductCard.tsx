@@ -40,7 +40,10 @@ const RatingVariations = varyDesigns(
 const CoreVariations = varyDesigns(
   RatingVariations,
   {
+    WithPrimaryButton: vitalProductCard.WithPrimaryButton,
     WithSecondaryButton: vitalProductCard.WithSecondaryButton,
+    WithTertiaryButton: vitalProductCard.WithTertiaryButton,
+    WithTwoButtons: as(vitalProductCard.WithSecondaryButton, vitalProductCard.WithSecondButton),
     WithLineClamping: vitalProductCard.WithTitleLineClamp,
     WithHorizontalOrientation: vitalProductCard.WithHorizontalOrientation,
     WithBackground: vitalProductCard.WithBackground,
