@@ -133,7 +133,7 @@ const StyleGuideColumns = asFluidToken({
   ...vitalStyleGuideExamples.Default,
   Layout: {
     Wrapper: 'flex flex-wrap',
-    ItemWrapper: 'md:w-1/2 p-4',
+    ItemWrapper: 'w-full md:w-1/2 p-4',
     ItemTitle: 'truncate',
   },
 });
