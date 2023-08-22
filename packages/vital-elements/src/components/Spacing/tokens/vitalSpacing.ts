@@ -43,11 +43,14 @@ export default asTokenGroup(SpacingMeta)({
   // @TODO Add Padding Top when needed
   PaddingYXSmall: 'py-8px md:py-16px',
   PaddingBottomXSmall: 'pb-8px md:pb-16px',
+  PaddingTopSmall: 'pt-16px md:pt-20px',
+  PaddingTopMedium: 'pt-20px md:pt-24px',
   PaddingBottomSmall: 'pb-16px md:pb-20px',
   PaddingBottomMedium: 'pb-20px md:pb-24px',
   PaddingBottomLarge: 'pb-24px md:pb-36px',
   PaddingBottomXLarge: 'pb-36px md:pb-48px',
   MarginXSmall: 'm-8px md:m-16px',
+  MarginYXSmall: 'my-8px md:my-16px',
   MarginSmall: 'm-16px md:m-20px',
   MarginMedium: 'm-20px md:m-24px',
   MarginLarge: 'm-24px md:m-36px',
@@ -62,4 +65,6 @@ export default asTokenGroup(SpacingMeta)({
   MarginBottomMedium: 'mb-20px md:mb-24px',
   MarginBottomLarge: 'mb-24px md:mb-36px',
   MarginBottomXLarge: 'mb-36px md:mb-48px',
+  MarginLeftMedium: 'ml-20px md:ml-24px',
+  MarginRightMedium: 'mr-20px md:mr-24px',
 });

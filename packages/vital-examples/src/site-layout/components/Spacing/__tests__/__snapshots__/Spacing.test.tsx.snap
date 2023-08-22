@@ -72,9 +72,21 @@ exports[`Spacing Matches snapshot for MarginLarge 1`] = `
 />
 `;
 
+exports[`Spacing Matches snapshot for MarginLeftMedium 1`] = `
+<div
+  className="ml-20px md:ml-24px"
+/>
+`;
+
 exports[`Spacing Matches snapshot for MarginMedium 1`] = `
 <div
   className="m-20px md:m-24px"
+/>
+`;
+
+exports[`Spacing Matches snapshot for MarginRightMedium 1`] = `
+<div
+  className="mr-20px md:mr-24px"
 />
 `;
 
@@ -114,12 +126,6 @@ exports[`Spacing Matches snapshot for MarginTopXSmall 1`] = `
 />
 `;
 
-exports[`Spacing Matches snapshot for MarginTopMedium 1`] = `
-<div
-  className="mt-20px md:mt-24px"
-/>
-`;
-
 exports[`Spacing Matches snapshot for MarginXLarge 1`] = `
 <div
   className="m-36px md:m-48px"
@@ -129,6 +135,12 @@ exports[`Spacing Matches snapshot for MarginXLarge 1`] = `
 exports[`Spacing Matches snapshot for MarginXSmall 1`] = `
 <div
   className="m-8px md:m-16px"
+/>
+`;
+
+exports[`Spacing Matches snapshot for MarginYXSmall 1`] = `
+<div
+  className="my-8px md:my-16px"
 />
 `;
 
@@ -177,6 +189,18 @@ exports[`Spacing Matches snapshot for PaddingMedium 1`] = `
 exports[`Spacing Matches snapshot for PaddingSmall 1`] = `
 <div
   className="p-16px md:p-20px"
+/>
+`;
+
+exports[`Spacing Matches snapshot for PaddingTopMedium 1`] = `
+<div
+  className="pt-20px md:pt-24px"
+/>
+`;
+
+exports[`Spacing Matches snapshot for PaddingTopSmall 1`] = `
+<div
+  className="pt-16px md:pt-20px"
 />
 `;
 
