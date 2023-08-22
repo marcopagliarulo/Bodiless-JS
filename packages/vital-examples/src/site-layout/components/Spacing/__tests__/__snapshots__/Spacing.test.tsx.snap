@@ -68,7 +68,7 @@ exports[`Spacing Matches snapshot for MarginBottomXSmall 1`] = `
 
 exports[`Spacing Matches snapshot for MarginLarge 1`] = `
 <div
-  className="m-36px md:48px"
+  className="m-24px md:m-36px"
 />
 `;
 
@@ -128,7 +128,7 @@ exports[`Spacing Matches snapshot for MarginTopXSmall 1`] = `
 
 exports[`Spacing Matches snapshot for MarginXLarge 1`] = `
 <div
-  className="m-36px md:48px"
+  className="m-36px md:m-48px"
 />
 `;
 
