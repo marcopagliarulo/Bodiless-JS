@@ -22,6 +22,18 @@ import {
 
 import { StyleGuideExamplesClean, vitalStyleGuideExamples } from '../../Examples';
 
+const PreviewVariation = varyDesigns({
+  Preview: on(ProductCardClean)(
+    vitalProductCard.Default,
+    vitalProductCard.WithEyebrow,
+    vitalProductCard.WithDescription,
+    vitalProductCard.WithRatings,
+    vitalProductCard.WithSecondaryButton,
+    vitalProductCard.WithSecondButton,
+    vitalProductCard.WithTitleLineClamp,
+  ),
+});
+
 /*
  * Compose the default variation with Ratings
  */
@@ -54,23 +66,16 @@ const CoreVariations = varyDesigns(
 const BackgroundVariations = varyDesigns(
   RatingVariations,
   {
-    /**
-     * EXAMPLE
-     *
-     * Since by default `vitalProductCard.WithBackground` refers to `BackgroundLightBackground`
-     * which is white color, adding here the custom color to better recognize paddings and BG.
-     *
-     * On real site this would be: `WithBackground: vitalProductCard.WithBackground,`
-     */
     WithBackgroundAndPadding: as(
       vitalProductCard.WithPaddings,
-      'bg-kenvue-neutrals-light-grey',
-    ),
+      vitalProductCard.WithBackground,
+    )
   },
 );
 
 const WithProductCardVariations = asFluidToken({
   Components: {
+    ...PreviewVariation,
     ...CoreVariations,
     ...BackgroundVariations,
   },
@@ -99,8 +104,8 @@ const link = {
 const StyleGuideColumns = asFluidToken({
   ...vitalStyleGuideExamples.Default,
   Layout: {
-    Wrapper: 'flex flex-wrap',
-    ItemWrapper: 'w-1/2 p-4',
+    Wrapper: 'flex flex-wrap bg-kenvue-neutrals-lightest-grey p-10',
+    ItemWrapper: 'w-full md:w-1/2 p-4',
     ItemTitle: 'truncate',
   },
 });

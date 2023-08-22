@@ -115,7 +115,16 @@ const WithEyebrow = asProductCardToken({
   },
   Content: {
     Eyebrow: withPlaceholder('Eyebrow Text'),
-  }
+  },
+  Theme: {
+    EyebrowWrapper: as(
+      vitalTypography.EyebrowBold,
+      vitalProductCardElement.TextLightThemeEyebrow,
+    ),
+  },
+  Spacing: {
+    ContentWrapper: vitalSpacing.MarginTopSmall,
+  },
 });
 
 /**
@@ -132,7 +141,10 @@ const WithDescription = asProductCardToken({
   },
   Content: {
     Description: withPlaceholder('Description Text'),
-  }
+  },
+  Theme: {
+    DescriptionWrapper: vitalProductCardElement.TextDescription,
+  },
 });
 
 /**
@@ -226,7 +238,13 @@ const WithRatings = asProductCardToken({
   },
   Theme: {
     Rating: 'brightness-50',
-  }
+  },
+  Spacing: {
+    RatingWrapper: as(
+      vitalSpacing.MarginTopMedium,
+      vitalSpacing.MarginBottomMedium,
+    ),
+  },
 });
 
 /**

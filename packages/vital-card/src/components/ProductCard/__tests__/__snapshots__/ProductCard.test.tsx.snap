@@ -85,7 +85,9 @@ exports[`ProductCard Tokens Matches snapshot for WithDescription 1`] = `
   <div>
     <div />
     <h3 />
-    <p>
+    <p
+      className="text-kenvue-neutrals-black"
+    >
       <span
         data-no-hydrate={true}
         id="63a9f0ea7bb98050796b649e85481845"
@@ -118,8 +120,12 @@ exports[`ProductCard Tokens Matches snapshot for WithEyebrow 1`] = `
   <div>
     <img />
   </div>
-  <div>
-    <div>
+  <div
+    className="mt-16px md:mt-20px"
+  >
+    <div
+      className="text-kenvue-neutrals-black text-11.67px lg:text-13.33px leading-6 font-bold font-2 uppercase"
+    >
       <span
         data-no-hydrate={true}
         id="63a9f0ea7bb98050796b649e85481845"
@@ -228,7 +234,9 @@ exports[`ProductCard Tokens Matches snapshot for WithRatings 1`] = `
     <div />
     <h3 />
     <div />
-    <div>
+    <div
+      className="mb-20px md:mb-24px mt-20px md:mt-24px"
+    >
       <img
         alt="Stars with 4.1 rating, out of 5 max."
         className="brightness-50"
